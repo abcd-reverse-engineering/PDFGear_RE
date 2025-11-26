@@ -1,0 +1,175 @@
+<UserControl
+	x:Class="pdfeditor.Controls.Screenshots.DrawSettingToolbar" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.Screenshots" xmlns:converters="clr-namespace:pdfeditor.Utils.Converters"
+	x:Name="_this">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<converters:DrawControlMode2VisibilityConverter
+				x:Key="DrawControlMode2VisibilityConverter" />
+			<converters:DrawControlMode2VisibilityReConverter
+				x:Key="DrawControlMode2VisibilityReConverter" />
+			<converters:ThicknessListBoxEllipseSizeConverter
+				x:Key="ThicknessListBoxEllipseSizeConverter" />
+			<Style
+				x:Key="ScreenshotThicknessListBoxStyle"
+				TargetType="{x:Type ListBox}">
+				<Setter
+					Property="UIElement.SnapsToDevicePixels"
+					Value="True" />
+				<Setter
+					Property="FrameworkElement.OverridesDefaultStyle"
+					Value="True" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ListBox}">
+							<StackPanel
+								IsItemsHost="True"
+								Orientation="Horizontal" />
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+				<Setter
+					Property="ItemContainerStyle">
+					<Setter.Value>
+						<Style
+							TargetType="{x:Type ListBoxItem}">
+							<Setter
+								Property="Background"
+								Value="#00FFFFFF" />
+							<Setter
+								Property="Template">
+								<Setter.Value>
+									<ControlTemplate
+										TargetType="{x:Type ListBoxItem}">
+										<Grid>
+											<Border
+												Width="28"
+												Height="28"
+												Background="{TemplateBinding Control.Background}"
+												CornerRadius="4" />
+											<Ellipse
+												Name="ellipse"
+												Fill="#298FEE"
+												Width="{Binding ., Converter={StaticResource ThicknessListBoxEllipseSizeConverter}}"
+												Height="{Binding ., Converter={StaticResource ThicknessListBoxEllipseSizeConverter}}" />
+										</Grid>
+										<ControlTemplate.Triggers>
+											<Trigger
+												Property="ListBoxItem.IsSelected"
+												Value="True">
+												<Setter
+													Property="Background"
+													Value="#DEE2E5" />
+											</Trigger>
+										</ControlTemplate.Triggers>
+									</ControlTemplate>
+								</Setter.Value>
+							</Setter>
+						</Style>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="ScreenshotColorListBoxStyle"
+				TargetType="{x:Type ListBox}">
+				<Setter
+					Property="UIElement.SnapsToDevicePixels"
+					Value="True" />
+				<Setter
+					Property="FrameworkElement.OverridesDefaultStyle"
+					Value="True" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ListBox}">
+							<StackPanel
+								IsItemsHost="True"
+								Orientation="Horizontal" />
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+				<Setter
+					Property="ItemContainerStyle">
+					<Setter.Value>
+						<Style
+							TargetType="{x:Type ListBoxItem}">
+							<Setter
+								Property="Background"
+								Value="#00FFFFFF" />
+							<Setter
+								Property="Template">
+								<Setter.Value>
+									<ControlTemplate
+										TargetType="{x:Type ListBoxItem}">
+										<Grid>
+											<Border
+												Width="24"
+												Height="24"
+												Background="{TemplateBinding Control.Background}"
+												CornerRadius="4" />
+											<Ellipse
+												Name="ellipse"
+												Width="16"
+												Height="16">
+												<Shape.Fill>
+													<SolidColorBrush
+														Color="{Binding}" />
+												</Shape.Fill>
+											</Ellipse>
+										</Grid>
+										<ControlTemplate.Triggers>
+											<Trigger
+												Property="ListBoxItem.IsSelected"
+												Value="True">
+												<Setter
+													Property="Background"
+													Value="#DEE2E5" />
+											</Trigger>
+										</ControlTemplate.Triggers>
+									</ControlTemplate>
+								</Setter.Value>
+							</Setter>
+						</Style>
+					</Setter.Value>
+				</Setter>
+			</Style>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Border
+		Grid.Row="0"
+		BorderBrush="#D2D2D2"
+		BorderThickness="1"
+		CornerRadius="2"
+		HorizontalAlignment="Left"
+		Background="#F5F5F5"
+		Height="36">
+		<StackPanel
+			Orientation="Horizontal"
+			Margin="8,0">
+			<Grid>
+				<ListBox
+					ItemsSource="{x:Static local:DrawSettingConstants.Thicknesses}"
+					Style="{StaticResource ScreenshotThicknessListBoxStyle}"
+					SelectedItem="{Binding ElementName=_this, Path=Thickness}"
+					Visibility="{Binding ElementName=_this, Path=DrawControlMode, Converter='{StaticResource DrawControlMode2VisibilityReConverter}', ConverterParameter=DrawText}" />
+				<local:FontSizeControl
+					Width="88"
+					Height="22"
+					HorizontalAlignment="Stretch"
+					SelectedFontSize="{Binding ElementName=_this, Path=DrawFontSize, Mode=TwoWay}"
+					Visibility="{Binding ElementName=_this, Path=DrawControlMode, Converter='{StaticResource DrawControlMode2VisibilityConverter}', ConverterParameter=DrawText}" />
+			</Grid>
+			<Rectangle
+				VerticalAlignment="Stretch"
+				Width="1"
+				Fill="#C4C4C4"
+				Margin="8,10,6,10" />
+			<ListBox
+				ItemsSource="{x:Static local:DrawSettingConstants.Colors}"
+				Style="{StaticResource ScreenshotColorListBoxStyle}"
+				SelectedItem="{Binding ElementName=_this, Path=Color}" />
+		</StackPanel>
+	</Border>
+</UserControl>

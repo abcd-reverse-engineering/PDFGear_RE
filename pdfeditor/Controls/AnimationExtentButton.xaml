@@ -1,0 +1,236 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:pdfeditor.Controls">
+	<Style
+		x:Key="{x:Type local:AnimationExtentButton}"
+		TargetType="{x:Type local:AnimationExtentButton}">
+		<Setter
+			Property="Background"
+			Value="{StaticResource DialogButton.Static.Background}" />
+		<Setter
+			Property="BorderBrush"
+			Value="#FFFFFF" />
+		<Setter
+			Property="Foreground"
+			Value="#FFFFFF" />
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+		<Setter
+			Property="FontSize"
+			Value="12" />
+		<Setter
+			Property="BorderThickness"
+			Value="2" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+		<Setter
+			Property="Padding"
+			Value="12,0,0,0" />
+		<Setter
+			Property="Width"
+			Value="40" />
+		<Setter
+			Property="Height"
+			Value="40" />
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type local:AnimationExtentButton}">
+					<Border
+						x:Name="border"
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch"
+						Background="#00FFFFFF"
+						SnapsToDevicePixels="True"
+						RenderTransformOrigin="0.5,0.5">
+						<UIElement.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform
+									x:Name="borderScaleTrans" />
+							</TransformGroup>
+						</UIElement.RenderTransform>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup
+								x:Name="ContentStates">
+								<VisualState
+									x:Name="Normal" />
+								<VisualState
+									x:Name="IsMouseOverState">
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ContentContainer"
+											Storyboard.TargetProperty="Opacity"
+											Duration="0"
+											To="1" />
+										<BooleanAnimationUsingKeyFrames
+											Storyboard.TargetName="ExtentContentHost"
+											Storyboard.TargetProperty="IsHitTestVisible"
+											Duration="0">
+											<DiscreteBooleanKeyFrame
+												KeyTime="0"
+												Value="True" />
+										</BooleanAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualStateGroup.Transitions>
+									<VisualTransition
+										From="Normal"
+										To="IsMouseOverState">
+										<Storyboard>
+											<DoubleAnimation
+												Storyboard.TargetName="ContentContainer"
+												Storyboard.TargetProperty="Opacity"
+												BeginTime="0:0:0.2"
+												Duration="0:0:0.1"
+												To="1" />
+										</Storyboard>
+									</VisualTransition>
+									<VisualTransition
+										From="IsMouseOverState"
+										To="Normal">
+										<Storyboard>
+											<DoubleAnimation
+												Storyboard.TargetName="ContentContainer"
+												Storyboard.TargetProperty="Opacity"
+												Duration="0:0:0.1"
+												To="0" />
+										</Storyboard>
+									</VisualTransition>
+								</VisualStateGroup.Transitions>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Grid>
+							<Canvas
+								x:Name="ExtentContentHost"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Top"
+								IsHitTestVisible="False">
+								<Path
+									x:Name="ContentBackground"
+									Stroke="{TemplateBinding Control.BorderBrush}"
+									Fill="{TemplateBinding Control.Background}"
+									StrokeThickness="{Binding Path=BorderThickness.Left, RelativeSource={RelativeSource Mode=TemplatedParent}}">
+									<Path.Data>
+										<PathGeometry>
+											<PathGeometry.Figures>
+												<PathFigure
+													x:Name="StartFigure"
+													StartPoint="20,0">
+													<ArcSegment
+														x:Name="LeftArc"
+														SweepDirection="Counterclockwise"
+														Point="20,40"
+														Size="20,20" />
+													<LineSegment
+														x:Name="CenterLine1"
+														Point="20,40" />
+													<ArcSegment
+														x:Name="RightArc"
+														SweepDirection="Counterclockwise"
+														Point="20,0"
+														Size="20,20" />
+													<LineSegment
+														x:Name="CenterLine2"
+														Point="20,0" />
+												</PathFigure>
+											</PathGeometry.Figures>
+										</PathGeometry>
+									</Path.Data>
+								</Path>
+								<Border
+									x:Name="ContentContainer"
+									Opacity="0"
+									Height="{TemplateBinding FrameworkElement.Height}">
+									<ContentPresenter
+										x:Name="contentPresenter"
+										RecognizesAccessKey="True"
+										Margin="{TemplateBinding Control.Padding}"
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+										HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+										VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+										Focusable="False" />
+								</Border>
+							</Canvas>
+							<ContentPresenter
+								x:Name="headerContentPresenter"
+								RecognizesAccessKey="True"
+								SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+								HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+								VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+								Focusable="False"
+								Content="{TemplateBinding local:AnimationExtentButton.Header}"
+								ContentTemplate="{TemplateBinding local:AnimationExtentButton.HeaderTemplate}" />
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True" />
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="borderScaleTrans"
+											Storyboard.TargetProperty="ScaleX"
+											Duration="0:0:0.1"
+											To="0.95" />
+										<DoubleAnimation
+											Storyboard.TargetName="borderScaleTrans"
+											Storyboard.TargetProperty="ScaleY"
+											Duration="0:0:0.1"
+											To="0.95" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="borderScaleTrans"
+											Storyboard.TargetProperty="ScaleX"
+											Duration="0:0:0.1"
+											To="1" />
+										<DoubleAnimation
+											Storyboard.TargetName="borderScaleTrans"
+											Storyboard.TargetProperty="ScaleY"
+											Duration="0:0:0.1"
+											To="1" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</Trigger>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								TargetName="border"
+								Property="Border.Background"
+								Value="{StaticResource DialogButton.Disabled.Background}" />
+							<Setter
+								TargetName="border"
+								Property="Border.BorderBrush"
+								Value="{StaticResource DialogButton.Disabled.Border}" />
+							<Setter
+								TargetName="contentPresenter"
+								Property="TextElement.Foreground"
+								Value="{StaticResource DialogButton.Disabled.Foreground}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

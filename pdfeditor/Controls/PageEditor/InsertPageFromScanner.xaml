@@ -1,0 +1,1050 @@
+<Window
+	x:Class="pdfeditor.Controls.PageEditor.InsertPageFromScanner" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.PageEditor" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:commonCtrl="clr-namespace:CommonLib.Controls;assembly=CommonLib" xmlns:localConvert="clr-namespace:pdfeditor.Utils.Converters" xmlns:utils="clr-namespace:pdfeditor.Utils" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:hc="https://handyorg.github.io/handycontrol" xmlns:viewmodels="clr-namespace:pdfeditor.ViewModels"
+	Background="{DynamicResource WindowsBackground}"
+	Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Title="{x:Static localprop:Resources.ScannerWinInsertTitle}"
+	MinHeight="360"
+	MinWidth="850"
+	Height="610"
+	Width="1038"
+	WindowStartupLocation="CenterScreen">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<localConvert:ScannerCountToIsnableConvert
+				x:Key="scannerCountToIsnableConvert" />
+			<localConvert:BooleanToVisibilityConverter
+				x:Key="BooleanToVisibilityConverter" />
+			<localConvert:BooleanToVisibilityReverseConverter
+				x:Key="BooleanToVisibilityReverseConverter" />
+			<localConvert:ScannerCountToVisibilityConvert
+				x:Key="ScannerCountToVisibilityConvert" />
+			<Style
+				x:Key="BtnInfoStyle"
+				TargetType="{x:Type ButtonBase}">
+				<Setter
+					Property="Height"
+					Value="25" />
+				<Setter
+					Property="Background"
+					Value="#FFFFFFFF" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="TextBlock.Foreground"
+					Value="{DynamicResource MainViewBtnInfoStyleText}" />
+				<Setter
+					Property="TextBlock.FontSize"
+					Value="12" />
+				<Setter
+					Property="TextBlock.TextAlignment"
+					Value="Center" />
+				<Setter
+					Property="TextBlock.FontSize"
+					Value="12" />
+				<Setter
+					Property="TextBlock.FontStyle"
+					Value="Normal" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Stretch" />
+				<Setter
+					Property="Padding"
+					Value="4,0" />
+				<Setter
+					Property="BorderBrush"
+					Value="{DynamicResource HotKeyListCellBorderBrush}" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ButtonBase}">
+							<Border
+								x:Name="bborder"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								CornerRadius="3"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								Background="{TemplateBinding Control.Background}"
+								SnapsToDevicePixels="True">
+								<ContentPresenter
+									x:Name="contentPresenter"
+									Focusable="False"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									Margin="{TemplateBinding Control.Padding}"
+									RecognizesAccessKey="True"
+									SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+							</Border>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="3" />
+									<Setter
+										TargetName="bborder"
+										Property="Border.BorderBrush"
+										Value="#FFBABA" />
+									<Setter
+										TargetName="bborder"
+										Property="Border.Background"
+										Value="#FFF0F0" />
+								</Trigger>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="true">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="3" />
+									<Setter
+										TargetName="bborder"
+										Property="Border.BorderBrush"
+										Value="#FFBABA" />
+									<Setter
+										TargetName="bborder"
+										Property="Border.Background"
+										Value="#FFF0F0" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="tbTitle"
+				TargetType="{x:Type TextBlock}">
+				<Setter
+					Property="VerticalAlignment"
+					Value="Center" />
+				<Setter
+					Property="FontSize"
+					Value="12" />
+				<Setter
+					Property="HorizontalAlignment"
+					Value="Left" />
+			</Style>
+			<Style
+				x:Key="SizeNumberBoxStyle"
+				TargetType="{x:Type commonCtrl:NumberBox}">
+				<Setter
+					Property="MinWidth"
+					Value="87" />
+				<Setter
+					Property="Height"
+					Value="22" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="RangeBase.SmallChange"
+					Value="1" />
+				<Setter
+					Property="RangeBase.LargeChange"
+					Value="10" />
+				<Setter
+					Property="RangeBase.Minimum"
+					Value="1" />
+				<Setter
+					Property="RangeBase.Maximum"
+					Value="{x:Static sys:Double.MaxValue}" />
+				<Setter
+					Property="commonCtrl:NumberBox.NumberFormat"
+					Value="{}{0:0.##}" />
+			</Style>
+			<Style
+				x:Key="InsertBlankPageSubHeaderedControlStyle"
+				TargetType="{x:Type HeaderedContentControl}">
+				<Setter
+					Property="Focusable"
+					Value="False" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Stretch" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Top" />
+				<Setter
+					Property="Padding"
+					Value="0,0,0,0" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type HeaderedContentControl}">
+							<Grid
+								Margin="{TemplateBinding Control.Padding}">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="Auto"
+										MinWidth="50"
+										SharedSizeGroup="InsertBlankPageSubHeaderedContentControlHeaderColumn" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<ContentPresenter
+									ContentSource="Header"
+									Margin="0,0,6,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+								<ContentPresenter
+									ContentSource="Content"
+									Margin="0,0,0,0"
+									Grid.Column="1"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<ControlTemplate
+				x:Key="ComboBoxTemplate"
+				TargetType="{x:Type ComboBox}">
+				<FrameworkTemplate.Resources>
+					<ResourceDictionary>
+						<localConvert:ResolutionTrimConverter
+							x:Key="ResolutionTrimConverter" />
+					</ResourceDictionary>
+				</FrameworkTemplate.Resources>
+				<Grid
+					x:Name="templateRoot"
+					SnapsToDevicePixels="True">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"
+							Width="0" />
+					</Grid.ColumnDefinitions>
+					<Popup
+						x:Name="PART_Popup"
+						AllowsTransparency="True"
+						Margin="1"
+						Placement="Bottom"
+						Grid.ColumnSpan="2"
+						PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}"
+						IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+						<Border
+							x:Name="dropDownBorder"
+							BorderBrush="{DynamicResource MainViewFontSizeBorder}"
+							Background="{DynamicResource SolidBrushWhiteAndBlack}"
+							BorderThickness="1"
+							MaxHeight="{TemplateBinding ComboBox.MaxDropDownHeight}"
+							MinWidth="{Binding ActualWidth, ElementName=templateRoot}">
+							<ScrollViewer
+								x:Name="DropDownScrollViewer">
+								<Grid
+									x:Name="grid"
+									RenderOptions.ClearTypeHint="Enabled">
+									<Canvas
+										x:Name="canvas"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Top"
+										Height="0"
+										Width="0">
+										<Rectangle
+											x:Name="opaqueRect"
+											Fill="{Binding Background, ElementName=dropDownBorder}"
+											Height="{Binding ActualHeight, ElementName=dropDownBorder}"
+											Width="{Binding ActualWidth, ElementName=dropDownBorder}" />
+									</Canvas>
+									<ItemsPresenter
+										x:Name="ItemsPresenter"
+										KeyboardNavigation.DirectionalNavigation="Contained"
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+								</Grid>
+							</ScrollViewer>
+						</Border>
+					</Popup>
+					<ToggleButton
+						x:Name="toggleButton"
+						BorderBrush="{TemplateBinding Control.BorderBrush}"
+						Background="{TemplateBinding Control.Background}"
+						BorderThickness="{TemplateBinding Control.BorderThickness}"
+						Grid.ColumnSpan="2"
+						Style="{StaticResource DefaultComboBoxToggleButton}"
+						IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+						commonCtrl:UIElementExtension.CornerRadius="{Binding Path=(commonCtrl:UIElementExtension.CornerRadius), RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+					<ContentPresenter
+						x:Name="contentPresenter"
+						ContentTemplate="{TemplateBinding ComboBox.SelectionBoxItemTemplate}"
+						ContentTemplateSelector="{TemplateBinding ItemsControl.ItemTemplateSelector}"
+						ContentStringFormat="{TemplateBinding ComboBox.SelectionBoxItemStringFormat}"
+						IsHitTestVisible="False"
+						Margin="{TemplateBinding Control.Padding}"
+						SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+						HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+						VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+						Content="{TemplateBinding SelectionBoxItem, Converter={StaticResource ResolutionTrimConverter}}" />
+				</Grid>
+				<ControlTemplate.Triggers>
+					<Trigger
+						Property="ItemsControl.HasItems"
+						Value="False">
+						<Setter
+							TargetName="dropDownBorder"
+							Property="FrameworkElement.Height"
+							Value="95" />
+					</Trigger>
+					<MultiTrigger>
+						<MultiTrigger.Conditions>
+							<Condition
+								Property="ItemsControl.IsGrouping"
+								Value="True" />
+							<Condition
+								Property="VirtualizingPanel.IsVirtualizingWhenGrouping"
+								Value="False" />
+						</MultiTrigger.Conditions>
+						<Setter
+							Property="ScrollViewer.CanContentScroll"
+							Value="False" />
+					</MultiTrigger>
+					<Trigger
+						SourceName="DropDownScrollViewer"
+						Property="ScrollViewer.CanContentScroll"
+						Value="False">
+						<Setter
+							TargetName="opaqueRect"
+							Property="Canvas.Top"
+							Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}" />
+						<Setter
+							TargetName="opaqueRect"
+							Property="Canvas.Left"
+							Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}" />
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+			<Style
+				x:Key="MergeDialogComboboxStyle"
+				TargetType="{x:Type ComboBox}">
+				<Setter
+					Property="Padding"
+					Value="6,4" />
+				<Setter
+					Property="FontSize"
+					Value="14" />
+				<Setter
+					Property="Height"
+					Value="26" />
+				<Setter
+					Property="FontSize"
+					Value="14" />
+				<Setter
+					Property="Background"
+					Value="{DynamicResource ComboBox.Default.Static.Background}" />
+				<Setter
+					Property="BorderBrush"
+					Value="{DynamicResource ComboBox.Default.Static.Border}" />
+				<Setter
+					Property="Foreground"
+					Value="{DynamicResource TextBox.Default.Static.Foreground}" />
+				<Setter
+					Property="ScrollViewer.HorizontalScrollBarVisibility"
+					Value="Auto" />
+				<Setter
+					Property="ScrollViewer.VerticalScrollBarVisibility"
+					Value="Auto" />
+				<Setter
+					Property="ScrollViewer.CanContentScroll"
+					Value="True" />
+				<Setter
+					Property="ScrollViewer.PanningMode"
+					Value="Both" />
+				<Setter
+					Property="commonCtrl:UIElementExtension.CornerRadius"
+					Value="2" />
+				<Setter
+					Property="Template"
+					Value="{StaticResource ComboBoxTemplate}" />
+				<Setter
+					Property="ItemContainerStyle">
+					<Setter.Value>
+						<Style
+							TargetType="{x:Type ComboBoxItem}"
+							BasedOn="{StaticResource DefaultComboBoxItemStyle}">
+							<Setter
+								Property="FontSize"
+								Value="13" />
+							<Setter
+								Property="Padding"
+								Value="6,4" />
+							<Setter
+								Property="Margin"
+								Value="-6,0" />
+							<Setter
+								Property="VerticalAlignment"
+								Value="Center" />
+							<Setter
+								Property="Foreground"
+								Value="{DynamicResource TextBrushWhiteAndBlack}" />
+							<Setter
+								Property="BorderBrush"
+								Value="{DynamicResource MainViewSideBarBorder}" />
+							<Setter
+								Property="Background"
+								Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+							<Setter
+								Property="Height"
+								Value="28" />
+							<Setter
+								Property="FrameworkElement.ToolTip"
+								Value="{Binding Name}" />
+							<Setter
+								Property="MaxWidth"
+								Value="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ComboBox}}}" />
+						</Style>
+					</Setter.Value>
+				</Setter>
+				<Style.Triggers>
+					<Trigger
+						Property="ComboBox.IsEditable"
+						Value="True">
+						<Setter
+							Property="IsTabStop"
+							Value="False" />
+						<Setter
+							Property="Padding"
+							Value="2" />
+						<Setter
+							Property="Template"
+							Value="{StaticResource DefaultComboBoxEditableTemplate}" />
+					</Trigger>
+				</Style.Triggers>
+			</Style>
+			<ControlTemplate
+				x:Key="ScannerComboBoxTemplate"
+				TargetType="{x:Type ComboBox}">
+				<Grid
+					x:Name="templateRoot"
+					SnapsToDevicePixels="True">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"
+							Width="0" />
+					</Grid.ColumnDefinitions>
+					<Popup
+						x:Name="PART_Popup"
+						AllowsTransparency="True"
+						Margin="1"
+						Placement="Bottom"
+						Grid.ColumnSpan="2"
+						PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}"
+						IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+						<Decorator
+							Margin="8,0">
+							<Border
+								x:Name="dropDownBorder"
+								BorderBrush="{DynamicResource MainViewFontSizeBorder}"
+								Background="{DynamicResource SolidBrushWhiteAndBlack}"
+								BorderThickness="1"
+								MaxHeight="{TemplateBinding ComboBox.MaxDropDownHeight}"
+								MinWidth="{Binding ActualWidth, ElementName=templateRoot}">
+								<ScrollViewer
+									x:Name="DropDownScrollViewer"
+									Margin="0 0 0 0"
+									HorizontalAlignment="Stretch"
+									VerticalAlignment="Stretch">
+									<StackPanel>
+										<Canvas
+											x:Name="canvas"
+											HorizontalAlignment="Left"
+											VerticalAlignment="Top"
+											Height="0"
+											Width="0">
+											<Rectangle
+												x:Name="opaqueRect"
+												Fill="{Binding Background, ElementName=dropDownBorder}"
+												Height="{Binding ActualHeight, ElementName=dropDownBorder}"
+												Width="{Binding ActualWidth, ElementName=dropDownBorder}" />
+										</Canvas>
+										<ItemsPresenter
+											x:Name="ItemsPresenter"
+											KeyboardNavigation.DirectionalNavigation="Contained"
+											SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+										<Border
+											BorderBrush="{DynamicResource MainViewFontSizeBorder}"
+											Margin="2,2,2,0"
+											Padding="0,2"
+											BorderThickness="0,1,0,0">
+											<Button
+												Height="28"
+												Padding="20,0"
+												HorizontalAlignment="Stretch"
+												VerticalAlignment="Center"
+												HorizontalContentAlignment="Center"
+												BorderThickness="0"
+												Content="{x:Static localprop:Resources.ScannerWinAddNew}"
+												utils:UIElementExtension.CornerRadius="1"
+												Style="{StaticResource DialogButtonStyle}"
+												Click="Button_Click" />
+										</Border>
+									</StackPanel>
+								</ScrollViewer>
+							</Border>
+						</Decorator>
+					</Popup>
+					<ToggleButton
+						x:Name="toggleButton"
+						BorderBrush="{TemplateBinding Control.BorderBrush}"
+						Background="{TemplateBinding Control.Background}"
+						BorderThickness="{TemplateBinding Control.BorderThickness}"
+						Grid.ColumnSpan="2"
+						Style="{StaticResource DefaultComboBoxToggleButton}"
+						IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+						commonCtrl:UIElementExtension.CornerRadius="{Binding Path=(commonCtrl:UIElementExtension.CornerRadius), RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+					<ContentPresenter
+						x:Name="contentPresenter"
+						Content="{TemplateBinding ComboBox.SelectionBoxItem}"
+						ContentTemplate="{TemplateBinding ComboBox.SelectionBoxItemTemplate}"
+						ContentTemplateSelector="{TemplateBinding ItemsControl.ItemTemplateSelector}"
+						ContentStringFormat="{TemplateBinding ComboBox.SelectionBoxItemStringFormat}"
+						IsHitTestVisible="False"
+						Margin="{TemplateBinding Control.Padding}"
+						SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+						HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+						VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}">
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									x:Key="{x:Type TextBlock}"
+									TargetType="{x:Type TextBlock}">
+									<Setter
+										Property="Foreground"
+										Value="{DynamicResource TextBrushWhiteAndBlack}" />
+								</Style>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+					</ContentPresenter>
+				</Grid>
+				<ControlTemplate.Triggers>
+					<Trigger
+						Property="ItemsControl.HasItems"
+						Value="False">
+						<Setter
+							TargetName="dropDownBorder"
+							Property="FrameworkElement.Height"
+							Value="95" />
+					</Trigger>
+					<MultiTrigger>
+						<MultiTrigger.Conditions>
+							<Condition
+								Property="ItemsControl.IsGrouping"
+								Value="True" />
+							<Condition
+								Property="VirtualizingPanel.IsVirtualizingWhenGrouping"
+								Value="False" />
+						</MultiTrigger.Conditions>
+						<Setter
+							Property="ScrollViewer.CanContentScroll"
+							Value="False" />
+					</MultiTrigger>
+					<Trigger
+						SourceName="DropDownScrollViewer"
+						Property="ScrollViewer.CanContentScroll"
+						Value="False">
+						<Setter
+							TargetName="opaqueRect"
+							Property="Canvas.Top"
+							Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}" />
+						<Setter
+							TargetName="opaqueRect"
+							Property="Canvas.Left"
+							Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}" />
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+			<Style
+				x:Key="MergeDialogComboboxStyle2"
+				TargetType="{x:Type ComboBox}">
+				<Setter
+					Property="Padding"
+					Value="6,4" />
+				<Setter
+					Property="FontSize"
+					Value="14" />
+				<Setter
+					Property="Height"
+					Value="26" />
+				<Setter
+					Property="FontSize"
+					Value="14" />
+				<Setter
+					Property="Background"
+					Value="{DynamicResource ComboBox.Default.Static.Background}" />
+				<Setter
+					Property="BorderBrush"
+					Value="{DynamicResource ComboBox.Default.Static.Border}" />
+				<Setter
+					Property="Foreground"
+					Value="{DynamicResource TextBox.Default.Static.Foreground}" />
+				<Setter
+					Property="ScrollViewer.HorizontalScrollBarVisibility"
+					Value="Auto" />
+				<Setter
+					Property="ScrollViewer.VerticalScrollBarVisibility"
+					Value="Auto" />
+				<Setter
+					Property="ScrollViewer.CanContentScroll"
+					Value="True" />
+				<Setter
+					Property="ScrollViewer.PanningMode"
+					Value="Both" />
+				<Setter
+					Property="commonCtrl:UIElementExtension.CornerRadius"
+					Value="2" />
+				<Setter
+					Property="Template"
+					Value="{StaticResource ScannerComboBoxTemplate}" />
+				<Setter
+					Property="ItemContainerStyle">
+					<Setter.Value>
+						<Style
+							TargetType="{x:Type ComboBoxItem}"
+							BasedOn="{StaticResource DefaultComboBoxItemStyle}">
+							<Setter
+								Property="FontSize"
+								Value="13" />
+							<Setter
+								Property="Padding"
+								Value="6,4" />
+							<Setter
+								Property="Margin"
+								Value="-6,0" />
+							<Setter
+								Property="VerticalAlignment"
+								Value="Center" />
+							<Setter
+								Property="Foreground"
+								Value="{DynamicResource TextBrushWhiteAndBlack}" />
+							<Setter
+								Property="BorderBrush"
+								Value="{DynamicResource MainViewSideBarBorder}" />
+							<Setter
+								Property="Background"
+								Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+							<Setter
+								Property="Height"
+								Value="28" />
+							<Setter
+								Property="FrameworkElement.ToolTip"
+								Value="{Binding Name}" />
+							<Setter
+								Property="MaxWidth"
+								Value="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ComboBox}}}" />
+						</Style>
+					</Setter.Value>
+				</Setter>
+				<Style.Triggers>
+					<Trigger
+						Property="ComboBox.IsEditable"
+						Value="True">
+						<Setter
+							Property="IsTabStop"
+							Value="False" />
+						<Setter
+							Property="Padding"
+							Value="2" />
+						<Setter
+							Property="Template"
+							Value="{StaticResource DefaultComboBoxEditableTemplate}" />
+					</Trigger>
+				</Style.Triggers>
+			</Style>
+			<Style
+				x:Key="InsertBlankPageHeaderedControlStyle"
+				TargetType="{x:Type HeaderedContentControl}">
+				<Setter
+					Property="Focusable"
+					Value="False" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Stretch" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Top" />
+				<Setter
+					Property="Padding"
+					Value="0,0,0,0" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type HeaderedContentControl}">
+							<Grid
+								Margin="{TemplateBinding Control.Padding}">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="Auto"
+										MaxWidth="78"
+										MinWidth="68"
+										SharedSizeGroup="InsertBlankPageHeaderedContentControlHeaderColumn" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<ContentPresenter
+									ContentSource="Header"
+									Margin="0,0,12,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}">
+									<ContentPresenter.Content>
+										<TextBlock
+											MaxWidth="78"
+											TextWrapping="Wrap"
+											Text="{Binding Header, RelativeSource={RelativeSource TemplatedParent}}" />
+									</ContentPresenter.Content>
+								</ContentPresenter>
+								<ContentPresenter
+									ContentSource="Content"
+									Margin="0,0,0,0"
+									Grid.Column="1"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid
+		Background="{DynamicResource MainWindowLeftMenuBackground}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="324" />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Grid
+			x:Name="AddScannerGird"
+			Column="0"
+			Margin="0 150 0 150"
+			Visibility="{Binding HasScanner, Converter='{StaticResource BooleanToVisibilityReverseConverter}'}">
+			<Grid
+				Visibility="{Binding ScannerConnecting, Converter='{StaticResource BooleanToVisibilityReverseConverter}'}">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="Auto" />
+					<RowDefinition
+						Height="Auto" />
+					<RowDefinition
+						Height="Auto" />
+					<RowDefinition
+						Height="Auto" />
+				</Grid.RowDefinitions>
+				<Button
+					x:Name="RefreshBtn"
+					HorizontalAlignment="Right"
+					Margin="10 -150 10 146"
+					Height="32"
+					MinWidth="84"
+					commonCtrl:UIElementExtension.CornerRadius="6"
+					Style="{StaticResource DefaultButtonStyle}"
+					BorderThickness="1"
+					Click="RefreshBtn_Click">
+					<ContentControl.Content>
+						<Grid
+							HorizontalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="auto" />
+							</Grid.ColumnDefinitions>
+							<Image
+								Source="{DynamicResource InsertFromScannerScannerrefresh}"
+								HorizontalAlignment="Right"
+								Height="24"
+								Margin="0 2 3 2"
+								VerticalAlignment="Center" />
+							<TextBlock
+								Text="{x:Static localprop:Resources.ScannerWinRefreshBtn}"
+								FontSize="13"
+								Grid.Column="1"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center" />
+						</Grid>
+					</ContentControl.Content>
+				</Button>
+				<TextBlock
+					Text="{x:Static localprop:Resources.ScannerWinNoScannerwarning}"
+					FontSize="14"
+					FontWeight="Bold"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Margin="20" />
+				<Button
+					Height="35"
+					Margin="20,10,20,5"
+					HorizontalAlignment="Stretch"
+					BorderThickness="1"
+					Grid.Row="2"
+					Style="{StaticResource DefaultButtonStyle}"
+					commonCtrl:UIElementExtension.CornerRadius="6"
+					FontSize="12"
+					VerticalAlignment="Center"
+					Foreground="#EF5B52"
+					BorderBrush="#EF5B52"
+					HorizontalContentAlignment="Center"
+					VerticalContentAlignment="Center"
+					Click="Button_Click">
+					<ContentControl.Content>
+						<Grid
+							HorizontalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="auto" />
+							</Grid.ColumnDefinitions>
+							<TextBlock
+								Text="+"
+								FontSize="20"
+								HorizontalAlignment="Right"
+								Margin="0 0 4 3"
+								VerticalAlignment="Center" />
+							<TextBlock
+								Text="{x:Static localprop:Resources.ScannerWinNewScanner}"
+								FontSize="12"
+								Grid.Column="1"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center" />
+						</Grid>
+					</ContentControl.Content>
+				</Button>
+				<TextBlock
+					Text="{x:Static localprop:Resources.ScannerWinCheckScannerContent}"
+					Foreground="#777777"
+					TextAlignment="Left"
+					LineHeight="18"
+					Grid.Row="1"
+					Margin="20 0 20 5"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Bottom"
+					TextWrapping="Wrap" />
+				<Button
+					x:Name="OkBtn2"
+					Height="35"
+					Margin="20,10,20,0"
+					HorizontalAlignment="Stretch"
+					BorderThickness="1"
+					Grid.Row="3"
+					Grid.RowSpan="2"
+					VerticalAlignment="Top"
+					Content="{x:Static localprop:Resources.MenuGruopInsertTitle}"
+					Style="{StaticResource PrimaryDialogButtonStyle}"
+					FontSize="12"
+					HorizontalContentAlignment="Center"
+					VerticalContentAlignment="Center"
+					Visibility="{Binding AddScannerImage, Converter='{StaticResource BooleanToVisibilityReverseConverter}'}"
+					IsEnabled="{Binding PageList.Count, Converter='{StaticResource scannerCountToIsnableConvert}'}"
+					Click="OKButton_Click" />
+			</Grid>
+			<Grid
+				Visibility="{Binding ScannerConnecting, Converter='{StaticResource BooleanToVisibilityConverter}'}">
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<TextBlock
+					Text="{x:Static localprop:Resources.ScannerWinSearchingContent}"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Bottom"
+					FontSize="14"
+					FontWeight="Bold"
+					Margin="0 20" />
+				<commonCtrl:ProgressRing
+					x:Name="_LoadingProgressRing"
+					Width="36"
+					Height="36"
+					Grid.Row="1"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Top"
+					IsActive="{Binding Path=IsVisible, RelativeSource={RelativeSource Mode=Self}}" />
+			</Grid>
+		</Grid>
+		<ScrollViewer
+			x:Name="ScannerGrid"
+			Height="auto"
+			Grid.Column="0"
+			Visibility="{Binding HasScanner, Converter='{StaticResource BooleanToVisibilityConverter}'}">
+			<Grid
+				Background="{DynamicResource BatchPrintWindowFileListItemMouseOverBackground}">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="350" />
+					<RowDefinition
+						Height="*" />
+					<RowDefinition
+						Height="*" />
+				</Grid.RowDefinitions>
+				<Grid
+					Margin="20 30 20 10">
+					<FrameworkElement.Resources>
+						<ResourceDictionary />
+					</FrameworkElement.Resources>
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="40" />
+						<RowDefinition
+							Height="40" />
+						<RowDefinition
+							Height="40" />
+						<RowDefinition
+							Height="40" />
+						<RowDefinition
+							Height="40" />
+						<RowDefinition
+							Height="60" />
+						<RowDefinition
+							Height="45" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							MaxWidth="90" />
+						<ColumnDefinition
+							Width="*" />
+					</Grid.ColumnDefinitions>
+					<TextBlock
+						Text="{x:Static localprop:Resources.ScannerWinScanner}"
+						Grid.Row="0"
+						TextWrapping="Wrap"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center" />
+					<ComboBox
+						Name="ScannerComboBox"
+						DisplayMemberPath="Name"
+						Style="{StaticResource MergeDialogComboboxStyle2}"
+						FontSize="12"
+						Grid.Row="0"
+						Grid.Column="1"
+						ItemsSource="{Binding ScannerList}"
+						IsEnabled="{Binding ScannerBtnIsenable}"
+						SelectedItem="{Binding SelectedScanner}">
+						<hc:Interaction.Triggers>
+							<hc:EventTrigger
+								EventName="DropDownOpened">
+								<hc:EventToCommand
+									Command="{Binding ReloadScannerListCommand}" />
+							</hc:EventTrigger>
+						</hc:Interaction.Triggers>
+					</ComboBox>
+					<TextBlock
+						Text="{x:Static localprop:Resources.ScannerWinPaperSource}"
+						TextWrapping="Wrap"
+						Grid.Row="1"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center" />
+					<ComboBox
+						DisplayMemberPath="Value"
+						Margin="0 5"
+						Style="{StaticResource MergeDialogComboboxStyle}"
+						FontSize="12"
+						VerticalContentAlignment="Center"
+						SelectedValuePath="Key"
+						Grid.Row="1"
+						Grid.Column="1"
+						ItemsSource="{Binding SourceList}"
+						SelectedValue="{Binding SelectedSource}"
+						IsEnabled="{Binding ScannerBtnIsenable}" />
+					<TextBlock
+						Text="{x:Static localprop:Resources.ScannerWinResolution}"
+						TextWrapping="Wrap"
+						Grid.Row="3"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center" />
+					<ComboBox
+						DisplayMemberPath="Value"
+						Margin="0 5"
+						Style="{StaticResource MergeDialogComboboxStyle}"
+						FontSize="12"
+						HorizontalAlignment="Stretch"
+						VerticalContentAlignment="Center"
+						SelectedValuePath="Key"
+						Grid.Row="3"
+						Grid.Column="1"
+						ItemsSource="{Binding ResolutionList}"
+						IsEnabled="{Binding ScannerBtnIsenable}"
+						SelectedValue="{Binding SelectedResolution}" />
+					<TextBlock
+						Text="{x:Static localprop:Resources.ScannerWinColorMode}"
+						TextWrapping="Wrap"
+						Grid.Row="2"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center" />
+					<ComboBox
+						DisplayMemberPath="Value"
+						Style="{StaticResource MergeDialogComboboxStyle}"
+						FontSize="12"
+						Margin="0 5"
+						VerticalContentAlignment="Center"
+						SelectedValuePath="Key"
+						Grid.Row="2"
+						Grid.Column="1"
+						ItemsSource="{Binding ColorList}"
+						SelectedValue="{Binding SelectedColor}"
+						IsEnabled="{Binding ScannerBtnIsenable}" />
+					<TextBlock
+						Text="{x:Static localprop:Resources.ScannerWinScanArea}"
+						TextWrapping="Wrap"
+						Grid.Row="4"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center" />
+					<ComboBox
+						DisplayMemberPath="Value"
+						Margin="0 5"
+						VerticalContentAlignment="Center"
+						Style="{StaticResource MergeDialogComboboxStyle}"
+						FontSize="12"
+						SelectedValuePath="Key"
+						Grid.Row="4"
+						Grid.Column="1"
+						ItemsSource="{Binding AreaList}"
+						SelectedValue="{Binding SelectedArea}"
+						IsEnabled="{Binding ScannerBtnIsenable}" />
+					<Button
+						Height="35"
+						Margin="0,10,0,0"
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Center"
+						BorderThickness="1"
+						Grid.Row="5"
+						Grid.ColumnSpan="2"
+						Content="{x:Static localprop:Resources.ScannerWinScanBtn}"
+						Style="{StaticResource PrimaryDialogButtonStyle}"
+						FontSize="12"
+						Background="{DynamicResource InsertFromScannerScanBtnBackground}"
+						Foreground="{DynamicResource OcrSelectCheckedIconColor}"
+						BorderBrush="{DynamicResource OcrSelectCheckedIconColor}"
+						HorizontalContentAlignment="Center"
+						VerticalContentAlignment="Center"
+						Command="{Binding ScanCommand}"
+						IsEnabled="{Binding ScannerBtnIsenable}" />
+					<Button
+						x:Name="OkBtn"
+						Height="35"
+						Margin="0,10,0,0"
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Center"
+						BorderThickness="1"
+						Grid.Row="6"
+						Grid.ColumnSpan="2"
+						Content="{x:Static localprop:Resources.MenuGruopInsertTitle}"
+						Style="{StaticResource PrimaryDialogButtonStyle}"
+						FontSize="12"
+						HorizontalContentAlignment="Center"
+						VerticalContentAlignment="Center"
+						IsEnabled="{Binding ScannerBtnIsenable}"
+						Visibility="{Binding PageList.Count, Converter='{StaticResource ScannerCountToVisibilityConvert}'}"
+						Click="OKButton_Click" />
+				</Grid>
+			</Grid>
+		</ScrollViewer>
+		<local:PagesView
+			x:Name="PagesView"
+			Grid.Column="1" />
+	</Grid>
+</Window>

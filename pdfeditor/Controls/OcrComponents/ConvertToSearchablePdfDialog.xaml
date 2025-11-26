@@ -1,0 +1,368 @@
+<Window
+	x:Class="pdfeditor.Controls.OcrComponents.ConvertToSearchablePdfDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.OcrComponents" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:controls="clr-namespace:pdfeditor.Controls" xmlns:pageEditor="clr-namespace:pdfeditor.Controls.PageEditor" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:utils="clr-namespace:pdfeditor.Utils"
+	Title="{StaticResource ApplicationTitle}"
+	Height="600"
+	Width="500"
+	Background="{DynamicResource SolidBrushWhiteAndBlack}"
+	Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	ResizeMode="NoResize"
+	WindowStartupLocation="CenterOwner">
+	<ScrollViewer
+		HorizontalScrollBarVisibility="Disabled"
+		VerticalScrollBarVisibility="Disabled"
+		Focusable="True"
+		FocusVisualStyle="{x:Null}">
+		<Grid>
+			<FrameworkElement.Resources>
+				<ResourceDictionary>
+					<Style
+						x:Key="LanguageItemButtonStyle"
+						TargetType="{x:Type ButtonBase}">
+						<Setter
+							Property="Background"
+							Value="#00FFFFFF" />
+						<Setter
+							Property="BorderBrush"
+							Value="#00FFFFFF" />
+						<Setter
+							Property="Foreground"
+							Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+						<Setter
+							Property="BorderThickness"
+							Value="0" />
+						<Setter
+							Property="HorizontalContentAlignment"
+							Value="Center" />
+						<Setter
+							Property="VerticalContentAlignment"
+							Value="Center" />
+						<Setter
+							Property="VerticalAlignment"
+							Value="Center" />
+						<Setter
+							Property="Padding"
+							Value="8" />
+						<Setter
+							Property="Foreground"
+							Value="{DynamicResource TextBrushWhiteAndBlack}" />
+						<Setter
+							Property="MinWidth"
+							Value="80" />
+						<Setter
+							Property="FrameworkElement.FocusVisualStyle"
+							Value="{StaticResource DialogButtonFocusVisual}" />
+						<Setter
+							Property="utils:UIElementExtension.CornerRadius"
+							Value="2,2,2,2" />
+						<Setter
+							Property="Template">
+							<Setter.Value>
+								<ControlTemplate
+									TargetType="{x:Type ButtonBase}">
+									<Border
+										x:Name="border"
+										CornerRadius="{TemplateBinding utils:UIElementExtension.CornerRadius}"
+										BorderThickness="{TemplateBinding Control.BorderThickness}"
+										Background="{TemplateBinding Control.Background}"
+										BorderBrush="{TemplateBinding Control.BorderBrush}"
+										SnapsToDevicePixels="True">
+										<ContentPresenter
+											x:Name="contentPresenter"
+											RecognizesAccessKey="True"
+											Margin="{TemplateBinding Control.Padding}"
+											SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+											HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+											VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+											Focusable="False" />
+									</Border>
+									<ControlTemplate.Triggers>
+										<Trigger
+											Property="UIElement.IsMouseOver"
+											Value="True">
+											<Setter
+												Value="{DynamicResource BtnInfoMouseOverColor}"
+												TargetName="border"
+												Property="Border.Background" />
+										</Trigger>
+										<Trigger
+											Property="IsPressed"
+											Value="True">
+											<Setter
+												Value="{DynamicResource BtnInfoMouseOverColor}"
+												TargetName="border"
+												Property="Border.Background" />
+										</Trigger>
+										<Trigger
+											Property="IsEnabled"
+											Value="False">
+											<Setter
+												Value="{DynamicResource DialogButtonDisabledBackground}"
+												TargetName="border"
+												Property="Border.Background" />
+											<Setter
+												Value="{DynamicResource DialogButtonDisabledBorder}"
+												TargetName="border"
+												Property="Border.BorderBrush" />
+											<Setter
+												Value="{DynamicResource DialogButtonDisabledForeground}"
+												TargetName="contentPresenter"
+												Property="TextElement.Foreground" />
+										</Trigger>
+									</ControlTemplate.Triggers>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+					<Style
+						x:Key="LanguageListStyle"
+						TargetType="{x:Type ItemsControl}">
+						<Setter
+							Property="BorderThickness"
+							Value="0" />
+						<Setter
+							Property="ItemContainerStyle">
+							<Setter.Value>
+								<Style
+									TargetType="{x:Type ContentPresenter}">
+									<Setter
+										Property="HorizontalAlignment"
+										Value="Stretch" />
+									<Setter
+										Property="VerticalAlignment"
+										Value="Top" />
+									<Setter
+										Property="MinHeight"
+										Value="28" />
+									<Setter
+										Property="Focusable"
+										Value="False" />
+								</Style>
+							</Setter.Value>
+						</Setter>
+						<Setter
+							Property="ItemsPanel">
+							<Setter.Value>
+								<ItemsPanelTemplate>
+									<VirtualizingStackPanel
+										Orientation="Vertical" />
+								</ItemsPanelTemplate>
+							</Setter.Value>
+						</Setter>
+						<Setter
+							Property="Template">
+							<Setter.Value>
+								<ControlTemplate
+									TargetType="{x:Type ItemsControl}">
+									<Border
+										BorderThickness="1"
+										BorderBrush="#D2D2D2"
+										CornerRadius="2">
+										<ScrollViewer
+											Focusable="False">
+											<ItemsPresenter />
+										</ScrollViewer>
+									</Border>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</ResourceDictionary>
+			</FrameworkElement.Resources>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="*" />
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+			</Grid.RowDefinitions>
+			<StackPanel
+				Orientation="Vertical"
+				Margin="20 20 20 10">
+				<TextBlock
+					Text="{x:Static localprop:Resources.OcrDialogTitle}"
+					FontSize="14"
+					LineHeight="18"
+					FontWeight="Bold"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Text="{x:Static localprop:Resources.OcrDialogSubtitle}"
+					FontSize="12"
+					LineHeight="16"
+					Margin="0,4,0,0"
+					TextWrapping="Wrap" />
+				<StackPanel
+					x:Name="PageRangeGroupPanel"
+					Orientation="Vertical">
+					<TextBlock
+						Text="{x:Static localprop:Resources.WinLabelRangeContent}"
+						FontSize="12"
+						LineHeight="14"
+						FontWeight="Bold"
+						Margin="0,20,0,0"
+						TextWrapping="Wrap" />
+					<RadioButton
+						x:Name="AllPagesRadioButton"
+						Content="{x:Static localprop:Resources.WinBtnAllPagesContent}"
+						FontSize="12"
+						Padding="4,0"
+						Style="{StaticResource DefaultRadioButtonStyle}"
+						VerticalContentAlignment="Center"
+						GroupName="ConvertToSearchablePdf_PageRangeGroup"
+						IsChecked="True"
+						Margin="0,16,0,0" />
+					<RadioButton
+						x:Name="CurrentPagesRadioButton"
+						Content="{x:Static localprop:Resources.WinWatermarkCurrentpageContent}"
+						FontSize="12"
+						Padding="4,0"
+						Style="{StaticResource DefaultRadioButtonStyle}"
+						VerticalContentAlignment="Center"
+						GroupName="ConvertToSearchablePdf_PageRangeGroup"
+						Margin="0 12 0 0" />
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition
+								Height="*" />
+							<RowDefinition
+								Height="Auto" />
+						</Grid.RowDefinitions>
+						<RadioButton
+							x:Name="SelectedPagesRadioButton"
+							Content="{x:Static localprop:Resources.WinLabelSelectedpagesContent}"
+							FontSize="12"
+							Padding="4,0"
+							Style="{StaticResource DefaultRadioButtonStyle}"
+							VerticalContentAlignment="Center"
+							GroupName="ConvertToSearchablePdf_PageRangeGroup"
+							Margin="0 12 0 0" />
+						<pageEditor:PageRangeTextBox
+							x:Name="RangeBox"
+							Grid.Column="1"
+							Margin="8 12 0 0"
+							Width="160"
+							HorizontalAlignment="Left"
+							FontSize="12"
+							Padding="1,2"
+							Style="{StaticResource DefaultTextBoxStyle}"
+							IsEnabled="{Binding ElementName=SelectedPagesRadioButton, Path=IsChecked}" />
+						<TextBlock
+							Grid.Column="1"
+							Grid.Row="1"
+							Text="{x:Static localprop:Resources.WinPageEgContent}"
+							FontSize="12"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Margin="8,4,0,0" />
+					</Grid>
+				</StackPanel>
+				<TextBlock
+					Text="{x:Static localprop:Resources.OcrDialogLanguageRecognition}"
+					FontSize="12"
+					LineHeight="14"
+					FontWeight="Bold"
+					Margin="0,20,0,0"
+					TextWrapping="Wrap" />
+				<TextBlock
+					x:Name="SelectedTooManyLanguagesTips"
+					TextWrapping="Wrap"
+					Margin="0,4,0,0"
+					Foreground="{DynamicResource BtnBrushGrayAndDark}"
+					Text="{x:Static localprop:Resources.OcrDialogLanguageSlowTips}" />
+			</StackPanel>
+			<Grid
+				Row="1"
+				Margin="20,0,20,20">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="*" />
+					<RowDefinition
+						Height="Auto" />
+				</Grid.RowDefinitions>
+				<ItemsControl
+					x:Name="Languages"
+					VerticalAlignment="Stretch"
+					VirtualizingPanel.ScrollUnit="Pixel"
+					Style="{StaticResource LanguageListStyle}"
+					ButtonBase.Click="LanguagesItem_Click">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<ToggleButton
+								HorizontalAlignment="Stretch"
+								VerticalAlignment="Top"
+								Padding="7,6"
+								Margin="1,0"
+								HorizontalContentAlignment="Stretch"
+								VerticalContentAlignment="Center"
+								Style="{StaticResource LanguageItemButtonStyle}"
+								BorderBrush="#00FFFFFF"
+								BorderThickness="0"
+								IsChecked="{Binding IsChecked, Mode=TwoWay}">
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition
+											Width="Auto" />
+										<ColumnDefinition
+											Width="*" />
+									</Grid.ColumnDefinitions>
+									<CheckBox
+										Focusable="False"
+										Style="{StaticResource DefaultCheckBoxStyle}"
+										IsChecked="{Binding IsChecked, Mode=TwoWay}" />
+									<ContentPresenter
+										Grid.Column="1"
+										Margin="8,0,0,0"
+										Content="{Binding DisplayName}" />
+								</Grid>
+							</ToggleButton>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+				<StackPanel
+					Grid.Row="2">
+					<TextBlock
+						x:Name="SelectedLanguagesText"
+						TextWrapping="Wrap"
+						Foreground="{DynamicResource BtnBrushGrayAndDark}"
+						Margin="0,12,0,0"
+						LineHeight="18">
+						<Run
+							Text="{x:Static localprop:Resources.OcrDialogLanguageSelected}" />
+						<Run
+							x:Name="SelectedLanguagesRun" />
+					</TextBlock>
+				</StackPanel>
+			</Grid>
+			<Grid
+				Row="3"
+				Margin="20,0,20,20">
+				<StackPanel
+					Orientation="Horizontal"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Center">
+					<Button
+						x:Name="btnCancel"
+						Style="{StaticResource DialogButtonStyle}"
+						FontSize="12"
+						Content="{x:Static localprop:Resources.WinBtnCancelContent}"
+						IsCancel="True"
+						Click="btnCancel_Click" />
+					<Button
+						x:Name="btnOk"
+						Style="{StaticResource PrimaryDialogButtonStyle}"
+						Margin="10,0,0,0"
+						FontSize="12"
+						Content="{x:Static localprop:Resources.OcrDialogLanguageSlowApplyTips}"
+						Click="btnOk_Click" />
+				</StackPanel>
+			</Grid>
+		</Grid>
+	</ScrollViewer>
+</Window>

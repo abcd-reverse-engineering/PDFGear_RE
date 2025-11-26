@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{A6C7799F-9D1D-48EB-B0BF-48D64673D82C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pdfconverter</RootNamespace>
+    <AssemblyName>pdfconverter</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>pdfconverter.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonLib">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\CommonLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CommunityToolkit.Mvvm">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\CommunityToolkit.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="GongSolutions.WPF.DragDrop">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\GongSolutions.WPF.DragDrop.dll</HintPath>
+    </Reference>
+    <Reference Include="HandyControl">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\HandyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\ImageProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Patagames.Pdf">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Patagames.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="PDFKit">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\PDFKit.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SautinSoft.PdfFocus">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\SautinSoft.PdfFocus.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.DocIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocToPDFConverter.Base">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.DocToPDFConverter.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.ExcelToPDFConverter.Base">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.ExcelToPDFConverter.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OfficeChart.Base">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.OfficeChart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.OfficeChartToImageConverter.Wpf">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.OfficeChartToImageConverter.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Presentation.Base">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.Presentation.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.PresentationToPdfConverter.Base">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.PresentationToPdfConverter.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonEx.cs" />
+    <Compile Include="Controls\CompressPDFUserControl.xaml.cs">
+      <DependentUpon>CompressPDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConvertProgressWindow.xaml.cs">
+      <DependentUpon>ConvertProgressWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DragDropAdorner.cs" />
+    <Compile Include="Controls\ExcelToPDFUserControl.xaml.cs">
+      <DependentUpon>ExcelToPDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HtmlToPDFUserControl.xaml.cs">
+      <DependentUpon>HtmlToPDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImagePreview.xaml.cs">
+      <DependentUpon>ImagePreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImagePreviewControl.xaml.cs">
+      <DependentUpon>ImagePreviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageToPDFUserControl.xaml.cs">
+      <DependentUpon>ImageToPDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InternalProgressMode.cs" />
+    <Compile Include="Controls\MergePDFUserControl.xaml.cs">
+      <DependentUpon>MergePDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MListView.cs" />
+    <Compile Include="Controls\MListViewItem.cs" />
+    <Compile Include="Controls\PageRangeTextBox.cs" />
+    <Compile Include="Controls\PagesView.xaml.cs">
+      <DependentUpon>PagesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PPTToPDFUserControl.xaml.cs">
+      <DependentUpon>PPTToPDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RTFToPDFUserControl.xaml.cs">
+      <DependentUpon>RTFToPDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SplitPDFUserControl.xaml.cs">
+      <DependentUpon>SplitPDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StatusList.cs" />
+    <Compile Include="Controls\TXTToPDFUserControl.xaml.cs">
+      <DependentUpon>TXTToPDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Win32.cs" />
+    <Compile Include="Controls\WordToPDFUserControl.xaml.cs">
+      <DependentUpon>WordToPDFUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertFailedStatusImageVisibility.cs" />
+    <Compile Include="ConvertFileItem.cs" />
+    <Compile Include="ConvertManager.cs" />
+    <Compile Include="ConvertSDK.cs" />
+    <Compile Include="ConvertStatusImage.cs" />
+    <Compile Include="ConvertStatusImageVisibility.cs" />
+    <Compile Include="ConvertStatusProgressRingActive.cs" />
+    <Compile Include="ConvertStatusToStr.cs" />
+    <Compile Include="Convert\CompressedSizeConvert.cs" />
+    <Compile Include="Convert\CompressStatusToStr.cs" />
+    <Compile Include="Convert\ConvertStatusToEnable.cs" />
+    <Compile Include="Convert\ConvertStatusToOperationSuccBtnVisibility.cs" />
+    <Compile Include="Convert\ConvertStatusToStr.cs" />
+    <Compile Include="Convert\FilePathDisplayConverter.cs" />
+    <Compile Include="Convert\GeneralTaskStatusToEnable.cs" />
+    <Compile Include="Convert\ImageToPDFMoveDownBtnIsEnableConverter.cs" />
+    <Compile Include="Convert\ImageToPDFMoveUpBtnIsEnableConverter.cs" />
+    <Compile Include="Convert\IsOutputInOneFileToBrowseBtnVisibilityConvert.cs" />
+    <Compile Include="Convert\IsOutputInOneFileToMoveBtnVisibilityConvert.cs" />
+    <Compile Include="Convert\IsOutputInOneFileToOneFileBrowseBtnVisibilityConvert.cs" />
+    <Compile Include="Core\IMyInterface.cs" />
+    <Compile Include="Core\WordToPDF.cs" />
+    <Compile Include="FeedbackWindow.xaml.cs">
+      <DependentUpon>FeedbackWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileActionType.cs" />
+    <Compile Include="FileCovertStatus.cs" />
+    <Compile Include="FileCovertType.cs" />
+    <Compile Include="FileSelectIsEnabled.cs" />
+    <Compile Include="FlowDirectionContext.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Models\ActionMenuGroup.cs" />
+    <Compile Include="Models\CompressItem.cs" />
+    <Compile Include="Models\CompressItemCollection.cs" />
+    <Compile Include="Models\CompressMode.cs" />
+    <Compile Include="Models\ConnectModel.cs" />
+    <Compile Include="Models\ContentMargin.cs" />
+    <Compile Include="Models\ConvertPara.cs" />
+    <Compile Include="Models\FileItemState.cs" />
+    <Compile Include="Models\Image\AdjustSettings.cs" />
+    <Compile Include="Models\Image\AdjustType.cs" />
+    <Compile Include="Models\Image\ImageModel.cs" />
+    <Compile Include="Models\Image\ImageToPDFStatusModel.cs" />
+    <Compile Include="Models\Image\ImageViewerSource.cs" />
+    <Compile Include="Models\MapOnlineConverttype.cs" />
+    <Compile Include="Models\MergeFileItem.cs" />
+    <Compile Include="Models\MergeFileItemCollection.cs" />
+    <Compile Include="Models\MergeFileItemMoveDownBtnIsEnabledConverter.cs" />
+    <Compile Include="Models\MergeFileItemMoveUpBtnIsEnabledConverter.cs" />
+    <Compile Include="Models\MergePDFUIStatus.cs" />
+    <Compile Include="Models\MergePDFUIStatusToUIElementVisibility.cs" />
+    <Compile Include="Models\MergeStatus.cs" />
+    <Compile Include="Models\MergeStatusImage.cs" />
+    <Compile Include="Models\MergeStatusImageVisibility.cs" />
+    <Compile Include="Models\MergeStatusProgressRingActive.cs" />
+    <Compile Include="Models\MergeStatusToFileItemEnabled.cs" />
+    <Compile Include="Models\MergeStatusToOperationBtnVisibility.cs" />
+    <Compile Include="Models\MergeStatusToPageCountVisibility.cs" />
+    <Compile Include="Models\MergeStatusToParseFileProgressRingActive.cs" />
+    <Compile Include="Models\MergeStatusToStr.cs" />
+    <Compile Include="Models\OnlineAuthResponsModel.cs" />
+    <Compile Include="Models\PageMarginItem.cs" />
+    <Compile Include="Models\PageSaveItem.cs" />
+    <Compile Include="Models\PageSizeItem.cs" />
+    <Compile Include="Models\PDFPageSize.cs" />
+    <Compile Include="Models\SaveFileWay.cs" />
+    <Compile Include="Models\SplitFileItem.cs" />
+    <Compile Include="Models\SplitFileItemCollection.cs" />
+    <Compile Include="Models\SplitMode.cs" />
+    <Compile Include="Models\SplitPDFUIStatus.cs" />
+    <Compile Include="Models\SplitPDFUIStatusToUIElementEnabled.cs" />
+    <Compile Include="Models\SplitStatus.cs" />
+    <Compile Include="Models\SplitStatusImage.cs" />
+    <Compile Include="Models\SplitStatusImageVisibility.cs" />
+    <Compile Include="Models\SplitStatusProgressRingActive.cs" />
+    <Compile Include="Models\SplitStatusToFileItemEnabled.cs" />
+    <Compile Include="Models\SplitStatusToOperationBtnVisibility.cs" />
+    <Compile Include="Models\SplitStatusToOperationSuccBtnVisibility.cs" />
+    <Compile Include="Models\SplitStatusToPageCountVisibility.cs" />
+    <Compile Include="Models\SplitStatusToParseFileProgressRingActive.cs" />
+    <Compile Include="Models\SplitStatusToStr.cs" />
+    <Compile Include="Models\ToimagePage.cs" />
+    <Compile Include="Models\ToPDFFileItem.cs" />
+    <Compile Include="Models\ToPDFFileItemCollection.cs" />
+    <Compile Include="Models\ToPDFItemStatus.cs" />
+    <Compile Include="Models\WorkQueenState.cs" />
+    <Compile Include="NSOCR_NameSpace\TNSOCR.cs" />
+    <Compile Include="OCRLanguageID.cs" />
+    <Compile Include="OCRSettingsWindow.xaml.cs">
+      <DependentUpon>OCRSettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OperationDeleteBtnVisibility.cs" />
+    <Compile Include="OperationOpenBtnVisibility.cs" />
+    <Compile Include="OutputFormat.cs" />
+    <Compile Include="PageCountProgressRingActive.cs" />
+    <Compile Include="PageCountVisibility.cs" />
+    <Compile Include="PageRangeHelper.cs" />
+    <Compile Include="PdfiumNetHelper.cs" />
+    <Compile Include="PdfiumPdfRange.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SDKUtils.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="TestConverter.cs" />
+    <Compile Include="UtilsManager.cs" />
+    <Compile Include="Utils\BindableBase.cs" />
+    <Compile Include="Utils\CompressPDFUtils.cs" />
+    <Compile Include="Utils\ConToPDFUtils.cs" />
+    <Compile Include="Utils\Converters\ActionViewVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\BooleanToVisibilityReverseConverter.cs" />
+    <Compile Include="Utils\Converters\ImageCountToIsnableConvert.cs" />
+    <Compile Include="Utils\Converters\ImageTransFromLength.cs" />
+    <Compile Include="Utils\Converters\StateBooleanToContentConverter.cs" />
+    <Compile Include="Utils\Converters\StateBooleanToIsnabledConverter.cs" />
+    <Compile Include="Utils\Converters\StateBooleanToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\StateBooleanToVisibilityReverseConverter.cs" />
+    <Compile Include="Utils\EncryptUtils.cs" />
+    <Compile Include="Utils\ImageHelper.cs" />
+    <Compile Include="Utils\ImageService.cs" />
+    <Compile Include="Utils\Image\DebounceHelper.cs" />
+    <Compile Include="Utils\Image\DrawUtils.cs" />
+    <Compile Include="Utils\Image\EnumHelper.cs" />
+    <Compile Include="Utils\Image\ImageDispatcherHelper.cs" />
+    <Compile Include="Utils\Image\ImageToPDFBitmapHelper.cs" />
+    <Compile Include="Utils\Image\NumberTextBoxBehavior.cs" />
+    <Compile Include="Utils\OnlineConvertUtils.cs" />
+    <Compile Include="Utils\PageService.cs" />
+    <Compile Include="Utils\ParaConvert.cs" />
+    <Compile Include="Utils\ProgressUtils.cs" />
+    <Compile Include="Utils\TempFileUtils.cs" />
+    <Compile Include="Utils\TextNumberValidationRules.cs" />
+    <Compile Include="ViewModels\CompressPDFUCViewModel.cs" />
+    <Compile Include="ViewModels\ExcelToPDFUCViewModel.cs" />
+    <Compile Include="ViewModels\ImageToPDFUCViewModel.cs" />
+    <Compile Include="ViewModels\ImageToPDFViewModel.cs" />
+    <Compile Include="ViewModels\MainWindow2ViewModel.cs" />
+    <Compile Include="ViewModels\MergePDFUCViewModel.cs" />
+    <Compile Include="ViewModels\PageZoomLevel.cs" />
+    <Compile Include="ViewModels\PPTToPDFUCViewModel.cs" />
+    <Compile Include="ViewModels\RTFToPDFUCViewModel.cs" />
+    <Compile Include="ViewModels\SplitPDFUCViewModel.cs" />
+    <Compile Include="ViewModels\TXTToPDFUCViewModel.cs" />
+    <Compile Include="ViewModels\WordToPDFUCViewModel.cs" />
+    <Compile Include="Views\EnterPasswordDialog.xaml.cs">
+      <DependentUpon>EnterPasswordDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FileOccupation.xaml.cs">
+      <DependentUpon>FileOccupation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageToPDF.xaml.cs">
+      <DependentUpon>ImageToPDF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageToPDFSucceedMessageBox.xaml.cs">
+      <DependentUpon>ImageToPDFSucceedMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow2.xaml.cs">
+      <DependentUpon>MainWindow2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PDFToImageItem.cs" />
+    <Compile Include="Views\PDFToImageItemArgs.cs" />
+    <Compile Include="Views\PDFToImageWindow.xaml.cs">
+      <DependentUpon>PDFToImageWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\CompressPDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ConvertProgressWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ExcelToPDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HtmlToPDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ImagePreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ImagePreviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ImageToPDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MergePDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PagesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PPTToPDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RTFToPDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SplitPDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TXTToPDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\WordToPDFUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FeedbackWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OCRSettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="styles\listview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="styles\slider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="themes\generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EnterPasswordDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FileOccupation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImageToPDF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImageToPDFSucceedMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PDFToImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="appicon.ico" />
+    <Resource Include="images\addbtn.png" />
+    <Resource Include="images\addfile.png" />
+    <Resource Include="images\addfiles2.png" />
+    <Resource Include="images\clear.png" />
+    <Resource Include="images\converted.png" />
+    <Resource Include="images\darkmodeimages\addfile.png" />
+    <Resource Include="images\darkmodeimages\clear.png" />
+    <Resource Include="images\darkmodeimages\deletefile.png" />
+    <Resource Include="images\darkmodeimages\dropfile-banner.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\addimage.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\disscanneraddimage.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\disscannerdelete.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\disscannerrotateleft.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\disscannerrotateright.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\errorimage.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\scanneraddimage.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\scannerdelete.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\scannerrotateleft.png" />
+    <Resource Include="images\darkmodeimages\imagetopdf\scannerrotateright.png" />
+    <Resource Include="images\darkmodeimages\openfile.png" />
+    <Resource Include="images\darkmodeimages\openfolder.png" />
+    <Resource Include="images\deletefile.png" />
+    <Resource Include="images\dropfile-banner.png" />
+    <Resource Include="images\imagetopdf\addimage.png" />
+    <Resource Include="images\imagetopdf\disscanneraddimage.png" />
+    <Resource Include="images\imagetopdf\disscannerdelete.png" />
+    <Resource Include="images\imagetopdf\disscannerrotateleft.png" />
+    <Resource Include="images\imagetopdf\disscannerrotateright.png" />
+    <Resource Include="images\imagetopdf\errorimage.png" />
+    <Resource Include="images\imagetopdf\scanneraddimage.png" />
+    <Resource Include="images\imagetopdf\scannerdelete.png" />
+    <Resource Include="images\imagetopdf\scannerrotateleft.png" />
+    <Resource Include="images\imagetopdf\scannerrotateright.png" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\openfile.png" />
+    <Resource Include="images\openfolder.png" />
+    <Resource Include="images\rate.png" />
+    <Resource Include="images\splitmodehelp.png" />
+    <Resource Include="images\warning.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

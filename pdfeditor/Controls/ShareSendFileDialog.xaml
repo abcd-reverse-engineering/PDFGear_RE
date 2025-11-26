@@ -1,0 +1,58 @@
+<Window
+	x:Class="pdfeditor.Controls.ShareSendFileDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls" xmlns:localprop="clr-namespace:pdfeditor.Properties"
+	Background="{DynamicResource WindowsBackground}"
+	Title="{StaticResource ApplicationTitle}"
+	SizeToContent="WidthAndHeight"
+	ResizeMode="NoResize">
+	<Grid
+		MinHeight="112"
+		Width="408">
+		<Button
+			Style="{StaticResource DialogButtonStyle}"
+			BorderBrush="#D2D2D2"
+			Background="{DynamicResource SolidBrushWhiteAndBlack}"
+			MinWidth="300"
+			Padding="12,12"
+			Margin="20"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch"
+			Click="Button_Click">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="Auto" />
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<Viewbox
+					Stretch="Uniform"
+					Width="32"
+					Height="32"
+					Margin="0,0,12,0">
+					<Path
+						Stroke="{DynamicResource ShareFilePath}"
+						StrokeThickness="1.5"
+						Data="M13.64,5.88 L24,5.88 C24.5523,5.88 25,6.32772 25,6.88 L25,21.12 C25,21.6723 24.5523,22.12 24,22.12 L2,22.12 C1.44772,22.12 1,21.6723 1,21.12 L1,5.88 M13.64,5.88 L9.05289,1.29289 C8.86536,1.10536 8.611,1 8.34579,1 L2,1 C1.44772,1 1,1.44772 1,2 L1,5.88 M13.64,5.88 L1,5.88" />
+				</Viewbox>
+				<TextBlock
+					Grid.Column="1"
+					FontSize="12"
+					Margin="0,0,12,0"
+					Text="{x:Static localprop:Resources.WinShareSendFilleDescText}"
+					TextWrapping="Wrap" />
+				<Viewbox
+					Stretch="Uniform"
+					Width="10"
+					Height="20"
+					Grid.Column="2">
+					<Path
+						Stroke="{DynamicResource ShareFilePath}"
+						StrokeThickness="1"
+						Data="M1,1 L9,9 L1,17" />
+				</Viewbox>
+			</Grid>
+		</Button>
+	</Grid>
+</Window>

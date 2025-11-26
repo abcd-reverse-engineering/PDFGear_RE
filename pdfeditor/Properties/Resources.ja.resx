@@ -1,0 +1,3783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddCertificateWindow_CreateCertFile_Desc" xml:space="preserve">
+    <value>新しいデジタルIDファイルのファイル位置とパスワードを入力します。デジタルIDを使用してドキュメントに署名または復号化する際にパスワードが必要です。バックアップやその他の目的のためにこのファイルの場所をメモしておいてください。</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FailedMessage" xml:space="preserve">
+    <value>不明なエラーが発生しました。</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FileName" xml:space="preserve">
+    <value>ファイル名:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameEmptyMessage" xml:space="preserve">
+    <value>ファイル名は空白にできません。</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameInvalidMessage" xml:space="preserve">
+    <value>有効なファイル名を入力してください。</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegion" xml:space="preserve">
+    <value>国/地域：</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegionNoneValue" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Desc" xml:space="preserve">
+    <value>自己署名証明書を作成するために使用する身元情報を入力します。</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Email" xml:space="preserve">
+    <value>メールアドレス：</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_EmailInvalidMessage" xml:space="preserve">
+    <value>無効なメールフォーマット。</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_LabelName" xml:space="preserve">
+    <value>名前（例：John Smith）：</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_NameEmptyMessage" xml:space="preserve">
+    <value>名前は空にできません。</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalName" xml:space="preserve">
+    <value>組織名：</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalUnit" xml:space="preserve">
+    <value>組織単位：</value>
+  </data>
+  <data name="AddCertificateWindow_ImportFile_Desc" xml:space="preserve">
+    <value>デジタルIDファイルは通常、PFXまたはP12拡張子を持ち、通常は署名と検証に使用されるプライベートキーと公開鍵証明書を含んでいます。
+ファイルとして利用可能なデジタルIDで署名するには、プロンプトに従ってファイルを選択し、プライベートキーを保護するパスワードを入力します。</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_Desc" xml:space="preserve">
+    <value>ドキュメントに署名したり暗号化するためにデジタルIDを追加または作成します。デジタルIDは信頼できる第三者サービスによって発行されることがあります。それには、プライベートキーと公開鍵を含む証明書が含まれています。プライベートキーは証明書に基づく署名を作成するために使用されます。デジタルIDに埋め込まれた証明書は、署名を検証するために他の人に送信されます。</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelCreateCert" xml:space="preserve">
+    <value>今作成する新しいデジタルID。</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelImportFile" xml:space="preserve">
+    <value>ファイルから既存のデジタルID。</value>
+  </data>
+  <data name="AddDeferredDigitSignBtn" xml:space="preserve">
+    <value>署名フィールドを追加</value>
+  </data>
+  <data name="AnnotationContextMenuCopyText" xml:space="preserve">
+    <value>テキストをコピー</value>
+  </data>
+  <data name="AnnotationFileAttachment" xml:space="preserve">
+    <value>添付ファイル</value>
+  </data>
+  <data name="AnnotationFileAttachmentOpenWarning" xml:space="preserve">
+    <value>添付ファイルを開いてもよろしいですか？</value>
+  </data>
+  <data name="AnnotationMenuBatchDeleteBtn" xml:space="preserve">
+    <value>バッチ削除</value>
+  </data>
+  <data name="AnnotationMenuFilterAll" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="AnnotationMenuFilterBtn" xml:space="preserve">
+    <value>フィルター</value>
+  </data>
+  <data name="AnnotationMenuFilterByAnnotations" xml:space="preserve">
+    <value>注釈</value>
+  </data>
+  <data name="AnnotationMenuFilterByUser" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
+  <data name="AnnotationMenuTotal" xml:space="preserve">
+    <value>合計：</value>
+  </data>
+  <data name="AppSettingsAuthorHeader" xml:space="preserve">
+    <value>著者</value>
+  </data>
+  <data name="AppSettingsBlankPage" xml:space="preserve">
+    <value>空白のPDF</value>
+  </data>
+  <data name="AppSettingsBlankPageHeightContent" xml:space="preserve">
+    <value>高さ（mm）：</value>
+  </data>
+  <data name="AppSettingsBlankPageWidthContent" xml:space="preserve">
+    <value>幅（mm）：</value>
+  </data>
+  <data name="AppSettingsDefaultDisplay" xml:space="preserve">
+    <value>デフォルトのズーム</value>
+  </data>
+  <data name="AppSettingsDefaultDisplayTips" xml:space="preserve">
+    <value>デフォルトのズーム設定は初回に開いた文書にのみ適用されます。</value>
+  </data>
+  <data name="AppSettingsDefaultPageview" xml:space="preserve">
+    <value>デフォルトのページレイアウト</value>
+  </data>
+  <data name="AppSettingsDefaultSelection" xml:space="preserve">
+    <value>デフォルトの操作ツール</value>
+  </data>
+  <data name="AppSettingsDouble" xml:space="preserve">
+    <value>見開き</value>
+  </data>
+  <data name="AppSettingsDoubleContinuous" xml:space="preserve">
+    <value>見開き（連続）</value>
+  </data>
+  <data name="AppSettingsFileAssociations" xml:space="preserve">
+    <value>ファイルの関連付け</value>
+  </data>
+  <data name="AppSettingsFileAssociations_AlreadyDefaultMessage" xml:space="preserve">
+    <value>XXX はすでにPDFファイルのデフォルトアプリとして設定されています。</value>
+  </data>
+  <data name="AppSettingsFileAssociations_MakeDefault" xml:space="preserve">
+    <value>デフォルトとして設定</value>
+  </data>
+  <data name="AppSettingsHandMode" xml:space="preserve">
+    <value>ハンドツール</value>
+  </data>
+  <data name="AppSettingsLanguageAutoItem" xml:space="preserve">
+    <value>自動</value>
+  </data>
+  <data name="AppSettingsLanguageHeader" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="AppSettingsLanguageRestartTips" xml:space="preserve">
+    <value>PDFgearを再起動して、設定を適用してください。</value>
+  </data>
+  <data name="AppSettingsLanguageTitle" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="AppSettingsLaunchOCR" xml:space="preserve">
+    <value>スキャンPDFを開いたときにOCRを促す。</value>
+  </data>
+  <data name="AppSettingsLaunchStatusbar" xml:space="preserve">
+    <value>PDFを開くときに下部ナビゲーションバーを表示する。</value>
+  </data>
+  <data name="AppSettingsLaunchToolbar" xml:space="preserve">
+    <value>PDFを開くときにツールバーを表示する。</value>
+  </data>
+  <data name="AppSettingsPageDisplay" xml:space="preserve">
+    <value>ページ表示</value>
+  </data>
+  <data name="AppSettingsSelectionMode" xml:space="preserve">
+    <value>選択ツール</value>
+  </data>
+  <data name="AppSettingsShowRightMenu" xml:space="preserve">
+    <value>テキスト選択時にクイック操作を表示</value>
+  </data>
+  <data name="AppSettingsSingle" xml:space="preserve">
+    <value>単一ページ</value>
+  </data>
+  <data name="AppSettingsSingleContinuous" xml:space="preserve">
+    <value>単一ページ（連続）</value>
+  </data>
+  <data name="AppSettingsUserInformationTitle" xml:space="preserve">
+    <value>ユーザー情報</value>
+  </data>
+  <data name="AppSettingsUserInterface" xml:space="preserve">
+    <value>ユーザーインターフェース</value>
+  </data>
+  <data name="AppsettingsHighlightForm" xml:space="preserve">
+    <value>フォームフィールドをハイライトする</value>
+  </data>
+  <data name="AttachmentDescriptionWinText" xml:space="preserve">
+    <value>説明：</value>
+  </data>
+  <data name="AttachmentPanelAttachmentTab" xml:space="preserve">
+    <value>添付ファイルタブ</value>
+  </data>
+  <data name="AttachmentPanelBtnAddAttachmentsText" xml:space="preserve">
+    <value>添付ファイルを追加</value>
+  </data>
+  <data name="AttachmentPanelBtnDeleteAttachmentText" xml:space="preserve">
+    <value>添付ファイルを削除</value>
+  </data>
+  <data name="AttachmentPanelBtnEditDescriptionText" xml:space="preserve">
+    <value>説明を編集</value>
+  </data>
+  <data name="AttachmentPanelBtnOpenAttachmentText" xml:space="preserve">
+    <value>添付ファイルを開く</value>
+  </data>
+  <data name="AttachmentPanelBtnSaveAttachmentText" xml:space="preserve">
+    <value>添付ファイルを保存</value>
+  </data>
+  <data name="AttachmentToolbarBtnContextMenuOpenAttachmentManager" xml:space="preserve">
+    <value>添付ファイルを管理</value>
+  </data>
+  <data name="BatchDeleteSelectNoneWarning" xml:space="preserve">
+    <value>削除したい注釈を選択してください</value>
+  </data>
+  <data name="BatchDeleteWarning" xml:space="preserve">
+    <value>選択したすべての注釈を削除しますか?</value>
+  </data>
+  <data name="BatchDeletingTitle" xml:space="preserve">
+    <value>注釈を削除中...</value>
+  </data>
+  <data name="BatchPrintDialogAddFilesButtonContent" xml:space="preserve">
+    <value>PDFファイルを追加する</value>
+  </data>
+  <data name="BatchPrintDialogBatchPrintButtonContent" xml:space="preserve">
+    <value>バッチ印刷</value>
+  </data>
+  <data name="BatchPrintDialogPageCountText" xml:space="preserve">
+    <value>ページ</value>
+  </data>
+  <data name="BatchPrintListWinActionsHeader" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="BatchPrintListWinAddFilesBtn" xml:space="preserve">
+    <value>ファイルを追加</value>
+  </data>
+  <data name="BatchPrintListWinFileNameHeader" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="BatchPrintListWinRemoveAllBtn" xml:space="preserve">
+    <value>全部削除</value>
+  </data>
+  <data name="BatchPrintListWinStatusHeader" xml:space="preserve">
+    <value>ステータス</value>
+  </data>
+  <data name="BatchPrintPrintAllBtn" xml:space="preserve">
+    <value>すべて印刷</value>
+  </data>
+  <data name="BatchPrintPrintSettingsBtn" xml:space="preserve">
+    <value>バッチ印刷設定</value>
+  </data>
+  <data name="BatchPrintRemoveAllMessage" xml:space="preserve">
+    <value>本当にすべてのファイルを削除しますか？</value>
+  </data>
+  <data name="BatchPrintSettingsWinAppliedTo" xml:space="preserve">
+    <value>適用先：</value>
+  </data>
+  <data name="BatchPrintSettingsWinSaveBtn" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="BatchPrintSettingsWinSettingsGroupName" xml:space="preserve">
+    <value>印刷設定</value>
+  </data>
+  <data name="BatchPrintSettingsWinToAll" xml:space="preserve">
+    <value>すべてのファイル</value>
+  </data>
+  <data name="BatchPrintSettingsWinToCurrent" xml:space="preserve">
+    <value>現在のファイル</value>
+  </data>
+  <data name="BatchPrintWinFailStatus" xml:space="preserve">
+    <value>失敗</value>
+  </data>
+  <data name="BatchPrintWinPrintingStatus" xml:space="preserve">
+    <value>印刷中...</value>
+  </data>
+  <data name="BatchPrintWinSuccessStatus" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="BookmarkRenameWindowContent" xml:space="preserve">
+    <value>ここでブックマークのタイトルをリネームする</value>
+  </data>
+  <data name="CategoryNameWinEmptyMessage" xml:space="preserve">
+    <value>カテゴリ名は空にできません。</value>
+  </data>
+  <data name="CategoryNameWinPlaceholder" xml:space="preserve">
+    <value>ここに入力...</value>
+  </data>
+  <data name="CategoryNameWinTitle" xml:space="preserve">
+    <value>カテゴリ名</value>
+  </data>
+  <data name="CerateSearchablePDFWinTitle" xml:space="preserve">
+    <value>OCRを実行中</value>
+  </data>
+  <data name="CertificateManagerBtn" xml:space="preserve">
+    <value>証明書マネージャー</value>
+  </data>
+  <data name="CertificateManagerWindowTitle" xml:space="preserve">
+    <value>ID と信頼された証明書</value>
+  </data>
+  <data name="CertificateManager_AddBtn" xml:space="preserve">
+    <value>IDを追加</value>
+  </data>
+  <data name="CertificateManager_AddFile_Invalid_Message" xml:space="preserve">
+    <value>ファイルが無効です。ファイルを確認して再試行してください。</value>
+  </data>
+  <data name="CertificateManager_CertDetailBtn" xml:space="preserve">
+    <value>証明書の詳細</value>
+  </data>
+  <data name="CertificateManager_Content_Issuedby" xml:space="preserve">
+    <value>発行者:</value>
+  </data>
+  <data name="CertificateManager_Content_ValidFrom" xml:space="preserve">
+    <value>有効開始日:</value>
+  </data>
+  <data name="CertificateManager_Content_ValidTo" xml:space="preserve">
+    <value>有効終了日:</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_Desc" xml:space="preserve">
+    <value>デジタルIDは主に署名者が本人確認とデジタル署名を作成するために使用されます。ファイルやその他の形式に基づいて、信頼できる第三者サービス提供者によって発行されることがあります。
+
+新しいデジタルIDを作成できます。ただし、低いレベルの身元保証しか提供せず、場合によっては受け入れられないことがあります。</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_TabName" xml:space="preserve">
+    <value>デジタル ID</value>
+  </data>
+  <data name="CertificateManager_ExportBtn" xml:space="preserve">
+    <value>エクスポート</value>
+  </data>
+  <data name="CertificateManager_ExportFailed_Message" xml:space="preserve">
+    <value>証明書のエクスポートに失敗しました。</value>
+  </data>
+  <data name="CertificateManager_ExportSucceeded_Message" xml:space="preserve">
+    <value>証明書は正常にエクスポートされました。</value>
+  </data>
+  <data name="CertificateManager_RefreshBtn" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="CertificateManager_RemoveBtn" xml:space="preserve">
+    <value>IDを削除</value>
+  </data>
+  <data name="CertificateManager_Remove_Message" xml:space="preserve">
+    <value>選択した証明書を削除してもよろしいですか?</value>
+  </data>
+  <data name="CertificateManager_Storage_LocalCertificateStore" xml:space="preserve">
+    <value>デジタル ID ファイル</value>
+  </data>
+  <data name="CertificateManager_Storage_WindowsCertificateStore" xml:space="preserve">
+    <value>Windows 証明書ストア</value>
+  </data>
+  <data name="CertificateManager_Table_Expires" xml:space="preserve">
+    <value>有効期限</value>
+  </data>
+  <data name="CertificateManager_Table_Issuer" xml:space="preserve">
+    <value>発行者</value>
+  </data>
+  <data name="CertificateManager_Table_Name" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="CertificateManager_Table_StorageMechanism" xml:space="preserve">
+    <value>保存方法</value>
+  </data>
+  <data name="CertificateManager_Trust_Desc" xml:space="preserve">
+    <value>信頼証明書は、認識され、信頼されている証明書機関（CA）によって発行されるデジタル証明書です。これにより、証明書発行者が信頼でき、証明書に関連付けられた公開鍵が主張するエンティティに属していることが確認されます。</value>
+  </data>
+  <data name="CertificateManager_Trust_TabName" xml:space="preserve">
+    <value>信頼された証明書</value>
+  </data>
+  <data name="ChatPanelAppActionCancelButton" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="ChatPanelAppActionCanceledContent" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="ChatPanelAppActionDoneContent" xml:space="preserve">
+    <value>終わり</value>
+  </data>
+  <data name="ChatPanelAppActionNoButton" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="ChatPanelAppActionProcessingContent" xml:space="preserve">
+    <value>処理</value>
+  </data>
+  <data name="ChatPanelAppActionYesButton" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="ChatPanelMessageErrorRetryText" xml:space="preserve">
+    <value>再試行する</value>
+  </data>
+  <data name="ChatPanelMessageErrorText" xml:space="preserve">
+    <value>エラーが発生しました。</value>
+  </data>
+  <data name="ChatPanelMessageError_ContentFiltered" xml:space="preserve">
+    <value>ポリシーに違反するコンテンツを含むメッセージまたは記事が原因で、コンテンツがフィルタリングされた可能性があります。</value>
+  </data>
+  <data name="ChatPanelMessageError_UserCanceled" xml:space="preserve">
+    <value>リクエストは手動でキャンセルされました。</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_compress" xml:space="preserve">
+    <value>高圧縮レベルを使用してこの PDF を圧縮します</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_convert_from_pdf" xml:space="preserve">
+    <value>この PDF を Word 形式に変換します</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_page_zoom" xml:space="preserve">
+    <value>この PDF ビューを拡大します</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_protect_pdf" xml:space="preserve">
+    <value>このファイルを保護するためのパスワードを追加します</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_slide_show" xml:space="preserve">
+    <value>この PDF をスライド モードで表示します</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_summary" xml:space="preserve">
+    <value>このPDFファイルを要約してください</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText1" xml:space="preserve">
+    <value>PDFgear Copilot は、自然言語コマンドでチャットするだけで、PDF の要約、PDF からの回答の検索、PDF の編集、PDF の変換、PDF の管理などを支援するように設計された AI ツールです。
+
+例:</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText2" xml:space="preserve">
+    <value>上の例をクリックするか、コマンドを入力してチャットを開始します。</value>
+  </data>
+  <data name="ChatPanelUpgradeBtn" xml:space="preserve">
+    <value>PDFgear AI をアンロック</value>
+  </data>
+  <data name="ChkboxPageSelectedAllContent" xml:space="preserve">
+    <value>全て選択</value>
+  </data>
+  <data name="ColorPickerMoreColorsLabelContent" xml:space="preserve">
+    <value>その他の色</value>
+  </data>
+  <data name="ColorPickerStandardLabelContent" xml:space="preserve">
+    <value>標準</value>
+  </data>
+  <data name="ColorPickerThemeLabelContent" xml:space="preserve">
+    <value>テーマ</value>
+  </data>
+  <data name="CopilotClearHistoryButtonText" xml:space="preserve">
+    <value>チャット履歴の消去</value>
+  </data>
+  <data name="CopilotClearHistoryTip" xml:space="preserve">
+    <value>チャット履歴を消去してもよろしいですか?</value>
+  </data>
+  <data name="CopilotExportHistoryButtonText" xml:space="preserve">
+    <value>輸出</value>
+  </data>
+  <data name="CopilotExportHistoryWindowTitle" xml:space="preserve">
+    <value>チャット履歴のエクスポート</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTips" xml:space="preserve">
+    <value>1 日あたり 50 メッセージ/ファイルの量が不足しています。</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTipsContent" xml:space="preserve">
+    <value>明日、この PDF でさらに 50 件のメッセージが利用可能になる予定です。または、今のところは別の PDF とチャットしてください。</value>
+  </data>
+  <data name="CopilotMessagesRemainingTips" xml:space="preserve">
+    <value>残り XXX 件のメッセージ</value>
+  </data>
+  <data name="CopilotPanelHeader" xml:space="preserve">
+    <value>PDFでチャット</value>
+  </data>
+  <data name="CopilotSendButtonText" xml:space="preserve">
+    <value>送信</value>
+  </data>
+  <data name="CopilotSendButtonToolTips" xml:space="preserve">
+    <value>Ctrl+Enter：メッセージ送信、Enterキー：改行入力</value>
+  </data>
+  <data name="CopilotStopResponseButtonText" xml:space="preserve">
+    <value>ストップ</value>
+  </data>
+  <data name="CopilotTextBoxEmtpy" xml:space="preserve">
+    <value>空のメッセージを送信できません</value>
+  </data>
+  <data name="CopilotTextBoxPlaceholder" xml:space="preserve">
+    <value>チャットするにはここに入力してください...</value>
+  </data>
+  <data name="CopilotViewboxPages" xml:space="preserve">
+    <value>ページ番号：</value>
+  </data>
+  <data name="CopilotWelcomePageAnalysingText" xml:space="preserve">
+    <value>分析中...</value>
+  </data>
+  <data name="CopilotWelcomePageChatNowButtonText" xml:space="preserve">
+    <value>今すぐチャット</value>
+  </data>
+  <data name="CopilotWelcomePageDesc" xml:space="preserve">
+    <value>PDFgear Copilot を使用すると、ドキュメントがインテリジェントになります。  PDF 上で操作を命令し、自然言語を使用して PDF から正確な情報を取得するのに最適です。 今すぐファイルとチャットしてみてください。</value>
+  </data>
+  <data name="CopilotWelcomePageSubTitle" xml:space="preserve">
+    <value>チャット、学習、進歩</value>
+  </data>
+  <data name="CopilotWelcomePageTitle" xml:space="preserve">
+    <value>ChatGPT を利用</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemExpiration" xml:space="preserve">
+    <value>有効期限:</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemIssuer" xml:space="preserve">
+    <value>発行者:</value>
+  </data>
+  <data name="CreateDigSignDialogBrowserItem" xml:space="preserve">
+    <value>新しいデジタルID</value>
+  </data>
+  <data name="CreateDigSignDialogCertFile" xml:space="preserve">
+    <value>デジタル ID:</value>
+  </data>
+  <data name="CreateDigSignDialogCertPassword" xml:space="preserve">
+    <value>パスワード:</value>
+  </data>
+  <data name="CreateDigSignDialogCertificatedCheckbox" xml:space="preserve">
+    <value>署名後に文書をロックする</value>
+  </data>
+  <data name="CreateDigSignDialogSignBtn" xml:space="preserve">
+    <value>サイン</value>
+  </data>
+  <data name="CreateDigSignImportCertBrowserBtn" xml:space="preserve">
+    <value>閲覧...</value>
+  </data>
+  <data name="CreateDigSignImportCertDialogDesc" xml:space="preserve">
+    <value>デジタル ID ファイルを参照します。 デジタル ID ファイルはパスワードで保護されており、開くにはパスワードが必要です。</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_InvalidPassword" xml:space="preserve">
+    <value>ファイルまたはパスワードが無効です。</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_NotSupport" xml:space="preserve">
+    <value>この証明書はデジタル署名には使用できません。</value>
+  </data>
+  <data name="CreateDigSignImportCertFileLabel" xml:space="preserve">
+    <value>デジタル ID ファイル</value>
+  </data>
+  <data name="CreateDigSignMessage_CertExpired" xml:space="preserve">
+    <value>有効期限切れの証明書で署名できません。</value>
+  </data>
+  <data name="CreateDigSignMessage_IncorrectPassword" xml:space="preserve">
+    <value>パスワードが正しくありません。パスワードを再入力してください。</value>
+  </data>
+  <data name="CreateDigSignReason1" xml:space="preserve">
+    <value>私はこの文書の著者です。</value>
+  </data>
+  <data name="CreateDigSignReason2" xml:space="preserve">
+    <value>私はこの文書を確認しました。</value>
+  </data>
+  <data name="CreateDigSignReason3" xml:space="preserve">
+    <value>私はこの文書を承認します。</value>
+  </data>
+  <data name="CreateDigSignReason4" xml:space="preserve">
+    <value>私は法的拘束力を持つ署名でこの文書を承認します。</value>
+  </data>
+  <data name="CreateDigSignReason5" xml:space="preserve">
+    <value>私はこの文書の正確さと整合性を証明します。</value>
+  </data>
+  <data name="CreateDigSignReason6" xml:space="preserve">
+    <value>私はこの文書への署名の配置によって定義された条件に同意します。</value>
+  </data>
+  <data name="CreateDigSignReason7" xml:space="preserve">
+    <value>私はこの文書の特定の部分に同意します。</value>
+  </data>
+  <data name="CropCreateTip" xml:space="preserve">
+    <value>マウスをドラッグしてクロップする領域を選択してください。希望の領域を選択したら、次のクロップのステップに進みます。</value>
+  </data>
+  <data name="CropPageExceedingPageRange" xml:space="preserve">
+    <value>プレビュー ページはページ範囲に含まれません</value>
+  </data>
+  <data name="CropPageExceedingRange" xml:space="preserve">
+    <value>法定の範囲を超える</value>
+  </data>
+  <data name="CropPageToolbarAdvanced" xml:space="preserve">
+    <value>詳細設定</value>
+  </data>
+  <data name="CropPageWinCentimeterUnits" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="CropPageWinInchUnits" xml:space="preserve">
+    <value>インチ</value>
+  </data>
+  <data name="CropPageWinMandatoryBox" xml:space="preserve">
+    <value>必須の比率</value>
+  </data>
+  <data name="CropPageWinMarginTitle" xml:space="preserve">
+    <value>マージンコントロール</value>
+  </data>
+  <data name="CropPageWinMeasuresIn" xml:space="preserve">
+    <value>単位</value>
+  </data>
+  <data name="CropPageWinMillimeterUnits" xml:space="preserve">
+    <value>mm</value>
+  </data>
+  <data name="CropPageWinPagesRange" xml:space="preserve">
+    <value>ページ</value>
+  </data>
+  <data name="CropPageWinPicaUnits" xml:space="preserve">
+    <value>ピカ</value>
+  </data>
+  <data name="CropPageWinPointUnits" xml:space="preserve">
+    <value>ポイント</value>
+  </data>
+  <data name="CropPageWinRemoveMaigin" xml:space="preserve">
+    <value>空白のマージンを削除</value>
+  </data>
+  <data name="CropPageWinResetBtn" xml:space="preserve">
+    <value>リセット</value>
+  </data>
+  <data name="CropPageWinSizeofCropBox" xml:space="preserve">
+    <value>ページの寸法をクロップする：</value>
+  </data>
+  <data name="CropPageWinZeroMarginBtn" xml:space="preserve">
+    <value>マージンを0に設定</value>
+  </data>
+  <data name="DefaultAppAndShortcutSucc" xml:space="preserve">
+    <value>設定適用！</value>
+  </data>
+  <data name="DefaultAppCancelBtn" xml:space="preserve">
+    <value>今はやめろ</value>
+  </data>
+  <data name="DefaultAppTitle" xml:space="preserve">
+    <value>PDF ファイルのデフォルト プログラムとして PDFgear を設定します。</value>
+  </data>
+  <data name="DefaultAppWinTitle" xml:space="preserve">
+    <value>PDFgear をデフォルトの PDF アプリケーションにします。</value>
+  </data>
+  <data name="DefaultContextMenuAddBookmark" xml:space="preserve">
+    <value>ブックマークを追加</value>
+  </data>
+  <data name="DeferredDigitSignCreateTip" xml:space="preserve">
+    <value>マウスを使用して、署名を表示したい領域をクリックしてドラッグします。希望の領域をドラッグし終えると、署名プロセスの次のステップに進みます。</value>
+  </data>
+  <data name="DeferredDigitSignPreviewText" xml:space="preserve">
+    <value>ここで署名</value>
+  </data>
+  <data name="DeletePageAskMsg" xml:space="preserve">
+    <value>選択したページを本当に削除しますか？</value>
+  </data>
+  <data name="DeletePageCheckEmptyMsg" xml:space="preserve">
+    <value>削除したいページを選択してください。</value>
+  </data>
+  <data name="DeletePageCheckMsg" xml:space="preserve">
+    <value>ドキュメントから全ページを削除することはできません。</value>
+  </data>
+  <data name="DeleteParentBookmarkWarning" xml:space="preserve">
+    <value>トップレベルのブックマークを削除すると、その中のすべてのブックマークも削除されます。続行しますか？</value>
+  </data>
+  <data name="DeleteSinglePageAskMsg" xml:space="preserve">
+    <value>本当にこのページを削除しますか？</value>
+  </data>
+  <data name="DeleteWatermarkAskMsg" xml:space="preserve">
+    <value>PDF内の全ての透かしを削除します。よろしいですか？</value>
+  </data>
+  <data name="DigSigCreateMessage_AreaTooSmall" xml:space="preserve">
+    <value>領域が小さすぎて署名できません。</value>
+  </data>
+  <data name="DigSigCreateMessage_Failed" xml:space="preserve">
+    <value>デジタル署名の追加に失敗しました。</value>
+  </data>
+  <data name="DigSigRemoveMessage_Failed" xml:space="preserve">
+    <value>デジタル署名の削除に失敗しました。</value>
+  </data>
+  <data name="DigSignBannerMessage_Invalid" xml:space="preserve">
+    <value>少なくとも 1 つの署名に問題があります。</value>
+  </data>
+  <data name="DigSignBannerMessage_NeedSign" xml:space="preserve">
+    <value>少なくとも1つの署名フィールドに署名する必要があります。</value>
+  </data>
+  <data name="DigSignBannerMessage_Valid" xml:space="preserve">
+    <value>署名済みで、すべての署名が有効です。</value>
+  </data>
+  <data name="DigSignBannerShowSignaturesButton" xml:space="preserve">
+    <value>署名を表示</value>
+  </data>
+  <data name="DigSignCertInfoBtn" xml:space="preserve">
+    <value>情報…</value>
+  </data>
+  <data name="DigSignFieldLocation" xml:space="preserve">
+    <value>フィールド</value>
+  </data>
+  <data name="DigSignFieldLocationPage" xml:space="preserve">
+    <value>ページ</value>
+  </data>
+  <data name="DigSignFieldSignedBy" xml:space="preserve">
+    <value>署名者:</value>
+  </data>
+  <data name="DigSignInfoIncludesEmbeddedTimestamp" xml:space="preserve">
+    <value>署名には埋め込みタイムスタンプが含まれます。 タイムスタンプ時刻: XXX</value>
+  </data>
+  <data name="DigSignInfoNotAllowModify" xml:space="preserve">
+    <value>証明者はこの文書への変更を許可しないよう指定しています。</value>
+  </data>
+  <data name="DigSignInfoSignerInfoTitle" xml:space="preserve">
+    <value>署名者情報</value>
+  </data>
+  <data name="DigSignInfoTimeFromSignersDevice" xml:space="preserve">
+    <value>署名時刻は署名者のコンピュータの時計から取得されます。</value>
+  </data>
+  <data name="DigSignInfoValidAtTime" xml:space="preserve">
+    <value>署名はセキュア（タイムスタンプ）時刻: XXX で検証されました。</value>
+  </data>
+  <data name="DigSignInfoValidatedAsSigningTime" xml:space="preserve">
+    <value>署名は署名時点で検証されました: XXX</value>
+  </data>
+  <data name="DigSignPanelContextMenuGoToField" xml:space="preserve">
+    <value>署名フィールドに移動</value>
+  </data>
+  <data name="DigSignPanelContextMenuRemoveSign" xml:space="preserve">
+    <value>署名の削除</value>
+  </data>
+  <data name="DigSignPanelContextMenuShowProps" xml:space="preserve">
+    <value>署名プロパティの表示</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedRemove" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedShowProps" xml:space="preserve">
+    <value>プロパティの表示</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedSignNow" xml:space="preserve">
+    <value>今すぐ署名</value>
+  </data>
+  <data name="DigSignPanelContextMenuValidateSign" xml:space="preserve">
+    <value>署名の検証</value>
+  </data>
+  <data name="DigSignPanelDefaultName" xml:space="preserve">
+    <value>署名</value>
+  </data>
+  <data name="DigSignPropCertDetails" xml:space="preserve">
+    <value>証明書の詳細...</value>
+  </data>
+  <data name="DigSignPropContactInfo" xml:space="preserve">
+    <value>連絡先:</value>
+  </data>
+  <data name="DigSignPropContactInfo_NotAvailable" xml:space="preserve">
+    <value>利用不可。</value>
+  </data>
+  <data name="DigSignPropDialogTitle" xml:space="preserve">
+    <value>署名プロパティ</value>
+  </data>
+  <data name="DigSignPropLastCheckTime" xml:space="preserve">
+    <value>最終チェック:</value>
+  </data>
+  <data name="DigSignPropLocation" xml:space="preserve">
+    <value>場所:</value>
+  </data>
+  <data name="DigSignPropPreviewAppVer" xml:space="preserve">
+    <value>PDFgear バージョン:</value>
+  </data>
+  <data name="DigSignPropPreviewSignedBy" xml:space="preserve">
+    <value>によるデジタル署名</value>
+  </data>
+  <data name="DigSignPropReason" xml:space="preserve">
+    <value>理由:</value>
+  </data>
+  <data name="DigSignPropShowCertBtn" xml:space="preserve">
+    <value>証明書を表示...</value>
+  </data>
+  <data name="DigSignPropSignDate" xml:space="preserve">
+    <value>日付:</value>
+  </data>
+  <data name="DigSignPropSignedBy" xml:space="preserve">
+    <value>署名者</value>
+  </data>
+  <data name="DigSignPropTrustCertBtn" xml:space="preserve">
+    <value>証明書を信頼</value>
+  </data>
+  <data name="DigSignPropUnsigned" xml:space="preserve">
+    <value>未署名の署名フィールド</value>
+  </data>
+  <data name="DigSignPropValiditySummary" xml:space="preserve">
+    <value>有効性の概要</value>
+  </data>
+  <data name="DigSignResultInvalid" xml:space="preserve">
+    <value>署名は無効です。</value>
+  </data>
+  <data name="DigSignResultUnknown" xml:space="preserve">
+    <value>署名の有効性は不明です。</value>
+  </data>
+  <data name="DigSignResultValid" xml:space="preserve">
+    <value>署名は妥当です、署名者: XXX。</value>
+  </data>
+  <data name="DigSignStatusHasBeenModified" xml:space="preserve">
+    <value>この署名が適用されてから文書が変更されています。</value>
+  </data>
+  <data name="DigSignStatusHasNotBeenModified" xml:space="preserve">
+    <value>この署名が適用されてから文書は変更されていません。</value>
+  </data>
+  <data name="DigSignStatusIdentityIsBroken" xml:space="preserve">
+    <value>この署名に含まれる形式または情報にエラーがあるため、この署名は無効です。</value>
+  </data>
+  <data name="DigSignStatusIdentityIsExpired" xml:space="preserve">
+    <value>署名者の身元が不明です。証明書が有効期限を超えました。</value>
+  </data>
+  <data name="DigSignStatusIdentityIsValid" xml:space="preserve">
+    <value>署名者の身元は有効です。</value>
+  </data>
+  <data name="DigSignStatusNotIncludedInTrustedCerts" xml:space="preserve">
+    <value>署名者の身元は、信頼された証明書のリストに含まれておらず、親証明書も信頼された証明書ではありませんので、不明です。</value>
+  </data>
+  <data name="DigSignStatusValidWhenIssued" xml:space="preserve">
+    <value>署名者の身元は発行時には有効でしたが、身元を検証するための失効チェックは現在行われていません。</value>
+  </data>
+  <data name="DigSignUnsignedToolTipPostfix" xml:space="preserve">
+    <value>(クリックして署名)</value>
+  </data>
+  <data name="DigSignValidationDialogTitle" xml:space="preserve">
+    <value>署名の検証状況</value>
+  </data>
+  <data name="DigSignValidationProperties" xml:space="preserve">
+    <value>署名プロパティ...</value>
+  </data>
+  <data name="DigitalSignatureCreateTip" xml:space="preserve">
+    <value>マウスを使用して、署名を表示したい領域をクリックしてドラッグします。希望の領域をドラッグし終えると、署名プロセスの次のステップに進みます。</value>
+  </data>
+  <data name="DocumentPropertiesAuthor" xml:space="preserve">
+    <value>著者: </value>
+  </data>
+  <data name="DocumentPropertiesCentimeterUnits" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="DocumentPropertiesCreated" xml:space="preserve">
+    <value>作成日: </value>
+  </data>
+  <data name="DocumentPropertiesCreator" xml:space="preserve">
+    <value>作成者: </value>
+  </data>
+  <data name="DocumentPropertiesFileSize" xml:space="preserve">
+    <value>ファイルサイズ: </value>
+  </data>
+  <data name="DocumentPropertiesFileVersion" xml:space="preserve">
+    <value>PDFバージョン: </value>
+  </data>
+  <data name="DocumentPropertiesFilename" xml:space="preserve">
+    <value>ファイル名:</value>
+  </data>
+  <data name="DocumentPropertiesInchUnits" xml:space="preserve">
+    <value>インチ</value>
+  </data>
+  <data name="DocumentPropertiesInfoTitle" xml:space="preserve">
+    <value>ファイル情報</value>
+  </data>
+  <data name="DocumentPropertiesKeyword" xml:space="preserve">
+    <value>キーワード: </value>
+  </data>
+  <data name="DocumentPropertiesLocation" xml:space="preserve">
+    <value>場所: </value>
+  </data>
+  <data name="DocumentPropertiesModified" xml:space="preserve">
+    <value>変更日: </value>
+  </data>
+  <data name="DocumentPropertiesPageSize" xml:space="preserve">
+    <value>ページサイズ: </value>
+  </data>
+  <data name="DocumentPropertiesProducer" xml:space="preserve">
+    <value>製作者: </value>
+  </data>
+  <data name="DocumentPropertiesSubject" xml:space="preserve">
+    <value>主題: </value>
+  </data>
+  <data name="DocumentPropertiesTitle" xml:space="preserve">
+    <value>タイトル: </value>
+  </data>
+  <data name="DocumentPropertiesTotalPages" xml:space="preserve">
+    <value>ページ数: </value>
+  </data>
+  <data name="DocumentPropertiesWindowTitle" xml:space="preserve">
+    <value>ドキュメントのプロパティ</value>
+  </data>
+  <data name="EditCustomStampWinTitle" xml:space="preserve">
+    <value>カスタムスタンプを編集</value>
+  </data>
+  <data name="EditStampWinCategoryListNewContent" xml:space="preserve">
+    <value>新しいカテゴリ</value>
+  </data>
+  <data name="EditStampWinContentType1" xml:space="preserve">
+    <value>テキスト</value>
+  </data>
+  <data name="EditStampWinContentType2" xml:space="preserve">
+    <value>日付と時刻</value>
+  </data>
+  <data name="EditStampWinContentType3" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="EditStampWinDefaultCategoryName" xml:space="preserve">
+    <value>デフォルトカテゴリ</value>
+  </data>
+  <data name="EditStampWinDefaultStampName" xml:space="preserve">
+    <value>無題のスタンプ</value>
+  </data>
+  <data name="EditStampWinFontTitle" xml:space="preserve">
+    <value>フォント</value>
+  </data>
+  <data name="EditStampWinImageEmptyErrorMessage" xml:space="preserve">
+    <value>先に画像を選択してください</value>
+  </data>
+  <data name="EditStampWinImageSelectedBtnContent" xml:space="preserve">
+    <value>画像を選択</value>
+  </data>
+  <data name="EditStampWinLargeFontSize" xml:space="preserve">
+    <value>大</value>
+  </data>
+  <data name="EditStampWinListMenuDynamicContent" xml:space="preserve">
+    <value>ダイナミック</value>
+  </data>
+  <data name="EditStampWinMediumFontSize" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="EditStampWinSaveCheckBoxContent" xml:space="preserve">
+    <value>カスタムスタンプを保存</value>
+  </data>
+  <data name="EditStampWinSmallFontSize" xml:space="preserve">
+    <value>小</value>
+  </data>
+  <data name="EditStampWinStampCategoryName" xml:space="preserve">
+    <value>カテゴリ</value>
+  </data>
+  <data name="EditStampWinStampContent1" xml:space="preserve">
+    <value>コンテンツ 1</value>
+  </data>
+  <data name="EditStampWinStampContent2" xml:space="preserve">
+    <value>コンテンツ 2</value>
+  </data>
+  <data name="EditStampWinStampContent3" xml:space="preserve">
+    <value>コンテンツ 3</value>
+  </data>
+  <data name="EditStampWinStampName" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="EditStampWinStampShape" xml:space="preserve">
+    <value>形</value>
+  </data>
+  <data name="EditStampWinTitle" xml:space="preserve">
+    <value>カスタムスタンプを作成</value>
+  </data>
+  <data name="EditStampWinUntitledCategoryName" xml:space="preserve">
+    <value>無題のカテゴリ</value>
+  </data>
+  <data name="EraserToolbarPaitialBtn" xml:space="preserve">
+    <value>部分的</value>
+  </data>
+  <data name="EraserToolbarSizeContent" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="EraserToolbarWholeBtn" xml:space="preserve">
+    <value>全体</value>
+  </data>
+  <data name="ExtractPageCheckEmptyMsg" xml:space="preserve">
+    <value>抽出したいページを選択してください。</value>
+  </data>
+  <data name="FindDeviceErrorMessage" xml:space="preserve">
+    <value>スキャナーに接続できません。スキャナーを確認して、もう一度お試しください。</value>
+  </data>
+  <data name="FirstPageTooltipText" xml:space="preserve">
+    <value>最初のページ</value>
+  </data>
+  <data name="FlattenBtn" xml:space="preserve">
+    <value>注釈の平坦化</value>
+  </data>
+  <data name="FlattenWinContent1" xml:space="preserve">
+    <value>注釈をコンテンツレイヤーにマージします。</value>
+  </data>
+  <data name="FlattenWinContent2" xml:space="preserve">
+    <value>フラット化の後、すべての注釈は編集できなくなります。</value>
+  </data>
+  <data name="FlattenWinContent3" xml:space="preserve">
+    <value>元の情報を保持するため、フラット化されたファイルはコピーとして保存されます。</value>
+  </data>
+  <data name="FlattenWinTitle" xml:space="preserve">
+    <value>PDF内のすべての注釈を平坦化します。</value>
+  </data>
+  <data name="FootToolNextViewTips" xml:space="preserve">
+    <value>次のビュー</value>
+  </data>
+  <data name="FootToolPreviousViewTips" xml:space="preserve">
+    <value>前のビュー</value>
+  </data>
+  <data name="HeaderToolExitFullScreenTips" xml:space="preserve">
+    <value>フルスクリーンを終了</value>
+  </data>
+  <data name="HeaderToolFullScreenTips" xml:space="preserve">
+    <value>全画面</value>
+  </data>
+  <data name="HeaderToolHideTips" xml:space="preserve">
+    <value>隠す</value>
+  </data>
+  <data name="HeaderToolShareTips" xml:space="preserve">
+    <value>共有する</value>
+  </data>
+  <data name="HeaderToolShowTips" xml:space="preserve">
+    <value>拡大</value>
+  </data>
+  <data name="HeaderToolThemeTips" xml:space="preserve">
+    <value>インターフェース</value>
+  </data>
+  <data name="ImageControlEditor" xml:space="preserve">
+    <value>画像の編集</value>
+  </data>
+  <data name="ImageControl_DeleteConfirm" xml:space="preserve">
+    <value>選択した画像を削除してもよろしいですか?</value>
+  </data>
+  <data name="ImageControl_OcrFailed" xml:space="preserve">
+    <value>画像からの OCR に失敗しました!</value>
+  </data>
+  <data name="ImageHierarchyBottom" xml:space="preserve">
+    <value>一番下に設定</value>
+  </data>
+  <data name="ImageHierarchyDown" xml:space="preserve">
+    <value>背面に移動</value>
+  </data>
+  <data name="ImageHierarchyFront" xml:space="preserve">
+    <value>手前に移動</value>
+  </data>
+  <data name="ImageHierarchyTop" xml:space="preserve">
+    <value>一番上に設定</value>
+  </data>
+  <data name="ImageToolbarTitle" xml:space="preserve">
+    <value>画像編集モードになっています。</value>
+  </data>
+  <data name="ImagemanipulationDelete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="ImagemanipulationFilpHor" xml:space="preserve">
+    <value>左右反転</value>
+  </data>
+  <data name="ImagemanipulationFilpVer" xml:space="preserve">
+    <value>上下反転</value>
+  </data>
+  <data name="ImagemanipulationHierarchy" xml:space="preserve">
+    <value>階層</value>
+  </data>
+  <data name="ImagemanipulationOCR" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ImagemanipulationReplace" xml:space="preserve">
+    <value>取り替える</value>
+  </data>
+  <data name="ImagemanipulationRotate" xml:space="preserve">
+    <value>回転</value>
+  </data>
+  <data name="ImagemanipulationSave" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="ImportDialogFilterImage" xml:space="preserve">
+    <value>画像ファイル</value>
+  </data>
+  <data name="ImportDialogFilterSupported" xml:space="preserve">
+    <value>対応ファイル</value>
+  </data>
+  <data name="ImprotPagesUnexpectedError" xml:space="preserve">
+    <value>不明なエラーが発生しました。</value>
+  </data>
+  <data name="InkToolbarEraserBtn" xml:space="preserve">
+    <value>消しゴム</value>
+  </data>
+  <data name="InsertPDFDetermineContent" xml:space="preserve">
+    <value>選択した XXX ページを PDF に挿入してもよろしいですか?</value>
+  </data>
+  <data name="InsertPDFInsertTitle" xml:space="preserve">
+    <value>へ挿入</value>
+  </data>
+  <data name="InsertWinInsertAfter" xml:space="preserve">
+    <value>ページの後</value>
+  </data>
+  <data name="InsertWinInsertBefore" xml:space="preserve">
+    <value>ページの前</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageContent" xml:space="preserve">
+    <value>PDF には元に戻せない特定の変更が加えられています。 元の情報を確実に保持し、損失の可能性を回避するには、変更したファイルをコピーとして保存してください。</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageTitle" xml:space="preserve">
+    <value>PDF をコピーとして保存します</value>
+  </data>
+  <data name="LabelColorContent" xml:space="preserve">
+    <value>色</value>
+  </data>
+  <data name="LabelTextContent" xml:space="preserve">
+    <value>テキスト</value>
+  </data>
+  <data name="LastPageTooltipText" xml:space="preserve">
+    <value>最後のページ</value>
+  </data>
+  <data name="LeftNavigationAnnotationPageLabelContent" xml:space="preserve">
+    <value>XXXページ</value>
+  </data>
+  <data name="LeftNavigationViewAnnotationDisplayName" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="LeftNavigationViewBookmarkDisplayName" xml:space="preserve">
+    <value>ブックマーク</value>
+  </data>
+  <data name="LeftNavigationViewDigitalSignaturesDisplayName" xml:space="preserve">
+    <value>デジタル署名</value>
+  </data>
+  <data name="LeftNavigationViewThumbnailDisplayName" xml:space="preserve">
+    <value>サムネイル</value>
+  </data>
+  <data name="LinkActionToUri" xml:space="preserve">
+    <value>「XXX」を開きます。 開く前に、信頼できることを確認してください。 引き続き開きますか？</value>
+  </data>
+  <data name="LinkBtn" xml:space="preserve">
+    <value>リンク</value>
+  </data>
+  <data name="LinkCreateBtn" xml:space="preserve">
+    <value>リンクの作成/編集</value>
+  </data>
+  <data name="LinkDeleteAll" xml:space="preserve">
+    <value>すべてのリンクを削除してもよろしいですか?</value>
+  </data>
+  <data name="LinkDeleteAllBtn" xml:space="preserve">
+    <value>すべてのリンクを削除</value>
+  </data>
+  <data name="LinkDeleteOne" xml:space="preserve">
+    <value>リンクを削除してもよろしいですか？</value>
+  </data>
+  <data name="LinkOpenFileFailed" xml:space="preserve">
+    <value>ファイルが見つかりません。 ファイルが移動、名前変更、または削除されたかどうかを確認します。</value>
+  </data>
+  <data name="LinkPageError" xml:space="preserve">
+    <value>有効なページ番号を入力してください。</value>
+  </data>
+  <data name="LinkRightDelete" xml:space="preserve">
+    <value>リンクを削除</value>
+  </data>
+  <data name="LinkToolbarTitle" xml:space="preserve">
+    <value>リンク編集モードになっています。</value>
+  </data>
+  <data name="LinkUriEmpty" xml:space="preserve">
+    <value>リンクの有効なターゲットを入力してください。</value>
+  </data>
+  <data name="LinkUriError" xml:space="preserve">
+    <value>有効な URL リンクを入力してください。</value>
+  </data>
+  <data name="LinkWinAppearance" xml:space="preserve">
+    <value>外観</value>
+  </data>
+  <data name="LinkWinFilePath" xml:space="preserve">
+    <value>ローカル ファイル</value>
+  </data>
+  <data name="LinkWinInvisibleRect" xml:space="preserve">
+    <value>見えない長方形</value>
+  </data>
+  <data name="LinkWinNavigate" xml:space="preserve">
+    <value>案内する</value>
+  </data>
+  <data name="LinkWinPage" xml:space="preserve">
+    <value>ページ</value>
+  </data>
+  <data name="LinkWinStrokeDashed" xml:space="preserve">
+    <value>破線</value>
+  </data>
+  <data name="LinkWinStrokeSolid" xml:space="preserve">
+    <value>個体</value>
+  </data>
+  <data name="LinkWinStrokeStyle" xml:space="preserve">
+    <value>ストローク スタイル</value>
+  </data>
+  <data name="LinkWinStrokeUnderline" xml:space="preserve">
+    <value>下線</value>
+  </data>
+  <data name="LinkWinStyle" xml:space="preserve">
+    <value>リンクスタイル</value>
+  </data>
+  <data name="LinkWinTitleCreate" xml:space="preserve">
+    <value>リンクを作成</value>
+  </data>
+  <data name="LinkWinTitleEdit" xml:space="preserve">
+    <value>リンクを編集</value>
+  </data>
+  <data name="LinkWinUrl" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="LinkWinVisibleRect" xml:space="preserve">
+    <value>目に見える長方形</value>
+  </data>
+  <data name="MainCropPageContextMenuAdjust" xml:space="preserve">
+    <value>選択領域の調整</value>
+  </data>
+  <data name="MainCropPageNotSelectedPageNote" xml:space="preserve">
+    <value>どれか1ページを選択してください。</value>
+  </data>
+  <data name="MainCropPageSelectLittleAreaNote" xml:space="preserve">
+    <value>より広い領域を設定してください。</value>
+  </data>
+  <data name="MainCropPageSelectedMulPageNote" xml:space="preserve">
+    <value>どれか1ページのみ選択できます。</value>
+  </data>
+  <data name="MainViewBatchPrintContent" xml:space="preserve">
+    <value>バッチ印刷</value>
+  </data>
+  <data name="MainViewBookmarkAddBookmark" xml:space="preserve">
+    <value>ブックマークを追加</value>
+  </data>
+  <data name="MainViewBookmarkAddChildBookmark" xml:space="preserve">
+    <value>サブブックマークを追加</value>
+  </data>
+  <data name="MainViewBookmarkCollapseAll" xml:space="preserve">
+    <value>すべて折りたたむ</value>
+  </data>
+  <data name="MainViewBookmarkDeleteBookmark" xml:space="preserve">
+    <value>ブックマークを削除</value>
+  </data>
+  <data name="MainViewBookmarkExpandAll" xml:space="preserve">
+    <value>すべて展開</value>
+  </data>
+  <data name="MainViewBookmarkRenameBookmark" xml:space="preserve">
+    <value>ブックマークの名前を変更</value>
+  </data>
+  <data name="MainViewCopilotButtonFirstCloseTips" xml:space="preserve">
+    <value>アイコンをクリックして、PDF との会話を続けます</value>
+  </data>
+  <data name="MainViewCreateNewPDF" xml:space="preserve">
+    <value>ファイル作成</value>
+  </data>
+  <data name="MainViewCropPageContent" xml:space="preserve">
+    <value>ページをクロップ </value>
+  </data>
+  <data name="MainViewToolbarPhoneBtn" xml:space="preserve">
+    <value>iOS &amp; Android</value>
+  </data>
+  <data name="MainViewToolbarPhoneBtnTips" xml:space="preserve">
+    <value>iOSおよびAndroid向けPDFgearを入手</value>
+  </data>
+  <data name="MainWindowAccountBtn" xml:space="preserve">
+    <value>サインイン / サインアップ</value>
+  </data>
+  <data name="MainWindowCompressFileBtn" xml:space="preserve">
+    <value>PDFを圧縮</value>
+  </data>
+  <data name="MainWindowExportFileToBtn" xml:space="preserve">
+    <value>PDF をエクスポート</value>
+  </data>
+  <data name="MainWindowFilesBtn" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+  <data name="MainWindowMergeAndSplitBtn" xml:space="preserve">
+    <value>結合と分割</value>
+  </data>
+  <data name="MainWindowNewBlankFileBtn" xml:space="preserve">
+    <value>新しい空の PDF</value>
+  </data>
+  <data name="MainWindowNewFileBtn" xml:space="preserve">
+    <value>ファイル作成</value>
+  </data>
+  <data name="MainWindowNewFilefromImageBtn" xml:space="preserve">
+    <value>画像から新しいPDFを作成</value>
+  </data>
+  <data name="MainWindowNewFilefromScannerBtn" xml:space="preserve">
+    <value>スキャナーから新しいPDFを作成</value>
+  </data>
+  <data name="MainWindowQuitBtn" xml:space="preserve">
+    <value>PDFgear を終了</value>
+  </data>
+  <data name="ManageStampAddNewBtnContent" xml:space="preserve">
+    <value>新しいカテゴリを追加</value>
+  </data>
+  <data name="ManageStampDeleteCategoryBtnContent" xml:space="preserve">
+    <value>カテゴリを削除</value>
+  </data>
+  <data name="ManageStampRenameBtnContent" xml:space="preserve">
+    <value>カテゴリ名を変更</value>
+  </data>
+  <data name="ManageStampWinCreateBtnContent" xml:space="preserve">
+    <value>スタンプを作成</value>
+  </data>
+  <data name="ManageStampWinTitle" xml:space="preserve">
+    <value>カスタムスタンプを管理</value>
+  </data>
+  <data name="ManegeStampAllCategories" xml:space="preserve">
+    <value>すべてのカテゴリ</value>
+  </data>
+  <data name="MenuAnnotateArrowContent" xml:space="preserve">
+    <value>矢印</value>
+  </data>
+  <data name="MenuAnnotateEllipseContent" xml:space="preserve">
+    <value>楕円</value>
+  </data>
+  <data name="MenuAnnotateHiddenContent" xml:space="preserve">
+    <value>コメントを非表示にする</value>
+  </data>
+  <data name="MenuAnnotateHighlight" xml:space="preserve">
+    <value>エリアハイライト</value>
+  </data>
+  <data name="MenuAnnotateHighlightContent" xml:space="preserve">
+    <value>ハイライト</value>
+  </data>
+  <data name="MenuAnnotateInkContent" xml:space="preserve">
+    <value>インク</value>
+  </data>
+  <data name="MenuAnnotateLineContent" xml:space="preserve">
+    <value>線</value>
+  </data>
+  <data name="MenuAnnotateManageContent" xml:space="preserve">
+    <value>コメントの管理</value>
+  </data>
+  <data name="MenuAnnotateNoteContent" xml:space="preserve">
+    <value>メモ</value>
+  </data>
+  <data name="MenuAnnotateRemoveTextContent" xml:space="preserve">
+    <value>テキストを消去</value>
+  </data>
+  <data name="MenuAnnotateShapeContent" xml:space="preserve">
+    <value>長方形</value>
+  </data>
+  <data name="MenuAnnotateShowContent" xml:space="preserve">
+    <value>コメントを表示する</value>
+  </data>
+  <data name="MenuAnnotateSignatureContent" xml:space="preserve">
+    <value>署名</value>
+  </data>
+  <data name="MenuAnnotateStampContent" xml:space="preserve">
+    <value>スタンプ</value>
+  </data>
+  <data name="MenuAnnotateStrikeContent" xml:space="preserve">
+    <value>取り消し線</value>
+  </data>
+  <data name="MenuAnnotateTextBoxContent" xml:space="preserve">
+    <value>テキストボックス</value>
+  </data>
+  <data name="MenuAnnotateTranslateContent" xml:space="preserve">
+    <value>翻訳</value>
+  </data>
+  <data name="MenuAnnotateTypeWriterContent" xml:space="preserve">
+    <value>タイプライター</value>
+  </data>
+  <data name="MenuAnnotateUnderlineContent" xml:space="preserve">
+    <value>下線</value>
+  </data>
+  <data name="MenuAnnotateWatermarkContent" xml:space="preserve">
+    <value>透かし</value>
+  </data>
+  <data name="MenuConvertPdfToExcelContent" xml:space="preserve">
+    <value>PDFからExcelへ</value>
+  </data>
+  <data name="MenuConvertPdfToHtmlContent" xml:space="preserve">
+    <value>PDFからHTMLへ</value>
+  </data>
+  <data name="MenuConvertPdfToImageContent" xml:space="preserve">
+    <value>PDFからPNGへ</value>
+  </data>
+  <data name="MenuConvertPdfToJpegContent" xml:space="preserve">
+    <value>PDFからJPEGへ</value>
+  </data>
+  <data name="MenuConvertPdfToPPTContent" xml:space="preserve">
+    <value>PDFからPPTへ</value>
+  </data>
+  <data name="MenuConvertPdfToRtfContent" xml:space="preserve">
+    <value>PDFからRTFへ</value>
+  </data>
+  <data name="MenuConvertPdfToTxtContent" xml:space="preserve">
+    <value>PDFからTXTへ</value>
+  </data>
+  <data name="MenuConvertPdfToWordContent" xml:space="preserve">
+    <value>PDFからWordへ</value>
+  </data>
+  <data name="MenuConvertPdfToXmlContent" xml:space="preserve">
+    <value>PDFからXMLへ</value>
+  </data>
+  <data name="MenuExtractTextEmpyMsg" xml:space="preserve">
+    <value>テキストが選択されていません。選択した範囲にテストがない、あるいは、画像が選択されています。</value>
+  </data>
+  <data name="MenuGruopAnnotateTitle" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="MenuGruopConvertTitle" xml:space="preserve">
+    <value>変換</value>
+  </data>
+  <data name="MenuGruopFillFormTitle" xml:space="preserve">
+    <value>表</value>
+  </data>
+  <data name="MenuGruopHelpTitle" xml:space="preserve">
+    <value>ヘルプ</value>
+  </data>
+  <data name="MenuGruopHomeTitle" xml:space="preserve">
+    <value>ホームページ</value>
+  </data>
+  <data name="MenuGruopInsertTitle" xml:space="preserve">
+    <value>挿入</value>
+  </data>
+  <data name="MenuGruopPageTitle" xml:space="preserve">
+    <value>ページ</value>
+  </data>
+  <data name="MenuGruopProtectTitle" xml:space="preserve">
+    <value>保護</value>
+  </data>
+  <data name="MenuGruopToolsTitle" xml:space="preserve">
+    <value>ツール</value>
+  </data>
+  <data name="MenuGruopViewTitle" xml:space="preserve">
+    <value>表示</value>
+  </data>
+  <data name="MenuHelpAboutContent" xml:space="preserve">
+    <value>PDFgearについて</value>
+  </data>
+  <data name="MenuHelpContactUsContent" xml:space="preserve">
+    <value>お問い合わせ</value>
+  </data>
+  <data name="MenuHelpSwitchtoPreviousVersionContent" xml:space="preserve">
+    <value>以前のバージョンに切り替える</value>
+  </data>
+  <data name="MenuHelpUserGuideContent" xml:space="preserve">
+    <value>ユーザーガイド</value>
+  </data>
+  <data name="MenuHelperSettingContent" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="MenuHelperUpdateContent" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="MenuInsertAddContent" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="MenuInsertDelContent" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="MenuInsertEditContent" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="MenuInsertHeaderFooterContent" xml:space="preserve">
+    <value>ヘッダーとフッター</value>
+  </data>
+  <data name="MenuInsertImageContent" xml:space="preserve">
+    <value>画像</value>
+  </data>
+  <data name="MenuInsertPageNumberContent" xml:space="preserve">
+    <value>ページ番号</value>
+  </data>
+  <data name="MenuPageDeleteContent" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="MenuPageExtractContent" xml:space="preserve">
+    <value>抽出</value>
+  </data>
+  <data name="MenuPageInsertContent" xml:space="preserve">
+    <value>挿入</value>
+  </data>
+  <data name="MenuPageMergeContent" xml:space="preserve">
+    <value>PDFを結合</value>
+  </data>
+  <data name="MenuPageRotateLeftContent" xml:space="preserve">
+    <value>左へ回転</value>
+  </data>
+  <data name="MenuPageRotateRightContent" xml:space="preserve">
+    <value>右へ回転</value>
+  </data>
+  <data name="MenuPageSplitContent" xml:space="preserve">
+    <value>PDFを分割</value>
+  </data>
+  <data name="MenuPageSubInsertBlankPage" xml:space="preserve">
+    <value>空白ページ</value>
+  </data>
+  <data name="MenuPageSubInsertFromImage" xml:space="preserve">
+    <value>画像から</value>
+  </data>
+  <data name="MenuPageSubInsertFromPDF" xml:space="preserve">
+    <value>PDFから</value>
+  </data>
+  <data name="MenuPageSubInsertFromScanner" xml:space="preserve">
+    <value>スキャナーから</value>
+  </data>
+  <data name="MenuPageSubInsertFromWord" xml:space="preserve">
+    <value>Wordから</value>
+  </data>
+  <data name="MenuPropertiesContent" xml:space="preserve">
+    <value>プロパティ</value>
+  </data>
+  <data name="MenuProtectPasswordContent" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="MenuProtectRemoveContent" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="MenuRightAnnotateCopyText" xml:space="preserve">
+    <value>テキストのコピー</value>
+  </data>
+  <data name="MenuRightAnnotateDelete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="MenuRightAnnotateDuplicate" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+  <data name="MenuRightAnnotateExitEdit" xml:space="preserve">
+    <value>Exit edit</value>
+  </data>
+  <data name="MenuShareEmailContent" xml:space="preserve">
+    <value>電子メール</value>
+  </data>
+  <data name="MenuShareSendFileContent" xml:space="preserve">
+    <value>ファイルの送信</value>
+  </data>
+  <data name="MenuShareShareContent" xml:space="preserve">
+    <value>シェア</value>
+  </data>
+  <data name="MenuSignatureSubAddNew" xml:space="preserve">
+    <value>署名を作成</value>
+  </data>
+  <data name="MenuStampPresetsApprovedItemName" xml:space="preserve">
+    <value>承認済み</value>
+  </data>
+  <data name="MenuStampPresetsAsIsItemName" xml:space="preserve">
+    <value>現在の状況</value>
+  </data>
+  <data name="MenuStampPresetsConfidentialItemName" xml:space="preserve">
+    <value>機密</value>
+  </data>
+  <data name="MenuStampPresetsDraftItemName" xml:space="preserve">
+    <value>下書き</value>
+  </data>
+  <data name="MenuStampPresetsExperimentalItemName" xml:space="preserve">
+    <value>試作</value>
+  </data>
+  <data name="MenuStampPresetsExpiredItemName" xml:space="preserve">
+    <value>期限切れ</value>
+  </data>
+  <data name="MenuStampPresetsFinalItemName" xml:space="preserve">
+    <value>最終</value>
+  </data>
+  <data name="MenuStampPresetsForPublicReleaseItemName" xml:space="preserve">
+    <value>公開用</value>
+  </data>
+  <data name="MenuStampPresetsNotApprovedItemName" xml:space="preserve">
+    <value>非承認</value>
+  </data>
+  <data name="MenuStampPresetsNotForPublicReleaseItemName" xml:space="preserve">
+    <value>公開用ではない</value>
+  </data>
+  <data name="MenuStampPresetsSoldItemName" xml:space="preserve">
+    <value>販売済み</value>
+  </data>
+  <data name="MenuStampPresetsTopSecretItemName" xml:space="preserve">
+    <value>トップシークレット</value>
+  </data>
+  <data name="MenuStampSubCustomizeContent" xml:space="preserve">
+    <value>スタンプをカスタム</value>
+  </data>
+  <data name="MenuStampSubInsertlocalImageContent" xml:space="preserve">
+    <value>ローカルの画像を挿入</value>
+  </data>
+  <data name="MenuStampSubPresetsContent" xml:space="preserve">
+    <value>初期設定</value>
+  </data>
+  <data name="MenuSubFillColorItem" xml:space="preserve">
+    <value>塗りつぶしの色</value>
+  </data>
+  <data name="MenuSubFontColorItem" xml:space="preserve">
+    <value>フォントの色</value>
+  </data>
+  <data name="MenuSubFontSizeItem" xml:space="preserve">
+    <value>フォントサイズ</value>
+  </data>
+  <data name="MenuSubStrokeColorItem" xml:space="preserve">
+    <value>線の色</value>
+  </data>
+  <data name="MenuSubThicknessItem" xml:space="preserve">
+    <value>太さ</value>
+  </data>
+  <data name="MenuViewAutoScrollContent" xml:space="preserve">
+    <value>自動スクロール</value>
+  </data>
+  <data name="MenuViewCompressContent" xml:space="preserve">
+    <value>圧縮</value>
+  </data>
+  <data name="MenuViewContiusContent" xml:space="preserve">
+    <value>連続</value>
+  </data>
+  <data name="MenuViewDoubleContent" xml:space="preserve">
+    <value>ダブル</value>
+  </data>
+  <data name="MenuViewEditObjectContent" xml:space="preserve">
+    <value>オブジェクトの編集</value>
+  </data>
+  <data name="MenuViewEditTextContent" xml:space="preserve">
+    <value>テキストの編集</value>
+  </data>
+  <data name="MenuViewExitAnnotateContent" xml:space="preserve">
+    <value>注釈の解除</value>
+  </data>
+  <data name="MenuViewExtractTextContent" xml:space="preserve">
+    <value>テキストの抽出</value>
+  </data>
+  <data name="MenuViewFindContent" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="MenuViewFitPageContent" xml:space="preserve">
+    <value>ページに収める</value>
+  </data>
+  <data name="MenuViewFullSizeContent" xml:space="preserve">
+    <value>実際のサイズ</value>
+  </data>
+  <data name="MenuViewHeightContent" xml:space="preserve">
+    <value>フィットの高さ</value>
+  </data>
+  <data name="MenuViewNextContent" xml:space="preserve">
+    <value>次へ</value>
+  </data>
+  <data name="MenuViewOCRContent" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="MenuViewPresentContent" xml:space="preserve">
+    <value>再生</value>
+  </data>
+  <data name="MenuViewPreviousContent" xml:space="preserve">
+    <value>前へ</value>
+  </data>
+  <data name="MenuViewRotateLeftContent" xml:space="preserve">
+    <value>左へ回転</value>
+  </data>
+  <data name="MenuViewRotateRightContent" xml:space="preserve">
+    <value>右へ回転</value>
+  </data>
+  <data name="MenuViewScreenshotContent" xml:space="preserve">
+    <value>スクリーンショット</value>
+  </data>
+  <data name="MenuViewSingleContent" xml:space="preserve">
+    <value>シングル</value>
+  </data>
+  <data name="MenuViewUpgradeContent" xml:space="preserve">
+    <value>アップグレード</value>
+  </data>
+  <data name="MenuViewWidthContent" xml:space="preserve">
+    <value>幅に合わせる</value>
+  </data>
+  <data name="MenuViewZoomContent" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="MenuWatermarkSubCreateContent" xml:space="preserve">
+    <value>透かしを作成</value>
+  </data>
+  <data name="MenuWatermarkSubDeleteContent" xml:space="preserve">
+    <value>透かしを削除</value>
+  </data>
+  <data name="MergeWindowsLoadfailedMessage" xml:space="preserve">
+    <value>ファイルの読み込みに失敗しました。 別のファイルを選択して再試行してください。</value>
+  </data>
+  <data name="MicrosoftStoreBillingHelpContent" xml:space="preserve">
+    <value>Microsoft Store と課金に関するヘルプ</value>
+  </data>
+  <data name="MoreColorsBtnTips" xml:space="preserve">
+    <value>もっと色…</value>
+  </data>
+  <data name="MsgAttachmentOpenFailed" xml:space="preserve">
+    <value>添付ファイルを開けませんでした。</value>
+  </data>
+  <data name="MsgAttachmentSaveFailed" xml:space="preserve">
+    <value>添付ファイルの保存に失敗しました。</value>
+  </data>
+  <data name="MsgAttachmentSaveSuc" xml:space="preserve">
+    <value>保存に成功しました。添付ファイルをファイルエクスプローラーで表示しますか？</value>
+  </data>
+  <data name="Msg_AttachmentAlreadyExist" xml:space="preserve">
+    <value>ファイル「XXX」の添付に失敗しました。添付パネルに同名のファイルがすでに存在します。</value>
+  </data>
+  <data name="Msg_AttachmentToolLarge" xml:space="preserve">
+    <value>ファイル「XXX」は2GBの制限を超えているため添付できません。</value>
+  </data>
+  <data name="Msg_DeleteAttachments" xml:space="preserve">
+    <value>添付ファイルを削除してもよろしいですか？</value>
+  </data>
+  <data name="Msg_DescriptionOverMaxCharsNum" xml:space="preserve">
+    <value>説明は256文字以内で入力してください。</value>
+  </data>
+  <data name="NewBookmarkName" xml:space="preserve">
+    <value>新しいブックマーク</value>
+  </data>
+  <data name="NewFileName" xml:space="preserve">
+    <value>無題</value>
+  </data>
+  <data name="NewFileRemindSave" xml:space="preserve">
+    <value>ドキュメント XXX が終了します。 変更を保存しますか?</value>
+  </data>
+  <data name="NextBtnTooltipText" xml:space="preserve">
+    <value>次を検索</value>
+  </data>
+  <data name="NoPrintNoteWindowAddBtn" xml:space="preserve">
+    <value>システム内にプリンターが見つかりませんでした。続行するにはプリンターを追加してください。</value>
+  </data>
+  <data name="NoPrintNoteWindowContent" xml:space="preserve">
+    <value>プリンターを追加</value>
+  </data>
+  <data name="NoPrintNoteWindowTitle" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="OCRTip" xml:space="preserve">
+    <value>マウスをドラッグしてテキスト認識エリアを選択します。完了したら、次のステップに進みます。</value>
+  </data>
+  <data name="OcrDialogErrorMessage" xml:space="preserve">
+    <value>ドキュメントに認識可能な文字が見つかりませんでした。ドキュメントの内容が明瞭であることを確認し、ページを正しい読み取り方向に回転させ、内容に含まれる言語を選択してください。</value>
+  </data>
+  <data name="OcrDialogLanguageRecognition" xml:space="preserve">
+    <value>言語認識</value>
+  </data>
+  <data name="OcrDialogLanguageSelected" xml:space="preserve">
+    <value>選択された言語：</value>
+  </data>
+  <data name="OcrDialogLanguageSelectedNone" xml:space="preserve">
+    <value>少なくとも 1 つの言語を選択してください。</value>
+  </data>
+  <data name="OcrDialogLanguageSlowApplyTips" xml:space="preserve">
+    <value>適用する</value>
+  </data>
+  <data name="OcrDialogLanguageSlowTips" xml:space="preserve">
+    <value>3 つを超える言語を使用すると、認識が遅くなる可能性があります。</value>
+  </data>
+  <data name="OcrDialogSaveDocDoNotSaveBtn" xml:space="preserve">
+    <value>保存しないでください</value>
+  </data>
+  <data name="OcrDialogSaveDocMessage" xml:space="preserve">
+    <value>操作前に「XXX」の変更を保存しますか？</value>
+  </data>
+  <data name="OcrDialogSubtitle" xml:space="preserve">
+    <value>PDFをOCRして画像内のテキストを検索可能にします</value>
+  </data>
+  <data name="OcrDialogTitle" xml:space="preserve">
+    <value>OCR PDF</value>
+  </data>
+  <data name="OpenDocByIncorrectPwdMsg" xml:space="preserve">
+    <value>パスワードが正しくありません。</value>
+  </data>
+  <data name="OpenDocFailedExceptionMsg" xml:space="preserve">
+    <value>文書を開くことができませんでした。</value>
+  </data>
+  <data name="OpenDocNotExistMsg" xml:space="preserve">
+    <value>ファイルが存在しません：</value>
+  </data>
+  <data name="OpenDocNotSupportedMsg" xml:space="preserve">
+    <value>非対応のファイルの種類：</value>
+  </data>
+  <data name="OpenFileBtnContent" xml:space="preserve">
+    <value>ファイルを開く</value>
+  </data>
+  <data name="PageMenuInsertfromfileContent" xml:space="preserve">
+    <value>ファイルから挿入</value>
+  </data>
+  <data name="PageMergeErrorMessage" xml:space="preserve">
+    <value>ファイルの読み込みに失敗しました。別のファイルで再試行してください。</value>
+  </data>
+  <data name="PageResizeWinCustomize" xml:space="preserve">
+    <value>カスタマイズ</value>
+  </data>
+  <data name="PageResizeWinFixedSize" xml:space="preserve">
+    <value>固定サイズ</value>
+  </data>
+  <data name="PageResizeWinHeightContent" xml:space="preserve">
+    <value>高:</value>
+  </data>
+  <data name="PageResizeWinOrientation" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="PageResizeWinOriginalContent" xml:space="preserve">
+    <value>元のページサイズ</value>
+  </data>
+  <data name="PageResizeWinPageNumber" xml:space="preserve">
+    <value>ページ</value>
+  </data>
+  <data name="PageResizeWinResizeGroupName" xml:space="preserve">
+    <value>サイズ変更</value>
+  </data>
+  <data name="PageResizeWinResizedContent" xml:space="preserve">
+    <value>サイズ変更されたページサイズ</value>
+  </data>
+  <data name="PageResizeWinTitle" xml:space="preserve">
+    <value>ページのサイズ変更</value>
+  </data>
+  <data name="PageResizeWinTooltip" xml:space="preserve">
+    <value>より良いレイアウトのためにページをカスタムサイズに変更します。</value>
+  </data>
+  <data name="PageResizeWinWidthContent" xml:space="preserve">
+    <value>幅:</value>
+  </data>
+  <data name="PageSelectedAllPrefiexedContent" xml:space="preserve">
+    <value>選択済み</value>
+  </data>
+  <data name="PageSplitMergeCheckMsg" xml:space="preserve">
+    <value>開いている文書は編集されましたので、変更内容を保存してください。</value>
+  </data>
+  <data name="PageWinAllPages" xml:space="preserve">
+    <value>すべてのページ</value>
+  </data>
+  <data name="PageWinCustomPages" xml:space="preserve">
+    <value>カスタムページ</value>
+  </data>
+  <data name="PageWinExtractAll" xml:space="preserve">
+    <value>ページを 1 つの PDF に抽出する</value>
+  </data>
+  <data name="PageWinExtractDelete" xml:space="preserve">
+    <value>抽出後に選択したページを削除する</value>
+  </data>
+  <data name="PageWinExtractMode" xml:space="preserve">
+    <value>抽出モード</value>
+  </data>
+  <data name="PageWinExtractevert" xml:space="preserve">
+    <value>すべてのページを個別の PDF に抽出する</value>
+  </data>
+  <data name="PageWinRange" xml:space="preserve">
+    <value>範囲</value>
+  </data>
+  <data name="PageWinSelectPages" xml:space="preserve">
+    <value>選択したページ</value>
+  </data>
+  <data name="PageWinSelectedPages" xml:space="preserve">
+    <value>"XXX" ページが選択されました</value>
+  </data>
+  <data name="PageWinSubset" xml:space="preserve">
+    <value>部分範囲</value>
+  </data>
+  <data name="PhoneWinContent" xml:space="preserve">
+    <value>QRコードをスキャンしてどこでもPDFgearを楽しむ</value>
+  </data>
+  <data name="PhoneWinContentTitle" xml:space="preserve">
+    <value>iOS/Android対応のPDFgearが利用可能</value>
+  </data>
+  <data name="PopupPlaceholderContent" xml:space="preserve">
+    <value>ここにテキストを追加</value>
+  </data>
+  <data name="PresentationWindowExitText" xml:space="preserve">
+    <value>出口</value>
+  </data>
+  <data name="PrevBtnTooltipText" xml:space="preserve">
+    <value>前を検索</value>
+  </data>
+  <data name="PrintWindowBookLetBinding" xml:space="preserve">
+    <value>綴じ方</value>
+  </data>
+  <data name="PrintWindowBookLetBtnContent" xml:space="preserve">
+    <value>小冊子</value>
+  </data>
+  <data name="PrintWindowBookLetLeftBinding" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="PrintWindowBookLetRightBinding" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="PrintWindowBookLetSubset" xml:space="preserve">
+    <value>印刷方法</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBack" xml:space="preserve">
+    <value>片面で印刷（裏側）</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBoth" xml:space="preserve">
+    <value>両面で印刷</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetFrontal" xml:space="preserve">
+    <value>片面で印刷（表側）</value>
+  </data>
+  <data name="PrintWindowMutilpleBtnContent" xml:space="preserve">
+    <value>複数</value>
+  </data>
+  <data name="PrintWindowMutilpleLayout" xml:space="preserve">
+    <value>ページの順序</value>
+  </data>
+  <data name="PrintWindowMutilpleMargins" xml:space="preserve">
+    <value>余白</value>
+  </data>
+  <data name="PrintWindowMutilplePapers" xml:space="preserve">
+    <value>1枚あたりのページ数</value>
+  </data>
+  <data name="PrintWindowMutilplePrintBorder" xml:space="preserve">
+    <value>ページ境界線を印刷</value>
+  </data>
+  <data name="PrintWindowPageSettingGrounpName" xml:space="preserve">
+    <value>ページ設定</value>
+  </data>
+  <data name="PrintWindowPageSettingsSizeTitle" xml:space="preserve">
+    <value>用紙サイズ</value>
+  </data>
+  <data name="PrintWindowPrintHandingGrounpName" xml:space="preserve">
+    <value>印刷モード</value>
+  </data>
+  <data name="PrintWindowRangeGroupName" xml:space="preserve">
+    <value>ページ範囲</value>
+  </data>
+  <data name="PrintWindowReverseCheckBoxContent" xml:space="preserve">
+    <value>逆順に印刷</value>
+  </data>
+  <data name="PrintWindowScalBtnContent" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="PrintWindowTileBtnContent" xml:space="preserve">
+    <value>ポスター</value>
+  </data>
+  <data name="PrintWindowTileCutMasks" xml:space="preserve">
+    <value>タイルマーク</value>
+  </data>
+  <data name="PrintWindowTileLabels" xml:space="preserve">
+    <value>ラベル</value>
+  </data>
+  <data name="PrintWindowTileOverlap" xml:space="preserve">
+    <value>重なり</value>
+  </data>
+  <data name="PrintWindowTilePageZoom" xml:space="preserve">
+    <value>倍率</value>
+  </data>
+  <data name="RateWindowsContent" xml:space="preserve">
+    <value>あなたの考えを共有して、改善にご協力ください。</value>
+  </data>
+  <data name="RateWindowsContentTitle" xml:space="preserve">
+    <value>PDFgearを楽しむ？</value>
+  </data>
+  <data name="RateWindowsFeedbcakBtn" xml:space="preserve">
+    <value>フィードバックを提供する</value>
+  </data>
+  <data name="RateWindowsRateBtn" xml:space="preserve">
+    <value>うまくいきます</value>
+  </data>
+  <data name="ReadAllBtn" xml:space="preserve">
+    <value>すべてのページを読む</value>
+  </data>
+  <data name="ReadCurrentBtn" xml:space="preserve">
+    <value>現在のページを読む</value>
+  </data>
+  <data name="ReadFromCurrentBtn" xml:space="preserve">
+    <value>現在のページから読み取る</value>
+  </data>
+  <data name="ReadMessage" xml:space="preserve">
+    <value>読み上げ言語が「xxx」に切り替わり、xxxxページの冒頭から読み上げが再開されます。よろしいですか？</value>
+  </data>
+  <data name="ReadPageEmpty" xml:space="preserve">
+    <value>現在のページ (ページ XXX) には読み取り可能なテキストがありません。</value>
+  </data>
+  <data name="ReadToolBarBtn" xml:space="preserve">
+    <value>コントロールウィジェット</value>
+  </data>
+  <data name="ReadWinAddMore" xml:space="preserve">
+    <value>音声言語を追加</value>
+  </data>
+  <data name="ReadWinFemaleVoice" xml:space="preserve">
+    <value>女性</value>
+  </data>
+  <data name="ReadWinMaleVoice" xml:space="preserve">
+    <value>男</value>
+  </data>
+  <data name="ReadWinOkBtn" xml:space="preserve">
+    <value>続ける</value>
+  </data>
+  <data name="ReadWinPitchBtn" xml:space="preserve">
+    <value>ピッチ</value>
+  </data>
+  <data name="ReadWinSpeedBtn" xml:space="preserve">
+    <value>レート</value>
+  </data>
+  <data name="ReadWinTitle" xml:space="preserve">
+    <value>読み上げます</value>
+  </data>
+  <data name="RedactBtn" xml:space="preserve">
+    <value>墨消し</value>
+  </data>
+  <data name="RedactStartMessageContent" xml:space="preserve">
+    <value>マウスをドラッグして、編集する領域を墨消します。墨消し対象としてマークされたコンテンツは、文書を保存すると完全に削除されます。</value>
+  </data>
+  <data name="RedactStartMessageTitle" xml:space="preserve">
+    <value>墨消されたコンテンツは完全に削除されます。</value>
+  </data>
+  <data name="RedactToolbarExitText" xml:space="preserve">
+    <value>墨消しの終了</value>
+  </data>
+  <data name="RemoveDeferredDigitSignConfirmMessage" xml:space="preserve">
+    <value>本当に XXX を削除しますか？</value>
+  </data>
+  <data name="RemoveDeferredDigitSignFailedMessage" xml:space="preserve">
+    <value>署名フィールドの削除に失敗しました。</value>
+  </data>
+  <data name="RightMenuAddImageItemText" xml:space="preserve">
+    <value>画像</value>
+  </data>
+  <data name="RightMenuAddItemText" xml:space="preserve">
+    <value>追加...</value>
+  </data>
+  <data name="RightMenuAddTextItemText" xml:space="preserve">
+    <value>テキスト</value>
+  </data>
+  <data name="RightMenuBookmakrkExpandCollpaseItemText" xml:space="preserve">
+    <value>ブックマークの展開/折りたたみ</value>
+  </data>
+  <data name="RightMenuCompressPDFItemText" xml:space="preserve">
+    <value>PDFを圧縮</value>
+  </data>
+  <data name="RightMenuConvertToItemText" xml:space="preserve">
+    <value>に変換</value>
+  </data>
+  <data name="RightMenuDeleteAnnotationItemText" xml:space="preserve">
+    <value>コメントを削除</value>
+  </data>
+  <data name="RightMenuDeleteTextItemText" xml:space="preserve">
+    <value>テキストを削除</value>
+  </data>
+  <data name="RightMenuInsertPageItemImage" xml:space="preserve">
+    <value>画像から</value>
+  </data>
+  <data name="RightMenuInsertPageItemPDF" xml:space="preserve">
+    <value>PDFから</value>
+  </data>
+  <data name="RightMenuInsertPageItemWord" xml:space="preserve">
+    <value>Wordから</value>
+  </data>
+  <data name="RightMenuInsertPageText" xml:space="preserve">
+    <value>ページを挿入</value>
+  </data>
+  <data name="RightMenuMergeSplitPDFItemText" xml:space="preserve">
+    <value>PDFを結合と分割</value>
+  </data>
+  <data name="RightMenuOcrPagesItemText" xml:space="preserve">
+    <value>ページをOCR</value>
+  </data>
+  <data name="RightMenuOcrPagesText" xml:space="preserve">
+    <value>ページをOCR</value>
+  </data>
+  <data name="RightMenuPropertiesContent" xml:space="preserve">
+    <value>プロパティ...</value>
+  </data>
+  <data name="SaveDocBeforeCloseMsg" xml:space="preserve">
+    <value>閉じる前に、‘XXX’ に変更内容を保存しますか？</value>
+  </data>
+  <data name="SaveDocBeforeCompressMsg" xml:space="preserve">
+    <value>開いているドキュメントは編集されています。 圧縮を呼び出す前に変更を保存してください。</value>
+  </data>
+  <data name="SaveDocBeforeConvertMsg" xml:space="preserve">
+    <value>開いている文書は編集されましたので、変換する前に変更内容を保存してください。</value>
+  </data>
+  <data name="SaveDocBeforeSendMsg" xml:space="preserve">
+    <value>開いたドキュメントは編集されています。続行するには変更を保存してください。</value>
+  </data>
+  <data name="SaveDocFailedByMsg" xml:space="preserve">
+    <value>文書の保存に失敗しました。読み取り専用か、または他のアプリケーションで開かれています。</value>
+  </data>
+  <data name="SaveDocFailedBySaveasMsg" xml:space="preserve">
+    <value>文書の保存に失敗しました。読み取り専用か、または他のアプリケーションで開かれています。文書のコピーを保存しますか？</value>
+  </data>
+  <data name="SaveMenuStampSubCustomizeContent" xml:space="preserve">
+    <value>カスタムスタンプを保存する</value>
+  </data>
+  <data name="ScanErrorMessage" xml:space="preserve">
+    <value>予期せぬエラーが発生しました。スキャナーを確認して、もう一度お試しください。それでも問題が解決しない場合は、サポートまでご連絡ください。</value>
+  </data>
+  <data name="ScannerWinAddFailed" xml:space="preserve">
+    <value>XXXの追加に失敗しました。確認して再試行してください。</value>
+  </data>
+  <data name="ScannerWinAddNew" xml:space="preserve">
+    <value>新しいスキャナーを追加</value>
+  </data>
+  <data name="ScannerWinCantFindScanner" xml:space="preserve">
+    <value>スキャナーが表示されない場合、設定に追加され、オフラインではないことを確認してください。</value>
+  </data>
+  <data name="ScannerWinCheckScannerContent" xml:space="preserve">
+    <value>スキャナーが電源オンで、コンピューターまたはネットワークに接続されているか確認してください。また、新しいスキャナーを追加することもできます。</value>
+  </data>
+  <data name="ScannerWinClosingWarning" xml:space="preserve">
+    <value>リスト内のスキャンは閉じると失われます。閉じますか?</value>
+  </data>
+  <data name="ScannerWinColorMode" xml:space="preserve">
+    <value>カラーモード</value>
+  </data>
+  <data name="ScannerWinCreateTitle" xml:space="preserve">
+    <value>スキャナーから PDF を作成</value>
+  </data>
+  <data name="ScannerWinDeletePreview" xml:space="preserve">
+    <value>これを削除してもよろしいですか?</value>
+  </data>
+  <data name="ScannerWinDeleteSelected" xml:space="preserve">
+    <value>XXX ページを削除してもよろしいですか?</value>
+  </data>
+  <data name="ScannerWinImportImags" xml:space="preserve">
+    <value>画像のインポート</value>
+  </data>
+  <data name="ScannerWinInsertAfter" xml:space="preserve">
+    <value>ページの後</value>
+  </data>
+  <data name="ScannerWinInsertBefore" xml:space="preserve">
+    <value>ページの前</value>
+  </data>
+  <data name="ScannerWinInsertConfirm" xml:space="preserve">
+    <value>選択した XXX ページを挿入して新しい PDF を作成してもよろしいですか?</value>
+  </data>
+  <data name="ScannerWinInsertOptions" xml:space="preserve">
+    <value>挿入オプション</value>
+  </data>
+  <data name="ScannerWinInsertTitle" xml:space="preserve">
+    <value>スキャナーから挿入</value>
+  </data>
+  <data name="ScannerWinNewScanner" xml:space="preserve">
+    <value>新しいスキャナー</value>
+  </data>
+  <data name="ScannerWinNoScannerContent" xml:space="preserve">
+    <value>スキャナーが表示されない場合は、スキャナーが設定に追加されており、オフラインになっていないことを確認してください。</value>
+  </data>
+  <data name="ScannerWinNoScannerTitle" xml:space="preserve">
+    <value>スキャナーを選択</value>
+  </data>
+  <data name="ScannerWinNoScannerwarning" xml:space="preserve">
+    <value>スキャナが検出されませんでした</value>
+  </data>
+  <data name="ScannerWinPageSettings" xml:space="preserve">
+    <value>PDFページ設定</value>
+  </data>
+  <data name="ScannerWinPaperSource" xml:space="preserve">
+    <value>給紙元</value>
+  </data>
+  <data name="ScannerWinRecommended" xml:space="preserve">
+    <value>推奨</value>
+  </data>
+  <data name="ScannerWinRefreshBtn" xml:space="preserve">
+    <value>リフレッシュ</value>
+  </data>
+  <data name="ScannerWinResolution" xml:space="preserve">
+    <value>解像</value>
+  </data>
+  <data name="ScannerWinSamePagesize" xml:space="preserve">
+    <value>元のファイルと同じ</value>
+  </data>
+  <data name="ScannerWinScanArea" xml:space="preserve">
+    <value>スキャンエリア</value>
+  </data>
+  <data name="ScannerWinScanBtn" xml:space="preserve">
+    <value>スキャン</value>
+  </data>
+  <data name="ScannerWinScannedTitle" xml:space="preserve">
+    <value>スキャンした画像</value>
+  </data>
+  <data name="ScannerWinScanner" xml:space="preserve">
+    <value>スキャナー</value>
+  </data>
+  <data name="ScannerWinScannerBusyContent" xml:space="preserve">
+    <value>ドキュメントフィーダーにドキュメントがないか、スキャナーが使用中です。後でもう一度お試しください。</value>
+  </data>
+  <data name="ScannerWinScannerOfflineContent" xml:space="preserve">
+    <value>スキャナーデバイスが応答していません。スキャナーが電源オンで、コンピューターまたはネットワークに接続されているか確認してください。</value>
+  </data>
+  <data name="ScannerWinScanningProperties" xml:space="preserve">
+    <value>スキャンのプロパティ</value>
+  </data>
+  <data name="ScannerWinSearchingContent" xml:space="preserve">
+    <value>スキャナーを検索中…</value>
+  </data>
+  <data name="ScanningAreaEntire1" xml:space="preserve">
+    <value>スキャンエリア全体</value>
+  </data>
+  <data name="ScanningAreaEntire10" xml:space="preserve">
+    <value>4×6インチ（10×15cm）</value>
+  </data>
+  <data name="ScanningAreaEntire2" xml:space="preserve">
+    <value>Letter (8.5 x 11 インチ)</value>
+  </data>
+  <data name="ScanningAreaEntire3" xml:space="preserve">
+    <value>Legal (8.5 x 14 インチ)</value>
+  </data>
+  <data name="ScanningAreaEntire4" xml:space="preserve">
+    <value>B5（176×250mm）</value>
+  </data>
+  <data name="ScanningAreaEntire5" xml:space="preserve">
+    <value>B4(250×353mm)</value>
+  </data>
+  <data name="ScanningAreaEntire6" xml:space="preserve">
+    <value>A5(148×210mm)</value>
+  </data>
+  <data name="ScanningAreaEntire7" xml:space="preserve">
+    <value>A4(210×297mm)</value>
+  </data>
+  <data name="ScanningAreaEntire8" xml:space="preserve">
+    <value>A3(297×420mm)</value>
+  </data>
+  <data name="ScanningAreaEntire9" xml:space="preserve">
+    <value>5 x 7 インチ (13 x 18 cm)</value>
+  </data>
+  <data name="ScanningColorColorMode" xml:space="preserve">
+    <value>色彩</value>
+  </data>
+  <data name="ScanningColorGrayMode" xml:space="preserve">
+    <value>グレースケール</value>
+  </data>
+  <data name="ScanningPaperSourceDuplex" xml:space="preserve">
+    <value>両面</value>
+  </data>
+  <data name="ScanningPaperSourceFeeder" xml:space="preserve">
+    <value>フィーダー</value>
+  </data>
+  <data name="ScanningPaperSourceGlass" xml:space="preserve">
+    <value>フラットベッド</value>
+  </data>
+  <data name="ScanningWarning" xml:space="preserve">
+    <value>スキャン中です。終了したらもう一度お試しください。</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Arrow" xml:space="preserve">
+    <value>矢印</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Circle" xml:space="preserve">
+    <value>楕円</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Copy" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Finish" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Ink" xml:space="preserve">
+    <value>インク</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Rectangle" xml:space="preserve">
+    <value>長方形</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Text" xml:space="preserve">
+    <value>テキスト</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Undo" xml:space="preserve">
+    <value>元に戻す</value>
+  </data>
+  <data name="ScreenshotTip" xml:space="preserve">
+    <value>マウスをドラッグしてキャプチャする範囲を選択します。完了したら、次のステップに進みます。</value>
+  </data>
+  <data name="SelectPageAllEvenPagesItem" xml:space="preserve">
+    <value>偶数ページのみ</value>
+  </data>
+  <data name="SelectPageAllOddPagesItem" xml:space="preserve">
+    <value>奇数ページのみ</value>
+  </data>
+  <data name="SelectPageAllPagesItem" xml:space="preserve">
+    <value>すべてのページ</value>
+  </data>
+  <data name="SelectPageUnselectAllItem" xml:space="preserve">
+    <value>選択をクリア</value>
+  </data>
+  <data name="SettingWindowTabGeneral" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="SettingWindowTabShortcut" xml:space="preserve">
+    <value>ショートカット</value>
+  </data>
+  <data name="SettingWindowTextShortcutAction" xml:space="preserve">
+    <value>アクション</value>
+  </data>
+  <data name="SettingWindowTextShortcutKeys" xml:space="preserve">
+    <value>ショートカット</value>
+  </data>
+  <data name="SettingWindowTitleShortcuts" xml:space="preserve">
+    <value>ショートカット一覧</value>
+  </data>
+  <data name="SettingsDisplayAIButton" xml:space="preserve">
+    <value>AIボタンを表示します。</value>
+  </data>
+  <data name="SettingsHighlightFormFields" xml:space="preserve">
+    <value>フォームフィールドを強調表示します。</value>
+  </data>
+  <data name="ShortcutTextAddBookmark" xml:space="preserve">
+    <value>ブックマークを追加</value>
+  </data>
+  <data name="ShortcutTextAnnotateEllipse" xml:space="preserve">
+    <value>楕円</value>
+  </data>
+  <data name="ShortcutTextAnnotateInk" xml:space="preserve">
+    <value>インク</value>
+  </data>
+  <data name="ShortcutTextAnnotateLine" xml:space="preserve">
+    <value>線</value>
+  </data>
+  <data name="ShortcutTextAnnotateManage" xml:space="preserve">
+    <value>コメントの管理</value>
+  </data>
+  <data name="ShortcutTextAnnotateNote" xml:space="preserve">
+    <value>メモ</value>
+  </data>
+  <data name="ShortcutTextAnnotateShape" xml:space="preserve">
+    <value>長方形</value>
+  </data>
+  <data name="ShortcutTextAnnotateTextBox" xml:space="preserve">
+    <value>テキストボックス</value>
+  </data>
+  <data name="ShortcutTextAnnotateTypeWriter" xml:space="preserve">
+    <value>タイプライター</value>
+  </data>
+  <data name="ShortcutTextAreaHighlight" xml:space="preserve">
+    <value>エリアハイライト</value>
+  </data>
+  <data name="ShortcutTextAutoScroll" xml:space="preserve">
+    <value>自動スクロール</value>
+  </data>
+  <data name="ShortcutTextCloseDocument" xml:space="preserve">
+    <value>ファイルを閉じる</value>
+  </data>
+  <data name="ShortcutTextContinusRead" xml:space="preserve">
+    <value>連続ページ表示</value>
+  </data>
+  <data name="ShortcutTextCreateNewPDF" xml:space="preserve">
+    <value>新しいPDF</value>
+  </data>
+  <data name="ShortcutTextCropPage" xml:space="preserve">
+    <value>ページをクロップ </value>
+  </data>
+  <data name="ShortcutTextDocumentProperties" xml:space="preserve">
+    <value>ドキュメントのプロパティ</value>
+  </data>
+  <data name="ShortcutTextDoublePage" xml:space="preserve">
+    <value>見開きページ表示</value>
+  </data>
+  <data name="ShortcutTextFind" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="ShortcutTextFitHeight" xml:space="preserve">
+    <value>フィットの高さ</value>
+  </data>
+  <data name="ShortcutTextFitPage" xml:space="preserve">
+    <value>ページに収める</value>
+  </data>
+  <data name="ShortcutTextFitWidth" xml:space="preserve">
+    <value>幅に合わせる</value>
+  </data>
+  <data name="ShortcutTextFullScreen" xml:space="preserve">
+    <value>フルスクリーンモードを開始/終了</value>
+  </data>
+  <data name="ShortcutTextFullSize" xml:space="preserve">
+    <value>実際のサイズ</value>
+  </data>
+  <data name="ShortcutTextHighlight" xml:space="preserve">
+    <value>ハイライト</value>
+  </data>
+  <data name="ShortcutTextHighlightForm" xml:space="preserve">
+    <value>フォームフィールドをハイライト</value>
+  </data>
+  <data name="ShortcutTextInsertImage" xml:space="preserve">
+    <value>画像を追加</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubBlankPage" xml:space="preserve">
+    <value>空白ページの挿入</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromImage" xml:space="preserve">
+    <value>画像から挿入</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromPDF" xml:space="preserve">
+    <value>PDFから挿入</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromWord" xml:space="preserve">
+    <value>Wordから挿入</value>
+  </data>
+  <data name="ShortcutTextNextView" xml:space="preserve">
+    <value>次のビュー</value>
+  </data>
+  <data name="ShortcutTextOcrPages" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ShortcutTextOpenDocument" xml:space="preserve">
+    <value>ファイルを開く</value>
+  </data>
+  <data name="ShortcutTextPageDelete" xml:space="preserve">
+    <value>ページを削除</value>
+  </data>
+  <data name="ShortcutTextPageExtract" xml:space="preserve">
+    <value>ページを抽出</value>
+  </data>
+  <data name="ShortcutTextPresent" xml:space="preserve">
+    <value>再生</value>
+  </data>
+  <data name="ShortcutTextPreviousView" xml:space="preserve">
+    <value>前のビュー</value>
+  </data>
+  <data name="ShortcutTextPrint" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="ShortcutTextRedo" xml:space="preserve">
+    <value>やり直し</value>
+  </data>
+  <data name="ShortcutTextRotateLeft" xml:space="preserve">
+    <value>左へ回転</value>
+  </data>
+  <data name="ShortcutTextRotateRight" xml:space="preserve">
+    <value>右へ回転</value>
+  </data>
+  <data name="ShortcutTextSaveAsDocument" xml:space="preserve">
+    <value>名前を付けて保存</value>
+  </data>
+  <data name="ShortcutTextSaveDocument" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="ShortcutTextScreenshot" xml:space="preserve">
+    <value>スクリーンショット</value>
+  </data>
+  <data name="ShortcutTextShowHideComments" xml:space="preserve">
+    <value>コメントを表示/非表示</value>
+  </data>
+  <data name="ShortcutTextSinglePage" xml:space="preserve">
+    <value>単一ページ表示</value>
+  </data>
+  <data name="ShortcutTextStrike" xml:space="preserve">
+    <value>取り消し線</value>
+  </data>
+  <data name="ShortcutTextUnderline" xml:space="preserve">
+    <value>下線</value>
+  </data>
+  <data name="ShortcutTextUndo" xml:space="preserve">
+    <value>元に戻す</value>
+  </data>
+  <data name="ShortcutTextZoomIn" xml:space="preserve">
+    <value>拡大</value>
+  </data>
+  <data name="ShortcutTextZoomOut" xml:space="preserve">
+    <value>縮小</value>
+  </data>
+  <data name="ShortcutTip" xml:space="preserve">
+    <value>PDFgear に簡単にアクセスするためのデスクトップ ショートカットを作成しますか?</value>
+  </data>
+  <data name="SigDialogDigSignBtn" xml:space="preserve">
+    <value>デジタル署名</value>
+  </data>
+  <data name="SigDialogDigSignBtn2" xml:space="preserve">
+    <value>証明書で暗号化する</value>
+  </data>
+  <data name="SignPropDialogMessage_SaveCert" xml:space="preserve">
+    <value>この証明書を信頼された証明書に追加してもよろしいですか？</value>
+  </data>
+  <data name="StampFlattenConfirmContent" xml:space="preserve">
+    <value>一度フラット化するとスタンプは編集できなくなり、この操作は元に戻せません。誤って適用した場合は保存せずに文書を閉じてください。</value>
+  </data>
+  <data name="StampFlattenConfirmTitle" xml:space="preserve">
+    <value>スタンプをフラット化してよろしいですか？</value>
+  </data>
+  <data name="StampLimitErrorMessage" xml:space="preserve">
+    <value>これ以上カテゴリを追加できません。上限に達しました。</value>
+  </data>
+  <data name="StampManageDeleteCategoryMessage" xml:space="preserve">
+    <value>このカテゴリを削除してもよろしいですか？その中のすべてのスタンプも削除されます。</value>
+  </data>
+  <data name="StampManageDeleteMessage" xml:space="preserve">
+    <value>このスタンプを削除してもよろしいですか？</value>
+  </data>
+  <data name="StampManageDeleteSelectedMessage" xml:space="preserve">
+    <value>選択したスタンプを削除してもよろしいですか？</value>
+  </data>
+  <data name="StampProgressContent" xml:space="preserve">
+    <value>スタンプを適用しています...</value>
+  </data>
+  <data name="StampProgressFlattenContent" xml:space="preserve">
+    <value>スタンプのフラット化中...</value>
+  </data>
+  <data name="StampRightMenuDeleteAllStamp" xml:space="preserve">
+    <value>すべてのページからこのスタンプを削除してもよろしいですか？</value>
+  </data>
+  <data name="SubscribeWindowContent" xml:space="preserve">
+    <value>評価して喜びを共有し、フォローして独占チュートリアルを入手してください。</value>
+  </data>
+  <data name="SubscribeWindowContentTtile" xml:space="preserve">
+    <value>フォローしてPDFgearを評価する</value>
+  </data>
+  <data name="SubscribeWindowDesc" xml:space="preserve">
+    <value>限定のチュートリアルとスキルにアクセスして、コミュニティの成長にご協力ください。</value>
+  </data>
+  <data name="SubscribeWindowFollowButtonText" xml:space="preserve">
+    <value>従う</value>
+  </data>
+  <data name="SubscribeWindowHeader" xml:space="preserve">
+    <value>フォローしてサポートしてください</value>
+  </data>
+  <data name="SubscribeWindowSubscribeButtonText" xml:space="preserve">
+    <value>購読</value>
+  </data>
+  <data name="SubscribeWindowTrustPilotBtn" xml:space="preserve">
+    <value>Trustpilotで当社を評価する</value>
+  </data>
+  <data name="SurveyWinBtnCancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="SurveyWinBtnGo" xml:space="preserve">
+    <value>行く</value>
+  </data>
+  <data name="SurveyWinText" xml:space="preserve">
+    <value>PDFgear をクリックひとつでシェアしてサポートしよう。</value>
+  </data>
+  <data name="SurveyWinTitle" xml:space="preserve">
+    <value>PDFgearが好きですか？</value>
+  </data>
+  <data name="SurveyWinTitle1" xml:space="preserve">
+    <value>友達とシェアしよう！</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnByOkMsg" xml:space="preserve">
+    <value>以前のバージョンに切り替わりました。この変更を適用するにはPDFgearを再起動してください。</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnMsg" xml:space="preserve">
+    <value>PDFgearの以前のバージョンに切り替えます。よろしいですか？</value>
+  </data>
+  <data name="TextBoxDefaultInputTextContent" xml:space="preserve">
+    <value>ここにテキストを追加</value>
+  </data>
+  <data name="ToolAppThemeAutoMode" xml:space="preserve">
+    <value>システムテーマ</value>
+  </data>
+  <data name="ToolAppThemeDarkMode" xml:space="preserve">
+    <value>ダーク</value>
+  </data>
+  <data name="ToolAppThemeLightMode" xml:space="preserve">
+    <value>ライト</value>
+  </data>
+  <data name="ToolAppThemeTitle" xml:space="preserve">
+    <value>テーマ</value>
+  </data>
+  <data name="ToolbarExitEditButtonContent" xml:space="preserve">
+    <value>編集モードから出る</value>
+  </data>
+  <data name="ToolbarOpacityPickerTooltip" xml:space="preserve">
+    <value>不透明度</value>
+  </data>
+  <data name="ToolbarSetDefaultButtonContent" xml:space="preserve">
+    <value>デフォルトとして設定する</value>
+  </data>
+  <data name="TooltipDesc_AI" xml:space="preserve">
+    <value>PDFgear Copilot を有効にして PDF と対話する。</value>
+  </data>
+  <data name="TooltipDesc_AddSignature" xml:space="preserve">
+    <value>デジタル署名用に PDF に署名フィールドを追加します。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateEllipse" xml:space="preserve">
+    <value>楕円を描く。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHidden" xml:space="preserve">
+    <value>PDF内のすべてのコメントを非表示にする。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHighlight" xml:space="preserve">
+    <value>選択したテキストをハイライトする。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateInk" xml:space="preserve">
+    <value>自由手で描く。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateLine" xml:space="preserve">
+    <value>線を描く。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateManage" xml:space="preserve">
+    <value>コメントパネルを開いて、コメントをブラウズ、フィルタリング、削除する。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateNote" xml:space="preserve">
+    <value>メモを追加する。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShape" xml:space="preserve">
+    <value>長方形を描く。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShow" xml:space="preserve">
+    <value>PDF内のすべてのコメントを表示する。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateSignature" xml:space="preserve">
+    <value>描画、入力、または画像をアップロードして署名を追加。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStamp" xml:space="preserve">
+    <value>スタンプを追加、作成、管理する。カスタムスタンプをサポート。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStrike" xml:space="preserve">
+    <value>選択したテキストに取り消し線を引く。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTextBox" xml:space="preserve">
+    <value>枠付きのテキストコメントを追加する。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTypeWriter" xml:space="preserve">
+    <value>枠なしのテキストコメントを追加する。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateUnderline" xml:space="preserve">
+    <value>選択したテキストに下線を引く。</value>
+  </data>
+  <data name="TooltipDesc_AnnotateWatermark" xml:space="preserve">
+    <value>透かしを追加または編集。</value>
+  </data>
+  <data name="TooltipDesc_AutoScroll" xml:space="preserve">
+    <value>PDFファイルを自動でスクロール。スクロールを終了するにはEscキーを押してください。</value>
+  </data>
+  <data name="TooltipDesc_BatchPrint" xml:space="preserve">
+    <value>複数の PDF ファイルを一括印刷します。</value>
+  </data>
+  <data name="TooltipDesc_Certificate" xml:space="preserve">
+    <value>暗号化と署名のためのデジタルIDと信頼された証明書を管理します。</value>
+  </data>
+  <data name="TooltipDesc_Compress" xml:space="preserve">
+    <value>PDFファイルのサイズを減らす。</value>
+  </data>
+  <data name="TooltipDesc_Convert" xml:space="preserve">
+    <value>PDFを他の形式に変換するか、他の形式からPDFを作成する。</value>
+  </data>
+  <data name="TooltipDesc_CreateNewPDF" xml:space="preserve">
+    <value>新しいPDFファイルを作成。</value>
+  </data>
+  <data name="TooltipDesc_CropPage" xml:space="preserve">
+    <value>ページの余白をトリミングする。</value>
+  </data>
+  <data name="TooltipDesc_DocumentProperties" xml:space="preserve">
+    <value>PDFのドキュメントのプロパティを表示および編集。</value>
+  </data>
+  <data name="TooltipDesc_EditObject" xml:space="preserve">
+    <value>テキストをブロックに分割して移動および編集する。</value>
+  </data>
+  <data name="TooltipDesc_EditText" xml:space="preserve">
+    <value>PDF内のテキストを編集。</value>
+  </data>
+  <data name="TooltipDesc_Encrypt" xml:space="preserve">
+    <value>デジタル証明書を使って PDF を暗号化し、内容を保護します。</value>
+  </data>
+  <data name="TooltipDesc_Find" xml:space="preserve">
+    <value>PDF内でテキストを検索する。</value>
+  </data>
+  <data name="TooltipDesc_Flatten" xml:space="preserve">
+    <value>すべての注釈を内容レイヤーに統合し、選択や編集ができないようにします。</value>
+  </data>
+  <data name="TooltipDesc_Highlight" xml:space="preserve">
+    <value>長方形の領域をハイライトする。</value>
+  </data>
+  <data name="TooltipDesc_HighlightForm" xml:space="preserve">
+    <value>PDF内のインタラクティブなフォームフィールドをハイライトする。</value>
+  </data>
+  <data name="TooltipDesc_InsertHeaderFooter" xml:space="preserve">
+    <value>ヘッダーとフッターを追加または編集。</value>
+  </data>
+  <data name="TooltipDesc_InsertImage" xml:space="preserve">
+    <value>画像を追加する。</value>
+  </data>
+  <data name="TooltipDesc_InsertPageNumber" xml:space="preserve">
+    <value>ページ番号を追加または編集。</value>
+  </data>
+  <data name="TooltipDesc_Link" xml:space="preserve">
+    <value>リンクを追加または編集。</value>
+  </data>
+  <data name="TooltipDesc_OCR" xml:space="preserve">
+    <value>画像のみのページに OCR を実行して検索可能にします。</value>
+  </data>
+  <data name="TooltipDesc_Open" xml:space="preserve">
+    <value>PDFファイルを開く。</value>
+  </data>
+  <data name="TooltipDesc_PageDelete" xml:space="preserve">
+    <value>指定されたページを削除する。</value>
+  </data>
+  <data name="TooltipDesc_PageExtract" xml:space="preserve">
+    <value>指定されたページを抽出して新しいPDFを作成する。</value>
+  </data>
+  <data name="TooltipDesc_PageInsert" xml:space="preserve">
+    <value>空白ページ、スキャンしたページ、画像、Word文書、または別のPDFを現在のPDFに挿入する。</value>
+  </data>
+  <data name="TooltipDesc_PageMerge" xml:space="preserve">
+    <value>複数のPDFファイルを1つのPDFに結合する。</value>
+  </data>
+  <data name="TooltipDesc_PageRotateLeft" xml:space="preserve">
+    <value>ページビューを左（反時計回り）に回転。</value>
+  </data>
+  <data name="TooltipDesc_PageRotateRight" xml:space="preserve">
+    <value>ページビューを右（時計回り）に回転。</value>
+  </data>
+  <data name="TooltipDesc_PageSplit" xml:space="preserve">
+    <value>PDFを複数のファイルに分割する。</value>
+  </data>
+  <data name="TooltipDesc_Present" xml:space="preserve">
+    <value>PDFをスライドショーとして表示する。</value>
+  </data>
+  <data name="TooltipDesc_Print" xml:space="preserve">
+    <value>PDFファイルを印刷する。</value>
+  </data>
+  <data name="TooltipDesc_ProtectPassword" xml:space="preserve">
+    <value>PDFにパスワードで保護を設定する。</value>
+  </data>
+  <data name="TooltipDesc_ProtectRemove" xml:space="preserve">
+    <value>PDFからパスワードを削除する。</value>
+  </data>
+  <data name="TooltipDesc_Read" xml:space="preserve">
+    <value>PDFを音読する。</value>
+  </data>
+  <data name="TooltipDesc_Redact" xml:space="preserve">
+    <value>機密情報をマークして完全に削除します。</value>
+  </data>
+  <data name="TooltipDesc_Redo" xml:space="preserve">
+    <value>直前の取り消した操作をやり直す。</value>
+  </data>
+  <data name="TooltipDesc_Save" xml:space="preserve">
+    <value>PDFファイルを保存する。</value>
+  </data>
+  <data name="TooltipDesc_SaveAs" xml:space="preserve">
+    <value>PDFファイルのコピーを保存する。</value>
+  </data>
+  <data name="TooltipDesc_Screenshot" xml:space="preserve">
+    <value>PDFのスクリーンショットを撮るために範囲を選択する。</value>
+  </data>
+  <data name="TooltipDesc_Translate" xml:space="preserve">
+    <value>選択または貼り付けたテキストを指定の言語に翻訳します。</value>
+  </data>
+  <data name="TooltipDesc_Undo" xml:space="preserve">
+    <value>最後の操作を元に戻す。</value>
+  </data>
+  <data name="TooltipDesc_Update" xml:space="preserve">
+    <value>PDFgearの更新を確認する。</value>
+  </data>
+  <data name="TranslatePanelAuto" xml:space="preserve">
+    <value>オート</value>
+  </data>
+  <data name="TranslatePanelAutoDetect" xml:space="preserve">
+    <value>自動検出</value>
+  </data>
+  <data name="TranslatePanelAutoTranslateBtn" xml:space="preserve">
+    <value>選択したテキストを自動翻訳</value>
+  </data>
+  <data name="TranslatePanelInputPlaceHolder" xml:space="preserve">
+    <value>ここにテキストを入れるか、または貼り付けなさい</value>
+  </data>
+  <data name="TranslatePanelOutputPlaceHolder" xml:space="preserve">
+    <value>翻訳</value>
+  </data>
+  <data name="UnknownAttachmentModifyDateText" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Name" xml:space="preserve">
+    <value>名前:</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Tip" xml:space="preserve">
+    <value>ヒント:</value>
+  </data>
+  <data name="UnsignedDigSignPropMessage_DuplicatedFieldName" xml:space="preserve">
+    <value>フィールド名の重複は許可されていません。</value>
+  </data>
+  <data name="UnsupportedImageMsg" xml:space="preserve">
+    <value>イメージ ファイルが破損しているか、サポートされていない形式であるため、イメージ ファイルを読み込めませんでした。 別の画像ファイルを選択して、再試行してください。</value>
+  </data>
+  <data name="ViewToolbarSaveFailed" xml:space="preserve">
+    <value>ドキュメントの保存に失敗しました。 もう一度やり直してください。</value>
+  </data>
+  <data name="ViewToolbarSave_DigSigMaskSaveAs" xml:space="preserve">
+    <value>文書に署名が含まれているため、コピーとして保存する必要があります。</value>
+  </data>
+  <data name="ViewToorbarFileChanged" xml:space="preserve">
+    <value>ドキュメントが編集されました。 保存しますか？</value>
+  </data>
+  <data name="ViewerContainerEditBanner" xml:space="preserve">
+    <value>これはテキスト編集モードです。</value>
+  </data>
+  <data name="WIA_ERROR_BUSY" xml:space="preserve">
+    <value>デバイスがビジー状態です。 このデバイスを使用しているアプリを閉じるか、完了するまで待ってから、もう一度やり直してください。</value>
+  </data>
+  <data name="WIA_ERROR_COVER_OPEN" xml:space="preserve">
+    <value>デバイスのカバーが 1 つ以上開いています。</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_COMMUNICATION" xml:space="preserve">
+    <value>WIA デバイスとの通信に失敗しました。 デバイスの電源が入っていて、PC に接続されていることを確認します。 問題が解決しない場合は、デバイスを切断して再接続します。</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_LOCKED" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="WIA_ERROR_EXCEPTION_IN_DRIVER" xml:space="preserve">
+    <value>デバイス ドライバーが例外をスローしました。</value>
+  </data>
+  <data name="WIA_ERROR_GENERAL_ERROR" xml:space="preserve">
+    <value>WIA デバイスで不明なエラーが発生しました。</value>
+  </data>
+  <data name="WIA_ERROR_INCORRECT_HARDWARE_SETTING" xml:space="preserve">
+    <value>WIA デバイスの設定が正しくありません。</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_COMMAND" xml:space="preserve">
+    <value>デバイスはこのコマンドをサポートしていません。</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_DRIVER_RESPONSE" xml:space="preserve">
+    <value>ドライバーからの応答が無効です。</value>
+  </data>
+  <data name="WIA_ERROR_ITEM_DELETED" xml:space="preserve">
+    <value>WIA デバイスが削除されました。 使用できなくなりました。</value>
+  </data>
+  <data name="WIA_ERROR_LAMP_OFF" xml:space="preserve">
+    <value>スキャナーのランプがオフです。</value>
+  </data>
+  <data name="WIA_ERROR_MAXIMUM_PRINTER_ENDORSER_COUNTER" xml:space="preserve">
+    <value>インプリント/保証アイテムがWIA_IPS_PRINTER_ENDORSER_COUNTERの有効な最大値に達し、0 にリセットされたため、スキャン ジョブが中断されました。 この機能は、Windows 8 以降のバージョンの Windows で使用できます。</value>
+  </data>
+  <data name="WIA_ERROR_MULTI_FEED" xml:space="preserve">
+    <value>複数のページ フィード条件が原因でスキャン エラーが発生しました。 この機能は、Windows 8 以降のバージョンの Windows で使用できます。</value>
+  </data>
+  <data name="WIA_ERROR_OFFLINE" xml:space="preserve">
+    <value>デバイスがオフラインです。 デバイスの電源が入っていて、PC に接続されていることを確認します。</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_EMPTY" xml:space="preserve">
+    <value>ドキュメントフィーダーに文書がないか、スキャナーが使用中です。後でもう一度お試しください。</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_JAM" xml:space="preserve">
+    <value>スキャナーのドキュメント フィーダーに紙が詰まっている。</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_PROBLEM" xml:space="preserve">
+    <value>スキャナーのドキュメント フィーダーで未指定の問題が発生しました。</value>
+  </data>
+  <data name="WIA_ERROR_USER_INTERVENTION" xml:space="preserve">
+    <value>WIA デバイスに問題があります。 デバイスの電源が入っており、オンラインで、ケーブルが正しく接続されていることを確認します。</value>
+  </data>
+  <data name="WIA_ERROR_WARMING_UP" xml:space="preserve">
+    <value>デバイスがウォームアップしています。</value>
+  </data>
+  <data name="WIA_S_NO_DEVICE_AVAILABLE" xml:space="preserve">
+    <value>スキャナー デバイスが見つかりませんでした。 デバイスがオンラインで、PC に接続されていて、PC に正しいドライバーがインストールされていることを確認します。</value>
+  </data>
+  <data name="WinBtnAllPagesContent" xml:space="preserve">
+    <value>全てのページ</value>
+  </data>
+  <data name="WinBtnBackContent" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="WinBtnCancelContent" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="WinBtnCloseContent" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="WinBtnNextContent" xml:space="preserve">
+    <value>次へ</value>
+  </data>
+  <data name="WinBtnOkContent" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="WinBtnSaveContent" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="WinBtnSelectedPagesContent" xml:space="preserve">
+    <value>選択したページ</value>
+  </data>
+  <data name="WinCbxAutoItemContent" xml:space="preserve">
+    <value>自動</value>
+  </data>
+  <data name="WinCbxChildAllPagesContent" xml:space="preserve">
+    <value>範囲内の全てのページ</value>
+  </data>
+  <data name="WinCbxChildEvenPagesContent" xml:space="preserve">
+    <value>偶数ページのみ</value>
+  </data>
+  <data name="WinCbxChildOddPagesContent" xml:space="preserve">
+    <value>奇数ページのみ</value>
+  </data>
+  <data name="WinConvertToolBtnExcelToPDFText" xml:space="preserve">
+    <value>ExcelをPDFに</value>
+  </data>
+  <data name="WinConvertToolBtnImageToPDFText" xml:space="preserve">
+    <value>画像をPDFに</value>
+  </data>
+  <data name="WinConvertToolBtnPPTToPDFText" xml:space="preserve">
+    <value>PPTをPDFに</value>
+  </data>
+  <data name="WinConvertToolBtnRTFToPDFText" xml:space="preserve">
+    <value>RTFをPDFに</value>
+  </data>
+  <data name="WinConvertToolBtnTXTToPDFText" xml:space="preserve">
+    <value>TXTをPDFに</value>
+  </data>
+  <data name="WinConvertToolBtnWordToPDF" xml:space="preserve">
+    <value>WordをPDFに</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackground" xml:space="preserve">
+    <value>背景の削除</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackgroundToolTip" xml:space="preserve">
+    <value>画像内のすべての白いピクセルを削除します。</value>
+  </data>
+  <data name="WinCustomizeStampEditTiltle" xml:space="preserve">
+    <value>スタンプを編集</value>
+  </data>
+  <data name="WinCustomizeStampMaxCharactersMsg" xml:space="preserve">
+    <value>テキストは50文字以内に収めてください！</value>
+  </data>
+  <data name="WinCustomizeStampNewTiltle" xml:space="preserve">
+    <value>スタンプを作成</value>
+  </data>
+  <data name="WinCustomizeStampPlaceHolderContent" xml:space="preserve">
+    <value>ここに入力…</value>
+  </data>
+  <data name="WinEditTextInputLocationTip" xml:space="preserve">
+    <value>テキストの編集：</value>
+  </data>
+  <data name="WinEditorTipBtnEditAnyway" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="WinEditorTipBtnUseConverter" xml:space="preserve">
+    <value>コンバータを使う</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce1" xml:space="preserve">
+    <value>•  PDFファイルを様々なファイル形式に変換します</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce2" xml:space="preserve">
+    <value>•  レイアウトはOCRに合わせられます</value>
+  </data>
+  <data name="WinEditorTipRecommendLeft" xml:space="preserve">
+    <value>代わりに</value>
+  </data>
+  <data name="WinEditorTipRecommendMiddle" xml:space="preserve">
+    <value>PDFからWordへ変換</value>
+  </data>
+  <data name="WinEditorTipRecommendRight" xml:space="preserve">
+    <value>コンバータを使うことをお勧めします</value>
+  </data>
+  <data name="WinExtractTextBtnCopyContent" xml:space="preserve">
+    <value>クリップボードにテキストをコピー</value>
+  </data>
+  <data name="WinExtractTextLabelCopiedContent" xml:space="preserve">
+    <value>コピー完了</value>
+  </data>
+  <data name="WinExtractTextLabelExtractedContent" xml:space="preserve">
+    <value>抽出完了</value>
+  </data>
+  <data name="WinExtractTextLabelScreenshotContent" xml:space="preserve">
+    <value>スクリーンショット</value>
+  </data>
+  <data name="WinExtractTextTitle" xml:space="preserve">
+    <value>テキストを抽出</value>
+  </data>
+  <data name="WinFeedBackBtnSendContent" xml:space="preserve">
+    <value>送信</value>
+  </data>
+  <data name="WinFeedBackEmailAddrPlaceHoderContent" xml:space="preserve">
+    <value>メールアドレス（任意）</value>
+  </data>
+  <data name="WinFeedBackEmailContentPlaceHoderContent" xml:space="preserve">
+    <value>すみませんが、発生した問題点と、それを再現するための手順を教えてください。</value>
+  </data>
+  <data name="WinFeedBackErrorInvalidEmailCapMsg" xml:space="preserve">
+    <value>無効なメールフォーマット</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc1" xml:space="preserve">
+    <value>Microsoftストアの地域設定は次のとおりです。</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc2" xml:space="preserve">
+    <value>、現在の場所と一致していません。 購入に失敗する恐れがあります。</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc3" xml:space="preserve">
+    <value>ここをクリック</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc4" xml:space="preserve">
+    <value>Microsoft Storeの地域設定を変更します。</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc1" xml:space="preserve">
+    <value>支払いは Microsoft によって処理されます。 解決策については、</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc2" xml:space="preserve">
+    <value>ヘルプにアクセスしてください。</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3" xml:space="preserve">
+    <value>PDFgearを再インストールし、MicrosoftStoreの同じMicrosoftアカウントで同じ価格で購入してください。 これは購入を元に戻すためのものであり、料金は発生しなくなります。</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc1" xml:space="preserve">
+    <value>以前に PDFgear の支払いを済ませている場合は、最初に Microsoft Store で同じ Microsoft アカウントにログインしてから、ここをクリックして購入を復元してください。 復元に失敗した場合は、サポートにお問い合わせください。</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc2" xml:space="preserve">
+    <value>ここをクリック</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc3" xml:space="preserve">
+    <value>して購入を復元してください。 復元に失敗した場合は、サポートにお問い合わせください。</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer4" xml:space="preserve">
+    <value>[ヘルプ]タブの[アップグレード]ボタンをクリックし、下の[購入を復元]ボタンをクリックしてください。 その後、PDFgearは数秒で購入を正常に復元します。</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer5" xml:space="preserve">
+    <value>次のチェックボックスをオンにして、ハードウェアアクセラレーションをオフにしてください。 その後、もう一度お試しください。</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion1" xml:space="preserve">
+    <value>Microsoft Storeのリージョン設定の変更に問題がありますか？</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion2" xml:space="preserve">
+    <value>まだ購入に問題がありますか？</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion3" xml:space="preserve">
+    <value>PDFgearの料金を支払った後も、アップグレードを要求されるのはなぜですか？</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion4" xml:space="preserve">
+    <value>PDFgearを再インストールしたり、他のデバイスにインストールしたりするときに、まだ支払いを求められるのはなぜですか？</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion5" xml:space="preserve">
+    <value>PDFページをスクロールできないのはなぜですか？</value>
+  </data>
+  <data name="WinFeedBackHardwareAccelerationCHBK" xml:space="preserve">
+    <value>ハードウェアアクセラレーションをオフにする</value>
+  </data>
+  <data name="WinFeedBackInvalidEmailMsg" xml:space="preserve">
+    <value>確実にメッセージを送るために、有効なメールアドレスを入力してください。</value>
+  </data>
+  <data name="WinFeedBackLabelPrivacypolicyContent" xml:space="preserve">
+    <value>プライバシーポリシー</value>
+  </data>
+  <data name="WinFeedBackSendProblemfileContent" xml:space="preserve">
+    <value>問題を診断するのに役立ちますので、問題のあるファイルをお送りください。</value>
+  </data>
+  <data name="WinFeedBackSendSuccessCapMsg" xml:space="preserve">
+    <value>送信完了</value>
+  </data>
+  <data name="WinFeedBackSendSuccessMsg" xml:space="preserve">
+    <value>メッセージを受け取りました。ありがとうございます！</value>
+  </data>
+  <data name="WinFeedBackSendTryagainMsg" xml:space="preserve">
+    <value>メッセージを送信できませんでした。もう一度お試しください！</value>
+  </data>
+  <data name="WinFindCaseSensitiveBtnContent" xml:space="preserve">
+    <value>大文字と小文字の区別</value>
+  </data>
+  <data name="WinFindDocumentNeedOcrTips" xml:space="preserve">
+    <value>このファイルはスキャンされたPDFであることが検出されました。スキャンされたPDFからテキストをコピーして検索するにはOCRを実行してください。</value>
+  </data>
+  <data name="WinFindMatchallwordsBtnContent" xml:space="preserve">
+    <value>単語全体のみ</value>
+  </data>
+  <data name="WinFindOCRNotShowAgain" xml:space="preserve">
+    <value>このファイルでは表示しない</value>
+  </data>
+  <data name="WinFindPerformOCR" xml:space="preserve">
+    <value>OCRを実行する</value>
+  </data>
+  <data name="WinFindPlaceHolderContent" xml:space="preserve">
+    <value>検索…</value>
+  </data>
+  <data name="WinHistoryClearLabelClickTips" xml:space="preserve">
+    <value>最近開いたファイルを全て削除します。よろしいですか？</value>
+  </data>
+  <data name="WinIAP2AnnualPannelTitle" xml:space="preserve">
+    <value>年次</value>
+  </data>
+  <data name="WinIAP2BuyNowBtnContent" xml:space="preserve">
+    <value>今すぐ購入</value>
+  </data>
+  <data name="WinIAP2LifetimePriceDescribe" xml:space="preserve">
+    <value>一括価格</value>
+  </data>
+  <data name="WinLabelChildRangeContent" xml:space="preserve">
+    <value>部分範囲</value>
+  </data>
+  <data name="WinLabelRangeContent" xml:space="preserve">
+    <value>範囲</value>
+  </data>
+  <data name="WinLabelSelectedpagesContent" xml:space="preserve">
+    <value>選択したページ</value>
+  </data>
+  <data name="WinOCRCHBContent" xml:space="preserve">
+    <value>OCR（画像からテキストを抽出します）</value>
+  </data>
+  <data name="WinOCRProgressContent" xml:space="preserve">
+    <value>処理中...</value>
+  </data>
+  <data name="WinOCRSelectLangTips" xml:space="preserve">
+    <value>言語の選択：</value>
+  </data>
+  <data name="WinOCRSelectedLineContextMenuEdit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="WinPageApplyingHeaderorFooterContent" xml:space="preserve">
+    <value>ヘッダーとフッターを適用しています</value>
+  </data>
+  <data name="WinPageCenterFooterTextLabelContent" xml:space="preserve">
+    <value>中央フッター</value>
+  </data>
+  <data name="WinPageCenterHeaderTextLabelContent" xml:space="preserve">
+    <value>中央ヘッダー</value>
+  </data>
+  <data name="WinPageEgContent" xml:space="preserve">
+    <value>例えば 1,8,9-12</value>
+  </data>
+  <data name="WinPageInsertBlankTitle" xml:space="preserve">
+    <value>空白ページの挿入</value>
+  </data>
+  <data name="WinPageInsertImageTitle" xml:space="preserve">
+    <value>画像からのページの挿入</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnAddNewContent" xml:space="preserve">
+    <value>新たに追加する</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnUpdateContent" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddChekContent" xml:space="preserve">
+    <value>文書にはすでにヘッダーとフッター、ページ番号が含まれています。追加中のものに更新しますか？</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddNoteContent" xml:space="preserve">
+    <value>注意：「新たに追加する」を選ぶと、現在のものと重複する場合があります。</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckEmptyContent" xml:space="preserve">
+    <value>この文書のヘッダーとフッター、ページ番号が見つかりません。</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckExistContent" xml:space="preserve">
+    <value>ヘッダーとフッター、ページ番号を完全に削除してもよろしいですか？</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterUpdateCheckEmptyContent" xml:space="preserve">
+    <value>このファイルのヘッダー、フッターが見つかりません。</value>
+  </data>
+  <data name="WinPageInsertSettingBlankPageCount" xml:space="preserve">
+    <value>ページ数</value>
+  </data>
+  <data name="WinPageInsertSettingPageHeight" xml:space="preserve">
+    <value>高さ</value>
+  </data>
+  <data name="WinPageInsertSettingPageLandscape" xml:space="preserve">
+    <value>横向き</value>
+  </data>
+  <data name="WinPageInsertSettingPagePortrait" xml:space="preserve">
+    <value>縦向き</value>
+  </data>
+  <data name="WinPageInsertSettingPageSize" xml:space="preserve">
+    <value>ページサイズ</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemCustomize" xml:space="preserve">
+    <value>カスタム</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemDefault" xml:space="preserve">
+    <value>デフォルト</value>
+  </data>
+  <data name="WinPageInsertSettingPageWidth" xml:space="preserve">
+    <value>幅</value>
+  </data>
+  <data name="WinPageInsertdateLabelContent" xml:space="preserve">
+    <value>日付の挿入</value>
+  </data>
+  <data name="WinPageInsertfilenameLabelContent" xml:space="preserve">
+    <value>ファイル名の挿入</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentCenterContent" xml:space="preserve">
+    <value>中央</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLabelContent" xml:space="preserve">
+    <value>配列</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLeftContent" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentRightContent" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionFooterContent" xml:space="preserve">
+    <value>フッター</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionHeaderContent" xml:space="preserve">
+    <value>ヘッダー</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionLabelConent" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="WinPageInsertpageNumStyleLabelContent" xml:space="preserve">
+    <value>スタイル</value>
+  </data>
+  <data name="WinPageInsertpagenumberLabelContent" xml:space="preserve">
+    <value>ページ番号の挿入</value>
+  </data>
+  <data name="WinPageLeftFooterTextLabelContent" xml:space="preserve">
+    <value>左側フッター</value>
+  </data>
+  <data name="WinPageLeftHeaderTextLabelContent" xml:space="preserve">
+    <value>左側ヘッダー</value>
+  </data>
+  <data name="WinPageLoadingHeaderorFooterContent" xml:space="preserve">
+    <value>ヘッダーとフッター、ページ番号を読み込んでいます</value>
+  </data>
+  <data name="WinPageMarginBottomLabelContent" xml:space="preserve">
+    <value>下部</value>
+  </data>
+  <data name="WinPageMarginLabelContent" xml:space="preserve">
+    <value>余白</value>
+  </data>
+  <data name="WinPageMarginLeftLabelContent" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="WinPageMarginRightLabelContent" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="WinPageMarginTopLabelContent" xml:space="preserve">
+    <value>上部</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageByNumContent" xml:space="preserve">
+    <value>XXXページの後</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageContent" xml:space="preserve">
+    <value>選択したページの後</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageByNumContent" xml:space="preserve">
+    <value>XXXページの前</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageContent" xml:space="preserve">
+    <value>選択したページの前</value>
+  </data>
+  <data name="WinPageMergeBtnBeginingContent" xml:space="preserve">
+    <value>始まり</value>
+  </data>
+  <data name="WinPageMergeBtnEndContent" xml:space="preserve">
+    <value>終わり</value>
+  </data>
+  <data name="WinPageMergeCorrectPageMsg" xml:space="preserve">
+    <value>ページ範囲が間違っています。正しい範囲を選択してください。</value>
+  </data>
+  <data name="WinPageMergeCorruptedDocMsg" xml:space="preserve">
+    <value>文書が壊れています。選択した文書を確認してください。</value>
+  </data>
+  <data name="WinPageMergeInsertfailedMsg" xml:space="preserve">
+    <value>文書にページを挿入できませんでした。</value>
+  </data>
+  <data name="WinPageMergeLabelInserttoContent" xml:space="preserve">
+    <value>へ挿入</value>
+  </data>
+  <data name="WinPageMergeLabelLocationContent" xml:space="preserve">
+    <value>場所</value>
+  </data>
+  <data name="WinPageMergeLabelSelectFileContent" xml:space="preserve">
+    <value>ファイルを選択</value>
+  </data>
+  <data name="WinPageMergeLabelSourceContent" xml:space="preserve">
+    <value>ソース</value>
+  </data>
+  <data name="WinPageMergeLoadingText" xml:space="preserve">
+    <value>ファイルを読み込んでいます…</value>
+  </data>
+  <data name="WinPageMergeMenuInsertfromfileContent" xml:space="preserve">
+    <value>ファイルから挿入</value>
+  </data>
+  <data name="WinPageMergeOpenfailedMsg" xml:space="preserve">
+    <value>選択された文書を開けることができません。</value>
+  </data>
+  <data name="WinPageMergeTitle" xml:space="preserve">
+    <value>ファイルを結合</value>
+  </data>
+  <data name="WinPagePreviewLabelContent" xml:space="preserve">
+    <value>プレビュー</value>
+  </data>
+  <data name="WinPagePreviewPageLabelContent" xml:space="preserve">
+    <value>プレビュー・ページ</value>
+  </data>
+  <data name="WinPageReorderToolTipContent" xml:space="preserve">
+    <value>選択したページ（複数）を整理しなおしてよろしいですか？</value>
+  </data>
+  <data name="WinPageRightFooterTextLabelContent" xml:space="preserve">
+    <value>右側フッター</value>
+  </data>
+  <data name="WinPageRightHeaderTextLabelContent" xml:space="preserve">
+    <value>右側ヘッダー</value>
+  </data>
+  <data name="WinPageSplitBtnMaxpageCountContent" xml:space="preserve">
+    <value>Max page count</value>
+  </data>
+  <data name="WinPageSplitBtnPagerangeContent" xml:space="preserve">
+    <value>ページ範囲</value>
+  </data>
+  <data name="WinPageSplitLabelOutputlocationContent" xml:space="preserve">
+    <value>Output location</value>
+  </data>
+  <data name="WinPageSplitLabelSplitModeContent" xml:space="preserve">
+    <value>分割モード</value>
+  </data>
+  <data name="WinPageSplitTitle" xml:space="preserve">
+    <value>分割ファイル</value>
+  </data>
+  <data name="WinPageStartpagenumbereLabelContent" xml:space="preserve">
+    <value>開始ページ番号</value>
+  </data>
+  <data name="WinPrinterBtnClassicModeContent" xml:space="preserve">
+    <value>クラシックモード</value>
+  </data>
+  <data name="WinPrinterBtnPropertyContent" xml:space="preserve">
+    <value>プリファレンス設定</value>
+  </data>
+  <data name="WinPrinterCancelPrintContent" xml:space="preserve">
+    <value>本当に印刷ジョブをキャンセルしますか？</value>
+  </data>
+  <data name="WinPrinterChbkGrayscaleContent" xml:space="preserve">
+    <value>グレースケール</value>
+  </data>
+  <data name="WinPrinterCollateContent" xml:space="preserve">
+    <value>丁合い</value>
+  </data>
+  <data name="WinPrinterCopiesContent" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+  <data name="WinPrinterDuplexContent" xml:space="preserve">
+    <value>両面印刷</value>
+  </data>
+  <data name="WinPrinterDuplexFlipLongContent" xml:space="preserve">
+    <value>長辺とじ</value>
+  </data>
+  <data name="WinPrinterDuplexFlipShortContent" xml:space="preserve">
+    <value>短辺とじ</value>
+  </data>
+  <data name="WinPrinterNameContent" xml:space="preserve">
+    <value>プリンター</value>
+  </data>
+  <data name="WinPrinterNoPrinterContent" xml:space="preserve">
+    <value>プリンターが検出されません</value>
+  </data>
+  <data name="WinPrinterPageRangErrorContent" xml:space="preserve">
+    <value>1～1000の整数値である必要があります。</value>
+  </data>
+  <data name="WinPrinterPaperOrientationContent" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="WinPrinterPaperSizeContent" xml:space="preserve">
+    <value>用紙サイズ</value>
+  </data>
+  <data name="WinPrinterPrintAnnotationContent" xml:space="preserve">
+    <value>コメントを印刷する</value>
+  </data>
+  <data name="WinPrinterPrintModeContent" xml:space="preserve">
+    <value>ページサイズの調整</value>
+  </data>
+  <data name="WinPurchasedAlreadySubTitle" xml:space="preserve">
+    <value>購入済み</value>
+  </data>
+  <data name="WinPurchasedTitle" xml:space="preserve">
+    <value>正常に購入されました。  PDFgear を存分にお楽しみください。</value>
+  </data>
+  <data name="WinPwdEntePwdTitle" xml:space="preserve">
+    <value>パスワードを入力する</value>
+  </data>
+  <data name="WinPwdEnterTipContent" xml:space="preserve">
+    <value>この文書はパスワードで保護されています。下記にパスワードを入力してください。</value>
+  </data>
+  <data name="WinPwdInputContent" xml:space="preserve">
+    <value>こちらに入力してください…</value>
+  </data>
+  <data name="WinPwdInvalidTryAgainContent" xml:space="preserve">
+    <value>パスワードが無効です。再度お試しください。</value>
+  </data>
+  <data name="WinPwdLabelConfrimContent" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="WinPwdLabelPasswordContent" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="WinPwdMaxCharacterCheckContent" xml:space="preserve">
+    <value>最大32文字。スペースを含まない。</value>
+  </data>
+  <data name="WinPwdMinCharacterCheckContent" xml:space="preserve">
+    <value>最小6文字。スペースを含まない。</value>
+  </data>
+  <data name="WinPwdPasswordCheckEmptyContent" xml:space="preserve">
+    <value>パスワードが必要です。</value>
+  </data>
+  <data name="WinPwdPasswordCheckInvalidContent" xml:space="preserve">
+    <value>パスワードは有効ではありません。</value>
+  </data>
+  <data name="WinPwdPasswordCheckMatchContent" xml:space="preserve">
+    <value>パスワードが一致しません。</value>
+  </data>
+  <data name="WinPwdPasswordKeepPermissionsPwdContent" xml:space="preserve">
+    <value>権限パスワードを保持する</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipContent" xml:space="preserve">
+    <value>文書を保存しなければ、セキュリティ設定が作動しません。</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipNotshowagainContent" xml:space="preserve">
+    <value>このメッセージを再び表示しない</value>
+  </data>
+  <data name="WinPwdPasswordTooltipContent" xml:space="preserve">
+    <value>パスワードは文字、数字、記号のみを含む6～32字が必要です。</value>
+  </data>
+  <data name="WinPwdRemoveCheckContent" xml:space="preserve">
+    <value>PDF文書のパスワードが設定されていません。</value>
+  </data>
+  <data name="WinPwdRemoveConfirmContent" xml:space="preserve">
+    <value>パスワード（複数）を削除してもよろしいですか?</value>
+  </data>
+  <data name="WinPwdSetPwdTitle" xml:space="preserve">
+    <value>パスワードを設定する</value>
+  </data>
+  <data name="WinPwdWrongCheckContent" xml:space="preserve">
+    <value>パスワードが間違っています。</value>
+  </data>
+  <data name="WinPwdillegalsymbolsCheckContent" xml:space="preserve">
+    <value>無効な記号が含まれています。</value>
+  </data>
+  <data name="WinRate5StarsTitle" xml:space="preserve">
+    <value>とてもいいです！星5つをあげたいです！</value>
+  </data>
+  <data name="WinRateFeedbackTitle" xml:space="preserve">
+    <value>フィードバックしたいです。</value>
+  </data>
+  <data name="WinRateLeaveGreatratingTitle" xml:space="preserve">
+    <value>高評価をよろしくお願いします！</value>
+  </data>
+  <data name="WinRateLessaminuteTitle" xml:space="preserve">
+    <value>評価には1分もかかりません。</value>
+  </data>
+  <data name="WinRateLoveTitle" xml:space="preserve">
+    <value>PDFgearをご愛顧ください？</value>
+  </data>
+  <data name="WinRateThanksforsupportTitle" xml:space="preserve">
+    <value>支持してくれてありがとう！</value>
+  </data>
+  <data name="WinRestoreFaildLearnMoreContent" xml:space="preserve">
+    <value>詳細はこちら</value>
+  </data>
+  <data name="WinRestoreFaildPossible1Content" xml:space="preserve">
+    <value>サブスクリプションの有効期限が切れている</value>
+  </data>
+  <data name="WinRestoreFaildPossible2Content" xml:space="preserve">
+    <value>有効な購入履歴がない</value>
+  </data>
+  <data name="WinRestoreFaildPossible3Content" xml:space="preserve">
+    <value>ネットワークが利用できない</value>
+  </data>
+  <data name="WinRestoreFaildPossibleContent" xml:space="preserve">
+    <value>考えられる原因</value>
+  </data>
+  <data name="WinRestoreFaildTitleContent" xml:space="preserve">
+    <value>復元に失敗しました</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureExplain" xml:space="preserve">
+    <value>PDF内にフラット化されていない署名があり、保存後にフラット化され、元に戻せません。このまま続けますか？</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureNoteMsg" xml:space="preserve">
+    <value>このPDFファイルを保存してよろしいですか？</value>
+  </data>
+  <data name="WinScreenshotToolbarCancelContent" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="WinScreenshotToolbarCopyContent" xml:space="preserve">
+    <value>コピー完了</value>
+  </data>
+  <data name="WinScreenshotToolbarDeleteContent" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="WinScreenshotToolbarDoneContent" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="WinScreenshotToolbarEditContent" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="WinScreenshotToolbarSaveContent" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomInContent" xml:space="preserve">
+    <value>拡大</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomOutContent" xml:space="preserve">
+    <value>縮小</value>
+  </data>
+  <data name="WinSettingAISwitch" xml:space="preserve">
+    <value>PDFgear Copilot を有効にする</value>
+  </data>
+  <data name="WinSettingReminnder" xml:space="preserve">
+    <value>受信ファイルリマインダー</value>
+  </data>
+  <data name="WinSettingReminnderDesc" xml:space="preserve">
+    <value>新しいPDFファイルを受け取ったときに通知するためにポップアップします</value>
+  </data>
+  <data name="WinShareSendFilleDescText" xml:space="preserve">
+    <value>ファイルを探して Message、Onedrive、Google Driveなどにドラッグ＆ドロップします。</value>
+  </data>
+  <data name="WinSignatureBtnAddPictureContent" xml:space="preserve">
+    <value>写真を追加</value>
+  </data>
+  <data name="WinSignatureBtnClearContent" xml:space="preserve">
+    <value>クリア</value>
+  </data>
+  <data name="WinSignatureContextMenuApplyMulPage" xml:space="preserve">
+    <value>複数のページに配置</value>
+  </data>
+  <data name="WinSignatureContextMenuDetele" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="WinSignatureContextMenuDeteleInBatch" xml:space="preserve">
+    <value>バッチで削除</value>
+  </data>
+  <data name="WinSignatureContextMenuFlatten" xml:space="preserve">
+    <value>フラット化する</value>
+  </data>
+  <data name="WinSignatureContextMenuFlattenInBatch" xml:space="preserve">
+    <value>バッチでフラット化する</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchBtn" xml:space="preserve">
+    <value>全てクリア</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchQuestion" xml:space="preserve">
+    <value>すべてのページでこの署名を削除してもよろしいですか？</value>
+  </data>
+  <data name="WinSignatureFlattenApplying" xml:space="preserve">
+    <value>署名を適用しています…</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchNoteMsg" xml:space="preserve">
+    <value>この操作により、文書内の署名がフラットになり、元に戻すことはできません。間違えた場合は、保存せずに文書を閉じてください。</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchQuestion" xml:space="preserve">
+    <value>署名をフラット化してよろしいですか？</value>
+  </data>
+  <data name="WinSignatureFlattenProcess" xml:space="preserve">
+    <value>署名のフラット化中...</value>
+  </data>
+  <data name="WinSignatureMaxNumLimitTip" xml:space="preserve">
+    <value>PDFgear は最大 50 個の署名しか保存できません。新しい署名を作成する前に、一時的に使用されていない署名を削除してください。</value>
+  </data>
+  <data name="WinSignatureMenuInputContent" xml:space="preserve">
+    <value>文字入力</value>
+  </data>
+  <data name="WinSignatureMenuInputIsEmptyMsg" xml:space="preserve">
+    <value>入力フィールドを空白にすることはできません！</value>
+  </data>
+  <data name="WinSignatureMenuPictureContent" xml:space="preserve">
+    <value>写真</value>
+  </data>
+  <data name="WinSignatureMenuWriteContent" xml:space="preserve">
+    <value>書く</value>
+  </data>
+  <data name="WinSignaturePageRangeIncorrect" xml:space="preserve">
+    <value>「範囲」の形式が正しくありません。</value>
+  </data>
+  <data name="WinSignatureTitle" xml:space="preserve">
+    <value>署名を作成</value>
+  </data>
+  <data name="WinStampSampleText" xml:space="preserve">
+    <value>サンプルテキスト</value>
+  </data>
+  <data name="WinStampTypeAppearanceHeader" xml:space="preserve">
+    <value>外観</value>
+  </data>
+  <data name="WinStampTypeDateFormatCheckbox" xml:space="preserve">
+    <value>日付と時刻</value>
+  </data>
+  <data name="WinStatuBarPDFAutoSaveText" xml:space="preserve">
+    <value>自動保存</value>
+  </data>
+  <data name="WinToolBarBtnHighlightContent" xml:space="preserve">
+    <value>エリアハイライト</value>
+  </data>
+  <data name="WinUpgradeLiftTimeBtnContent" xml:space="preserve">
+    <value>永続</value>
+  </data>
+  <data name="WinUpgradeList10Content" xml:space="preserve">
+    <value>PDFページを整理しなおす</value>
+  </data>
+  <data name="WinUpgradeList11Content" xml:space="preserve">
+    <value>PDF文書へのサインイン</value>
+  </data>
+  <data name="WinUpgradeList12Content" xml:space="preserve">
+    <value>Compress PDF Files to a smaller size</value>
+  </data>
+  <data name="WinUpgradeList13Content" xml:space="preserve">
+    <value>PDFファイルからWord、Excel、画像などへの変換</value>
+  </data>
+  <data name="WinUpgradeList14Content" xml:space="preserve">
+    <value>PDFへの署名、PDFの圧縮</value>
+  </data>
+  <data name="WinUpgradeList15Content" xml:space="preserve">
+    <value>ページの結合、分割、削除、挿入、抽出、並べ替え</value>
+  </data>
+  <data name="WinUpgradeList16Content" xml:space="preserve">
+    <value>画像からテキストへの変換（OCR）</value>
+  </data>
+  <data name="WinUpgradeList17Content" xml:space="preserve">
+    <value>最大10件のデバイス</value>
+  </data>
+  <data name="WinUpgradeList18Content" xml:space="preserve">
+    <value>PDFgear プレミアム</value>
+  </data>
+  <data name="WinUpgradeList1Content" xml:space="preserve">
+    <value>PDF文書をWord、Excel、PNG、JPG、RTF、TXT、HTML、または XMLへ変換</value>
+  </data>
+  <data name="WinUpgradeList2Content" xml:space="preserve">
+    <value>複数のPDF文書を1つにまとめる</value>
+  </data>
+  <data name="WinUpgradeList3Content" xml:space="preserve">
+    <value>PDF文書からページを削除</value>
+  </data>
+  <data name="WinUpgradeList4Content" xml:space="preserve">
+    <value>1つのPDF文書を複数に分割</value>
+  </data>
+  <data name="WinUpgradeList5Content" xml:space="preserve">
+    <value>PDF文書からPDFページを抽出</value>
+  </data>
+  <data name="WinUpgradeList6Content" xml:space="preserve">
+    <value>広告なし</value>
+  </data>
+  <data name="WinUpgradeList7Content" xml:space="preserve">
+    <value>24時間毎日サポート</value>
+  </data>
+  <data name="WinUpgradeList8Content" xml:space="preserve">
+    <value>他のPDF文書からのページを挿入</value>
+  </data>
+  <data name="WinUpgradeList9Content" xml:space="preserve">
+    <value>WordやExcel、PPT、画像、RTF、TXTといったファイルをPDFドキュメントに変換可能</value>
+  </data>
+  <data name="WinUpgradeRestorePurchase" xml:space="preserve">
+    <value>購入履歴の復元</value>
+  </data>
+  <data name="WinUpgradeTitle" xml:space="preserve">
+    <value>完全版を取得</value>
+  </data>
+  <data name="WinUpgradeYearBtnContent" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="WinViewToolBackgroundDayModeText" xml:space="preserve">
+    <value>デイモード</value>
+  </data>
+  <data name="WinViewToolBackgroundDefaultText" xml:space="preserve">
+    <value>デフォルト</value>
+  </data>
+  <data name="WinViewToolBackgroundEyeProtectionModeText" xml:space="preserve">
+    <value>アイプロテクションモード</value>
+  </data>
+  <data name="WinViewToolBackgroundNightModeText" xml:space="preserve">
+    <value>ナイトモード</value>
+  </data>
+  <data name="WinViewToolBackgroundText" xml:space="preserve">
+    <value>背景</value>
+  </data>
+  <data name="WinViewToolBackgroundYellowBackgroundText" xml:space="preserve">
+    <value>イエロー</value>
+  </data>
+  <data name="WinViewToolConvertText" xml:space="preserve">
+    <value>変換</value>
+  </data>
+  <data name="WinViewToolOpenTooltipText" xml:space="preserve">
+    <value>開く</value>
+  </data>
+  <data name="WinViewToolPrintTooltipText" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="WinViewToolRecentFileText" xml:space="preserve">
+    <value>最近のファイル</value>
+  </data>
+  <data name="WinViewToolRedoTooltipText" xml:space="preserve">
+    <value>やり直し</value>
+  </data>
+  <data name="WinViewToolSaveAsTooltipText" xml:space="preserve">
+    <value>名前を付けて保存</value>
+  </data>
+  <data name="WinViewToolSaveTooltipText" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="WinViewToolUndoTooltipText" xml:space="preserve">
+    <value>元に戻す</value>
+  </data>
+  <data name="WinWatermarkAligmentContent" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="WinWatermarkCbxBottomCenterContent" xml:space="preserve">
+    <value>中央下</value>
+  </data>
+  <data name="WinWatermarkCbxBottomLeftContent" xml:space="preserve">
+    <value>左下</value>
+  </data>
+  <data name="WinWatermarkCbxBottomRightContent" xml:space="preserve">
+    <value>右下</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleCenterContent" xml:space="preserve">
+    <value>中央下</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleLeftContent" xml:space="preserve">
+    <value>真ん中左</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleRightContent" xml:space="preserve">
+    <value>真ん中右</value>
+  </data>
+  <data name="WinWatermarkCbxTopCenterContent" xml:space="preserve">
+    <value>中央上</value>
+  </data>
+  <data name="WinWatermarkCbxTopLeftContent" xml:space="preserve">
+    <value>左上</value>
+  </data>
+  <data name="WinWatermarkCbxTopRightContent" xml:space="preserve">
+    <value>右上</value>
+  </data>
+  <data name="WinWatermarkCurrentpageContent" xml:space="preserve">
+    <value>現在のページ</value>
+  </data>
+  <data name="WinWatermarkEditTiltle" xml:space="preserve">
+    <value>透かしを編集</value>
+  </data>
+  <data name="WinWatermarkFileContent" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+  <data name="WinWatermarkFilePathEmptyMsg" xml:space="preserve">
+    <value>透かし画像追加なし</value>
+  </data>
+  <data name="WinWatermarkNewTiltle" xml:space="preserve">
+    <value>透かしを作成</value>
+  </data>
+  <data name="WinWatermarkOpacityContent" xml:space="preserve">
+    <value>不透明度</value>
+  </data>
+  <data name="WinWatermarkRotateContent" xml:space="preserve">
+    <value>回転</value>
+  </data>
+  <data name="WinWatermarkSizeContent" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="WinWatermarkSourceContent" xml:space="preserve">
+    <value>ソース</value>
+  </data>
+  <data name="WinWatermarkStyleContent" xml:space="preserve">
+    <value>スタイル</value>
+  </data>
+  <data name="WinWatermarkTextContent" xml:space="preserve">
+    <value>テキスト</value>
+  </data>
+  <data name="WinWatermarkTextEmptyMsg" xml:space="preserve">
+    <value>テキストを入力してください。</value>
+  </data>
+  <data name="WinWatermarkTileContent" xml:space="preserve">
+    <value>並べて表示</value>
+  </data>
+  <data name="WinWrongPageRangTipContent" xml:space="preserve">
+    <value>有効な範囲を入力してください。</value>
+  </data>
+  <data name="WrapBookmarkMenuItemContent" xml:space="preserve">
+    <value>長いブックマークは自動的に折り返す</value>
+  </data>
+</root>

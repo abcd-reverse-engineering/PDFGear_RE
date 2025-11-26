@@ -1,0 +1,263 @@
+<UserControl
+	x:Class="pdfeditor.Controls.FilterByAnnotationsControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls" xmlns:localprop="clr-namespace:pdfeditor.Properties">
+	<Grid>
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<Style
+					x:Key="FilterListViewStyle"
+					TargetType="{x:Type ListView}">
+					<Setter
+						Property="ListBox.SelectionMode"
+						Value="Single" />
+					<Setter
+						Property="Height"
+						Value="28" />
+					<Setter
+						Property="BorderThickness"
+						Value="0" />
+					<Setter
+						Property="Background"
+						Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+				</Style>
+				<Style
+					x:Key="{x:Type GridViewColumnHeader}"
+					TargetType="{x:Type GridViewColumnHeader}">
+					<Setter
+						Property="FrameworkElement.OverridesDefaultStyle"
+						Value="True" />
+					<Setter
+						Property="HorizontalAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="Height"
+						Value="28" />
+					<Setter
+						Property="Padding"
+						Value="0" />
+					<Setter
+						Property="Background"
+						Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+					<Setter
+						Property="FontSize"
+						Value="12" />
+					<Setter
+						Property="Foreground"
+						Value="{DynamicResource TextBrushWhiteAndBlack}" />
+					<Setter
+						Property="BorderThickness"
+						Value="0" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type GridViewColumnHeader}">
+								<Grid
+									Name="g"
+									Background="{DynamicResource SolidBrushWhiteAndBlack}">
+									<Border
+										Name="bd"
+										Padding="{TemplateBinding Control.Padding}">
+										<ContentPresenter
+											VerticalAlignment="Center"
+											HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" />
+									</Border>
+								</Grid>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<ListView xmlns:commonControls="clr-namespace:CommonLib.Controls;assembly=CommonLib"
+			x:Name="lsvFilter"
+			Grid.Row="1"
+			Grid.Column="1"
+			Height="auto"
+			BorderThickness="0.5"
+			BorderBrush="{DynamicResource MainViewSideBarBorder}"
+			HorizontalAlignment="Stretch"
+			Background="{DynamicResource SolidBrushWhiteAndBlack}"
+			Style="{StaticResource FilterListViewStyle}"
+			ScrollViewer.VerticalScrollBarVisibility="Auto"
+			ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+			VirtualizingPanel.ScrollUnit="Pixel"
+			commonControls:ScrollBarHelper.ForceExpand="True"
+			ItemsSource="{Binding TextList, RelativeSource={RelativeSource AncestorType=local:FilterByAnnotationsControl}}">
+			<FrameworkElement.Resources>
+				<ResourceDictionary />
+			</FrameworkElement.Resources>
+			<ItemsControl.ItemContainerStyle>
+				<Style
+					TargetType="{x:Type ListViewItem}">
+					<Style.Setters
+						MouseDoubleClick="OnListViewItemDoubleClick">
+						<Setter
+							Property="UIElement.SnapsToDevicePixels"
+							Value="False" />
+						<Setter
+							Property="Height"
+							Value="28" />
+						<Setter
+							Property="Padding"
+							Value="0" />
+						<Setter
+							Property="Margin"
+							Value="0" />
+						<Setter
+							Property="FontSize"
+							Value="12" />
+						<Setter
+							Property="Foreground"
+							Value="{DynamicResource TextBrushWhiteAndBlack}" />
+						<Setter
+							Property="BorderThickness"
+							Value="0" />
+						<Setter
+							Property="Background"
+							Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+						<Setter
+							Property="Template">
+							<Setter.Value>
+								<ControlTemplate
+									TargetType="{x:Type ListViewItem}">
+									<Grid>
+										<Border
+											x:Name="bd"
+											Background="{DynamicResource SolidBrushWhiteAndBlack}"
+											BorderThickness="0"
+											Height="{TemplateBinding FrameworkElement.Height}"
+											SnapsToDevicePixels="True">
+											<GridViewRowPresenter
+												HorizontalAlignment="Stretch" />
+										</Border>
+									</Grid>
+									<ControlTemplate.Triggers>
+										<Trigger
+											Property="ListBoxItem.IsSelected"
+											Value="True">
+											<Trigger.Setters>
+												<Setter
+													TargetName="bd"
+													Value="{DynamicResource SolidBrushWhiteAndBlack}"
+													Property="Border.Background" />
+											</Trigger.Setters>
+										</Trigger>
+										<MultiTrigger>
+											<MultiTrigger.Conditions>
+												<Condition
+													Property="UIElement.IsMouseOver"
+													Value="True" />
+												<Condition
+													Property="ListBoxItem.IsSelected"
+													Value="False" />
+											</MultiTrigger.Conditions>
+											<Setter
+												TargetName="bd"
+												Value="{DynamicResource SolidBrushWhiteAndBlack}"
+												Property="Border.Background" />
+										</MultiTrigger>
+									</ControlTemplate.Triggers>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style.Setters>
+				</Style>
+			</ItemsControl.ItemContainerStyle>
+			<ListView.View>
+				<GridView
+					x:Name="gView">
+					<GridViewColumn
+						Width="30">
+						<GridViewColumn.HeaderTemplate>
+							<DataTemplate>
+								<CheckBox
+									x:Name="fileItemListCBCB"
+									IsThreeState="False"
+									VerticalAlignment="Center"
+									Style="{DynamicResource DefaultCheckBoxStyle}"
+									Margin="4,0,0,0"
+									IsChecked="{Binding AllCheck, Mode=TwoWay, RelativeSource={RelativeSource AncestorType=local:FilterByAnnotationsControl}}"
+									Checked="fileItemListSelectAll"
+									Unchecked="fileItemListSelectNone" />
+							</DataTemplate>
+						</GridViewColumn.HeaderTemplate>
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<CheckBox
+									x:Name="fileItemCB"
+									VerticalAlignment="Center"
+									Margin="0,0,0,0"
+									Style="{DynamicResource DefaultCheckBoxStyle}"
+									IsChecked="{Binding Path=IsSelect, Mode=TwoWay}"
+									Checked="fileItemChecked"
+									Unchecked="fileItemUnchecked"
+									PreviewMouseDoubleClick="fileItemCB_PreviewMouseDoubleClick" />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn
+						Header="{x:Static localprop:Resources.AnnotationMenuFilterAll}"
+						Width="100">
+						<GridViewColumn.HeaderTemplate>
+							<DataTemplate>
+								<TextBlock
+									FontSize="12"
+									Margin="5,0,0,0"
+									Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+									Text="{Binding}" />
+							</DataTemplate>
+						</GridViewColumn.HeaderTemplate>
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<StackPanel
+									Orientation="Horizontal"
+									HorizontalAlignment="Stretch">
+									<StackPanel
+										Margin="0 0 0 0">
+										<TextBlock
+											x:Name="tbName"
+											FontSize="12"
+											TextTrimming="CharacterEllipsis"
+											Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+											Text="{Binding Text}"
+											ToolTip="{Binding Text}" />
+									</StackPanel>
+								</StackPanel>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn
+						x:Name="NumHeader"
+						Width="35">
+						<GridViewColumn.HeaderTemplate>
+							<DataTemplate>
+								<TextBlock
+									FontSize="12"
+									Margin="5,0,0,0"
+									Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+									Text="{Binding AllCount, RelativeSource={RelativeSource AncestorType=local:FilterByAnnotationsControl}}" />
+							</DataTemplate>
+						</GridViewColumn.HeaderTemplate>
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<StackPanel
+									Orientation="Horizontal"
+									HorizontalAlignment="Stretch">
+									<StackPanel
+										Margin="0 0 0 0">
+										<TextBlock
+											x:Name="tbName"
+											FontSize="12"
+											TextTrimming="CharacterEllipsis"
+											Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+											Text="{Binding Count}" />
+									</StackPanel>
+								</StackPanel>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+				</GridView>
+			</ListView.View>
+		</ListView>
+	</Grid>
+</UserControl>

@@ -1,0 +1,199 @@
+<Window
+	x:Class="pdfeditor.Controls.DigitalSignatures.SignaturePropertiesDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.DigitalSignatures" xmlns:localprop="clr-namespace:pdfeditor.Properties"
+	ResizeMode="NoResize"
+	SizeToContent="Height"
+	SnapsToDevicePixels="True"
+	Title="{x:Static localprop:Resources.DigSignPropDialogTitle}"
+	MinHeight="200"
+	Width="640"
+	Background="{DynamicResource SolidBrushWhiteAndBlack}"
+	TextElement.Foreground="{DynamicResource TextBrushWhiteAndBlack}">
+	<StackPanel
+		Orientation="Vertical"
+		Margin="20">
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<ResourceDictionary.MergedDictionaries>
+					<ResourceDictionary
+						Source="/Controls/DigitalSignatures/DigitalSignatureControlStyles.xaml" />
+				</ResourceDictionary.MergedDictionaries>
+				<Style
+					x:Key="CommonHeaderedControlStyle"
+					TargetType="{x:Type HeaderedContentControl}"
+					BasedOn="{StaticResource DigitalSignatureHeaderedControlStyle}">
+					<Setter
+						Property="VerticalContentAlignment"
+						Value="Top" />
+					<Setter
+						Property="MinHeight"
+						Value="26" />
+					<Setter
+						Property="Foreground"
+						Value="{DynamicResource BtnBrushGrayAndDark}" />
+				</Style>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Grid
+			VerticalAlignment="Center">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid
+				Width="32"
+				Height="32"
+				VerticalAlignment="Top"
+				Margin="0,0,20,0">
+				<local:DigitalSignatureValidationIcon
+					x:Name="ValidationIcon" />
+			</Grid>
+			<StackPanel
+				Grid.Column="1"
+				Orientation="Vertical"
+				Grid.IsSharedSizeScope="True">
+				<Border
+					MinHeight="32">
+					<TextBlock
+						x:Name="Title"
+						Text="Signature validity is UNKNOWN. "
+						TextWrapping="Wrap"
+						FontWeight="Bold"
+						LineHeight="20"
+						VerticalAlignment="Center" />
+				</Border>
+				<HeaderedContentControl
+					Style="{StaticResource CommonHeaderedControlStyle}"
+					Margin="0,8,0,0"
+					Header="{x:Static localprop:Resources.DigSignFieldSignedBy}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<TextBox
+							x:Name="SignedText"
+							IsReadOnly="True"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Background="#00FFFFFF"
+							BorderThickness="0"
+							VerticalAlignment="Top"
+							Margin="0,0,8,0"
+							ToolTip="{Binding Path=Text, RelativeSource={RelativeSource Mode=Self}}" />
+						<Button
+							Grid.Column="1"
+							Style="{StaticResource DialogButtonStyle}"
+							Padding="12,2"
+							Margin="0,-4,0,0"
+							Content="{x:Static localprop:Resources.DigSignPropShowCertBtn}"
+							HorizontalAlignment="Left"
+							Click="ShowCertificateButton_Click" />
+						<Button
+							x:Name="TrustCertificateButton"
+							Grid.Column="2"
+							Style="{StaticResource DialogButtonStyle}"
+							Padding="12,2"
+							Margin="4,-4,0,0"
+							Content="{x:Static localprop:Resources.DigSignPropTrustCertBtn}"
+							HorizontalAlignment="Left"
+							Click="TrustCertificateButton_Click" />
+					</Grid>
+				</HeaderedContentControl>
+				<HeaderedContentControl
+					Style="{StaticResource CommonHeaderedControlStyle}"
+					Header="{x:Static localprop:Resources.DigSignPropReason}">
+					<TextBox
+						x:Name="ReasonText"
+						IsReadOnly="True"
+						Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+						Background="#00FFFFFF"
+						BorderThickness="0"
+						TextWrapping="Wrap"
+						MaxHeight="80" />
+				</HeaderedContentControl>
+				<HeaderedContentControl
+					Style="{StaticResource CommonHeaderedControlStyle}"
+					Header="{x:Static localprop:Resources.DigSignPropSignDate}">
+					<TextBox
+						x:Name="DateText"
+						IsReadOnly="True"
+						Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+						Background="#00FFFFFF"
+						BorderThickness="0" />
+				</HeaderedContentControl>
+				<HeaderedContentControl
+					Style="{StaticResource CommonHeaderedControlStyle}"
+					Header="{x:Static localprop:Resources.DigSignPropLocation}">
+					<TextBox
+						x:Name="LocationText"
+						IsReadOnly="True"
+						Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+						Background="#00FFFFFF"
+						BorderThickness="0"
+						TextWrapping="Wrap"
+						MaxHeight="80" />
+				</HeaderedContentControl>
+			</StackPanel>
+		</Grid>
+		<Border
+			Margin="0,10,0,0"
+			BorderThickness="0,1,0,0"
+			BorderBrush="{DynamicResource MainViewFontSizeBorder}">
+			<StackPanel
+				Margin="0,10,0,0">
+				<TextBlock
+					Text="{x:Static localprop:Resources.DigSignPropValiditySummary}"
+					Margin="0,0,0,10" />
+				<TextBox
+					x:Name="ValiditySummaryText"
+					IsReadOnly="True"
+					Foreground="{DynamicResource BtnBrushGrayAndDark}"
+					Background="#00FFFFFF"
+					AcceptsReturn="True"
+					BorderThickness="0"
+					TextWrapping="Wrap"
+					HorizontalAlignment="Stretch"
+					VerticalAlignment="Stretch"
+					ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+					ScrollViewer.VerticalScrollBarVisibility="Disabled" />
+			</StackPanel>
+		</Border>
+		<Border
+			Margin="0,10,0,0"
+			BorderThickness="0,1,0,0"
+			BorderBrush="{DynamicResource MainViewFontSizeBorder}">
+			<StackPanel
+				Margin="0,10,0,0">
+				<TextBlock
+					Text="{x:Static localprop:Resources.DigSignInfoSignerInfoTitle}"
+					Margin="0,0,0,10" />
+				<HeaderedContentControl
+					Style="{StaticResource CommonHeaderedControlStyle}"
+					Header="{x:Static localprop:Resources.DigSignPropContactInfo}">
+					<TextBox
+						x:Name="ContractText"
+						IsReadOnly="True"
+						Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+						Background="#00FFFFFF"
+						BorderThickness="0" />
+				</HeaderedContentControl>
+			</StackPanel>
+		</Border>
+		<StackPanel
+			Orientation="Horizontal"
+			HorizontalAlignment="Center"
+			Margin="0,20,0,0">
+			<Button
+				x:Name="btnCancel"
+				Style="{StaticResource DialogButtonStyle}"
+				Content="{x:Static localprop:Resources.WinBtnCloseContent}"
+				FontSize="12"
+				IsCancel="True" />
+		</StackPanel>
+	</StackPanel>
+</Window>

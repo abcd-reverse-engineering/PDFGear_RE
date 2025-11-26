@@ -1,0 +1,3784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddCertificateWindow_CreateCertFile_Desc" xml:space="preserve">
+    <value>새 디지털 ID 파일의 위치와 비밀번호를 입력하십시오. 디지털 ID를 사용하여 문서에 서명하거나 복호화할 때 비밀번호가 필요합니다. 백업 또는 다른 용도로 이 파일 위치를 기록해 두십시오.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FailedMessage" xml:space="preserve">
+    <value>알 수 없는 오류가 발생했습니다.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FileName" xml:space="preserve">
+    <value>파일 이름:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameEmptyMessage" xml:space="preserve">
+    <value>파일 이름은 비어 있을 수 없습니다.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameInvalidMessage" xml:space="preserve">
+    <value>유효한 파일 이름을 입력하세요.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegion" xml:space="preserve">
+    <value>국가/지역:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegionNoneValue" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Desc" xml:space="preserve">
+    <value>자가 서명된 인증서를 만들기 위해 사용할 신원 정보를 입력하십시오.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Email" xml:space="preserve">
+    <value>이메일 주소:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_EmailInvalidMessage" xml:space="preserve">
+    <value>잘못된 이메일 형식입니다.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_LabelName" xml:space="preserve">
+    <value>이름 (예: John Smith):</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_NameEmptyMessage" xml:space="preserve">
+    <value>이름은 비워둘 수 없습니다.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalName" xml:space="preserve">
+    <value>조직 이름:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalUnit" xml:space="preserve">
+    <value>조직 단위:</value>
+  </data>
+  <data name="AddCertificateWindow_ImportFile_Desc" xml:space="preserve">
+    <value>디지털 ID 파일은 일반적으로 PFX 또는 P12 확장자를 가지며, 일반적으로 서명 및 검증에 사용되는 개인 키와 공개 키 인증서를 포함합니다.
+파일로 제공되는 디지털 ID로 서명하려면 파일을 찾아 선택하고 개인 키를 보호하는 비밀번호를 입력하라는 안내에 따라 진행하십시오.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_Desc" xml:space="preserve">
+    <value>문서를 서명하고 암호화하기 위해 디지털 ID를 추가하거나 만듭니다. 디지털 ID는 신뢰할 수 있는 제3자 서비스 제공자에 의해 발급될 수 있습니다. 여기에는 개인 키와 공개 키가 포함된 인증서가 포함됩니다. 개인 키는 인증서 기반 서명을 만드는 데 사용됩니다. 디지털 ID에 내장된 인증서는 서명을 검증하기 위해 다른 사람에게 전송됩니다.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelCreateCert" xml:space="preserve">
+    <value>지금 새 디지털 ID를 만들고 싶습니다.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelImportFile" xml:space="preserve">
+    <value>파일에서 기존 디지털 ID.</value>
+  </data>
+  <data name="AddDeferredDigitSignBtn" xml:space="preserve">
+    <value>서명 필드 추가</value>
+  </data>
+  <data name="AnnotationContextMenuCopyText" xml:space="preserve">
+    <value>텍스트 복사</value>
+  </data>
+  <data name="AnnotationFileAttachment" xml:space="preserve">
+    <value>첨부 파일</value>
+  </data>
+  <data name="AnnotationFileAttachmentOpenWarning" xml:space="preserve">
+    <value>첨부 파일을 여시겠습니까?</value>
+  </data>
+  <data name="AnnotationMenuBatchDeleteBtn" xml:space="preserve">
+    <value>일괄 삭제</value>
+  </data>
+  <data name="AnnotationMenuFilterAll" xml:space="preserve">
+    <value>모두</value>
+  </data>
+  <data name="AnnotationMenuFilterBtn" xml:space="preserve">
+    <value>필터</value>
+  </data>
+  <data name="AnnotationMenuFilterByAnnotations" xml:space="preserve">
+    <value>주석</value>
+  </data>
+  <data name="AnnotationMenuFilterByUser" xml:space="preserve">
+    <value>사용자</value>
+  </data>
+  <data name="AnnotationMenuTotal" xml:space="preserve">
+    <value>총:</value>
+  </data>
+  <data name="AppSettingsAuthorHeader" xml:space="preserve">
+    <value>작가</value>
+  </data>
+  <data name="AppSettingsBlankPage" xml:space="preserve">
+    <value>빈 PDF</value>
+  </data>
+  <data name="AppSettingsBlankPageHeightContent" xml:space="preserve">
+    <value>높이(mm):</value>
+  </data>
+  <data name="AppSettingsBlankPageWidthContent" xml:space="preserve">
+    <value>너비(mm):</value>
+  </data>
+  <data name="AppSettingsDefaultDisplay" xml:space="preserve">
+    <value>기본 줌</value>
+  </data>
+  <data name="AppSettingsDefaultDisplayTips" xml:space="preserve">
+    <value>기본 확대/축소 설정은 처음 열리는 문서에만 적용됩니다.</value>
+  </data>
+  <data name="AppSettingsDefaultPageview" xml:space="preserve">
+    <value>기본 페이지 레이아웃</value>
+  </data>
+  <data name="AppSettingsDefaultSelection" xml:space="preserve">
+    <value>기본 상호작용 도구</value>
+  </data>
+  <data name="AppSettingsDouble" xml:space="preserve">
+    <value>두 페이지 보기</value>
+  </data>
+  <data name="AppSettingsDoubleContinuous" xml:space="preserve">
+    <value>두 페이지 연속 보기</value>
+  </data>
+  <data name="AppSettingsFileAssociations" xml:space="preserve">
+    <value>파일 연결</value>
+  </data>
+  <data name="AppSettingsFileAssociations_AlreadyDefaultMessage" xml:space="preserve">
+    <value>XXX는 이미 PDF 파일의 기본 앱으로 설정되어 있습니다.</value>
+  </data>
+  <data name="AppSettingsFileAssociations_MakeDefault" xml:space="preserve">
+    <value>기본값으로 설정</value>
+  </data>
+  <data name="AppSettingsHandMode" xml:space="preserve">
+    <value>손 도구</value>
+  </data>
+  <data name="AppSettingsLanguageAutoItem" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="AppSettingsLanguageHeader" xml:space="preserve">
+    <value>언어</value>
+  </data>
+  <data name="AppSettingsLanguageRestartTips" xml:space="preserve">
+    <value>설정을 적용하려면 PDFgear를 다시 시작하십시오.</value>
+  </data>
+  <data name="AppSettingsLanguageTitle" xml:space="preserve">
+    <value>언어</value>
+  </data>
+  <data name="AppSettingsLaunchOCR" xml:space="preserve">
+    <value>스캔된 PDF를 열 때 OCR 수행 안내.</value>
+  </data>
+  <data name="AppSettingsLaunchStatusbar" xml:space="preserve">
+    <value>PDF 열 때 하단 탐색 바 표시.</value>
+  </data>
+  <data name="AppSettingsLaunchToolbar" xml:space="preserve">
+    <value>PDF를 열 때 도구 모음 표시.</value>
+  </data>
+  <data name="AppSettingsPageDisplay" xml:space="preserve">
+    <value>페이지 표시</value>
+  </data>
+  <data name="AppSettingsSelectionMode" xml:space="preserve">
+    <value>선택 도구</value>
+  </data>
+  <data name="AppSettingsShowRightMenu" xml:space="preserve">
+    <value>텍스트 선택 시 빠른 작업 표시</value>
+  </data>
+  <data name="AppSettingsSingle" xml:space="preserve">
+    <value>단일 페이지</value>
+  </data>
+  <data name="AppSettingsSingleContinuous" xml:space="preserve">
+    <value>단일 페이지 연속 보기</value>
+  </data>
+  <data name="AppSettingsUserInformationTitle" xml:space="preserve">
+    <value>사용자 정보</value>
+  </data>
+  <data name="AppSettingsUserInterface" xml:space="preserve">
+    <value>사용자 인터페이스</value>
+  </data>
+  <data name="AppsettingsHighlightForm" xml:space="preserve">
+    <value>폼 필드 강조 표시</value>
+  </data>
+  <data name="AttachmentDescriptionWinText" xml:space="preserve">
+    <value>설명:</value>
+  </data>
+  <data name="AttachmentPanelAttachmentTab" xml:space="preserve">
+    <value>첨부 파일 탭</value>
+  </data>
+  <data name="AttachmentPanelBtnAddAttachmentsText" xml:space="preserve">
+    <value>첨부 파일 추가</value>
+  </data>
+  <data name="AttachmentPanelBtnDeleteAttachmentText" xml:space="preserve">
+    <value>첨부 파일 삭제</value>
+  </data>
+  <data name="AttachmentPanelBtnEditDescriptionText" xml:space="preserve">
+    <value>설명 편집</value>
+  </data>
+  <data name="AttachmentPanelBtnOpenAttachmentText" xml:space="preserve">
+    <value>첨부 파일 열기</value>
+  </data>
+  <data name="AttachmentPanelBtnSaveAttachmentText" xml:space="preserve">
+    <value>첨부 파일 저장</value>
+  </data>
+  <data name="AttachmentToolbarBtnContextMenuOpenAttachmentManager" xml:space="preserve">
+    <value>첨부 파일 관리</value>
+  </data>
+  <data name="BatchDeleteSelectNoneWarning" xml:space="preserve">
+    <value>삭제하려는 주석을 선택하세요.</value>
+  </data>
+  <data name="BatchDeleteWarning" xml:space="preserve">
+    <value>선택한 모든 주석을 삭제하시겠습니까?</value>
+  </data>
+  <data name="BatchDeletingTitle" xml:space="preserve">
+    <value>주석 삭제하기...</value>
+  </data>
+  <data name="BatchPrintDialogAddFilesButtonContent" xml:space="preserve">
+    <value>PDF 파일 추가</value>
+  </data>
+  <data name="BatchPrintDialogBatchPrintButtonContent" xml:space="preserve">
+    <value>일괄 인쇄</value>
+  </data>
+  <data name="BatchPrintDialogPageCountText" xml:space="preserve">
+    <value>페이지</value>
+  </data>
+  <data name="BatchPrintListWinActionsHeader" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="BatchPrintListWinAddFilesBtn" xml:space="preserve">
+    <value>파일 추가</value>
+  </data>
+  <data name="BatchPrintListWinFileNameHeader" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="BatchPrintListWinRemoveAllBtn" xml:space="preserve">
+    <value>모두 제거</value>
+  </data>
+  <data name="BatchPrintListWinStatusHeader" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="BatchPrintPrintAllBtn" xml:space="preserve">
+    <value>모두 인쇄</value>
+  </data>
+  <data name="BatchPrintPrintSettingsBtn" xml:space="preserve">
+    <value>일괄 인쇄 설정</value>
+  </data>
+  <data name="BatchPrintRemoveAllMessage" xml:space="preserve">
+    <value>모든 파일을 삭제하시겠습니까?</value>
+  </data>
+  <data name="BatchPrintSettingsWinAppliedTo" xml:space="preserve">
+    <value>적용 대상：</value>
+  </data>
+  <data name="BatchPrintSettingsWinSaveBtn" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="BatchPrintSettingsWinSettingsGroupName" xml:space="preserve">
+    <value>인쇄 설정</value>
+  </data>
+  <data name="BatchPrintSettingsWinToAll" xml:space="preserve">
+    <value>모든 파일</value>
+  </data>
+  <data name="BatchPrintSettingsWinToCurrent" xml:space="preserve">
+    <value>현재 파일</value>
+  </data>
+  <data name="BatchPrintWinFailStatus" xml:space="preserve">
+    <value>실패</value>
+  </data>
+  <data name="BatchPrintWinPrintingStatus" xml:space="preserve">
+    <value>인쇄 중...</value>
+  </data>
+  <data name="BatchPrintWinSuccessStatus" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="BookmarkRenameWindowContent" xml:space="preserve">
+    <value>여기에서 북마크 제목을 변경하세요</value>
+  </data>
+  <data name="CategoryNameWinEmptyMessage" xml:space="preserve">
+    <value>카테고리 이름은 비워둘 수 없습니다.</value>
+  </data>
+  <data name="CategoryNameWinPlaceholder" xml:space="preserve">
+    <value>여기에 입력하세요...</value>
+  </data>
+  <data name="CategoryNameWinTitle" xml:space="preserve">
+    <value>카테고리 이름</value>
+  </data>
+  <data name="CerateSearchablePDFWinTitle" xml:space="preserve">
+    <value>OCR 실행 중</value>
+  </data>
+  <data name="CertificateManagerBtn" xml:space="preserve">
+    <value>인증서 관리자</value>
+  </data>
+  <data name="CertificateManagerWindowTitle" xml:space="preserve">
+    <value>신원 및 신뢰된 인증서</value>
+  </data>
+  <data name="CertificateManager_AddBtn" xml:space="preserve">
+    <value>ID 추가</value>
+  </data>
+  <data name="CertificateManager_AddFile_Invalid_Message" xml:space="preserve">
+    <value>파일이 유효하지 않습니다. 파일을 확인하고 다시 시도하십시오.</value>
+  </data>
+  <data name="CertificateManager_CertDetailBtn" xml:space="preserve">
+    <value>인증서 세부 정보</value>
+  </data>
+  <data name="CertificateManager_Content_Issuedby" xml:space="preserve">
+    <value>발급자:</value>
+  </data>
+  <data name="CertificateManager_Content_ValidFrom" xml:space="preserve">
+    <value>유효 기간:</value>
+  </data>
+  <data name="CertificateManager_Content_ValidTo" xml:space="preserve">
+    <value>유효 기간:</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_Desc" xml:space="preserve">
+    <value>디지털 ID는 주로 서명자가 신원을 증명하고 디지털 서명을 생성하는 데 사용됩니다. 파일 또는 다른 형태를 기반으로 신뢰할 수 있는 제3자 서비스 제공자가 발급할 수 있습니다.
+
+새 디지털 ID를 만들 수 있습니다. 하지만 신원 보증 수준이 낮아 일부 경우에는 수용되지 않을 수 있습니다.</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_TabName" xml:space="preserve">
+    <value>디지털 ID</value>
+  </data>
+  <data name="CertificateManager_ExportBtn" xml:space="preserve">
+    <value>내보내기</value>
+  </data>
+  <data name="CertificateManager_ExportFailed_Message" xml:space="preserve">
+    <value>인증서 내보내기 실패.</value>
+  </data>
+  <data name="CertificateManager_ExportSucceeded_Message" xml:space="preserve">
+    <value>인증서를 성공적으로 내보냈습니다.</value>
+  </data>
+  <data name="CertificateManager_RefreshBtn" xml:space="preserve">
+    <value>새로 고침</value>
+  </data>
+  <data name="CertificateManager_RemoveBtn" xml:space="preserve">
+    <value>ID 제거</value>
+  </data>
+  <data name="CertificateManager_Remove_Message" xml:space="preserve">
+    <value>선택한 인증서를 삭제하시겠습니까?</value>
+  </data>
+  <data name="CertificateManager_Storage_LocalCertificateStore" xml:space="preserve">
+    <value>디지털 ID 파일</value>
+  </data>
+  <data name="CertificateManager_Storage_WindowsCertificateStore" xml:space="preserve">
+    <value>Windows 인증서 저장소</value>
+  </data>
+  <data name="CertificateManager_Table_Expires" xml:space="preserve">
+    <value>만료</value>
+  </data>
+  <data name="CertificateManager_Table_Issuer" xml:space="preserve">
+    <value>발급자</value>
+  </data>
+  <data name="CertificateManager_Table_Name" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="CertificateManager_Table_StorageMechanism" xml:space="preserve">
+    <value>저장 메커니즘</value>
+  </data>
+  <data name="CertificateManager_Trust_Desc" xml:space="preserve">
+    <value>신뢰 인증서는 기본적으로 인정받고 신뢰할 수 있는 인증 기관(CA)에서 발급한 디지털 인증서입니다. 인증서 발급자가 신뢰할 수 있음을 확인하고, 인증서와 관련된 공개 키가 주장하는 엔터티에 속하는지 검증합니다.</value>
+  </data>
+  <data name="CertificateManager_Trust_TabName" xml:space="preserve">
+    <value>신뢰할 수 있는 인증서</value>
+  </data>
+  <data name="ChatPanelAppActionCancelButton" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="ChatPanelAppActionCanceledContent" xml:space="preserve">
+    <value>취소 된</value>
+  </data>
+  <data name="ChatPanelAppActionDoneContent" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="ChatPanelAppActionNoButton" xml:space="preserve">
+    <value>아니요</value>
+  </data>
+  <data name="ChatPanelAppActionProcessingContent" xml:space="preserve">
+    <value>처리 중</value>
+  </data>
+  <data name="ChatPanelAppActionYesButton" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="ChatPanelMessageErrorRetryText" xml:space="preserve">
+    <value>다시 시도하십시오</value>
+  </data>
+  <data name="ChatPanelMessageErrorText" xml:space="preserve">
+    <value>에러 발생됨.</value>
+  </data>
+  <data name="ChatPanelMessageError_ContentFiltered" xml:space="preserve">
+    <value>정책을 위반하는 콘텐츠가 포함된 메시지 또는 기사로 인해 콘텐츠가 필터링되었을 수 있습니다.</value>
+  </data>
+  <data name="ChatPanelMessageError_UserCanceled" xml:space="preserve">
+    <value>요청이 수동으로 취소되었습니다.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_compress" xml:space="preserve">
+    <value>높은 압축 수준을 사용하여 이 PDF를 압축합니다</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_convert_from_pdf" xml:space="preserve">
+    <value>이 PDF를 Word 형식으로 변환합니다</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_page_zoom" xml:space="preserve">
+    <value>이 PDF 보기를 확대합니다</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_protect_pdf" xml:space="preserve">
+    <value>이 파일을 보호하려면 암호를 추가하십시오</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_slide_show" xml:space="preserve">
+    <value>이 PDF를 슬라이드 모드로 표시합니다</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_summary" xml:space="preserve">
+    <value>이 PDF 파일을 요약합니다</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText1" xml:space="preserve">
+    <value>PDFgear Copilot은 자연어 명령으로 간단히 채팅하여 PDF 요약, PDF에서 답변 찾기, PDF 편집, PDF 변환, PDF 관리 등을 지원하도록 설계된 AI 도구입니다.
+
+예:</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText2" xml:space="preserve">
+    <value>위의 예를 클릭하거나 명령어를 입력하여 채팅을 시작하세요.</value>
+  </data>
+  <data name="ChatPanelUpgradeBtn" xml:space="preserve">
+    <value>PDFgear AI 잠금 해제</value>
+  </data>
+  <data name="ChkboxPageSelectedAllContent" xml:space="preserve">
+    <value>모두 선택하기</value>
+  </data>
+  <data name="ColorPickerMoreColorsLabelContent" xml:space="preserve">
+    <value>다른 색</value>
+  </data>
+  <data name="ColorPickerStandardLabelContent" xml:space="preserve">
+    <value>일반</value>
+  </data>
+  <data name="ColorPickerThemeLabelContent" xml:space="preserve">
+    <value>테마</value>
+  </data>
+  <data name="CopilotClearHistoryButtonText" xml:space="preserve">
+    <value>채팅 기록 지우기</value>
+  </data>
+  <data name="CopilotClearHistoryTip" xml:space="preserve">
+    <value>채팅 기록을 지우시겠습니까?</value>
+  </data>
+  <data name="CopilotExportHistoryButtonText" xml:space="preserve">
+    <value>내보내다</value>
+  </data>
+  <data name="CopilotExportHistoryWindowTitle" xml:space="preserve">
+    <value>채팅 기록 내보내기</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTips" xml:space="preserve">
+    <value>50개 메시지/파일/일의 양이 소진되었습니다.</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTipsContent" xml:space="preserve">
+    <value>내일 이 PDF에 사용할 수 있는 또 다른 50개의 메시지가 있거나 지금은 다른 PDF와 채팅할 수 있습니다.</value>
+  </data>
+  <data name="CopilotMessagesRemainingTips" xml:space="preserve">
+    <value>메시지 XXX 개 남음</value>
+  </data>
+  <data name="CopilotPanelHeader" xml:space="preserve">
+    <value>PDF로 채팅</value>
+  </data>
+  <data name="CopilotSendButtonText" xml:space="preserve">
+    <value>보내다</value>
+  </data>
+  <data name="CopilotSendButtonToolTips" xml:space="preserve">
+    <value>Ctrl+Enter: 메시지 보내기, Enter 키: 새 줄 입력</value>
+  </data>
+  <data name="CopilotStopResponseButtonText" xml:space="preserve">
+    <value>멈추다</value>
+  </data>
+  <data name="CopilotTextBoxEmtpy" xml:space="preserve">
+    <value>빈 메시지를 보낼 수 없습니다</value>
+  </data>
+  <data name="CopilotTextBoxPlaceholder" xml:space="preserve">
+    <value>채팅하려면 여기에 입력하세요...</value>
+  </data>
+  <data name="CopilotViewboxPages" xml:space="preserve">
+    <value>페이지 번호:</value>
+  </data>
+  <data name="CopilotWelcomePageAnalysingText" xml:space="preserve">
+    <value>분석하는...</value>
+  </data>
+  <data name="CopilotWelcomePageChatNowButtonText" xml:space="preserve">
+    <value>지금 채팅</value>
+  </data>
+  <data name="CopilotWelcomePageDesc" xml:space="preserve">
+    <value>PDFgear Copilot을 사용하면 문서가 지능화됩니다.  PDF에 대한 명령 작업에 적합하며 자연어를 사용하여 PDF에서 정확한 정보를 얻습니다.  지금 파일로 채팅을 시도하십시오.</value>
+  </data>
+  <data name="CopilotWelcomePageSubTitle" xml:space="preserve">
+    <value>채팅, 학습, 진행</value>
+  </data>
+  <data name="CopilotWelcomePageTitle" xml:space="preserve">
+    <value>ChatGPT 제공</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemExpiration" xml:space="preserve">
+    <value>만료:</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemIssuer" xml:space="preserve">
+    <value>발행자:</value>
+  </data>
+  <data name="CreateDigSignDialogBrowserItem" xml:space="preserve">
+    <value>새로운 디지털 ID</value>
+  </data>
+  <data name="CreateDigSignDialogCertFile" xml:space="preserve">
+    <value>디지털 ID:</value>
+  </data>
+  <data name="CreateDigSignDialogCertPassword" xml:space="preserve">
+    <value>암호:</value>
+  </data>
+  <data name="CreateDigSignDialogCertificatedCheckbox" xml:space="preserve">
+    <value>서명 후 문서 잠금</value>
+  </data>
+  <data name="CreateDigSignDialogSignBtn" xml:space="preserve">
+    <value>징후</value>
+  </data>
+  <data name="CreateDigSignImportCertBrowserBtn" xml:space="preserve">
+    <value>찾아보기...</value>
+  </data>
+  <data name="CreateDigSignImportCertDialogDesc" xml:space="preserve">
+    <value>디지털 ID 파일을 찾아봅니다.  디지털 ID 파일은 비밀번호로 보호되어 있으며 열려면 비밀번호가 필요합니다.</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_InvalidPassword" xml:space="preserve">
+    <value>파일 또는 비밀번호가 잘못되었습니다.</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_NotSupport" xml:space="preserve">
+    <value>이 인증서는 디지털 서명에 사용할 수 없습니다.</value>
+  </data>
+  <data name="CreateDigSignImportCertFileLabel" xml:space="preserve">
+    <value>디지털 ID 파일</value>
+  </data>
+  <data name="CreateDigSignMessage_CertExpired" xml:space="preserve">
+    <value>만료된 인증서로 서명할 수 없습니다.</value>
+  </data>
+  <data name="CreateDigSignMessage_IncorrectPassword" xml:space="preserve">
+    <value>비밀번호가 잘못되었습니다. 비밀번호를 다시 입력하십시오.</value>
+  </data>
+  <data name="CreateDigSignReason1" xml:space="preserve">
+    <value>본인은 이 문서의 작성자입니다.</value>
+  </data>
+  <data name="CreateDigSignReason2" xml:space="preserve">
+    <value>본인은 이 문서를 검토했습니다.</value>
+  </data>
+  <data name="CreateDigSignReason3" xml:space="preserve">
+    <value>본인은 이 문서를 승인합니다.</value>
+  </data>
+  <data name="CreateDigSignReason4" xml:space="preserve">
+    <value>본인은 법적 구속력이 있는 서명으로 이 문서를 승인합니다.</value>
+  </data>
+  <data name="CreateDigSignReason5" xml:space="preserve">
+    <value>본인은 이 문서의 정확성과 무결성을 증명합니다.</value>
+  </data>
+  <data name="CreateDigSignReason6" xml:space="preserve">
+    <value>본인은 이 문서에 서명을 함으로써 정의된 약관에 동의합니다.</value>
+  </data>
+  <data name="CreateDigSignReason7" xml:space="preserve">
+    <value>본인은 이 문서의 특정 부분에 동의합니다.</value>
+  </data>
+  <data name="CropCreateTip" xml:space="preserve">
+    <value>마우스를 드래그하여 자르려는 영역을 선택하세요. 원하는 영역을 드래그하면 자르기의 다음 단계로 이동합니다.</value>
+  </data>
+  <data name="CropPageExceedingPageRange" xml:space="preserve">
+    <value>미리보기 페이지는 페이지 범위에 포함되지 않습니다</value>
+  </data>
+  <data name="CropPageExceedingRange" xml:space="preserve">
+    <value>법적 범위 초과</value>
+  </data>
+  <data name="CropPageToolbarAdvanced" xml:space="preserve">
+    <value>고급 설정</value>
+  </data>
+  <data name="CropPageWinCentimeterUnits" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="CropPageWinInchUnits" xml:space="preserve">
+    <value>인치</value>
+  </data>
+  <data name="CropPageWinMandatoryBox" xml:space="preserve">
+    <value>필수 비율</value>
+  </data>
+  <data name="CropPageWinMarginTitle" xml:space="preserve">
+    <value>마진 제어</value>
+  </data>
+  <data name="CropPageWinMeasuresIn" xml:space="preserve">
+    <value>단위</value>
+  </data>
+  <data name="CropPageWinMillimeterUnits" xml:space="preserve">
+    <value>mm</value>
+  </data>
+  <data name="CropPageWinPagesRange" xml:space="preserve">
+    <value>페이지</value>
+  </data>
+  <data name="CropPageWinPicaUnits" xml:space="preserve">
+    <value>피카</value>
+  </data>
+  <data name="CropPageWinPointUnits" xml:space="preserve">
+    <value>포인트</value>
+  </data>
+  <data name="CropPageWinRemoveMaigin" xml:space="preserve">
+    <value>빈 여백 제거</value>
+  </data>
+  <data name="CropPageWinResetBtn" xml:space="preserve">
+    <value>초기화</value>
+  </data>
+  <data name="CropPageWinSizeofCropBox" xml:space="preserve">
+    <value>페이지 크기 자르기:</value>
+  </data>
+  <data name="CropPageWinZeroMarginBtn" xml:space="preserve">
+    <value>여백을 0으로 설정</value>
+  </data>
+  <data name="DefaultAppAndShortcutSucc" xml:space="preserve">
+    <value>설정이 적용되었습니다!</value>
+  </data>
+  <data name="DefaultAppCancelBtn" xml:space="preserve">
+    <value>지금은 아님</value>
+  </data>
+  <data name="DefaultAppTitle" xml:space="preserve">
+    <value>PDFgear를 PDF 파일의 기본 프로그램으로 설정합니다.</value>
+  </data>
+  <data name="DefaultAppWinTitle" xml:space="preserve">
+    <value>PDFgear를 기본 PDF 응용 프로그램으로 설정합니다.</value>
+  </data>
+  <data name="DefaultContextMenuAddBookmark" xml:space="preserve">
+    <value>북마크에 추가하다</value>
+  </data>
+  <data name="DeferredDigitSignCreateTip" xml:space="preserve">
+    <value>마우스를 클릭하고 드래그하여 서명을 표시할 영역을 그립니다. 원하는 영역을 끌어다 놓으면 서명 프로세스의 다음 단계로 이동합니다.</value>
+  </data>
+  <data name="DeferredDigitSignPreviewText" xml:space="preserve">
+    <value>여기에 서명</value>
+  </data>
+  <data name="DeletePageAskMsg" xml:space="preserve">
+    <value>정말 선택한 페이지를 삭제하시겠습니까?</value>
+  </data>
+  <data name="DeletePageCheckEmptyMsg" xml:space="preserve">
+    <value>삭제할 페이지를 선택하세요</value>
+  </data>
+  <data name="DeletePageCheckMsg" xml:space="preserve">
+    <value>문서의 모든 페이지를 삭제할 수 없습니다.</value>
+  </data>
+  <data name="DeleteParentBookmarkWarning" xml:space="preserve">
+    <value>최상위 북마크를 삭제하면 모든 중첩된 북마크도 삭제됩니다. 계속하시겠습니까?</value>
+  </data>
+  <data name="DeleteSinglePageAskMsg" xml:space="preserve">
+    <value>정말 해당 페이지를 삭제하시겠습니까?</value>
+  </data>
+  <data name="DeleteWatermarkAskMsg" xml:space="preserve">
+    <value>정말로 PDF의 모든 워터마크를 제거하시겠습니까?</value>
+  </data>
+  <data name="DigSigCreateMessage_AreaTooSmall" xml:space="preserve">
+    <value>영역이 너무 작아서 서명할 수 없습니다.</value>
+  </data>
+  <data name="DigSigCreateMessage_Failed" xml:space="preserve">
+    <value>디지털 서명을 추가하지 못했습니다.</value>
+  </data>
+  <data name="DigSigRemoveMessage_Failed" xml:space="preserve">
+    <value>디지털 서명을 제거하지 못했습니다.</value>
+  </data>
+  <data name="DigSignBannerMessage_Invalid" xml:space="preserve">
+    <value>하나 이상의 서명에 문제가 있습니다.</value>
+  </data>
+  <data name="DigSignBannerMessage_NeedSign" xml:space="preserve">
+    <value>최소한 하나의 서명 필드는 서명해야 합니다.</value>
+  </data>
+  <data name="DigSignBannerMessage_Valid" xml:space="preserve">
+    <value>서명되었으며 모든 서명이 유효합니다.</value>
+  </data>
+  <data name="DigSignBannerShowSignaturesButton" xml:space="preserve">
+    <value>서명 표시</value>
+  </data>
+  <data name="DigSignCertInfoBtn" xml:space="preserve">
+    <value>정보…</value>
+  </data>
+  <data name="DigSignFieldLocation" xml:space="preserve">
+    <value>필드:</value>
+  </data>
+  <data name="DigSignFieldLocationPage" xml:space="preserve">
+    <value>페이지</value>
+  </data>
+  <data name="DigSignFieldSignedBy" xml:space="preserve">
+    <value>서명자:</value>
+  </data>
+  <data name="DigSignInfoIncludesEmbeddedTimestamp" xml:space="preserve">
+    <value>서명에는 내장된 타임스탬프가 포함됩니다. 타임스탬프 시간입니다: XXX</value>
+  </data>
+  <data name="DigSignInfoNotAllowModify" xml:space="preserve">
+    <value>인증자는 이 문서를 변경할 수 없다고 지정했습니다.</value>
+  </data>
+  <data name="DigSignInfoSignerInfoTitle" xml:space="preserve">
+    <value>서명자 정보</value>
+  </data>
+  <data name="DigSignInfoTimeFromSignersDevice" xml:space="preserve">
+    <value>서명 시간은 서명자 컴퓨터의 시계를 기준으로 합니다.</value>
+  </data>
+  <data name="DigSignInfoValidAtTime" xml:space="preserve">
+    <value>서명이 보안(타임스탬프) 시간 기준으로 유효성이 검사되었습니다: XXX</value>
+  </data>
+  <data name="DigSignInfoValidatedAsSigningTime" xml:space="preserve">
+    <value>서명이 서명 시간을 기준으로 유효성을 검사했습니다: XXX</value>
+  </data>
+  <data name="DigSignPanelContextMenuGoToField" xml:space="preserve">
+    <value>서명 필드로 이동</value>
+  </data>
+  <data name="DigSignPanelContextMenuRemoveSign" xml:space="preserve">
+    <value>서명 제거</value>
+  </data>
+  <data name="DigSignPanelContextMenuShowProps" xml:space="preserve">
+    <value>서명 속성 표시</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedRemove" xml:space="preserve">
+    <value>제거</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedShowProps" xml:space="preserve">
+    <value>속성 표시</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedSignNow" xml:space="preserve">
+    <value>지금 서명</value>
+  </data>
+  <data name="DigSignPanelContextMenuValidateSign" xml:space="preserve">
+    <value>서명 유효성 검사</value>
+  </data>
+  <data name="DigSignPanelDefaultName" xml:space="preserve">
+    <value>서명</value>
+  </data>
+  <data name="DigSignPropCertDetails" xml:space="preserve">
+    <value>인증서 세부정보...</value>
+  </data>
+  <data name="DigSignPropContactInfo" xml:space="preserve">
+    <value>연락처 정보:</value>
+  </data>
+  <data name="DigSignPropContactInfo_NotAvailable" xml:space="preserve">
+    <value>사용 불가능합니다.</value>
+  </data>
+  <data name="DigSignPropDialogTitle" xml:space="preserve">
+    <value>서명 속성</value>
+  </data>
+  <data name="DigSignPropLastCheckTime" xml:space="preserve">
+    <value>마지막 확인:</value>
+  </data>
+  <data name="DigSignPropLocation" xml:space="preserve">
+    <value>위치:</value>
+  </data>
+  <data name="DigSignPropPreviewAppVer" xml:space="preserve">
+    <value>PDFgear 버전:</value>
+  </data>
+  <data name="DigSignPropPreviewSignedBy" xml:space="preserve">
+    <value>디지털 서명자</value>
+  </data>
+  <data name="DigSignPropReason" xml:space="preserve">
+    <value>이유:</value>
+  </data>
+  <data name="DigSignPropShowCertBtn" xml:space="preserve">
+    <value>인증서 표시...</value>
+  </data>
+  <data name="DigSignPropSignDate" xml:space="preserve">
+    <value>날짜:</value>
+  </data>
+  <data name="DigSignPropSignedBy" xml:space="preserve">
+    <value>서명자</value>
+  </data>
+  <data name="DigSignPropTrustCertBtn" xml:space="preserve">
+    <value>인증서 신뢰</value>
+  </data>
+  <data name="DigSignPropUnsigned" xml:space="preserve">
+    <value>서명되지 않은 서명 필드</value>
+  </data>
+  <data name="DigSignPropValiditySummary" xml:space="preserve">
+    <value>유효성 요약</value>
+  </data>
+  <data name="DigSignResultInvalid" xml:space="preserve">
+    <value>서명이 유효하지 않습니다.</value>
+  </data>
+  <data name="DigSignResultUnknown" xml:space="preserve">
+    <value>서명 유효성은 알 수 없습니다.</value>
+  </data>
+  <data name="DigSignResultValid" xml:space="preserve">
+    <value>서명은 유효하며 XXX가 서명했습니다.</value>
+  </data>
+  <data name="DigSignStatusHasBeenModified" xml:space="preserve">
+    <value>이 서명이 적용된 이후 문서가 수정되었습니다.</value>
+  </data>
+  <data name="DigSignStatusHasNotBeenModified" xml:space="preserve">
+    <value>이 서명이 적용된 이후 문서가 수정되지 않았습니다.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsBroken" xml:space="preserve">
+    <value>이 서명에 포함된 형식이나 정보에 오류가 있으므로 이 서명은 유효하지 않습니다.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsExpired" xml:space="preserve">
+    <value>서명자의 신원은 알 수 없습니다.  인증서의 유효기간이 초과되었습니다.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsValid" xml:space="preserve">
+    <value>서명자의 신원이 유효합니다.</value>
+  </data>
+  <data name="DigSignStatusNotIncludedInTrustedCerts" xml:space="preserve">
+    <value>서명자의 신원은 신뢰할 수 있는 인증서 목록에 포함되지 않았으며 상위 인증서 중 어느 것도 신뢰할 수 있는 인증서가 아니기 때문에 알 수 없습니다.</value>
+  </data>
+  <data name="DigSignStatusValidWhenIssued" xml:space="preserve">
+    <value>서명자의 ID는 발급 당시에는 유효했지만 이번에는 ID를 확인하기 위한 해지 확인을 수행할 수 없었습니다.</value>
+  </data>
+  <data name="DigSignUnsignedToolTipPostfix" xml:space="preserve">
+    <value>(서명 클릭)</value>
+  </data>
+  <data name="DigSignValidationDialogTitle" xml:space="preserve">
+    <value>서명 유효성 검사 상태</value>
+  </data>
+  <data name="DigSignValidationProperties" xml:space="preserve">
+    <value>서명 속성...</value>
+  </data>
+  <data name="DigitalSignatureCreateTip" xml:space="preserve">
+    <value>마우스를 클릭하고 드래그하여 서명을 표시할 영역을 그립니다. 원하는 영역을 끌어다 놓으면 서명 프로세스의 다음 단계로 이동합니다.</value>
+  </data>
+  <data name="DocumentPropertiesAuthor" xml:space="preserve">
+    <value>저자: </value>
+  </data>
+  <data name="DocumentPropertiesCentimeterUnits" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="DocumentPropertiesCreated" xml:space="preserve">
+    <value>생성됨: </value>
+  </data>
+  <data name="DocumentPropertiesCreator" xml:space="preserve">
+    <value>창조자: </value>
+  </data>
+  <data name="DocumentPropertiesFileSize" xml:space="preserve">
+    <value>파일 크기: </value>
+  </data>
+  <data name="DocumentPropertiesFileVersion" xml:space="preserve">
+    <value>PDF 버전: </value>
+  </data>
+  <data name="DocumentPropertiesFilename" xml:space="preserve">
+    <value>파일 이름:</value>
+  </data>
+  <data name="DocumentPropertiesInchUnits" xml:space="preserve">
+    <value>인치</value>
+  </data>
+  <data name="DocumentPropertiesInfoTitle" xml:space="preserve">
+    <value>파일 정보</value>
+  </data>
+  <data name="DocumentPropertiesKeyword" xml:space="preserve">
+    <value>키워드: </value>
+  </data>
+  <data name="DocumentPropertiesLocation" xml:space="preserve">
+    <value>위치: </value>
+  </data>
+  <data name="DocumentPropertiesModified" xml:space="preserve">
+    <value>수정됨: </value>
+  </data>
+  <data name="DocumentPropertiesPageSize" xml:space="preserve">
+    <value>페이지 크기: </value>
+  </data>
+  <data name="DocumentPropertiesProducer" xml:space="preserve">
+    <value>제작자: </value>
+  </data>
+  <data name="DocumentPropertiesSubject" xml:space="preserve">
+    <value>주제: </value>
+  </data>
+  <data name="DocumentPropertiesTitle" xml:space="preserve">
+    <value>제목: </value>
+  </data>
+  <data name="DocumentPropertiesTotalPages" xml:space="preserve">
+    <value>페이지 수: </value>
+  </data>
+  <data name="DocumentPropertiesWindowTitle" xml:space="preserve">
+    <value>문서 속성</value>
+  </data>
+  <data name="EditCustomStampWinTitle" xml:space="preserve">
+    <value>사용자 정의 스탬프 편집</value>
+  </data>
+  <data name="EditStampWinCategoryListNewContent" xml:space="preserve">
+    <value>새 카테고리</value>
+  </data>
+  <data name="EditStampWinContentType1" xml:space="preserve">
+    <value>텍스트</value>
+  </data>
+  <data name="EditStampWinContentType2" xml:space="preserve">
+    <value>날짜 및 시간</value>
+  </data>
+  <data name="EditStampWinContentType3" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="EditStampWinDefaultCategoryName" xml:space="preserve">
+    <value>기본 카테고리</value>
+  </data>
+  <data name="EditStampWinDefaultStampName" xml:space="preserve">
+    <value>제목 없는 스탬프</value>
+  </data>
+  <data name="EditStampWinFontTitle" xml:space="preserve">
+    <value>글꼴</value>
+  </data>
+  <data name="EditStampWinImageEmptyErrorMessage" xml:space="preserve">
+    <value>먼저 이미지를 선택하세요</value>
+  </data>
+  <data name="EditStampWinImageSelectedBtnContent" xml:space="preserve">
+    <value>이미지 선택</value>
+  </data>
+  <data name="EditStampWinLargeFontSize" xml:space="preserve">
+    <value>크게</value>
+  </data>
+  <data name="EditStampWinListMenuDynamicContent" xml:space="preserve">
+    <value>동적</value>
+  </data>
+  <data name="EditStampWinMediumFontSize" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="EditStampWinSaveCheckBoxContent" xml:space="preserve">
+    <value>사용자 지정 스탬프 저장</value>
+  </data>
+  <data name="EditStampWinSmallFontSize" xml:space="preserve">
+    <value>작게</value>
+  </data>
+  <data name="EditStampWinStampCategoryName" xml:space="preserve">
+    <value>카테고리</value>
+  </data>
+  <data name="EditStampWinStampContent1" xml:space="preserve">
+    <value>콘텐츠 1</value>
+  </data>
+  <data name="EditStampWinStampContent2" xml:space="preserve">
+    <value>콘텐츠 2</value>
+  </data>
+  <data name="EditStampWinStampContent3" xml:space="preserve">
+    <value>콘텐츠 3</value>
+  </data>
+  <data name="EditStampWinStampName" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="EditStampWinStampShape" xml:space="preserve">
+    <value>모양</value>
+  </data>
+  <data name="EditStampWinTitle" xml:space="preserve">
+    <value>사용자 지정 스탬프 만들기</value>
+  </data>
+  <data name="EditStampWinUntitledCategoryName" xml:space="preserve">
+    <value>제목 없음 카테고리</value>
+  </data>
+  <data name="EraserToolbarPaitialBtn" xml:space="preserve">
+    <value>부분적</value>
+  </data>
+  <data name="EraserToolbarSizeContent" xml:space="preserve">
+    <value>크기</value>
+  </data>
+  <data name="EraserToolbarWholeBtn" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="ExtractPageCheckEmptyMsg" xml:space="preserve">
+    <value>추출할 페이지를 선택하세요</value>
+  </data>
+  <data name="FindDeviceErrorMessage" xml:space="preserve">
+    <value>스캐너에 연결할 수 없습니다. 스캐너를 확인하고 다시 시도하십시오.</value>
+  </data>
+  <data name="FirstPageTooltipText" xml:space="preserve">
+    <value>첫 페이지</value>
+  </data>
+  <data name="FlattenBtn" xml:space="preserve">
+    <value>평면화 주석</value>
+  </data>
+  <data name="FlattenWinContent1" xml:space="preserve">
+    <value>주석을 콘텐츠 레이어에 병합합니다.</value>
+  </data>
+  <data name="FlattenWinContent2" xml:space="preserve">
+    <value>병합 후에는 모든 주석을 더 이상 편집할 수 없습니다.</value>
+  </data>
+  <data name="FlattenWinContent3" xml:space="preserve">
+    <value>원본 정보를 보존하기 위해 플래트닝된 파일은 사본으로 저장됩니다.</value>
+  </data>
+  <data name="FlattenWinTitle" xml:space="preserve">
+    <value>PDF의 모든 주석을 평평하게 만들기</value>
+  </data>
+  <data name="FootToolNextViewTips" xml:space="preserve">
+    <value>다음 뷰</value>
+  </data>
+  <data name="FootToolPreviousViewTips" xml:space="preserve">
+    <value>이전 뷰</value>
+  </data>
+  <data name="HeaderToolExitFullScreenTips" xml:space="preserve">
+    <value>전체 화면 종료</value>
+  </data>
+  <data name="HeaderToolFullScreenTips" xml:space="preserve">
+    <value>전체 화면</value>
+  </data>
+  <data name="HeaderToolHideTips" xml:space="preserve">
+    <value>숨기기</value>
+  </data>
+  <data name="HeaderToolShareTips" xml:space="preserve">
+    <value>공유</value>
+  </data>
+  <data name="HeaderToolShowTips" xml:space="preserve">
+    <value>확장</value>
+  </data>
+  <data name="HeaderToolThemeTips" xml:space="preserve">
+    <value>인터페이스</value>
+  </data>
+  <data name="ImageControlEditor" xml:space="preserve">
+    <value>이미지 편집</value>
+  </data>
+  <data name="ImageControl_DeleteConfirm" xml:space="preserve">
+    <value>선택한 이미지를 삭제하시겠습니까?</value>
+  </data>
+  <data name="ImageControl_OcrFailed" xml:space="preserve">
+    <value>이미지에서 OCR에 실패했습니다!</value>
+  </data>
+  <data name="ImageHierarchyBottom" xml:space="preserve">
+    <value>맨 아래로 설정</value>
+  </data>
+  <data name="ImageHierarchyDown" xml:space="preserve">
+    <value>맨 뒤로 이동</value>
+  </data>
+  <data name="ImageHierarchyFront" xml:space="preserve">
+    <value>맨 앞으로 이동</value>
+  </data>
+  <data name="ImageHierarchyTop" xml:space="preserve">
+    <value>맨 위로 설정</value>
+  </data>
+  <data name="ImageToolbarTitle" xml:space="preserve">
+    <value>현재 이미지 편집 모드에 있습니다.</value>
+  </data>
+  <data name="ImagemanipulationDelete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="ImagemanipulationFilpHor" xml:space="preserve">
+    <value>가로로 뒤집기</value>
+  </data>
+  <data name="ImagemanipulationFilpVer" xml:space="preserve">
+    <value>세로로 뒤집기</value>
+  </data>
+  <data name="ImagemanipulationHierarchy" xml:space="preserve">
+    <value>계층 구조</value>
+  </data>
+  <data name="ImagemanipulationOCR" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ImagemanipulationReplace" xml:space="preserve">
+    <value>바꾸기</value>
+  </data>
+  <data name="ImagemanipulationRotate" xml:space="preserve">
+    <value>회전</value>
+  </data>
+  <data name="ImagemanipulationSave" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="ImportDialogFilterImage" xml:space="preserve">
+    <value>이미지 파일</value>
+  </data>
+  <data name="ImportDialogFilterSupported" xml:space="preserve">
+    <value>지원 파일</value>
+  </data>
+  <data name="ImprotPagesUnexpectedError" xml:space="preserve">
+    <value>알 수 없는 오류가 발생했습니다.</value>
+  </data>
+  <data name="InkToolbarEraserBtn" xml:space="preserve">
+    <value>지우개</value>
+  </data>
+  <data name="InsertPDFDetermineContent" xml:space="preserve">
+    <value>선택한 XXX 페이지를 PDF에 삽입하시겠습니까?</value>
+  </data>
+  <data name="InsertPDFInsertTitle" xml:space="preserve">
+    <value>이곳에 삽입하기</value>
+  </data>
+  <data name="InsertWinInsertAfter" xml:space="preserve">
+    <value>페이지 후</value>
+  </data>
+  <data name="InsertWinInsertBefore" xml:space="preserve">
+    <value>페이지 전</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageContent" xml:space="preserve">
+    <value>PDF에는 되돌릴 수 없는 특정 수정 사항이 있습니다.  원본 정보를 보존하고 잠재적인 손실을 방지하려면 수정한 파일을 사본으로 저장하세요.</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageTitle" xml:space="preserve">
+    <value>PDF를 복사본으로 저장</value>
+  </data>
+  <data name="LabelColorContent" xml:space="preserve">
+    <value>색깔</value>
+  </data>
+  <data name="LabelTextContent" xml:space="preserve">
+    <value>텍스트</value>
+  </data>
+  <data name="LastPageTooltipText" xml:space="preserve">
+    <value>끝 페이지</value>
+  </data>
+  <data name="LeftNavigationAnnotationPageLabelContent" xml:space="preserve">
+    <value>XXX페이지</value>
+  </data>
+  <data name="LeftNavigationViewAnnotationDisplayName" xml:space="preserve">
+    <value>댓글</value>
+  </data>
+  <data name="LeftNavigationViewBookmarkDisplayName" xml:space="preserve">
+    <value>북마크</value>
+  </data>
+  <data name="LeftNavigationViewDigitalSignaturesDisplayName" xml:space="preserve">
+    <value>디지털 서명</value>
+  </data>
+  <data name="LeftNavigationViewThumbnailDisplayName" xml:space="preserve">
+    <value>썸네일</value>
+  </data>
+  <data name="LinkActionToUri" xml:space="preserve">
+    <value>"XXX"를 열 것입니다.  개봉하기 전에 믿을 수 있는지 확인하십시오.  계속 열까요?</value>
+  </data>
+  <data name="LinkBtn" xml:space="preserve">
+    <value>링크</value>
+  </data>
+  <data name="LinkCreateBtn" xml:space="preserve">
+    <value>링크 생성/편집</value>
+  </data>
+  <data name="LinkDeleteAll" xml:space="preserve">
+    <value>모든 링크를 제거하시겠습니까?</value>
+  </data>
+  <data name="LinkDeleteAllBtn" xml:space="preserve">
+    <value>모든 링크 삭제</value>
+  </data>
+  <data name="LinkDeleteOne" xml:space="preserve">
+    <value>링크를 제거하시겠습니까?</value>
+  </data>
+  <data name="LinkOpenFileFailed" xml:space="preserve">
+    <value>파일을 찾을 수 없습니다.  파일이 이동, 이름 변경 또는 삭제되었는지 확인하십시오.</value>
+  </data>
+  <data name="LinkPageError" xml:space="preserve">
+    <value>유효한 페이지 번호를 입력하십시오.</value>
+  </data>
+  <data name="LinkRightDelete" xml:space="preserve">
+    <value>링크 삭제</value>
+  </data>
+  <data name="LinkToolbarTitle" xml:space="preserve">
+    <value>링크 편집 모드에 있습니다.</value>
+  </data>
+  <data name="LinkUriEmpty" xml:space="preserve">
+    <value>링크의 유효한 대상을 입력하십시오.</value>
+  </data>
+  <data name="LinkUriError" xml:space="preserve">
+    <value>유효한 URL 링크를 입력하세요.</value>
+  </data>
+  <data name="LinkWinAppearance" xml:space="preserve">
+    <value>모습</value>
+  </data>
+  <data name="LinkWinFilePath" xml:space="preserve">
+    <value>로컬 파일</value>
+  </data>
+  <data name="LinkWinInvisibleRect" xml:space="preserve">
+    <value>보이지 않는 직사각형</value>
+  </data>
+  <data name="LinkWinNavigate" xml:space="preserve">
+    <value>로 이동</value>
+  </data>
+  <data name="LinkWinPage" xml:space="preserve">
+    <value>페이지</value>
+  </data>
+  <data name="LinkWinStrokeDashed" xml:space="preserve">
+    <value>파선</value>
+  </data>
+  <data name="LinkWinStrokeSolid" xml:space="preserve">
+    <value>단단한</value>
+  </data>
+  <data name="LinkWinStrokeStyle" xml:space="preserve">
+    <value>스트로크 스타일</value>
+  </data>
+  <data name="LinkWinStrokeUnderline" xml:space="preserve">
+    <value>밑줄</value>
+  </data>
+  <data name="LinkWinStyle" xml:space="preserve">
+    <value>링크 스타일</value>
+  </data>
+  <data name="LinkWinTitleCreate" xml:space="preserve">
+    <value>링크 만들기</value>
+  </data>
+  <data name="LinkWinTitleEdit" xml:space="preserve">
+    <value>링크 편집</value>
+  </data>
+  <data name="LinkWinUrl" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="LinkWinVisibleRect" xml:space="preserve">
+    <value>보이는 사각형</value>
+  </data>
+  <data name="MainCropPageContextMenuAdjust" xml:space="preserve">
+    <value>선택한 영역 조정</value>
+  </data>
+  <data name="MainCropPageNotSelectedPageNote" xml:space="preserve">
+    <value>한 페이지를 선택하세요.</value>
+  </data>
+  <data name="MainCropPageSelectLittleAreaNote" xml:space="preserve">
+    <value>더 큰 영역을 설정하세요.</value>
+  </data>
+  <data name="MainCropPageSelectedMulPageNote" xml:space="preserve">
+    <value>한 페이지만 선택할 수 있습니다.</value>
+  </data>
+  <data name="MainViewBatchPrintContent" xml:space="preserve">
+    <value>일괄 인쇄</value>
+  </data>
+  <data name="MainViewBookmarkAddBookmark" xml:space="preserve">
+    <value>북마크에 추가하다</value>
+  </data>
+  <data name="MainViewBookmarkAddChildBookmark" xml:space="preserve">
+    <value>하위 책갈피 추가</value>
+  </data>
+  <data name="MainViewBookmarkCollapseAll" xml:space="preserve">
+    <value>모든 축소</value>
+  </data>
+  <data name="MainViewBookmarkDeleteBookmark" xml:space="preserve">
+    <value>북마크 삭제</value>
+  </data>
+  <data name="MainViewBookmarkExpandAll" xml:space="preserve">
+    <value>모두 확장</value>
+  </data>
+  <data name="MainViewBookmarkRenameBookmark" xml:space="preserve">
+    <value>책갈피 이름 바꾸기</value>
+  </data>
+  <data name="MainViewCopilotButtonFirstCloseTips" xml:space="preserve">
+    <value>PDF와 채팅을 계속하려면 아이콘을 클릭하세요.</value>
+  </data>
+  <data name="MainViewCreateNewPDF" xml:space="preserve">
+    <value>파일 만들기</value>
+  </data>
+  <data name="MainViewCropPageContent" xml:space="preserve">
+    <value>페이지 자르기</value>
+  </data>
+  <data name="MainViewToolbarPhoneBtn" xml:space="preserve">
+    <value>iOS &amp; Android</value>
+  </data>
+  <data name="MainViewToolbarPhoneBtnTips" xml:space="preserve">
+    <value>iOS 및 Android용 PDFgear 받기</value>
+  </data>
+  <data name="MainWindowAccountBtn" xml:space="preserve">
+    <value>로그인 / 회원 가입</value>
+  </data>
+  <data name="MainWindowCompressFileBtn" xml:space="preserve">
+    <value>PDF 압축</value>
+  </data>
+  <data name="MainWindowExportFileToBtn" xml:space="preserve">
+    <value>PDF를 다음 형식으로 내보내기</value>
+  </data>
+  <data name="MainWindowFilesBtn" xml:space="preserve">
+    <value>파일</value>
+  </data>
+  <data name="MainWindowMergeAndSplitBtn" xml:space="preserve">
+    <value>병합 및 분할</value>
+  </data>
+  <data name="MainWindowNewBlankFileBtn" xml:space="preserve">
+    <value>새 빈 PDF</value>
+  </data>
+  <data name="MainWindowNewFileBtn" xml:space="preserve">
+    <value>파일 만들기</value>
+  </data>
+  <data name="MainWindowNewFilefromImageBtn" xml:space="preserve">
+    <value>이미지에서 새 PDF 만들기</value>
+  </data>
+  <data name="MainWindowNewFilefromScannerBtn" xml:space="preserve">
+    <value>스캐너에서 새 PDF 만들기</value>
+  </data>
+  <data name="MainWindowQuitBtn" xml:space="preserve">
+    <value>PDFgear 종료</value>
+  </data>
+  <data name="ManageStampAddNewBtnContent" xml:space="preserve">
+    <value>새 카테고리 추가</value>
+  </data>
+  <data name="ManageStampDeleteCategoryBtnContent" xml:space="preserve">
+    <value>카테고리 삭제</value>
+  </data>
+  <data name="ManageStampRenameBtnContent" xml:space="preserve">
+    <value>카테고리 이름 변경</value>
+  </data>
+  <data name="ManageStampWinCreateBtnContent" xml:space="preserve">
+    <value>스탬프 만들기</value>
+  </data>
+  <data name="ManageStampWinTitle" xml:space="preserve">
+    <value>사용자 지정 스탬프 관리</value>
+  </data>
+  <data name="ManegeStampAllCategories" xml:space="preserve">
+    <value>모든 카테고리</value>
+  </data>
+  <data name="MenuAnnotateArrowContent" xml:space="preserve">
+    <value>화살표</value>
+  </data>
+  <data name="MenuAnnotateEllipseContent" xml:space="preserve">
+    <value>타원</value>
+  </data>
+  <data name="MenuAnnotateHiddenContent" xml:space="preserve">
+    <value>댓글 숨기기</value>
+  </data>
+  <data name="MenuAnnotateHighlight" xml:space="preserve">
+    <value>영역 하이라이트</value>
+  </data>
+  <data name="MenuAnnotateHighlightContent" xml:space="preserve">
+    <value>강조 표시</value>
+  </data>
+  <data name="MenuAnnotateInkContent" xml:space="preserve">
+    <value>잉크</value>
+  </data>
+  <data name="MenuAnnotateLineContent" xml:space="preserve">
+    <value>선</value>
+  </data>
+  <data name="MenuAnnotateManageContent" xml:space="preserve">
+    <value>댓글 관리</value>
+  </data>
+  <data name="MenuAnnotateNoteContent" xml:space="preserve">
+    <value>노트</value>
+  </data>
+  <data name="MenuAnnotateRemoveTextContent" xml:space="preserve">
+    <value>텍스트 지우기</value>
+  </data>
+  <data name="MenuAnnotateShapeContent" xml:space="preserve">
+    <value>직사각형</value>
+  </data>
+  <data name="MenuAnnotateShowContent" xml:space="preserve">
+    <value>댓글 보기</value>
+  </data>
+  <data name="MenuAnnotateSignatureContent" xml:space="preserve">
+    <value>서명</value>
+  </data>
+  <data name="MenuAnnotateStampContent" xml:space="preserve">
+    <value>스탬프</value>
+  </data>
+  <data name="MenuAnnotateStrikeContent" xml:space="preserve">
+    <value>취소선</value>
+  </data>
+  <data name="MenuAnnotateTextBoxContent" xml:space="preserve">
+    <value>텍스트 상자</value>
+  </data>
+  <data name="MenuAnnotateTranslateContent" xml:space="preserve">
+    <value>번역</value>
+  </data>
+  <data name="MenuAnnotateTypeWriterContent" xml:space="preserve">
+    <value>텍스트 입력</value>
+  </data>
+  <data name="MenuAnnotateUnderlineContent" xml:space="preserve">
+    <value>밑줄</value>
+  </data>
+  <data name="MenuAnnotateWatermarkContent" xml:space="preserve">
+    <value>워터마크</value>
+  </data>
+  <data name="MenuConvertPdfToExcelContent" xml:space="preserve">
+    <value>PDF를 Excel로</value>
+  </data>
+  <data name="MenuConvertPdfToHtmlContent" xml:space="preserve">
+    <value>PDF를 HTML로</value>
+  </data>
+  <data name="MenuConvertPdfToImageContent" xml:space="preserve">
+    <value>PDF를 PNG로</value>
+  </data>
+  <data name="MenuConvertPdfToJpegContent" xml:space="preserve">
+    <value>PDF를 JPEG로</value>
+  </data>
+  <data name="MenuConvertPdfToPPTContent" xml:space="preserve">
+    <value>PDF를 PPT로</value>
+  </data>
+  <data name="MenuConvertPdfToRtfContent" xml:space="preserve">
+    <value>PDF를 RTF로</value>
+  </data>
+  <data name="MenuConvertPdfToTxtContent" xml:space="preserve">
+    <value>PDF를 TXT로</value>
+  </data>
+  <data name="MenuConvertPdfToWordContent" xml:space="preserve">
+    <value>PDF를 Word로</value>
+  </data>
+  <data name="MenuConvertPdfToXmlContent" xml:space="preserve">
+    <value>PDF를 XML로</value>
+  </data>
+  <data name="MenuExtractTextEmpyMsg" xml:space="preserve">
+    <value>선택된 텍스트가 없습니다. 선택된 영역에 텍스트가 없거나 이미지를 선택했습니다</value>
+  </data>
+  <data name="MenuGruopAnnotateTitle" xml:space="preserve">
+    <value>댓글</value>
+  </data>
+  <data name="MenuGruopConvertTitle" xml:space="preserve">
+    <value>변환하기</value>
+  </data>
+  <data name="MenuGruopFillFormTitle" xml:space="preserve">
+    <value>도표</value>
+  </data>
+  <data name="MenuGruopHelpTitle" xml:space="preserve">
+    <value>도움말</value>
+  </data>
+  <data name="MenuGruopHomeTitle" xml:space="preserve">
+    <value>홈페이지</value>
+  </data>
+  <data name="MenuGruopInsertTitle" xml:space="preserve">
+    <value>삽입</value>
+  </data>
+  <data name="MenuGruopPageTitle" xml:space="preserve">
+    <value>페이지</value>
+  </data>
+  <data name="MenuGruopProtectTitle" xml:space="preserve">
+    <value>보호</value>
+  </data>
+  <data name="MenuGruopToolsTitle" xml:space="preserve">
+    <value>도구</value>
+  </data>
+  <data name="MenuGruopViewTitle" xml:space="preserve">
+    <value>보기</value>
+  </data>
+  <data name="MenuHelpAboutContent" xml:space="preserve">
+    <value>제작사 정보</value>
+  </data>
+  <data name="MenuHelpContactUsContent" xml:space="preserve">
+    <value>문의하기</value>
+  </data>
+  <data name="MenuHelpSwitchtoPreviousVersionContent" xml:space="preserve">
+    <value>이전 버전으로 되돌리기</value>
+  </data>
+  <data name="MenuHelpUserGuideContent" xml:space="preserve">
+    <value>사용 설명서</value>
+  </data>
+  <data name="MenuHelperSettingContent" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="MenuHelperUpdateContent" xml:space="preserve">
+    <value>업데이트</value>
+  </data>
+  <data name="MenuInsertAddContent" xml:space="preserve">
+    <value>추가</value>
+  </data>
+  <data name="MenuInsertDelContent" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="MenuInsertEditContent" xml:space="preserve">
+    <value>업데이트</value>
+  </data>
+  <data name="MenuInsertHeaderFooterContent" xml:space="preserve">
+    <value>머리말 &amp; 꼬리말</value>
+  </data>
+  <data name="MenuInsertImageContent" xml:space="preserve">
+    <value>이미지</value>
+  </data>
+  <data name="MenuInsertPageNumberContent" xml:space="preserve">
+    <value>페이지 번호</value>
+  </data>
+  <data name="MenuPageDeleteContent" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="MenuPageExtractContent" xml:space="preserve">
+    <value>추출</value>
+  </data>
+  <data name="MenuPageInsertContent" xml:space="preserve">
+    <value>삽입</value>
+  </data>
+  <data name="MenuPageMergeContent" xml:space="preserve">
+    <value>PDF 병합</value>
+  </data>
+  <data name="MenuPageRotateLeftContent" xml:space="preserve">
+    <value>왼쪽으로 회전</value>
+  </data>
+  <data name="MenuPageRotateRightContent" xml:space="preserve">
+    <value>오른쪽으로 회전</value>
+  </data>
+  <data name="MenuPageSplitContent" xml:space="preserve">
+    <value>PDF 분할</value>
+  </data>
+  <data name="MenuPageSubInsertBlankPage" xml:space="preserve">
+    <value>빈 페이지</value>
+  </data>
+  <data name="MenuPageSubInsertFromImage" xml:space="preserve">
+    <value>이미지에서</value>
+  </data>
+  <data name="MenuPageSubInsertFromPDF" xml:space="preserve">
+    <value>PDF에서</value>
+  </data>
+  <data name="MenuPageSubInsertFromScanner" xml:space="preserve">
+    <value>스캐너에서</value>
+  </data>
+  <data name="MenuPageSubInsertFromWord" xml:space="preserve">
+    <value>Word에서</value>
+  </data>
+  <data name="MenuPropertiesContent" xml:space="preserve">
+    <value>속성</value>
+  </data>
+  <data name="MenuProtectPasswordContent" xml:space="preserve">
+    <value>암호</value>
+  </data>
+  <data name="MenuProtectRemoveContent" xml:space="preserve">
+    <value>제거</value>
+  </data>
+  <data name="MenuRightAnnotateCopyText" xml:space="preserve">
+    <value>텍스트 복사</value>
+  </data>
+  <data name="MenuRightAnnotateDelete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="MenuRightAnnotateDuplicate" xml:space="preserve">
+    <value>복제</value>
+  </data>
+  <data name="MenuRightAnnotateExitEdit" xml:space="preserve">
+    <value>Exit edit</value>
+  </data>
+  <data name="MenuShareEmailContent" xml:space="preserve">
+    <value>이메일</value>
+  </data>
+  <data name="MenuShareSendFileContent" xml:space="preserve">
+    <value>파일 보내기</value>
+  </data>
+  <data name="MenuShareShareContent" xml:space="preserve">
+    <value>공유하다</value>
+  </data>
+  <data name="MenuSignatureSubAddNew" xml:space="preserve">
+    <value>서명 만들기</value>
+  </data>
+  <data name="MenuStampPresetsApprovedItemName" xml:space="preserve">
+    <value>승인됨</value>
+  </data>
+  <data name="MenuStampPresetsAsIsItemName" xml:space="preserve">
+    <value>수정사항 없음</value>
+  </data>
+  <data name="MenuStampPresetsConfidentialItemName" xml:space="preserve">
+    <value>기밀</value>
+  </data>
+  <data name="MenuStampPresetsDraftItemName" xml:space="preserve">
+    <value>초안</value>
+  </data>
+  <data name="MenuStampPresetsExperimentalItemName" xml:space="preserve">
+    <value>실험용</value>
+  </data>
+  <data name="MenuStampPresetsExpiredItemName" xml:space="preserve">
+    <value>기한 만료됨</value>
+  </data>
+  <data name="MenuStampPresetsFinalItemName" xml:space="preserve">
+    <value>최종본</value>
+  </data>
+  <data name="MenuStampPresetsForPublicReleaseItemName" xml:space="preserve">
+    <value>공개용</value>
+  </data>
+  <data name="MenuStampPresetsNotApprovedItemName" xml:space="preserve">
+    <value>승인되지 않음</value>
+  </data>
+  <data name="MenuStampPresetsNotForPublicReleaseItemName" xml:space="preserve">
+    <value>내부용</value>
+  </data>
+  <data name="MenuStampPresetsSoldItemName" xml:space="preserve">
+    <value>매각됨</value>
+  </data>
+  <data name="MenuStampPresetsTopSecretItemName" xml:space="preserve">
+    <value>극비</value>
+  </data>
+  <data name="MenuStampSubCustomizeContent" xml:space="preserve">
+    <value>사용자 지정 스탬프</value>
+  </data>
+  <data name="MenuStampSubInsertlocalImageContent" xml:space="preserve">
+    <value>로컬 이미지 파일 삽입</value>
+  </data>
+  <data name="MenuStampSubPresetsContent" xml:space="preserve">
+    <value>프리셋</value>
+  </data>
+  <data name="MenuSubFillColorItem" xml:space="preserve">
+    <value>내부 색</value>
+  </data>
+  <data name="MenuSubFontColorItem" xml:space="preserve">
+    <value>글꼴 색</value>
+  </data>
+  <data name="MenuSubFontSizeItem" xml:space="preserve">
+    <value>글꼴 크기</value>
+  </data>
+  <data name="MenuSubStrokeColorItem" xml:space="preserve">
+    <value>테두리 색</value>
+  </data>
+  <data name="MenuSubThicknessItem" xml:space="preserve">
+    <value>굵기</value>
+  </data>
+  <data name="MenuViewAutoScrollContent" xml:space="preserve">
+    <value>자동 스크롤</value>
+  </data>
+  <data name="MenuViewCompressContent" xml:space="preserve">
+    <value>압축</value>
+  </data>
+  <data name="MenuViewContiusContent" xml:space="preserve">
+    <value>연속 보기</value>
+  </data>
+  <data name="MenuViewDoubleContent" xml:space="preserve">
+    <value>두 장 보기</value>
+  </data>
+  <data name="MenuViewEditObjectContent" xml:space="preserve">
+    <value>개체 편집</value>
+  </data>
+  <data name="MenuViewEditTextContent" xml:space="preserve">
+    <value>텍스트 편집</value>
+  </data>
+  <data name="MenuViewExitAnnotateContent" xml:space="preserve">
+    <value>주석달기 종료</value>
+  </data>
+  <data name="MenuViewExtractTextContent" xml:space="preserve">
+    <value>텍스트 추출하기</value>
+  </data>
+  <data name="MenuViewFindContent" xml:space="preserve">
+    <value>찾기</value>
+  </data>
+  <data name="MenuViewFitPageContent" xml:space="preserve">
+    <value>페이지 맞추기</value>
+  </data>
+  <data name="MenuViewFullSizeContent" xml:space="preserve">
+    <value>실제 크기</value>
+  </data>
+  <data name="MenuViewHeightContent" xml:space="preserve">
+    <value>맞춤 높이</value>
+  </data>
+  <data name="MenuViewNextContent" xml:space="preserve">
+    <value>다음</value>
+  </data>
+  <data name="MenuViewOCRContent" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="MenuViewPresentContent" xml:space="preserve">
+    <value>재생</value>
+  </data>
+  <data name="MenuViewPreviousContent" xml:space="preserve">
+    <value>이전</value>
+  </data>
+  <data name="MenuViewRotateLeftContent" xml:space="preserve">
+    <value>왼쪽으로 회전</value>
+  </data>
+  <data name="MenuViewRotateRightContent" xml:space="preserve">
+    <value>오른쪽으로 회전</value>
+  </data>
+  <data name="MenuViewScreenshotContent" xml:space="preserve">
+    <value>스크린샷</value>
+  </data>
+  <data name="MenuViewSingleContent" xml:space="preserve">
+    <value>한 장 보기</value>
+  </data>
+  <data name="MenuViewUpgradeContent" xml:space="preserve">
+    <value>업그레이드</value>
+  </data>
+  <data name="MenuViewWidthContent" xml:space="preserve">
+    <value>맞춤 폭</value>
+  </data>
+  <data name="MenuViewZoomContent" xml:space="preserve">
+    <value>확대하기</value>
+  </data>
+  <data name="MenuWatermarkSubCreateContent" xml:space="preserve">
+    <value>워터마크 만들기</value>
+  </data>
+  <data name="MenuWatermarkSubDeleteContent" xml:space="preserve">
+    <value>워터마크 제거하기</value>
+  </data>
+  <data name="MergeWindowsLoadfailedMessage" xml:space="preserve">
+    <value>파일을 로드하지 못했습니다.  다른 파일을 선택하고 다시 시도하십시오.</value>
+  </data>
+  <data name="MicrosoftStoreBillingHelpContent" xml:space="preserve">
+    <value>Microsoft Store 및 청구 도움말</value>
+  </data>
+  <data name="MoreColorsBtnTips" xml:space="preserve">
+    <value>더 많은 색상...</value>
+  </data>
+  <data name="MsgAttachmentOpenFailed" xml:space="preserve">
+    <value>첨부 파일을 열 수 없습니다.</value>
+  </data>
+  <data name="MsgAttachmentSaveFailed" xml:space="preserve">
+    <value>첨부 파일 저장에 실패했습니다.</value>
+  </data>
+  <data name="MsgAttachmentSaveSuc" xml:space="preserve">
+    <value>저장되었습니다. 파일 탐색기에서 첨부 파일을 보시겠습니까?</value>
+  </data>
+  <data name="Msg_AttachmentAlreadyExist" xml:space="preserve">
+    <value>파일 “XXX”을(를) 첨부하지 못했습니다. 첨부 패널에 동일한 이름의 파일이 이미 존재합니다.</value>
+  </data>
+  <data name="Msg_AttachmentToolLarge" xml:space="preserve">
+    <value>파일 “XXX”은(는) 2GB 크기 제한을 초과하여 첨부할 수 없습니다.</value>
+  </data>
+  <data name="Msg_DeleteAttachments" xml:space="preserve">
+    <value>첨부 파일을 삭제하시겠습니까?</value>
+  </data>
+  <data name="Msg_DescriptionOverMaxCharsNum" xml:space="preserve">
+    <value>설명은 256자 이내여야 합니다.</value>
+  </data>
+  <data name="NewBookmarkName" xml:space="preserve">
+    <value>새 책갈피</value>
+  </data>
+  <data name="NewFileName" xml:space="preserve">
+    <value>제목 없음</value>
+  </data>
+  <data name="NewFileRemindSave" xml:space="preserve">
+    <value>문서 XXX이(가) 닫히는 중입니다.  변경 사항을 저장하시겠습니까?</value>
+  </data>
+  <data name="NextBtnTooltipText" xml:space="preserve">
+    <value>다음 찾기</value>
+  </data>
+  <data name="NoPrintNoteWindowAddBtn" xml:space="preserve">
+    <value>시스템에서 프린터를 찾을 수 없습니다. 계속하려면 프린터를 추가하세요.</value>
+  </data>
+  <data name="NoPrintNoteWindowContent" xml:space="preserve">
+    <value>프린터 추가</value>
+  </data>
+  <data name="NoPrintNoteWindowTitle" xml:space="preserve">
+    <value>참고</value>
+  </data>
+  <data name="OCRTip" xml:space="preserve">
+    <value>마우스를 드래그하여 텍스트 인식 영역을 선택합니다. 완료되면 다음 단계로 진행합니다.</value>
+  </data>
+  <data name="OcrDialogErrorMessage" xml:space="preserve">
+    <value>문서에 인식할 수 있는 문자가 없습니다. 문서 내용이 명확한지 확인하고, 페이지를 올바른 읽기 방향으로 회전시키며, 내용에 포함된 언어를 선택하십시오.</value>
+  </data>
+  <data name="OcrDialogLanguageRecognition" xml:space="preserve">
+    <value>언어 인식</value>
+  </data>
+  <data name="OcrDialogLanguageSelected" xml:space="preserve">
+    <value>선택한 언어:</value>
+  </data>
+  <data name="OcrDialogLanguageSelectedNone" xml:space="preserve">
+    <value>언어를 하나 イ상 선택해 주세요.</value>
+  </data>
+  <data name="OcrDialogLanguageSlowApplyTips" xml:space="preserve">
+    <value>적용</value>
+  </data>
+  <data name="OcrDialogLanguageSlowTips" xml:space="preserve">
+    <value>3개 이상의 언어를 사용하면 인식 속도가 느려질 수 있습니다.</value>
+  </data>
+  <data name="OcrDialogSaveDocDoNotSaveBtn" xml:space="preserve">
+    <value>저장하지 않음</value>
+  </data>
+  <data name="OcrDialogSaveDocMessage" xml:space="preserve">
+    <value>작업 전에 'XXX'에 대한 변경 사항을 저장하시겠습니까?</value>
+  </data>
+  <data name="OcrDialogSubtitle" xml:space="preserve">
+    <value>이미지에서 텍스트를 검색 가능하게하기 위해 PDF OCR</value>
+  </data>
+  <data name="OcrDialogTitle" xml:space="preserve">
+    <value>OCR PDF</value>
+  </data>
+  <data name="OpenDocByIncorrectPwdMsg" xml:space="preserve">
+    <value>비밀번호가 틀립니다.</value>
+  </data>
+  <data name="OpenDocFailedExceptionMsg" xml:space="preserve">
+    <value>문서를 열지 못했습니다.</value>
+  </data>
+  <data name="OpenDocNotExistMsg" xml:space="preserve">
+    <value>파일이 존재하지 않습니다.</value>
+  </data>
+  <data name="OpenDocNotSupportedMsg" xml:space="preserve">
+    <value>지원하지 않는 파일 형식입니다.</value>
+  </data>
+  <data name="OpenFileBtnContent" xml:space="preserve">
+    <value>파일 열기</value>
+  </data>
+  <data name="PageMenuInsertfromfileContent" xml:space="preserve">
+    <value>파일로부터 삽입</value>
+  </data>
+  <data name="PageMergeErrorMessage" xml:space="preserve">
+    <value>파일을 불러오는 데 실패했습니다. 다른 파일로 다시 시도하십시오.</value>
+  </data>
+  <data name="PageResizeWinCustomize" xml:space="preserve">
+    <value>사용자 정의</value>
+  </data>
+  <data name="PageResizeWinFixedSize" xml:space="preserve">
+    <value>고정 크기</value>
+  </data>
+  <data name="PageResizeWinHeightContent" xml:space="preserve">
+    <value>H:</value>
+  </data>
+  <data name="PageResizeWinOrientation" xml:space="preserve">
+    <value>방향</value>
+  </data>
+  <data name="PageResizeWinOriginalContent" xml:space="preserve">
+    <value>원본 페이지 크기</value>
+  </data>
+  <data name="PageResizeWinPageNumber" xml:space="preserve">
+    <value>페이지</value>
+  </data>
+  <data name="PageResizeWinResizeGroupName" xml:space="preserve">
+    <value>크기 조정</value>
+  </data>
+  <data name="PageResizeWinResizedContent" xml:space="preserve">
+    <value>크기가 조정된 페이지 크기</value>
+  </data>
+  <data name="PageResizeWinTitle" xml:space="preserve">
+    <value>페이지 크기 조정</value>
+  </data>
+  <data name="PageResizeWinTooltip" xml:space="preserve">
+    <value>더 나은 레이아웃을 위해 페이지 크기를 사용자 정의 크기로 조정합니다.</value>
+  </data>
+  <data name="PageResizeWinWidthContent" xml:space="preserve">
+    <value>W:</value>
+  </data>
+  <data name="PageSelectedAllPrefiexedContent" xml:space="preserve">
+    <value>선택됨</value>
+  </data>
+  <data name="PageSplitMergeCheckMsg" xml:space="preserve">
+    <value>현재 문서에 변경 사항이 있습니다. 먼저 저장해 주세요.</value>
+  </data>
+  <data name="PageWinAllPages" xml:space="preserve">
+    <value>모든 페이지</value>
+  </data>
+  <data name="PageWinCustomPages" xml:space="preserve">
+    <value>맞춤 페이지</value>
+  </data>
+  <data name="PageWinExtractAll" xml:space="preserve">
+    <value>페이지를 하나의 PDF로 추출</value>
+  </data>
+  <data name="PageWinExtractDelete" xml:space="preserve">
+    <value>추출 후 선택한 페이지 삭제</value>
+  </data>
+  <data name="PageWinExtractMode" xml:space="preserve">
+    <value>추출 모드</value>
+  </data>
+  <data name="PageWinExtractevert" xml:space="preserve">
+    <value>모든 페이지를 별도의 PDF로 추출</value>
+  </data>
+  <data name="PageWinRange" xml:space="preserve">
+    <value>범위</value>
+  </data>
+  <data name="PageWinSelectPages" xml:space="preserve">
+    <value>선택한 페이지</value>
+  </data>
+  <data name="PageWinSelectedPages" xml:space="preserve">
+    <value>"XXX" 페이지 선택됨</value>
+  </data>
+  <data name="PageWinSubset" xml:space="preserve">
+    <value>하위 범위</value>
+  </data>
+  <data name="PhoneWinContent" xml:space="preserve">
+    <value>QR 코드를 스캔하여 어디서나 PDFgear를 즐기세요</value>
+  </data>
+  <data name="PhoneWinContentTitle" xml:space="preserve">
+    <value>PDFgear iOS 및 Android 사용 가능</value>
+  </data>
+  <data name="PopupPlaceholderContent" xml:space="preserve">
+    <value>이곳에 텍스트를 추가하세요</value>
+  </data>
+  <data name="PresentationWindowExitText" xml:space="preserve">
+    <value>출구</value>
+  </data>
+  <data name="PrevBtnTooltipText" xml:space="preserve">
+    <value>이전 찾기</value>
+  </data>
+  <data name="PrintWindowBookLetBinding" xml:space="preserve">
+    <value>바인딩</value>
+  </data>
+  <data name="PrintWindowBookLetBtnContent" xml:space="preserve">
+    <value>소책자</value>
+  </data>
+  <data name="PrintWindowBookLetLeftBinding" xml:space="preserve">
+    <value>왼쪽</value>
+  </data>
+  <data name="PrintWindowBookLetRightBinding" xml:space="preserve">
+    <value>오른쪽</value>
+  </data>
+  <data name="PrintWindowBookLetSubset" xml:space="preserve">
+    <value>하위세트</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBack" xml:space="preserve">
+    <value>뒷면만</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBoth" xml:space="preserve">
+    <value>양면</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetFrontal" xml:space="preserve">
+    <value>앞면만</value>
+  </data>
+  <data name="PrintWindowMutilpleBtnContent" xml:space="preserve">
+    <value>다중</value>
+  </data>
+  <data name="PrintWindowMutilpleLayout" xml:space="preserve">
+    <value>페이지 순서</value>
+  </data>
+  <data name="PrintWindowMutilpleMargins" xml:space="preserve">
+    <value>여백</value>
+  </data>
+  <data name="PrintWindowMutilplePapers" xml:space="preserve">
+    <value>한 면에 인쇄할 페이지 수</value>
+  </data>
+  <data name="PrintWindowMutilplePrintBorder" xml:space="preserve">
+    <value>페이지 테두리 인쇄</value>
+  </data>
+  <data name="PrintWindowPageSettingGrounpName" xml:space="preserve">
+    <value>페이지 설정</value>
+  </data>
+  <data name="PrintWindowPageSettingsSizeTitle" xml:space="preserve">
+    <value>용지 크기</value>
+  </data>
+  <data name="PrintWindowPrintHandingGrounpName" xml:space="preserve">
+    <value>인쇄 모드</value>
+  </data>
+  <data name="PrintWindowRangeGroupName" xml:space="preserve">
+    <value>페이지 범위</value>
+  </data>
+  <data name="PrintWindowReverseCheckBoxContent" xml:space="preserve">
+    <value>페이지 역순으로</value>
+  </data>
+  <data name="PrintWindowScalBtnContent" xml:space="preserve">
+    <value>크기</value>
+  </data>
+  <data name="PrintWindowTileBtnContent" xml:space="preserve">
+    <value>포스터</value>
+  </data>
+  <data name="PrintWindowTileCutMasks" xml:space="preserve">
+    <value>잘라내기 표시</value>
+  </data>
+  <data name="PrintWindowTileLabels" xml:space="preserve">
+    <value>레이블</value>
+  </data>
+  <data name="PrintWindowTileOverlap" xml:space="preserve">
+    <value>겹치기</value>
+  </data>
+  <data name="PrintWindowTilePageZoom" xml:space="preserve">
+    <value>바둑판식 배열 비율</value>
+  </data>
+  <data name="RateWindowsContent" xml:space="preserve">
+    <value>여러분의 생각을 공유하고 개선할!</value>
+  </data>
+  <data name="RateWindowsContentTitle" xml:space="preserve">
+    <value>PDFgear 즐기다?</value>
+  </data>
+  <data name="RateWindowsFeedbcakBtn" xml:space="preserve">
+    <value>피드백 전달</value>
+  </data>
+  <data name="RateWindowsRateBtn" xml:space="preserve">
+    <value>잘 작동</value>
+  </data>
+  <data name="ReadAllBtn" xml:space="preserve">
+    <value>모든 페이지 읽기</value>
+  </data>
+  <data name="ReadCurrentBtn" xml:space="preserve">
+    <value>현재 페이지 읽기</value>
+  </data>
+  <data name="ReadFromCurrentBtn" xml:space="preserve">
+    <value>현재 페이지에서 읽기</value>
+  </data>
+  <data name="ReadMessage" xml:space="preserve">
+    <value>음성 언어가 "xxx"로 전환되고 xxxx페이지 처음부터 읽기가 다시 시작됩니다. 계속하시겠습니까?</value>
+  </data>
+  <data name="ReadPageEmpty" xml:space="preserve">
+    <value>현재 페이지(페이지 XXX)에 읽을 수 있는 텍스트가 없습니다.</value>
+  </data>
+  <data name="ReadToolBarBtn" xml:space="preserve">
+    <value>컨트롤 위젯</value>
+  </data>
+  <data name="ReadWinAddMore" xml:space="preserve">
+    <value>더 많은 음성 언어 추가</value>
+  </data>
+  <data name="ReadWinFemaleVoice" xml:space="preserve">
+    <value>여성</value>
+  </data>
+  <data name="ReadWinMaleVoice" xml:space="preserve">
+    <value>남성</value>
+  </data>
+  <data name="ReadWinOkBtn" xml:space="preserve">
+    <value>계속하다</value>
+  </data>
+  <data name="ReadWinPitchBtn" xml:space="preserve">
+    <value>피치</value>
+  </data>
+  <data name="ReadWinSpeedBtn" xml:space="preserve">
+    <value>비율</value>
+  </data>
+  <data name="ReadWinTitle" xml:space="preserve">
+    <value>소리내어 읽기</value>
+  </data>
+  <data name="RedactBtn" xml:space="preserve">
+    <value>편집</value>
+  </data>
+  <data name="RedactStartMessageContent" xml:space="preserve">
+    <value>편집하려는 영역을 마우스로 드래그하여 그립니다. 문서가 저장되면 교정 대상으로 표시된 모든 콘텐츠가 영구적으로 삭제됩니다.</value>
+  </data>
+  <data name="RedactStartMessageTitle" xml:space="preserve">
+    <value>삭제된 콘텐츠는 영구적으로 삭제됩니다.</value>
+  </data>
+  <data name="RedactToolbarExitText" xml:space="preserve">
+    <value>편집 종료</value>
+  </data>
+  <data name="RemoveDeferredDigitSignConfirmMessage" xml:space="preserve">
+    <value>정말로 XXX를 제거하시겠습니까?</value>
+  </data>
+  <data name="RemoveDeferredDigitSignFailedMessage" xml:space="preserve">
+    <value>서명 필드를 제거하는 데 실패했습니다.</value>
+  </data>
+  <data name="RightMenuAddImageItemText" xml:space="preserve">
+    <value>이미지</value>
+  </data>
+  <data name="RightMenuAddItemText" xml:space="preserve">
+    <value>추가...</value>
+  </data>
+  <data name="RightMenuAddTextItemText" xml:space="preserve">
+    <value>텍스트</value>
+  </data>
+  <data name="RightMenuBookmakrkExpandCollpaseItemText" xml:space="preserve">
+    <value>모든 북마크 확장/축소</value>
+  </data>
+  <data name="RightMenuCompressPDFItemText" xml:space="preserve">
+    <value>PDF 압축</value>
+  </data>
+  <data name="RightMenuConvertToItemText" xml:space="preserve">
+    <value>로 변환</value>
+  </data>
+  <data name="RightMenuDeleteAnnotationItemText" xml:space="preserve">
+    <value>댓글 삭제</value>
+  </data>
+  <data name="RightMenuDeleteTextItemText" xml:space="preserve">
+    <value>텍스트 삭제</value>
+  </data>
+  <data name="RightMenuInsertPageItemImage" xml:space="preserve">
+    <value>이미지에서</value>
+  </data>
+  <data name="RightMenuInsertPageItemPDF" xml:space="preserve">
+    <value>PDF에서</value>
+  </data>
+  <data name="RightMenuInsertPageItemWord" xml:space="preserve">
+    <value>Word에서</value>
+  </data>
+  <data name="RightMenuInsertPageText" xml:space="preserve">
+    <value>페이지 삽입</value>
+  </data>
+  <data name="RightMenuMergeSplitPDFItemText" xml:space="preserve">
+    <value>PDF 병합 및 분할</value>
+  </data>
+  <data name="RightMenuOcrPagesItemText" xml:space="preserve">
+    <value>OCR 페이지</value>
+  </data>
+  <data name="RightMenuOcrPagesText" xml:space="preserve">
+    <value>OCR 페이지</value>
+  </data>
+  <data name="RightMenuPropertiesContent" xml:space="preserve">
+    <value>속성...</value>
+  </data>
+  <data name="SaveDocBeforeCloseMsg" xml:space="preserve">
+    <value>종료하기 전에 변경 사항을 'XXX'에 저장할까요?</value>
+  </data>
+  <data name="SaveDocBeforeCompressMsg" xml:space="preserve">
+    <value>열린 문서가 수정되었습니다, 압축을 실행하기 전에 변경사항을 저장해 주세요.</value>
+  </data>
+  <data name="SaveDocBeforeConvertMsg" xml:space="preserve">
+    <value>현재 문서에 변경 사항이 있습니다. 전환하기 전에 먼저 저장해 주세요.</value>
+  </data>
+  <data name="SaveDocBeforeSendMsg" xml:space="preserve">
+    <value>열린 문서가 편집되었습니다. 계속하려면 변경 사항을 저장하십시오.</value>
+  </data>
+  <data name="SaveDocFailedByMsg" xml:space="preserve">
+    <value>문서를 저장하지 못했습니다. 읽기 전용이거나 다른 어플리케이션에서 사용 중입니다.</value>
+  </data>
+  <data name="SaveDocFailedBySaveasMsg" xml:space="preserve">
+    <value>문서를 저장하지 못했습니다. 읽기 전용이거나 다른 어플리케이션에서 사용 중입니다. 이 문서의 사본을 저장할까요?</value>
+  </data>
+  <data name="SaveMenuStampSubCustomizeContent" xml:space="preserve">
+    <value>맞춤 스탬프 저장</value>
+  </data>
+  <data name="ScanErrorMessage" xml:space="preserve">
+    <value>죄송합니다. 예상치 못한 오류가 발생했습니다.  스캐너를 확인하고 다시 시도하십시오.  문제가 지속되면 지원팀에 문의하세요.</value>
+  </data>
+  <data name="ScannerWinAddFailed" xml:space="preserve">
+    <value>XXX를 추가하지 못했습니다. 확인 후 다시 시도하세요.</value>
+  </data>
+  <data name="ScannerWinAddNew" xml:space="preserve">
+    <value>새 스캐너 추가</value>
+  </data>
+  <data name="ScannerWinCantFindScanner" xml:space="preserve">
+    <value>스캐너가 표시되지 않으면 설정에 추가되고 오프라인 상태가 아닌지 확인하십시오.</value>
+  </data>
+  <data name="ScannerWinCheckScannerContent" xml:space="preserve">
+    <value>스캐너의 전원이 켜져 있고 컴퓨터 또는 네트워크에 연결되어 있는지 확인하세요. 새로운 스캐너를 추가할 수도 있습니다.</value>
+  </data>
+  <data name="ScannerWinClosingWarning" xml:space="preserve">
+    <value>닫으면 목록의 스캔이 손실됩니다. 닫으시겠습니까?</value>
+  </data>
+  <data name="ScannerWinColorMode" xml:space="preserve">
+    <value>색상 모드</value>
+  </data>
+  <data name="ScannerWinCreateTitle" xml:space="preserve">
+    <value>스캐너에서 PDF 생성</value>
+  </data>
+  <data name="ScannerWinDeletePreview" xml:space="preserve">
+    <value>이 항목을 삭제하시겠습니까?</value>
+  </data>
+  <data name="ScannerWinDeleteSelected" xml:space="preserve">
+    <value>XXX 페이지를 삭제하시겠습니까?</value>
+  </data>
+  <data name="ScannerWinImportImags" xml:space="preserve">
+    <value>이미지 가져오기</value>
+  </data>
+  <data name="ScannerWinInsertAfter" xml:space="preserve">
+    <value>페이지 후</value>
+  </data>
+  <data name="ScannerWinInsertBefore" xml:space="preserve">
+    <value>페이지 전</value>
+  </data>
+  <data name="ScannerWinInsertConfirm" xml:space="preserve">
+    <value>선택한 XXX 페이지를 삽입하고 새 PDF를 작성하시겠습니까?</value>
+  </data>
+  <data name="ScannerWinInsertOptions" xml:space="preserve">
+    <value>삽입 옵션</value>
+  </data>
+  <data name="ScannerWinInsertTitle" xml:space="preserve">
+    <value>스캐너에서 삽입</value>
+  </data>
+  <data name="ScannerWinNewScanner" xml:space="preserve">
+    <value>새 스캐너</value>
+  </data>
+  <data name="ScannerWinNoScannerContent" xml:space="preserve">
+    <value>스캐너가 표시되지 않으면 설정에 추가되어 있고 오프라인이 아닌지 확인하세요.</value>
+  </data>
+  <data name="ScannerWinNoScannerTitle" xml:space="preserve">
+    <value>스캐너 선택</value>
+  </data>
+  <data name="ScannerWinNoScannerwarning" xml:space="preserve">
+    <value>스캐너가 감지되지 않았습니다</value>
+  </data>
+  <data name="ScannerWinPageSettings" xml:space="preserve">
+    <value>PDF 페이지 설정</value>
+  </data>
+  <data name="ScannerWinPaperSource" xml:space="preserve">
+    <value>용지공급</value>
+  </data>
+  <data name="ScannerWinRecommended" xml:space="preserve">
+    <value>권장</value>
+  </data>
+  <data name="ScannerWinRefreshBtn" xml:space="preserve">
+    <value>새로 고침</value>
+  </data>
+  <data name="ScannerWinResolution" xml:space="preserve">
+    <value>해상도</value>
+  </data>
+  <data name="ScannerWinSamePagesize" xml:space="preserve">
+    <value>원본 파일과 동일</value>
+  </data>
+  <data name="ScannerWinScanArea" xml:space="preserve">
+    <value>스캔 영역</value>
+  </data>
+  <data name="ScannerWinScanBtn" xml:space="preserve">
+    <value>스캔</value>
+  </data>
+  <data name="ScannerWinScannedTitle" xml:space="preserve">
+    <value>스캔한 이미지</value>
+  </data>
+  <data name="ScannerWinScanner" xml:space="preserve">
+    <value>스캐너</value>
+  </data>
+  <data name="ScannerWinScannerBusyContent" xml:space="preserve">
+    <value>문서 공급 장치에 문서가 없거나 스캐너가 사용 중입니다. 나중에 다시 시도하세요.</value>
+  </data>
+  <data name="ScannerWinScannerOfflineContent" xml:space="preserve">
+    <value>스캐너 장치가 응답하지 않습니다. 스캐너의 전원이 켜져 있고 컴퓨터 또는 네트워크에 연결되어 있는지 확인하세요.</value>
+  </data>
+  <data name="ScannerWinScanningProperties" xml:space="preserve">
+    <value>스캔 속성</value>
+  </data>
+  <data name="ScannerWinSearchingContent" xml:space="preserve">
+    <value>스캐너 검색 중...</value>
+  </data>
+  <data name="ScanningAreaEntire1" xml:space="preserve">
+    <value>전체 스캔 영역</value>
+  </data>
+  <data name="ScanningAreaEntire10" xml:space="preserve">
+    <value>4 x 6인치 (10×15cm)</value>
+  </data>
+  <data name="ScanningAreaEntire2" xml:space="preserve">
+    <value>Letter (8.5 x 11인치)</value>
+  </data>
+  <data name="ScanningAreaEntire3" xml:space="preserve">
+    <value>Legal (8.5 x 14인치)</value>
+  </data>
+  <data name="ScanningAreaEntire4" xml:space="preserve">
+    <value>B5(176x250mm)</value>
+  </data>
+  <data name="ScanningAreaEntire5" xml:space="preserve">
+    <value>B4(250x353mm)</value>
+  </data>
+  <data name="ScanningAreaEntire6" xml:space="preserve">
+    <value>A5(148x210mm)</value>
+  </data>
+  <data name="ScanningAreaEntire7" xml:space="preserve">
+    <value>A4(210x297mm)</value>
+  </data>
+  <data name="ScanningAreaEntire8" xml:space="preserve">
+    <value>A3(297x420mm)</value>
+  </data>
+  <data name="ScanningAreaEntire9" xml:space="preserve">
+    <value>5 x 7인치 (13 x 18 cm)</value>
+  </data>
+  <data name="ScanningColorColorMode" xml:space="preserve">
+    <value>색깔</value>
+  </data>
+  <data name="ScanningColorGrayMode" xml:space="preserve">
+    <value>그레이스케일</value>
+  </data>
+  <data name="ScanningPaperSourceDuplex" xml:space="preserve">
+    <value>양방향</value>
+  </data>
+  <data name="ScanningPaperSourceFeeder" xml:space="preserve">
+    <value>공급기</value>
+  </data>
+  <data name="ScanningPaperSourceGlass" xml:space="preserve">
+    <value>평판</value>
+  </data>
+  <data name="ScanningWarning" xml:space="preserve">
+    <value>스캔 중, 완료되면 다시 시도하세요.</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Arrow" xml:space="preserve">
+    <value>화살표</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Circle" xml:space="preserve">
+    <value>타원</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Copy" xml:space="preserve">
+    <value>복사</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Finish" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Ink" xml:space="preserve">
+    <value>잉크</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Rectangle" xml:space="preserve">
+    <value>직사각형</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Save" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Text" xml:space="preserve">
+    <value>텍스트</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Undo" xml:space="preserve">
+    <value>실행 취소</value>
+  </data>
+  <data name="ScreenshotTip" xml:space="preserve">
+    <value>마우스를 드래그하여 캡처할 영역을 선택합니다. 완료되면 다음 단계로 진행합니다.</value>
+  </data>
+  <data name="SelectPageAllEvenPagesItem" xml:space="preserve">
+    <value>짝수 페이지 만</value>
+  </data>
+  <data name="SelectPageAllOddPagesItem" xml:space="preserve">
+    <value>홀수 페이지만</value>
+  </data>
+  <data name="SelectPageAllPagesItem" xml:space="preserve">
+    <value>모든 페이지</value>
+  </data>
+  <data name="SelectPageUnselectAllItem" xml:space="preserve">
+    <value>선택 항목 지우기</value>
+  </data>
+  <data name="SettingWindowTabGeneral" xml:space="preserve">
+    <value>일반</value>
+  </data>
+  <data name="SettingWindowTabShortcut" xml:space="preserve">
+    <value>단축키</value>
+  </data>
+  <data name="SettingWindowTextShortcutAction" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="SettingWindowTextShortcutKeys" xml:space="preserve">
+    <value>단축키</value>
+  </data>
+  <data name="SettingWindowTitleShortcuts" xml:space="preserve">
+    <value>단축키 목록</value>
+  </data>
+  <data name="SettingsDisplayAIButton" xml:space="preserve">
+    <value>AI 버튼을 표시합니다.</value>
+  </data>
+  <data name="SettingsHighlightFormFields" xml:space="preserve">
+    <value>양식 필드를 강조 표시합니다.</value>
+  </data>
+  <data name="ShortcutTextAddBookmark" xml:space="preserve">
+    <value>북마크에 추가하다</value>
+  </data>
+  <data name="ShortcutTextAnnotateEllipse" xml:space="preserve">
+    <value>타원</value>
+  </data>
+  <data name="ShortcutTextAnnotateInk" xml:space="preserve">
+    <value>잉크</value>
+  </data>
+  <data name="ShortcutTextAnnotateLine" xml:space="preserve">
+    <value>선</value>
+  </data>
+  <data name="ShortcutTextAnnotateManage" xml:space="preserve">
+    <value>댓글 관리</value>
+  </data>
+  <data name="ShortcutTextAnnotateNote" xml:space="preserve">
+    <value>노트</value>
+  </data>
+  <data name="ShortcutTextAnnotateShape" xml:space="preserve">
+    <value>직사각형</value>
+  </data>
+  <data name="ShortcutTextAnnotateTextBox" xml:space="preserve">
+    <value>텍스트 상자</value>
+  </data>
+  <data name="ShortcutTextAnnotateTypeWriter" xml:space="preserve">
+    <value>텍스트 입력</value>
+  </data>
+  <data name="ShortcutTextAreaHighlight" xml:space="preserve">
+    <value>영역 하이라이트</value>
+  </data>
+  <data name="ShortcutTextAutoScroll" xml:space="preserve">
+    <value>자동 스크롤</value>
+  </data>
+  <data name="ShortcutTextCloseDocument" xml:space="preserve">
+    <value>파일 닫기</value>
+  </data>
+  <data name="ShortcutTextContinusRead" xml:space="preserve">
+    <value>연속 보기</value>
+  </data>
+  <data name="ShortcutTextCreateNewPDF" xml:space="preserve">
+    <value>새 PDF</value>
+  </data>
+  <data name="ShortcutTextCropPage" xml:space="preserve">
+    <value>페이지 자르기</value>
+  </data>
+  <data name="ShortcutTextDocumentProperties" xml:space="preserve">
+    <value>문서 속성</value>
+  </data>
+  <data name="ShortcutTextDoublePage" xml:space="preserve">
+    <value>두 페이지 보기</value>
+  </data>
+  <data name="ShortcutTextFind" xml:space="preserve">
+    <value>찾기</value>
+  </data>
+  <data name="ShortcutTextFitHeight" xml:space="preserve">
+    <value>맞춤 높이</value>
+  </data>
+  <data name="ShortcutTextFitPage" xml:space="preserve">
+    <value>페이지 맞추기</value>
+  </data>
+  <data name="ShortcutTextFitWidth" xml:space="preserve">
+    <value>맞춤 폭</value>
+  </data>
+  <data name="ShortcutTextFullScreen" xml:space="preserve">
+    <value>전체 화면 모드 진입/종료</value>
+  </data>
+  <data name="ShortcutTextFullSize" xml:space="preserve">
+    <value>실제 크기</value>
+  </data>
+  <data name="ShortcutTextHighlight" xml:space="preserve">
+    <value>강조 표시</value>
+  </data>
+  <data name="ShortcutTextHighlightForm" xml:space="preserve">
+    <value>폼 필드 강조 표시</value>
+  </data>
+  <data name="ShortcutTextInsertImage" xml:space="preserve">
+    <value>이미지 추가</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubBlankPage" xml:space="preserve">
+    <value>빈 페이지 삽입</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromImage" xml:space="preserve">
+    <value>이미지에서 삽입</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromPDF" xml:space="preserve">
+    <value>PDF에서 삽입</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromWord" xml:space="preserve">
+    <value>Word에서 삽입</value>
+  </data>
+  <data name="ShortcutTextNextView" xml:space="preserve">
+    <value>다음 뷰</value>
+  </data>
+  <data name="ShortcutTextOcrPages" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ShortcutTextOpenDocument" xml:space="preserve">
+    <value>파일 열기</value>
+  </data>
+  <data name="ShortcutTextPageDelete" xml:space="preserve">
+    <value>페이지 삭제</value>
+  </data>
+  <data name="ShortcutTextPageExtract" xml:space="preserve">
+    <value>페이지 추출 </value>
+  </data>
+  <data name="ShortcutTextPresent" xml:space="preserve">
+    <value>재생</value>
+  </data>
+  <data name="ShortcutTextPreviousView" xml:space="preserve">
+    <value>이전 뷰</value>
+  </data>
+  <data name="ShortcutTextPrint" xml:space="preserve">
+    <value>인쇄</value>
+  </data>
+  <data name="ShortcutTextRedo" xml:space="preserve">
+    <value>다시실행</value>
+  </data>
+  <data name="ShortcutTextRotateLeft" xml:space="preserve">
+    <value>왼쪽으로 회전</value>
+  </data>
+  <data name="ShortcutTextRotateRight" xml:space="preserve">
+    <value>오른쪽으로 회전</value>
+  </data>
+  <data name="ShortcutTextSaveAsDocument" xml:space="preserve">
+    <value>다음으로 저장</value>
+  </data>
+  <data name="ShortcutTextSaveDocument" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="ShortcutTextScreenshot" xml:space="preserve">
+    <value>스크린샷</value>
+  </data>
+  <data name="ShortcutTextShowHideComments" xml:space="preserve">
+    <value>댓글 표시/숨기기</value>
+  </data>
+  <data name="ShortcutTextSinglePage" xml:space="preserve">
+    <value>한 페이지 보기</value>
+  </data>
+  <data name="ShortcutTextStrike" xml:space="preserve">
+    <value>취소선</value>
+  </data>
+  <data name="ShortcutTextUnderline" xml:space="preserve">
+    <value>밑줄</value>
+  </data>
+  <data name="ShortcutTextUndo" xml:space="preserve">
+    <value>실행취소</value>
+  </data>
+  <data name="ShortcutTextZoomIn" xml:space="preserve">
+    <value>확대</value>
+  </data>
+  <data name="ShortcutTextZoomOut" xml:space="preserve">
+    <value>축소</value>
+  </data>
+  <data name="ShortcutTip" xml:space="preserve">
+    <value>PDFgear에 쉽게 액세스할 수 있는 바탕 화면 바로 가기를 만드시겠습니까?</value>
+  </data>
+  <data name="SigDialogDigSignBtn" xml:space="preserve">
+    <value>디지털 서명</value>
+  </data>
+  <data name="SigDialogDigSignBtn2" xml:space="preserve">
+    <value>인증서로 암호화</value>
+  </data>
+  <data name="SignPropDialogMessage_SaveCert" xml:space="preserve">
+    <value>이 인증서를 신뢰할 수 있는 인증서에 추가하시겠습니까?</value>
+  </data>
+  <data name="StampFlattenConfirmContent" xml:space="preserve">
+    <value>한 번 평면화되면 스탬프는 편집할 수 없으며, 이 작업은 되돌릴 수 없습니다. 실수로 평면화한 경우 저장하지 말고 문서를 닫으세요.</value>
+  </data>
+  <data name="StampFlattenConfirmTitle" xml:space="preserve">
+    <value>스탬프를 병합하시겠습니까?</value>
+  </data>
+  <data name="StampLimitErrorMessage" xml:space="preserve">
+    <value>더 이상 카테고리를 추가할 수 없습니다. 제한에 도달했습니다.</value>
+  </data>
+  <data name="StampManageDeleteCategoryMessage" xml:space="preserve">
+    <value>이 카테고리를 삭제하시겠습니까? 해당 카테고리의 모든 도장이 삭제됩니다.</value>
+  </data>
+  <data name="StampManageDeleteMessage" xml:space="preserve">
+    <value>이 도장을 삭제하시겠습니까?</value>
+  </data>
+  <data name="StampManageDeleteSelectedMessage" xml:space="preserve">
+    <value>선택한 도장을 삭제하시겠습니까?</value>
+  </data>
+  <data name="StampProgressContent" xml:space="preserve">
+    <value>스탬프 적용 중...</value>
+  </data>
+  <data name="StampProgressFlattenContent" xml:space="preserve">
+    <value>스탬프 병합 중...</value>
+  </data>
+  <data name="StampRightMenuDeleteAllStamp" xml:space="preserve">
+    <value>모든 페이지에서 이 도장을 삭제하시겠습니까?</value>
+  </data>
+  <data name="SubscribeWindowContent" xml:space="preserve">
+    <value>평가하여 기쁨을 나누고 독점 튜토리얼을 보려면 팔로우하세요.</value>
+  </data>
+  <data name="SubscribeWindowContentTtile" xml:space="preserve">
+    <value>저희를 팔로우하고 PDFgear를 평가하세요</value>
+  </data>
+  <data name="SubscribeWindowDesc" xml:space="preserve">
+    <value>독점적인 튜토리얼과 기술에 액세스하고 커뮤니티 성장을 돕습니다.</value>
+  </data>
+  <data name="SubscribeWindowFollowButtonText" xml:space="preserve">
+    <value>따르다</value>
+  </data>
+  <data name="SubscribeWindowHeader" xml:space="preserve">
+    <value>팔로우하여 지원</value>
+  </data>
+  <data name="SubscribeWindowSubscribeButtonText" xml:space="preserve">
+    <value>구독하다</value>
+  </data>
+  <data name="SubscribeWindowTrustPilotBtn" xml:space="preserve">
+    <value>Trustpilot에 평가하기</value>
+  </data>
+  <data name="SurveyWinBtnCancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="SurveyWinBtnGo" xml:space="preserve">
+    <value>가다</value>
+  </data>
+  <data name="SurveyWinText" xml:space="preserve">
+    <value>PDFgear를 클릭 한 번으로 공유하여 지원하세요.</value>
+  </data>
+  <data name="SurveyWinTitle" xml:space="preserve">
+    <value>PDFgear가 마음에 드나요? </value>
+  </data>
+  <data name="SurveyWinTitle1" xml:space="preserve">
+    <value>친구와 공유!</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnByOkMsg" xml:space="preserve">
+    <value>이전 버전으로 되돌렸습니다. 이 변화를 적용하려면PDFgear를 재시작해 주세요.</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnMsg" xml:space="preserve">
+    <value>정말 PDFgear를 이전 버전으로 되돌리시겠습니까?</value>
+  </data>
+  <data name="TextBoxDefaultInputTextContent" xml:space="preserve">
+    <value>이곳에 텍스트를 추가하세요</value>
+  </data>
+  <data name="ToolAppThemeAutoMode" xml:space="preserve">
+    <value>시스템 테마</value>
+  </data>
+  <data name="ToolAppThemeDarkMode" xml:space="preserve">
+    <value>다크</value>
+  </data>
+  <data name="ToolAppThemeLightMode" xml:space="preserve">
+    <value>라이트</value>
+  </data>
+  <data name="ToolAppThemeTitle" xml:space="preserve">
+    <value>테마</value>
+  </data>
+  <data name="ToolbarExitEditButtonContent" xml:space="preserve">
+    <value>편집 종료</value>
+  </data>
+  <data name="ToolbarOpacityPickerTooltip" xml:space="preserve">
+    <value>투명도</value>
+  </data>
+  <data name="ToolbarSetDefaultButtonContent" xml:space="preserve">
+    <value>기본으로 설정</value>
+  </data>
+  <data name="TooltipDesc_AI" xml:space="preserve">
+    <value>PDFgear Copilot을 활성화하여 PDF와 대화합니다.</value>
+  </data>
+  <data name="TooltipDesc_AddSignature" xml:space="preserve">
+    <value>PDF에 디지털 서명을 위한 서명 필드를 추가합니다.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateEllipse" xml:space="preserve">
+    <value>타원 그리기.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHidden" xml:space="preserve">
+    <value>PDF에서 모든 댓글 숨기기.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHighlight" xml:space="preserve">
+    <value>선택한 텍스트 강조 표시.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateInk" xml:space="preserve">
+    <value>자유롭게 그리기.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateLine" xml:space="preserve">
+    <value>선 그리기.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateManage" xml:space="preserve">
+    <value>댓글 패널을 열어 댓글을 탐색, 필터링 및 삭제.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateNote" xml:space="preserve">
+    <value>스티키 노트 추가.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShape" xml:space="preserve">
+    <value>직사각형 그리기.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShow" xml:space="preserve">
+    <value>PDF에서 모든 댓글 표시하기.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateSignature" xml:space="preserve">
+    <value>그리기, 입력 또는 이미지를 업로드하여 서명 추가.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStamp" xml:space="preserve">
+    <value>스탬프 추가, 생성 및 관리. 사용자 정의 스탬프 지원.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStrike" xml:space="preserve">
+    <value>선택한 텍스트에 취소선을 추가.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTextBox" xml:space="preserve">
+    <value>테두리가 있는 텍스트 주석 추가.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTypeWriter" xml:space="preserve">
+    <value>테두리 없는 텍스트 주석 추가.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateUnderline" xml:space="preserve">
+    <value>선택한 텍스트에 밑줄 추가.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateWatermark" xml:space="preserve">
+    <value>워터마크 추가 또는 편집.</value>
+  </data>
+  <data name="TooltipDesc_AutoScroll" xml:space="preserve">
+    <value>PDF 파일을 자동으로 스크롤합니다. 스크롤을 종료하려면 Esc 키를 누르세요.</value>
+  </data>
+  <data name="TooltipDesc_BatchPrint" xml:space="preserve">
+    <value>여러 개의 PDF 파일을 한 번에 인쇄합니다.</value>
+  </data>
+  <data name="TooltipDesc_Certificate" xml:space="preserve">
+    <value>암호화 및 서명을 위한 디지털 ID와 신뢰할 수 있는 인증서를 관리합니다.</value>
+  </data>
+  <data name="TooltipDesc_Compress" xml:space="preserve">
+    <value>PDF 파일 크기 줄이기.</value>
+  </data>
+  <data name="TooltipDesc_Convert" xml:space="preserve">
+    <value>PDF를 다른 형식으로 변환하거나 다른 형식에서 PDF 만들기.</value>
+  </data>
+  <data name="TooltipDesc_CreateNewPDF" xml:space="preserve">
+    <value>새 PDF 파일 만들기.</value>
+  </data>
+  <data name="TooltipDesc_CropPage" xml:space="preserve">
+    <value>페이지 여백을 자르기.</value>
+  </data>
+  <data name="TooltipDesc_DocumentProperties" xml:space="preserve">
+    <value>PDF 문서 속성 보기 및 편집.</value>
+  </data>
+  <data name="TooltipDesc_EditObject" xml:space="preserve">
+    <value>텍스트를 블록으로 나누어 이동 및 편집하기.</value>
+  </data>
+  <data name="TooltipDesc_EditText" xml:space="preserve">
+    <value>PDF에서 텍스트 편집.</value>
+  </data>
+  <data name="TooltipDesc_Encrypt" xml:space="preserve">
+    <value>디지털 인증서를 사용하여 PDF를 암호화하고 내용을 보호합니다.</value>
+  </data>
+  <data name="TooltipDesc_Find" xml:space="preserve">
+    <value>PDF에서 텍스트 검색하기.</value>
+  </data>
+  <data name="TooltipDesc_Flatten" xml:space="preserve">
+    <value>모든 주석을 콘텐츠 레이어에 병합하여 선택 및 편집할 수 없도록 만듭니다.</value>
+  </data>
+  <data name="TooltipDesc_Highlight" xml:space="preserve">
+    <value>직사각형 영역을 강조 표시.</value>
+  </data>
+  <data name="TooltipDesc_HighlightForm" xml:space="preserve">
+    <value>PDF에서 인터랙티브 폼 필드를 강조 표시.</value>
+  </data>
+  <data name="TooltipDesc_InsertHeaderFooter" xml:space="preserve">
+    <value>머리말 및 꼬리말 추가 또는 편집.</value>
+  </data>
+  <data name="TooltipDesc_InsertImage" xml:space="preserve">
+    <value>이미지 추가.</value>
+  </data>
+  <data name="TooltipDesc_InsertPageNumber" xml:space="preserve">
+    <value>페이지 번호 추가 또는 편집.</value>
+  </data>
+  <data name="TooltipDesc_Link" xml:space="preserve">
+    <value>링크 추가 또는 편집.</value>
+  </data>
+  <data name="TooltipDesc_OCR" xml:space="preserve">
+    <value>이미지만 포함된 페이지에 OCR을 수행하여 검색 가능하게 만듭니다.</value>
+  </data>
+  <data name="TooltipDesc_Open" xml:space="preserve">
+    <value>PDF 파일 열기.</value>
+  </data>
+  <data name="TooltipDesc_PageDelete" xml:space="preserve">
+    <value>지정된 페이지 삭제.</value>
+  </data>
+  <data name="TooltipDesc_PageExtract" xml:space="preserve">
+    <value>지정된 페이지를 추출하여 새 PDF 만들기.</value>
+  </data>
+  <data name="TooltipDesc_PageInsert" xml:space="preserve">
+    <value>현재 PDF에 빈 페이지, 스캔한 페이지, 이미지, Word 문서 또는 다른 PDF를 삽입.</value>
+  </data>
+  <data name="TooltipDesc_PageMerge" xml:space="preserve">
+    <value>여러 PDF 파일을 하나의 PDF로 결합.</value>
+  </data>
+  <data name="TooltipDesc_PageRotateLeft" xml:space="preserve">
+    <value>페이지 보기 왼쪽으로 회전(반시계방향).</value>
+  </data>
+  <data name="TooltipDesc_PageRotateRight" xml:space="preserve">
+    <value>페이지 보기 오른쪽으로 회전 (시계방향).</value>
+  </data>
+  <data name="TooltipDesc_PageSplit" xml:space="preserve">
+    <value>PDF를 여러 파일로 분할.</value>
+  </data>
+  <data name="TooltipDesc_Present" xml:space="preserve">
+    <value>PDF를 슬라이드쇼로 표시.</value>
+  </data>
+  <data name="TooltipDesc_Print" xml:space="preserve">
+    <value>PDF 파일 인쇄.</value>
+  </data>
+  <data name="TooltipDesc_ProtectPassword" xml:space="preserve">
+    <value>PDF에 암호로 보호 설정하기.</value>
+  </data>
+  <data name="TooltipDesc_ProtectRemove" xml:space="preserve">
+    <value>PDF에서 암호를 제거.</value>
+  </data>
+  <data name="TooltipDesc_Read" xml:space="preserve">
+    <value>PDF 파일을 소리 내어 읽기.</value>
+  </data>
+  <data name="TooltipDesc_Redact" xml:space="preserve">
+    <value>민감한 정보를 표시하여 영구적으로 제거합니다.</value>
+  </data>
+  <data name="TooltipDesc_Redo" xml:space="preserve">
+    <value>마지막 취소한 작업 다시 실행.</value>
+  </data>
+  <data name="TooltipDesc_Save" xml:space="preserve">
+    <value>PDF 파일 저장.</value>
+  </data>
+  <data name="TooltipDesc_SaveAs" xml:space="preserve">
+    <value>PDF 파일의 복사본 저장.</value>
+  </data>
+  <data name="TooltipDesc_Screenshot" xml:space="preserve">
+    <value>PDF 스크린샷을 캡처할 영역을 선택.</value>
+  </data>
+  <data name="TooltipDesc_Translate" xml:space="preserve">
+    <value>선택하거나 붙여넣은 텍스트를 지정된 언어로 번역합니다.</value>
+  </data>
+  <data name="TooltipDesc_Undo" xml:space="preserve">
+    <value>마지막 작업 실행 취소.</value>
+  </data>
+  <data name="TooltipDesc_Update" xml:space="preserve">
+    <value>PDFgear 업데이트 확인.</value>
+  </data>
+  <data name="TranslatePanelAuto" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="TranslatePanelAutoDetect" xml:space="preserve">
+    <value>자동 감지</value>
+  </data>
+  <data name="TranslatePanelAutoTranslateBtn" xml:space="preserve">
+    <value>선택한 텍스트 자동 번역</value>
+  </data>
+  <data name="TranslatePanelInputPlaceHolder" xml:space="preserve">
+    <value>여기에 텍스트 입력 또는 붙여넣기</value>
+  </data>
+  <data name="TranslatePanelOutputPlaceHolder" xml:space="preserve">
+    <value>번역</value>
+  </data>
+  <data name="UnknownAttachmentModifyDateText" xml:space="preserve">
+    <value>알 수 없음</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Name" xml:space="preserve">
+    <value>이름:</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Tip" xml:space="preserve">
+    <value>팁:</value>
+  </data>
+  <data name="UnsignedDigSignPropMessage_DuplicatedFieldName" xml:space="preserve">
+    <value>필드 이름이 중복될 수 없습니다.</value>
+  </data>
+  <data name="UnsupportedImageMsg" xml:space="preserve">
+    <value>이미지 파일이 손상되었거나 지원되지 않는 형식이므로 로드하지 못했습니다.  다른 이미지 파일을 선택하고 다시 시도하십시오.</value>
+  </data>
+  <data name="ViewToolbarSaveFailed" xml:space="preserve">
+    <value>문서를 저장하지 못했습니다.  다시 시도해 주세요.</value>
+  </data>
+  <data name="ViewToolbarSave_DigSigMaskSaveAs" xml:space="preserve">
+    <value>문서에 서명이 포함되어 있으므로 복사본으로 저장해야 합니다.</value>
+  </data>
+  <data name="ViewToorbarFileChanged" xml:space="preserve">
+    <value>문서가 편집되었습니다.  저장하시겠습니까?</value>
+  </data>
+  <data name="ViewerContainerEditBanner" xml:space="preserve">
+    <value>텍스트 편집 모드를 사용 중입니다.</value>
+  </data>
+  <data name="WIA_ERROR_BUSY" xml:space="preserve">
+    <value>디바이스가 사용 중입니다. 이 장치를 사용하는 앱을 닫거나 완료되기를 기다린 다음 다시 시도하십시오.</value>
+  </data>
+  <data name="WIA_ERROR_COVER_OPEN" xml:space="preserve">
+    <value>하나 이상의 디바이스 커버가 열려 있습니다.</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_COMMUNICATION" xml:space="preserve">
+    <value>WIA 디바이스와의 통신이 실패했습니다. 디바이스의 전원이 켜지고 PC에 연결되어 있는지 확인합니다. 문제가 지속되면 디바이스의 연결을 끊고 다시 연결합니다.</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_LOCKED" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="WIA_ERROR_EXCEPTION_IN_DRIVER" xml:space="preserve">
+    <value>장치 드라이버에서 예외가 발생했습니다.</value>
+  </data>
+  <data name="WIA_ERROR_GENERAL_ERROR" xml:space="preserve">
+    <value>WIA 디바이스에서 알 수 없는 오류가 발생했습니다.</value>
+  </data>
+  <data name="WIA_ERROR_INCORRECT_HARDWARE_SETTING" xml:space="preserve">
+    <value>WIA 디바이스에 잘못된 설정이 있습니다.</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_COMMAND" xml:space="preserve">
+    <value>디바이스는 이 명령을 지원하지 않습니다.</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_DRIVER_RESPONSE" xml:space="preserve">
+    <value>드라이버의 응답이 잘못되었습니다.</value>
+  </data>
+  <data name="WIA_ERROR_ITEM_DELETED" xml:space="preserve">
+    <value>WIA 디바이스가 삭제되었습니다. 더 이상 사용할 수 없습니다.</value>
+  </data>
+  <data name="WIA_ERROR_LAMP_OFF" xml:space="preserve">
+    <value>스캐너의 램프가 꺼져 있습니다.</value>
+  </data>
+  <data name="WIA_ERROR_MAXIMUM_PRINTER_ENDORSER_COUNTER" xml:space="preserve">
+    <value>Imprinter/Endorser 항목이 WIA_IPS_PRINTER_ENDORSER_COUNTER 유효한 최대 값에 도달하고 0으로 다시 설정되었기 때문에 검사 작업이 중단되었습니다. 이 기능은 Windows 8 이상 버전의 Windows에서 사용할 수 있습니다.</value>
+  </data>
+  <data name="WIA_ERROR_MULTI_FEED" xml:space="preserve">
+    <value>여러 페이지 피드 조건으로 인해 스캔 오류가 발생했습니다. 이 기능은 Windows 8 이상 버전의 Windows에서 사용할 수 있습니다.</value>
+  </data>
+  <data name="WIA_ERROR_OFFLINE" xml:space="preserve">
+    <value>디바이스가 오프라인 상태입니다. 디바이스의 전원이 켜지고 PC에 연결되어 있는지 확인합니다.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_EMPTY" xml:space="preserve">
+    <value>문서 공급기에 문서가 없거나 스캐너가 사용 중입니다. 나중에 다시 시도해 주세요.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_JAM" xml:space="preserve">
+    <value>스캐너의 문서 피더에 용지가 걸려 있습니다.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_PROBLEM" xml:space="preserve">
+    <value>스캐너의 문서 피더에서 지정되지 않은 문제가 발생했습니다.</value>
+  </data>
+  <data name="WIA_ERROR_USER_INTERVENTION" xml:space="preserve">
+    <value>WIA 디바이스에 문제가 있습니다. 디바이스가 켜져 있고, 온라인 상태이고, 케이블이 제대로 연결되어 있는지 확인합니다.</value>
+  </data>
+  <data name="WIA_ERROR_WARMING_UP" xml:space="preserve">
+    <value>장치가 예열되고 있습니다.</value>
+  </data>
+  <data name="WIA_S_NO_DEVICE_AVAILABLE" xml:space="preserve">
+    <value>스캐너 디바이스를 찾을 수 없습니다. 디바이스가 온라인 상태이고 PC에 연결되어 있고 PC에 올바른 드라이버가 설치되어 있는지 확인합니다.</value>
+  </data>
+  <data name="WinBtnAllPagesContent" xml:space="preserve">
+    <value>모든 페이지</value>
+  </data>
+  <data name="WinBtnBackContent" xml:space="preserve">
+    <value>뒤로</value>
+  </data>
+  <data name="WinBtnCancelContent" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="WinBtnCloseContent" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="WinBtnNextContent" xml:space="preserve">
+    <value>다음</value>
+  </data>
+  <data name="WinBtnOkContent" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="WinBtnSaveContent" xml:space="preserve">
+    <value>저장하기</value>
+  </data>
+  <data name="WinBtnSelectedPagesContent" xml:space="preserve">
+    <value>선택한 페이지</value>
+  </data>
+  <data name="WinCbxAutoItemContent" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="WinCbxChildAllPagesContent" xml:space="preserve">
+    <value>범위 내 모든 페이지</value>
+  </data>
+  <data name="WinCbxChildEvenPagesContent" xml:space="preserve">
+    <value>짝수 페이지만</value>
+  </data>
+  <data name="WinCbxChildOddPagesContent" xml:space="preserve">
+    <value>홀수 페이지만</value>
+  </data>
+  <data name="WinConvertToolBtnExcelToPDFText" xml:space="preserve">
+    <value>Excel를 PDF로</value>
+  </data>
+  <data name="WinConvertToolBtnImageToPDFText" xml:space="preserve">
+    <value>이미지를 PDF로</value>
+  </data>
+  <data name="WinConvertToolBtnPPTToPDFText" xml:space="preserve">
+    <value>PPT를 PDF로</value>
+  </data>
+  <data name="WinConvertToolBtnRTFToPDFText" xml:space="preserve">
+    <value>RTF를 PDF로</value>
+  </data>
+  <data name="WinConvertToolBtnTXTToPDFText" xml:space="preserve">
+    <value>TXT를 PDF로</value>
+  </data>
+  <data name="WinConvertToolBtnWordToPDF" xml:space="preserve">
+    <value>Word를 PDF로</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackground" xml:space="preserve">
+    <value>배경 제거</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackgroundToolTip" xml:space="preserve">
+    <value>이미지의 모든 흰색 픽셀을 제거합니다.</value>
+  </data>
+  <data name="WinCustomizeStampEditTiltle" xml:space="preserve">
+    <value>스탬프 편집하기</value>
+  </data>
+  <data name="WinCustomizeStampMaxCharactersMsg" xml:space="preserve">
+    <value>글자 수가 50개를 넘을 수 없습니다!</value>
+  </data>
+  <data name="WinCustomizeStampNewTiltle" xml:space="preserve">
+    <value>스탬프 만들기</value>
+  </data>
+  <data name="WinCustomizeStampPlaceHolderContent" xml:space="preserve">
+    <value>여기 입력하세요…</value>
+  </data>
+  <data name="WinEditTextInputLocationTip" xml:space="preserve">
+    <value>텍스트 편집:</value>
+  </data>
+  <data name="WinEditorTipBtnEditAnyway" xml:space="preserve">
+    <value>무시하고 편집</value>
+  </data>
+  <data name="WinEditorTipBtnUseConverter" xml:space="preserve">
+    <value>변환기 사용하기</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce1" xml:space="preserve">
+    <value>•  PDF를 다양한 파일 형식으로 변환합니다.</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce2" xml:space="preserve">
+    <value>•  OCR에 따라 레이아웃이 조정됩니다.</value>
+  </data>
+  <data name="WinEditorTipRecommendLeft" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="WinEditorTipRecommendMiddle" xml:space="preserve">
+    <value>워드로 변환</value>
+  </data>
+  <data name="WinEditorTipRecommendRight" xml:space="preserve">
+    <value>변환기를 사용하시는 걸 추천드립니다.</value>
+  </data>
+  <data name="WinExtractTextBtnCopyContent" xml:space="preserve">
+    <value>텍스트를 클립보드로 복사하기</value>
+  </data>
+  <data name="WinExtractTextLabelCopiedContent" xml:space="preserve">
+    <value>복사됨</value>
+  </data>
+  <data name="WinExtractTextLabelExtractedContent" xml:space="preserve">
+    <value>추출됨</value>
+  </data>
+  <data name="WinExtractTextLabelScreenshotContent" xml:space="preserve">
+    <value>스크린샷</value>
+  </data>
+  <data name="WinExtractTextTitle" xml:space="preserve">
+    <value>텍스트 추출하기</value>
+  </data>
+  <data name="WinFeedBackBtnSendContent" xml:space="preserve">
+    <value>보내기</value>
+  </data>
+  <data name="WinFeedBackEmailAddrPlaceHoderContent" xml:space="preserve">
+    <value>이메일 주소 (선택)</value>
+  </data>
+  <data name="WinFeedBackEmailContentPlaceHoderContent" xml:space="preserve">
+    <value>발생한 문제와 그 문제를 재현하기 위한 방법을 알려주시기 바랍니다. 갑사합니다.</value>
+  </data>
+  <data name="WinFeedBackErrorInvalidEmailCapMsg" xml:space="preserve">
+    <value>잘못된 이메일 형식입니다</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc1" xml:space="preserve">
+    <value>Microsoft Store의 지역 설정은</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc2" xml:space="preserve">
+    <value>, 현재 위치와 일치하지 않습니다.  구매 실패의 원인이 됩니다.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc3" xml:space="preserve">
+    <value>여기를 클릭</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc4" xml:space="preserve">
+    <value>Microsoft Store의 지역 설정을 변경하려면</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc1" xml:space="preserve">
+    <value>결제는 Microsoft에서 처리합니다.  해결 방법은</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc2" xml:space="preserve">
+    <value>도움말을 참조하세요.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3" xml:space="preserve">
+    <value>PDFgear를 다시 설치하고 Microsoft Store에서 동일한 Microsoft 계정으로 동일한 가격으로 구입하십시오.  이것은 구매를 복원하기 위한 것이며 더 이상 비용을 청구하지 않습니다.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc1" xml:space="preserve">
+    <value>이전에 PDFgear에 대해 이미 지불한 경우 먼저 Microsoft Store에서 동일한 Microsoft 계정에 로그인한 다음</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc2" xml:space="preserve">
+    <value>여기를 클릭</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc3" xml:space="preserve">
+    <value>하여 구매를 복원하십시오.  복원에 실패한 경우 지원에 문의하십시오.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer4" xml:space="preserve">
+    <value>도움말 탭에서 업그레이드 버튼을 클릭하고 아래의 '구매 복원' 버튼을 클릭하세요.  그런 다음 PDFgear 는 몇 초 안에 성공적으로 구매를 복원합니다.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer5" xml:space="preserve">
+    <value>다음 확인란을 선택하고 하드웨어 가속을 해제하십시오.  그런 다음 다시 시도하십시오.</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion1" xml:space="preserve">
+    <value>Microsoft Store의 지역 설정을 변경하는 데 문제가 있습니까?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion2" xml:space="preserve">
+    <value>여전히 구매에 문제가 있습니까?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion3" xml:space="preserve">
+    <value>PDFgear 비용을 지불한 후에도 여전히 업그레이드를 요청하는 이유는 무엇입니까?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion4" xml:space="preserve">
+    <value>PDFgear를 다시 설치하거나 다른 장치에 설치할 때 여전히 비용을 요구하는 이유는 무엇입니까?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion5" xml:space="preserve">
+    <value>PDF 페이지를 스크롤할 수 없는 이유는 무엇입니까?</value>
+  </data>
+  <data name="WinFeedBackHardwareAccelerationCHBK" xml:space="preserve">
+    <value>하드웨어 가속 끄기</value>
+  </data>
+  <data name="WinFeedBackInvalidEmailMsg" xml:space="preserve">
+    <value>메시지를 전송하려면 유효한 이메일 주소를 입력하세요</value>
+  </data>
+  <data name="WinFeedBackLabelPrivacypolicyContent" xml:space="preserve">
+    <value>개인정보보호정책</value>
+  </data>
+  <data name="WinFeedBackSendProblemfileContent" xml:space="preserve">
+    <value>문제 진단을 위해 문제 파일을 보내주세요.</value>
+  </data>
+  <data name="WinFeedBackSendSuccessCapMsg" xml:space="preserve">
+    <value>전송 성공</value>
+  </data>
+  <data name="WinFeedBackSendSuccessMsg" xml:space="preserve">
+    <value>고객님의 메시지를 수신했습니다. 감사합니다!</value>
+  </data>
+  <data name="WinFeedBackSendTryagainMsg" xml:space="preserve">
+    <value>메시지를 전송하지 못했습니다. 다시 시도해 주세요!</value>
+  </data>
+  <data name="WinFindCaseSensitiveBtnContent" xml:space="preserve">
+    <value>대소문자 구분</value>
+  </data>
+  <data name="WinFindDocumentNeedOcrTips" xml:space="preserve">
+    <value>스캔한 PDF임을 감지했습니다. 스캔 된 PDF에서 문자를 복사하고 검색하려면 OCR을 수행하십시오</value>
+  </data>
+  <data name="WinFindMatchallwordsBtnContent" xml:space="preserve">
+    <value>부분검색 비허용</value>
+  </data>
+  <data name="WinFindOCRNotShowAgain" xml:space="preserve">
+    <value>이 파일에 대해 다시 표시하지 않음</value>
+  </data>
+  <data name="WinFindPerformOCR" xml:space="preserve">
+    <value>OCR 수행</value>
+  </data>
+  <data name="WinFindPlaceHolderContent" xml:space="preserve">
+    <value>찾기</value>
+  </data>
+  <data name="WinHistoryClearLabelClickTips" xml:space="preserve">
+    <value>정말 모든 최근 파일을 삭제하시겠습니까?</value>
+  </data>
+  <data name="WinIAP2AnnualPannelTitle" xml:space="preserve">
+    <value>연간 이용</value>
+  </data>
+  <data name="WinIAP2BuyNowBtnContent" xml:space="preserve">
+    <value>지금 구매</value>
+  </data>
+  <data name="WinIAP2LifetimePriceDescribe" xml:space="preserve">
+    <value>일시불</value>
+  </data>
+  <data name="WinLabelChildRangeContent" xml:space="preserve">
+    <value>하위 범위</value>
+  </data>
+  <data name="WinLabelRangeContent" xml:space="preserve">
+    <value>범위</value>
+  </data>
+  <data name="WinLabelSelectedpagesContent" xml:space="preserve">
+    <value>선택한 페이지</value>
+  </data>
+  <data name="WinOCRCHBContent" xml:space="preserve">
+    <value>OCR(이미지에서 텍스트 추출)</value>
+  </data>
+  <data name="WinOCRProgressContent" xml:space="preserve">
+    <value>처리 중...</value>
+  </data>
+  <data name="WinOCRSelectLangTips" xml:space="preserve">
+    <value>언어 선택:</value>
+  </data>
+  <data name="WinOCRSelectedLineContextMenuEdit" xml:space="preserve">
+    <value>편집</value>
+  </data>
+  <data name="WinPageApplyingHeaderorFooterContent" xml:space="preserve">
+    <value>머리말 &amp; 꼬리말 적용 중</value>
+  </data>
+  <data name="WinPageCenterFooterTextLabelContent" xml:space="preserve">
+    <value>중앙 꼬리말</value>
+  </data>
+  <data name="WinPageCenterHeaderTextLabelContent" xml:space="preserve">
+    <value>중앙 머리말</value>
+  </data>
+  <data name="WinPageEgContent" xml:space="preserve">
+    <value>예: 1,8,9-12</value>
+  </data>
+  <data name="WinPageInsertBlankTitle" xml:space="preserve">
+    <value>빈 페이지 삽입</value>
+  </data>
+  <data name="WinPageInsertImageTitle" xml:space="preserve">
+    <value>이미지에서 페이지 삽입</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnAddNewContent" xml:space="preserve">
+    <value>신규 추가</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnUpdateContent" xml:space="preserve">
+    <value>업데이트</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddChekContent" xml:space="preserve">
+    <value>문서에 이미 머리말과 꼬리말 또는 페이지 번호가 있습니다. 추가 중인 사항으로 업데이트하시겠습니까?</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddNoteContent" xml:space="preserve">
+    <value>참고: '신규 추가'를 선택하면, 기존 사항에 겹칠 수 있습니다.</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckEmptyContent" xml:space="preserve">
+    <value>이 문서에서 머리말과 꼬리말 또는 페이지 번호를 찾을 수 없습니다.</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckExistContent" xml:space="preserve">
+    <value>영구적으로 머리말과 꼬리말 또는 페이지 번호를 삭제하길 원하십니까?</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterUpdateCheckEmptyContent" xml:space="preserve">
+    <value>이 파일에서 머리말 또는 꼬리말을 찾을 수 없습니다.</value>
+  </data>
+  <data name="WinPageInsertSettingBlankPageCount" xml:space="preserve">
+    <value>페이지 수</value>
+  </data>
+  <data name="WinPageInsertSettingPageHeight" xml:space="preserve">
+    <value>높이</value>
+  </data>
+  <data name="WinPageInsertSettingPageLandscape" xml:space="preserve">
+    <value>가로 형식</value>
+  </data>
+  <data name="WinPageInsertSettingPagePortrait" xml:space="preserve">
+    <value>세로 형식</value>
+  </data>
+  <data name="WinPageInsertSettingPageSize" xml:space="preserve">
+    <value>페이지 크기</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemCustomize" xml:space="preserve">
+    <value>맞춤 설정</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemDefault" xml:space="preserve">
+    <value>기본값</value>
+  </data>
+  <data name="WinPageInsertSettingPageWidth" xml:space="preserve">
+    <value>너비</value>
+  </data>
+  <data name="WinPageInsertdateLabelContent" xml:space="preserve">
+    <value>삽입 날짜</value>
+  </data>
+  <data name="WinPageInsertfilenameLabelContent" xml:space="preserve">
+    <value>삽입 파일 이름</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentCenterContent" xml:space="preserve">
+    <value>중앙</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLabelContent" xml:space="preserve">
+    <value>맞춤</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLeftContent" xml:space="preserve">
+    <value>왼쪽</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentRightContent" xml:space="preserve">
+    <value>오른쪽</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionFooterContent" xml:space="preserve">
+    <value>꼬리말</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionHeaderContent" xml:space="preserve">
+    <value>머리말</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionLabelConent" xml:space="preserve">
+    <value>위치</value>
+  </data>
+  <data name="WinPageInsertpageNumStyleLabelContent" xml:space="preserve">
+    <value>스타일</value>
+  </data>
+  <data name="WinPageInsertpagenumberLabelContent" xml:space="preserve">
+    <value>삽입 페이지 번호</value>
+  </data>
+  <data name="WinPageLeftFooterTextLabelContent" xml:space="preserve">
+    <value>왼쪽 꼬리말</value>
+  </data>
+  <data name="WinPageLeftHeaderTextLabelContent" xml:space="preserve">
+    <value>왼쪽 머리말</value>
+  </data>
+  <data name="WinPageLoadingHeaderorFooterContent" xml:space="preserve">
+    <value>머리말 &amp; 꼬리말 및 페이지 번호 로드 중</value>
+  </data>
+  <data name="WinPageMarginBottomLabelContent" xml:space="preserve">
+    <value>아래쪽</value>
+  </data>
+  <data name="WinPageMarginLabelContent" xml:space="preserve">
+    <value>여백</value>
+  </data>
+  <data name="WinPageMarginLeftLabelContent" xml:space="preserve">
+    <value>왼쪽</value>
+  </data>
+  <data name="WinPageMarginRightLabelContent" xml:space="preserve">
+    <value>오른쪽</value>
+  </data>
+  <data name="WinPageMarginTopLabelContent" xml:space="preserve">
+    <value>위쪽</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageByNumContent" xml:space="preserve">
+    <value>페이지 XXX이후</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageContent" xml:space="preserve">
+    <value>선택된 페이지 다음</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageByNumContent" xml:space="preserve">
+    <value>페이지 XXX이전</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageContent" xml:space="preserve">
+    <value>선택된 페이지 이전</value>
+  </data>
+  <data name="WinPageMergeBtnBeginingContent" xml:space="preserve">
+    <value>처음</value>
+  </data>
+  <data name="WinPageMergeBtnEndContent" xml:space="preserve">
+    <value>끝</value>
+  </data>
+  <data name="WinPageMergeCorrectPageMsg" xml:space="preserve">
+    <value>잘못된 페이지 범위입니다. 올바른 페이지 범위를 설정해 주세요.</value>
+  </data>
+  <data name="WinPageMergeCorruptedDocMsg" xml:space="preserve">
+    <value>손상된 문서입니다. 선택된 문서를 확인해 주세요</value>
+  </data>
+  <data name="WinPageMergeInsertfailedMsg" xml:space="preserve">
+    <value>문서에 페이지를 삽입하지 못했습니다</value>
+  </data>
+  <data name="WinPageMergeLabelInserttoContent" xml:space="preserve">
+    <value>이곳에 삽입하기</value>
+  </data>
+  <data name="WinPageMergeLabelLocationContent" xml:space="preserve">
+    <value>위치</value>
+  </data>
+  <data name="WinPageMergeLabelSelectFileContent" xml:space="preserve">
+    <value>파일 선택</value>
+  </data>
+  <data name="WinPageMergeLabelSourceContent" xml:space="preserve">
+    <value>출처</value>
+  </data>
+  <data name="WinPageMergeLoadingText" xml:space="preserve">
+    <value>파일 로딩 중...</value>
+  </data>
+  <data name="WinPageMergeMenuInsertfromfileContent" xml:space="preserve">
+    <value>파일로부터 삽입</value>
+  </data>
+  <data name="WinPageMergeOpenfailedMsg" xml:space="preserve">
+    <value>선택된 문서를 열 수 없습니다</value>
+  </data>
+  <data name="WinPageMergeTitle" xml:space="preserve">
+    <value>파일 합치기</value>
+  </data>
+  <data name="WinPagePreviewLabelContent" xml:space="preserve">
+    <value>미리 보기</value>
+  </data>
+  <data name="WinPagePreviewPageLabelContent" xml:space="preserve">
+    <value>페이지 미리 보기</value>
+  </data>
+  <data name="WinPageReorderToolTipContent" xml:space="preserve">
+    <value>선택된 페이지(들)의 순서를 변경하길 원하십니까?</value>
+  </data>
+  <data name="WinPageRightFooterTextLabelContent" xml:space="preserve">
+    <value>오른쪽 꼬리말</value>
+  </data>
+  <data name="WinPageRightHeaderTextLabelContent" xml:space="preserve">
+    <value>오른쪽 머리말</value>
+  </data>
+  <data name="WinPageSplitBtnMaxpageCountContent" xml:space="preserve">
+    <value>Max page count</value>
+  </data>
+  <data name="WinPageSplitBtnPagerangeContent" xml:space="preserve">
+    <value>페이지 범위</value>
+  </data>
+  <data name="WinPageSplitLabelOutputlocationContent" xml:space="preserve">
+    <value>Output location</value>
+  </data>
+  <data name="WinPageSplitLabelSplitModeContent" xml:space="preserve">
+    <value>분할 모드</value>
+  </data>
+  <data name="WinPageSplitTitle" xml:space="preserve">
+    <value>파일 분할</value>
+  </data>
+  <data name="WinPageStartpagenumbereLabelContent" xml:space="preserve">
+    <value>시작 페이지 번호</value>
+  </data>
+  <data name="WinPrinterBtnClassicModeContent" xml:space="preserve">
+    <value>클래식 모드</value>
+  </data>
+  <data name="WinPrinterBtnPropertyContent" xml:space="preserve">
+    <value>환경 설정...</value>
+  </data>
+  <data name="WinPrinterCancelPrintContent" xml:space="preserve">
+    <value>인쇄 작업을 정말로 취소하시겠습니까?</value>
+  </data>
+  <data name="WinPrinterChbkGrayscaleContent" xml:space="preserve">
+    <value>그레이스케일</value>
+  </data>
+  <data name="WinPrinterCollateContent" xml:space="preserve">
+    <value>한 부씩 인쇄</value>
+  </data>
+  <data name="WinPrinterCopiesContent" xml:space="preserve">
+    <value>복사본</value>
+  </data>
+  <data name="WinPrinterDuplexContent" xml:space="preserve">
+    <value>양면 인쇄</value>
+  </data>
+  <data name="WinPrinterDuplexFlipLongContent" xml:space="preserve">
+    <value>긴 면을 기준으로 넘기기</value>
+  </data>
+  <data name="WinPrinterDuplexFlipShortContent" xml:space="preserve">
+    <value>짧은 면을 기준으로 넘기기</value>
+  </data>
+  <data name="WinPrinterNameContent" xml:space="preserve">
+    <value>프린터</value>
+  </data>
+  <data name="WinPrinterNoPrinterContent" xml:space="preserve">
+    <value>프린터가 감지되지 않음</value>
+  </data>
+  <data name="WinPrinterPageRangErrorContent" xml:space="preserve">
+    <value>값은 1에서 1000 사이의 정수여야 합니다.</value>
+  </data>
+  <data name="WinPrinterPaperOrientationContent" xml:space="preserve">
+    <value>방향</value>
+  </data>
+  <data name="WinPrinterPaperSizeContent" xml:space="preserve">
+    <value>용지 크기</value>
+  </data>
+  <data name="WinPrinterPrintAnnotationContent" xml:space="preserve">
+    <value>댓글 인쇄</value>
+  </data>
+  <data name="WinPrinterPrintModeContent" xml:space="preserve">
+    <value>페이지 크기 조정</value>
+  </data>
+  <data name="WinPurchasedAlreadySubTitle" xml:space="preserve">
+    <value>이미 구매함</value>
+  </data>
+  <data name="WinPurchasedTitle" xml:space="preserve">
+    <value>성공적으로 구매하셨습니다.  이제 PDFgear를 최대한 즐기십시오.</value>
+  </data>
+  <data name="WinPwdEntePwdTitle" xml:space="preserve">
+    <value>암호 입력</value>
+  </data>
+  <data name="WinPwdEnterTipContent" xml:space="preserve">
+    <value>이 문서는 암호를 사용하여 보호되어 있습니다. 아래에 암호를 입력하세요.</value>
+  </data>
+  <data name="WinPwdInputContent" xml:space="preserve">
+    <value>여기에 입력하세요…</value>
+  </data>
+  <data name="WinPwdInvalidTryAgainContent" xml:space="preserve">
+    <value>유효하지 않은 암호. 다시 시도하세요.</value>
+  </data>
+  <data name="WinPwdLabelConfrimContent" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="WinPwdLabelPasswordContent" xml:space="preserve">
+    <value>암호</value>
+  </data>
+  <data name="WinPwdMaxCharacterCheckContent" xml:space="preserve">
+    <value>최대 32자. 띄어쓰기 불가.</value>
+  </data>
+  <data name="WinPwdMinCharacterCheckContent" xml:space="preserve">
+    <value>최소 6자. 띄어쓰기 불가.</value>
+  </data>
+  <data name="WinPwdPasswordCheckEmptyContent" xml:space="preserve">
+    <value>암호가 필요합니다.</value>
+  </data>
+  <data name="WinPwdPasswordCheckInvalidContent" xml:space="preserve">
+    <value>암호가 유효하지 않습니다.</value>
+  </data>
+  <data name="WinPwdPasswordCheckMatchContent" xml:space="preserve">
+    <value>암호가 일치하지 않습니다.</value>
+  </data>
+  <data name="WinPwdPasswordKeepPermissionsPwdContent" xml:space="preserve">
+    <value>권한 암호로 유지합니다.</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipContent" xml:space="preserve">
+    <value>문서를 저장할 때까지 보안 설정이 적용되지 않습니다.</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipNotshowagainContent" xml:space="preserve">
+    <value>이 메시지를 다시 표시하지 않습니다</value>
+  </data>
+  <data name="WinPwdPasswordTooltipContent" xml:space="preserve">
+    <value>암호는 6~32자의 문자, 숫자와 기호만 사용 가능합니다.</value>
+  </data>
+  <data name="WinPwdRemoveCheckContent" xml:space="preserve">
+    <value>이 PDF 문서에 암호가 설정되어 있지 않습니다.</value>
+  </data>
+  <data name="WinPwdRemoveConfirmContent" xml:space="preserve">
+    <value>암호(들)를 제거하길 원하십니까?</value>
+  </data>
+  <data name="WinPwdSetPwdTitle" xml:space="preserve">
+    <value>암호 설정</value>
+  </data>
+  <data name="WinPwdWrongCheckContent" xml:space="preserve">
+    <value>암호가 잘못되었습니다.</value>
+  </data>
+  <data name="WinPwdillegalsymbolsCheckContent" xml:space="preserve">
+    <value>유효하지 않은 기호를 포함합니다.</value>
+  </data>
+  <data name="WinRate5StarsTitle" xml:space="preserve">
+    <value>너무 좋아요! 별점 5개를 주고 싶어요!</value>
+  </data>
+  <data name="WinRateFeedbackTitle" xml:space="preserve">
+    <value>피드백을 제공하고 싶습니다.</value>
+  </data>
+  <data name="WinRateLeaveGreatratingTitle" xml:space="preserve">
+    <value>좋은 평점과 리뷰를 남겨주세요!</value>
+  </data>
+  <data name="WinRateLessaminuteTitle" xml:space="preserve">
+    <value>평점을 주는데는 1분도 걸리지 않습니다.</value>
+  </data>
+  <data name="WinRateLoveTitle" xml:space="preserve">
+    <value>PDFgear가 좋아요?</value>
+  </data>
+  <data name="WinRateThanksforsupportTitle" xml:space="preserve">
+    <value>여러분의 성원에 감사드립니다!</value>
+  </data>
+  <data name="WinRestoreFaildLearnMoreContent" xml:space="preserve">
+    <value>더 알아보기</value>
+  </data>
+  <data name="WinRestoreFaildPossible1Content" xml:space="preserve">
+    <value>구독이 만료됨</value>
+  </data>
+  <data name="WinRestoreFaildPossible2Content" xml:space="preserve">
+    <value>유효한 구매를 찾을 수 없음</value>
+  </data>
+  <data name="WinRestoreFaildPossible3Content" xml:space="preserve">
+    <value>네트워크를 사용할 수 없음</value>
+  </data>
+  <data name="WinRestoreFaildPossibleContent" xml:space="preserve">
+    <value>가능한 원인</value>
+  </data>
+  <data name="WinRestoreFaildTitleContent" xml:space="preserve">
+    <value>복원 실패</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureExplain" xml:space="preserve">
+    <value>PDF에 병합되지 않은 서명이 있으며 저장 후 병합되는데, 실행하면 취소할 수 없습니다. 계속하시겠습니까?</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureNoteMsg" xml:space="preserve">
+    <value>이 PDF 파일을 저장하시겠습니까?</value>
+  </data>
+  <data name="WinScreenshotToolbarCancelContent" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="WinScreenshotToolbarCopyContent" xml:space="preserve">
+    <value>복사</value>
+  </data>
+  <data name="WinScreenshotToolbarDeleteContent" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="WinScreenshotToolbarDoneContent" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="WinScreenshotToolbarEditContent" xml:space="preserve">
+    <value>편집</value>
+  </data>
+  <data name="WinScreenshotToolbarSaveContent" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomInContent" xml:space="preserve">
+    <value>확대</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomOutContent" xml:space="preserve">
+    <value>축소</value>
+  </data>
+  <data name="WinSettingAISwitch" xml:space="preserve">
+    <value>PDFgear Copilot 활성화</value>
+  </data>
+  <data name="WinSettingReminnder" xml:space="preserve">
+    <value>받은 파일 알림</value>
+  </data>
+  <data name="WinSettingReminnderDesc" xml:space="preserve">
+    <value>새 PDF 파일을 받았을 때 알림 팝업</value>
+  </data>
+  <data name="WinShareSendFilleDescText" xml:space="preserve">
+    <value>파일을 찾은 다음 Messages, Onedrive, Google 드라이브 등에 끌어다 놓습니다.</value>
+  </data>
+  <data name="WinSignatureBtnAddPictureContent" xml:space="preserve">
+    <value>사진 추가</value>
+  </data>
+  <data name="WinSignatureBtnClearContent" xml:space="preserve">
+    <value>지우기</value>
+  </data>
+  <data name="WinSignatureContextMenuApplyMulPage" xml:space="preserve">
+    <value>여러 페이지에 배치</value>
+  </data>
+  <data name="WinSignatureContextMenuDetele" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="WinSignatureContextMenuDeteleInBatch" xml:space="preserve">
+    <value>일괄 삭제</value>
+  </data>
+  <data name="WinSignatureContextMenuFlatten" xml:space="preserve">
+    <value>병합</value>
+  </data>
+  <data name="WinSignatureContextMenuFlattenInBatch" xml:space="preserve">
+    <value>일괄적으로 병합</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchBtn" xml:space="preserve">
+    <value>모두 지우기</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchQuestion" xml:space="preserve">
+    <value>모든 페이지에서 이 서명을 삭제하시겠습니까?</value>
+  </data>
+  <data name="WinSignatureFlattenApplying" xml:space="preserve">
+    <value>서명 적용 중...</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchNoteMsg" xml:space="preserve">
+    <value>이 작업은 문서의 서명을 병합하며, 실행 후 취소할 수 없습니다. 실수한 경우 저장하지 않고 문서를 닫으세요.</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchQuestion" xml:space="preserve">
+    <value>서명을 병합하시겠습니까?</value>
+  </data>
+  <data name="WinSignatureFlattenProcess" xml:space="preserve">
+    <value>서명 병합 중...</value>
+  </data>
+  <data name="WinSignatureMaxNumLimitTip" xml:space="preserve">
+    <value>PDFgear는 최대 50개의 서명만 저장할 수 있습니다. 새 서명을 만들기 전에 일시적으로 사용하지 않는 서명을 삭제하십시오.</value>
+  </data>
+  <data name="WinSignatureMenuInputContent" xml:space="preserve">
+    <value>입력</value>
+  </data>
+  <data name="WinSignatureMenuInputIsEmptyMsg" xml:space="preserve">
+    <value>해당 입력란은 비워둘 수 없습니다!</value>
+  </data>
+  <data name="WinSignatureMenuPictureContent" xml:space="preserve">
+    <value>사진</value>
+  </data>
+  <data name="WinSignatureMenuWriteContent" xml:space="preserve">
+    <value>글 쓰기</value>
+  </data>
+  <data name="WinSignaturePageRangeIncorrect" xml:space="preserve">
+    <value>'범위'의 형식이 올바르지 않습니다.</value>
+  </data>
+  <data name="WinSignatureTitle" xml:space="preserve">
+    <value>서명 만들기</value>
+  </data>
+  <data name="WinStampSampleText" xml:space="preserve">
+    <value>샘플 텍스트</value>
+  </data>
+  <data name="WinStampTypeAppearanceHeader" xml:space="preserve">
+    <value>외형을</value>
+  </data>
+  <data name="WinStampTypeDateFormatCheckbox" xml:space="preserve">
+    <value>날짜와 시간</value>
+  </data>
+  <data name="WinStatuBarPDFAutoSaveText" xml:space="preserve">
+    <value>자동저장됨</value>
+  </data>
+  <data name="WinToolBarBtnHighlightContent" xml:space="preserve">
+    <value>영역 하이라이트</value>
+  </data>
+  <data name="WinUpgradeLiftTimeBtnContent" xml:space="preserve">
+    <value>평생 이용권</value>
+  </data>
+  <data name="WinUpgradeList10Content" xml:space="preserve">
+    <value>PDF 페이지 순서 변경</value>
+  </data>
+  <data name="WinUpgradeList11Content" xml:space="preserve">
+    <value>PDF 문서에 로그인</value>
+  </data>
+  <data name="WinUpgradeList12Content" xml:space="preserve">
+    <value>Compress PDF Files to a smaller size</value>
+  </data>
+  <data name="WinUpgradeList13Content" xml:space="preserve">
+    <value>PDF 파일을 워드, 엑셀, 이미지 등으로 변환</value>
+  </data>
+  <data name="WinUpgradeList14Content" xml:space="preserve">
+    <value>PDF 서명, 압축</value>
+  </data>
+  <data name="WinUpgradeList15Content" xml:space="preserve">
+    <value>페이지를 병합, 분할, 삭제, 삽입, 추출, 재정리</value>
+  </data>
+  <data name="WinUpgradeList16Content" xml:space="preserve">
+    <value>이미지를 텍스트로 변환 (OCR)</value>
+  </data>
+  <data name="WinUpgradeList17Content" xml:space="preserve">
+    <value>최대 10개 장치에서 이용</value>
+  </data>
+  <data name="WinUpgradeList18Content" xml:space="preserve">
+    <value>PDFgear 프리미엄</value>
+  </data>
+  <data name="WinUpgradeList1Content" xml:space="preserve">
+    <value>PDF 문서를 워드, 엑셀, PNG, JPG, RTF, TXT, HTML 및 XML로 변환 가능</value>
+  </data>
+  <data name="WinUpgradeList2Content" xml:space="preserve">
+    <value>여러 PDF 문서를 하나의 PDF로 병합 가능</value>
+  </data>
+  <data name="WinUpgradeList3Content" xml:space="preserve">
+    <value>PDF 문서에서 페이지 삭제 가능</value>
+  </data>
+  <data name="WinUpgradeList4Content" xml:space="preserve">
+    <value>PDF 문서 하나를 여러 PDF 문서로 분할 가능</value>
+  </data>
+  <data name="WinUpgradeList5Content" xml:space="preserve">
+    <value>PDF 문서에서 PDF 페이지 추출 가능</value>
+  </data>
+  <data name="WinUpgradeList6Content" xml:space="preserve">
+    <value>광고 없음</value>
+  </data>
+  <data name="WinUpgradeList7Content" xml:space="preserve">
+    <value>24시간 연중무휴 고객지원</value>
+  </data>
+  <data name="WinUpgradeList8Content" xml:space="preserve">
+    <value>다른 PDF 문서의 페이지 삽입</value>
+  </data>
+  <data name="WinUpgradeList9Content" xml:space="preserve">
+    <value>Word, Excel, PPT, 이미지, RTF 또는 TXT를 PDF 문서로 변환하세요</value>
+  </data>
+  <data name="WinUpgradeRestorePurchase" xml:space="preserve">
+    <value>구매 복원</value>
+  </data>
+  <data name="WinUpgradeTitle" xml:space="preserve">
+    <value>풀 버전 잠금 해재</value>
+  </data>
+  <data name="WinUpgradeYearBtnContent" xml:space="preserve">
+    <value>1년 이용권</value>
+  </data>
+  <data name="WinViewToolBackgroundDayModeText" xml:space="preserve">
+    <value>데이 모드</value>
+  </data>
+  <data name="WinViewToolBackgroundDefaultText" xml:space="preserve">
+    <value>기본</value>
+  </data>
+  <data name="WinViewToolBackgroundEyeProtectionModeText" xml:space="preserve">
+    <value>눈보호 모드</value>
+  </data>
+  <data name="WinViewToolBackgroundNightModeText" xml:space="preserve">
+    <value>나이트 모드</value>
+  </data>
+  <data name="WinViewToolBackgroundText" xml:space="preserve">
+    <value>배경</value>
+  </data>
+  <data name="WinViewToolBackgroundYellowBackgroundText" xml:space="preserve">
+    <value>노란색 배경</value>
+  </data>
+  <data name="WinViewToolConvertText" xml:space="preserve">
+    <value>변환하기</value>
+  </data>
+  <data name="WinViewToolOpenTooltipText" xml:space="preserve">
+    <value>열기</value>
+  </data>
+  <data name="WinViewToolPrintTooltipText" xml:space="preserve">
+    <value>인쇄</value>
+  </data>
+  <data name="WinViewToolRecentFileText" xml:space="preserve">
+    <value>최근 파일</value>
+  </data>
+  <data name="WinViewToolRedoTooltipText" xml:space="preserve">
+    <value>다시실행</value>
+  </data>
+  <data name="WinViewToolSaveAsTooltipText" xml:space="preserve">
+    <value>다음으로 저장</value>
+  </data>
+  <data name="WinViewToolSaveTooltipText" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="WinViewToolUndoTooltipText" xml:space="preserve">
+    <value>실행취소</value>
+  </data>
+  <data name="WinWatermarkAligmentContent" xml:space="preserve">
+    <value>줄 맞춤</value>
+  </data>
+  <data name="WinWatermarkCbxBottomCenterContent" xml:space="preserve">
+    <value>하단 가운데 맞춤</value>
+  </data>
+  <data name="WinWatermarkCbxBottomLeftContent" xml:space="preserve">
+    <value>하단 왼쪽 맞춤</value>
+  </data>
+  <data name="WinWatermarkCbxBottomRightContent" xml:space="preserve">
+    <value>하단 오른쪽 맞춤</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleCenterContent" xml:space="preserve">
+    <value>가운데 맞춤</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleLeftContent" xml:space="preserve">
+    <value>중앙 왼쪽 맞춤</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleRightContent" xml:space="preserve">
+    <value>중앙 오른쪽 맞춤</value>
+  </data>
+  <data name="WinWatermarkCbxTopCenterContent" xml:space="preserve">
+    <value>상단 중앙 맞춤</value>
+  </data>
+  <data name="WinWatermarkCbxTopLeftContent" xml:space="preserve">
+    <value>상단 왼쪽 맞춤</value>
+  </data>
+  <data name="WinWatermarkCbxTopRightContent" xml:space="preserve">
+    <value>상단 오른쪽 맞춤</value>
+  </data>
+  <data name="WinWatermarkCurrentpageContent" xml:space="preserve">
+    <value>현재 페이지</value>
+  </data>
+  <data name="WinWatermarkEditTiltle" xml:space="preserve">
+    <value>워터마크 편집</value>
+  </data>
+  <data name="WinWatermarkFileContent" xml:space="preserve">
+    <value>파일</value>
+  </data>
+  <data name="WinWatermarkFilePathEmptyMsg" xml:space="preserve">
+    <value>추가된 워터마크 이미지 없음</value>
+  </data>
+  <data name="WinWatermarkNewTiltle" xml:space="preserve">
+    <value>워터마크 만들기</value>
+  </data>
+  <data name="WinWatermarkOpacityContent" xml:space="preserve">
+    <value>투명도</value>
+  </data>
+  <data name="WinWatermarkRotateContent" xml:space="preserve">
+    <value>회전</value>
+  </data>
+  <data name="WinWatermarkSizeContent" xml:space="preserve">
+    <value>크기</value>
+  </data>
+  <data name="WinWatermarkSourceContent" xml:space="preserve">
+    <value>출처</value>
+  </data>
+  <data name="WinWatermarkStyleContent" xml:space="preserve">
+    <value>스타일</value>
+  </data>
+  <data name="WinWatermarkTextContent" xml:space="preserve">
+    <value>텍스트</value>
+  </data>
+  <data name="WinWatermarkTextEmptyMsg" xml:space="preserve">
+    <value>텍스트를 비워둘 수 없습니다.</value>
+  </data>
+  <data name="WinWatermarkTileContent" xml:space="preserve">
+    <value>타일</value>
+  </data>
+  <data name="WinWrongPageRangTipContent" xml:space="preserve">
+    <value>유효한 범위를 입력해주세요.</value>
+  </data>
+  <data name="WrapBookmarkMenuItemContent" xml:space="preserve">
+    <value>긴 북마크 이름을 자동으로 줄 바꿈합니다</value>
+  </data>
+</root>

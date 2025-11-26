@@ -1,0 +1,46 @@
+<Window
+	x:Class="pdfeditor.Controls.Signature.SignatureClearConfirmWin" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.Signature" xmlns:localprop="clr-namespace:pdfeditor.Properties"
+	TextBlock.Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Background="{DynamicResource SolidBrushWhiteAndBlack}"
+	WindowStartupLocation="CenterScreen"
+	ResizeMode="NoResize"
+	Title="{StaticResource ApplicationTitle}"
+	SizeToContent="WidthAndHeight">
+	<Grid
+		Width="424">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="Auto"
+				MinHeight="40" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<TextBlock
+			Text="{x:Static localprop:Resources.WinSignatureDeleteInBatchQuestion}"
+			TextWrapping="Wrap"
+			FontWeight="Bold"
+			VerticalAlignment="Center"
+			Margin="10,0,0,0" />
+		<StackPanel
+			Orientation="Horizontal"
+			Grid.Row="2"
+			Margin="0,10,20,10"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Center">
+			<Button
+				x:Name="btnCancel"
+				Style="{StaticResource DialogButtonStyle}"
+				FontSize="12"
+				Content="{x:Static localprop:Resources.WinBtnCancelContent}"
+				IsCancel="True"
+				Click="btnCancel_Click" />
+			<Button
+				x:Name="btnOk"
+				Style="{StaticResource PrimaryDialogButtonStyle}"
+				Margin="10,0,0,0"
+				IsDefault="True"
+				FontSize="12"
+				Content="{x:Static localprop:Resources.WinSignatureDeleteInBatchBtn}"
+				Click="btnOk_Click" />
+		</StackPanel>
+	</Grid>
+</Window>

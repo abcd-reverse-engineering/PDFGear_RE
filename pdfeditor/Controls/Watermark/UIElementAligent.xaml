@@ -1,0 +1,167 @@
+<UserControl
+	x:Class="pdfeditor.Controls.Watermark.UIElementAligent" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls.Watermark"
+	Height="auto"
+	Width="auto">
+	<Grid
+		Name="GridWaterMarkLocation"
+		Width="60"
+		Height="60">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="20" />
+			<RowDefinition
+				Height="20" />
+			<RowDefinition
+				Height="20" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="20" />
+			<ColumnDefinition
+				Width="20" />
+			<ColumnDefinition
+				Width="20" />
+		</Grid.ColumnDefinitions>
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<Style
+					x:Key="{x:Type RadioButton}"
+					TargetType="{x:Type RadioButton}">
+					<Setter
+						Property="HorizontalAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="VerticalAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type RadioButton}">
+								<Border
+									BorderThickness="0"
+									Background="{TemplateBinding Control.Background}" />
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="True">
+										<Setter
+											Property="Background"
+											Value="#298FEE" />
+									</Trigger>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="False">
+										<Setter
+											Property="Background"
+											Value="#00FFFFFF" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Rectangle
+			Grid.RowSpan="3"
+			Grid.ColumnSpan="3"
+			Stroke="{DynamicResource MainViewFontSizeBorder}" />
+		<RadioButton
+			x:Name="rbox0"
+			Grid.Row="0"
+			Grid.Column="0"
+			Checked="rbox_Checked" />
+		<RadioButton
+			x:Name="rbox1"
+			Grid.Row="0"
+			Grid.Column="1"
+			Checked="rbox_Checked" />
+		<RadioButton
+			x:Name="rbox2"
+			Grid.Row="0"
+			Grid.Column="2"
+			Checked="rbox_Checked" />
+		<RadioButton
+			x:Name="rbox3"
+			Grid.Row="1"
+			Grid.Column="0"
+			Checked="rbox_Checked" />
+		<RadioButton
+			x:Name="rbox4"
+			Grid.Row="1"
+			Grid.Column="1"
+			IsChecked="True"
+			Checked="rbox_Checked" />
+		<RadioButton
+			x:Name="rbox5"
+			Grid.Row="1"
+			Grid.Column="2"
+			Checked="rbox_Checked" />
+		<RadioButton
+			x:Name="rbox6"
+			Grid.Row="2"
+			Grid.Column="0"
+			Checked="rbox_Checked" />
+		<RadioButton
+			x:Name="rbox7"
+			Grid.Row="2"
+			Grid.Column="1"
+			Checked="rbox_Checked" />
+		<RadioButton
+			x:Name="rbox8"
+			Grid.Row="2"
+			Grid.Column="2"
+			Checked="rbox_Checked" />
+		<Line
+			X1="20"
+			Y1="0"
+			Grid.RowSpan="3"
+			Grid.ColumnSpan="3"
+			X2="20"
+			Y2="60"
+			Stroke="{DynamicResource MainViewFontSizeBorder}"
+			StrokeDashArray="5,5"
+			StrokeThickness="1" />
+		<Line
+			X1="20"
+			Y1="0"
+			Grid.RowSpan="3"
+			Grid.ColumnSpan="3"
+			X2="20"
+			Y2="60"
+			Stroke="{DynamicResource MainViewFontSizeBorder}"
+			StrokeDashArray="5,5"
+			StrokeThickness="1" />
+		<Line
+			X1="40"
+			Y1="0"
+			Grid.RowSpan="3"
+			Grid.ColumnSpan="3"
+			X2="40"
+			Y2="60"
+			Stroke="{DynamicResource MainViewFontSizeBorder}"
+			StrokeDashArray="5,5"
+			StrokeThickness="1" />
+		<Line
+			X1="0"
+			Y1="20"
+			Grid.RowSpan="3"
+			Grid.ColumnSpan="3"
+			X2="60"
+			Y2="20"
+			Stroke="{DynamicResource MainViewFontSizeBorder}"
+			StrokeDashArray="5,5"
+			StrokeThickness="1" />
+		<Line
+			X1="0"
+			Y1="40"
+			Grid.RowSpan="3"
+			Grid.ColumnSpan="3"
+			X2="60"
+			Y2="40"
+			Stroke="{DynamicResource MainViewFontSizeBorder}"
+			StrokeDashArray="5,5"
+			StrokeThickness="1" />
+	</Grid>
+</UserControl>

@@ -1,0 +1,43 @@
+<UserControl
+	x:Class="pdfeditor.Controls.Menus.ToolbarSettings.ExitEditingButton" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls.Menus.ToolbarSettings" xmlns:localprop="clr-namespace:pdfeditor.Properties">
+	<Grid>
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<ResourceDictionary.MergedDictionaries>
+					<ResourceDictionary
+						Source="/Controls/Menus/ToolbarSettings/ToolbarSettingStyles.xaml" />
+				</ResourceDictionary.MergedDictionaries>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<StackPanel
+			Orientation="Horizontal"
+			Margin="12,0,0,0"
+			DataContext="{Binding Path=Model, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:ExitEditingButton}}">
+			<Rectangle
+				Fill="{DynamicResource MainViewShapeToolBarRetangle}"
+				Width="1"
+				Height="36" />
+			<Button
+				x:Name="btnExit"
+				Style="{StaticResource ToolbarSettingButtonStyle}"
+				Margin="8,0,0,0"
+				Click="btnExit_Click">
+				<StackPanel
+					Orientation="Horizontal">
+					<Image
+						Source="{DynamicResource MainViewShapeExitBtn}"
+						Width="16"
+						Height="16"
+						Stretch="UniformToFill"
+						RenderOptions.BitmapScalingMode="HighQuality" />
+					<TextBlock
+						Text="{x:Static localprop:Resources.ToolbarExitEditButtonContent}"
+						FontSize="12"
+						VerticalAlignment="Center"
+						Foreground="{DynamicResource MainViewDropPath}"
+						Margin="5,0,0,0" />
+				</StackPanel>
+			</Button>
+		</StackPanel>
+	</Grid>
+</UserControl>

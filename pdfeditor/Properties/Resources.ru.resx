@@ -1,0 +1,3783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddCertificateWindow_CreateCertFile_Desc" xml:space="preserve">
+    <value>Введите местоположение файла и пароль для вашего нового файла цифрового ID. Пароль будет необходим, когда вы будете использовать цифровой ID для подписания или расшифровки документов. Пожалуйста, запишите местоположение файла, чтобы вы могли сделать его резервную копию или использовать его для других целей.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FailedMessage" xml:space="preserve">
+    <value>Произошла неизвестная ошибка.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FileName" xml:space="preserve">
+    <value>Имя файла:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameEmptyMessage" xml:space="preserve">
+    <value>Имя файла не может быть пустым.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameInvalidMessage" xml:space="preserve">
+    <value>Пожалуйста, введите действительное имя файла.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegion" xml:space="preserve">
+    <value>Страна/Регион:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegionNoneValue" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Desc" xml:space="preserve">
+    <value>Введите информацию о личности, которая будет использована для создания самоподписанного сертификата.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Email" xml:space="preserve">
+    <value>Адрес Электронной Почты:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_EmailInvalidMessage" xml:space="preserve">
+    <value>Неверный формат адреса электронной почты.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_LabelName" xml:space="preserve">
+    <value>Имя (например, John Smith):</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_NameEmptyMessage" xml:space="preserve">
+    <value>Имя не может быть пустым.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalName" xml:space="preserve">
+    <value>Название Организации:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalUnit" xml:space="preserve">
+    <value>Организационное Подразделение:</value>
+  </data>
+  <data name="AddCertificateWindow_ImportFile_Desc" xml:space="preserve">
+    <value>Файлы цифрового ID обычно имеют расширение PFX или P12, и эти файлы обычно содержат частные ключи и открытые ключи сертификатов (используемые для подписания и проверки). 
+Чтобы подписать с использованием цифрового ID, доступного в виде файла, следуйте подсказкам для выбора файла и введите пароль, защищающий частный ключ.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_Desc" xml:space="preserve">
+    <value>Добавьте или создайте цифровой ID для подписания и шифрования документов. Цифровой ID может быть выдан доверенным сторонним сервисом. Он содержит частный ключ и сертификат с открытым ключом. Частный ключ используется для создания подписи, основанной на сертификате. Встроенный в цифровой ID сертификат отправляется другим лицам для проверки вашей подписи.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelCreateCert" xml:space="preserve">
+    <value>Новый цифровой ID, который я хочу создать сейчас.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelImportFile" xml:space="preserve">
+    <value>Существующий цифровой ID из файла.</value>
+  </data>
+  <data name="AddDeferredDigitSignBtn" xml:space="preserve">
+    <value>Добавить Поле Подписи</value>
+  </data>
+  <data name="AnnotationContextMenuCopyText" xml:space="preserve">
+    <value>Скопировать текст</value>
+  </data>
+  <data name="AnnotationFileAttachment" xml:space="preserve">
+    <value>Вложенный файл</value>
+  </data>
+  <data name="AnnotationFileAttachmentOpenWarning" xml:space="preserve">
+    <value>Вы уверены, что хотите открыть вложение?</value>
+  </data>
+  <data name="AnnotationMenuBatchDeleteBtn" xml:space="preserve">
+    <value>Пакетное удаление</value>
+  </data>
+  <data name="AnnotationMenuFilterAll" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="AnnotationMenuFilterBtn" xml:space="preserve">
+    <value>Фильтр</value>
+  </data>
+  <data name="AnnotationMenuFilterByAnnotations" xml:space="preserve">
+    <value>Аннотации</value>
+  </data>
+  <data name="AnnotationMenuFilterByUser" xml:space="preserve">
+    <value>Пользователи</value>
+  </data>
+  <data name="AnnotationMenuTotal" xml:space="preserve">
+    <value>Общее количество:</value>
+  </data>
+  <data name="AppSettingsAuthorHeader" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="AppSettingsBlankPage" xml:space="preserve">
+    <value>Пустой PDF</value>
+  </data>
+  <data name="AppSettingsBlankPageHeightContent" xml:space="preserve">
+    <value>Высота (мм):</value>
+  </data>
+  <data name="AppSettingsBlankPageWidthContent" xml:space="preserve">
+    <value>Ширина (мм):</value>
+  </data>
+  <data name="AppSettingsDefaultDisplay" xml:space="preserve">
+    <value>Масштаб по умолчанию</value>
+  </data>
+  <data name="AppSettingsDefaultDisplayTips" xml:space="preserve">
+    <value>Настройка масштабирования по умолчанию применяется только к документу, открываемому впервые.</value>
+  </data>
+  <data name="AppSettingsDefaultPageview" xml:space="preserve">
+    <value>Макет страницы по умолчанию</value>
+  </data>
+  <data name="AppSettingsDefaultSelection" xml:space="preserve">
+    <value>Инструмент взаимодействия по умолчанию</value>
+  </data>
+  <data name="AppSettingsDouble" xml:space="preserve">
+    <value>Двойная страница</value>
+  </data>
+  <data name="AppSettingsDoubleContinuous" xml:space="preserve">
+    <value>Двойная страница – непрерывно</value>
+  </data>
+  <data name="AppSettingsFileAssociations" xml:space="preserve">
+    <value>Ассоциации файлов</value>
+  </data>
+  <data name="AppSettingsFileAssociations_AlreadyDefaultMessage" xml:space="preserve">
+    <value>XXX уже установлен как приложение по умолчанию для PDF-файлов.</value>
+  </data>
+  <data name="AppSettingsFileAssociations_MakeDefault" xml:space="preserve">
+    <value>Установить по умолчанию</value>
+  </data>
+  <data name="AppSettingsHandMode" xml:space="preserve">
+    <value>Инструмент рука</value>
+  </data>
+  <data name="AppSettingsLanguageAutoItem" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="AppSettingsLanguageHeader" xml:space="preserve">
+    <value>Языки</value>
+  </data>
+  <data name="AppSettingsLanguageRestartTips" xml:space="preserve">
+    <value>Пожалуйста, перезапустите PDFgear, чтобы применить настройки.</value>
+  </data>
+  <data name="AppSettingsLanguageTitle" xml:space="preserve">
+    <value>Языки</value>
+  </data>
+  <data name="AppSettingsLaunchOCR" xml:space="preserve">
+    <value>Предлагать OCR при открытии сканированных PDF.</value>
+  </data>
+  <data name="AppSettingsLaunchStatusbar" xml:space="preserve">
+    <value>Показывать нижнюю панель навигации при открытии PDF.</value>
+  </data>
+  <data name="AppSettingsLaunchToolbar" xml:space="preserve">
+    <value>Показывать панель инструментов при открытии PDF.</value>
+  </data>
+  <data name="AppSettingsPageDisplay" xml:space="preserve">
+    <value>Отображение страницы</value>
+  </data>
+  <data name="AppSettingsSelectionMode" xml:space="preserve">
+    <value>Инструмент выделения</value>
+  </data>
+  <data name="AppSettingsShowRightMenu" xml:space="preserve">
+    <value>Показывать быстрые действия при выделении текста</value>
+  </data>
+  <data name="AppSettingsSingle" xml:space="preserve">
+    <value>Одна страница</value>
+  </data>
+  <data name="AppSettingsSingleContinuous" xml:space="preserve">
+    <value>Одна страница – непрерывно</value>
+  </data>
+  <data name="AppSettingsUserInformationTitle" xml:space="preserve">
+    <value>Информация о пользователе</value>
+  </data>
+  <data name="AppSettingsUserInterface" xml:space="preserve">
+    <value>Пользовательский интерфейс</value>
+  </data>
+  <data name="AppsettingsHighlightForm" xml:space="preserve">
+    <value>Выделить поля формы</value>
+  </data>
+  <data name="AttachmentDescriptionWinText" xml:space="preserve">
+    <value>Описание:</value>
+  </data>
+  <data name="AttachmentPanelAttachmentTab" xml:space="preserve">
+    <value>Вкладка вложений</value>
+  </data>
+  <data name="AttachmentPanelBtnAddAttachmentsText" xml:space="preserve">
+    <value>Добавить вложенный файл</value>
+  </data>
+  <data name="AttachmentPanelBtnDeleteAttachmentText" xml:space="preserve">
+    <value>Удалить вложенный файл</value>
+  </data>
+  <data name="AttachmentPanelBtnEditDescriptionText" xml:space="preserve">
+    <value>Редактировать описание</value>
+  </data>
+  <data name="AttachmentPanelBtnOpenAttachmentText" xml:space="preserve">
+    <value>Oткрыть вложенный файл</value>
+  </data>
+  <data name="AttachmentPanelBtnSaveAttachmentText" xml:space="preserve">
+    <value>Сохранить вложенный файл</value>
+  </data>
+  <data name="AttachmentToolbarBtnContextMenuOpenAttachmentManager" xml:space="preserve">
+    <value>Управлять вложенным файлом</value>
+  </data>
+  <data name="BatchDeleteSelectNoneWarning" xml:space="preserve">
+    <value>Выберите аннотации, которые вы хотите удалить</value>
+  </data>
+  <data name="BatchDeleteWarning" xml:space="preserve">
+    <value>Вы хотите удалить все выбранные аннотации?</value>
+  </data>
+  <data name="BatchDeletingTitle" xml:space="preserve">
+    <value>Удаление аннотаций...</value>
+  </data>
+  <data name="BatchPrintDialogAddFilesButtonContent" xml:space="preserve">
+    <value>Добавить PDF-файлы</value>
+  </data>
+  <data name="BatchPrintDialogBatchPrintButtonContent" xml:space="preserve">
+    <value>Пакетная печать</value>
+  </data>
+  <data name="BatchPrintDialogPageCountText" xml:space="preserve">
+    <value>страницы</value>
+  </data>
+  <data name="BatchPrintListWinActionsHeader" xml:space="preserve">
+    <value>Действия</value>
+  </data>
+  <data name="BatchPrintListWinAddFilesBtn" xml:space="preserve">
+    <value>Добавить файлы</value>
+  </data>
+  <data name="BatchPrintListWinFileNameHeader" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="BatchPrintListWinRemoveAllBtn" xml:space="preserve">
+    <value>Удалить все</value>
+  </data>
+  <data name="BatchPrintListWinStatusHeader" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="BatchPrintPrintAllBtn" xml:space="preserve">
+    <value>Печать всех</value>
+  </data>
+  <data name="BatchPrintPrintSettingsBtn" xml:space="preserve">
+    <value>Параметры пакетной печати</value>
+  </data>
+  <data name="BatchPrintRemoveAllMessage" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить все файлы?</value>
+  </data>
+  <data name="BatchPrintSettingsWinAppliedTo" xml:space="preserve">
+    <value>Применить к:</value>
+  </data>
+  <data name="BatchPrintSettingsWinSaveBtn" xml:space="preserve">
+    <value>Подтвердить</value>
+  </data>
+  <data name="BatchPrintSettingsWinSettingsGroupName" xml:space="preserve">
+    <value>Настройки печати</value>
+  </data>
+  <data name="BatchPrintSettingsWinToAll" xml:space="preserve">
+    <value>Все файлы</value>
+  </data>
+  <data name="BatchPrintSettingsWinToCurrent" xml:space="preserve">
+    <value>Текущий файл</value>
+  </data>
+  <data name="BatchPrintWinFailStatus" xml:space="preserve">
+    <value>Не удалось</value>
+  </data>
+  <data name="BatchPrintWinPrintingStatus" xml:space="preserve">
+    <value>Печать...</value>
+  </data>
+  <data name="BatchPrintWinSuccessStatus" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="BookmarkRenameWindowContent" xml:space="preserve">
+    <value>Здесь переименуйте заголовок закладки</value>
+  </data>
+  <data name="CategoryNameWinEmptyMessage" xml:space="preserve">
+    <value>Название категории не может быть пустым.</value>
+  </data>
+  <data name="CategoryNameWinPlaceholder" xml:space="preserve">
+    <value>Введите здесь...</value>
+  </data>
+  <data name="CategoryNameWinTitle" xml:space="preserve">
+    <value>Название категории</value>
+  </data>
+  <data name="CerateSearchablePDFWinTitle" xml:space="preserve">
+    <value>Выполняется OCR</value>
+  </data>
+  <data name="CertificateManagerBtn" xml:space="preserve">
+    <value>Менеджер Сертификатов</value>
+  </data>
+  <data name="CertificateManagerWindowTitle" xml:space="preserve">
+    <value>Идентификаторы И Доверенные Сертификаты</value>
+  </data>
+  <data name="CertificateManager_AddBtn" xml:space="preserve">
+    <value>Добавить Идентификатор</value>
+  </data>
+  <data name="CertificateManager_AddFile_Invalid_Message" xml:space="preserve">
+    <value>Файл недействителен. Пожалуйста, проверьте файл и попробуйте снова.</value>
+  </data>
+  <data name="CertificateManager_CertDetailBtn" xml:space="preserve">
+    <value>Подробности Сертификата</value>
+  </data>
+  <data name="CertificateManager_Content_Issuedby" xml:space="preserve">
+    <value>Выдан:</value>
+  </data>
+  <data name="CertificateManager_Content_ValidFrom" xml:space="preserve">
+    <value>Действителен с:</value>
+  </data>
+  <data name="CertificateManager_Content_ValidTo" xml:space="preserve">
+    <value>Действителен до:</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_Desc" xml:space="preserve">
+    <value>Цифровой ID в первую очередь используется подписантом для подтверждения своей личности и создания цифровой подписи. Он может быть выдан доверенными третьими сторонами на основе файлов или других форм.
+
+Вы можете создать новый цифровой ID. Однако он предоставляет низкий уровень уверенности в личности и может быть неприемлем в некоторых случаях.</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_TabName" xml:space="preserve">
+    <value>Цифровые Идентификаторы</value>
+  </data>
+  <data name="CertificateManager_ExportBtn" xml:space="preserve">
+    <value>Экспорт</value>
+  </data>
+  <data name="CertificateManager_ExportFailed_Message" xml:space="preserve">
+    <value>Не удалось экспортировать сертификат.</value>
+  </data>
+  <data name="CertificateManager_ExportSucceeded_Message" xml:space="preserve">
+    <value>Сертификат был успешно экспортирован.</value>
+  </data>
+  <data name="CertificateManager_RefreshBtn" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="CertificateManager_RemoveBtn" xml:space="preserve">
+    <value>Удалить Идентификатор</value>
+  </data>
+  <data name="CertificateManager_Remove_Message" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные сертификаты?</value>
+  </data>
+  <data name="CertificateManager_Storage_LocalCertificateStore" xml:space="preserve">
+    <value>Файл цифрового Идентификатора</value>
+  </data>
+  <data name="CertificateManager_Storage_WindowsCertificateStore" xml:space="preserve">
+    <value>Хранилище Сертификатов Windows</value>
+  </data>
+  <data name="CertificateManager_Table_Expires" xml:space="preserve">
+    <value>Истекает</value>
+  </data>
+  <data name="CertificateManager_Table_Issuer" xml:space="preserve">
+    <value>Издатель</value>
+  </data>
+  <data name="CertificateManager_Table_Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="CertificateManager_Table_StorageMechanism" xml:space="preserve">
+    <value>Механизм Хранения</value>
+  </data>
+  <data name="CertificateManager_Trust_Desc" xml:space="preserve">
+    <value>Сертификаты доверия — это, по сути, цифровые сертификаты, выданные признанными и доверенными удостоверяющими центрами (CA). Они проверяют, что эмитенты сертификатов надежны, а связанные с сертификатами открытые ключи принадлежат сущностям, которые они утверждают представлять.</value>
+  </data>
+  <data name="CertificateManager_Trust_TabName" xml:space="preserve">
+    <value>Доверенные Сертификаты</value>
+  </data>
+  <data name="ChatPanelAppActionCancelButton" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="ChatPanelAppActionCanceledContent" xml:space="preserve">
+    <value>ОТМЕНЕНО</value>
+  </data>
+  <data name="ChatPanelAppActionDoneContent" xml:space="preserve">
+    <value>СДЕЛАННЫЙ</value>
+  </data>
+  <data name="ChatPanelAppActionNoButton" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="ChatPanelAppActionProcessingContent" xml:space="preserve">
+    <value>ОБРАБОТКА</value>
+  </data>
+  <data name="ChatPanelAppActionYesButton" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="ChatPanelMessageErrorRetryText" xml:space="preserve">
+    <value>Попробуйте еще раз</value>
+  </data>
+  <data name="ChatPanelMessageErrorText" xml:space="preserve">
+    <value>Произошла ошибка.</value>
+  </data>
+  <data name="ChatPanelMessageError_ContentFiltered" xml:space="preserve">
+    <value>Контент был отфильтрован, возможно, из-за сообщений или статей, содержащих контент, нарушающий правила.</value>
+  </data>
+  <data name="ChatPanelMessageError_UserCanceled" xml:space="preserve">
+    <value>Запрос был отменен вручную.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_compress" xml:space="preserve">
+    <value>Сожмите этот PDF-файл, используя высокий уровень сжатия.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_convert_from_pdf" xml:space="preserve">
+    <value>Преобразуйте этот PDF в формат Word.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_page_zoom" xml:space="preserve">
+    <value>Увеличьте это представление PDF.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_protect_pdf" xml:space="preserve">
+    <value>Добавьте пароль для защиты этого файла.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_slide_show" xml:space="preserve">
+    <value>Отобразите этот PDF-файл в режиме слайдов.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_summary" xml:space="preserve">
+    <value>Обобщите этот файл PDF.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText1" xml:space="preserve">
+    <value>PDFgear Copilot — это инструмент искусственного интеллекта, предназначенный для того, чтобы помочь вам резюмировать PDF-файлы, находить ответы в PDF-файлах, редактировать PDF-файлы, конвертировать PDF-файлы, управлять PDF-файлами и т. д., просто используя команды на естественном языке.
+
+Примеры:</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText2" xml:space="preserve">
+    <value>Нажмите на примеры выше или введите команду, чтобы начать чат.</value>
+  </data>
+  <data name="ChatPanelUpgradeBtn" xml:space="preserve">
+    <value>Разблокировать PDFgear AI</value>
+  </data>
+  <data name="ChkboxPageSelectedAllContent" xml:space="preserve">
+    <value>Выбрать все</value>
+  </data>
+  <data name="ColorPickerMoreColorsLabelContent" xml:space="preserve">
+    <value>Больше цветов</value>
+  </data>
+  <data name="ColorPickerStandardLabelContent" xml:space="preserve">
+    <value>Стандартный</value>
+  </data>
+  <data name="ColorPickerThemeLabelContent" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="CopilotClearHistoryButtonText" xml:space="preserve">
+    <value>Удалить историю сообщений</value>
+  </data>
+  <data name="CopilotClearHistoryTip" xml:space="preserve">
+    <value>Вы уверены, что хотите очистить историю чата?</value>
+  </data>
+  <data name="CopilotExportHistoryButtonText" xml:space="preserve">
+    <value>Экспорт</value>
+  </data>
+  <data name="CopilotExportHistoryWindowTitle" xml:space="preserve">
+    <value>Экспорт истории чата</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTips" xml:space="preserve">
+    <value>Количество 50 сообщений/файлов/день истекает.</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTipsContent" xml:space="preserve">
+    <value>Завтра для этого PDF-файла будут доступны еще 50 сообщений, а пока пообщайтесь с другим PDF-файлом.</value>
+  </data>
+  <data name="CopilotMessagesRemainingTips" xml:space="preserve">
+    <value>Осталось XXX сообщений</value>
+  </data>
+  <data name="CopilotPanelHeader" xml:space="preserve">
+    <value>Чат с PDF</value>
+  </data>
+  <data name="CopilotSendButtonText" xml:space="preserve">
+    <value>Отправлять</value>
+  </data>
+  <data name="CopilotSendButtonToolTips" xml:space="preserve">
+    <value>Ctrl+Enter: отправить сообщение, клавиша Enter: ввести новую строку</value>
+  </data>
+  <data name="CopilotStopResponseButtonText" xml:space="preserve">
+    <value>Останавливаться</value>
+  </data>
+  <data name="CopilotTextBoxEmtpy" xml:space="preserve">
+    <value>Невозможно отправить пустое сообщение</value>
+  </data>
+  <data name="CopilotTextBoxPlaceholder" xml:space="preserve">
+    <value>Пишите сюда, чтобы поболтать...</value>
+  </data>
+  <data name="CopilotViewboxPages" xml:space="preserve">
+    <value>Номер страницы:</value>
+  </data>
+  <data name="CopilotWelcomePageAnalysingText" xml:space="preserve">
+    <value>Анализ...</value>
+  </data>
+  <data name="CopilotWelcomePageChatNowButtonText" xml:space="preserve">
+    <value>Теперь говорите</value>
+  </data>
+  <data name="CopilotWelcomePageDesc" xml:space="preserve">
+    <value>С PDFgear Copilot ваши документы становятся интеллектуальными.  Он отлично подходит для управления операциями с PDF-файлами и получения точной информации из них с использованием естественного языка.  Попробуйте пообщаться со своими файлами прямо сейчас.</value>
+  </data>
+  <data name="CopilotWelcomePageSubTitle" xml:space="preserve">
+    <value>Общайтесь, учитесь, прогрессируйте</value>
+  </data>
+  <data name="CopilotWelcomePageTitle" xml:space="preserve">
+    <value>Работает на ChatGPT</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemExpiration" xml:space="preserve">
+    <value>Срок действия:</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemIssuer" xml:space="preserve">
+    <value>Эмитент:</value>
+  </data>
+  <data name="CreateDigSignDialogBrowserItem" xml:space="preserve">
+    <value>Новый цифровой идентификатор</value>
+  </data>
+  <data name="CreateDigSignDialogCertFile" xml:space="preserve">
+    <value>Цифровые удостоверения:</value>
+  </data>
+  <data name="CreateDigSignDialogCertPassword" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="CreateDigSignDialogCertificatedCheckbox" xml:space="preserve">
+    <value>Заблокировать документ после подписания</value>
+  </data>
+  <data name="CreateDigSignDialogSignBtn" xml:space="preserve">
+    <value>Подписать</value>
+  </data>
+  <data name="CreateDigSignImportCertBrowserBtn" xml:space="preserve">
+    <value>Обзор...</value>
+  </data>
+  <data name="CreateDigSignImportCertDialogDesc" xml:space="preserve">
+    <value>Найдите файл цифрового идентификатора. Файлы цифровых идентификаторов защищены паролем, и для их открытия требуется ваш пароль.</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_InvalidPassword" xml:space="preserve">
+    <value>Файл или пароль недействительны.</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_NotSupport" xml:space="preserve">
+    <value>Этот сертификат нельзя использовать для цифровых подписей.</value>
+  </data>
+  <data name="CreateDigSignImportCertFileLabel" xml:space="preserve">
+    <value>Цифровой файл идентификации</value>
+  </data>
+  <data name="CreateDigSignMessage_CertExpired" xml:space="preserve">
+    <value>Невозможно подписать сертификат с истекшим сроком действия.</value>
+  </data>
+  <data name="CreateDigSignMessage_IncorrectPassword" xml:space="preserve">
+    <value>Неверный пароль. Пожалуйста, введите пароль снова.</value>
+  </data>
+  <data name="CreateDigSignReason1" xml:space="preserve">
+    <value>Я являюсь автором этого документа.</value>
+  </data>
+  <data name="CreateDigSignReason2" xml:space="preserve">
+    <value>Я ознакомился с этим документом.</value>
+  </data>
+  <data name="CreateDigSignReason3" xml:space="preserve">
+    <value>Я утверждаю этот документ.</value>
+  </data>
+  <data name="CreateDigSignReason4" xml:space="preserve">
+    <value>Я утверждаю этот документ своей юридически обязательной подписью.</value>
+  </data>
+  <data name="CreateDigSignReason5" xml:space="preserve">
+    <value>Я подтверждаю точность и целостность этого документа.</value>
+  </data>
+  <data name="CreateDigSignReason6" xml:space="preserve">
+    <value>Я соглашаюсь с условиями, определенными размещением моей подписи в этом документе.</value>
+  </data>
+  <data name="CreateDigSignReason7" xml:space="preserve">
+    <value>Я соглашаюсь с указанными частями этого документа.</value>
+  </data>
+  <data name="CropCreateTip" xml:space="preserve">
+    <value>Перетащите мышь, чтобы нарисовать область, которую хотите обрезать.  После того, как вы вытащили нужную область, вы перейдете к следующему этапу обрезки.</value>
+  </data>
+  <data name="CropPageExceedingPageRange" xml:space="preserve">
+    <value>Страница предварительного просмотра не включена в область страницы</value>
+  </data>
+  <data name="CropPageExceedingRange" xml:space="preserve">
+    <value>Превышение допустимого предела</value>
+  </data>
+  <data name="CropPageToolbarAdvanced" xml:space="preserve">
+    <value>Дополнительные настройки</value>
+  </data>
+  <data name="CropPageWinCentimeterUnits" xml:space="preserve">
+    <value>см</value>
+  </data>
+  <data name="CropPageWinInchUnits" xml:space="preserve">
+    <value>дюйм</value>
+  </data>
+  <data name="CropPageWinMandatoryBox" xml:space="preserve">
+    <value>Обязательные пропорции</value>
+  </data>
+  <data name="CropPageWinMarginTitle" xml:space="preserve">
+    <value>Контроль маржи</value>
+  </data>
+  <data name="CropPageWinMeasuresIn" xml:space="preserve">
+    <value>Единицы</value>
+  </data>
+  <data name="CropPageWinMillimeterUnits" xml:space="preserve">
+    <value>мм</value>
+  </data>
+  <data name="CropPageWinPagesRange" xml:space="preserve">
+    <value>Страницы</value>
+  </data>
+  <data name="CropPageWinPicaUnits" xml:space="preserve">
+    <value>Пика</value>
+  </data>
+  <data name="CropPageWinPointUnits" xml:space="preserve">
+    <value>точка</value>
+  </data>
+  <data name="CropPageWinRemoveMaigin" xml:space="preserve">
+    <value>Удалить пустые поля</value>
+  </data>
+  <data name="CropPageWinResetBtn" xml:space="preserve">
+    <value>Сбросить</value>
+  </data>
+  <data name="CropPageWinSizeofCropBox" xml:space="preserve">
+    <value>Обрезать размеры страницы:</value>
+  </data>
+  <data name="CropPageWinZeroMarginBtn" xml:space="preserve">
+    <value>Установить значение 0 полей</value>
+  </data>
+  <data name="DefaultAppAndShortcutSucc" xml:space="preserve">
+    <value>Настройки применены!</value>
+  </data>
+  <data name="DefaultAppCancelBtn" xml:space="preserve">
+    <value>Не сейчас</value>
+  </data>
+  <data name="DefaultAppTitle" xml:space="preserve">
+    <value>Установите PDFgear в качестве дефолтная программа для файлов PDF.</value>
+  </data>
+  <data name="DefaultAppWinTitle" xml:space="preserve">
+    <value>Сделайте PDFgear моим приложением PDF по умолчанию.</value>
+  </data>
+  <data name="DefaultContextMenuAddBookmark" xml:space="preserve">
+    <value>Добавить закладку</value>
+  </data>
+  <data name="DeferredDigitSignCreateTip" xml:space="preserve">
+    <value>С помощью мыши щелкните и перетащите область, в которой должна появиться подпись. После того как вы закончите перетаскивание нужной области, вы перейдете к следующему шагу процесса подписания.</value>
+  </data>
+  <data name="DeferredDigitSignPreviewText" xml:space="preserve">
+    <value>Подпишите Здесь</value>
+  </data>
+  <data name="DeletePageAskMsg" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные страницы?</value>
+  </data>
+  <data name="DeletePageCheckEmptyMsg" xml:space="preserve">
+    <value>Выберите страницы, которые хотите удалить.</value>
+  </data>
+  <data name="DeletePageCheckMsg" xml:space="preserve">
+    <value>Вы не можете удалить все страницы в документе.</value>
+  </data>
+  <data name="DeleteParentBookmarkWarning" xml:space="preserve">
+    <value>Удаление закладки верхнего уровня также удаляет все вложенные закладки. Вы уверены, что хотите продолжить?</value>
+  </data>
+  <data name="DeleteSinglePageAskMsg" xml:space="preserve">
+    <value>Вы точно хотите удалить страницу?</value>
+  </data>
+  <data name="DeleteWatermarkAskMsg" xml:space="preserve">
+    <value>Вы действительно хотите удалить все водяные знаки из PDF-файла?</value>
+  </data>
+  <data name="DigSigCreateMessage_AreaTooSmall" xml:space="preserve">
+    <value>Площадь слишком мала для подписи.</value>
+  </data>
+  <data name="DigSigCreateMessage_Failed" xml:space="preserve">
+    <value>Не удалось добавить цифровую подпись.</value>
+  </data>
+  <data name="DigSigRemoveMessage_Failed" xml:space="preserve">
+    <value>Не удалось удалить цифровую подпись.</value>
+  </data>
+  <data name="DigSignBannerMessage_Invalid" xml:space="preserve">
+    <value>По крайней мере одна подпись имеет проблемы.</value>
+  </data>
+  <data name="DigSignBannerMessage_NeedSign" xml:space="preserve">
+    <value>По крайней мере одно поле для подписи должно быть подписано.</value>
+  </data>
+  <data name="DigSignBannerMessage_Valid" xml:space="preserve">
+    <value>Подписано и все подписи действительны.</value>
+  </data>
+  <data name="DigSignBannerShowSignaturesButton" xml:space="preserve">
+    <value>Показать подписи</value>
+  </data>
+  <data name="DigSignCertInfoBtn" xml:space="preserve">
+    <value>Информация…</value>
+  </data>
+  <data name="DigSignFieldLocation" xml:space="preserve">
+    <value>Поле:</value>
+  </data>
+  <data name="DigSignFieldLocationPage" xml:space="preserve">
+    <value>Страница</value>
+  </data>
+  <data name="DigSignFieldSignedBy" xml:space="preserve">
+    <value>Подписано:</value>
+  </data>
+  <data name="DigSignInfoIncludesEmbeddedTimestamp" xml:space="preserve">
+    <value>Подпись включает встроенный отметочный штамп. Время отметки времени: XXX</value>
+  </data>
+  <data name="DigSignInfoNotAllowModify" xml:space="preserve">
+    <value>Сертификатор указал, что внесение изменений в этот документ запрещено.</value>
+  </data>
+  <data name="DigSignInfoSignerInfoTitle" xml:space="preserve">
+    <value>Информация о подписанте.</value>
+  </data>
+  <data name="DigSignInfoTimeFromSignersDevice" xml:space="preserve">
+    <value>Время подписания берется из часов компьютера подписавшего.</value>
+  </data>
+  <data name="DigSignInfoValidAtTime" xml:space="preserve">
+    <value>Подпись была подтверждена на безопасное (время отметки) время: XXX</value>
+  </data>
+  <data name="DigSignInfoValidatedAsSigningTime" xml:space="preserve">
+    <value>Подпись была подтверждена на момент времени подписания: XXX</value>
+  </data>
+  <data name="DigSignPanelContextMenuGoToField" xml:space="preserve">
+    <value>Перейти к полю подписи</value>
+  </data>
+  <data name="DigSignPanelContextMenuRemoveSign" xml:space="preserve">
+    <value>Удалить подпись</value>
+  </data>
+  <data name="DigSignPanelContextMenuShowProps" xml:space="preserve">
+    <value>Показать свойства подписи</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedRemove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedShowProps" xml:space="preserve">
+    <value>Показать Свойства</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedSignNow" xml:space="preserve">
+    <value>Подписать Сейчас</value>
+  </data>
+  <data name="DigSignPanelContextMenuValidateSign" xml:space="preserve">
+    <value>Подтвердить подпись</value>
+  </data>
+  <data name="DigSignPanelDefaultName" xml:space="preserve">
+    <value>Подпись</value>
+  </data>
+  <data name="DigSignPropCertDetails" xml:space="preserve">
+    <value>Детали сертификата...</value>
+  </data>
+  <data name="DigSignPropContactInfo" xml:space="preserve">
+    <value>Контактная информация:</value>
+  </data>
+  <data name="DigSignPropContactInfo_NotAvailable" xml:space="preserve">
+    <value>Недоступно.</value>
+  </data>
+  <data name="DigSignPropDialogTitle" xml:space="preserve">
+    <value>Свойства подписи</value>
+  </data>
+  <data name="DigSignPropLastCheckTime" xml:space="preserve">
+    <value>Последняя проверка:</value>
+  </data>
+  <data name="DigSignPropLocation" xml:space="preserve">
+    <value>Местонахождение:</value>
+  </data>
+  <data name="DigSignPropPreviewAppVer" xml:space="preserve">
+    <value>Версия PDFgear:</value>
+  </data>
+  <data name="DigSignPropPreviewSignedBy" xml:space="preserve">
+    <value>Цифровая подпись от</value>
+  </data>
+  <data name="DigSignPropReason" xml:space="preserve">
+    <value>Причина:</value>
+  </data>
+  <data name="DigSignPropShowCertBtn" xml:space="preserve">
+    <value>Показать сертификат...</value>
+  </data>
+  <data name="DigSignPropSignDate" xml:space="preserve">
+    <value>Дата:</value>
+  </data>
+  <data name="DigSignPropSignedBy" xml:space="preserve">
+    <value>Подписано</value>
+  </data>
+  <data name="DigSignPropTrustCertBtn" xml:space="preserve">
+    <value>Доверять Сертификату</value>
+  </data>
+  <data name="DigSignPropUnsigned" xml:space="preserve">
+    <value>Поле Неподписанной Подписи</value>
+  </data>
+  <data name="DigSignPropValiditySummary" xml:space="preserve">
+    <value>Сводка о валидности</value>
+  </data>
+  <data name="DigSignResultInvalid" xml:space="preserve">
+    <value>Подпись НЕДЕЙСТВИТЕЛЬНА.</value>
+  </data>
+  <data name="DigSignResultUnknown" xml:space="preserve">
+    <value>Действительность подписи НЕИЗВЕСТНА.</value>
+  </data>
+  <data name="DigSignResultValid" xml:space="preserve">
+    <value>Подпись ДЕЙСТВИТЕЛЬНА, подписана XXX.</value>
+  </data>
+  <data name="DigSignStatusHasBeenModified" xml:space="preserve">
+    <value>Документ был изменен после применения этой подписи.</value>
+  </data>
+  <data name="DigSignStatusHasNotBeenModified" xml:space="preserve">
+    <value>Документ не был изменен с момента применения этой подписи.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsBroken" xml:space="preserve">
+    <value>Эта подпись недействительна, поскольку в ней есть ошибки в форматировании или информации.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsExpired" xml:space="preserve">
+    <value>Личность подписанта неизвестна. Срок действия сертификата истек.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsValid" xml:space="preserve">
+    <value>Личность подписавшего действительна.</value>
+  </data>
+  <data name="DigSignStatusNotIncludedInTrustedCerts" xml:space="preserve">
+    <value>Личность подписанта неизвестна, поскольку он не был включен в список доверенных сертификатов и ни один из его родительских сертификатов не является доверенным сертификатом.</value>
+  </data>
+  <data name="DigSignStatusValidWhenIssued" xml:space="preserve">
+    <value>Личность подписанта была действительна на момент выдачи подписи, но в этот раз не удалось провести проверку на аннулирование, чтобы подтвердить личность.</value>
+  </data>
+  <data name="DigSignUnsignedToolTipPostfix" xml:space="preserve">
+    <value>(Нажмите для подписи)</value>
+  </data>
+  <data name="DigSignValidationDialogTitle" xml:space="preserve">
+    <value>Статус проверки подписи</value>
+  </data>
+  <data name="DigSignValidationProperties" xml:space="preserve">
+    <value>Свойства подписи...</value>
+  </data>
+  <data name="DigitalSignatureCreateTip" xml:space="preserve">
+    <value>С помощью мыши щелкните и перетащите область, в которой должна появиться подпись. После того как вы закончите перетаскивание нужной области, вы перейдете к следующему шагу процесса подписания.</value>
+  </data>
+  <data name="DocumentPropertiesAuthor" xml:space="preserve">
+    <value>Автор: </value>
+  </data>
+  <data name="DocumentPropertiesCentimeterUnits" xml:space="preserve">
+    <value>см</value>
+  </data>
+  <data name="DocumentPropertiesCreated" xml:space="preserve">
+    <value>Cоздан: </value>
+  </data>
+  <data name="DocumentPropertiesCreator" xml:space="preserve">
+    <value>Создатель: </value>
+  </data>
+  <data name="DocumentPropertiesFileSize" xml:space="preserve">
+    <value>Размер файла: </value>
+  </data>
+  <data name="DocumentPropertiesFileVersion" xml:space="preserve">
+    <value>PDF-Bерсия: </value>
+  </data>
+  <data name="DocumentPropertiesFilename" xml:space="preserve">
+    <value>Имя файла:</value>
+  </data>
+  <data name="DocumentPropertiesInchUnits" xml:space="preserve">
+    <value>дюйм</value>
+  </data>
+  <data name="DocumentPropertiesInfoTitle" xml:space="preserve">
+    <value>Информация о файле</value>
+  </data>
+  <data name="DocumentPropertiesKeyword" xml:space="preserve">
+    <value>Ключевые Cлова: </value>
+  </data>
+  <data name="DocumentPropertiesLocation" xml:space="preserve">
+    <value>Расположение: </value>
+  </data>
+  <data name="DocumentPropertiesModified" xml:space="preserve">
+    <value>Изменен: </value>
+  </data>
+  <data name="DocumentPropertiesPageSize" xml:space="preserve">
+    <value>Размер Страницы: </value>
+  </data>
+  <data name="DocumentPropertiesProducer" xml:space="preserve">
+    <value>Режиссер: </value>
+  </data>
+  <data name="DocumentPropertiesSubject" xml:space="preserve">
+    <value>Тема: </value>
+  </data>
+  <data name="DocumentPropertiesTitle" xml:space="preserve">
+    <value>Название: </value>
+  </data>
+  <data name="DocumentPropertiesTotalPages" xml:space="preserve">
+    <value>Количество Страниц: </value>
+  </data>
+  <data name="DocumentPropertiesWindowTitle" xml:space="preserve">
+    <value>Свойства документа</value>
+  </data>
+  <data name="EditCustomStampWinTitle" xml:space="preserve">
+    <value>Редактировать пользовательский штамп</value>
+  </data>
+  <data name="EditStampWinCategoryListNewContent" xml:space="preserve">
+    <value>Новая категория</value>
+  </data>
+  <data name="EditStampWinContentType1" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="EditStampWinContentType2" xml:space="preserve">
+    <value>Дата и время</value>
+  </data>
+  <data name="EditStampWinContentType3" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="EditStampWinDefaultCategoryName" xml:space="preserve">
+    <value>Категория по умолчанию</value>
+  </data>
+  <data name="EditStampWinDefaultStampName" xml:space="preserve">
+    <value>Штамп без названия</value>
+  </data>
+  <data name="EditStampWinFontTitle" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="EditStampWinImageEmptyErrorMessage" xml:space="preserve">
+    <value>Пожалуйста, сначала выберите изображение</value>
+  </data>
+  <data name="EditStampWinImageSelectedBtnContent" xml:space="preserve">
+    <value>Выбрать изображение</value>
+  </data>
+  <data name="EditStampWinLargeFontSize" xml:space="preserve">
+    <value>Крупный</value>
+  </data>
+  <data name="EditStampWinListMenuDynamicContent" xml:space="preserve">
+    <value>Динамический</value>
+  </data>
+  <data name="EditStampWinMediumFontSize" xml:space="preserve">
+    <value>Средний</value>
+  </data>
+  <data name="EditStampWinSaveCheckBoxContent" xml:space="preserve">
+    <value>Сохранить пользовательский штамп</value>
+  </data>
+  <data name="EditStampWinSmallFontSize" xml:space="preserve">
+    <value>Маленький</value>
+  </data>
+  <data name="EditStampWinStampCategoryName" xml:space="preserve">
+    <value>Категория</value>
+  </data>
+  <data name="EditStampWinStampContent1" xml:space="preserve">
+    <value>Содержимое 1</value>
+  </data>
+  <data name="EditStampWinStampContent2" xml:space="preserve">
+    <value>Содержимое 2</value>
+  </data>
+  <data name="EditStampWinStampContent3" xml:space="preserve">
+    <value>Содержимое 3</value>
+  </data>
+  <data name="EditStampWinStampName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="EditStampWinStampShape" xml:space="preserve">
+    <value>Форма</value>
+  </data>
+  <data name="EditStampWinTitle" xml:space="preserve">
+    <value>Создать пользовательский штамп</value>
+  </data>
+  <data name="EditStampWinUntitledCategoryName" xml:space="preserve">
+    <value>Категория без названия</value>
+  </data>
+  <data name="EraserToolbarPaitialBtn" xml:space="preserve">
+    <value>Частичный</value>
+  </data>
+  <data name="EraserToolbarSizeContent" xml:space="preserve">
+    <value>Размер</value>
+  </data>
+  <data name="EraserToolbarWholeBtn" xml:space="preserve">
+    <value>Весь</value>
+  </data>
+  <data name="ExtractPageCheckEmptyMsg" xml:space="preserve">
+    <value>Выберите страницы, которые хотите извлечь.</value>
+  </data>
+  <data name="FindDeviceErrorMessage" xml:space="preserve">
+    <value>Невозможно подключиться к сканеру. Пожалуйста, проверьте сканер и повторите попытку.</value>
+  </data>
+  <data name="FirstPageTooltipText" xml:space="preserve">
+    <value>Первую страницу</value>
+  </data>
+  <data name="FlattenBtn" xml:space="preserve">
+    <value>Сгладить аннотацию</value>
+  </data>
+  <data name="FlattenWinContent1" xml:space="preserve">
+    <value>Слияние аннотаций в слой содержимого.</value>
+  </data>
+  <data name="FlattenWinContent2" xml:space="preserve">
+    <value>После сплющивания все аннотации больше нельзя редактировать.</value>
+  </data>
+  <data name="FlattenWinContent3" xml:space="preserve">
+    <value>Чтобы сохранить исходную информацию, сглаженный файл будет сохранен как копия.</value>
+  </data>
+  <data name="FlattenWinTitle" xml:space="preserve">
+    <value>Сгладить все аннотации в PDF</value>
+  </data>
+  <data name="FootToolNextViewTips" xml:space="preserve">
+    <value>Следующий вид</value>
+  </data>
+  <data name="FootToolPreviousViewTips" xml:space="preserve">
+    <value>Предыдущий вид</value>
+  </data>
+  <data name="HeaderToolExitFullScreenTips" xml:space="preserve">
+    <value>Выйти из Полноэкранного Режима</value>
+  </data>
+  <data name="HeaderToolFullScreenTips" xml:space="preserve">
+    <value>Полноэкранный Режим</value>
+  </data>
+  <data name="HeaderToolHideTips" xml:space="preserve">
+    <value>Скрыть</value>
+  </data>
+  <data name="HeaderToolShareTips" xml:space="preserve">
+    <value>Поделиться</value>
+  </data>
+  <data name="HeaderToolShowTips" xml:space="preserve">
+    <value>Развернуть</value>
+  </data>
+  <data name="HeaderToolThemeTips" xml:space="preserve">
+    <value>Внешний Вид</value>
+  </data>
+  <data name="ImageControlEditor" xml:space="preserve">
+    <value>Редактировать изображение</value>
+  </data>
+  <data name="ImageControl_DeleteConfirm" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранное изображение?</value>
+  </data>
+  <data name="ImageControl_OcrFailed" xml:space="preserve">
+    <value>Не удалось выполнить OCR изображения!</value>
+  </data>
+  <data name="ImageHierarchyBottom" xml:space="preserve">
+    <value>Установить на низ</value>
+  </data>
+  <data name="ImageHierarchyDown" xml:space="preserve">
+    <value>Переместить назад</value>
+  </data>
+  <data name="ImageHierarchyFront" xml:space="preserve">
+    <value>Переместить вперед</value>
+  </data>
+  <data name="ImageHierarchyTop" xml:space="preserve">
+    <value>Установить наверх</value>
+  </data>
+  <data name="ImageToolbarTitle" xml:space="preserve">
+    <value>Вы находитесь в режиме редактирования изображений.</value>
+  </data>
+  <data name="ImagemanipulationDelete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="ImagemanipulationFilpHor" xml:space="preserve">
+    <value>Отразить по горизонтали</value>
+  </data>
+  <data name="ImagemanipulationFilpVer" xml:space="preserve">
+    <value>Отразить по вертикали</value>
+  </data>
+  <data name="ImagemanipulationHierarchy" xml:space="preserve">
+    <value>Иерархия</value>
+  </data>
+  <data name="ImagemanipulationOCR" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ImagemanipulationReplace" xml:space="preserve">
+    <value>Заменять</value>
+  </data>
+  <data name="ImagemanipulationRotate" xml:space="preserve">
+    <value>Повернуть</value>
+  </data>
+  <data name="ImagemanipulationSave" xml:space="preserve">
+    <value>Сохранять</value>
+  </data>
+  <data name="ImportDialogFilterImage" xml:space="preserve">
+    <value>Файлы Изображений</value>
+  </data>
+  <data name="ImportDialogFilterSupported" xml:space="preserve">
+    <value>Поддерживаемые файлы</value>
+  </data>
+  <data name="ImprotPagesUnexpectedError" xml:space="preserve">
+    <value>Произошла неизвестная ошибка.</value>
+  </data>
+  <data name="InkToolbarEraserBtn" xml:space="preserve">
+    <value>Ластик</value>
+  </data>
+  <data name="InsertPDFDetermineContent" xml:space="preserve">
+    <value>Вы уверены, что хотите вставить выбранную страницу (страницы) XXX в PDF?</value>
+  </data>
+  <data name="InsertPDFInsertTitle" xml:space="preserve">
+    <value>Вставить в</value>
+  </data>
+  <data name="InsertWinInsertAfter" xml:space="preserve">
+    <value>После Страницы</value>
+  </data>
+  <data name="InsertWinInsertBefore" xml:space="preserve">
+    <value>До Страницы</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageContent" xml:space="preserve">
+    <value>Некоторые изменения, внесенные в PDF-файл, являются необратимыми. Чтобы обеспечить сохранность исходной информации и избежать возможных потерь, сохраните измененный файл в виде копии.</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageTitle" xml:space="preserve">
+    <value>Сохраните PDF как копию</value>
+  </data>
+  <data name="LabelColorContent" xml:space="preserve">
+    <value>Цвет</value>
+  </data>
+  <data name="LabelTextContent" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="LastPageTooltipText" xml:space="preserve">
+    <value>Последнюю страницу</value>
+  </data>
+  <data name="LeftNavigationAnnotationPageLabelContent" xml:space="preserve">
+    <value>Страница XXX</value>
+  </data>
+  <data name="LeftNavigationViewAnnotationDisplayName" xml:space="preserve">
+    <value>Комментарии</value>
+  </data>
+  <data name="LeftNavigationViewBookmarkDisplayName" xml:space="preserve">
+    <value>Закладка</value>
+  </data>
+  <data name="LeftNavigationViewDigitalSignaturesDisplayName" xml:space="preserve">
+    <value>Цифровые подписи</value>
+  </data>
+  <data name="LeftNavigationViewThumbnailDisplayName" xml:space="preserve">
+    <value>Эскиз</value>
+  </data>
+  <data name="LinkActionToUri" xml:space="preserve">
+    <value>Вы собираетесь открыть «XXX».  Пожалуйста, убедитесь, что вы доверяете ему, прежде чем открывать.  Продолжать открывать?</value>
+  </data>
+  <data name="LinkBtn" xml:space="preserve">
+    <value>Ссылка</value>
+  </data>
+  <data name="LinkCreateBtn" xml:space="preserve">
+    <value>Создать/редактировать ссылку</value>
+  </data>
+  <data name="LinkDeleteAll" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить все ссылки?</value>
+  </data>
+  <data name="LinkDeleteAllBtn" xml:space="preserve">
+    <value>Удалить все ссылки</value>
+  </data>
+  <data name="LinkDeleteOne" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить ссылку?</value>
+  </data>
+  <data name="LinkOpenFileFailed" xml:space="preserve">
+    <value>Файл не найден.  Проверьте, не был ли файл перемещен, переименован или удален.</value>
+  </data>
+  <data name="LinkPageError" xml:space="preserve">
+    <value>Пожалуйста, введите действительный номер страницы.</value>
+  </data>
+  <data name="LinkRightDelete" xml:space="preserve">
+    <value>Удалить ссылку</value>
+  </data>
+  <data name="LinkToolbarTitle" xml:space="preserve">
+    <value>Вы находитесь в режиме редактирования ссылок.</value>
+  </data>
+  <data name="LinkUriEmpty" xml:space="preserve">
+    <value>Пожалуйста, введите действительную цель ссылки.</value>
+  </data>
+  <data name="LinkUriError" xml:space="preserve">
+    <value>Введите действительный URL-ссылку.</value>
+  </data>
+  <data name="LinkWinAppearance" xml:space="preserve">
+    <value>Появление</value>
+  </data>
+  <data name="LinkWinFilePath" xml:space="preserve">
+    <value>Локальный файл</value>
+  </data>
+  <data name="LinkWinInvisibleRect" xml:space="preserve">
+    <value>Невидимый прямоугольник</value>
+  </data>
+  <data name="LinkWinNavigate" xml:space="preserve">
+    <value>Перейдите к</value>
+  </data>
+  <data name="LinkWinPage" xml:space="preserve">
+    <value>Страница</value>
+  </data>
+  <data name="LinkWinStrokeDashed" xml:space="preserve">
+    <value>Пунктирная</value>
+  </data>
+  <data name="LinkWinStrokeSolid" xml:space="preserve">
+    <value>Твердый</value>
+  </data>
+  <data name="LinkWinStrokeStyle" xml:space="preserve">
+    <value>Стиль инсульта</value>
+  </data>
+  <data name="LinkWinStrokeUnderline" xml:space="preserve">
+    <value>Подчеркнуть</value>
+  </data>
+  <data name="LinkWinStyle" xml:space="preserve">
+    <value>Стиль ссылки</value>
+  </data>
+  <data name="LinkWinTitleCreate" xml:space="preserve">
+    <value>Создать ссылку</value>
+  </data>
+  <data name="LinkWinTitleEdit" xml:space="preserve">
+    <value>Изменить ссылку</value>
+  </data>
+  <data name="LinkWinUrl" xml:space="preserve">
+    <value>URL-адрес</value>
+  </data>
+  <data name="LinkWinVisibleRect" xml:space="preserve">
+    <value>Видимый прямоугольник</value>
+  </data>
+  <data name="MainCropPageContextMenuAdjust" xml:space="preserve">
+    <value>Отрегулируйте выбранную область</value>
+  </data>
+  <data name="MainCropPageNotSelectedPageNote" xml:space="preserve">
+    <value>Выберите одну страницу.</value>
+  </data>
+  <data name="MainCropPageSelectLittleAreaNote" xml:space="preserve">
+    <value>Установите большую площадь.</value>
+  </data>
+  <data name="MainCropPageSelectedMulPageNote" xml:space="preserve">
+    <value>Можно выбрать только одну страницу.</value>
+  </data>
+  <data name="MainViewBatchPrintContent" xml:space="preserve">
+    <value>Пакетная печать</value>
+  </data>
+  <data name="MainViewBookmarkAddBookmark" xml:space="preserve">
+    <value>Добавить закладку</value>
+  </data>
+  <data name="MainViewBookmarkAddChildBookmark" xml:space="preserve">
+    <value>Добавить вложенную закладку</value>
+  </data>
+  <data name="MainViewBookmarkCollapseAll" xml:space="preserve">
+    <value>Свернуть все</value>
+  </data>
+  <data name="MainViewBookmarkDeleteBookmark" xml:space="preserve">
+    <value>Удалить закладку</value>
+  </data>
+  <data name="MainViewBookmarkExpandAll" xml:space="preserve">
+    <value>Расширить все</value>
+  </data>
+  <data name="MainViewBookmarkRenameBookmark" xml:space="preserve">
+    <value>Переименовать закладку</value>
+  </data>
+  <data name="MainViewCopilotButtonFirstCloseTips" xml:space="preserve">
+    <value>Щелкните значок, чтобы продолжить общение с PDF</value>
+  </data>
+  <data name="MainViewCreateNewPDF" xml:space="preserve">
+    <value>Создать Файл</value>
+  </data>
+  <data name="MainViewCropPageContent" xml:space="preserve">
+    <value>Обрезать страницы</value>
+  </data>
+  <data name="MainViewToolbarPhoneBtn" xml:space="preserve">
+    <value>iOS &amp; Android</value>
+  </data>
+  <data name="MainViewToolbarPhoneBtnTips" xml:space="preserve">
+    <value>Получите PDFgear для iOS и Android</value>
+  </data>
+  <data name="MainWindowAccountBtn" xml:space="preserve">
+    <value>Войти / Зарегистрироваться</value>
+  </data>
+  <data name="MainWindowCompressFileBtn" xml:space="preserve">
+    <value>Сжать PDF</value>
+  </data>
+  <data name="MainWindowExportFileToBtn" xml:space="preserve">
+    <value>Экспортировать PDF как</value>
+  </data>
+  <data name="MainWindowFilesBtn" xml:space="preserve">
+    <value>Файлы</value>
+  </data>
+  <data name="MainWindowMergeAndSplitBtn" xml:space="preserve">
+    <value>Объединить и Разделить</value>
+  </data>
+  <data name="MainWindowNewBlankFileBtn" xml:space="preserve">
+    <value>Новый пустой PDF</value>
+  </data>
+  <data name="MainWindowNewFileBtn" xml:space="preserve">
+    <value>Создать Файл</value>
+  </data>
+  <data name="MainWindowNewFilefromImageBtn" xml:space="preserve">
+    <value>Создать PDF из изображений</value>
+  </data>
+  <data name="MainWindowNewFilefromScannerBtn" xml:space="preserve">
+    <value>Создать PDF со сканера</value>
+  </data>
+  <data name="MainWindowQuitBtn" xml:space="preserve">
+    <value>Выйти из PDFgear</value>
+  </data>
+  <data name="ManageStampAddNewBtnContent" xml:space="preserve">
+    <value>Добавить новую категорию</value>
+  </data>
+  <data name="ManageStampDeleteCategoryBtnContent" xml:space="preserve">
+    <value>Удалить категорию</value>
+  </data>
+  <data name="ManageStampRenameBtnContent" xml:space="preserve">
+    <value>Переименовать категорию</value>
+  </data>
+  <data name="ManageStampWinCreateBtnContent" xml:space="preserve">
+    <value>Создать штамп</value>
+  </data>
+  <data name="ManageStampWinTitle" xml:space="preserve">
+    <value>Управление пользовательскими штампами</value>
+  </data>
+  <data name="ManegeStampAllCategories" xml:space="preserve">
+    <value>Все категории</value>
+  </data>
+  <data name="MenuAnnotateArrowContent" xml:space="preserve">
+    <value>Стрелка</value>
+  </data>
+  <data name="MenuAnnotateEllipseContent" xml:space="preserve">
+    <value>Овал</value>
+  </data>
+  <data name="MenuAnnotateHiddenContent" xml:space="preserve">
+    <value>Скрыть Kомментарии</value>
+  </data>
+  <data name="MenuAnnotateHighlight" xml:space="preserve">
+    <value>Выделение области</value>
+  </data>
+  <data name="MenuAnnotateHighlightContent" xml:space="preserve">
+    <value>Выделить</value>
+  </data>
+  <data name="MenuAnnotateInkContent" xml:space="preserve">
+    <value>Рукописный фрагмент</value>
+  </data>
+  <data name="MenuAnnotateLineContent" xml:space="preserve">
+    <value>Линия</value>
+  </data>
+  <data name="MenuAnnotateManageContent" xml:space="preserve">
+    <value>Управление kомментариями</value>
+  </data>
+  <data name="MenuAnnotateNoteContent" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="MenuAnnotateRemoveTextContent" xml:space="preserve">
+    <value>Стереть Текст</value>
+  </data>
+  <data name="MenuAnnotateShapeContent" xml:space="preserve">
+    <value>Прямоугольник</value>
+  </data>
+  <data name="MenuAnnotateShowContent" xml:space="preserve">
+    <value>Показать Kомментарии</value>
+  </data>
+  <data name="MenuAnnotateSignatureContent" xml:space="preserve">
+    <value>Подпись</value>
+  </data>
+  <data name="MenuAnnotateStampContent" xml:space="preserve">
+    <value>Штамп</value>
+  </data>
+  <data name="MenuAnnotateStrikeContent" xml:space="preserve">
+    <value>Зачеркнуть</value>
+  </data>
+  <data name="MenuAnnotateTextBoxContent" xml:space="preserve">
+    <value>Текстовое поле</value>
+  </data>
+  <data name="MenuAnnotateTranslateContent" xml:space="preserve">
+    <value>Перевести</value>
+  </data>
+  <data name="MenuAnnotateTypeWriterContent" xml:space="preserve">
+    <value>Печатная машинка</value>
+  </data>
+  <data name="MenuAnnotateUnderlineContent" xml:space="preserve">
+    <value>Подчеркнуть</value>
+  </data>
+  <data name="MenuAnnotateWatermarkContent" xml:space="preserve">
+    <value>Водяной знак</value>
+  </data>
+  <data name="MenuConvertPdfToExcelContent" xml:space="preserve">
+    <value>PDF в Excel</value>
+  </data>
+  <data name="MenuConvertPdfToHtmlContent" xml:space="preserve">
+    <value>PDF в HTML</value>
+  </data>
+  <data name="MenuConvertPdfToImageContent" xml:space="preserve">
+    <value>PDF в PNG</value>
+  </data>
+  <data name="MenuConvertPdfToJpegContent" xml:space="preserve">
+    <value>PDF в JPEG</value>
+  </data>
+  <data name="MenuConvertPdfToPPTContent" xml:space="preserve">
+    <value>PDF в PPT</value>
+  </data>
+  <data name="MenuConvertPdfToRtfContent" xml:space="preserve">
+    <value>PDF в RTF</value>
+  </data>
+  <data name="MenuConvertPdfToTxtContent" xml:space="preserve">
+    <value>PDF в TXT</value>
+  </data>
+  <data name="MenuConvertPdfToWordContent" xml:space="preserve">
+    <value>PDF в Word</value>
+  </data>
+  <data name="MenuConvertPdfToXmlContent" xml:space="preserve">
+    <value>PDF в XML</value>
+  </data>
+  <data name="MenuExtractTextEmpyMsg" xml:space="preserve">
+    <value>Текст не выделен. В выделенной области отсутствует текст или выделено изображение.</value>
+  </data>
+  <data name="MenuGruopAnnotateTitle" xml:space="preserve">
+    <value>Комментарий </value>
+  </data>
+  <data name="MenuGruopConvertTitle" xml:space="preserve">
+    <value>Конвертировать</value>
+  </data>
+  <data name="MenuGruopFillFormTitle" xml:space="preserve">
+    <value>Форм</value>
+  </data>
+  <data name="MenuGruopHelpTitle" xml:space="preserve">
+    <value>Помощь</value>
+  </data>
+  <data name="MenuGruopHomeTitle" xml:space="preserve">
+    <value>Домашняя страница</value>
+  </data>
+  <data name="MenuGruopInsertTitle" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="MenuGruopPageTitle" xml:space="preserve">
+    <value>Страница</value>
+  </data>
+  <data name="MenuGruopProtectTitle" xml:space="preserve">
+    <value>Защитить</value>
+  </data>
+  <data name="MenuGruopToolsTitle" xml:space="preserve">
+    <value>Инструменты</value>
+  </data>
+  <data name="MenuGruopViewTitle" xml:space="preserve">
+    <value>Просмотр</value>
+  </data>
+  <data name="MenuHelpAboutContent" xml:space="preserve">
+    <value>О приложении</value>
+  </data>
+  <data name="MenuHelpContactUsContent" xml:space="preserve">
+    <value>Обратная связь</value>
+  </data>
+  <data name="MenuHelpSwitchtoPreviousVersionContent" xml:space="preserve">
+    <value>Вернуться на предыдущую версию</value>
+  </data>
+  <data name="MenuHelpUserGuideContent" xml:space="preserve">
+    <value>Руководство пользователя</value>
+  </data>
+  <data name="MenuHelperSettingContent" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="MenuHelperUpdateContent" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="MenuInsertAddContent" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="MenuInsertDelContent" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="MenuInsertEditContent" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="MenuInsertHeaderFooterContent" xml:space="preserve">
+    <value>Верхний и нижний колонтитул</value>
+  </data>
+  <data name="MenuInsertImageContent" xml:space="preserve">
+    <value>Изображение</value>
+  </data>
+  <data name="MenuInsertPageNumberContent" xml:space="preserve">
+    <value>Номер страницы</value>
+  </data>
+  <data name="MenuPageDeleteContent" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="MenuPageExtractContent" xml:space="preserve">
+    <value>Извлечь</value>
+  </data>
+  <data name="MenuPageInsertContent" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="MenuPageMergeContent" xml:space="preserve">
+    <value>Объединить PDF</value>
+  </data>
+  <data name="MenuPageRotateLeftContent" xml:space="preserve">
+    <value>Повернуть влево</value>
+  </data>
+  <data name="MenuPageRotateRightContent" xml:space="preserve">
+    <value>Повернуть вправо</value>
+  </data>
+  <data name="MenuPageSplitContent" xml:space="preserve">
+    <value>Разделить PDF</value>
+  </data>
+  <data name="MenuPageSubInsertBlankPage" xml:space="preserve">
+    <value>Пустая страница</value>
+  </data>
+  <data name="MenuPageSubInsertFromImage" xml:space="preserve">
+    <value>Из изображения</value>
+  </data>
+  <data name="MenuPageSubInsertFromPDF" xml:space="preserve">
+    <value>Из PDF</value>
+  </data>
+  <data name="MenuPageSubInsertFromScanner" xml:space="preserve">
+    <value>Из сканера</value>
+  </data>
+  <data name="MenuPageSubInsertFromWord" xml:space="preserve">
+    <value>Из Word</value>
+  </data>
+  <data name="MenuPropertiesContent" xml:space="preserve">
+    <value>Свойства</value>
+  </data>
+  <data name="MenuProtectPasswordContent" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="MenuProtectRemoveContent" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="MenuRightAnnotateCopyText" xml:space="preserve">
+    <value>Копировать Текст</value>
+  </data>
+  <data name="MenuRightAnnotateDelete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="MenuRightAnnotateDuplicate" xml:space="preserve">
+    <value>Создать копию</value>
+  </data>
+  <data name="MenuRightAnnotateExitEdit" xml:space="preserve">
+    <value>Exit edit</value>
+  </data>
+  <data name="MenuShareEmailContent" xml:space="preserve">
+    <value>Электронная почта</value>
+  </data>
+  <data name="MenuShareSendFileContent" xml:space="preserve">
+    <value>Отправить файл</value>
+  </data>
+  <data name="MenuShareShareContent" xml:space="preserve">
+    <value>Поделиться</value>
+  </data>
+  <data name="MenuSignatureSubAddNew" xml:space="preserve">
+    <value>Создать подпись</value>
+  </data>
+  <data name="MenuStampPresetsApprovedItemName" xml:space="preserve">
+    <value>Утверждено</value>
+  </data>
+  <data name="MenuStampPresetsAsIsItemName" xml:space="preserve">
+    <value>ВИсходномВиде</value>
+  </data>
+  <data name="MenuStampPresetsConfidentialItemName" xml:space="preserve">
+    <value>Конфиденциально</value>
+  </data>
+  <data name="MenuStampPresetsDraftItemName" xml:space="preserve">
+    <value>Черновик</value>
+  </data>
+  <data name="MenuStampPresetsExperimentalItemName" xml:space="preserve">
+    <value>ТестоваяВерсия</value>
+  </data>
+  <data name="MenuStampPresetsExpiredItemName" xml:space="preserve">
+    <value>СрокДействияИстек</value>
+  </data>
+  <data name="MenuStampPresetsFinalItemName" xml:space="preserve">
+    <value>ФинальнаяВерсия</value>
+  </data>
+  <data name="MenuStampPresetsForPublicReleaseItemName" xml:space="preserve">
+    <value>ДляПубличногоПросмотра</value>
+  </data>
+  <data name="MenuStampPresetsNotApprovedItemName" xml:space="preserve">
+    <value>НеУтверждено</value>
+  </data>
+  <data name="MenuStampPresetsNotForPublicReleaseItemName" xml:space="preserve">
+    <value>НеДляПубличногоПросмотра</value>
+  </data>
+  <data name="MenuStampPresetsSoldItemName" xml:space="preserve">
+    <value>Продано</value>
+  </data>
+  <data name="MenuStampPresetsTopSecretItemName" xml:space="preserve">
+    <value>СовершенноСекретно</value>
+  </data>
+  <data name="MenuStampSubCustomizeContent" xml:space="preserve">
+    <value>Пользовательский штамп</value>
+  </data>
+  <data name="MenuStampSubInsertlocalImageContent" xml:space="preserve">
+    <value>Вставить локальное изображение</value>
+  </data>
+  <data name="MenuStampSubPresetsContent" xml:space="preserve">
+    <value>Макет</value>
+  </data>
+  <data name="MenuSubFillColorItem" xml:space="preserve">
+    <value>Цвет заливки</value>
+  </data>
+  <data name="MenuSubFontColorItem" xml:space="preserve">
+    <value>Цвет шрифта</value>
+  </data>
+  <data name="MenuSubFontSizeItem" xml:space="preserve">
+    <value>Размер шрифта</value>
+  </data>
+  <data name="MenuSubStrokeColorItem" xml:space="preserve">
+    <value>Цвет контура</value>
+  </data>
+  <data name="MenuSubThicknessItem" xml:space="preserve">
+    <value>Толщина</value>
+  </data>
+  <data name="MenuViewAutoScrollContent" xml:space="preserve">
+    <value>Автопрокрутка</value>
+  </data>
+  <data name="MenuViewCompressContent" xml:space="preserve">
+    <value>Сжать</value>
+  </data>
+  <data name="MenuViewContiusContent" xml:space="preserve">
+    <value>Непрерывный вид</value>
+  </data>
+  <data name="MenuViewDoubleContent" xml:space="preserve">
+    <value>Две страницы</value>
+  </data>
+  <data name="MenuViewEditObjectContent" xml:space="preserve">
+    <value>Редактировать Oбъект</value>
+  </data>
+  <data name="MenuViewEditTextContent" xml:space="preserve">
+    <value>Редактировать текст</value>
+  </data>
+  <data name="MenuViewExitAnnotateContent" xml:space="preserve">
+    <value>Выход из редактирования заметки</value>
+  </data>
+  <data name="MenuViewExtractTextContent" xml:space="preserve">
+    <value>Извлечь текст</value>
+  </data>
+  <data name="MenuViewFindContent" xml:space="preserve">
+    <value>Найти</value>
+  </data>
+  <data name="MenuViewFitPageContent" xml:space="preserve">
+    <value>Подгонка страницы</value>
+  </data>
+  <data name="MenuViewFullSizeContent" xml:space="preserve">
+    <value>Фактический размер</value>
+  </data>
+  <data name="MenuViewHeightContent" xml:space="preserve">
+    <value>Подходит для высоты</value>
+  </data>
+  <data name="MenuViewNextContent" xml:space="preserve">
+    <value>Следующая</value>
+  </data>
+  <data name="MenuViewOCRContent" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="MenuViewPresentContent" xml:space="preserve">
+    <value>Воспроизвести</value>
+  </data>
+  <data name="MenuViewPreviousContent" xml:space="preserve">
+    <value>Предыдущая</value>
+  </data>
+  <data name="MenuViewRotateLeftContent" xml:space="preserve">
+    <value>Повернуть влево</value>
+  </data>
+  <data name="MenuViewRotateRightContent" xml:space="preserve">
+    <value>Повернуть вправо</value>
+  </data>
+  <data name="MenuViewScreenshotContent" xml:space="preserve">
+    <value>Скриншот</value>
+  </data>
+  <data name="MenuViewSingleContent" xml:space="preserve">
+    <value>Одна страница</value>
+  </data>
+  <data name="MenuViewUpgradeContent" xml:space="preserve">
+    <value>Купить</value>
+  </data>
+  <data name="MenuViewWidthContent" xml:space="preserve">
+    <value>По ширине</value>
+  </data>
+  <data name="MenuViewZoomContent" xml:space="preserve">
+    <value>Увеличение</value>
+  </data>
+  <data name="MenuWatermarkSubCreateContent" xml:space="preserve">
+    <value>Создать водяной знак</value>
+  </data>
+  <data name="MenuWatermarkSubDeleteContent" xml:space="preserve">
+    <value>Удалить водяной знак</value>
+  </data>
+  <data name="MergeWindowsLoadfailedMessage" xml:space="preserve">
+    <value>Загрузка файла не удалась.  Пожалуйста, выберите другой файл и повторите попытку.</value>
+  </data>
+  <data name="MicrosoftStoreBillingHelpContent" xml:space="preserve">
+    <value>Справка по Microsoft Store и выставлению счетов</value>
+  </data>
+  <data name="MoreColorsBtnTips" xml:space="preserve">
+    <value>Больше цветов...</value>
+  </data>
+  <data name="MsgAttachmentOpenFailed" xml:space="preserve">
+    <value>Не удалось открыть вложение.</value>
+  </data>
+  <data name="MsgAttachmentSaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить вложение(я).</value>
+  </data>
+  <data name="MsgAttachmentSaveSuc" xml:space="preserve">
+    <value>Успешно сохранено. Открыть вложения в Проводнике?</value>
+  </data>
+  <data name="Msg_AttachmentAlreadyExist" xml:space="preserve">
+    <value>Не удалось прикрепить файл «XXX». Файл с таким именем уже существует в панели вложений.</value>
+  </data>
+  <data name="Msg_AttachmentToolLarge" xml:space="preserve">
+    <value>Файл «XXX» превышает лимит 2 ГБ и не может быть прикреплён.</value>
+  </data>
+  <data name="Msg_DeleteAttachments" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить вложение(я)?</value>
+  </data>
+  <data name="Msg_DescriptionOverMaxCharsNum" xml:space="preserve">
+    <value>Описание не может превышать 256 символов.</value>
+  </data>
+  <data name="NewBookmarkName" xml:space="preserve">
+    <value>Новая закладка</value>
+  </data>
+  <data name="NewFileName" xml:space="preserve">
+    <value>Без названия</value>
+  </data>
+  <data name="NewFileRemindSave" xml:space="preserve">
+    <value>Документ XXX закрывается. Хотите ли вы сохранить изменения?</value>
+  </data>
+  <data name="NextBtnTooltipText" xml:space="preserve">
+    <value>Найти далее</value>
+  </data>
+  <data name="NoPrintNoteWindowAddBtn" xml:space="preserve">
+    <value>Принтер не найден в вашей системе. Пожалуйста, добавьте принтер, чтобы продолжить.</value>
+  </data>
+  <data name="NoPrintNoteWindowContent" xml:space="preserve">
+    <value>Добавить принтер</value>
+  </data>
+  <data name="NoPrintNoteWindowTitle" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="OCRTip" xml:space="preserve">
+    <value>Перетащите мышь, чтобы выбрать область для распознавания текста. После завершения вы перейдете к следующему шагу.</value>
+  </data>
+  <data name="OcrDialogErrorMessage" xml:space="preserve">
+    <value>В документе не найдены распознаваемые символы. Убедитесь, что содержимое документа четкое, поверните страницу в правильное положение для чтения и выберите язык содержимого.</value>
+  </data>
+  <data name="OcrDialogLanguageRecognition" xml:space="preserve">
+    <value>Распознавание языков</value>
+  </data>
+  <data name="OcrDialogLanguageSelected" xml:space="preserve">
+    <value>Выбранные языки:</value>
+  </data>
+  <data name="OcrDialogLanguageSelectedNone" xml:space="preserve">
+    <value>Пожалуйста, выберите как минимум один язык.</value>
+  </data>
+  <data name="OcrDialogLanguageSlowApplyTips" xml:space="preserve">
+    <value>Применять</value>
+  </data>
+  <data name="OcrDialogLanguageSlowTips" xml:space="preserve">
+    <value>Более трех языков могут замедлить распознавание.</value>
+  </data>
+  <data name="OcrDialogSaveDocDoNotSaveBtn" xml:space="preserve">
+    <value>Не сохранять</value>
+  </data>
+  <data name="OcrDialogSaveDocMessage" xml:space="preserve">
+    <value>Хотите сохранить изменения в "XXX" перед операцией?</value>
+  </data>
+  <data name="OcrDialogSubtitle" xml:space="preserve">
+    <value>Выполните распознавание PDF-файла, чтобы сделать текст на изображениях доступным для поиска.</value>
+  </data>
+  <data name="OcrDialogTitle" xml:space="preserve">
+    <value>OCR PDF</value>
+  </data>
+  <data name="OpenDocByIncorrectPwdMsg" xml:space="preserve">
+    <value>Неверный пароль.</value>
+  </data>
+  <data name="OpenDocFailedExceptionMsg" xml:space="preserve">
+    <value>Не удалось открыть документ.</value>
+  </data>
+  <data name="OpenDocNotExistMsg" xml:space="preserve">
+    <value>Файл не существует:</value>
+  </data>
+  <data name="OpenDocNotSupportedMsg" xml:space="preserve">
+    <value>Неподдерживаемые типы файлов:</value>
+  </data>
+  <data name="OpenFileBtnContent" xml:space="preserve">
+    <value>Открыть файл</value>
+  </data>
+  <data name="PageMenuInsertfromfileContent" xml:space="preserve">
+    <value>Вставить из файла</value>
+  </data>
+  <data name="PageMergeErrorMessage" xml:space="preserve">
+    <value>Не удалось загрузить файл. Пожалуйста, попробуйте снова с другим файлом.</value>
+  </data>
+  <data name="PageResizeWinCustomize" xml:space="preserve">
+    <value>Настроить</value>
+  </data>
+  <data name="PageResizeWinFixedSize" xml:space="preserve">
+    <value>Фиксированный размер</value>
+  </data>
+  <data name="PageResizeWinHeightContent" xml:space="preserve">
+    <value>В:</value>
+  </data>
+  <data name="PageResizeWinOrientation" xml:space="preserve">
+    <value>сторона</value>
+  </data>
+  <data name="PageResizeWinOriginalContent" xml:space="preserve">
+    <value>Оригинальный Размер Страницы</value>
+  </data>
+  <data name="PageResizeWinPageNumber" xml:space="preserve">
+    <value>Страница</value>
+  </data>
+  <data name="PageResizeWinResizeGroupName" xml:space="preserve">
+    <value>Изменить размер</value>
+  </data>
+  <data name="PageResizeWinResizedContent" xml:space="preserve">
+    <value>Изменённый Размер Страницы</value>
+  </data>
+  <data name="PageResizeWinTitle" xml:space="preserve">
+    <value>Изменение Размера Страницы</value>
+  </data>
+  <data name="PageResizeWinTooltip" xml:space="preserve">
+    <value>Измените размер страниц на пользовательский для лучшего макета.</value>
+  </data>
+  <data name="PageResizeWinWidthContent" xml:space="preserve">
+    <value>Ш:</value>
+  </data>
+  <data name="PageSelectedAllPrefiexedContent" xml:space="preserve">
+    <value>xc</value>
+  </data>
+  <data name="PageSplitMergeCheckMsg" xml:space="preserve">
+    <value>Открытый документ был отредактирован, сначала сохраните изменения.</value>
+  </data>
+  <data name="PageWinAllPages" xml:space="preserve">
+    <value>Все страницы</value>
+  </data>
+  <data name="PageWinCustomPages" xml:space="preserve">
+    <value>Пользовательские страницы</value>
+  </data>
+  <data name="PageWinExtractAll" xml:space="preserve">
+    <value>Извлечь страницы в один PDF</value>
+  </data>
+  <data name="PageWinExtractDelete" xml:space="preserve">
+    <value>Удалить выбранные страницы после извлечения</value>
+  </data>
+  <data name="PageWinExtractMode" xml:space="preserve">
+    <value>Режим извлечения</value>
+  </data>
+  <data name="PageWinExtractevert" xml:space="preserve">
+    <value>Извлеките каждую страницу в отдельные PDF-файлы</value>
+  </data>
+  <data name="PageWinRange" xml:space="preserve">
+    <value>Диапазон</value>
+  </data>
+  <data name="PageWinSelectPages" xml:space="preserve">
+    <value>Выбранные страницы</value>
+  </data>
+  <data name="PageWinSelectedPages" xml:space="preserve">
+    <value>"XXX" страниц выбрано</value>
+  </data>
+  <data name="PageWinSubset" xml:space="preserve">
+    <value>Поддиапазон</value>
+  </data>
+  <data name="PhoneWinContent" xml:space="preserve">
+    <value>Сканируйте QR-код, чтобы пользоваться PDFgear везде</value>
+  </data>
+  <data name="PhoneWinContentTitle" xml:space="preserve">
+    <value>PDFgear для iOS и Android доступен</value>
+  </data>
+  <data name="PopupPlaceholderContent" xml:space="preserve">
+    <value>Введите сюда текст</value>
+  </data>
+  <data name="PresentationWindowExitText" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="PrevBtnTooltipText" xml:space="preserve">
+    <value>Найти ранее</value>
+  </data>
+  <data name="PrintWindowBookLetBinding" xml:space="preserve">
+    <value>Переплёт</value>
+  </data>
+  <data name="PrintWindowBookLetBtnContent" xml:space="preserve">
+    <value>Брошюра</value>
+  </data>
+  <data name="PrintWindowBookLetLeftBinding" xml:space="preserve">
+    <value>Слева</value>
+  </data>
+  <data name="PrintWindowBookLetRightBinding" xml:space="preserve">
+    <value>Справа</value>
+  </data>
+  <data name="PrintWindowBookLetSubset" xml:space="preserve">
+    <value>Диапазон</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBack" xml:space="preserve">
+    <value>Только задняя сторона</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBoth" xml:space="preserve">
+    <value>Обе стороны</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetFrontal" xml:space="preserve">
+    <value>Только лицевая сторона</value>
+  </data>
+  <data name="PrintWindowMutilpleBtnContent" xml:space="preserve">
+    <value>Несколько</value>
+  </data>
+  <data name="PrintWindowMutilpleLayout" xml:space="preserve">
+    <value>Порядок страниц</value>
+  </data>
+  <data name="PrintWindowMutilpleMargins" xml:space="preserve">
+    <value>Поля</value>
+  </data>
+  <data name="PrintWindowMutilplePapers" xml:space="preserve">
+    <value>Страниц на листе</value>
+  </data>
+  <data name="PrintWindowMutilplePrintBorder" xml:space="preserve">
+    <value>Печатать рамку страницы</value>
+  </data>
+  <data name="PrintWindowPageSettingGrounpName" xml:space="preserve">
+    <value>Настройки страницы</value>
+  </data>
+  <data name="PrintWindowPageSettingsSizeTitle" xml:space="preserve">
+    <value>Размер бумаги</value>
+  </data>
+  <data name="PrintWindowPrintHandingGrounpName" xml:space="preserve">
+    <value>Режим печати</value>
+  </data>
+  <data name="PrintWindowRangeGroupName" xml:space="preserve">
+    <value>Диапазон страниц</value>
+  </data>
+  <data name="PrintWindowReverseCheckBoxContent" xml:space="preserve">
+    <value>В обратном порядке</value>
+  </data>
+  <data name="PrintWindowScalBtnContent" xml:space="preserve">
+    <value>Размер</value>
+  </data>
+  <data name="PrintWindowTileBtnContent" xml:space="preserve">
+    <value>Постер</value>
+  </data>
+  <data name="PrintWindowTileCutMasks" xml:space="preserve">
+    <value>Метки вырезки</value>
+  </data>
+  <data name="PrintWindowTileLabels" xml:space="preserve">
+    <value>Ярлыки</value>
+  </data>
+  <data name="PrintWindowTileOverlap" xml:space="preserve">
+    <value>Наложение</value>
+  </data>
+  <data name="PrintWindowTilePageZoom" xml:space="preserve">
+    <value>Масштаб сегмента</value>
+  </data>
+  <data name="RateWindowsContent" xml:space="preserve">
+    <value>Делиться мыслями и помогите нам улучшить!</value>
+  </data>
+  <data name="RateWindowsContentTitle" xml:space="preserve">
+    <value>Нравится PDFgear?</value>
+  </data>
+  <data name="RateWindowsFeedbcakBtn" xml:space="preserve">
+    <value>Обеспечить обратную связь</value>
+  </data>
+  <data name="RateWindowsRateBtn" xml:space="preserve">
+    <value>Работает хорошо</value>
+  </data>
+  <data name="ReadAllBtn" xml:space="preserve">
+    <value>Читать все страницы</value>
+  </data>
+  <data name="ReadCurrentBtn" xml:space="preserve">
+    <value>Читать текущую страницу</value>
+  </data>
+  <data name="ReadFromCurrentBtn" xml:space="preserve">
+    <value>Читать с текущей страницы</value>
+  </data>
+  <data name="ReadMessage" xml:space="preserve">
+    <value>Язык речи будет переключен на «xxx», и чтение начнется заново с начала xxxx-й страницы. Вы уверены, что хотите продолжить?</value>
+  </data>
+  <data name="ReadPageEmpty" xml:space="preserve">
+    <value>На текущей странице (странице XXX) нет читаемого текста.</value>
+  </data>
+  <data name="ReadToolBarBtn" xml:space="preserve">
+    <value>Виджет управления</value>
+  </data>
+  <data name="ReadWinAddMore" xml:space="preserve">
+    <value>Добавить больше языка речи</value>
+  </data>
+  <data name="ReadWinFemaleVoice" xml:space="preserve">
+    <value>Женский</value>
+  </data>
+  <data name="ReadWinMaleVoice" xml:space="preserve">
+    <value>Мужской</value>
+  </data>
+  <data name="ReadWinOkBtn" xml:space="preserve">
+    <value>Продолжать</value>
+  </data>
+  <data name="ReadWinPitchBtn" xml:space="preserve">
+    <value>Высота звука</value>
+  </data>
+  <data name="ReadWinSpeedBtn" xml:space="preserve">
+    <value>Ставка</value>
+  </data>
+  <data name="ReadWinTitle" xml:space="preserve">
+    <value>Читай вслух</value>
+  </data>
+  <data name="RedactBtn" xml:space="preserve">
+    <value>Исправить</value>
+  </data>
+  <data name="RedactStartMessageContent" xml:space="preserve">
+    <value>Перетащите мышь, чтобы нарисовать область, которую хотите исправить. Содержимое, помеченное для редактирования, будет безвозвратно удалено при сохранении документа.</value>
+  </data>
+  <data name="RedactStartMessageTitle" xml:space="preserve">
+    <value>Скрытый контент удаляется навсегда.</value>
+  </data>
+  <data name="RedactToolbarExitText" xml:space="preserve">
+    <value>Выйти из Исправить</value>
+  </data>
+  <data name="RemoveDeferredDigitSignConfirmMessage" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить XXX?</value>
+  </data>
+  <data name="RemoveDeferredDigitSignFailedMessage" xml:space="preserve">
+    <value>Не удалось удалить поле подписи.</value>
+  </data>
+  <data name="RightMenuAddImageItemText" xml:space="preserve">
+    <value>Изображение</value>
+  </data>
+  <data name="RightMenuAddItemText" xml:space="preserve">
+    <value>Добавить...</value>
+  </data>
+  <data name="RightMenuAddTextItemText" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="RightMenuBookmakrkExpandCollpaseItemText" xml:space="preserve">
+    <value>Развернуть/Свернуть все закладки</value>
+  </data>
+  <data name="RightMenuCompressPDFItemText" xml:space="preserve">
+    <value>Сжать PDF</value>
+  </data>
+  <data name="RightMenuConvertToItemText" xml:space="preserve">
+    <value>Конвертировать в</value>
+  </data>
+  <data name="RightMenuDeleteAnnotationItemText" xml:space="preserve">
+    <value>Удалить комментарий</value>
+  </data>
+  <data name="RightMenuDeleteTextItemText" xml:space="preserve">
+    <value>Удалить текст</value>
+  </data>
+  <data name="RightMenuInsertPageItemImage" xml:space="preserve">
+    <value>Из изображения</value>
+  </data>
+  <data name="RightMenuInsertPageItemPDF" xml:space="preserve">
+    <value>Из PDF</value>
+  </data>
+  <data name="RightMenuInsertPageItemWord" xml:space="preserve">
+    <value>Из Word</value>
+  </data>
+  <data name="RightMenuInsertPageText" xml:space="preserve">
+    <value>Вставить страницы</value>
+  </data>
+  <data name="RightMenuMergeSplitPDFItemText" xml:space="preserve">
+    <value>Объединить и Разделить PDF</value>
+  </data>
+  <data name="RightMenuOcrPagesItemText" xml:space="preserve">
+    <value>OCR на страницах</value>
+  </data>
+  <data name="RightMenuOcrPagesText" xml:space="preserve">
+    <value>OCR на страницах</value>
+  </data>
+  <data name="RightMenuPropertiesContent" xml:space="preserve">
+    <value>Свойства...</value>
+  </data>
+  <data name="SaveDocBeforeCloseMsg" xml:space="preserve">
+    <value>Сохранить изменения в ‘XXX’ перед закрытием?</value>
+  </data>
+  <data name="SaveDocBeforeCompressMsg" xml:space="preserve">
+    <value>Открытый документ был отредактирован. Сохраните изменения, прежде чем применить сжатие.</value>
+  </data>
+  <data name="SaveDocBeforeConvertMsg" xml:space="preserve">
+    <value>Открытый документ был отредактирован, сохраните изменения перед конвертированием.</value>
+  </data>
+  <data name="SaveDocBeforeSendMsg" xml:space="preserve">
+    <value>Открытый документ был отредактирован, сохраните изменения, чтобы продолжить.</value>
+  </data>
+  <data name="SaveDocFailedByMsg" xml:space="preserve">
+    <value>Не удалось сохранить документ. Он доступен только для чтения или открыт в другом приложении.</value>
+  </data>
+  <data name="SaveDocFailedBySaveasMsg" xml:space="preserve">
+    <value>Не удалось сохранить документ. Он доступен только для чтения или открыт в другом приложении. Сохранить копию документа?</value>
+  </data>
+  <data name="SaveMenuStampSubCustomizeContent" xml:space="preserve">
+    <value>Сохраните пользовательский штамп</value>
+  </data>
+  <data name="ScanErrorMessage" xml:space="preserve">
+    <value>Извините, произошла непредвиденная ошибка. Проверьте сканер и повторите попытку. Обратитесь в службу поддержки, если проблема сохраняется.</value>
+  </data>
+  <data name="ScannerWinAddFailed" xml:space="preserve">
+    <value>Не удалось добавить XXX, проверьте и попробуйте снова.</value>
+  </data>
+  <data name="ScannerWinAddNew" xml:space="preserve">
+    <value>Добавить новый сканер</value>
+  </data>
+  <data name="ScannerWinCantFindScanner" xml:space="preserve">
+    <value>Если ваш сканер не отображается, убедитесь, что он добавлен в настройки и там не отображается как офлайн.</value>
+  </data>
+  <data name="ScannerWinCheckScannerContent" xml:space="preserve">
+    <value>Проверьте, включен ли сканер и подключен ли он к компьютеру или сети. Вы также можете добавить новый сканер.</value>
+  </data>
+  <data name="ScannerWinClosingWarning" xml:space="preserve">
+    <value>Сканирования в списке будут потеряны после закрытия, вы хотите закрыть его?</value>
+  </data>
+  <data name="ScannerWinColorMode" xml:space="preserve">
+    <value>Цветовые режимы</value>
+  </data>
+  <data name="ScannerWinCreateTitle" xml:space="preserve">
+    <value>Создать PDF со сканера</value>
+  </data>
+  <data name="ScannerWinDeletePreview" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить это?</value>
+  </data>
+  <data name="ScannerWinDeleteSelected" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить эти XXX страницу(ы)?</value>
+  </data>
+  <data name="ScannerWinImportImags" xml:space="preserve">
+    <value>Импортировать изображения</value>
+  </data>
+  <data name="ScannerWinInsertAfter" xml:space="preserve">
+    <value>После Страницы</value>
+  </data>
+  <data name="ScannerWinInsertBefore" xml:space="preserve">
+    <value>До Страницы</value>
+  </data>
+  <data name="ScannerWinInsertConfirm" xml:space="preserve">
+    <value>Вы уверены, что хотите вставить выбранные страницы XXX и создать новый PDF?</value>
+  </data>
+  <data name="ScannerWinInsertOptions" xml:space="preserve">
+    <value>Параметры вставки</value>
+  </data>
+  <data name="ScannerWinInsertTitle" xml:space="preserve">
+    <value>Вставить со сканера</value>
+  </data>
+  <data name="ScannerWinNewScanner" xml:space="preserve">
+    <value>Новый Сканер</value>
+  </data>
+  <data name="ScannerWinNoScannerContent" xml:space="preserve">
+    <value>Если ваш сканер не отображается, убедитесь, что он добавлен в Настройки и не отключен.</value>
+  </data>
+  <data name="ScannerWinNoScannerTitle" xml:space="preserve">
+    <value>Выберите сканер</value>
+  </data>
+  <data name="ScannerWinNoScannerwarning" xml:space="preserve">
+    <value>Сканер не обнаружен</value>
+  </data>
+  <data name="ScannerWinPageSettings" xml:space="preserve">
+    <value>Настройки Страницы PDF</value>
+  </data>
+  <data name="ScannerWinPaperSource" xml:space="preserve">
+    <value>Источник бумаги</value>
+  </data>
+  <data name="ScannerWinRecommended" xml:space="preserve">
+    <value>Рекомендуется</value>
+  </data>
+  <data name="ScannerWinRefreshBtn" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="ScannerWinResolution" xml:space="preserve">
+    <value>Разрешение</value>
+  </data>
+  <data name="ScannerWinSamePagesize" xml:space="preserve">
+    <value>Как оригинальный файл</value>
+  </data>
+  <data name="ScannerWinScanArea" xml:space="preserve">
+    <value>Область Сканирования</value>
+  </data>
+  <data name="ScannerWinScanBtn" xml:space="preserve">
+    <value>Сканировать</value>
+  </data>
+  <data name="ScannerWinScannedTitle" xml:space="preserve">
+    <value>Отсканированные изображения</value>
+  </data>
+  <data name="ScannerWinScanner" xml:space="preserve">
+    <value>Сканер</value>
+  </data>
+  <data name="ScannerWinScannerBusyContent" xml:space="preserve">
+    <value>В устройстве подачи документов нет документов, или сканер занят. Попробуйте позже.</value>
+  </data>
+  <data name="ScannerWinScannerOfflineContent" xml:space="preserve">
+    <value>Устройство сканера не отвечает. Проверьте, включен ли сканер и подключен ли он к компьютеру или сети.</value>
+  </data>
+  <data name="ScannerWinScanningProperties" xml:space="preserve">
+    <value>Свойства сканирования</value>
+  </data>
+  <data name="ScannerWinSearchingContent" xml:space="preserve">
+    <value>Поиск сканеров...</value>
+  </data>
+  <data name="ScanningAreaEntire1" xml:space="preserve">
+    <value>Вся Область Сканирования</value>
+  </data>
+  <data name="ScanningAreaEntire10" xml:space="preserve">
+    <value>4 х 6 дюймов (10 х 15 см)</value>
+  </data>
+  <data name="ScanningAreaEntire2" xml:space="preserve">
+    <value>Letter (8,5 x 11 дюймов)</value>
+  </data>
+  <data name="ScanningAreaEntire3" xml:space="preserve">
+    <value>Legal (8,5 x 14 дюймов)</value>
+  </data>
+  <data name="ScanningAreaEntire4" xml:space="preserve">
+    <value>В5 (176 х 250 мм)</value>
+  </data>
+  <data name="ScanningAreaEntire5" xml:space="preserve">
+    <value>B4 (250 х 353 мм)</value>
+  </data>
+  <data name="ScanningAreaEntire6" xml:space="preserve">
+    <value>А5 (148 х 210 мм)</value>
+  </data>
+  <data name="ScanningAreaEntire7" xml:space="preserve">
+    <value>А4 (210 х 297 мм)</value>
+  </data>
+  <data name="ScanningAreaEntire8" xml:space="preserve">
+    <value>А3 (297 х 420 мм)</value>
+  </data>
+  <data name="ScanningAreaEntire9" xml:space="preserve">
+    <value>5 х 7 дюймов (13 х 18 см)</value>
+  </data>
+  <data name="ScanningColorColorMode" xml:space="preserve">
+    <value>Цвет</value>
+  </data>
+  <data name="ScanningColorGrayMode" xml:space="preserve">
+    <value>Градации серого</value>
+  </data>
+  <data name="ScanningPaperSourceDuplex" xml:space="preserve">
+    <value>Двустороннее сканирование</value>
+  </data>
+  <data name="ScanningPaperSourceFeeder" xml:space="preserve">
+    <value>Устройство подачи</value>
+  </data>
+  <data name="ScanningPaperSourceGlass" xml:space="preserve">
+    <value>Состекла</value>
+  </data>
+  <data name="ScanningWarning" xml:space="preserve">
+    <value>Сканирование, пожалуйста, повторите попытку по окончании.</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Arrow" xml:space="preserve">
+    <value>Стрелка</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Circle" xml:space="preserve">
+    <value>Эллипс</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Copy" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Finish" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Ink" xml:space="preserve">
+    <value>Чернила</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Rectangle" xml:space="preserve">
+    <value>Прямоугольник</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Undo" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="ScreenshotTip" xml:space="preserve">
+    <value>Перетащите мышь, чтобы выбрать область для захвата. После завершения вы перейдете к следующему шагу.</value>
+  </data>
+  <data name="SelectPageAllEvenPagesItem" xml:space="preserve">
+    <value>Только четные страницы</value>
+  </data>
+  <data name="SelectPageAllOddPagesItem" xml:space="preserve">
+    <value>Только нечетные страницы</value>
+  </data>
+  <data name="SelectPageAllPagesItem" xml:space="preserve">
+    <value>Все страницы</value>
+  </data>
+  <data name="SelectPageUnselectAllItem" xml:space="preserve">
+    <value>Очистить выбор</value>
+  </data>
+  <data name="SettingWindowTabGeneral" xml:space="preserve">
+    <value>Основные</value>
+  </data>
+  <data name="SettingWindowTabShortcut" xml:space="preserve">
+    <value>Комбинации клавиш</value>
+  </data>
+  <data name="SettingWindowTextShortcutAction" xml:space="preserve">
+    <value>Действие</value>
+  </data>
+  <data name="SettingWindowTextShortcutKeys" xml:space="preserve">
+    <value>Комбинация клавиш</value>
+  </data>
+  <data name="SettingWindowTitleShortcuts" xml:space="preserve">
+    <value>Список комбинаций клавиш</value>
+  </data>
+  <data name="SettingsDisplayAIButton" xml:space="preserve">
+    <value>Отобразите кнопку AI.</value>
+  </data>
+  <data name="SettingsHighlightFormFields" xml:space="preserve">
+    <value>Выделить поля формы.</value>
+  </data>
+  <data name="ShortcutTextAddBookmark" xml:space="preserve">
+    <value>Добавить закладку</value>
+  </data>
+  <data name="ShortcutTextAnnotateEllipse" xml:space="preserve">
+    <value>Овал</value>
+  </data>
+  <data name="ShortcutTextAnnotateInk" xml:space="preserve">
+    <value>Рукописный фрагмент</value>
+  </data>
+  <data name="ShortcutTextAnnotateLine" xml:space="preserve">
+    <value>Линия</value>
+  </data>
+  <data name="ShortcutTextAnnotateManage" xml:space="preserve">
+    <value>Управление комментариями</value>
+  </data>
+  <data name="ShortcutTextAnnotateNote" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="ShortcutTextAnnotateShape" xml:space="preserve">
+    <value>Прямоугольник</value>
+  </data>
+  <data name="ShortcutTextAnnotateTextBox" xml:space="preserve">
+    <value>Текстовое поле</value>
+  </data>
+  <data name="ShortcutTextAnnotateTypeWriter" xml:space="preserve">
+    <value>Печатная машинка</value>
+  </data>
+  <data name="ShortcutTextAreaHighlight" xml:space="preserve">
+    <value>Выделение области</value>
+  </data>
+  <data name="ShortcutTextAutoScroll" xml:space="preserve">
+    <value>Автопрокрутка</value>
+  </data>
+  <data name="ShortcutTextCloseDocument" xml:space="preserve">
+    <value>Закрыть файл</value>
+  </data>
+  <data name="ShortcutTextContinusRead" xml:space="preserve">
+    <value>Непрерывный вид</value>
+  </data>
+  <data name="ShortcutTextCreateNewPDF" xml:space="preserve">
+    <value>Новый PDF</value>
+  </data>
+  <data name="ShortcutTextCropPage" xml:space="preserve">
+    <value>Обрезать страницы</value>
+  </data>
+  <data name="ShortcutTextDocumentProperties" xml:space="preserve">
+    <value>Свойства документа</value>
+  </data>
+  <data name="ShortcutTextDoublePage" xml:space="preserve">
+    <value>Двустраничный вид</value>
+  </data>
+  <data name="ShortcutTextFind" xml:space="preserve">
+    <value>Найти</value>
+  </data>
+  <data name="ShortcutTextFitHeight" xml:space="preserve">
+    <value>Подходит для высоты</value>
+  </data>
+  <data name="ShortcutTextFitPage" xml:space="preserve">
+    <value>Подгонка страницы</value>
+  </data>
+  <data name="ShortcutTextFitWidth" xml:space="preserve">
+    <value>По ширине</value>
+  </data>
+  <data name="ShortcutTextFullScreen" xml:space="preserve">
+    <value>Войти/Выйти из полноэкранного режима</value>
+  </data>
+  <data name="ShortcutTextFullSize" xml:space="preserve">
+    <value>Фактический размер</value>
+  </data>
+  <data name="ShortcutTextHighlight" xml:space="preserve">
+    <value>Выделить</value>
+  </data>
+  <data name="ShortcutTextHighlightForm" xml:space="preserve">
+    <value>Выделить поля формы</value>
+  </data>
+  <data name="ShortcutTextInsertImage" xml:space="preserve">
+    <value>Добавить изображение</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubBlankPage" xml:space="preserve">
+    <value>Вставить пустую страницу</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromImage" xml:space="preserve">
+    <value>Вставить из изображения</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromPDF" xml:space="preserve">
+    <value>Вставить из PDF</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromWord" xml:space="preserve">
+    <value>Вставить из Word</value>
+  </data>
+  <data name="ShortcutTextNextView" xml:space="preserve">
+    <value>Следующий вид</value>
+  </data>
+  <data name="ShortcutTextOcrPages" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ShortcutTextOpenDocument" xml:space="preserve">
+    <value>Открыть файл</value>
+  </data>
+  <data name="ShortcutTextPageDelete" xml:space="preserve">
+    <value>Удалить страницы</value>
+  </data>
+  <data name="ShortcutTextPageExtract" xml:space="preserve">
+    <value>Извлечь страницы</value>
+  </data>
+  <data name="ShortcutTextPresent" xml:space="preserve">
+    <value>Воспроизвести</value>
+  </data>
+  <data name="ShortcutTextPreviousView" xml:space="preserve">
+    <value>Предыдущий вид</value>
+  </data>
+  <data name="ShortcutTextPrint" xml:space="preserve">
+    <value>Печать</value>
+  </data>
+  <data name="ShortcutTextRedo" xml:space="preserve">
+    <value>Вернуть</value>
+  </data>
+  <data name="ShortcutTextRotateLeft" xml:space="preserve">
+    <value>Повернуть влево</value>
+  </data>
+  <data name="ShortcutTextRotateRight" xml:space="preserve">
+    <value>Повернуть вправо</value>
+  </data>
+  <data name="ShortcutTextSaveAsDocument" xml:space="preserve">
+    <value>Сохранить как</value>
+  </data>
+  <data name="ShortcutTextSaveDocument" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="ShortcutTextScreenshot" xml:space="preserve">
+    <value>Скриншот</value>
+  </data>
+  <data name="ShortcutTextShowHideComments" xml:space="preserve">
+    <value>Показать/Скрыть комментарии</value>
+  </data>
+  <data name="ShortcutTextSinglePage" xml:space="preserve">
+    <value>Постранично</value>
+  </data>
+  <data name="ShortcutTextStrike" xml:space="preserve">
+    <value>Зачеркнуть</value>
+  </data>
+  <data name="ShortcutTextUnderline" xml:space="preserve">
+    <value>Подчеркнуть</value>
+  </data>
+  <data name="ShortcutTextUndo" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="ShortcutTextZoomIn" xml:space="preserve">
+    <value>Увеличить</value>
+  </data>
+  <data name="ShortcutTextZoomOut" xml:space="preserve">
+    <value>Уменьшить</value>
+  </data>
+  <data name="ShortcutTip" xml:space="preserve">
+    <value>Создать ярлык на рабочем столе для быстрого доступа к PDFgear?</value>
+  </data>
+  <data name="SigDialogDigSignBtn" xml:space="preserve">
+    <value>Цифровая подпись</value>
+  </data>
+  <data name="SigDialogDigSignBtn2" xml:space="preserve">
+    <value>Зашифровать с помощью сертификата</value>
+  </data>
+  <data name="SignPropDialogMessage_SaveCert" xml:space="preserve">
+    <value>Вы уверены, что хотите добавить этот сертификат в список доверенных сертификатов?</value>
+  </data>
+  <data name="StampFlattenConfirmContent" xml:space="preserve">
+    <value>После сплющивания штампы нельзя будет редактировать, и это действие необратимо. Если вы сделали это по ошибке, закройте документ без сохранения.</value>
+  </data>
+  <data name="StampFlattenConfirmTitle" xml:space="preserve">
+    <value>Вы уверены, что хотите сплющить штамп(ы)?</value>
+  </data>
+  <data name="StampLimitErrorMessage" xml:space="preserve">
+    <value>Невозможно добавить больше категорий, так как достигнут предел.</value>
+  </data>
+  <data name="StampManageDeleteCategoryMessage" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить категорию? Все штампы в ней будут удалены.</value>
+  </data>
+  <data name="StampManageDeleteMessage" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить штамп?</value>
+  </data>
+  <data name="StampManageDeleteSelectedMessage" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные штампы?</value>
+  </data>
+  <data name="StampProgressContent" xml:space="preserve">
+    <value>Применение штампа...</value>
+  </data>
+  <data name="StampProgressFlattenContent" xml:space="preserve">
+    <value>Сплющиваются штампы...</value>
+  </data>
+  <data name="StampRightMenuDeleteAllStamp" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить этот штамп со всех страниц?</value>
+  </data>
+  <data name="SubscribeWindowContent" xml:space="preserve">
+    <value>Оцените и следуйте за нами, чтобы поделиться своей радостью и получить эксклюзивные уроки.</value>
+  </data>
+  <data name="SubscribeWindowContentTtile" xml:space="preserve">
+    <value>Следите за нами и оценивайте PDFgear</value>
+  </data>
+  <data name="SubscribeWindowDesc" xml:space="preserve">
+    <value>Получите доступ к эксклюзивным учебным пособиям и навыкам и помогите нам расширить наше сообщество.</value>
+  </data>
+  <data name="SubscribeWindowFollowButtonText" xml:space="preserve">
+    <value>СЛЕДОВАТЬ</value>
+  </data>
+  <data name="SubscribeWindowHeader" xml:space="preserve">
+    <value>Поддержите нас, подписавшись на нас</value>
+  </data>
+  <data name="SubscribeWindowSubscribeButtonText" xml:space="preserve">
+    <value>ПОДПИСАТЬСЯ</value>
+  </data>
+  <data name="SubscribeWindowTrustPilotBtn" xml:space="preserve">
+    <value>Оцените нас на Trustpilot</value>
+  </data>
+  <data name="SurveyWinBtnCancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="SurveyWinBtnGo" xml:space="preserve">
+    <value>Перейти</value>
+  </data>
+  <data name="SurveyWinText" xml:space="preserve">
+    <value>Поддержите нас, поделившись PDFgear одним кликом.</value>
+  </data>
+  <data name="SurveyWinTitle" xml:space="preserve">
+    <value>Вам нравится PDFgear? </value>
+  </data>
+  <data name="SurveyWinTitle1" xml:space="preserve">
+    <value>Поделитесь с друзьями!</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnByOkMsg" xml:space="preserve">
+    <value>Вы перешли на предыдущую версию. Перезапустите PDFgear, чтобы применить изменение.</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnMsg" xml:space="preserve">
+    <value>Вы уверены, что хотите перейти на предыдущую версию PDFgear?</value>
+  </data>
+  <data name="TextBoxDefaultInputTextContent" xml:space="preserve">
+    <value>Введите сюда текст</value>
+  </data>
+  <data name="ToolAppThemeAutoMode" xml:space="preserve">
+    <value>Системная Тема</value>
+  </data>
+  <data name="ToolAppThemeDarkMode" xml:space="preserve">
+    <value>Темная</value>
+  </data>
+  <data name="ToolAppThemeLightMode" xml:space="preserve">
+    <value>Светлая</value>
+  </data>
+  <data name="ToolAppThemeTitle" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="ToolbarExitEditButtonContent" xml:space="preserve">
+    <value>Выйти из редактирования</value>
+  </data>
+  <data name="ToolbarOpacityPickerTooltip" xml:space="preserve">
+    <value>Прозрачность</value>
+  </data>
+  <data name="ToolbarSetDefaultButtonContent" xml:space="preserve">
+    <value>Задать по умолчанию</value>
+  </data>
+  <data name="TooltipDesc_AI" xml:space="preserve">
+    <value>Включить PDFgear Copilot для общения с PDF.</value>
+  </data>
+  <data name="TooltipDesc_AddSignature" xml:space="preserve">
+    <value>Добавить поле подписи в PDF для цифровой подписи.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateEllipse" xml:space="preserve">
+    <value>Нарисовать овал.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHidden" xml:space="preserve">
+    <value>Скрыть все комментарии в PDF.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHighlight" xml:space="preserve">
+    <value>Выделить выбранный текст.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateInk" xml:space="preserve">
+    <value>Нарисовать от руки.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateLine" xml:space="preserve">
+    <value>Нарисовать линию.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateManage" xml:space="preserve">
+    <value>Откройте панель комментариев для просмотра, фильтрации и удаления комментариев.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateNote" xml:space="preserve">
+    <value>Добавить примечание.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShape" xml:space="preserve">
+    <value>Нарисовать прямоугольник.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShow" xml:space="preserve">
+    <value>Показать все комментарии в PDF.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateSignature" xml:space="preserve">
+    <value>Добавить подпись, рисуя, вводя текст или загружая изображения.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStamp" xml:space="preserve">
+    <value>Добавить, создать и управлять штампами. Поддержка пользовательских штампов.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStrike" xml:space="preserve">
+    <value>Зачеркнуть выбранный текст.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTextBox" xml:space="preserve">
+    <value>Добавить текстовую заметку с рамкой.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTypeWriter" xml:space="preserve">
+    <value>Добавить текстовую заметку без рамки.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateUnderline" xml:space="preserve">
+    <value>Подчеркнуть выбранный текст.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateWatermark" xml:space="preserve">
+    <value>Добавить или отредактировать водяные знаки.</value>
+  </data>
+  <data name="TooltipDesc_AutoScroll" xml:space="preserve">
+    <value>Прокручивайте PDF-файл автоматически. Нажмите Esc, чтобы выйти из прокрутки.</value>
+  </data>
+  <data name="TooltipDesc_BatchPrint" xml:space="preserve">
+    <value>Печатайте несколько PDF-файлов за один раз.</value>
+  </data>
+  <data name="TooltipDesc_Certificate" xml:space="preserve">
+    <value>Управляйте цифровыми идентификаторами и доверенными сертификатами для шифрования и подписи.</value>
+  </data>
+  <data name="TooltipDesc_Compress" xml:space="preserve">
+    <value>Уменьшить размер файла PDF.</value>
+  </data>
+  <data name="TooltipDesc_Convert" xml:space="preserve">
+    <value>Конвертировать PDF в другие форматы или создавать PDF из других форматов.</value>
+  </data>
+  <data name="TooltipDesc_CreateNewPDF" xml:space="preserve">
+    <value>Создать новый PDF-файл.</value>
+  </data>
+  <data name="TooltipDesc_CropPage" xml:space="preserve">
+    <value>Обрезать поля страницы.</value>
+  </data>
+  <data name="TooltipDesc_DocumentProperties" xml:space="preserve">
+    <value>Просмотр и редактирование свойств документа PDF.</value>
+  </data>
+  <data name="TooltipDesc_EditObject" xml:space="preserve">
+    <value>Разделить текст на блоки для перемещения и редактирования.</value>
+  </data>
+  <data name="TooltipDesc_EditText" xml:space="preserve">
+    <value>Редактировать текст в PDF.</value>
+  </data>
+  <data name="TooltipDesc_Encrypt" xml:space="preserve">
+    <value>Зашифровать PDF с помощью цифрового сертификата для защиты содержимого.</value>
+  </data>
+  <data name="TooltipDesc_Find" xml:space="preserve">
+    <value>Искать текст в PDF.</value>
+  </data>
+  <data name="TooltipDesc_Flatten" xml:space="preserve">
+    <value>Объединить все аннотации с содержимым, чтобы они стали недоступны для редактирования и выбора.</value>
+  </data>
+  <data name="TooltipDesc_Highlight" xml:space="preserve">
+    <value>Выделить прямоугольную область.</value>
+  </data>
+  <data name="TooltipDesc_HighlightForm" xml:space="preserve">
+    <value>Выделить интерактивные поля формы в PDF.</value>
+  </data>
+  <data name="TooltipDesc_InsertHeaderFooter" xml:space="preserve">
+    <value>Добавить или отредактировать верхний и нижний колонтитул.</value>
+  </data>
+  <data name="TooltipDesc_InsertImage" xml:space="preserve">
+    <value>Добавить изображение.</value>
+  </data>
+  <data name="TooltipDesc_InsertPageNumber" xml:space="preserve">
+    <value>Добавить или отредактировать номера страниц.</value>
+  </data>
+  <data name="TooltipDesc_Link" xml:space="preserve">
+    <value>Добавить или отредактировать ссылки.</value>
+  </data>
+  <data name="TooltipDesc_OCR" xml:space="preserve">
+    <value>Выполните OCR для страниц, содержащих только изображения, чтобы сделать их доступными для поиска.</value>
+  </data>
+  <data name="TooltipDesc_Open" xml:space="preserve">
+    <value>Открыть PDF-файл.</value>
+  </data>
+  <data name="TooltipDesc_PageDelete" xml:space="preserve">
+    <value>Удалить указанные страницы.</value>
+  </data>
+  <data name="TooltipDesc_PageExtract" xml:space="preserve">
+    <value>Извлечь указанные страницы для создания нового PDF.</value>
+  </data>
+  <data name="TooltipDesc_PageInsert" xml:space="preserve">
+    <value>Вставить пустые страницы, изображения, документы Word или другой PDF в текущий PDF.</value>
+  </data>
+  <data name="TooltipDesc_PageMerge" xml:space="preserve">
+    <value>Объединить несколько PDF-файлов в один PDF.</value>
+  </data>
+  <data name="TooltipDesc_PageRotateLeft" xml:space="preserve">
+    <value>Вставить пустые страницы, отсканированные страницы, изображения, документы Word или другой PDF в текущий PDF.</value>
+  </data>
+  <data name="TooltipDesc_PageRotateRight" xml:space="preserve">
+    <value>Повернуть вид страницы вправо (по часовой стрелке).</value>
+  </data>
+  <data name="TooltipDesc_PageSplit" xml:space="preserve">
+    <value>Разделить PDF на несколько файлов.</value>
+  </data>
+  <data name="TooltipDesc_Present" xml:space="preserve">
+    <value>Отобразить PDF в виде слайд-шоу.</value>
+  </data>
+  <data name="TooltipDesc_Print" xml:space="preserve">
+    <value>Напечатать PDF-файл.</value>
+  </data>
+  <data name="TooltipDesc_ProtectPassword" xml:space="preserve">
+    <value>Защитить PDF паролем.</value>
+  </data>
+  <data name="TooltipDesc_ProtectRemove" xml:space="preserve">
+    <value>Удалить пароль из PDF.</value>
+  </data>
+  <data name="TooltipDesc_Read" xml:space="preserve">
+    <value>Читать PDF вслух.</value>
+  </data>
+  <data name="TooltipDesc_Redact" xml:space="preserve">
+    <value>Пометить конфиденциальную информацию для её безвозвратного удаления.</value>
+  </data>
+  <data name="TooltipDesc_Redo" xml:space="preserve">
+    <value>Повторить ранее отмененное действие.</value>
+  </data>
+  <data name="TooltipDesc_Save" xml:space="preserve">
+    <value>Сохранить PDF-файл.</value>
+  </data>
+  <data name="TooltipDesc_SaveAs" xml:space="preserve">
+    <value>Сохранить копию PDF-файла.</value>
+  </data>
+  <data name="TooltipDesc_Screenshot" xml:space="preserve">
+    <value>Выберите область для снятия скриншота PDF.</value>
+  </data>
+  <data name="TooltipDesc_Translate" xml:space="preserve">
+    <value>Перевести выделенный или вставленный текст на указанный язык.</value>
+  </data>
+  <data name="TooltipDesc_Undo" xml:space="preserve">
+    <value>Отменить последнее действие.</value>
+  </data>
+  <data name="TooltipDesc_Update" xml:space="preserve">
+    <value>Проверить обновления для PDFgear.</value>
+  </data>
+  <data name="TranslatePanelAuto" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="TranslatePanelAutoDetect" xml:space="preserve">
+    <value>Автоопределение</value>
+  </data>
+  <data name="TranslatePanelAutoTranslateBtn" xml:space="preserve">
+    <value>Автоматический перевод выделенного текста</value>
+  </data>
+  <data name="TranslatePanelInputPlaceHolder" xml:space="preserve">
+    <value>Введите или вставьте сюда текст</value>
+  </data>
+  <data name="TranslatePanelOutputPlaceHolder" xml:space="preserve">
+    <value>Перевод</value>
+  </data>
+  <data name="UnknownAttachmentModifyDateText" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Name" xml:space="preserve">
+    <value>Имя:</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Tip" xml:space="preserve">
+    <value>Подсказка:</value>
+  </data>
+  <data name="UnsignedDigSignPropMessage_DuplicatedFieldName" xml:space="preserve">
+    <value>Дублирующие имена полей не допускаются.</value>
+  </data>
+  <data name="UnsupportedImageMsg" xml:space="preserve">
+    <value>Не удалось загрузить файл изображения, так как он поврежден или имеет неподдерживаемый формат.  Выберите другой файл изображения и повторите попытку.</value>
+  </data>
+  <data name="ViewToolbarSaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить документ.  Пожалуйста, попробуйте еще раз.</value>
+  </data>
+  <data name="ViewToolbarSave_DigSigMaskSaveAs" xml:space="preserve">
+    <value>Документ содержит подпись, поэтому его необходимо сохранить как копию.</value>
+  </data>
+  <data name="ViewToorbarFileChanged" xml:space="preserve">
+    <value>Документ был отредактирован.  Вы хотите сохранить его?</value>
+  </data>
+  <data name="ViewerContainerEditBanner" xml:space="preserve">
+    <value>Вы находитесь в режиме редактирования текста.</value>
+  </data>
+  <data name="WIA_ERROR_BUSY" xml:space="preserve">
+    <value>Устройство занято. Закройте все приложения, использующие это устройство, или дождитесь его завершения, а затем повторите попытку.</value>
+  </data>
+  <data name="WIA_ERROR_COVER_OPEN" xml:space="preserve">
+    <value>Одна или несколько крышки устройства открыты.</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_COMMUNICATION" xml:space="preserve">
+    <value>Сбой связи с устройством WIA. Убедитесь, что устройство включено и подключено к компьютеру. Если проблема не исчезнет, отключите и повторно подключите устройство.</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_LOCKED" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="WIA_ERROR_EXCEPTION_IN_DRIVER" xml:space="preserve">
+    <value>Драйвер устройства вызвал исключение.</value>
+  </data>
+  <data name="WIA_ERROR_GENERAL_ERROR" xml:space="preserve">
+    <value>С устройством WIA произошла неизвестная ошибка.</value>
+  </data>
+  <data name="WIA_ERROR_INCORRECT_HARDWARE_SETTING" xml:space="preserve">
+    <value>На устройстве WIA указан неправильный параметр.</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_COMMAND" xml:space="preserve">
+    <value>Устройство не поддерживает эту команду.</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_DRIVER_RESPONSE" xml:space="preserve">
+    <value>Недопустимый ответ от драйвера.</value>
+  </data>
+  <data name="WIA_ERROR_ITEM_DELETED" xml:space="preserve">
+    <value>Устройство WIA было удалено. Он больше недоступен.</value>
+  </data>
+  <data name="WIA_ERROR_LAMP_OFF" xml:space="preserve">
+    <value>Лампа сканера выключена.</value>
+  </data>
+  <data name="WIA_ERROR_MAXIMUM_PRINTER_ENDORSER_COUNTER" xml:space="preserve">
+    <value>Задание сканирования было прервано, так как элемент Imprinter/Endorser достиг максимально допустимого значения для WIA_IPS_PRINTER_ENDORSER_COUNTER и был сброшен до 0. Эта функция доступна в Windows 8 и более поздних версиях Windows.</value>
+  </data>
+  <data name="WIA_ERROR_MULTI_FEED" xml:space="preserve">
+    <value>Произошла ошибка сканирования из-за условия многостраничной подачи. Эта функция доступна в Windows 8 и более поздних версиях Windows.</value>
+  </data>
+  <data name="WIA_ERROR_OFFLINE" xml:space="preserve">
+    <value>Устройство находится в автономном режиме. Убедитесь, что устройство включено и подключено к компьютеру.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_EMPTY" xml:space="preserve">
+    <value>В податчике документов нет документов или сканер занят. Пожалуйста, попробуйте позже.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_JAM" xml:space="preserve">
+    <value>Бумага застряла в средстве подачи документов сканера.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_PROBLEM" xml:space="preserve">
+    <value>Возникла неустановленная проблема с средством подачи документов сканера.</value>
+  </data>
+  <data name="WIA_ERROR_USER_INTERVENTION" xml:space="preserve">
+    <value>Возникла проблема с устройством WIA. Убедитесь, что устройство включено, подключено к сети и все кабели правильно подключены.</value>
+  </data>
+  <data name="WIA_ERROR_WARMING_UP" xml:space="preserve">
+    <value>Устройство прогревается.</value>
+  </data>
+  <data name="WIA_S_NO_DEVICE_AVAILABLE" xml:space="preserve">
+    <value>Устройство сканера не найдено. Убедитесь, что устройство подключено к сети, подключено к компьютеру и на компьютере установлен правильный драйвер.</value>
+  </data>
+  <data name="WinBtnAllPagesContent" xml:space="preserve">
+    <value>Все страницы</value>
+  </data>
+  <data name="WinBtnBackContent" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="WinBtnCancelContent" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="WinBtnCloseContent" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="WinBtnNextContent" xml:space="preserve">
+    <value>Далее</value>
+  </data>
+  <data name="WinBtnOkContent" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="WinBtnSaveContent" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="WinBtnSelectedPagesContent" xml:space="preserve">
+    <value>Выбранные страницы</value>
+  </data>
+  <data name="WinCbxAutoItemContent" xml:space="preserve">
+    <value>Автоматически</value>
+  </data>
+  <data name="WinCbxChildAllPagesContent" xml:space="preserve">
+    <value>Все страницы в диапазоне</value>
+  </data>
+  <data name="WinCbxChildEvenPagesContent" xml:space="preserve">
+    <value>Только четные страницы</value>
+  </data>
+  <data name="WinCbxChildOddPagesContent" xml:space="preserve">
+    <value>Только нечетные страницы</value>
+  </data>
+  <data name="WinConvertToolBtnExcelToPDFText" xml:space="preserve">
+    <value>Excel в PDF</value>
+  </data>
+  <data name="WinConvertToolBtnImageToPDFText" xml:space="preserve">
+    <value>Изображение в PDF</value>
+  </data>
+  <data name="WinConvertToolBtnPPTToPDFText" xml:space="preserve">
+    <value>PPT в PDF</value>
+  </data>
+  <data name="WinConvertToolBtnRTFToPDFText" xml:space="preserve">
+    <value>RTF в PDF</value>
+  </data>
+  <data name="WinConvertToolBtnTXTToPDFText" xml:space="preserve">
+    <value>TXT в PDF</value>
+  </data>
+  <data name="WinConvertToolBtnWordToPDF" xml:space="preserve">
+    <value>Word в PDF</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackground" xml:space="preserve">
+    <value>Удалить фон</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackgroundToolTip" xml:space="preserve">
+    <value>Удалить все белые пиксели в изображении.</value>
+  </data>
+  <data name="WinCustomizeStampEditTiltle" xml:space="preserve">
+    <value>Редактировать штамп</value>
+  </data>
+  <data name="WinCustomizeStampMaxCharactersMsg" xml:space="preserve">
+    <value>Длина текста не должна превышать 50 символов!</value>
+  </data>
+  <data name="WinCustomizeStampNewTiltle" xml:space="preserve">
+    <value>Создать штамп</value>
+  </data>
+  <data name="WinCustomizeStampPlaceHolderContent" xml:space="preserve">
+    <value>Введите текст сюда...</value>
+  </data>
+  <data name="WinEditTextInputLocationTip" xml:space="preserve">
+    <value>Редактировать текст:</value>
+  </data>
+  <data name="WinEditorTipBtnEditAnyway" xml:space="preserve">
+    <value>Изменить в любом случае</value>
+  </data>
+  <data name="WinEditorTipBtnUseConverter" xml:space="preserve">
+    <value>Воспользоваться конвертером</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce1" xml:space="preserve">
+    <value>•  Конвертирует PDF-файлы в файлы различных форматов.</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce2" xml:space="preserve">
+    <value>•  Структура будет согласована с OCR.</value>
+  </data>
+  <data name="WinEditorTipRecommendLeft" xml:space="preserve">
+    <value>Рекомендуем вместо этого воспользоваться конвертером</value>
+  </data>
+  <data name="WinEditorTipRecommendMiddle" xml:space="preserve">
+    <value>PDF в Word</value>
+  </data>
+  <data name="WinEditorTipRecommendRight" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="WinExtractTextBtnCopyContent" xml:space="preserve">
+    <value>Скопировать</value>
+  </data>
+  <data name="WinExtractTextLabelCopiedContent" xml:space="preserve">
+    <value>Скопирован</value>
+  </data>
+  <data name="WinExtractTextLabelExtractedContent" xml:space="preserve">
+    <value>Результат извлечения</value>
+  </data>
+  <data name="WinExtractTextLabelScreenshotContent" xml:space="preserve">
+    <value>Скриншот</value>
+  </data>
+  <data name="WinExtractTextTitle" xml:space="preserve">
+    <value>Извлечь текст</value>
+  </data>
+  <data name="WinFeedBackBtnSendContent" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="WinFeedBackEmailAddrPlaceHoderContent" xml:space="preserve">
+    <value>Адрес электронной почты (необязательно)</value>
+  </data>
+  <data name="WinFeedBackEmailContentPlaceHoderContent" xml:space="preserve">
+    <value>Расскажите нам о проблеме, с которой столкнулись, и укажите шаги для ее воспроизведения. Спасибо.</value>
+  </data>
+  <data name="WinFeedBackErrorInvalidEmailCapMsg" xml:space="preserve">
+    <value>Неверный формат адреса электронной почты</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc1" xml:space="preserve">
+    <value>Параметр региона вашего Microsoft Store:</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc2" xml:space="preserve">
+    <value>, что не соответствует вашему текущему местоположению.  Это может привести к отказу от покупки.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc3" xml:space="preserve">
+    <value>кликните сюда</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc4" xml:space="preserve">
+    <value>чтобы изменить настройки вашего региона в Microsoft Store.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc1" xml:space="preserve">
+    <value>Платеж обрабатывается Microsoft.  Пожалуйста, посетите справку</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc2" xml:space="preserve">
+    <value>для решения.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3" xml:space="preserve">
+    <value>Переустановите PDFgear и приобретите его с той же учетной записью Microsoft в Microsoft Store по той же цене.  Это нужно для восстановления покупки, и с вас больше не будет взиматься плата.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc1" xml:space="preserve">
+    <value>Если вы уже заплатили за PDFgear ранее, сначала войдите в ту же учетную запись Microsoft в Microsoft Store, а затем нажмите</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc2" xml:space="preserve">
+    <value>здесь</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc3" xml:space="preserve">
+    <value>, чтобы восстановить покупку.  Если восстановить не удалось, обратитесь за помощью в службу поддержки.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer4" xml:space="preserve">
+    <value>Нажмите кнопку "Обновить" на вкладке "Справка" и нажмите кнопку "Восстановить покупку" ниже.  Затем PDFgear успешно восстановит покупку за несколько секунд.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer5" xml:space="preserve">
+    <value>Установите следующий флажок и отключите аппаратное ускорение.  Затем повторите попытку.</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion1" xml:space="preserve">
+    <value>Возникли проблемы с изменением региона в Microsoft Store?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion2" xml:space="preserve">
+    <value>Остались проблемы с покупкой?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion3" xml:space="preserve">
+    <value>Почему он все еще просит обновить после того, как я заплатил за PDFgear?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion4" xml:space="preserve">
+    <value>Почему он все еще требует оплаты, когда я переустанавливаю PDFgear или устанавливаю его на другие устройства?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion5" xml:space="preserve">
+    <value>Почему я не могу прокручивать страницы PDF?</value>
+  </data>
+  <data name="WinFeedBackHardwareAccelerationCHBK" xml:space="preserve">
+    <value>Отключить аппаратное ускорение</value>
+  </data>
+  <data name="WinFeedBackInvalidEmailMsg" xml:space="preserve">
+    <value>Укажите действительный адрес электронной почты для отправки сообщения.</value>
+  </data>
+  <data name="WinFeedBackLabelPrivacypolicyContent" xml:space="preserve">
+    <value>Политика конфиденциальности</value>
+  </data>
+  <data name="WinFeedBackSendProblemfileContent" xml:space="preserve">
+    <value>Отправить файл диагностики, чтобы помочь нам в поиске проблемы.</value>
+  </data>
+  <data name="WinFeedBackSendSuccessCapMsg" xml:space="preserve">
+    <value>Отправка прошла успешно</value>
+  </data>
+  <data name="WinFeedBackSendSuccessMsg" xml:space="preserve">
+    <value>Мы получили ваше сообщение. Спасибо!</value>
+  </data>
+  <data name="WinFeedBackSendTryagainMsg" xml:space="preserve">
+    <value>Не удалось отправить сообщение, повторите попытку!</value>
+  </data>
+  <data name="WinFindCaseSensitiveBtnContent" xml:space="preserve">
+    <value>С учетом регистра</value>
+  </data>
+  <data name="WinFindDocumentNeedOcrTips" xml:space="preserve">
+    <value>Мы обнаружили, что это отсканированный PDF. Для копирования и поиска текста из отсканированных PDF выполните OCR.</value>
+  </data>
+  <data name="WinFindMatchallwordsBtnContent" xml:space="preserve">
+    <value>Только целые слова</value>
+  </data>
+  <data name="WinFindOCRNotShowAgain" xml:space="preserve">
+    <value>Не показывать для этого файла</value>
+  </data>
+  <data name="WinFindPerformOCR" xml:space="preserve">
+    <value>Выполнить OCR</value>
+  </data>
+  <data name="WinFindPlaceHolderContent" xml:space="preserve">
+    <value>Поиск...</value>
+  </data>
+  <data name="WinHistoryClearLabelClickTips" xml:space="preserve">
+    <value>Вы уверены, что хотите очистить все недавние файлы?</value>
+  </data>
+  <data name="WinIAP2AnnualPannelTitle" xml:space="preserve">
+    <value>Годовой</value>
+  </data>
+  <data name="WinIAP2BuyNowBtnContent" xml:space="preserve">
+    <value>Купить сейчас</value>
+  </data>
+  <data name="WinIAP2LifetimePriceDescribe" xml:space="preserve">
+    <value>Однократная цена</value>
+  </data>
+  <data name="WinLabelChildRangeContent" xml:space="preserve">
+    <value>Поддиапазон</value>
+  </data>
+  <data name="WinLabelRangeContent" xml:space="preserve">
+    <value>Диапазон</value>
+  </data>
+  <data name="WinLabelSelectedpagesContent" xml:space="preserve">
+    <value>Выбранные страницы</value>
+  </data>
+  <data name="WinOCRCHBContent" xml:space="preserve">
+    <value>OCR (извлечение текста из изображения)</value>
+  </data>
+  <data name="WinOCRProgressContent" xml:space="preserve">
+    <value>Обработка…</value>
+  </data>
+  <data name="WinOCRSelectLangTips" xml:space="preserve">
+    <value>Выбрать язык:</value>
+  </data>
+  <data name="WinOCRSelectedLineContextMenuEdit" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="WinPageApplyingHeaderorFooterContent" xml:space="preserve">
+    <value>Применяются верхние и нижние колонтитулы</value>
+  </data>
+  <data name="WinPageCenterFooterTextLabelContent" xml:space="preserve">
+    <value>Центральный нижний колонтитул</value>
+  </data>
+  <data name="WinPageCenterHeaderTextLabelContent" xml:space="preserve">
+    <value>Центральный верхний колонтитул</value>
+  </data>
+  <data name="WinPageEgContent" xml:space="preserve">
+    <value>напр. 1,8,9-12</value>
+  </data>
+  <data name="WinPageInsertBlankTitle" xml:space="preserve">
+    <value>Вставить пустую страницу</value>
+  </data>
+  <data name="WinPageInsertImageTitle" xml:space="preserve">
+    <value>Вставить страницу из изображения</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnAddNewContent" xml:space="preserve">
+    <value>Добавить новый</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnUpdateContent" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddChekContent" xml:space="preserve">
+    <value>Документ уже содержит верхний и нижний колонтитул или номер страницы. Хотите обновить их тем, который добавляете?</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddNoteContent" xml:space="preserve">
+    <value>Примечание: если вы выберете "добавить новый", он может перекрыть существующий.</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckEmptyContent" xml:space="preserve">
+    <value>Не удается найти в документе верхний и нижний колонтитулы или номер страницы.</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckExistContent" xml:space="preserve">
+    <value>Вы уверены, что хотите безвозвратно удалить верхний и нижний колонтитул или номер страницы?</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterUpdateCheckEmptyContent" xml:space="preserve">
+    <value>Не удается найти в этом файле верхние или нижние колонтитулы.</value>
+  </data>
+  <data name="WinPageInsertSettingBlankPageCount" xml:space="preserve">
+    <value>Количество страниц</value>
+  </data>
+  <data name="WinPageInsertSettingPageHeight" xml:space="preserve">
+    <value>Высота</value>
+  </data>
+  <data name="WinPageInsertSettingPageLandscape" xml:space="preserve">
+    <value>Пейзаж</value>
+  </data>
+  <data name="WinPageInsertSettingPagePortrait" xml:space="preserve">
+    <value>Портрет</value>
+  </data>
+  <data name="WinPageInsertSettingPageSize" xml:space="preserve">
+    <value>Размер страницы</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemCustomize" xml:space="preserve">
+    <value>Настраиваемое</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemDefault" xml:space="preserve">
+    <value>По общему правилу</value>
+  </data>
+  <data name="WinPageInsertSettingPageWidth" xml:space="preserve">
+    <value>Ширина</value>
+  </data>
+  <data name="WinPageInsertdateLabelContent" xml:space="preserve">
+    <value>Вставить дату</value>
+  </data>
+  <data name="WinPageInsertfilenameLabelContent" xml:space="preserve">
+    <value>Вставить имя файла</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentCenterContent" xml:space="preserve">
+    <value>По центру</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLabelContent" xml:space="preserve">
+    <value>Выравнивание</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLeftContent" xml:space="preserve">
+    <value>Слева</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentRightContent" xml:space="preserve">
+    <value>Справа</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionFooterContent" xml:space="preserve">
+    <value>Нижний колонтитул</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionHeaderContent" xml:space="preserve">
+    <value>Верхний колонтитул</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionLabelConent" xml:space="preserve">
+    <value>Положение</value>
+  </data>
+  <data name="WinPageInsertpageNumStyleLabelContent" xml:space="preserve">
+    <value>Стиль</value>
+  </data>
+  <data name="WinPageInsertpagenumberLabelContent" xml:space="preserve">
+    <value>Вставить номер страницы</value>
+  </data>
+  <data name="WinPageLeftFooterTextLabelContent" xml:space="preserve">
+    <value>Левый нижний колонтитул</value>
+  </data>
+  <data name="WinPageLeftHeaderTextLabelContent" xml:space="preserve">
+    <value>Левый верхний колонтитул</value>
+  </data>
+  <data name="WinPageLoadingHeaderorFooterContent" xml:space="preserve">
+    <value>Загружаются верхний и нижний колонтитулы и номер страницы</value>
+  </data>
+  <data name="WinPageMarginBottomLabelContent" xml:space="preserve">
+    <value>Внизу</value>
+  </data>
+  <data name="WinPageMarginLabelContent" xml:space="preserve">
+    <value>Поле</value>
+  </data>
+  <data name="WinPageMarginLeftLabelContent" xml:space="preserve">
+    <value>Слева</value>
+  </data>
+  <data name="WinPageMarginRightLabelContent" xml:space="preserve">
+    <value>Справа</value>
+  </data>
+  <data name="WinPageMarginTopLabelContent" xml:space="preserve">
+    <value>Вверху</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageByNumContent" xml:space="preserve">
+    <value>После страницы XXX</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageContent" xml:space="preserve">
+    <value>После выбранной страницы</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageByNumContent" xml:space="preserve">
+    <value>Перед страницей XXX</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageContent" xml:space="preserve">
+    <value>Перед выбранной страницей</value>
+  </data>
+  <data name="WinPageMergeBtnBeginingContent" xml:space="preserve">
+    <value>Начало</value>
+  </data>
+  <data name="WinPageMergeBtnEndContent" xml:space="preserve">
+    <value>Конец</value>
+  </data>
+  <data name="WinPageMergeCorrectPageMsg" xml:space="preserve">
+    <value>Неверный диапазоны страниц, укажите правильные границы.</value>
+  </data>
+  <data name="WinPageMergeCorruptedDocMsg" xml:space="preserve">
+    <value>Файл поврежден, проверьте выбранный документ.</value>
+  </data>
+  <data name="WinPageMergeInsertfailedMsg" xml:space="preserve">
+    <value>Не удалось вставить страницу в документ.</value>
+  </data>
+  <data name="WinPageMergeLabelInserttoContent" xml:space="preserve">
+    <value>Вставить в</value>
+  </data>
+  <data name="WinPageMergeLabelLocationContent" xml:space="preserve">
+    <value>Местоположение</value>
+  </data>
+  <data name="WinPageMergeLabelSelectFileContent" xml:space="preserve">
+    <value>Выбрать файл</value>
+  </data>
+  <data name="WinPageMergeLabelSourceContent" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="WinPageMergeLoadingText" xml:space="preserve">
+    <value>Загрузка файла...</value>
+  </data>
+  <data name="WinPageMergeMenuInsertfromfileContent" xml:space="preserve">
+    <value>Вставить из файла</value>
+  </data>
+  <data name="WinPageMergeOpenfailedMsg" xml:space="preserve">
+    <value>Невозможно открыть выбранный документ.</value>
+  </data>
+  <data name="WinPageMergeTitle" xml:space="preserve">
+    <value>Объединение файлов</value>
+  </data>
+  <data name="WinPagePreviewLabelContent" xml:space="preserve">
+    <value>Предварительный просмотр</value>
+  </data>
+  <data name="WinPagePreviewPageLabelContent" xml:space="preserve">
+    <value>Страница предварительного просмотра</value>
+  </data>
+  <data name="WinPageReorderToolTipContent" xml:space="preserve">
+    <value>Вы уверены, что хотите реорганизовать выбранную страницу(-ы)?</value>
+  </data>
+  <data name="WinPageRightFooterTextLabelContent" xml:space="preserve">
+    <value>Правый нижний колонтитул</value>
+  </data>
+  <data name="WinPageRightHeaderTextLabelContent" xml:space="preserve">
+    <value>Правый верхний колонтитул</value>
+  </data>
+  <data name="WinPageSplitBtnMaxpageCountContent" xml:space="preserve">
+    <value>Max page count</value>
+  </data>
+  <data name="WinPageSplitBtnPagerangeContent" xml:space="preserve">
+    <value>Диапазон страниц</value>
+  </data>
+  <data name="WinPageSplitLabelOutputlocationContent" xml:space="preserve">
+    <value>Output location</value>
+  </data>
+  <data name="WinPageSplitLabelSplitModeContent" xml:space="preserve">
+    <value>Разделенный Режим</value>
+  </data>
+  <data name="WinPageSplitTitle" xml:space="preserve">
+    <value>Разделить Файл</value>
+  </data>
+  <data name="WinPageStartpagenumbereLabelContent" xml:space="preserve">
+    <value>Номер начальной страницы</value>
+  </data>
+  <data name="WinPrinterBtnClassicModeContent" xml:space="preserve">
+    <value>Классический режим</value>
+  </data>
+  <data name="WinPrinterBtnPropertyContent" xml:space="preserve">
+    <value>Предпочтений...</value>
+  </data>
+  <data name="WinPrinterCancelPrintContent" xml:space="preserve">
+    <value>Уверены, что хотите отменить задание печати?</value>
+  </data>
+  <data name="WinPrinterChbkGrayscaleContent" xml:space="preserve">
+    <value>Градации серого</value>
+  </data>
+  <data name="WinPrinterCollateContent" xml:space="preserve">
+    <value>Разобрать по копиям</value>
+  </data>
+  <data name="WinPrinterCopiesContent" xml:space="preserve">
+    <value>Копии</value>
+  </data>
+  <data name="WinPrinterDuplexContent" xml:space="preserve">
+    <value>Печатать на обеих сторонах</value>
+  </data>
+  <data name="WinPrinterDuplexFlipLongContent" xml:space="preserve">
+    <value>Перевернуть по длинному краю</value>
+  </data>
+  <data name="WinPrinterDuplexFlipShortContent" xml:space="preserve">
+    <value>Перевернуть по короткому краю</value>
+  </data>
+  <data name="WinPrinterNameContent" xml:space="preserve">
+    <value>Принтер</value>
+  </data>
+  <data name="WinPrinterNoPrinterContent" xml:space="preserve">
+    <value>Принтер не обнаружен</value>
+  </data>
+  <data name="WinPrinterPageRangErrorContent" xml:space="preserve">
+    <value>Значение должно быть целым числом от 1 до 1000.</value>
+  </data>
+  <data name="WinPrinterPaperOrientationContent" xml:space="preserve">
+    <value>сторона</value>
+  </data>
+  <data name="WinPrinterPaperSizeContent" xml:space="preserve">
+    <value>Размер бумаги</value>
+  </data>
+  <data name="WinPrinterPrintAnnotationContent" xml:space="preserve">
+    <value>Печать Kомментариев</value>
+  </data>
+  <data name="WinPrinterPrintModeContent" xml:space="preserve">
+    <value>Изменение размера страницы</value>
+  </data>
+  <data name="WinPurchasedAlreadySubTitle" xml:space="preserve">
+    <value>Уже купили</value>
+  </data>
+  <data name="WinPurchasedTitle" xml:space="preserve">
+    <value>Вы успешно купили.  Теперь наслаждайтесь PDFgear в полной мере.</value>
+  </data>
+  <data name="WinPwdEntePwdTitle" xml:space="preserve">
+    <value>Введите пароль</value>
+  </data>
+  <data name="WinPwdEnterTipContent" xml:space="preserve">
+    <value>Этот документ защищен паролем. Введите пароль ниже.</value>
+  </data>
+  <data name="WinPwdInputContent" xml:space="preserve">
+    <value>Введите здесь...</value>
+  </data>
+  <data name="WinPwdInvalidTryAgainContent" xml:space="preserve">
+    <value>Неверный пароль. Повторите попытку.</value>
+  </data>
+  <data name="WinPwdLabelConfrimContent" xml:space="preserve">
+    <value>Подтвердить</value>
+  </data>
+  <data name="WinPwdLabelPasswordContent" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="WinPwdMaxCharacterCheckContent" xml:space="preserve">
+    <value>Не менее 32 символов. Без пробелов.</value>
+  </data>
+  <data name="WinPwdMinCharacterCheckContent" xml:space="preserve">
+    <value>Не менее 6 символов. Без пробелов.</value>
+  </data>
+  <data name="WinPwdPasswordCheckEmptyContent" xml:space="preserve">
+    <value>Требуется пароль.</value>
+  </data>
+  <data name="WinPwdPasswordCheckInvalidContent" xml:space="preserve">
+    <value>Неверный пароль.</value>
+  </data>
+  <data name="WinPwdPasswordCheckMatchContent" xml:space="preserve">
+    <value>Пароль не совпадает.</value>
+  </data>
+  <data name="WinPwdPasswordKeepPermissionsPwdContent" xml:space="preserve">
+    <value>Сохранить пароль разрешения</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipContent" xml:space="preserve">
+    <value>Настройки безопасности не будут применены, пока вы не сохраните документ.</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipNotshowagainContent" xml:space="preserve">
+    <value>Больше не показывать это сообщение</value>
+  </data>
+  <data name="WinPwdPasswordTooltipContent" xml:space="preserve">
+    <value>Пароль должен содержать от 6 до 32 символов и разрешаются только буквы, цифры и символы.</value>
+  </data>
+  <data name="WinPwdRemoveCheckContent" xml:space="preserve">
+    <value>Для PDF-документа не установлен пароль.</value>
+  </data>
+  <data name="WinPwdRemoveConfirmContent" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить пароль(-и)?</value>
+  </data>
+  <data name="WinPwdSetPwdTitle" xml:space="preserve">
+    <value>Установить пароль</value>
+  </data>
+  <data name="WinPwdWrongCheckContent" xml:space="preserve">
+    <value>Неверный пароль.</value>
+  </data>
+  <data name="WinPwdillegalsymbolsCheckContent" xml:space="preserve">
+    <value>Содержит недопустимые символы.</value>
+  </data>
+  <data name="WinRate5StarsTitle" xml:space="preserve">
+    <value>Обожаю! Хочу поставить приложению 5 звезд!</value>
+  </data>
+  <data name="WinRateFeedbackTitle" xml:space="preserve">
+    <value>Я хочу оставить отзыв.</value>
+  </data>
+  <data name="WinRateLeaveGreatratingTitle" xml:space="preserve">
+    <value>Пожалуйста, оставьте отзыв и поставьте нам отличную оценку!</value>
+  </data>
+  <data name="WinRateLessaminuteTitle" xml:space="preserve">
+    <value>Оценка займет менее минуты.</value>
+  </data>
+  <data name="WinRateLoveTitle" xml:space="preserve">
+    <value>Люблю PDFgear?</value>
+  </data>
+  <data name="WinRateThanksforsupportTitle" xml:space="preserve">
+    <value>Спасибо за вашу поддержку!</value>
+  </data>
+  <data name="WinRestoreFaildLearnMoreContent" xml:space="preserve">
+    <value>Подробнее</value>
+  </data>
+  <data name="WinRestoreFaildPossible1Content" xml:space="preserve">
+    <value>Срок действия подписки истек</value>
+  </data>
+  <data name="WinRestoreFaildPossible2Content" xml:space="preserve">
+    <value>Действительная покупка не найдена</value>
+  </data>
+  <data name="WinRestoreFaildPossible3Content" xml:space="preserve">
+    <value>Сеть недоступна</value>
+  </data>
+  <data name="WinRestoreFaildPossibleContent" xml:space="preserve">
+    <value>Возможные причины</value>
+  </data>
+  <data name="WinRestoreFaildTitleContent" xml:space="preserve">
+    <value>Ошибка восстановления</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureExplain" xml:space="preserve">
+    <value>В PDF-файле есть не выровненные подписи, и вы их выровняете после сохранения, внесенные изменения нельзя будет отменить. Вы хотите продолжить?</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureNoteMsg" xml:space="preserve">
+    <value>Вы уверены, что хотите сохранить внесенные изменения для этого PDF-файла?</value>
+  </data>
+  <data name="WinScreenshotToolbarCancelContent" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="WinScreenshotToolbarCopyContent" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="WinScreenshotToolbarDeleteContent" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="WinScreenshotToolbarDoneContent" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="WinScreenshotToolbarEditContent" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="WinScreenshotToolbarSaveContent" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomInContent" xml:space="preserve">
+    <value>Увеличить</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomOutContent" xml:space="preserve">
+    <value>Уменьшить</value>
+  </data>
+  <data name="WinSettingAISwitch" xml:space="preserve">
+    <value>Включить PDFgear Copilot</value>
+  </data>
+  <data name="WinSettingReminnder" xml:space="preserve">
+    <value>Напоминание о полученных файлах</value>
+  </data>
+  <data name="WinSettingReminnderDesc" xml:space="preserve">
+    <value>Всплывающее окно с напоминанием о получении новых PDF-файлов.</value>
+  </data>
+  <data name="WinShareSendFilleDescText" xml:space="preserve">
+    <value>Найдите файл, затем перетащите его в Messages, Onedrive, Google Drive и др.</value>
+  </data>
+  <data name="WinSignatureBtnAddPictureContent" xml:space="preserve">
+    <value>Добавить изображение</value>
+  </data>
+  <data name="WinSignatureBtnClearContent" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="WinSignatureContextMenuApplyMulPage" xml:space="preserve">
+    <value>Разместить на нескольких страницах</value>
+  </data>
+  <data name="WinSignatureContextMenuDetele" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="WinSignatureContextMenuDeteleInBatch" xml:space="preserve">
+    <value>Пакетное удаление</value>
+  </data>
+  <data name="WinSignatureContextMenuFlatten" xml:space="preserve">
+    <value>Сплющить</value>
+  </data>
+  <data name="WinSignatureContextMenuFlattenInBatch" xml:space="preserve">
+    <value>Выравнивание в пакетном режиме</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchBtn" xml:space="preserve">
+    <value>Удалить все</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить эту подпись на всех страницах?</value>
+  </data>
+  <data name="WinSignatureFlattenApplying" xml:space="preserve">
+    <value>Применение подписи…</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchNoteMsg" xml:space="preserve">
+    <value>Эта операция выравнивает подписи в документе, и после этого вы не сможете отменить это действие. Если вы допустили ошибку, пожалуйста, закройте документ без сохранения.</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите сплющить подписи?</value>
+  </data>
+  <data name="WinSignatureFlattenProcess" xml:space="preserve">
+    <value>Сплющиваются подписи...</value>
+  </data>
+  <data name="WinSignatureMaxNumLimitTip" xml:space="preserve">
+    <value>PDFgear может сохранять только до пятидесяти подписей, пожалуйста, удалите временно неиспользуемые подписи, прежде чем создавать новые.</value>
+  </data>
+  <data name="WinSignatureMenuInputContent" xml:space="preserve">
+    <value>Введите текст</value>
+  </data>
+  <data name="WinSignatureMenuInputIsEmptyMsg" xml:space="preserve">
+    <value>Поле ввода не может быть пустым!</value>
+  </data>
+  <data name="WinSignatureMenuPictureContent" xml:space="preserve">
+    <value>Изображение</value>
+  </data>
+  <data name="WinSignatureMenuWriteContent" xml:space="preserve">
+    <value>Рукописный ввод</value>
+  </data>
+  <data name="WinSignaturePageRangeIncorrect" xml:space="preserve">
+    <value>Неверный формат диапазона.</value>
+  </data>
+  <data name="WinSignatureTitle" xml:space="preserve">
+    <value>Создать подпись</value>
+  </data>
+  <data name="WinStampSampleText" xml:space="preserve">
+    <value>Образец текста</value>
+  </data>
+  <data name="WinStampTypeAppearanceHeader" xml:space="preserve">
+    <value>Внешний вид</value>
+  </data>
+  <data name="WinStampTypeDateFormatCheckbox" xml:space="preserve">
+    <value>Дата и время</value>
+  </data>
+  <data name="WinStatuBarPDFAutoSaveText" xml:space="preserve">
+    <value>Сохранено автоматически</value>
+  </data>
+  <data name="WinToolBarBtnHighlightContent" xml:space="preserve">
+    <value>Выделение области</value>
+  </data>
+  <data name="WinUpgradeLiftTimeBtnContent" xml:space="preserve">
+    <value>пожизненная</value>
+  </data>
+  <data name="WinUpgradeList10Content" xml:space="preserve">
+    <value>Реорганизовать страницы PDF-файла</value>
+  </data>
+  <data name="WinUpgradeList11Content" xml:space="preserve">
+    <value>Вход в PDF-документы</value>
+  </data>
+  <data name="WinUpgradeList12Content" xml:space="preserve">
+    <value>Compress PDF Files to a smaller size</value>
+  </data>
+  <data name="WinUpgradeList13Content" xml:space="preserve">
+    <value>Конвертируйте файлы PDF в Word, Excel, изображения и т. д.</value>
+  </data>
+  <data name="WinUpgradeList14Content" xml:space="preserve">
+    <value>Подписать, сжать PDF</value>
+  </data>
+  <data name="WinUpgradeList15Content" xml:space="preserve">
+    <value>Объединение, разделение, удаление, вставка, извлечение и изменение порядка страниц</value>
+  </data>
+  <data name="WinUpgradeList16Content" xml:space="preserve">
+    <value>Изображение в текст (OCR)</value>
+  </data>
+  <data name="WinUpgradeList17Content" xml:space="preserve">
+    <value>До 10 устройств</value>
+  </data>
+  <data name="WinUpgradeList18Content" xml:space="preserve">
+    <value>PDFgear Премиум</value>
+  </data>
+  <data name="WinUpgradeList1Content" xml:space="preserve">
+    <value>Преобразование PDF-документов в Word, Excel, PNG, JPG, RTF, TXT, HTML или XML</value>
+  </data>
+  <data name="WinUpgradeList2Content" xml:space="preserve">
+    <value>Объединение нескольких PDF-документов в один файл</value>
+  </data>
+  <data name="WinUpgradeList3Content" xml:space="preserve">
+    <value>Удаление страниц из PDF-документа</value>
+  </data>
+  <data name="WinUpgradeList4Content" xml:space="preserve">
+    <value>Разделение PDF-документа на несколько файлов</value>
+  </data>
+  <data name="WinUpgradeList5Content" xml:space="preserve">
+    <value>Извлечение страниц из PDF-документа</value>
+  </data>
+  <data name="WinUpgradeList6Content" xml:space="preserve">
+    <value>Без рекламы</value>
+  </data>
+  <data name="WinUpgradeList7Content" xml:space="preserve">
+    <value>Поддержка 24/7</value>
+  </data>
+  <data name="WinUpgradeList8Content" xml:space="preserve">
+    <value>Вставка страниц из других PDF-документов.</value>
+  </data>
+  <data name="WinUpgradeList9Content" xml:space="preserve">
+    <value>Конвертируйте файлы Word, Excel, PPT, изображения, RTF или TXT в документы PDF</value>
+  </data>
+  <data name="WinUpgradeRestorePurchase" xml:space="preserve">
+    <value>Восстановить покупку</value>
+  </data>
+  <data name="WinUpgradeTitle" xml:space="preserve">
+    <value>Разблокировать полную версию</value>
+  </data>
+  <data name="WinUpgradeYearBtnContent" xml:space="preserve">
+    <value>Год</value>
+  </data>
+  <data name="WinViewToolBackgroundDayModeText" xml:space="preserve">
+    <value>Дневной режим</value>
+  </data>
+  <data name="WinViewToolBackgroundDefaultText" xml:space="preserve">
+    <value>Стандартный</value>
+  </data>
+  <data name="WinViewToolBackgroundEyeProtectionModeText" xml:space="preserve">
+    <value>Режим защиты глаз</value>
+  </data>
+  <data name="WinViewToolBackgroundNightModeText" xml:space="preserve">
+    <value>Ночной режим</value>
+  </data>
+  <data name="WinViewToolBackgroundText" xml:space="preserve">
+    <value>Фон</value>
+  </data>
+  <data name="WinViewToolBackgroundYellowBackgroundText" xml:space="preserve">
+    <value>Желтый фон</value>
+  </data>
+  <data name="WinViewToolConvertText" xml:space="preserve">
+    <value>Конвертировать</value>
+  </data>
+  <data name="WinViewToolOpenTooltipText" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="WinViewToolPrintTooltipText" xml:space="preserve">
+    <value>Печать</value>
+  </data>
+  <data name="WinViewToolRecentFileText" xml:space="preserve">
+    <value>Недавние файлы</value>
+  </data>
+  <data name="WinViewToolRedoTooltipText" xml:space="preserve">
+    <value>Вернуть</value>
+  </data>
+  <data name="WinViewToolSaveAsTooltipText" xml:space="preserve">
+    <value>Сохранить как</value>
+  </data>
+  <data name="WinViewToolSaveTooltipText" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="WinViewToolUndoTooltipText" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="WinWatermarkAligmentContent" xml:space="preserve">
+    <value>Выравнивание</value>
+  </data>
+  <data name="WinWatermarkCbxBottomCenterContent" xml:space="preserve">
+    <value>Снизу по центру</value>
+  </data>
+  <data name="WinWatermarkCbxBottomLeftContent" xml:space="preserve">
+    <value>Снизу по левому краю</value>
+  </data>
+  <data name="WinWatermarkCbxBottomRightContent" xml:space="preserve">
+    <value>Снизу по правому краю</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleCenterContent" xml:space="preserve">
+    <value>По центру</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleLeftContent" xml:space="preserve">
+    <value>Посередине по левому краю</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleRightContent" xml:space="preserve">
+    <value>Посередине по правому краю</value>
+  </data>
+  <data name="WinWatermarkCbxTopCenterContent" xml:space="preserve">
+    <value>Сверху по центру</value>
+  </data>
+  <data name="WinWatermarkCbxTopLeftContent" xml:space="preserve">
+    <value>Сверху по левому краю</value>
+  </data>
+  <data name="WinWatermarkCbxTopRightContent" xml:space="preserve">
+    <value>Сверху по правому краю</value>
+  </data>
+  <data name="WinWatermarkCurrentpageContent" xml:space="preserve">
+    <value>Текущая страница</value>
+  </data>
+  <data name="WinWatermarkEditTiltle" xml:space="preserve">
+    <value>Редактировать водяной знак</value>
+  </data>
+  <data name="WinWatermarkFileContent" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="WinWatermarkFilePathEmptyMsg" xml:space="preserve">
+    <value>Изображение водяного знака не добавлено</value>
+  </data>
+  <data name="WinWatermarkNewTiltle" xml:space="preserve">
+    <value>Создать водяной знак</value>
+  </data>
+  <data name="WinWatermarkOpacityContent" xml:space="preserve">
+    <value>Прозрачность</value>
+  </data>
+  <data name="WinWatermarkRotateContent" xml:space="preserve">
+    <value>Повернуть</value>
+  </data>
+  <data name="WinWatermarkSizeContent" xml:space="preserve">
+    <value>Размер</value>
+  </data>
+  <data name="WinWatermarkSourceContent" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="WinWatermarkStyleContent" xml:space="preserve">
+    <value>Стиль</value>
+  </data>
+  <data name="WinWatermarkTextContent" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="WinWatermarkTextEmptyMsg" xml:space="preserve">
+    <value>Текст не может быть пустым.</value>
+  </data>
+  <data name="WinWatermarkTileContent" xml:space="preserve">
+    <value>Замостить</value>
+  </data>
+  <data name="WinWrongPageRangTipContent" xml:space="preserve">
+    <value>Введите верный диапазон.</value>
+  </data>
+  <data name="WrapBookmarkMenuItemContent" xml:space="preserve">
+    <value>Автоматически переносить длинные закладки</value>
+  </data>
+</root>

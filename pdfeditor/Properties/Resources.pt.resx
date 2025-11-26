@@ -1,0 +1,3783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddCertificateWindow_CreateCertFile_Desc" xml:space="preserve">
+    <value>Introduza um local de ficheiro e uma palavra-passe para o seu novo ficheiro de ID digital. Vai precisar da palavra-passe quando usar o ID digital para assinar ou descriptografar documentos. Anote o local do ficheiro para que o possa copiar para backup ou outros fins.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FailedMessage" xml:space="preserve">
+    <value>Ocorreu um erro desconhecido.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FileName" xml:space="preserve">
+    <value>Nome do Ficheiro:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameEmptyMessage" xml:space="preserve">
+    <value>O nome do ficheiro não pode estar vazio.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameInvalidMessage" xml:space="preserve">
+    <value>Introduza um nome de ficheiro válido.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegion" xml:space="preserve">
+    <value>País/Região:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegionNoneValue" xml:space="preserve">
+    <value>nenhum</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Desc" xml:space="preserve">
+    <value>Introduza as informações de identidade a ser utilizadas para criar o certificado autoassinado.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Email" xml:space="preserve">
+    <value>Endereço de E-mail:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_EmailInvalidMessage" xml:space="preserve">
+    <value>Formato de e-mail inválido.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_LabelName" xml:space="preserve">
+    <value>Nome (exemplo: John Smith):</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_NameEmptyMessage" xml:space="preserve">
+    <value>O nome não pode estar vazio.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalName" xml:space="preserve">
+    <value>Nome da Organização:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalUnit" xml:space="preserve">
+    <value>Unidade Organizacional:</value>
+  </data>
+  <data name="AddCertificateWindow_ImportFile_Desc" xml:space="preserve">
+    <value>Os ficheiros de ID digital geralmente têm uma extensão PFX ou P12 e estes ficheiros normalmente contêm chaves privadas e certificados de chave pública (utilizados para assinar e verificar). 
+Para assinar com um ID digital disponível como ficheiro, siga as instruções para procurar e selecionar o ficheiro e digite a palavra-passe que protege a chave privada.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_Desc" xml:space="preserve">
+    <value>Adicione ou crie um ID digital para assinar e encriptar documentos. Um ID digital pode ser emitido por um serviço de terceiros confiável. Contém uma chave privada e um certificado com uma chave pública. A chave privada é utilizada para criar a assinatura baseada no certificado. O certificado incorporado no ID digital é enviado para outros para verificar a sua assinatura.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelCreateCert" xml:space="preserve">
+    <value>Um novo ID digital que quero criar agora.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelImportFile" xml:space="preserve">
+    <value>Um ID digital existente a partir de um ficheiro.</value>
+  </data>
+  <data name="AddDeferredDigitSignBtn" xml:space="preserve">
+    <value>Adicionar Campo de Assinatura</value>
+  </data>
+  <data name="AnnotationContextMenuCopyText" xml:space="preserve">
+    <value>Copiar texto</value>
+  </data>
+  <data name="AnnotationFileAttachment" xml:space="preserve">
+    <value>Anexo</value>
+  </data>
+  <data name="AnnotationFileAttachmentOpenWarning" xml:space="preserve">
+    <value>Tem certeza que deseja abrir o anexo?</value>
+  </data>
+  <data name="AnnotationMenuBatchDeleteBtn" xml:space="preserve">
+    <value>Excluir em lote</value>
+  </data>
+  <data name="AnnotationMenuFilterAll" xml:space="preserve">
+    <value>Todo</value>
+  </data>
+  <data name="AnnotationMenuFilterBtn" xml:space="preserve">
+    <value>Filtro</value>
+  </data>
+  <data name="AnnotationMenuFilterByAnnotations" xml:space="preserve">
+    <value>Anotações</value>
+  </data>
+  <data name="AnnotationMenuFilterByUser" xml:space="preserve">
+    <value>Usuários</value>
+  </data>
+  <data name="AnnotationMenuTotal" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="AppSettingsAuthorHeader" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="AppSettingsBlankPage" xml:space="preserve">
+    <value>PDF em branco</value>
+  </data>
+  <data name="AppSettingsBlankPageHeightContent" xml:space="preserve">
+    <value>Altura (mm):</value>
+  </data>
+  <data name="AppSettingsBlankPageWidthContent" xml:space="preserve">
+    <value>Largura (mm):</value>
+  </data>
+  <data name="AppSettingsDefaultDisplay" xml:space="preserve">
+    <value>Zoom padrão</value>
+  </data>
+  <data name="AppSettingsDefaultDisplayTips" xml:space="preserve">
+    <value>A configuração padrão de zoom se aplica apenas ao documento aberto pela primeira vez.</value>
+  </data>
+  <data name="AppSettingsDefaultPageview" xml:space="preserve">
+    <value>Layout de página padrão</value>
+  </data>
+  <data name="AppSettingsDefaultSelection" xml:space="preserve">
+    <value>Ferramenta de interação padrão</value>
+  </data>
+  <data name="AppSettingsDouble" xml:space="preserve">
+    <value>Duas páginas</value>
+  </data>
+  <data name="AppSettingsDoubleContinuous" xml:space="preserve">
+    <value>Duas páginas contínuas</value>
+  </data>
+  <data name="AppSettingsFileAssociations" xml:space="preserve">
+    <value>Associações de arquivos</value>
+  </data>
+  <data name="AppSettingsFileAssociations_AlreadyDefaultMessage" xml:space="preserve">
+    <value>XXX já foi definido como o aplicativo padrão para arquivos PDF.</value>
+  </data>
+  <data name="AppSettingsFileAssociations_MakeDefault" xml:space="preserve">
+    <value>Definir como padrão</value>
+  </data>
+  <data name="AppSettingsHandMode" xml:space="preserve">
+    <value>Ferramenta de mão</value>
+  </data>
+  <data name="AppSettingsLanguageAutoItem" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="AppSettingsLanguageHeader" xml:space="preserve">
+    <value>línguas</value>
+  </data>
+  <data name="AppSettingsLanguageRestartTips" xml:space="preserve">
+    <value>Reinicie o PDFgear para aplicar a configuração.</value>
+  </data>
+  <data name="AppSettingsLanguageTitle" xml:space="preserve">
+    <value>línguas</value>
+  </data>
+  <data name="AppSettingsLaunchOCR" xml:space="preserve">
+    <value>Sugerir OCR ao abrir PDFs digitalizados.</value>
+  </data>
+  <data name="AppSettingsLaunchStatusbar" xml:space="preserve">
+    <value>Mostrar barra de navegação inferior ao abrir PDF.</value>
+  </data>
+  <data name="AppSettingsLaunchToolbar" xml:space="preserve">
+    <value>Mostrar barra de ferramentas ao abrir um PDF.</value>
+  </data>
+  <data name="AppSettingsPageDisplay" xml:space="preserve">
+    <value>Exibição da página</value>
+  </data>
+  <data name="AppSettingsSelectionMode" xml:space="preserve">
+    <value>Ferramenta de seleção</value>
+  </data>
+  <data name="AppSettingsShowRightMenu" xml:space="preserve">
+    <value>Mostrar ações rápidas ao selecionar texto</value>
+  </data>
+  <data name="AppSettingsSingle" xml:space="preserve">
+    <value>Página única</value>
+  </data>
+  <data name="AppSettingsSingleContinuous" xml:space="preserve">
+    <value>Página única contínua</value>
+  </data>
+  <data name="AppSettingsUserInformationTitle" xml:space="preserve">
+    <value>Informação do usuário</value>
+  </data>
+  <data name="AppSettingsUserInterface" xml:space="preserve">
+    <value>Interface do usuário</value>
+  </data>
+  <data name="AppsettingsHighlightForm" xml:space="preserve">
+    <value>Realçar campos de formulário</value>
+  </data>
+  <data name="AttachmentDescriptionWinText" xml:space="preserve">
+    <value>Descrição:</value>
+  </data>
+  <data name="AttachmentPanelAttachmentTab" xml:space="preserve">
+    <value>Aba de Anexos</value>
+  </data>
+  <data name="AttachmentPanelBtnAddAttachmentsText" xml:space="preserve">
+    <value>Adicionar anexo</value>
+  </data>
+  <data name="AttachmentPanelBtnDeleteAttachmentText" xml:space="preserve">
+    <value>Excluir anexo</value>
+  </data>
+  <data name="AttachmentPanelBtnEditDescriptionText" xml:space="preserve">
+    <value>Editar descrição</value>
+  </data>
+  <data name="AttachmentPanelBtnOpenAttachmentText" xml:space="preserve">
+    <value>Abrir anexo</value>
+  </data>
+  <data name="AttachmentPanelBtnSaveAttachmentText" xml:space="preserve">
+    <value>Salvar anexo</value>
+  </data>
+  <data name="AttachmentToolbarBtnContextMenuOpenAttachmentManager" xml:space="preserve">
+    <value>Gerenciar anexos</value>
+  </data>
+  <data name="BatchDeleteSelectNoneWarning" xml:space="preserve">
+    <value>Selecione as anotações que deseja excluir</value>
+  </data>
+  <data name="BatchDeleteWarning" xml:space="preserve">
+    <value>Deseja excluir todas as anotações selecionadas?</value>
+  </data>
+  <data name="BatchDeletingTitle" xml:space="preserve">
+    <value>Excluindo anotações...</value>
+  </data>
+  <data name="BatchPrintDialogAddFilesButtonContent" xml:space="preserve">
+    <value>Adicionar arquivos PDF</value>
+  </data>
+  <data name="BatchPrintDialogBatchPrintButtonContent" xml:space="preserve">
+    <value>Impressão em lote</value>
+  </data>
+  <data name="BatchPrintDialogPageCountText" xml:space="preserve">
+    <value>Páginas</value>
+  </data>
+  <data name="BatchPrintListWinActionsHeader" xml:space="preserve">
+    <value>Ações</value>
+  </data>
+  <data name="BatchPrintListWinAddFilesBtn" xml:space="preserve">
+    <value>Adicionar arquivos</value>
+  </data>
+  <data name="BatchPrintListWinFileNameHeader" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="BatchPrintListWinRemoveAllBtn" xml:space="preserve">
+    <value>Remover tudo</value>
+  </data>
+  <data name="BatchPrintListWinStatusHeader" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="BatchPrintPrintAllBtn" xml:space="preserve">
+    <value>Imprimir tudo</value>
+  </data>
+  <data name="BatchPrintPrintSettingsBtn" xml:space="preserve">
+    <value>Configurações de impressão em lote</value>
+  </data>
+  <data name="BatchPrintRemoveAllMessage" xml:space="preserve">
+    <value>Tem certeza de que deseja remover todos os arquivos?</value>
+  </data>
+  <data name="BatchPrintSettingsWinAppliedTo" xml:space="preserve">
+    <value>Aplicar a:</value>
+  </data>
+  <data name="BatchPrintSettingsWinSaveBtn" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="BatchPrintSettingsWinSettingsGroupName" xml:space="preserve">
+    <value>Configurações de impressão</value>
+  </data>
+  <data name="BatchPrintSettingsWinToAll" xml:space="preserve">
+    <value>Todos os arquivos</value>
+  </data>
+  <data name="BatchPrintSettingsWinToCurrent" xml:space="preserve">
+    <value>Arquivo atual</value>
+  </data>
+  <data name="BatchPrintWinFailStatus" xml:space="preserve">
+    <value>Falhou</value>
+  </data>
+  <data name="BatchPrintWinPrintingStatus" xml:space="preserve">
+    <value>Imprimindo...</value>
+  </data>
+  <data name="BatchPrintWinSuccessStatus" xml:space="preserve">
+    <value>Concluído</value>
+  </data>
+  <data name="BookmarkRenameWindowContent" xml:space="preserve">
+    <value>Renomear o título do marcador aqui</value>
+  </data>
+  <data name="CategoryNameWinEmptyMessage" xml:space="preserve">
+    <value>O nome da categoria não pode estar vazio.</value>
+  </data>
+  <data name="CategoryNameWinPlaceholder" xml:space="preserve">
+    <value>Digite aqui...</value>
+  </data>
+  <data name="CategoryNameWinTitle" xml:space="preserve">
+    <value>Nome da categoria</value>
+  </data>
+  <data name="CerateSearchablePDFWinTitle" xml:space="preserve">
+    <value>Executando OCR</value>
+  </data>
+  <data name="CertificateManagerBtn" xml:space="preserve">
+    <value>Gestor de Certificados</value>
+  </data>
+  <data name="CertificateManagerWindowTitle" xml:space="preserve">
+    <value>Identidades e Certificados Fidedignos</value>
+  </data>
+  <data name="CertificateManager_AddBtn" xml:space="preserve">
+    <value>Adicionar ID</value>
+  </data>
+  <data name="CertificateManager_AddFile_Invalid_Message" xml:space="preserve">
+    <value>O ficheiro é inválido. Verifique o ficheiro e tente novamente.</value>
+  </data>
+  <data name="CertificateManager_CertDetailBtn" xml:space="preserve">
+    <value>Detalhes do Certificado</value>
+  </data>
+  <data name="CertificateManager_Content_Issuedby" xml:space="preserve">
+    <value>Emitido por:</value>
+  </data>
+  <data name="CertificateManager_Content_ValidFrom" xml:space="preserve">
+    <value>Válido de</value>
+  </data>
+  <data name="CertificateManager_Content_ValidTo" xml:space="preserve">
+    <value>Válido até:</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_Desc" xml:space="preserve">
+    <value>O ID digital é utilizado principalmente pelo signatário para provar a identidade e criar uma assinatura digital. Pode ser emitido por prestadores de serviços terceirizados confiáveis com base em ficheiros ou outras formas.
+
+Pode criar um novo ID digital. No entanto, oferece um baixo nível de garantia de identidade e pode não ser aceitável em alguns casos.</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_TabName" xml:space="preserve">
+    <value>IDs Digitais</value>
+  </data>
+  <data name="CertificateManager_ExportBtn" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+  <data name="CertificateManager_ExportFailed_Message" xml:space="preserve">
+    <value>Falha ao exportar o certificado.</value>
+  </data>
+  <data name="CertificateManager_ExportSucceeded_Message" xml:space="preserve">
+    <value>O certificado foi exportado com sucesso.</value>
+  </data>
+  <data name="CertificateManager_RefreshBtn" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="CertificateManager_RemoveBtn" xml:space="preserve">
+    <value>Remover ID</value>
+  </data>
+  <data name="CertificateManager_Remove_Message" xml:space="preserve">
+    <value>Tem a certeza de que pretende eliminar o(s) certificado(s) selecionado(s)?</value>
+  </data>
+  <data name="CertificateManager_Storage_LocalCertificateStore" xml:space="preserve">
+    <value>Arquivo de ID Digital</value>
+  </data>
+  <data name="CertificateManager_Storage_WindowsCertificateStore" xml:space="preserve">
+    <value>Loja de Certificados do Windows</value>
+  </data>
+  <data name="CertificateManager_Table_Expires" xml:space="preserve">
+    <value>Expira</value>
+  </data>
+  <data name="CertificateManager_Table_Issuer" xml:space="preserve">
+    <value>Emissor</value>
+  </data>
+  <data name="CertificateManager_Table_Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="CertificateManager_Table_StorageMechanism" xml:space="preserve">
+    <value>Mecanismo de Armazenamento</value>
+  </data>
+  <data name="CertificateManager_Trust_Desc" xml:space="preserve">
+    <value>Os certificados de confiança são essencialmente certificados digitais emitidos por Autoridades Certificadoras (CAs) reconhecidas e confiáveis. Verificam se os emissores do certificado são confiáveis e se as chaves públicas associadas aos certificados pertencem às entidades que afirmam representar.</value>
+  </data>
+  <data name="CertificateManager_Trust_TabName" xml:space="preserve">
+    <value>Certificados Fiáveis</value>
+  </data>
+  <data name="ChatPanelAppActionCancelButton" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="ChatPanelAppActionCanceledContent" xml:space="preserve">
+    <value>CANCELADO</value>
+  </data>
+  <data name="ChatPanelAppActionDoneContent" xml:space="preserve">
+    <value>FEITO</value>
+  </data>
+  <data name="ChatPanelAppActionNoButton" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="ChatPanelAppActionProcessingContent" xml:space="preserve">
+    <value>EM PROCESSAMENTO</value>
+  </data>
+  <data name="ChatPanelAppActionYesButton" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="ChatPanelMessageErrorRetryText" xml:space="preserve">
+    <value>Tente novamente</value>
+  </data>
+  <data name="ChatPanelMessageErrorText" xml:space="preserve">
+    <value>Um erro ocorreu.</value>
+  </data>
+  <data name="ChatPanelMessageError_ContentFiltered" xml:space="preserve">
+    <value>O conteúdo foi filtrado possivelmente devido a mensagens ou artigos com conteúdo que viola as políticas.</value>
+  </data>
+  <data name="ChatPanelMessageError_UserCanceled" xml:space="preserve">
+    <value>A solicitação foi cancelada manualmente.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_compress" xml:space="preserve">
+    <value>Compacte este PDF usando um alto nível de compactação.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_convert_from_pdf" xml:space="preserve">
+    <value>Converta este PDF para o formato Word.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_page_zoom" xml:space="preserve">
+    <value>Amplie esta visualização em PDF.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_protect_pdf" xml:space="preserve">
+    <value>Adicione uma senha para proteger este arquivo.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_slide_show" xml:space="preserve">
+    <value>Exiba este PDF no modo slide.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_summary" xml:space="preserve">
+    <value>Resuma este arquivo PDF.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText1" xml:space="preserve">
+    <value>O PDFgear Copilot é uma ferramenta de IA projetada para ajudá-lo a resumir PDF, encontrar respostas de PDF, editar PDF, converter PDF, gerenciar PDF e muito mais, simplesmente conversando em comandos de linguagem natural.
+
+Exemplos:</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText2" xml:space="preserve">
+    <value>Clique nos exemplos acima ou insira seu comando para iniciar o chat.</value>
+  </data>
+  <data name="ChatPanelUpgradeBtn" xml:space="preserve">
+    <value>Desbloquear PDFgear IA</value>
+  </data>
+  <data name="ChkboxPageSelectedAllContent" xml:space="preserve">
+    <value>Selecionar Tudo</value>
+  </data>
+  <data name="ColorPickerMoreColorsLabelContent" xml:space="preserve">
+    <value>Mais cores</value>
+  </data>
+  <data name="ColorPickerStandardLabelContent" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="ColorPickerThemeLabelContent" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="CopilotClearHistoryButtonText" xml:space="preserve">
+    <value>Limpar histórico do chat</value>
+  </data>
+  <data name="CopilotClearHistoryTip" xml:space="preserve">
+    <value>Tem certeza de que deseja limpar o histórico do bate-papo?</value>
+  </data>
+  <data name="CopilotExportHistoryButtonText" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+  <data name="CopilotExportHistoryWindowTitle" xml:space="preserve">
+    <value>Exportar histórico de bate-papo</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTips" xml:space="preserve">
+    <value>A quantidade de 50 mensagens/arquivo/dia está se esgotando.</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTipsContent" xml:space="preserve">
+    <value>Haverá mais 50 mensagens disponíveis para este PDF amanhã, ou converse com outro PDF por enquanto.</value>
+  </data>
+  <data name="CopilotMessagesRemainingTips" xml:space="preserve">
+    <value>XXX mensagens restantes</value>
+  </data>
+  <data name="CopilotPanelHeader" xml:space="preserve">
+    <value>Bate-papo com PDF</value>
+  </data>
+  <data name="CopilotSendButtonText" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="CopilotSendButtonToolTips" xml:space="preserve">
+    <value>Ctrl+Enter: Enviar mensagem, Tecla Enter: Inserir nova linha</value>
+  </data>
+  <data name="CopilotStopResponseButtonText" xml:space="preserve">
+    <value>Parar</value>
+  </data>
+  <data name="CopilotTextBoxEmtpy" xml:space="preserve">
+    <value>Não é possível enviar mensagem em branco</value>
+  </data>
+  <data name="CopilotTextBoxPlaceholder" xml:space="preserve">
+    <value>Digite aqui para conversar...</value>
+  </data>
+  <data name="CopilotViewboxPages" xml:space="preserve">
+    <value>Número de página:</value>
+  </data>
+  <data name="CopilotWelcomePageAnalysingText" xml:space="preserve">
+    <value>Analisando...</value>
+  </data>
+  <data name="CopilotWelcomePageChatNowButtonText" xml:space="preserve">
+    <value>Conversar Agora</value>
+  </data>
+  <data name="CopilotWelcomePageDesc" xml:space="preserve">
+    <value>Com o PDFgear Copilot, seus documentos estão se tornando inteligentes.  Funciona muito bem para comandar operações em PDFs e obter informações precisas deles usando linguagem natural.  Tente conversar com seus arquivos agora mesmo.</value>
+  </data>
+  <data name="CopilotWelcomePageSubTitle" xml:space="preserve">
+    <value>Bate-papo, aprender, progredir</value>
+  </data>
+  <data name="CopilotWelcomePageTitle" xml:space="preserve">
+    <value>Desenvolvido por ChatGPT</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemExpiration" xml:space="preserve">
+    <value>Expiração:</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemIssuer" xml:space="preserve">
+    <value>Emissor:</value>
+  </data>
+  <data name="CreateDigSignDialogBrowserItem" xml:space="preserve">
+    <value>Nova ID digital</value>
+  </data>
+  <data name="CreateDigSignDialogCertFile" xml:space="preserve">
+    <value>Identificações digitais:</value>
+  </data>
+  <data name="CreateDigSignDialogCertPassword" xml:space="preserve">
+    <value>Palavra-passe:</value>
+  </data>
+  <data name="CreateDigSignDialogCertificatedCheckbox" xml:space="preserve">
+    <value>Bloquear o Documento Após a Assinatura</value>
+  </data>
+  <data name="CreateDigSignDialogSignBtn" xml:space="preserve">
+    <value>Assinar</value>
+  </data>
+  <data name="CreateDigSignImportCertBrowserBtn" xml:space="preserve">
+    <value>Procurar...</value>
+  </data>
+  <data name="CreateDigSignImportCertDialogDesc" xml:space="preserve">
+    <value>Procurar um ficheiro de ID digital. Os ficheiros de ID digital estão protegidos por palavra-passe e necessitam da sua palavra-passe para serem abertos.</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_InvalidPassword" xml:space="preserve">
+    <value>O arquivo ou senha é inválido.</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_NotSupport" xml:space="preserve">
+    <value>Este certificado não pode ser usado para assinaturas digitais.</value>
+  </data>
+  <data name="CreateDigSignImportCertFileLabel" xml:space="preserve">
+    <value>Ficheiro de Identificação Digital</value>
+  </data>
+  <data name="CreateDigSignMessage_CertExpired" xml:space="preserve">
+    <value>Não é possível assinar com um certificado expirado.</value>
+  </data>
+  <data name="CreateDigSignMessage_IncorrectPassword" xml:space="preserve">
+    <value>A palavra-passe está incorreta. Por favor, insira a palavra-passe novamente.</value>
+  </data>
+  <data name="CreateDigSignReason1" xml:space="preserve">
+    <value>Eu sou o autor deste documento</value>
+  </data>
+  <data name="CreateDigSignReason2" xml:space="preserve">
+    <value>Eu revisei este documento</value>
+  </data>
+  <data name="CreateDigSignReason3" xml:space="preserve">
+    <value>Estou aprovando este documento</value>
+  </data>
+  <data name="CreateDigSignReason4" xml:space="preserve">
+    <value>Estou aprovando este documento com minha assinatura juridicamente vinculativa</value>
+  </data>
+  <data name="CreateDigSignReason5" xml:space="preserve">
+    <value>Atesto a exatidão e integridade deste documento</value>
+  </data>
+  <data name="CreateDigSignReason6" xml:space="preserve">
+    <value>Concordo com os termos definidos pela colocação da minha assinatura neste documento</value>
+  </data>
+  <data name="CreateDigSignReason7" xml:space="preserve">
+    <value>Concordo com partes específicas deste documento</value>
+  </data>
+  <data name="CropCreateTip" xml:space="preserve">
+    <value>Arraste o rato para desenhar a área que pretende recortar. Depois de ter arrastado a área pretendida, passa para o passo seguinte do recorte.</value>
+  </data>
+  <data name="CropPageExceedingPageRange" xml:space="preserve">
+    <value>A página de visualização não está incluída no escopo da página</value>
+  </data>
+  <data name="CropPageExceedingRange" xml:space="preserve">
+    <value>Exceder o intervalo legal</value>
+  </data>
+  <data name="CropPageToolbarAdvanced" xml:space="preserve">
+    <value>Configurações avançadas</value>
+  </data>
+  <data name="CropPageWinCentimeterUnits" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="CropPageWinInchUnits" xml:space="preserve">
+    <value>polegada</value>
+  </data>
+  <data name="CropPageWinMandatoryBox" xml:space="preserve">
+    <value>Proporções obrigatórias</value>
+  </data>
+  <data name="CropPageWinMarginTitle" xml:space="preserve">
+    <value>Controlo da margem</value>
+  </data>
+  <data name="CropPageWinMeasuresIn" xml:space="preserve">
+    <value>Unidades</value>
+  </data>
+  <data name="CropPageWinMillimeterUnits" xml:space="preserve">
+    <value>mm</value>
+  </data>
+  <data name="CropPageWinPagesRange" xml:space="preserve">
+    <value>Páginas</value>
+  </data>
+  <data name="CropPageWinPicaUnits" xml:space="preserve">
+    <value>pica</value>
+  </data>
+  <data name="CropPageWinPointUnits" xml:space="preserve">
+    <value>ponto</value>
+  </data>
+  <data name="CropPageWinRemoveMaigin" xml:space="preserve">
+    <value>Remover margens em branco</value>
+  </data>
+  <data name="CropPageWinResetBtn" xml:space="preserve">
+    <value>Repor</value>
+  </data>
+  <data name="CropPageWinSizeofCropBox" xml:space="preserve">
+    <value>Recorte as dimensões da página:</value>
+  </data>
+  <data name="CropPageWinZeroMarginBtn" xml:space="preserve">
+    <value>Definir como margem 0</value>
+  </data>
+  <data name="DefaultAppAndShortcutSucc" xml:space="preserve">
+    <value>Configurações aplicadas!</value>
+  </data>
+  <data name="DefaultAppCancelBtn" xml:space="preserve">
+    <value>Agora não</value>
+  </data>
+  <data name="DefaultAppTitle" xml:space="preserve">
+    <value>Defina o PDFgear como o programa padrão para arquivos PDF.</value>
+  </data>
+  <data name="DefaultAppWinTitle" xml:space="preserve">
+    <value>Torne o PDFgear meu aplicativo de PDF padrão.</value>
+  </data>
+  <data name="DefaultContextMenuAddBookmark" xml:space="preserve">
+    <value>Adicionar marcador</value>
+  </data>
+  <data name="DeferredDigitSignCreateTip" xml:space="preserve">
+    <value>Usando o mouse, clique e arraste para desenhar a área onde deseja que a assinatura apareça.  Assim que terminar de arrastar a área desejada, você será levado para a próxima etapa do processo de assinatura.</value>
+  </data>
+  <data name="DeferredDigitSignPreviewText" xml:space="preserve">
+    <value>Assine Aqui</value>
+  </data>
+  <data name="DeletePageAskMsg" xml:space="preserve">
+    <value>Tem a certeza de que pretende apagar as páginas selecionadas?</value>
+  </data>
+  <data name="DeletePageCheckEmptyMsg" xml:space="preserve">
+    <value>Por favor, selecione a(s) página(s) que pretende eliminar.</value>
+  </data>
+  <data name="DeletePageCheckMsg" xml:space="preserve">
+    <value>Não pode apagar todas as páginas do documento.</value>
+  </data>
+  <data name="DeleteParentBookmarkWarning" xml:space="preserve">
+    <value>Excluir um marcador de nível superior também removerá todos os seus marcadores aninhados. Tem certeza de que deseja continuar?</value>
+  </data>
+  <data name="DeleteSinglePageAskMsg" xml:space="preserve">
+    <value>Tem a certeza de que quer eliminar a página?</value>
+  </data>
+  <data name="DeleteWatermarkAskMsg" xml:space="preserve">
+    <value>Tem a certeza que pretende eliminar todas as marcas de água no PDF?</value>
+  </data>
+  <data name="DigSigCreateMessage_AreaTooSmall" xml:space="preserve">
+    <value>A área é muito pequena para assinar.</value>
+  </data>
+  <data name="DigSigCreateMessage_Failed" xml:space="preserve">
+    <value>Falha ao adicionar a assinatura digital.</value>
+  </data>
+  <data name="DigSigRemoveMessage_Failed" xml:space="preserve">
+    <value>Falha ao remover a assinatura digital.</value>
+  </data>
+  <data name="DigSignBannerMessage_Invalid" xml:space="preserve">
+    <value>Pelo menos uma assinatura tem problemas.</value>
+  </data>
+  <data name="DigSignBannerMessage_NeedSign" xml:space="preserve">
+    <value>Pelo menos um campo de assinatura precisa ser assinado.</value>
+  </data>
+  <data name="DigSignBannerMessage_Valid" xml:space="preserve">
+    <value>Assinado e todas as assinaturas são válidas.</value>
+  </data>
+  <data name="DigSignBannerShowSignaturesButton" xml:space="preserve">
+    <value>Mostrar assinaturas</value>
+  </data>
+  <data name="DigSignCertInfoBtn" xml:space="preserve">
+    <value>Informações…</value>
+  </data>
+  <data name="DigSignFieldLocation" xml:space="preserve">
+    <value>Campo:</value>
+  </data>
+  <data name="DigSignFieldLocationPage" xml:space="preserve">
+    <value>Página</value>
+  </data>
+  <data name="DigSignFieldSignedBy" xml:space="preserve">
+    <value>Assinado por:</value>
+  </data>
+  <data name="DigSignInfoIncludesEmbeddedTimestamp" xml:space="preserve">
+    <value>A assinatura inclui um carimbo de data/hora incorporado.  Horário do carimbo de data/hora: XXX</value>
+  </data>
+  <data name="DigSignInfoNotAllowModify" xml:space="preserve">
+    <value>O certificador especificou que nenhuma alteração pode ser feita neste documento.</value>
+  </data>
+  <data name="DigSignInfoSignerInfoTitle" xml:space="preserve">
+    <value>Informações do signatário</value>
+  </data>
+  <data name="DigSignInfoTimeFromSignersDevice" xml:space="preserve">
+    <value>O horário da assinatura é baseado no relógio do computador do assinado.</value>
+  </data>
+  <data name="DigSignInfoValidAtTime" xml:space="preserve">
+    <value>A assinatura foi validada a partir da hora segura (carimbo de data/hora): XXX</value>
+  </data>
+  <data name="DigSignInfoValidatedAsSigningTime" xml:space="preserve">
+    <value>A assinatura foi validada a partir do horário da assinatura: XXX</value>
+  </data>
+  <data name="DigSignPanelContextMenuGoToField" xml:space="preserve">
+    <value>Ir para o campo de assinatura</value>
+  </data>
+  <data name="DigSignPanelContextMenuRemoveSign" xml:space="preserve">
+    <value>Remover assinatura</value>
+  </data>
+  <data name="DigSignPanelContextMenuShowProps" xml:space="preserve">
+    <value>Mostrar Propriedades da Assinatura</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedRemove" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedShowProps" xml:space="preserve">
+    <value>Mostrar Propriedades</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedSignNow" xml:space="preserve">
+    <value>Assine Agora</value>
+  </data>
+  <data name="DigSignPanelContextMenuValidateSign" xml:space="preserve">
+    <value>Validar Assinatura</value>
+  </data>
+  <data name="DigSignPanelDefaultName" xml:space="preserve">
+    <value>Assinatura</value>
+  </data>
+  <data name="DigSignPropCertDetails" xml:space="preserve">
+    <value>Detalhes do certificado...</value>
+  </data>
+  <data name="DigSignPropContactInfo" xml:space="preserve">
+    <value>Informações de contacto:</value>
+  </data>
+  <data name="DigSignPropContactInfo_NotAvailable" xml:space="preserve">
+    <value>Não disponível.</value>
+  </data>
+  <data name="DigSignPropDialogTitle" xml:space="preserve">
+    <value>Propriedades da assinatura</value>
+  </data>
+  <data name="DigSignPropLastCheckTime" xml:space="preserve">
+    <value>Última Verificação:</value>
+  </data>
+  <data name="DigSignPropLocation" xml:space="preserve">
+    <value>Localização:</value>
+  </data>
+  <data name="DigSignPropPreviewAppVer" xml:space="preserve">
+    <value>Versão PDFgear:</value>
+  </data>
+  <data name="DigSignPropPreviewSignedBy" xml:space="preserve">
+    <value>Assinado digitalmente por</value>
+  </data>
+  <data name="DigSignPropReason" xml:space="preserve">
+    <value>Razão:</value>
+  </data>
+  <data name="DigSignPropShowCertBtn" xml:space="preserve">
+    <value>Mostrar certificado...</value>
+  </data>
+  <data name="DigSignPropSignDate" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="DigSignPropSignedBy" xml:space="preserve">
+    <value>Assinado por</value>
+  </data>
+  <data name="DigSignPropTrustCertBtn" xml:space="preserve">
+    <value>Confie no Certificado</value>
+  </data>
+  <data name="DigSignPropUnsigned" xml:space="preserve">
+    <value>Campo de Assinatura Não Assinado</value>
+  </data>
+  <data name="DigSignPropValiditySummary" xml:space="preserve">
+    <value>Resumo de Validade</value>
+  </data>
+  <data name="DigSignResultInvalid" xml:space="preserve">
+    <value>A assinatura é INVÁLIDA.</value>
+  </data>
+  <data name="DigSignResultUnknown" xml:space="preserve">
+    <value>A validade da assinatura é DESCONHECIDA.</value>
+  </data>
+  <data name="DigSignResultValid" xml:space="preserve">
+    <value>A assinatura é VÁLIDA, assinada por XXX.</value>
+  </data>
+  <data name="DigSignStatusHasBeenModified" xml:space="preserve">
+    <value>O documento foi modificado desde que esta assinatura foi aplicada.</value>
+  </data>
+  <data name="DigSignStatusHasNotBeenModified" xml:space="preserve">
+    <value>O documento não foi modificado desde que esta assinatura foi aplicada.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsBroken" xml:space="preserve">
+    <value>Esta assinatura é inválida porque há erros na formatação ou nas informações contidas nesta assinatura.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsExpired" xml:space="preserve">
+    <value>A identidade do signatário é desconhecida.  O certificado excedeu o tempo de validade.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsValid" xml:space="preserve">
+    <value>A identidade do signatário é válida.</value>
+  </data>
+  <data name="DigSignStatusNotIncludedInTrustedCerts" xml:space="preserve">
+    <value>A identidade do signatário é desconhecida porque não foi incluída em sua lista de certificados confiáveis e nenhum de seus certificados pai são certificados confiáveis.</value>
+  </data>
+  <data name="DigSignStatusValidWhenIssued" xml:space="preserve">
+    <value>A identidade do signatário era válida quando foi emitida, mas nenhuma verificação de revogação pôde ser feita para validar a identidade desta vez.</value>
+  </data>
+  <data name="DigSignUnsignedToolTipPostfix" xml:space="preserve">
+    <value>(Clique para assinar)</value>
+  </data>
+  <data name="DigSignValidationDialogTitle" xml:space="preserve">
+    <value>Status de Validação da Assinatura</value>
+  </data>
+  <data name="DigSignValidationProperties" xml:space="preserve">
+    <value>Propriedades da assinatura...</value>
+  </data>
+  <data name="DigitalSignatureCreateTip" xml:space="preserve">
+    <value>Usando o mouse, clique e arraste para desenhar a área onde deseja que a assinatura apareça.  Assim que terminar de arrastar a área desejada, você será levado para a próxima etapa do processo de assinatura.</value>
+  </data>
+  <data name="DocumentPropertiesAuthor" xml:space="preserve">
+    <value>Autor: </value>
+  </data>
+  <data name="DocumentPropertiesCentimeterUnits" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="DocumentPropertiesCreated" xml:space="preserve">
+    <value>Criada: </value>
+  </data>
+  <data name="DocumentPropertiesCreator" xml:space="preserve">
+    <value>Criador: </value>
+  </data>
+  <data name="DocumentPropertiesFileSize" xml:space="preserve">
+    <value>Tamanho do Arquivo: </value>
+  </data>
+  <data name="DocumentPropertiesFileVersion" xml:space="preserve">
+    <value>Versão PDF: </value>
+  </data>
+  <data name="DocumentPropertiesFilename" xml:space="preserve">
+    <value>Nome do Ficheiro:</value>
+  </data>
+  <data name="DocumentPropertiesInchUnits" xml:space="preserve">
+    <value>polegada</value>
+  </data>
+  <data name="DocumentPropertiesInfoTitle" xml:space="preserve">
+    <value>Informações do Arquivo</value>
+  </data>
+  <data name="DocumentPropertiesKeyword" xml:space="preserve">
+    <value>Palavras-chave: </value>
+  </data>
+  <data name="DocumentPropertiesLocation" xml:space="preserve">
+    <value>Localização: </value>
+  </data>
+  <data name="DocumentPropertiesModified" xml:space="preserve">
+    <value>Modificado: </value>
+  </data>
+  <data name="DocumentPropertiesPageSize" xml:space="preserve">
+    <value>Tamanho da Página: </value>
+  </data>
+  <data name="DocumentPropertiesProducer" xml:space="preserve">
+    <value>Produtor: </value>
+  </data>
+  <data name="DocumentPropertiesSubject" xml:space="preserve">
+    <value>Assunto: </value>
+  </data>
+  <data name="DocumentPropertiesTitle" xml:space="preserve">
+    <value>Título: </value>
+  </data>
+  <data name="DocumentPropertiesTotalPages" xml:space="preserve">
+    <value>Número de Páginas: </value>
+  </data>
+  <data name="DocumentPropertiesWindowTitle" xml:space="preserve">
+    <value>Propriedades do documento</value>
+  </data>
+  <data name="EditCustomStampWinTitle" xml:space="preserve">
+    <value>Editar carimbo personalizado</value>
+  </data>
+  <data name="EditStampWinCategoryListNewContent" xml:space="preserve">
+    <value>Nova categoria</value>
+  </data>
+  <data name="EditStampWinContentType1" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="EditStampWinContentType2" xml:space="preserve">
+    <value>Data e hora</value>
+  </data>
+  <data name="EditStampWinContentType3" xml:space="preserve">
+    <value>Nenhum</value>
+  </data>
+  <data name="EditStampWinDefaultCategoryName" xml:space="preserve">
+    <value>Categoria padrão</value>
+  </data>
+  <data name="EditStampWinDefaultStampName" xml:space="preserve">
+    <value>Carimbo sem título</value>
+  </data>
+  <data name="EditStampWinFontTitle" xml:space="preserve">
+    <value>Fonte</value>
+  </data>
+  <data name="EditStampWinImageEmptyErrorMessage" xml:space="preserve">
+    <value>Primeiro, por favor selecione uma imagem</value>
+  </data>
+  <data name="EditStampWinImageSelectedBtnContent" xml:space="preserve">
+    <value>Selecionar imagem</value>
+  </data>
+  <data name="EditStampWinLargeFontSize" xml:space="preserve">
+    <value>Grande</value>
+  </data>
+  <data name="EditStampWinListMenuDynamicContent" xml:space="preserve">
+    <value>Dinâmico</value>
+  </data>
+  <data name="EditStampWinMediumFontSize" xml:space="preserve">
+    <value>Médio</value>
+  </data>
+  <data name="EditStampWinSaveCheckBoxContent" xml:space="preserve">
+    <value>Salvar carimbo personalizado</value>
+  </data>
+  <data name="EditStampWinSmallFontSize" xml:space="preserve">
+    <value>Pequeno</value>
+  </data>
+  <data name="EditStampWinStampCategoryName" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="EditStampWinStampContent1" xml:space="preserve">
+    <value>Conteúdo 1</value>
+  </data>
+  <data name="EditStampWinStampContent2" xml:space="preserve">
+    <value>Conteúdo 2</value>
+  </data>
+  <data name="EditStampWinStampContent3" xml:space="preserve">
+    <value>Conteúdo 3</value>
+  </data>
+  <data name="EditStampWinStampName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="EditStampWinStampShape" xml:space="preserve">
+    <value>Forma</value>
+  </data>
+  <data name="EditStampWinTitle" xml:space="preserve">
+    <value>Criar carimbo personalizado</value>
+  </data>
+  <data name="EditStampWinUntitledCategoryName" xml:space="preserve">
+    <value>Categoria sem título</value>
+  </data>
+  <data name="EraserToolbarPaitialBtn" xml:space="preserve">
+    <value>Parcial</value>
+  </data>
+  <data name="EraserToolbarSizeContent" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="EraserToolbarWholeBtn" xml:space="preserve">
+    <value>Inteiro</value>
+  </data>
+  <data name="ExtractPageCheckEmptyMsg" xml:space="preserve">
+    <value>Por favor, selecione a(s) página(s) que pretende extrair.</value>
+  </data>
+  <data name="FindDeviceErrorMessage" xml:space="preserve">
+    <value>Não é possível conectar ao scanner. Por favor verifique seu scanner e tente novamente.</value>
+  </data>
+  <data name="FirstPageTooltipText" xml:space="preserve">
+    <value>Primeira página</value>
+  </data>
+  <data name="FlattenBtn" xml:space="preserve">
+    <value>Achatar anotação</value>
+  </data>
+  <data name="FlattenWinContent1" xml:space="preserve">
+    <value>Mesclar anotações na camada de conteúdo.</value>
+  </data>
+  <data name="FlattenWinContent2" xml:space="preserve">
+    <value>Após achatar, todas as anotações não poderão ser editadas.</value>
+  </data>
+  <data name="FlattenWinContent3" xml:space="preserve">
+    <value>Para preservar as informações originais, o arquivo achatado será salvo como uma cópia.</value>
+  </data>
+  <data name="FlattenWinTitle" xml:space="preserve">
+    <value>Achatar todas as anotações no PDF</value>
+  </data>
+  <data name="FootToolNextViewTips" xml:space="preserve">
+    <value>Próxima visualização</value>
+  </data>
+  <data name="FootToolPreviousViewTips" xml:space="preserve">
+    <value>Visualização anterior</value>
+  </data>
+  <data name="HeaderToolExitFullScreenTips" xml:space="preserve">
+    <value>Sair da Tela Cheia</value>
+  </data>
+  <data name="HeaderToolFullScreenTips" xml:space="preserve">
+    <value>Tela Cheia</value>
+  </data>
+  <data name="HeaderToolHideTips" xml:space="preserve">
+    <value>Ocultar</value>
+  </data>
+  <data name="HeaderToolShareTips" xml:space="preserve">
+    <value>Compartilhar</value>
+  </data>
+  <data name="HeaderToolShowTips" xml:space="preserve">
+    <value>Expandir</value>
+  </data>
+  <data name="HeaderToolThemeTips" xml:space="preserve">
+    <value>Aparência</value>
+  </data>
+  <data name="ImageControlEditor" xml:space="preserve">
+    <value>Editar imagem</value>
+  </data>
+  <data name="ImageControl_DeleteConfirm" xml:space="preserve">
+    <value>Tem certeza de que deseja excluir a imagem selecionada?</value>
+  </data>
+  <data name="ImageControl_OcrFailed" xml:space="preserve">
+    <value>Falha no OCR da imagem!</value>
+  </data>
+  <data name="ImageHierarchyBottom" xml:space="preserve">
+    <value>Definir para baixo</value>
+  </data>
+  <data name="ImageHierarchyDown" xml:space="preserve">
+    <value>Mover para trás</value>
+  </data>
+  <data name="ImageHierarchyFront" xml:space="preserve">
+    <value>Mover para a frente</value>
+  </data>
+  <data name="ImageHierarchyTop" xml:space="preserve">
+    <value>Definir para o topo</value>
+  </data>
+  <data name="ImageToolbarTitle" xml:space="preserve">
+    <value>Está no modo de edição de imagem.</value>
+  </data>
+  <data name="ImagemanipulationDelete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="ImagemanipulationFilpHor" xml:space="preserve">
+    <value>Virar horizontalmente</value>
+  </data>
+  <data name="ImagemanipulationFilpVer" xml:space="preserve">
+    <value>Virar verticalmente</value>
+  </data>
+  <data name="ImagemanipulationHierarchy" xml:space="preserve">
+    <value>Hierarquia</value>
+  </data>
+  <data name="ImagemanipulationOCR" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ImagemanipulationReplace" xml:space="preserve">
+    <value>Substituir</value>
+  </data>
+  <data name="ImagemanipulationRotate" xml:space="preserve">
+    <value>Rodar</value>
+  </data>
+  <data name="ImagemanipulationSave" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="ImportDialogFilterImage" xml:space="preserve">
+    <value>Ficheiros de Imagem</value>
+  </data>
+  <data name="ImportDialogFilterSupported" xml:space="preserve">
+    <value>Ficheiros Suportados</value>
+  </data>
+  <data name="ImprotPagesUnexpectedError" xml:space="preserve">
+    <value>Ocorreu um erro desconhecido.</value>
+  </data>
+  <data name="InkToolbarEraserBtn" xml:space="preserve">
+    <value>Apagador</value>
+  </data>
+  <data name="InsertPDFDetermineContent" xml:space="preserve">
+    <value>Tem a certeza de que pretende inserir a(s) página(s) XXX selecionada(s) no PDF?</value>
+  </data>
+  <data name="InsertPDFInsertTitle" xml:space="preserve">
+    <value>Inserir em</value>
+  </data>
+  <data name="InsertWinInsertAfter" xml:space="preserve">
+    <value>Depois da Página</value>
+  </data>
+  <data name="InsertWinInsertBefore" xml:space="preserve">
+    <value>Antes da Página</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageContent" xml:space="preserve">
+    <value>Existem certas modificações feitas no PDF que são irreversíveis.  Para garantir a preservação das informações originais e evitar qualquer perda potencial, salve o arquivo modificado como uma cópia.</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageTitle" xml:space="preserve">
+    <value>Salve o PDF como uma cópia</value>
+  </data>
+  <data name="LabelColorContent" xml:space="preserve">
+    <value>Cor</value>
+  </data>
+  <data name="LabelTextContent" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="LastPageTooltipText" xml:space="preserve">
+    <value>Última página</value>
+  </data>
+  <data name="LeftNavigationAnnotationPageLabelContent" xml:space="preserve">
+    <value>Página XXX</value>
+  </data>
+  <data name="LeftNavigationViewAnnotationDisplayName" xml:space="preserve">
+    <value>Comentários</value>
+  </data>
+  <data name="LeftNavigationViewBookmarkDisplayName" xml:space="preserve">
+    <value>Marcador</value>
+  </data>
+  <data name="LeftNavigationViewDigitalSignaturesDisplayName" xml:space="preserve">
+    <value>Assinaturas Digitais</value>
+  </data>
+  <data name="LeftNavigationViewThumbnailDisplayName" xml:space="preserve">
+    <value>Miniatura</value>
+  </data>
+  <data name="LinkActionToUri" xml:space="preserve">
+    <value>Você vai abrir "XXX".  Por favor, certifique-se de confiar nele antes de abrir.  Continuar a abrir?</value>
+  </data>
+  <data name="LinkBtn" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="LinkCreateBtn" xml:space="preserve">
+    <value>Criar/Editar Link</value>
+  </data>
+  <data name="LinkDeleteAll" xml:space="preserve">
+    <value>Tem certeza de remover todos os links?</value>
+  </data>
+  <data name="LinkDeleteAllBtn" xml:space="preserve">
+    <value>Excluir todos os links</value>
+  </data>
+  <data name="LinkDeleteOne" xml:space="preserve">
+    <value>Tem certeza que deseja remover o link?</value>
+  </data>
+  <data name="LinkOpenFileFailed" xml:space="preserve">
+    <value>Arquivo não encontrado.  Verifique se o arquivo foi movido, renomeado ou excluído.</value>
+  </data>
+  <data name="LinkPageError" xml:space="preserve">
+    <value>Insira um número de página válido.</value>
+  </data>
+  <data name="LinkRightDelete" xml:space="preserve">
+    <value>Excluir link</value>
+  </data>
+  <data name="LinkToolbarTitle" xml:space="preserve">
+    <value>Está no modo de edição de ligações.</value>
+  </data>
+  <data name="LinkUriEmpty" xml:space="preserve">
+    <value>Insira um destino válido do link.</value>
+  </data>
+  <data name="LinkUriError" xml:space="preserve">
+    <value>Insira um link de URL válido.</value>
+  </data>
+  <data name="LinkWinAppearance" xml:space="preserve">
+    <value>Aparência</value>
+  </data>
+  <data name="LinkWinFilePath" xml:space="preserve">
+    <value>Arquivo local</value>
+  </data>
+  <data name="LinkWinInvisibleRect" xml:space="preserve">
+    <value>Retângulo invisível</value>
+  </data>
+  <data name="LinkWinNavigate" xml:space="preserve">
+    <value>Navegar para</value>
+  </data>
+  <data name="LinkWinPage" xml:space="preserve">
+    <value>Página</value>
+  </data>
+  <data name="LinkWinStrokeDashed" xml:space="preserve">
+    <value>Tracejadas</value>
+  </data>
+  <data name="LinkWinStrokeSolid" xml:space="preserve">
+    <value>Sólido</value>
+  </data>
+  <data name="LinkWinStrokeStyle" xml:space="preserve">
+    <value>Estilo de traço</value>
+  </data>
+  <data name="LinkWinStrokeUnderline" xml:space="preserve">
+    <value>Sublinhar</value>
+  </data>
+  <data name="LinkWinStyle" xml:space="preserve">
+    <value>Estilo do link</value>
+  </data>
+  <data name="LinkWinTitleCreate" xml:space="preserve">
+    <value>Criar link</value>
+  </data>
+  <data name="LinkWinTitleEdit" xml:space="preserve">
+    <value>Editar link</value>
+  </data>
+  <data name="LinkWinUrl" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="LinkWinVisibleRect" xml:space="preserve">
+    <value>Retângulo visível</value>
+  </data>
+  <data name="MainCropPageContextMenuAdjust" xml:space="preserve">
+    <value>Ajustar a Área Selecionada</value>
+  </data>
+  <data name="MainCropPageNotSelectedPageNote" xml:space="preserve">
+    <value>Selecione uma página.</value>
+  </data>
+  <data name="MainCropPageSelectLittleAreaNote" xml:space="preserve">
+    <value>Defina uma área maior.</value>
+  </data>
+  <data name="MainCropPageSelectedMulPageNote" xml:space="preserve">
+    <value>Apenas pode ser selecionada uma página.</value>
+  </data>
+  <data name="MainViewBatchPrintContent" xml:space="preserve">
+    <value>Impressão em lote</value>
+  </data>
+  <data name="MainViewBookmarkAddBookmark" xml:space="preserve">
+    <value>Adicionar marcador</value>
+  </data>
+  <data name="MainViewBookmarkAddChildBookmark" xml:space="preserve">
+    <value>Adicionar sub-marcador</value>
+  </data>
+  <data name="MainViewBookmarkCollapseAll" xml:space="preserve">
+    <value>Recolher todos</value>
+  </data>
+  <data name="MainViewBookmarkDeleteBookmark" xml:space="preserve">
+    <value>Excluir marcador</value>
+  </data>
+  <data name="MainViewBookmarkExpandAll" xml:space="preserve">
+    <value>Expandir todos</value>
+  </data>
+  <data name="MainViewBookmarkRenameBookmark" xml:space="preserve">
+    <value>Renomear marcador</value>
+  </data>
+  <data name="MainViewCopilotButtonFirstCloseTips" xml:space="preserve">
+    <value>Clique no ícone para continuar conversando com PDF</value>
+  </data>
+  <data name="MainViewCreateNewPDF" xml:space="preserve">
+    <value>Criar Ficheiro</value>
+  </data>
+  <data name="MainViewCropPageContent" xml:space="preserve">
+    <value>Recortar páginas</value>
+  </data>
+  <data name="MainViewToolbarPhoneBtn" xml:space="preserve">
+    <value>iOS &amp; Android</value>
+  </data>
+  <data name="MainViewToolbarPhoneBtnTips" xml:space="preserve">
+    <value>Obtenha PDFgear para iOS e Android</value>
+  </data>
+  <data name="MainWindowAccountBtn" xml:space="preserve">
+    <value>Entrar / Cadastrar</value>
+  </data>
+  <data name="MainWindowCompressFileBtn" xml:space="preserve">
+    <value>Comprimir PDF</value>
+  </data>
+  <data name="MainWindowExportFileToBtn" xml:space="preserve">
+    <value>Exportar PDF como</value>
+  </data>
+  <data name="MainWindowFilesBtn" xml:space="preserve">
+    <value>Arquivos</value>
+  </data>
+  <data name="MainWindowMergeAndSplitBtn" xml:space="preserve">
+    <value>Mesclar e Dividir</value>
+  </data>
+  <data name="MainWindowNewBlankFileBtn" xml:space="preserve">
+    <value>Novo PDF em branco</value>
+  </data>
+  <data name="MainWindowNewFileBtn" xml:space="preserve">
+    <value>Criar Ficheiro</value>
+  </data>
+  <data name="MainWindowNewFilefromImageBtn" xml:space="preserve">
+    <value>Novo PDF a partir de imagens</value>
+  </data>
+  <data name="MainWindowNewFilefromScannerBtn" xml:space="preserve">
+    <value>Novo PDF do scanner</value>
+  </data>
+  <data name="MainWindowQuitBtn" xml:space="preserve">
+    <value>Sair do PDFgear</value>
+  </data>
+  <data name="ManageStampAddNewBtnContent" xml:space="preserve">
+    <value>Adicionar nova categoria</value>
+  </data>
+  <data name="ManageStampDeleteCategoryBtnContent" xml:space="preserve">
+    <value>Excluir categoria</value>
+  </data>
+  <data name="ManageStampRenameBtnContent" xml:space="preserve">
+    <value>Renomear categoria</value>
+  </data>
+  <data name="ManageStampWinCreateBtnContent" xml:space="preserve">
+    <value>Criar carimbo</value>
+  </data>
+  <data name="ManageStampWinTitle" xml:space="preserve">
+    <value>Gerenciar carimbos personalizados</value>
+  </data>
+  <data name="ManegeStampAllCategories" xml:space="preserve">
+    <value>Todas as categorias</value>
+  </data>
+  <data name="MenuAnnotateArrowContent" xml:space="preserve">
+    <value>Seta</value>
+  </data>
+  <data name="MenuAnnotateEllipseContent" xml:space="preserve">
+    <value>Oval</value>
+  </data>
+  <data name="MenuAnnotateHiddenContent" xml:space="preserve">
+    <value>Ocultar Comentários</value>
+  </data>
+  <data name="MenuAnnotateHighlight" xml:space="preserve">
+    <value>Destaque de Área</value>
+  </data>
+  <data name="MenuAnnotateHighlightContent" xml:space="preserve">
+    <value>Realçar</value>
+  </data>
+  <data name="MenuAnnotateInkContent" xml:space="preserve">
+    <value>Tinta</value>
+  </data>
+  <data name="MenuAnnotateLineContent" xml:space="preserve">
+    <value>Linha</value>
+  </data>
+  <data name="MenuAnnotateManageContent" xml:space="preserve">
+    <value>Gerenciar Comentários</value>
+  </data>
+  <data name="MenuAnnotateNoteContent" xml:space="preserve">
+    <value>Nota</value>
+  </data>
+  <data name="MenuAnnotateRemoveTextContent" xml:space="preserve">
+    <value>Apagar Texto</value>
+  </data>
+  <data name="MenuAnnotateShapeContent" xml:space="preserve">
+    <value>Retângulo</value>
+  </data>
+  <data name="MenuAnnotateShowContent" xml:space="preserve">
+    <value>Mostrar Comentários</value>
+  </data>
+  <data name="MenuAnnotateSignatureContent" xml:space="preserve">
+    <value>Assinatura</value>
+  </data>
+  <data name="MenuAnnotateStampContent" xml:space="preserve">
+    <value>Carimbo</value>
+  </data>
+  <data name="MenuAnnotateStrikeContent" xml:space="preserve">
+    <value>Rasurar</value>
+  </data>
+  <data name="MenuAnnotateTextBoxContent" xml:space="preserve">
+    <value>Caixa de Texto</value>
+  </data>
+  <data name="MenuAnnotateTranslateContent" xml:space="preserve">
+    <value>Traduzir</value>
+  </data>
+  <data name="MenuAnnotateTypeWriterContent" xml:space="preserve">
+    <value>Máquina de Escrever</value>
+  </data>
+  <data name="MenuAnnotateUnderlineContent" xml:space="preserve">
+    <value>Sublinhar</value>
+  </data>
+  <data name="MenuAnnotateWatermarkContent" xml:space="preserve">
+    <value>Marca de água</value>
+  </data>
+  <data name="MenuConvertPdfToExcelContent" xml:space="preserve">
+    <value>PDF para Excel</value>
+  </data>
+  <data name="MenuConvertPdfToHtmlContent" xml:space="preserve">
+    <value>PDF para HTML</value>
+  </data>
+  <data name="MenuConvertPdfToImageContent" xml:space="preserve">
+    <value>PDF para PNG</value>
+  </data>
+  <data name="MenuConvertPdfToJpegContent" xml:space="preserve">
+    <value>PDF para JPEG</value>
+  </data>
+  <data name="MenuConvertPdfToPPTContent" xml:space="preserve">
+    <value>PDF para PPT</value>
+  </data>
+  <data name="MenuConvertPdfToRtfContent" xml:space="preserve">
+    <value>PDF para RTF</value>
+  </data>
+  <data name="MenuConvertPdfToTxtContent" xml:space="preserve">
+    <value>PDF para TXT</value>
+  </data>
+  <data name="MenuConvertPdfToWordContent" xml:space="preserve">
+    <value>PDF para Word</value>
+  </data>
+  <data name="MenuConvertPdfToXmlContent" xml:space="preserve">
+    <value>PDF para XML</value>
+  </data>
+  <data name="MenuExtractTextEmpyMsg" xml:space="preserve">
+    <value>Não foi selecionado qualquer texto. Não há texto na área selecionada, ou selecionou uma imagem.</value>
+  </data>
+  <data name="MenuGruopAnnotateTitle" xml:space="preserve">
+    <value>Comentário</value>
+  </data>
+  <data name="MenuGruopConvertTitle" xml:space="preserve">
+    <value>Converter</value>
+  </data>
+  <data name="MenuGruopFillFormTitle" xml:space="preserve">
+    <value>Formulário</value>
+  </data>
+  <data name="MenuGruopHelpTitle" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="MenuGruopHomeTitle" xml:space="preserve">
+    <value>Pagina inicial</value>
+  </data>
+  <data name="MenuGruopInsertTitle" xml:space="preserve">
+    <value>Inserir</value>
+  </data>
+  <data name="MenuGruopPageTitle" xml:space="preserve">
+    <value>Página</value>
+  </data>
+  <data name="MenuGruopProtectTitle" xml:space="preserve">
+    <value>Proteger</value>
+  </data>
+  <data name="MenuGruopToolsTitle" xml:space="preserve">
+    <value>Ferramentas</value>
+  </data>
+  <data name="MenuGruopViewTitle" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="MenuHelpAboutContent" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="MenuHelpContactUsContent" xml:space="preserve">
+    <value>Contacte-nos</value>
+  </data>
+  <data name="MenuHelpSwitchtoPreviousVersionContent" xml:space="preserve">
+    <value>Mudar para a Versão Anterior</value>
+  </data>
+  <data name="MenuHelpUserGuideContent" xml:space="preserve">
+    <value>Manual do Utilizador</value>
+  </data>
+  <data name="MenuHelperSettingContent" xml:space="preserve">
+    <value>Definições</value>
+  </data>
+  <data name="MenuHelperUpdateContent" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="MenuInsertAddContent" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="MenuInsertDelContent" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="MenuInsertEditContent" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="MenuInsertHeaderFooterContent" xml:space="preserve">
+    <value>Cabeçalho e rodapé</value>
+  </data>
+  <data name="MenuInsertImageContent" xml:space="preserve">
+    <value>Imagem</value>
+  </data>
+  <data name="MenuInsertPageNumberContent" xml:space="preserve">
+    <value>Número de página</value>
+  </data>
+  <data name="MenuPageDeleteContent" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="MenuPageExtractContent" xml:space="preserve">
+    <value>Extrair</value>
+  </data>
+  <data name="MenuPageInsertContent" xml:space="preserve">
+    <value>Inserir</value>
+  </data>
+  <data name="MenuPageMergeContent" xml:space="preserve">
+    <value>Combinar PDF</value>
+  </data>
+  <data name="MenuPageRotateLeftContent" xml:space="preserve">
+    <value>Rodar para a esquerda</value>
+  </data>
+  <data name="MenuPageRotateRightContent" xml:space="preserve">
+    <value>Rodar para a direita</value>
+  </data>
+  <data name="MenuPageSplitContent" xml:space="preserve">
+    <value>Dividir PDF</value>
+  </data>
+  <data name="MenuPageSubInsertBlankPage" xml:space="preserve">
+    <value>Página em branco</value>
+  </data>
+  <data name="MenuPageSubInsertFromImage" xml:space="preserve">
+    <value>De Imagem</value>
+  </data>
+  <data name="MenuPageSubInsertFromPDF" xml:space="preserve">
+    <value>De PDF</value>
+  </data>
+  <data name="MenuPageSubInsertFromScanner" xml:space="preserve">
+    <value>De scanner</value>
+  </data>
+  <data name="MenuPageSubInsertFromWord" xml:space="preserve">
+    <value>De Word</value>
+  </data>
+  <data name="MenuPropertiesContent" xml:space="preserve">
+    <value>Propriedades</value>
+  </data>
+  <data name="MenuProtectPasswordContent" xml:space="preserve">
+    <value>Palavra-passe</value>
+  </data>
+  <data name="MenuProtectRemoveContent" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="MenuRightAnnotateCopyText" xml:space="preserve">
+    <value>Copiar Texto</value>
+  </data>
+  <data name="MenuRightAnnotateDelete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="MenuRightAnnotateDuplicate" xml:space="preserve">
+    <value>Duplicar</value>
+  </data>
+  <data name="MenuRightAnnotateExitEdit" xml:space="preserve">
+    <value>Exit edit</value>
+  </data>
+  <data name="MenuShareEmailContent" xml:space="preserve">
+    <value>Correio electrónico</value>
+  </data>
+  <data name="MenuShareSendFileContent" xml:space="preserve">
+    <value>Enviar ficheiro</value>
+  </data>
+  <data name="MenuShareShareContent" xml:space="preserve">
+    <value>Partilhar</value>
+  </data>
+  <data name="MenuSignatureSubAddNew" xml:space="preserve">
+    <value>Criar Assinatura</value>
+  </data>
+  <data name="MenuStampPresetsApprovedItemName" xml:space="preserve">
+    <value>Aprovado</value>
+  </data>
+  <data name="MenuStampPresetsAsIsItemName" xml:space="preserve">
+    <value>ComoEstá</value>
+  </data>
+  <data name="MenuStampPresetsConfidentialItemName" xml:space="preserve">
+    <value>Confidencial</value>
+  </data>
+  <data name="MenuStampPresetsDraftItemName" xml:space="preserve">
+    <value>Rascunho</value>
+  </data>
+  <data name="MenuStampPresetsExperimentalItemName" xml:space="preserve">
+    <value>Experimental</value>
+  </data>
+  <data name="MenuStampPresetsExpiredItemName" xml:space="preserve">
+    <value>Expirou</value>
+  </data>
+  <data name="MenuStampPresetsFinalItemName" xml:space="preserve">
+    <value>Final</value>
+  </data>
+  <data name="MenuStampPresetsForPublicReleaseItemName" xml:space="preserve">
+    <value>ParaDivulgaçãoPública</value>
+  </data>
+  <data name="MenuStampPresetsNotApprovedItemName" xml:space="preserve">
+    <value>NãoAprovado</value>
+  </data>
+  <data name="MenuStampPresetsNotForPublicReleaseItemName" xml:space="preserve">
+    <value>NãoDestinadoADivulgaçãoPública</value>
+  </data>
+  <data name="MenuStampPresetsSoldItemName" xml:space="preserve">
+    <value>Vendido</value>
+  </data>
+  <data name="MenuStampPresetsTopSecretItemName" xml:space="preserve">
+    <value>Ultrasecreto</value>
+  </data>
+  <data name="MenuStampSubCustomizeContent" xml:space="preserve">
+    <value>Carimbo Personalizado</value>
+  </data>
+  <data name="MenuStampSubInsertlocalImageContent" xml:space="preserve">
+    <value>Inserir Imagem Local</value>
+  </data>
+  <data name="MenuStampSubPresetsContent" xml:space="preserve">
+    <value>Predefinição</value>
+  </data>
+  <data name="MenuSubFillColorItem" xml:space="preserve">
+    <value>Cor de Preenchimento</value>
+  </data>
+  <data name="MenuSubFontColorItem" xml:space="preserve">
+    <value>Cor da fonte</value>
+  </data>
+  <data name="MenuSubFontSizeItem" xml:space="preserve">
+    <value>Tamanho da fonte</value>
+  </data>
+  <data name="MenuSubStrokeColorItem" xml:space="preserve">
+    <value>Cor de Realce do Texto</value>
+  </data>
+  <data name="MenuSubThicknessItem" xml:space="preserve">
+    <value>Espessura</value>
+  </data>
+  <data name="MenuViewAutoScrollContent" xml:space="preserve">
+    <value>Deslocamento automático</value>
+  </data>
+  <data name="MenuViewCompressContent" xml:space="preserve">
+    <value>Comprimir</value>
+  </data>
+  <data name="MenuViewContiusContent" xml:space="preserve">
+    <value>Contínuo</value>
+  </data>
+  <data name="MenuViewDoubleContent" xml:space="preserve">
+    <value>Duplo</value>
+  </data>
+  <data name="MenuViewEditObjectContent" xml:space="preserve">
+    <value>Editar Objeto</value>
+  </data>
+  <data name="MenuViewEditTextContent" xml:space="preserve">
+    <value>Editar texto</value>
+  </data>
+  <data name="MenuViewExitAnnotateContent" xml:space="preserve">
+    <value>Sair do Comentário</value>
+  </data>
+  <data name="MenuViewExtractTextContent" xml:space="preserve">
+    <value>Extrair Texto</value>
+  </data>
+  <data name="MenuViewFindContent" xml:space="preserve">
+    <value>Encontrar</value>
+  </data>
+  <data name="MenuViewFitPageContent" xml:space="preserve">
+    <value>Ajustar Página</value>
+  </data>
+  <data name="MenuViewFullSizeContent" xml:space="preserve">
+    <value>Tamanho Real</value>
+  </data>
+  <data name="MenuViewHeightContent" xml:space="preserve">
+    <value>Altura de ajuste</value>
+  </data>
+  <data name="MenuViewNextContent" xml:space="preserve">
+    <value>Seguinte</value>
+  </data>
+  <data name="MenuViewOCRContent" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="MenuViewPresentContent" xml:space="preserve">
+    <value>Reproduzir</value>
+  </data>
+  <data name="MenuViewPreviousContent" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="MenuViewRotateLeftContent" xml:space="preserve">
+    <value>Rodar para a esquerda</value>
+  </data>
+  <data name="MenuViewRotateRightContent" xml:space="preserve">
+    <value>Rodar para a direita</value>
+  </data>
+  <data name="MenuViewScreenshotContent" xml:space="preserve">
+    <value>Captura de Ecrã</value>
+  </data>
+  <data name="MenuViewSingleContent" xml:space="preserve">
+    <value>Simples</value>
+  </data>
+  <data name="MenuViewUpgradeContent" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="MenuViewWidthContent" xml:space="preserve">
+    <value>Ajustar Largura</value>
+  </data>
+  <data name="MenuViewZoomContent" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="MenuWatermarkSubCreateContent" xml:space="preserve">
+    <value>Criar Marca de Água</value>
+  </data>
+  <data name="MenuWatermarkSubDeleteContent" xml:space="preserve">
+    <value>Eliminar Marca de Água</value>
+  </data>
+  <data name="MergeWindowsLoadfailedMessage" xml:space="preserve">
+    <value>Falha no carregamento do arquivo.  Selecione outro arquivo e tente novamente.</value>
+  </data>
+  <data name="MicrosoftStoreBillingHelpContent" xml:space="preserve">
+    <value>Ajuda na Microsoft Store e na faturação</value>
+  </data>
+  <data name="MoreColorsBtnTips" xml:space="preserve">
+    <value>Mais cores...</value>
+  </data>
+  <data name="MsgAttachmentOpenFailed" xml:space="preserve">
+    <value>Falha ao abrir o anexo.</value>
+  </data>
+  <data name="MsgAttachmentSaveFailed" xml:space="preserve">
+    <value>Falha ao salvar o(s) anexo(s).</value>
+  </data>
+  <data name="MsgAttachmentSaveSuc" xml:space="preserve">
+    <value>Salvo com sucesso. Deseja visualizar os anexos no Explorador de Arquivos?</value>
+  </data>
+  <data name="Msg_AttachmentAlreadyExist" xml:space="preserve">
+    <value>Falha ao anexar o arquivo “XXX”. Já existe um arquivo com o mesmo nome no painel de anexos.</value>
+  </data>
+  <data name="Msg_AttachmentToolLarge" xml:space="preserve">
+    <value>O arquivo “XXX” excede o limite de 2GB e não pode ser anexado.</value>
+  </data>
+  <data name="Msg_DeleteAttachments" xml:space="preserve">
+    <value>Tem certeza de que deseja excluir o(s) anexo(s)?</value>
+  </data>
+  <data name="Msg_DescriptionOverMaxCharsNum" xml:space="preserve">
+    <value>A descrição não pode ultrapassar 256 caracteres.</value>
+  </data>
+  <data name="NewBookmarkName" xml:space="preserve">
+    <value>Novo marcador</value>
+  </data>
+  <data name="NewFileName" xml:space="preserve">
+    <value>Sem título</value>
+  </data>
+  <data name="NewFileRemindSave" xml:space="preserve">
+    <value>O documento XXX está fechando. Você deseja salvar as alterações?</value>
+  </data>
+  <data name="NextBtnTooltipText" xml:space="preserve">
+    <value>Localizar próximo</value>
+  </data>
+  <data name="NoPrintNoteWindowAddBtn" xml:space="preserve">
+    <value>Nenhuma impressora foi encontrada no seu sistema. Por favor, adicione uma impressora para continuar.</value>
+  </data>
+  <data name="NoPrintNoteWindowContent" xml:space="preserve">
+    <value>Adicionar uma impressora</value>
+  </data>
+  <data name="NoPrintNoteWindowTitle" xml:space="preserve">
+    <value>Nota</value>
+  </data>
+  <data name="OCRTip" xml:space="preserve">
+    <value>Arraste o mouse para selecionar a área para reconhecimento de texto. Uma vez concluído, você prosseguirá para a próxima etapa.</value>
+  </data>
+  <data name="OcrDialogErrorMessage" xml:space="preserve">
+    <value>Não foram encontrados caracteres reconhecíveis no documento. Certifique-se de que o conteúdo do documento está claro, gire a página para a orientação de leitura correta e selecione o idioma que o conteúdo contém.</value>
+  </data>
+  <data name="OcrDialogLanguageRecognition" xml:space="preserve">
+    <value>Reconhecimento de Idiomas</value>
+  </data>
+  <data name="OcrDialogLanguageSelected" xml:space="preserve">
+    <value>Idiomas selecionados:</value>
+  </data>
+  <data name="OcrDialogLanguageSelectedNone" xml:space="preserve">
+    <value>Por favor, selecione pelo menos um idioma.</value>
+  </data>
+  <data name="OcrDialogLanguageSlowApplyTips" xml:space="preserve">
+    <value>Aplicar</value>
+  </data>
+  <data name="OcrDialogLanguageSlowTips" xml:space="preserve">
+    <value>Mais de três idiomas podem retardar o reconhecimento.</value>
+  </data>
+  <data name="OcrDialogSaveDocDoNotSaveBtn" xml:space="preserve">
+    <value>Não salve</value>
+  </data>
+  <data name="OcrDialogSaveDocMessage" xml:space="preserve">
+    <value>Pretende guardar as alterações em 'XXX' antes da operação？</value>
+  </data>
+  <data name="OcrDialogSubtitle" xml:space="preserve">
+    <value>OCR do PDF para tornar o texto nas imagens pesquisável</value>
+  </data>
+  <data name="OcrDialogTitle" xml:space="preserve">
+    <value>OCR PDF</value>
+  </data>
+  <data name="OpenDocByIncorrectPwdMsg" xml:space="preserve">
+    <value>A palavra-passe está incorreta.</value>
+  </data>
+  <data name="OpenDocFailedExceptionMsg" xml:space="preserve">
+    <value>Não foi possível abrir o documento.</value>
+  </data>
+  <data name="OpenDocNotExistMsg" xml:space="preserve">
+    <value>O ficheiro não existe:</value>
+  </data>
+  <data name="OpenDocNotSupportedMsg" xml:space="preserve">
+    <value>Tipos de ficheiro não suportados:</value>
+  </data>
+  <data name="OpenFileBtnContent" xml:space="preserve">
+    <value>Abrir ficheiro</value>
+  </data>
+  <data name="PageMenuInsertfromfileContent" xml:space="preserve">
+    <value>Inserir do ficheiro</value>
+  </data>
+  <data name="PageMergeErrorMessage" xml:space="preserve">
+    <value>Falha ao carregar o arquivo. Tente novamente com um arquivo diferente.</value>
+  </data>
+  <data name="PageResizeWinCustomize" xml:space="preserve">
+    <value>Personalizar</value>
+  </data>
+  <data name="PageResizeWinFixedSize" xml:space="preserve">
+    <value>Tamanho fixo</value>
+  </data>
+  <data name="PageResizeWinHeightContent" xml:space="preserve">
+    <value>A:</value>
+  </data>
+  <data name="PageResizeWinOrientation" xml:space="preserve">
+    <value>Orientação</value>
+  </data>
+  <data name="PageResizeWinOriginalContent" xml:space="preserve">
+    <value>Tamanho Original da Página</value>
+  </data>
+  <data name="PageResizeWinPageNumber" xml:space="preserve">
+    <value>Página</value>
+  </data>
+  <data name="PageResizeWinResizeGroupName" xml:space="preserve">
+    <value>Redimensionar</value>
+  </data>
+  <data name="PageResizeWinResizedContent" xml:space="preserve">
+    <value>Tamanho da Página Redimensionada</value>
+  </data>
+  <data name="PageResizeWinTitle" xml:space="preserve">
+    <value>Redimensionar Página</value>
+  </data>
+  <data name="PageResizeWinTooltip" xml:space="preserve">
+    <value>Redimensione as páginas para um tamanho personalizado para um layout melhor.</value>
+  </data>
+  <data name="PageResizeWinWidthContent" xml:space="preserve">
+    <value>L:</value>
+  </data>
+  <data name="PageSelectedAllPrefiexedContent" xml:space="preserve">
+    <value>Selecionado</value>
+  </data>
+  <data name="PageSplitMergeCheckMsg" xml:space="preserve">
+    <value>O ficheiro aberto foi editado. Comece por guardar as alterações.</value>
+  </data>
+  <data name="PageWinAllPages" xml:space="preserve">
+    <value>Todas as páginas</value>
+  </data>
+  <data name="PageWinCustomPages" xml:space="preserve">
+    <value>páginas personalizadas</value>
+  </data>
+  <data name="PageWinExtractAll" xml:space="preserve">
+    <value>Extraia páginas em um PDF</value>
+  </data>
+  <data name="PageWinExtractDelete" xml:space="preserve">
+    <value>Excluir páginas selecionadas após a extração</value>
+  </data>
+  <data name="PageWinExtractMode" xml:space="preserve">
+    <value>Modo Extrair</value>
+  </data>
+  <data name="PageWinExtractevert" xml:space="preserve">
+    <value>Extraia cada página em PDFs separados</value>
+  </data>
+  <data name="PageWinRange" xml:space="preserve">
+    <value>Sortimento</value>
+  </data>
+  <data name="PageWinSelectPages" xml:space="preserve">
+    <value>Páginas selecionadas</value>
+  </data>
+  <data name="PageWinSelectedPages" xml:space="preserve">
+    <value>"XXX" páginas selecionadas</value>
+  </data>
+  <data name="PageWinSubset" xml:space="preserve">
+    <value>Subsortimento</value>
+  </data>
+  <data name="PhoneWinContent" xml:space="preserve">
+    <value>Escaneie o código QR para usar o PDFgear em qualquer lugar</value>
+  </data>
+  <data name="PhoneWinContentTitle" xml:space="preserve">
+    <value>PDFgear para iOS e Android está disponível</value>
+  </data>
+  <data name="PopupPlaceholderContent" xml:space="preserve">
+    <value>Adicionar texto aqui</value>
+  </data>
+  <data name="PresentationWindowExitText" xml:space="preserve">
+    <value>Saída</value>
+  </data>
+  <data name="PrevBtnTooltipText" xml:space="preserve">
+    <value>Localizar anterior</value>
+  </data>
+  <data name="PrintWindowBookLetBinding" xml:space="preserve">
+    <value>Encadernação</value>
+  </data>
+  <data name="PrintWindowBookLetBtnContent" xml:space="preserve">
+    <value>Livreto</value>
+  </data>
+  <data name="PrintWindowBookLetLeftBinding" xml:space="preserve">
+    <value>Esquerdo</value>
+  </data>
+  <data name="PrintWindowBookLetRightBinding" xml:space="preserve">
+    <value>Direito</value>
+  </data>
+  <data name="PrintWindowBookLetSubset" xml:space="preserve">
+    <value>Subconjunto</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBack" xml:space="preserve">
+    <value>Somente no verso</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBoth" xml:space="preserve">
+    <value>Frente e verso</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetFrontal" xml:space="preserve">
+    <value>Somente na frente</value>
+  </data>
+  <data name="PrintWindowMutilpleBtnContent" xml:space="preserve">
+    <value>Múltiplo</value>
+  </data>
+  <data name="PrintWindowMutilpleLayout" xml:space="preserve">
+    <value>Ordem de páginas</value>
+  </data>
+  <data name="PrintWindowMutilpleMargins" xml:space="preserve">
+    <value>Margem</value>
+  </data>
+  <data name="PrintWindowMutilplePapers" xml:space="preserve">
+    <value>Páginas por folha</value>
+  </data>
+  <data name="PrintWindowMutilplePrintBorder" xml:space="preserve">
+    <value>Imprimir borda da página</value>
+  </data>
+  <data name="PrintWindowPageSettingGrounpName" xml:space="preserve">
+    <value>Configurações da página</value>
+  </data>
+  <data name="PrintWindowPageSettingsSizeTitle" xml:space="preserve">
+    <value>Tamanho do papel</value>
+  </data>
+  <data name="PrintWindowPrintHandingGrounpName" xml:space="preserve">
+    <value>Modo de impressão</value>
+  </data>
+  <data name="PrintWindowRangeGroupName" xml:space="preserve">
+    <value>Intervalo de páginas</value>
+  </data>
+  <data name="PrintWindowReverseCheckBoxContent" xml:space="preserve">
+    <value>Reverter páginas</value>
+  </data>
+  <data name="PrintWindowScalBtnContent" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="PrintWindowTileBtnContent" xml:space="preserve">
+    <value>Pôster</value>
+  </data>
+  <data name="PrintWindowTileCutMasks" xml:space="preserve">
+    <value>Marcas de corte</value>
+  </data>
+  <data name="PrintWindowTileLabels" xml:space="preserve">
+    <value>Etiquetas</value>
+  </data>
+  <data name="PrintWindowTileOverlap" xml:space="preserve">
+    <value>Sobreposição</value>
+  </data>
+  <data name="PrintWindowTilePageZoom" xml:space="preserve">
+    <value>Redim. lado a lado</value>
+  </data>
+  <data name="RateWindowsContent" xml:space="preserve">
+    <value>Compartilhe sua opinião e ajude-nos a melhorar!</value>
+  </data>
+  <data name="RateWindowsContentTitle" xml:space="preserve">
+    <value>Gostando do PDFgear?</value>
+  </data>
+  <data name="RateWindowsFeedbcakBtn" xml:space="preserve">
+    <value>Forneça feedback</value>
+  </data>
+  <data name="RateWindowsRateBtn" xml:space="preserve">
+    <value>Funciona bem</value>
+  </data>
+  <data name="ReadAllBtn" xml:space="preserve">
+    <value>Ler todas as páginas</value>
+  </data>
+  <data name="ReadCurrentBtn" xml:space="preserve">
+    <value>Leia a página atual</value>
+  </data>
+  <data name="ReadFromCurrentBtn" xml:space="preserve">
+    <value>Ler da página atual</value>
+  </data>
+  <data name="ReadMessage" xml:space="preserve">
+    <value>O idioma da fala será alterado para "xxx" ​​e a leitura será reiniciada a partir do início da página xxxx. Tem certeza de que deseja continuar?</value>
+  </data>
+  <data name="ReadPageEmpty" xml:space="preserve">
+    <value>Não há texto legível na página atual (Página XXX).</value>
+  </data>
+  <data name="ReadToolBarBtn" xml:space="preserve">
+    <value>Widget de controle</value>
+  </data>
+  <data name="ReadWinAddMore" xml:space="preserve">
+    <value>Adicionar mais linguagem de fala</value>
+  </data>
+  <data name="ReadWinFemaleVoice" xml:space="preserve">
+    <value>Fêmea</value>
+  </data>
+  <data name="ReadWinMaleVoice" xml:space="preserve">
+    <value>Macho</value>
+  </data>
+  <data name="ReadWinOkBtn" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="ReadWinPitchBtn" xml:space="preserve">
+    <value>Tom</value>
+  </data>
+  <data name="ReadWinSpeedBtn" xml:space="preserve">
+    <value>Avaliar</value>
+  </data>
+  <data name="ReadWinTitle" xml:space="preserve">
+    <value>Leia em voz alta</value>
+  </data>
+  <data name="RedactBtn" xml:space="preserve">
+    <value>Redigir</value>
+  </data>
+  <data name="RedactStartMessageContent" xml:space="preserve">
+    <value>Arraste o rato para desenhar a área que pretende redigir. Qualquer conteúdo marcado para redação será excluído permanentemente quando o documento for salvo.</value>
+  </data>
+  <data name="RedactStartMessageTitle" xml:space="preserve">
+    <value>O conteúdo redigido é removido permanentemente.</value>
+  </data>
+  <data name="RedactToolbarExitText" xml:space="preserve">
+    <value>Sair da Redigir</value>
+  </data>
+  <data name="RemoveDeferredDigitSignConfirmMessage" xml:space="preserve">
+    <value>Tem a certeza de que deseja remover XXX?</value>
+  </data>
+  <data name="RemoveDeferredDigitSignFailedMessage" xml:space="preserve">
+    <value>Falha ao remover o campo de assinatura.</value>
+  </data>
+  <data name="RightMenuAddImageItemText" xml:space="preserve">
+    <value>Imagem</value>
+  </data>
+  <data name="RightMenuAddItemText" xml:space="preserve">
+    <value>Adicionar...</value>
+  </data>
+  <data name="RightMenuAddTextItemText" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="RightMenuBookmakrkExpandCollpaseItemText" xml:space="preserve">
+    <value>Expandir/Colapsar todos os marcadores</value>
+  </data>
+  <data name="RightMenuCompressPDFItemText" xml:space="preserve">
+    <value>Comprimir PDF</value>
+  </data>
+  <data name="RightMenuConvertToItemText" xml:space="preserve">
+    <value>Converter para</value>
+  </data>
+  <data name="RightMenuDeleteAnnotationItemText" xml:space="preserve">
+    <value>Excluir comentário</value>
+  </data>
+  <data name="RightMenuDeleteTextItemText" xml:space="preserve">
+    <value>Eliminar texto</value>
+  </data>
+  <data name="RightMenuInsertPageItemImage" xml:space="preserve">
+    <value>De uma Imagem</value>
+  </data>
+  <data name="RightMenuInsertPageItemPDF" xml:space="preserve">
+    <value>De PDF</value>
+  </data>
+  <data name="RightMenuInsertPageItemWord" xml:space="preserve">
+    <value>De Word</value>
+  </data>
+  <data name="RightMenuInsertPageText" xml:space="preserve">
+    <value>Inserir páginas</value>
+  </data>
+  <data name="RightMenuMergeSplitPDFItemText" xml:space="preserve">
+    <value>Combinar e Dividir PDF</value>
+  </data>
+  <data name="RightMenuOcrPagesItemText" xml:space="preserve">
+    <value>OCR nas páginas</value>
+  </data>
+  <data name="RightMenuOcrPagesText" xml:space="preserve">
+    <value>OCR nas páginas</value>
+  </data>
+  <data name="RightMenuPropertiesContent" xml:space="preserve">
+    <value>Propriedades...</value>
+  </data>
+  <data name="SaveDocBeforeCloseMsg" xml:space="preserve">
+    <value>Pretende guardar as alterações efetuadas a "XXX" antes de fechar?</value>
+  </data>
+  <data name="SaveDocBeforeCompressMsg" xml:space="preserve">
+    <value>O documento aberto foi editado. Guarde as alterações antes de executar a compressão.</value>
+  </data>
+  <data name="SaveDocBeforeConvertMsg" xml:space="preserve">
+    <value>O documento aberto foi editado. Por favor, guarde as alterações antes de converter.</value>
+  </data>
+  <data name="SaveDocBeforeSendMsg" xml:space="preserve">
+    <value>O documento aberto foi editado, salve as alterações para continuar.</value>
+  </data>
+  <data name="SaveDocFailedByMsg" xml:space="preserve">
+    <value>Não foi possível guardar o documento. É apenas de leitura ou encontra-se aberto noutra aplicação.</value>
+  </data>
+  <data name="SaveDocFailedBySaveasMsg" xml:space="preserve">
+    <value>Não foi possível guardar o documento. É apenas de leitura ou encontra-se aberto noutra aplicação. Deseja guardar uma cópia do documento?</value>
+  </data>
+  <data name="SaveMenuStampSubCustomizeContent" xml:space="preserve">
+    <value>Salve o carimbo personalizado</value>
+  </data>
+  <data name="ScanErrorMessage" xml:space="preserve">
+    <value>Desculpe, um erro inesperado ocorreu. Verifique seu scanner e tente novamente. Se o problema persistir, entre em contato com nosso suporte.</value>
+  </data>
+  <data name="ScannerWinAddFailed" xml:space="preserve">
+    <value>Falha ao adicionar XXX, verifique e tente novamente.</value>
+  </data>
+  <data name="ScannerWinAddNew" xml:space="preserve">
+    <value>Adicionar novo scanner</value>
+  </data>
+  <data name="ScannerWinCantFindScanner" xml:space="preserve">
+    <value>Se o seu scanner não aparecer, certifique-se de que foi adicionado nas definições e que não aparece offline lá.</value>
+  </data>
+  <data name="ScannerWinCheckScannerContent" xml:space="preserve">
+    <value>Verifique se o scanner está ligado e conectado ao computador ou à rede. Você também pode adicionar um novo scanner agora.</value>
+  </data>
+  <data name="ScannerWinClosingWarning" xml:space="preserve">
+    <value>As digitalizações na lista serão perdidas após o fecho, pretende fechá-la?</value>
+  </data>
+  <data name="ScannerWinColorMode" xml:space="preserve">
+    <value>Modos de cores</value>
+  </data>
+  <data name="ScannerWinCreateTitle" xml:space="preserve">
+    <value>Crie PDF a partir do scanner</value>
+  </data>
+  <data name="ScannerWinDeletePreview" xml:space="preserve">
+    <value>Tem a certeza de que quer eliminar isto?</value>
+  </data>
+  <data name="ScannerWinDeleteSelected" xml:space="preserve">
+    <value>Tem a certeza de que quer eliminar as XXX páginas?</value>
+  </data>
+  <data name="ScannerWinImportImags" xml:space="preserve">
+    <value>Importar imagens</value>
+  </data>
+  <data name="ScannerWinInsertAfter" xml:space="preserve">
+    <value>Depois da Página</value>
+  </data>
+  <data name="ScannerWinInsertBefore" xml:space="preserve">
+    <value>Antes da Página</value>
+  </data>
+  <data name="ScannerWinInsertConfirm" xml:space="preserve">
+    <value>Tem a certeza de que pretende inserir a(s) página(s) XXX selecionada(s) e criar um novo PDF?</value>
+  </data>
+  <data name="ScannerWinInsertOptions" xml:space="preserve">
+    <value>Opções de inserção</value>
+  </data>
+  <data name="ScannerWinInsertTitle" xml:space="preserve">
+    <value>Inserir da scanner</value>
+  </data>
+  <data name="ScannerWinNewScanner" xml:space="preserve">
+    <value>Novo Scanner</value>
+  </data>
+  <data name="ScannerWinNoScannerContent" xml:space="preserve">
+    <value>Se o seu scanner não aparecer, certifique-se de que foi adicionado nas configurações e não está offline.</value>
+  </data>
+  <data name="ScannerWinNoScannerTitle" xml:space="preserve">
+    <value>Selecione um digitalizador</value>
+  </data>
+  <data name="ScannerWinNoScannerwarning" xml:space="preserve">
+    <value>Nenhum scanner foi detectado</value>
+  </data>
+  <data name="ScannerWinPageSettings" xml:space="preserve">
+    <value>Configurações de Página do PDF</value>
+  </data>
+  <data name="ScannerWinPaperSource" xml:space="preserve">
+    <value>Origem do papel</value>
+  </data>
+  <data name="ScannerWinRecommended" xml:space="preserve">
+    <value>Recomendado</value>
+  </data>
+  <data name="ScannerWinRefreshBtn" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="ScannerWinResolution" xml:space="preserve">
+    <value>Resolução</value>
+  </data>
+  <data name="ScannerWinSamePagesize" xml:space="preserve">
+    <value>Igual ao ficheiro original</value>
+  </data>
+  <data name="ScannerWinScanArea" xml:space="preserve">
+    <value>Área de Digitalização</value>
+  </data>
+  <data name="ScannerWinScanBtn" xml:space="preserve">
+    <value>Digitalizar</value>
+  </data>
+  <data name="ScannerWinScannedTitle" xml:space="preserve">
+    <value>Imagens digitalizadas</value>
+  </data>
+  <data name="ScannerWinScanner" xml:space="preserve">
+    <value>Scanner</value>
+  </data>
+  <data name="ScannerWinScannerBusyContent" xml:space="preserve">
+    <value>Não há documentos no alimentador ou o scanner está ocupado. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="ScannerWinScannerOfflineContent" xml:space="preserve">
+    <value>O dispositivo do scanner não está respondendo. Verifique se o scanner está ligado e conectado ao computador ou à rede.</value>
+  </data>
+  <data name="ScannerWinScanningProperties" xml:space="preserve">
+    <value>Propriedades de digitalização</value>
+  </data>
+  <data name="ScannerWinSearchingContent" xml:space="preserve">
+    <value>Procurando por scanners...</value>
+  </data>
+  <data name="ScanningAreaEntire1" xml:space="preserve">
+    <value>Toda Área de Digitalização</value>
+  </data>
+  <data name="ScanningAreaEntire10" xml:space="preserve">
+    <value>4 x 6 pol. (10×15cm)</value>
+  </data>
+  <data name="ScanningAreaEntire2" xml:space="preserve">
+    <value>Letter (8,5 x 11 pol.)</value>
+  </data>
+  <data name="ScanningAreaEntire3" xml:space="preserve">
+    <value>Legal (8,5 x 14 pol.)</value>
+  </data>
+  <data name="ScanningAreaEntire4" xml:space="preserve">
+    <value>B5 (176 x 250 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire5" xml:space="preserve">
+    <value>B4 (250 x 353 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire6" xml:space="preserve">
+    <value>A5 (148 x 210 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire7" xml:space="preserve">
+    <value>A4 (210 x 297 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire8" xml:space="preserve">
+    <value>A3 (297 x 420 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire9" xml:space="preserve">
+    <value>5 x 7 pol. (13 x 18 cm)</value>
+  </data>
+  <data name="ScanningColorColorMode" xml:space="preserve">
+    <value>Cor</value>
+  </data>
+  <data name="ScanningColorGrayMode" xml:space="preserve">
+    <value>Escala de cinzentos</value>
+  </data>
+  <data name="ScanningPaperSourceDuplex" xml:space="preserve">
+    <value>Frente e verso</value>
+  </data>
+  <data name="ScanningPaperSourceFeeder" xml:space="preserve">
+    <value>Alimentador</value>
+  </data>
+  <data name="ScanningPaperSourceGlass" xml:space="preserve">
+    <value>Vidro</value>
+  </data>
+  <data name="ScanningWarning" xml:space="preserve">
+    <value>igitalizando, por favor, tente novamente quando terminar.</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Arrow" xml:space="preserve">
+    <value>Seta</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Circle" xml:space="preserve">
+    <value>Elipse</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Copy" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Finish" xml:space="preserve">
+    <value>Concluído</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Ink" xml:space="preserve">
+    <value>Tinta</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Rectangle" xml:space="preserve">
+    <value>Retângulo</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Text" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Undo" xml:space="preserve">
+    <value>Desfazer</value>
+  </data>
+  <data name="ScreenshotTip" xml:space="preserve">
+    <value>Arraste o mouse para selecionar a área que deseja capturar. Uma vez concluído, você prosseguirá para a próxima etapa.</value>
+  </data>
+  <data name="SelectPageAllEvenPagesItem" xml:space="preserve">
+    <value>Apenas páginas pares</value>
+  </data>
+  <data name="SelectPageAllOddPagesItem" xml:space="preserve">
+    <value>Apenas as páginas ímpares</value>
+  </data>
+  <data name="SelectPageAllPagesItem" xml:space="preserve">
+    <value>Todas as páginas</value>
+  </data>
+  <data name="SelectPageUnselectAllItem" xml:space="preserve">
+    <value>Limpar seleções</value>
+  </data>
+  <data name="SettingWindowTabGeneral" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="SettingWindowTabShortcut" xml:space="preserve">
+    <value>Atalhos</value>
+  </data>
+  <data name="SettingWindowTextShortcutAction" xml:space="preserve">
+    <value>Ação</value>
+  </data>
+  <data name="SettingWindowTextShortcutKeys" xml:space="preserve">
+    <value>Atalho</value>
+  </data>
+  <data name="SettingWindowTitleShortcuts" xml:space="preserve">
+    <value>Lista de atalhos</value>
+  </data>
+  <data name="SettingsDisplayAIButton" xml:space="preserve">
+    <value>Exiba o botão AI.</value>
+  </data>
+  <data name="SettingsHighlightFormFields" xml:space="preserve">
+    <value>Destacar campos de formulário.</value>
+  </data>
+  <data name="ShortcutTextAddBookmark" xml:space="preserve">
+    <value>Adicionar marcador</value>
+  </data>
+  <data name="ShortcutTextAnnotateEllipse" xml:space="preserve">
+    <value>Oval</value>
+  </data>
+  <data name="ShortcutTextAnnotateInk" xml:space="preserve">
+    <value>Tinta</value>
+  </data>
+  <data name="ShortcutTextAnnotateLine" xml:space="preserve">
+    <value>Linha</value>
+  </data>
+  <data name="ShortcutTextAnnotateManage" xml:space="preserve">
+    <value>Gerenciar comentários</value>
+  </data>
+  <data name="ShortcutTextAnnotateNote" xml:space="preserve">
+    <value>Nota</value>
+  </data>
+  <data name="ShortcutTextAnnotateShape" xml:space="preserve">
+    <value>Retângulo</value>
+  </data>
+  <data name="ShortcutTextAnnotateTextBox" xml:space="preserve">
+    <value>Caixa de Texto</value>
+  </data>
+  <data name="ShortcutTextAnnotateTypeWriter" xml:space="preserve">
+    <value>Máquina de Escrever</value>
+  </data>
+  <data name="ShortcutTextAreaHighlight" xml:space="preserve">
+    <value>Destaque de área</value>
+  </data>
+  <data name="ShortcutTextAutoScroll" xml:space="preserve">
+    <value>Deslocamento automático</value>
+  </data>
+  <data name="ShortcutTextCloseDocument" xml:space="preserve">
+    <value>Fechar ficheiro</value>
+  </data>
+  <data name="ShortcutTextContinusRead" xml:space="preserve">
+    <value>Visão contínua</value>
+  </data>
+  <data name="ShortcutTextCreateNewPDF" xml:space="preserve">
+    <value>Novo PDF</value>
+  </data>
+  <data name="ShortcutTextCropPage" xml:space="preserve">
+    <value>Recortar páginas</value>
+  </data>
+  <data name="ShortcutTextDocumentProperties" xml:space="preserve">
+    <value>Propriedades do documento</value>
+  </data>
+  <data name="ShortcutTextDoublePage" xml:space="preserve">
+    <value>Exibição em duas páginas</value>
+  </data>
+  <data name="ShortcutTextFind" xml:space="preserve">
+    <value>Encontrar</value>
+  </data>
+  <data name="ShortcutTextFitHeight" xml:space="preserve">
+    <value>Altura de ajuste</value>
+  </data>
+  <data name="ShortcutTextFitPage" xml:space="preserve">
+    <value>Ajustar página</value>
+  </data>
+  <data name="ShortcutTextFitWidth" xml:space="preserve">
+    <value>Ajustar largura</value>
+  </data>
+  <data name="ShortcutTextFullScreen" xml:space="preserve">
+    <value>Ativar/Sair do modo de tela cheia</value>
+  </data>
+  <data name="ShortcutTextFullSize" xml:space="preserve">
+    <value>Tamanho real</value>
+  </data>
+  <data name="ShortcutTextHighlight" xml:space="preserve">
+    <value>Realçar</value>
+  </data>
+  <data name="ShortcutTextHighlightForm" xml:space="preserve">
+    <value>Realçar campos de formulário</value>
+  </data>
+  <data name="ShortcutTextInsertImage" xml:space="preserve">
+    <value>Adicionar imagem</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubBlankPage" xml:space="preserve">
+    <value>Inserir página em branco</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromImage" xml:space="preserve">
+    <value>Inserir de imagem</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromPDF" xml:space="preserve">
+    <value>Inserir de PDF</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromWord" xml:space="preserve">
+    <value>Inserir de Word</value>
+  </data>
+  <data name="ShortcutTextNextView" xml:space="preserve">
+    <value>Próxima visualização</value>
+  </data>
+  <data name="ShortcutTextOcrPages" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ShortcutTextOpenDocument" xml:space="preserve">
+    <value>Abrir ficheiro</value>
+  </data>
+  <data name="ShortcutTextPageDelete" xml:space="preserve">
+    <value>Eliminar páginas</value>
+  </data>
+  <data name="ShortcutTextPageExtract" xml:space="preserve">
+    <value>Extrair páginas</value>
+  </data>
+  <data name="ShortcutTextPresent" xml:space="preserve">
+    <value>Reproduzir</value>
+  </data>
+  <data name="ShortcutTextPreviousView" xml:space="preserve">
+    <value>Visualização anterior</value>
+  </data>
+  <data name="ShortcutTextPrint" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="ShortcutTextRedo" xml:space="preserve">
+    <value>Refazer</value>
+  </data>
+  <data name="ShortcutTextRotateLeft" xml:space="preserve">
+    <value>Rodar para a esquerda</value>
+  </data>
+  <data name="ShortcutTextRotateRight" xml:space="preserve">
+    <value>Rodar para a direita</value>
+  </data>
+  <data name="ShortcutTextSaveAsDocument" xml:space="preserve">
+    <value>Guardar como</value>
+  </data>
+  <data name="ShortcutTextSaveDocument" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="ShortcutTextScreenshot" xml:space="preserve">
+    <value>Captura de ecrã</value>
+  </data>
+  <data name="ShortcutTextShowHideComments" xml:space="preserve">
+    <value>Mostrar/Ocultar comentários</value>
+  </data>
+  <data name="ShortcutTextSinglePage" xml:space="preserve">
+    <value>Exibição de página individual</value>
+  </data>
+  <data name="ShortcutTextStrike" xml:space="preserve">
+    <value>Rasurar</value>
+  </data>
+  <data name="ShortcutTextUnderline" xml:space="preserve">
+    <value>Sublinhar</value>
+  </data>
+  <data name="ShortcutTextUndo" xml:space="preserve">
+    <value>Desfazer</value>
+  </data>
+  <data name="ShortcutTextZoomIn" xml:space="preserve">
+    <value>Aumentar zoom</value>
+  </data>
+  <data name="ShortcutTextZoomOut" xml:space="preserve">
+    <value>Diminuir zoom</value>
+  </data>
+  <data name="ShortcutTip" xml:space="preserve">
+    <value>Criar um atalho na área de trabalho para facilitar o acesso ao PDFgear?</value>
+  </data>
+  <data name="SigDialogDigSignBtn" xml:space="preserve">
+    <value>Assinatura Digital</value>
+  </data>
+  <data name="SigDialogDigSignBtn2" xml:space="preserve">
+    <value>Criptografar com certificado</value>
+  </data>
+  <data name="SignPropDialogMessage_SaveCert" xml:space="preserve">
+    <value>Tem certeza de que deseja adicionar o certificado aos seus certificados de confiança?</value>
+  </data>
+  <data name="StampFlattenConfirmContent" xml:space="preserve">
+    <value>Uma vez achatados, os carimbos não poderão mais ser editados e esta operação não poderá ser desfeita. Se fizer isso por engano, feche o documento sem salvar.</value>
+  </data>
+  <data name="StampFlattenConfirmTitle" xml:space="preserve">
+    <value>Tem certeza de que deseja achatar o(s) carimbo(s)?</value>
+  </data>
+  <data name="StampLimitErrorMessage" xml:space="preserve">
+    <value>Você não pode adicionar mais categorias porque o limite foi atingido.</value>
+  </data>
+  <data name="StampManageDeleteCategoryMessage" xml:space="preserve">
+    <value>Tem certeza de que deseja excluir esta categoria? Todos os carimbos nela contidos serão removidos.</value>
+  </data>
+  <data name="StampManageDeleteMessage" xml:space="preserve">
+    <value>Tem certeza de que deseja excluir o carimbo?</value>
+  </data>
+  <data name="StampManageDeleteSelectedMessage" xml:space="preserve">
+    <value>Tem certeza de que deseja excluir os carimbos selecionados?</value>
+  </data>
+  <data name="StampProgressContent" xml:space="preserve">
+    <value>Aplicando carimbo(s)...</value>
+  </data>
+  <data name="StampProgressFlattenContent" xml:space="preserve">
+    <value>A achatar os carimbos...</value>
+  </data>
+  <data name="StampRightMenuDeleteAllStamp" xml:space="preserve">
+    <value>Tem certeza de que deseja excluir este carimbo de todas as páginas?</value>
+  </data>
+  <data name="SubscribeWindowContent" xml:space="preserve">
+    <value>Avalie-nos para compartilhar sua alegria e siga-nos para obter tutoriais exclusivos.</value>
+  </data>
+  <data name="SubscribeWindowContentTtile" xml:space="preserve">
+    <value>Siga-nos e avalie o PDFgear</value>
+  </data>
+  <data name="SubscribeWindowDesc" xml:space="preserve">
+    <value>Obtenha acesso a tutoriais e habilidades exclusivas e ajude-nos a aumentar nossa comunidade.</value>
+  </data>
+  <data name="SubscribeWindowFollowButtonText" xml:space="preserve">
+    <value>SEGUIR</value>
+  </data>
+  <data name="SubscribeWindowHeader" xml:space="preserve">
+    <value>Apoie-nos seguindo-nos</value>
+  </data>
+  <data name="SubscribeWindowSubscribeButtonText" xml:space="preserve">
+    <value>SE INSCREVER</value>
+  </data>
+  <data name="SubscribeWindowTrustPilotBtn" xml:space="preserve">
+    <value>Avalie-nos na Trustpilot</value>
+  </data>
+  <data name="SurveyWinBtnCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="SurveyWinBtnGo" xml:space="preserve">
+    <value>Ir</value>
+  </data>
+  <data name="SurveyWinText" xml:space="preserve">
+    <value>Apoie-nos compartilhando o PDFgear com apenas um clique.</value>
+  </data>
+  <data name="SurveyWinTitle" xml:space="preserve">
+    <value>Gosta do PDFgear?</value>
+  </data>
+  <data name="SurveyWinTitle1" xml:space="preserve">
+    <value>Compartilhe com os amigos!</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnByOkMsg" xml:space="preserve">
+    <value>Mudou para a versão anterior. Reinicie PDFgear para aplicar esta alteração.</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnMsg" xml:space="preserve">
+    <value>Tem a certeza que pretende mudar PDFgear para a versão anterior?</value>
+  </data>
+  <data name="TextBoxDefaultInputTextContent" xml:space="preserve">
+    <value>Adicionar texto aqui</value>
+  </data>
+  <data name="ToolAppThemeAutoMode" xml:space="preserve">
+    <value>Tema do Sistema</value>
+  </data>
+  <data name="ToolAppThemeDarkMode" xml:space="preserve">
+    <value>Escuro</value>
+  </data>
+  <data name="ToolAppThemeLightMode" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="ToolAppThemeTitle" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="ToolbarExitEditButtonContent" xml:space="preserve">
+    <value>Sair da edição</value>
+  </data>
+  <data name="ToolbarOpacityPickerTooltip" xml:space="preserve">
+    <value>Opacidade</value>
+  </data>
+  <data name="ToolbarSetDefaultButtonContent" xml:space="preserve">
+    <value>Definir como padrão</value>
+  </data>
+  <data name="TooltipDesc_AI" xml:space="preserve">
+    <value>Ativar o PDFgear Copilot para conversar com arquivos PDF.</value>
+  </data>
+  <data name="TooltipDesc_AddSignature" xml:space="preserve">
+    <value>Adicionar um campo de assinatura ao PDF para assinatura digital.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateEllipse" xml:space="preserve">
+    <value>Desenhar um oval.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHidden" xml:space="preserve">
+    <value>Ocultar todos os comentários no PDF.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHighlight" xml:space="preserve">
+    <value>Realçar o texto selecionado.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateInk" xml:space="preserve">
+    <value>Desenhar à mão livre.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateLine" xml:space="preserve">
+    <value>Desenhar uma linha.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateManage" xml:space="preserve">
+    <value>Abra o painel de comentários para navegar, filtrar e excluir comentários.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateNote" xml:space="preserve">
+    <value>Adicionar uma nota adesiva.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShape" xml:space="preserve">
+    <value>Desenhar um retângulo.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShow" xml:space="preserve">
+    <value>Mostrar todos os comentários no PDF.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateSignature" xml:space="preserve">
+    <value>Adicionar assinatura desenhando, digitando ou enviando imagens.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStamp" xml:space="preserve">
+    <value>Adicionar, criar e gerenciar carimbos. Suporta carimbos personalizados.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStrike" xml:space="preserve">
+    <value>Rasurar o texto selecionado.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTextBox" xml:space="preserve">
+    <value>Adicionar um comentário de texto com borda.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTypeWriter" xml:space="preserve">
+    <value>Adicionar um comentário de texto sem borda.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateUnderline" xml:space="preserve">
+    <value>Sublinhar o texto selecionado.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateWatermark" xml:space="preserve">
+    <value>Adicionar ou editar marcas d'água.</value>
+  </data>
+  <data name="TooltipDesc_AutoScroll" xml:space="preserve">
+    <value>Role o arquivo PDF automaticamente. Pressione Esc para sair da rolagem.</value>
+  </data>
+  <data name="TooltipDesc_BatchPrint" xml:space="preserve">
+    <value>Imprima vários arquivos PDF de uma só vez.</value>
+  </data>
+  <data name="TooltipDesc_Certificate" xml:space="preserve">
+    <value>Gerenciar IDs digitais e certificados confiáveis para criptografia e assinatura.</value>
+  </data>
+  <data name="TooltipDesc_Compress" xml:space="preserve">
+    <value>Reduzir o tamanho do arquivo PDF.</value>
+  </data>
+  <data name="TooltipDesc_Convert" xml:space="preserve">
+    <value>Converter PDFs para outros formatos ou crie PDFs a partir de outros formatos.</value>
+  </data>
+  <data name="TooltipDesc_CreateNewPDF" xml:space="preserve">
+    <value>Criar um novo arquivo PDF.</value>
+  </data>
+  <data name="TooltipDesc_CropPage" xml:space="preserve">
+    <value>Recortar as margens da página.</value>
+  </data>
+  <data name="TooltipDesc_DocumentProperties" xml:space="preserve">
+    <value>Visualizar e editar as propriedades do documento PDF.</value>
+  </data>
+  <data name="TooltipDesc_EditObject" xml:space="preserve">
+    <value>Dividir o texto em blocos para mover e editar.</value>
+  </data>
+  <data name="TooltipDesc_EditText" xml:space="preserve">
+    <value>Editar texto no PDF.</value>
+  </data>
+  <data name="TooltipDesc_Encrypt" xml:space="preserve">
+    <value>Criptografar o PDF usando um certificado digital para proteger seu conteúdo.</value>
+  </data>
+  <data name="TooltipDesc_Find" xml:space="preserve">
+    <value>Pesquisar texto no PDF.</value>
+  </data>
+  <data name="TooltipDesc_Flatten" xml:space="preserve">
+    <value>Mesclar todas as anotações na camada de conteúdo para torná-las não selecionáveis nem editáveis.</value>
+  </data>
+  <data name="TooltipDesc_Highlight" xml:space="preserve">
+    <value>Realçar uma área retangular.</value>
+  </data>
+  <data name="TooltipDesc_HighlightForm" xml:space="preserve">
+    <value>Realçar campos de formulário interativos no PDF.</value>
+  </data>
+  <data name="TooltipDesc_InsertHeaderFooter" xml:space="preserve">
+    <value>Adicionar ou editar cabeçalhos e rodapés.</value>
+  </data>
+  <data name="TooltipDesc_InsertImage" xml:space="preserve">
+    <value>Adicionar uma imagem.</value>
+  </data>
+  <data name="TooltipDesc_InsertPageNumber" xml:space="preserve">
+    <value>Adicionar ou editar números de página.</value>
+  </data>
+  <data name="TooltipDesc_Link" xml:space="preserve">
+    <value>Adicionar ou editar links.</value>
+  </data>
+  <data name="TooltipDesc_OCR" xml:space="preserve">
+    <value>Execute OCR em páginas somente de imagem para torná-las pesquisáveis.</value>
+  </data>
+  <data name="TooltipDesc_Open" xml:space="preserve">
+    <value>Abrir um arquivo PDF.</value>
+  </data>
+  <data name="TooltipDesc_PageDelete" xml:space="preserve">
+    <value>Eliminar páginas especificadas.</value>
+  </data>
+  <data name="TooltipDesc_PageExtract" xml:space="preserve">
+    <value>Extrair páginas especificadas para criar um novo PDF.</value>
+  </data>
+  <data name="TooltipDesc_PageInsert" xml:space="preserve">
+    <value>Inserir páginas em branco, páginas digitalizadas, imagens, documentos do Word ou outro PDF no PDF atual.</value>
+  </data>
+  <data name="TooltipDesc_PageMerge" xml:space="preserve">
+    <value>Combinar arquivos PDF em um único PDF.</value>
+  </data>
+  <data name="TooltipDesc_PageRotateLeft" xml:space="preserve">
+    <value>Rodar a visualização da página para a esquerda (anti-horário).</value>
+  </data>
+  <data name="TooltipDesc_PageRotateRight" xml:space="preserve">
+    <value>Rodar a visualização da página para a direita (horário).</value>
+  </data>
+  <data name="TooltipDesc_PageSplit" xml:space="preserve">
+    <value>Dividir o PDF em vários arquivos.</value>
+  </data>
+  <data name="TooltipDesc_Present" xml:space="preserve">
+    <value>Exibir o PDF como apresentação.</value>
+  </data>
+  <data name="TooltipDesc_Print" xml:space="preserve">
+    <value>Imprimir o arquivo PDF.</value>
+  </data>
+  <data name="TooltipDesc_ProtectPassword" xml:space="preserve">
+    <value>Proteja o PDF com uma palavra-passe.</value>
+  </data>
+  <data name="TooltipDesc_ProtectRemove" xml:space="preserve">
+    <value>Remover palavra-passe do PDF.</value>
+  </data>
+  <data name="TooltipDesc_Read" xml:space="preserve">
+    <value>Ler o PDF em voz alta.</value>
+  </data>
+  <data name="TooltipDesc_Redact" xml:space="preserve">
+    <value>Marcar informações sensíveis para remoção permanente.</value>
+  </data>
+  <data name="TooltipDesc_Redo" xml:space="preserve">
+    <value>Refazer a ação desfeita anteriormente.</value>
+  </data>
+  <data name="TooltipDesc_Save" xml:space="preserve">
+    <value>Salvar o arquivo PDF.</value>
+  </data>
+  <data name="TooltipDesc_SaveAs" xml:space="preserve">
+    <value>Salvar uma cópia do arquivo PDF.</value>
+  </data>
+  <data name="TooltipDesc_Screenshot" xml:space="preserve">
+    <value>Selecione uma área para capturar uma captura de tela do PDF.</value>
+  </data>
+  <data name="TooltipDesc_Translate" xml:space="preserve">
+    <value>Traduzir o texto selecionado ou colado para um idioma específico.</value>
+  </data>
+  <data name="TooltipDesc_Undo" xml:space="preserve">
+    <value>Desfazer a última ação.</value>
+  </data>
+  <data name="TooltipDesc_Update" xml:space="preserve">
+    <value>Verificar atualizações do PDFgear.</value>
+  </data>
+  <data name="TranslatePanelAuto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="TranslatePanelAutoDetect" xml:space="preserve">
+    <value>Deteção Automática</value>
+  </data>
+  <data name="TranslatePanelAutoTranslateBtn" xml:space="preserve">
+    <value>Traduzir automaticamente o texto selecionado</value>
+  </data>
+  <data name="TranslatePanelInputPlaceHolder" xml:space="preserve">
+    <value>Digite ou cole o texto aqui</value>
+  </data>
+  <data name="TranslatePanelOutputPlaceHolder" xml:space="preserve">
+    <value>Tradução</value>
+  </data>
+  <data name="UnknownAttachmentModifyDateText" xml:space="preserve">
+    <value>Desconhecido</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Name" xml:space="preserve">
+    <value>Nome:</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Tip" xml:space="preserve">
+    <value>Dica:</value>
+  </data>
+  <data name="UnsignedDigSignPropMessage_DuplicatedFieldName" xml:space="preserve">
+    <value>Não são permitidos nomes de campos duplicados.</value>
+  </data>
+  <data name="UnsupportedImageMsg" xml:space="preserve">
+    <value>Falha ao carregar o arquivo de imagem porque está corrompido ou em formato não suportado.  Escolha outro arquivo de imagem e tente novamente.</value>
+  </data>
+  <data name="ViewToolbarSaveFailed" xml:space="preserve">
+    <value>Falha ao salvar o documento.  Por favor, tente novamente.</value>
+  </data>
+  <data name="ViewToolbarSave_DigSigMaskSaveAs" xml:space="preserve">
+    <value>O documento contém uma assinatura, portanto, deve ser salvo como uma cópia.</value>
+  </data>
+  <data name="ViewToorbarFileChanged" xml:space="preserve">
+    <value>O documento foi editado.  Deseja salvá-lo?</value>
+  </data>
+  <data name="ViewerContainerEditBanner" xml:space="preserve">
+    <value>Está no modo de edição de texto.</value>
+  </data>
+  <data name="WIA_ERROR_BUSY" xml:space="preserve">
+    <value>O dispositivo está ocupado. Feche todos os aplicativos que estão usando este dispositivo ou aguarde até que ele seja concluído e tente novamente.</value>
+  </data>
+  <data name="WIA_ERROR_COVER_OPEN" xml:space="preserve">
+    <value>Uma ou mais capas do dispositivo estão abertas.</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_COMMUNICATION" xml:space="preserve">
+    <value>Falha na comunicação com o dispositivo WIA. Verifique se o dispositivo está ligado e conectado ao computador. Se o problema persistir, desconecte e reconecte o dispositivo.</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_LOCKED" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="WIA_ERROR_EXCEPTION_IN_DRIVER" xml:space="preserve">
+    <value>O driver do dispositivo gerou uma exceção.</value>
+  </data>
+  <data name="WIA_ERROR_GENERAL_ERROR" xml:space="preserve">
+    <value>Ocorreu um erro desconhecido com o dispositivo WIA.</value>
+  </data>
+  <data name="WIA_ERROR_INCORRECT_HARDWARE_SETTING" xml:space="preserve">
+    <value>Há uma configuração incorreta no dispositivo WIA.</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_COMMAND" xml:space="preserve">
+    <value>O dispositivo não dá suporte a esse comando.</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_DRIVER_RESPONSE" xml:space="preserve">
+    <value>A resposta do driver é inválida.</value>
+  </data>
+  <data name="WIA_ERROR_ITEM_DELETED" xml:space="preserve">
+    <value>O dispositivo WIA foi excluído. Ele não está mais disponível.</value>
+  </data>
+  <data name="WIA_ERROR_LAMP_OFF" xml:space="preserve">
+    <value>A lâmpada do scanner está desligada.</value>
+  </data>
+  <data name="WIA_ERROR_MAXIMUM_PRINTER_ENDORSER_COUNTER" xml:space="preserve">
+    <value>Um trabalho de verificação foi interrompido porque um item Imprinter/Endorser atingiu o valor máximo válido para WIA_IPS_PRINTER_ENDORSER_COUNTER e foi redefinido para 0. Esse recurso está disponível com Windows 8 e versões posteriores do Windows.</value>
+  </data>
+  <data name="WIA_ERROR_MULTI_FEED" xml:space="preserve">
+    <value>Ocorreu um erro de digitalização devido a uma condição de alimentação de várias páginas. Este recurso está disponível no Windows 8 e versões posteriores do Windows.</value>
+  </data>
+  <data name="WIA_ERROR_OFFLINE" xml:space="preserve">
+    <value>O dispositivo está offline. Verifique se o dispositivo está ligado e conectado ao computador.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_EMPTY" xml:space="preserve">
+    <value>Não há documentos no alimentador de documentos ou o scanner está ocupado. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_JAM" xml:space="preserve">
+    <value>O papel está bloqueado no alimentador de documentos do scanner.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_PROBLEM" xml:space="preserve">
+    <value>Ocorreu um problema não especificado com o alimentador de documentos do verificador.</value>
+  </data>
+  <data name="WIA_ERROR_USER_INTERVENTION" xml:space="preserve">
+    <value>Há um problema com o dispositivo WIA. Verifique se o dispositivo está ativado, online e se todos os cabos estão conectados corretamente.</value>
+  </data>
+  <data name="WIA_ERROR_WARMING_UP" xml:space="preserve">
+    <value>O dispositivo está se aquecendo.</value>
+  </data>
+  <data name="WIA_S_NO_DEVICE_AVAILABLE" xml:space="preserve">
+    <value>Nenhum dispositivo de scanner foi encontrado. Verifique se o dispositivo está online, conectado ao computador e se tem o driver correto instalado no computador.</value>
+  </data>
+  <data name="WinBtnAllPagesContent" xml:space="preserve">
+    <value>Todas as Páginas</value>
+  </data>
+  <data name="WinBtnBackContent" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="WinBtnCancelContent" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="WinBtnCloseContent" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="WinBtnNextContent" xml:space="preserve">
+    <value>Seguinte</value>
+  </data>
+  <data name="WinBtnOkContent" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="WinBtnSaveContent" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="WinBtnSelectedPagesContent" xml:space="preserve">
+    <value>Páginas selecionadas</value>
+  </data>
+  <data name="WinCbxAutoItemContent" xml:space="preserve">
+    <value>Automático</value>
+  </data>
+  <data name="WinCbxChildAllPagesContent" xml:space="preserve">
+    <value>Todas as páginas no conjunto</value>
+  </data>
+  <data name="WinCbxChildEvenPagesContent" xml:space="preserve">
+    <value>Apenas as páginas pares</value>
+  </data>
+  <data name="WinCbxChildOddPagesContent" xml:space="preserve">
+    <value>Apenas as páginas ímpares</value>
+  </data>
+  <data name="WinConvertToolBtnExcelToPDFText" xml:space="preserve">
+    <value>Excel para PDF</value>
+  </data>
+  <data name="WinConvertToolBtnImageToPDFText" xml:space="preserve">
+    <value>Imagem para PDF</value>
+  </data>
+  <data name="WinConvertToolBtnPPTToPDFText" xml:space="preserve">
+    <value>PPT para PDF</value>
+  </data>
+  <data name="WinConvertToolBtnRTFToPDFText" xml:space="preserve">
+    <value>RTF para PDF</value>
+  </data>
+  <data name="WinConvertToolBtnTXTToPDFText" xml:space="preserve">
+    <value>TXT para PDF</value>
+  </data>
+  <data name="WinConvertToolBtnWordToPDF" xml:space="preserve">
+    <value>Word para PDF</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackground" xml:space="preserve">
+    <value>Remover Fundo</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackgroundToolTip" xml:space="preserve">
+    <value>Remover todos os píxeis brancos da imagem.</value>
+  </data>
+  <data name="WinCustomizeStampEditTiltle" xml:space="preserve">
+    <value>Editar Carimbo</value>
+  </data>
+  <data name="WinCustomizeStampMaxCharactersMsg" xml:space="preserve">
+    <value>O texto não pode ter mais de 50 caracteres!</value>
+  </data>
+  <data name="WinCustomizeStampNewTiltle" xml:space="preserve">
+    <value>Criar Carimbo</value>
+  </data>
+  <data name="WinCustomizeStampPlaceHolderContent" xml:space="preserve">
+    <value>Inserir aqui...</value>
+  </data>
+  <data name="WinEditTextInputLocationTip" xml:space="preserve">
+    <value>Editar texto:</value>
+  </data>
+  <data name="WinEditorTipBtnEditAnyway" xml:space="preserve">
+    <value>Editar Mesmo Assim</value>
+  </data>
+  <data name="WinEditorTipBtnUseConverter" xml:space="preserve">
+    <value>Usar o Conversor</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce1" xml:space="preserve">
+    <value>•  Converta PDFs para vários formatos de ficheiro.</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce2" xml:space="preserve">
+    <value>•  A disposição é coordenada com o OCR.</value>
+  </data>
+  <data name="WinEditorTipRecommendLeft" xml:space="preserve">
+    <value>Recomendamos usar antes o conversor</value>
+  </data>
+  <data name="WinEditorTipRecommendMiddle" xml:space="preserve">
+    <value>PDF para Word</value>
+  </data>
+  <data name="WinEditorTipRecommendRight" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="WinExtractTextBtnCopyContent" xml:space="preserve">
+    <value>Copiar texto para a área de transferência</value>
+  </data>
+  <data name="WinExtractTextLabelCopiedContent" xml:space="preserve">
+    <value>Copiado</value>
+  </data>
+  <data name="WinExtractTextLabelExtractedContent" xml:space="preserve">
+    <value>Extraído</value>
+  </data>
+  <data name="WinExtractTextLabelScreenshotContent" xml:space="preserve">
+    <value>Captura de Ecrã</value>
+  </data>
+  <data name="WinExtractTextTitle" xml:space="preserve">
+    <value>Extrair Texto</value>
+  </data>
+  <data name="WinFeedBackBtnSendContent" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="WinFeedBackEmailAddrPlaceHoderContent" xml:space="preserve">
+    <value>Endereço de E-mail (Opcional)</value>
+  </data>
+  <data name="WinFeedBackEmailContentPlaceHoderContent" xml:space="preserve">
+    <value>Por favor, diga-nos que problema encontrou e os passos para o reproduzir. Obrigado.</value>
+  </data>
+  <data name="WinFeedBackErrorInvalidEmailCapMsg" xml:space="preserve">
+    <value>Formato de E-mail Inválido</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc1" xml:space="preserve">
+    <value>A configuração de região da sua Microsoft Store é</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc2" xml:space="preserve">
+    <value>, que é inconsistente com sua localização atual.  Isso pode levar ao fracasso da compra.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc3" xml:space="preserve">
+    <value>Clique aqui</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc4" xml:space="preserve">
+    <value>para alterar a configuração de região da Microsoft Store.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc1" xml:space="preserve">
+    <value>O pagamento é processado pela Microsoft.  Por favor, visite a ajuda</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc2" xml:space="preserve">
+    <value>para solução.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3" xml:space="preserve">
+    <value>Reinstale o PDFgear e compre-o com a mesma conta da Microsoft na Microsoft Store pelo mesmo preço.  Isso é para restaurar a compra e não será mais cobrado.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc1" xml:space="preserve">
+    <value>Se você já pagou pelo PDFgear antes, faça login na mesma conta da Microsoft na Microsoft Store primeiro e clique</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc2" xml:space="preserve">
+    <value>aqui</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc3" xml:space="preserve">
+    <value>para restaurar a compra.  Se a restauração falhar, entre em contato com o suporte para obter ajuda.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer4" xml:space="preserve">
+    <value>Clique no botão Atualizar na guia Ajuda e clique no botão "Restaurar compra" abaixo.  Então o PDFgear irá restaurar a compra com sucesso em alguns segundos.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer5" xml:space="preserve">
+    <value>Marque a caixa de seleção a seguir e desative a aceleração de hardware.  Então, por favor, tente novamente.</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion1" xml:space="preserve">
+    <value>Tendo problemas em alterar a configuração de região da Microsoft Store?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion2" xml:space="preserve">
+    <value>Ainda tendo problemas com a compra?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion3" xml:space="preserve">
+    <value>Por que ainda pede para atualizar depois que eu paguei pelo PDFgear?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion4" xml:space="preserve">
+    <value>Por que ainda pede para pagar quando eu reinstalo o PDFgear ou instalo em outros dispositivos?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion5" xml:space="preserve">
+    <value>Por que não consigo rolar páginas PDF?</value>
+  </data>
+  <data name="WinFeedBackHardwareAccelerationCHBK" xml:space="preserve">
+    <value>Desative a aceleração de hardware</value>
+  </data>
+  <data name="WinFeedBackInvalidEmailMsg" xml:space="preserve">
+    <value>Por favor, insira um endereço de e-mail válido para enviar corretamente a mensagem.</value>
+  </data>
+  <data name="WinFeedBackLabelPrivacypolicyContent" xml:space="preserve">
+    <value>Política de Privacidade</value>
+  </data>
+  <data name="WinFeedBackSendProblemfileContent" xml:space="preserve">
+    <value>Envie o ficheiro problema para nos ajudar a diagnosticar o problema.</value>
+  </data>
+  <data name="WinFeedBackSendSuccessCapMsg" xml:space="preserve">
+    <value>Enviado com Êxito</value>
+  </data>
+  <data name="WinFeedBackSendSuccessMsg" xml:space="preserve">
+    <value>Recebemos a sua mensagem. Obrigado!</value>
+  </data>
+  <data name="WinFeedBackSendTryagainMsg" xml:space="preserve">
+    <value>Não foi possível enviar a mensagem, tente novamente!</value>
+  </data>
+  <data name="WinFindCaseSensitiveBtnContent" xml:space="preserve">
+    <value>Sensível ao tipo de letra</value>
+  </data>
+  <data name="WinFindDocumentNeedOcrTips" xml:space="preserve">
+    <value>Detectamos que este é um PDF digitalizado. Efectue o OCR para copiar e procurar texto em PDFs digitalizados.</value>
+  </data>
+  <data name="WinFindMatchallwordsBtnContent" xml:space="preserve">
+    <value>Apenas palavras completas</value>
+  </data>
+  <data name="WinFindOCRNotShowAgain" xml:space="preserve">
+    <value>Não mostrar novamente para este arquivo</value>
+  </data>
+  <data name="WinFindPerformOCR" xml:space="preserve">
+    <value>Efetuar OCR</value>
+  </data>
+  <data name="WinFindPlaceHolderContent" xml:space="preserve">
+    <value>Procurar...</value>
+  </data>
+  <data name="WinHistoryClearLabelClickTips" xml:space="preserve">
+    <value>Tem a certeza de que quer limpar todos os ficheiros recentes?</value>
+  </data>
+  <data name="WinIAP2AnnualPannelTitle" xml:space="preserve">
+    <value>Anual</value>
+  </data>
+  <data name="WinIAP2BuyNowBtnContent" xml:space="preserve">
+    <value>Compre Agora</value>
+  </data>
+  <data name="WinIAP2LifetimePriceDescribe" xml:space="preserve">
+    <value>Preço único</value>
+  </data>
+  <data name="WinLabelChildRangeContent" xml:space="preserve">
+    <value>Subsortimento</value>
+  </data>
+  <data name="WinLabelRangeContent" xml:space="preserve">
+    <value>Sortimento</value>
+  </data>
+  <data name="WinLabelSelectedpagesContent" xml:space="preserve">
+    <value>Páginas selecionadas</value>
+  </data>
+  <data name="WinOCRCHBContent" xml:space="preserve">
+    <value>OCR (Extrair texto da imagem)</value>
+  </data>
+  <data name="WinOCRProgressContent" xml:space="preserve">
+    <value>A processar...</value>
+  </data>
+  <data name="WinOCRSelectLangTips" xml:space="preserve">
+    <value>Selecionar idioma:</value>
+  </data>
+  <data name="WinOCRSelectedLineContextMenuEdit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="WinPageApplyingHeaderorFooterContent" xml:space="preserve">
+    <value>A aplicar cabeçalhos e rodapés</value>
+  </data>
+  <data name="WinPageCenterFooterTextLabelContent" xml:space="preserve">
+    <value>Rodapé central</value>
+  </data>
+  <data name="WinPageCenterHeaderTextLabelContent" xml:space="preserve">
+    <value>Cabeçalho central</value>
+  </data>
+  <data name="WinPageEgContent" xml:space="preserve">
+    <value>por ex. 1,8,9-12</value>
+  </data>
+  <data name="WinPageInsertBlankTitle" xml:space="preserve">
+    <value>Inserir Página em Branco</value>
+  </data>
+  <data name="WinPageInsertImageTitle" xml:space="preserve">
+    <value>Inserir Página a Partir de Imagem</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnAddNewContent" xml:space="preserve">
+    <value>Adicionar Novo</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnUpdateContent" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddChekContent" xml:space="preserve">
+    <value>O documento já contém Cabeçalho e Rodapé ou Número de Página. Gostaria de os atualizar com o que está a adicionar?</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddNoteContent" xml:space="preserve">
+    <value>Nota: Se optar por Adicionar Novo, poderá sobrepor-se ao existente.</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckEmptyContent" xml:space="preserve">
+    <value>Não é possível encontrar nenhum Cabeçalho e Rodapé ou Número de Página no documento.</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckExistContent" xml:space="preserve">
+    <value>Tem a certeza de que deseja remover permanentemente o Cabeçalho e Rodapé ou o Número de Página?</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterUpdateCheckEmptyContent" xml:space="preserve">
+    <value>Não foi possível encontrar quaisquer cabeçalhos ou rodapés neste ficheiro.</value>
+  </data>
+  <data name="WinPageInsertSettingBlankPageCount" xml:space="preserve">
+    <value>Contagem de páginas</value>
+  </data>
+  <data name="WinPageInsertSettingPageHeight" xml:space="preserve">
+    <value>Altura</value>
+  </data>
+  <data name="WinPageInsertSettingPageLandscape" xml:space="preserve">
+    <value>Paisagem</value>
+  </data>
+  <data name="WinPageInsertSettingPagePortrait" xml:space="preserve">
+    <value>Retrato</value>
+  </data>
+  <data name="WinPageInsertSettingPageSize" xml:space="preserve">
+    <value>Tamanho da Página</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemCustomize" xml:space="preserve">
+    <value>Personalizado</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemDefault" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="WinPageInsertSettingPageWidth" xml:space="preserve">
+    <value>Largura</value>
+  </data>
+  <data name="WinPageInsertdateLabelContent" xml:space="preserve">
+    <value>Introduzir data</value>
+  </data>
+  <data name="WinPageInsertfilenameLabelContent" xml:space="preserve">
+    <value>Introduzir nome do ficheiro</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentCenterContent" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLabelContent" xml:space="preserve">
+    <value>Alinhamento</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLeftContent" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentRightContent" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionFooterContent" xml:space="preserve">
+    <value>Rodapé</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionHeaderContent" xml:space="preserve">
+    <value>Cabeçalho</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionLabelConent" xml:space="preserve">
+    <value>Posição</value>
+  </data>
+  <data name="WinPageInsertpageNumStyleLabelContent" xml:space="preserve">
+    <value>Estilo</value>
+  </data>
+  <data name="WinPageInsertpagenumberLabelContent" xml:space="preserve">
+    <value>Introduzir número da página</value>
+  </data>
+  <data name="WinPageLeftFooterTextLabelContent" xml:space="preserve">
+    <value>Rodapé esquerdo</value>
+  </data>
+  <data name="WinPageLeftHeaderTextLabelContent" xml:space="preserve">
+    <value>Cabeçalho esquerdo</value>
+  </data>
+  <data name="WinPageLoadingHeaderorFooterContent" xml:space="preserve">
+    <value>A Carregar Cabeçalho e Rodapé e Número de Página</value>
+  </data>
+  <data name="WinPageMarginBottomLabelContent" xml:space="preserve">
+    <value>Fundo</value>
+  </data>
+  <data name="WinPageMarginLabelContent" xml:space="preserve">
+    <value>Margem</value>
+  </data>
+  <data name="WinPageMarginLeftLabelContent" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="WinPageMarginRightLabelContent" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="WinPageMarginTopLabelContent" xml:space="preserve">
+    <value>Topo</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageByNumContent" xml:space="preserve">
+    <value>Depois da página XXX</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageContent" xml:space="preserve">
+    <value>Após a página selecionada</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageByNumContent" xml:space="preserve">
+    <value>Antes da página XXX</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageContent" xml:space="preserve">
+    <value>Antes da página selecionada</value>
+  </data>
+  <data name="WinPageMergeBtnBeginingContent" xml:space="preserve">
+    <value>Início</value>
+  </data>
+  <data name="WinPageMergeBtnEndContent" xml:space="preserve">
+    <value>Fim</value>
+  </data>
+  <data name="WinPageMergeCorrectPageMsg" xml:space="preserve">
+    <value>Intervalos de páginas errados. Por favor, defina os intervalos de páginas corretos.</value>
+  </data>
+  <data name="WinPageMergeCorruptedDocMsg" xml:space="preserve">
+    <value>Documento corrompido. Por favor, verifique o seu documento selecionado.</value>
+  </data>
+  <data name="WinPageMergeInsertfailedMsg" xml:space="preserve">
+    <value>Não foi possível inserir a página no documento.</value>
+  </data>
+  <data name="WinPageMergeLabelInserttoContent" xml:space="preserve">
+    <value>Inserir em</value>
+  </data>
+  <data name="WinPageMergeLabelLocationContent" xml:space="preserve">
+    <value>Localização</value>
+  </data>
+  <data name="WinPageMergeLabelSelectFileContent" xml:space="preserve">
+    <value>Selecionar ficheiro</value>
+  </data>
+  <data name="WinPageMergeLabelSourceContent" xml:space="preserve">
+    <value>Fonte</value>
+  </data>
+  <data name="WinPageMergeLoadingText" xml:space="preserve">
+    <value>Ficheiro a carregar…</value>
+  </data>
+  <data name="WinPageMergeMenuInsertfromfileContent" xml:space="preserve">
+    <value>Inserir do ficheiro</value>
+  </data>
+  <data name="WinPageMergeOpenfailedMsg" xml:space="preserve">
+    <value>Não é possível abrir o documento selecionado.</value>
+  </data>
+  <data name="WinPageMergeTitle" xml:space="preserve">
+    <value>Unir Ficheiro</value>
+  </data>
+  <data name="WinPagePreviewLabelContent" xml:space="preserve">
+    <value>Pré-visualização</value>
+  </data>
+  <data name="WinPagePreviewPageLabelContent" xml:space="preserve">
+    <value>Página de pré-visualizaçãio</value>
+  </data>
+  <data name="WinPageReorderToolTipContent" xml:space="preserve">
+    <value>Tem a certeza de que deseja reordenar a(s) página(s) selecionada(s)?</value>
+  </data>
+  <data name="WinPageRightFooterTextLabelContent" xml:space="preserve">
+    <value>Rodapé direito</value>
+  </data>
+  <data name="WinPageRightHeaderTextLabelContent" xml:space="preserve">
+    <value>Cabeçalho direito</value>
+  </data>
+  <data name="WinPageSplitBtnMaxpageCountContent" xml:space="preserve">
+    <value>Max page count</value>
+  </data>
+  <data name="WinPageSplitBtnPagerangeContent" xml:space="preserve">
+    <value>Intervalo de páginas</value>
+  </data>
+  <data name="WinPageSplitLabelOutputlocationContent" xml:space="preserve">
+    <value>Output location</value>
+  </data>
+  <data name="WinPageSplitLabelSplitModeContent" xml:space="preserve">
+    <value>Modo Dividido</value>
+  </data>
+  <data name="WinPageSplitTitle" xml:space="preserve">
+    <value>Dividir Arquivo</value>
+  </data>
+  <data name="WinPageStartpagenumbereLabelContent" xml:space="preserve">
+    <value>Número da página inicial</value>
+  </data>
+  <data name="WinPrinterBtnClassicModeContent" xml:space="preserve">
+    <value>Modo clássico</value>
+  </data>
+  <data name="WinPrinterBtnPropertyContent" xml:space="preserve">
+    <value>Preferência...</value>
+  </data>
+  <data name="WinPrinterCancelPrintContent" xml:space="preserve">
+    <value>Tem a certeza que deseja cancelar a impressão?</value>
+  </data>
+  <data name="WinPrinterChbkGrayscaleContent" xml:space="preserve">
+    <value>Escala de cinzentos</value>
+  </data>
+  <data name="WinPrinterCollateContent" xml:space="preserve">
+    <value>Ordenar</value>
+  </data>
+  <data name="WinPrinterCopiesContent" xml:space="preserve">
+    <value>Cópias</value>
+  </data>
+  <data name="WinPrinterDuplexContent" xml:space="preserve">
+    <value>Imprimir nos dois lados</value>
+  </data>
+  <data name="WinPrinterDuplexFlipLongContent" xml:space="preserve">
+    <value>Virar pela margem mais longa</value>
+  </data>
+  <data name="WinPrinterDuplexFlipShortContent" xml:space="preserve">
+    <value>Virar pela margem mais curta</value>
+  </data>
+  <data name="WinPrinterNameContent" xml:space="preserve">
+    <value>Impressora</value>
+  </data>
+  <data name="WinPrinterNoPrinterContent" xml:space="preserve">
+    <value>Impressora não detetada</value>
+  </data>
+  <data name="WinPrinterPageRangErrorContent" xml:space="preserve">
+    <value>O valor tem de ser um número inteiro entre 1 e 1000.</value>
+  </data>
+  <data name="WinPrinterPaperOrientationContent" xml:space="preserve">
+    <value>Orientação</value>
+  </data>
+  <data name="WinPrinterPaperSizeContent" xml:space="preserve">
+    <value>Tamanho do papel</value>
+  </data>
+  <data name="WinPrinterPrintAnnotationContent" xml:space="preserve">
+    <value>Imprimir Comentários</value>
+  </data>
+  <data name="WinPrinterPrintModeContent" xml:space="preserve">
+    <value>Dimensionamento de Página</value>
+  </data>
+  <data name="WinPurchasedAlreadySubTitle" xml:space="preserve">
+    <value>Já comprado</value>
+  </data>
+  <data name="WinPurchasedTitle" xml:space="preserve">
+    <value>Você comprou com sucesso.  Agora aproveite o PDFgear ao máximo.</value>
+  </data>
+  <data name="WinPwdEntePwdTitle" xml:space="preserve">
+    <value>Introduza a Palavra-passe</value>
+  </data>
+  <data name="WinPwdEnterTipContent" xml:space="preserve">
+    <value>Este documento é protegido por palavra-passe. Introduza a palavra-passe abaixo.</value>
+  </data>
+  <data name="WinPwdInputContent" xml:space="preserve">
+    <value>Digite Aqui…</value>
+  </data>
+  <data name="WinPwdInvalidTryAgainContent" xml:space="preserve">
+    <value>Palavra-passe inválida. Tente novamente.</value>
+  </data>
+  <data name="WinPwdLabelConfrimContent" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="WinPwdLabelPasswordContent" xml:space="preserve">
+    <value>Palavra-passe</value>
+  </data>
+  <data name="WinPwdMaxCharacterCheckContent" xml:space="preserve">
+    <value>Máximo de 32 Caracteres. Nenhum espaço.</value>
+  </data>
+  <data name="WinPwdMinCharacterCheckContent" xml:space="preserve">
+    <value>Mínimo de 6 Caracteres. Nenhum espaço.</value>
+  </data>
+  <data name="WinPwdPasswordCheckEmptyContent" xml:space="preserve">
+    <value>É necessário a palavra-passe.</value>
+  </data>
+  <data name="WinPwdPasswordCheckInvalidContent" xml:space="preserve">
+    <value>Palavra-passe inválida.</value>
+  </data>
+  <data name="WinPwdPasswordCheckMatchContent" xml:space="preserve">
+    <value>As palavras-passe não correspondem.</value>
+  </data>
+  <data name="WinPwdPasswordKeepPermissionsPwdContent" xml:space="preserve">
+    <value>Manter palavra-passe de permissão</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipContent" xml:space="preserve">
+    <value>As configurações de segurança não serão aplicadas até que guarde o documento.</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipNotshowagainContent" xml:space="preserve">
+    <value>Não mostrar esta mensagem novamente</value>
+  </data>
+  <data name="WinPwdPasswordTooltipContent" xml:space="preserve">
+    <value>A palavra-passe deve conter de 6 a 32 caracteres e apenas são permitidas letras, números e símbolos.</value>
+  </data>
+  <data name="WinPwdRemoveCheckContent" xml:space="preserve">
+    <value>Não foi definida nenhuma palavra-passe para este documento PDF.</value>
+  </data>
+  <data name="WinPwdRemoveConfirmContent" xml:space="preserve">
+    <value>Tem a certeza de que deseja remover a palavra-passe?</value>
+  </data>
+  <data name="WinPwdSetPwdTitle" xml:space="preserve">
+    <value>Defina a Palavra-passe</value>
+  </data>
+  <data name="WinPwdWrongCheckContent" xml:space="preserve">
+    <value>A palavra-passe está incorreta.</value>
+  </data>
+  <data name="WinPwdillegalsymbolsCheckContent" xml:space="preserve">
+    <value>Contém símbolos inválidos.</value>
+  </data>
+  <data name="WinRate5StarsTitle" xml:space="preserve">
+    <value>Adoro! Quero atribuir-lhe 5 estrelas!</value>
+  </data>
+  <data name="WinRateFeedbackTitle" xml:space="preserve">
+    <value>Gostaria de dar a minha opinião.</value>
+  </data>
+  <data name="WinRateLeaveGreatratingTitle" xml:space="preserve">
+    <value>Por favor, dê-nos uma excelente classificação e avaliação!</value>
+  </data>
+  <data name="WinRateLessaminuteTitle" xml:space="preserve">
+    <value>A classificação demora menos de um minuto</value>
+  </data>
+  <data name="WinRateLoveTitle" xml:space="preserve">
+    <value>Adoro o PDFgear?</value>
+  </data>
+  <data name="WinRateThanksforsupportTitle" xml:space="preserve">
+    <value>Obrigado pelo seu apoio!</value>
+  </data>
+  <data name="WinRestoreFaildLearnMoreContent" xml:space="preserve">
+    <value>Saber mais</value>
+  </data>
+  <data name="WinRestoreFaildPossible1Content" xml:space="preserve">
+    <value>A subscrição expirou</value>
+  </data>
+  <data name="WinRestoreFaildPossible2Content" xml:space="preserve">
+    <value>Não foi encontrada nenhuma compra válida</value>
+  </data>
+  <data name="WinRestoreFaildPossible3Content" xml:space="preserve">
+    <value>Rede não disponível</value>
+  </data>
+  <data name="WinRestoreFaildPossibleContent" xml:space="preserve">
+    <value>Causas possíveis</value>
+  </data>
+  <data name="WinRestoreFaildTitleContent" xml:space="preserve">
+    <value>O restauro falhou</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureExplain" xml:space="preserve">
+    <value>Existem assinaturas não achatadas no PDF, e estas vão ser achatadas depois de guardar, o que não pode ser desfeito. Quer continuar?</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureNoteMsg" xml:space="preserve">
+    <value>Tem a certeza de guardar este ficheiro PDF?</value>
+  </data>
+  <data name="WinScreenshotToolbarCancelContent" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="WinScreenshotToolbarCopyContent" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="WinScreenshotToolbarDeleteContent" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="WinScreenshotToolbarDoneContent" xml:space="preserve">
+    <value>Concluído</value>
+  </data>
+  <data name="WinScreenshotToolbarEditContent" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="WinScreenshotToolbarSaveContent" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomInContent" xml:space="preserve">
+    <value>Aumentar zoom</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomOutContent" xml:space="preserve">
+    <value>Diminuir zoom</value>
+  </data>
+  <data name="WinSettingAISwitch" xml:space="preserve">
+    <value>Ativar PDFgear Copilot</value>
+  </data>
+  <data name="WinSettingReminnder" xml:space="preserve">
+    <value>Lembrete de arquivos recebidos</value>
+  </data>
+  <data name="WinSettingReminnderDesc" xml:space="preserve">
+    <value>Pop-up para lembrar quando recebeu novo(s) arquivo(s) PDF</value>
+  </data>
+  <data name="WinShareSendFilleDescText" xml:space="preserve">
+    <value>Localizar o ficheiro, depois arrastar e largar em Messages, Onedrive, Google Drive, e muito mais.</value>
+  </data>
+  <data name="WinSignatureBtnAddPictureContent" xml:space="preserve">
+    <value>Adicionar imagem</value>
+  </data>
+  <data name="WinSignatureBtnClearContent" xml:space="preserve">
+    <value>Limpar</value>
+  </data>
+  <data name="WinSignatureContextMenuApplyMulPage" xml:space="preserve">
+    <value>Colocar em várias páginas</value>
+  </data>
+  <data name="WinSignatureContextMenuDetele" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="WinSignatureContextMenuDeteleInBatch" xml:space="preserve">
+    <value>Eliminar em Lote</value>
+  </data>
+  <data name="WinSignatureContextMenuFlatten" xml:space="preserve">
+    <value>Achatar</value>
+  </data>
+  <data name="WinSignatureContextMenuFlattenInBatch" xml:space="preserve">
+    <value>Achatar em lote</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchBtn" xml:space="preserve">
+    <value>Limpar Tudo</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchQuestion" xml:space="preserve">
+    <value>Tem a certeza de apagar esta assinatura em todas as páginas?</value>
+  </data>
+  <data name="WinSignatureFlattenApplying" xml:space="preserve">
+    <value>A aplicar a assinatura...</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchNoteMsg" xml:space="preserve">
+    <value>Esta operação vai achatar a(s) assinatura(s) no documento, o que não pode ser desfeito. Se cometer um erro, feche o documento sem guardar.</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchQuestion" xml:space="preserve">
+    <value>Tem a certeza de achatar a(s) assinatura(s)?</value>
+  </data>
+  <data name="WinSignatureFlattenProcess" xml:space="preserve">
+    <value>A achatar as assinaturas...</value>
+  </data>
+  <data name="WinSignatureMaxNumLimitTip" xml:space="preserve">
+    <value>O PDFgear só pode salvar até cinquenta assinaturas, exclua as assinaturas temporariamente não utilizadas antes de criar novas.</value>
+  </data>
+  <data name="WinSignatureMenuInputContent" xml:space="preserve">
+    <value>Introduzir texto</value>
+  </data>
+  <data name="WinSignatureMenuInputIsEmptyMsg" xml:space="preserve">
+    <value>O campo de entrada não pode estar em branco!</value>
+  </data>
+  <data name="WinSignatureMenuPictureContent" xml:space="preserve">
+    <value>Imagem</value>
+  </data>
+  <data name="WinSignatureMenuWriteContent" xml:space="preserve">
+    <value>Escrever</value>
+  </data>
+  <data name="WinSignaturePageRangeIncorrect" xml:space="preserve">
+    <value>O formato do "Intervalo" está incorreto.</value>
+  </data>
+  <data name="WinSignatureTitle" xml:space="preserve">
+    <value>Criar Assinatura</value>
+  </data>
+  <data name="WinStampSampleText" xml:space="preserve">
+    <value>Texto de amostra</value>
+  </data>
+  <data name="WinStampTypeAppearanceHeader" xml:space="preserve">
+    <value>Aparência</value>
+  </data>
+  <data name="WinStampTypeDateFormatCheckbox" xml:space="preserve">
+    <value>Data e hora</value>
+  </data>
+  <data name="WinStatuBarPDFAutoSaveText" xml:space="preserve">
+    <value>Guardado automaticamente</value>
+  </data>
+  <data name="WinToolBarBtnHighlightContent" xml:space="preserve">
+    <value>Destaque de Área</value>
+  </data>
+  <data name="WinUpgradeLiftTimeBtnContent" xml:space="preserve">
+    <value>Vitalício</value>
+  </data>
+  <data name="WinUpgradeList10Content" xml:space="preserve">
+    <value>Reordenar páginas PDF</value>
+  </data>
+  <data name="WinUpgradeList11Content" xml:space="preserve">
+    <value>Assine em documentos PDF</value>
+  </data>
+  <data name="WinUpgradeList12Content" xml:space="preserve">
+    <value>Compress PDF Files to a smaller size</value>
+  </data>
+  <data name="WinUpgradeList13Content" xml:space="preserve">
+    <value>Converta ficheiros PDF para Word, Excel, imagem, etc.</value>
+  </data>
+  <data name="WinUpgradeList14Content" xml:space="preserve">
+    <value>Assine, comprima PDF</value>
+  </data>
+  <data name="WinUpgradeList15Content" xml:space="preserve">
+    <value>Combine, divida, apague, insira, extraia e reordene páginas</value>
+  </data>
+  <data name="WinUpgradeList16Content" xml:space="preserve">
+    <value>Imagem para textos (OCR)</value>
+  </data>
+  <data name="WinUpgradeList17Content" xml:space="preserve">
+    <value>Até 10 dispositivos</value>
+  </data>
+  <data name="WinUpgradeList18Content" xml:space="preserve">
+    <value>PDFgear Premium</value>
+  </data>
+  <data name="WinUpgradeList1Content" xml:space="preserve">
+    <value>Converter documento PDF para Word, Excel, PNG, JPG, RTF, TXT, HTML ou XML</value>
+  </data>
+  <data name="WinUpgradeList2Content" xml:space="preserve">
+    <value>Reúna vários documentos PDF num único PDF</value>
+  </data>
+  <data name="WinUpgradeList3Content" xml:space="preserve">
+    <value>Remova páginas de um documento PDF</value>
+  </data>
+  <data name="WinUpgradeList4Content" xml:space="preserve">
+    <value>Divida um documento PDF em vários documentos PDF</value>
+  </data>
+  <data name="WinUpgradeList5Content" xml:space="preserve">
+    <value>Extraia várias páginas PDF de um documento PDF</value>
+  </data>
+  <data name="WinUpgradeList6Content" xml:space="preserve">
+    <value>Se anúncios</value>
+  </data>
+  <data name="WinUpgradeList7Content" xml:space="preserve">
+    <value>Apoio disponível 24 horas por dia, 7 dias por semana</value>
+  </data>
+  <data name="WinUpgradeList8Content" xml:space="preserve">
+    <value>Insira páginas de outros documentos PDF.</value>
+  </data>
+  <data name="WinUpgradeList9Content" xml:space="preserve">
+    <value>Converter Word, Excel, PPT, Imagem, RTF ou TXT para Documento PDF</value>
+  </data>
+  <data name="WinUpgradeRestorePurchase" xml:space="preserve">
+    <value>Restaurar Compra</value>
+  </data>
+  <data name="WinUpgradeTitle" xml:space="preserve">
+    <value>Desbloquear Versão Completa</value>
+  </data>
+  <data name="WinUpgradeYearBtnContent" xml:space="preserve">
+    <value>Anotar</value>
+  </data>
+  <data name="WinViewToolBackgroundDayModeText" xml:space="preserve">
+    <value>Modo Diurno</value>
+  </data>
+  <data name="WinViewToolBackgroundDefaultText" xml:space="preserve">
+    <value>Predefinido</value>
+  </data>
+  <data name="WinViewToolBackgroundEyeProtectionModeText" xml:space="preserve">
+    <value>Modo de Proteção dos Olhos</value>
+  </data>
+  <data name="WinViewToolBackgroundNightModeText" xml:space="preserve">
+    <value>Modo Noturno</value>
+  </data>
+  <data name="WinViewToolBackgroundText" xml:space="preserve">
+    <value>Fundo</value>
+  </data>
+  <data name="WinViewToolBackgroundYellowBackgroundText" xml:space="preserve">
+    <value>Fundo Amarelo</value>
+  </data>
+  <data name="WinViewToolConvertText" xml:space="preserve">
+    <value>Converter</value>
+  </data>
+  <data name="WinViewToolOpenTooltipText" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="WinViewToolPrintTooltipText" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="WinViewToolRecentFileText" xml:space="preserve">
+    <value>Arquivos recentes</value>
+  </data>
+  <data name="WinViewToolRedoTooltipText" xml:space="preserve">
+    <value>Refazer</value>
+  </data>
+  <data name="WinViewToolSaveAsTooltipText" xml:space="preserve">
+    <value>Guardar como</value>
+  </data>
+  <data name="WinViewToolSaveTooltipText" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="WinViewToolUndoTooltipText" xml:space="preserve">
+    <value>Desfazer</value>
+  </data>
+  <data name="WinWatermarkAligmentContent" xml:space="preserve">
+    <value>Alinhamento</value>
+  </data>
+  <data name="WinWatermarkCbxBottomCenterContent" xml:space="preserve">
+    <value>Centro Inferior</value>
+  </data>
+  <data name="WinWatermarkCbxBottomLeftContent" xml:space="preserve">
+    <value>Esquerda Inferior</value>
+  </data>
+  <data name="WinWatermarkCbxBottomRightContent" xml:space="preserve">
+    <value>Direita Inferior</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleCenterContent" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleLeftContent" xml:space="preserve">
+    <value>Esquerda ao Centro</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleRightContent" xml:space="preserve">
+    <value>Direita ao Centro</value>
+  </data>
+  <data name="WinWatermarkCbxTopCenterContent" xml:space="preserve">
+    <value>Superior Centro</value>
+  </data>
+  <data name="WinWatermarkCbxTopLeftContent" xml:space="preserve">
+    <value>Superior Esquerdo</value>
+  </data>
+  <data name="WinWatermarkCbxTopRightContent" xml:space="preserve">
+    <value>Superior Direito</value>
+  </data>
+  <data name="WinWatermarkCurrentpageContent" xml:space="preserve">
+    <value>Pagina atual</value>
+  </data>
+  <data name="WinWatermarkEditTiltle" xml:space="preserve">
+    <value>Editar Marca de Água</value>
+  </data>
+  <data name="WinWatermarkFileContent" xml:space="preserve">
+    <value>Ficheiro</value>
+  </data>
+  <data name="WinWatermarkFilePathEmptyMsg" xml:space="preserve">
+    <value>Não foi adicionada uma imagem da marca de água</value>
+  </data>
+  <data name="WinWatermarkNewTiltle" xml:space="preserve">
+    <value>Criar Marca de Água</value>
+  </data>
+  <data name="WinWatermarkOpacityContent" xml:space="preserve">
+    <value>Opacidade</value>
+  </data>
+  <data name="WinWatermarkRotateContent" xml:space="preserve">
+    <value>Rodar</value>
+  </data>
+  <data name="WinWatermarkSizeContent" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="WinWatermarkSourceContent" xml:space="preserve">
+    <value>Fonte</value>
+  </data>
+  <data name="WinWatermarkStyleContent" xml:space="preserve">
+    <value>Estilo</value>
+  </data>
+  <data name="WinWatermarkTextContent" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="WinWatermarkTextEmptyMsg" xml:space="preserve">
+    <value>O texto tem de ter conteúdo.</value>
+  </data>
+  <data name="WinWatermarkTileContent" xml:space="preserve">
+    <value>Mosaico</value>
+  </data>
+  <data name="WinWrongPageRangTipContent" xml:space="preserve">
+    <value>Introduza uma gama válida.</value>
+  </data>
+  <data name="WrapBookmarkMenuItemContent" xml:space="preserve">
+    <value>Envolver automaticamente marcadores longos</value>
+  </data>
+</root>

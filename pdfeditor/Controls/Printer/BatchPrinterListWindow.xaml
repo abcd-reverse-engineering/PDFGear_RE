@@ -1,0 +1,680 @@
+<Window
+	x:Class="pdfeditor.Controls.Printer.BatchPrinterListWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:commonLibCtrl="clr-namespace:CommonLib.Controls;assembly=CommonLib" xmlns:localConvert="clr-namespace:pdfeditor.Utils.Converters" xmlns:local="clr-namespace:pdfeditor.Controls.Printer"
+	Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	ResizeMode="NoResize"
+	Background="{DynamicResource BatchPrintSiderbarBackground}"
+	Title="{x:Static localprop:Resources.MainViewBatchPrintContent}"
+	SizeToContent="Height"
+	Width="800">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<localConvert:BatchPrintStatusConverter
+				x:Key="BatchPrintStatusConverter" />
+			<Style
+				x:Key="ListViewStyle"
+				TargetType="{x:Type ListView}">
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ListView}">
+							<Border
+								Name="Bd"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								BorderBrush="{DynamicResource MainViewRectangle}"
+								Background="{TemplateBinding Control.Background}"
+								SnapsToDevicePixels="True">
+								<ScrollViewer
+									Style="{DynamicResource {x:Static GridView.GridViewScrollViewerStyleKey}}"
+									Padding="{TemplateBinding Control.Padding}">
+									<ItemsPresenter
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+								</ScrollViewer>
+							</Border>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="IsEnabled"
+									Value="False">
+									<Setter
+										TargetName="Bd"
+										Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+										Property="Border.Background" />
+								</Trigger>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="Bd"
+										Value="{DynamicResource ListViewSelected}"
+										Property="Border.BorderBrush" />
+								</Trigger>
+								<MultiTrigger>
+									<MultiTrigger.Conditions>
+										<Condition
+											Property="ItemsControl.IsGrouping"
+											Value="True" />
+										<Condition
+											Property="VirtualizingPanel.IsVirtualizingWhenGrouping"
+											Value="False" />
+									</MultiTrigger.Conditions>
+									<Setter
+										Property="ScrollViewer.CanContentScroll"
+										Value="False" />
+								</MultiTrigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<ControlTemplate
+				x:Key="tmpForThumb"
+				TargetType="{x:Type Thumb}">
+				<Border>
+					<Border
+						Name="rec"
+						BorderThickness="0.5 0 1 0"
+						BorderBrush="{DynamicResource MainViewSpacerRectangle}" />
+				</Border>
+			</ControlTemplate>
+			<Style
+				x:Key="{x:Type GridViewColumnHeader}"
+				TargetType="{x:Type GridViewColumnHeader}">
+				<Setter
+					Property="FrameworkElement.OverridesDefaultStyle"
+					Value="True" />
+				<Setter
+					Property="Foreground"
+					Value="{DynamicResource TextBrushWhiteAndBlack}" />
+				<Setter
+					Property="Height"
+					Value="32" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Left" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="Padding"
+					Value="5,0,0,0" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type GridViewColumnHeader}">
+							<Grid
+								Name="g"
+								Background="{DynamicResource HotKeyListHeaderBackground}">
+								<Border
+									Name="bd"
+									Padding="{TemplateBinding Control.Padding}"
+									MaxHeight="{TemplateBinding FrameworkElement.Height}"
+									BorderThickness="{TemplateBinding Control.BorderThickness}"
+									BorderBrush="{TemplateBinding Control.BorderBrush}">
+									<ContentPresenter
+										Name="HeaderContent"
+										RecognizesAccessKey="True"
+										ContentSource="{TemplateBinding ContentControl.Content}"
+										ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+										Margin="0,4,1,3"
+										VerticalAlignment="Center"
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}">
+										<ContentPresenter.ContentTemplate>
+											<DataTemplate>
+												<commonLibCtrl:AutoTooltipTextBlock
+													Text="{Binding}" />
+											</DataTemplate>
+										</ContentPresenter.ContentTemplate>
+									</ContentPresenter>
+								</Border>
+								<Thumb
+									Name="PART_HeaderGripper"
+									HorizontalAlignment="Right"
+									Margin="0,0,-1,0"
+									Template="{StaticResource tmpForThumb}" />
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="g"
+										Value="{DynamicResource HotKeyListHeaderBackground}"
+										Property="Panel.Background" />
+								</Trigger>
+								<Trigger
+									Property="IsPressed"
+									Value="True">
+									<Setter
+										TargetName="HeaderContent"
+										Property="Margin"
+										Value="6,5,1,3" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="ListViewStyleForUC"
+				TargetType="{x:Type ListViewItem}">
+				<Style.Setters>
+					<Setter
+						Property="UIElement.SnapsToDevicePixels"
+						Value="False" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="Height"
+						Value="40" />
+					<Setter
+						Property="Padding"
+						Value="0" />
+					<Setter
+						Property="Margin"
+						Value="0" />
+					<Setter
+						Property="Foreground"
+						Value="{DynamicResource TextBrushWhiteAndBlack}" />
+					<Setter
+						Property="BorderThickness"
+						Value="0" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ListViewItem}">
+								<Grid>
+									<Border
+										x:Name="bd"
+										Background="{DynamicResource ListViewBackground2}"
+										BorderThickness="0 0 0 0.5"
+										BorderBrush="{DynamicResource MainViewSideBarBorder}"
+										Height="{TemplateBinding FrameworkElement.Height}"
+										SnapsToDevicePixels="True">
+										<GridViewRowPresenter
+											HorizontalAlignment="Stretch" />
+									</Border>
+								</Grid>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="ListBoxItem.IsSelected"
+										Value="True">
+										<Trigger.Setters>
+											<Setter
+												TargetName="bd"
+												Value="{DynamicResource ListViewIsSelected}"
+												Property="Border.Background" />
+										</Trigger.Setters>
+									</Trigger>
+									<MultiTrigger>
+										<MultiTrigger.Conditions>
+											<Condition
+												Property="UIElement.IsMouseOver"
+												Value="True" />
+											<Condition
+												Property="ListBoxItem.IsSelected"
+												Value="False" />
+										</MultiTrigger.Conditions>
+										<Setter
+											TargetName="bd"
+											Value="{DynamicResource ListViewMouseOver}"
+											Property="Border.Background" />
+									</MultiTrigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style.Setters>
+			</Style>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="60" />
+			<RowDefinition
+				Height="290" />
+			<RowDefinition
+				Height="80" />
+		</Grid.RowDefinitions>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<Button
+				x:Name="AddFileBtn"
+				Height="30"
+				MinWidth="103"
+				BorderBrush="{DynamicResource HotKeyListCellBorderBrush}"
+				BorderThickness="1"
+				Margin="20 2 0 0"
+				HorizontalAlignment="Left"
+				Style="{StaticResource DefaultButtonStyle}"
+				commonLibCtrl:UIElementExtension.CornerRadius="2"
+				ToolTip="{x:Static localprop:Resources.BatchPrintListWinAddFilesBtn}"
+				Click="AddFileBtn_Click">
+				<ContentControl.Content>
+					<Grid
+						HorizontalAlignment="Center">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Text=""
+							FontFamily="Segoe MDL2 Assets"
+							FontSize="15"
+							Foreground="#EA2732"
+							HorizontalAlignment="Right"
+							Margin="0 0 4 0"
+							VerticalAlignment="Center" />
+						<TextBlock
+							Text="{x:Static localprop:Resources.BatchPrintListWinAddFilesBtn}"
+							FontSize="12"
+							Grid.Column="1"
+							Foreground="#EA2732"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center" />
+					</Grid>
+				</ContentControl.Content>
+			</Button>
+			<Button
+				x:Name="RemoveAllBtn"
+				Height="30"
+				MinWidth="114"
+				BorderBrush="{DynamicResource HotKeyListCellBorderBrush}"
+				BorderThickness="1"
+				Grid.Column="1"
+				Margin="20 2 20 0"
+				HorizontalAlignment="Left"
+				Style="{StaticResource DefaultButtonStyle}"
+				commonLibCtrl:UIElementExtension.CornerRadius="2"
+				ToolTip="{x:Static localprop:Resources.BatchPrintListWinRemoveAllBtn}"
+				Click="RemoveAllBtn_Click">
+				<ContentControl.Content>
+					<Grid
+						HorizontalAlignment="Center">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="auto" />
+							<ColumnDefinition
+								Width="auto" />
+						</Grid.ColumnDefinitions>
+						<Image
+							Source="{DynamicResource BatchPrintRemoveFileImage}"
+							HorizontalAlignment="Right"
+							Width="18"
+							Height="18"
+							Margin="0 0 4 0"
+							VerticalAlignment="Center" />
+						<TextBlock
+							Text="{x:Static localprop:Resources.BatchPrintListWinRemoveAllBtn}"
+							FontSize="12"
+							Grid.Column="1"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center" />
+					</Grid>
+				</ContentControl.Content>
+			</Button>
+			<Rectangle
+				Height="1"
+				Fill="{DynamicResource MainViewSideBarBorder}"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Bottom"
+				Grid.ColumnSpan="4" />
+		</Grid>
+		<Grid
+			Row="1">
+			<local:StatusList
+				x:Name="lsvFiles"
+				MinHeight="290"
+				MaxHeight="400"
+				BorderThickness="1"
+				SelectionMode="Single"
+				Background="{DynamicResource SolidBrushWhiteAndBlack}"
+				ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+				Style="{StaticResource ListViewStyle}"
+				ItemContainerStyle="{StaticResource ListViewStyleForUC}"
+				BorderBrush="{DynamicResource HotKeyListCellBorderBrush}"
+				Margin="0 0 0 0"
+				SelectedItem="{Binding Path=SelectedItem}">
+				<ListView.View>
+					<GridView
+						AllowsColumnReorder="False">
+						<GridViewColumn
+							Header="{x:Static localprop:Resources.BatchPrintListWinFileNameHeader}"
+							Width="200">
+							<GridViewColumn.HeaderTemplate>
+								<DataTemplate>
+									<StackPanel
+										Orientation="Horizontal">
+										<TextBlock
+											VerticalAlignment="Center"
+											HorizontalAlignment="Left"
+											Margin="10,0,0,0"
+											Text="{Binding}" />
+									</StackPanel>
+								</DataTemplate>
+							</GridViewColumn.HeaderTemplate>
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<StackPanel
+										Orientation="Horizontal">
+										<TextBlock
+											VerticalAlignment="Center"
+											HorizontalAlignment="Left"
+											TextTrimming="CharacterEllipsis"
+											Margin="10,0,0,0"
+											FontSize="12"
+											Text="{Binding FileName}"
+											ToolTip="{Binding FilePath}" />
+									</StackPanel>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+						<GridViewColumn
+							Header="{x:Static localprop:Resources.WinPageInsertSettingBlankPageCount}"
+							Width="100">
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<StackPanel
+										Orientation="Horizontal"
+										HorizontalAlignment="Left"
+										Margin="5,0,0,0">
+										<TextBlock
+											VerticalAlignment="Center"
+											HorizontalAlignment="Center"
+											Margin="10 0 0 0"
+											FontSize="12"
+											Text="{Binding DocumentTotalPageCount}" />
+									</StackPanel>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+						<GridViewColumn
+							Header="{x:Static localprop:Resources.PrintWindowRangeGroupName}"
+							Width="150">
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<StackPanel
+										Orientation="Horizontal"
+										HorizontalAlignment="Left"
+										Margin="0 0 0 0">
+										<TextBox
+											VerticalAlignment="Center"
+											Style="{StaticResource DefaultTextBoxStyle}"
+											Height="22"
+											VerticalContentAlignment="Center"
+											Width="78"
+											HorizontalAlignment="Center"
+											Margin="5 0 0 0"
+											FontSize="12"
+											Text="{Binding PageRange}" />
+									</StackPanel>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+						<GridViewColumn
+							Header="{x:Static localprop:Resources.WinPrinterCopiesContent}"
+							Width="100">
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<StackPanel
+										Orientation="Horizontal"
+										HorizontalAlignment="Left"
+										Margin="5 0 0 0">
+										<commonLibCtrl:NumberBox
+											x:Name="tboxCopies"
+											FallbackToValidValueOnError="False"
+											Width="52"
+											Height="23"
+											IsArrowEnabled="True"
+											NumberFormat="{}{0:0}"
+											SmallChange="1"
+											Maximum="1000"
+											Minimum="1"
+											Value="{Binding Copies, Mode=TwoWay}" />
+									</StackPanel>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+						<GridViewColumn
+							Header="{x:Static localprop:Resources.BatchPrintListWinStatusHeader}"
+							Width="100">
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Grid
+										x:Name="StatusGrid">
+										<StackPanel
+											Orientation="Horizontal"
+											HorizontalAlignment="Left"
+											Margin="0 0 0 0"
+											Visibility="{Binding Path=PrintStatus, Converter='{StaticResource BatchPrintStatusConverter}', ConverterParameter=Done}">
+											<Image
+												Source="/Style/Resources/Printer/BatchPrintSucceed.png"
+												Margin="4 0 5 0"
+												Height="12"
+												Width="12"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Center" />
+											<TextBlock
+												Text="{x:Static localprop:Resources.BatchPrintWinSuccessStatus}"
+												VerticalAlignment="Center" />
+										</StackPanel>
+										<StackPanel
+											Orientation="Horizontal"
+											HorizontalAlignment="Left"
+											Margin="0 0 0 0"
+											Visibility="{Binding Path=PrintStatus, Converter='{StaticResource BatchPrintStatusConverter}', ConverterParameter=Fail}">
+											<Image
+												Source="/Style/Resources/Printer/BatchPrintFailed.png"
+												Margin="4 0 5 0"
+												Height="12"
+												Width="12"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Center" />
+											<TextBlock
+												Text="{x:Static localprop:Resources.BatchPrintWinFailStatus}"
+												VerticalAlignment="Center" />
+										</StackPanel>
+										<StackPanel
+											Orientation="Horizontal"
+											HorizontalAlignment="Left"
+											Margin="0 0 0 0"
+											Visibility="{Binding Path=PrintStatus, Converter='{StaticResource BatchPrintStatusConverter}', ConverterParameter=Printing}">
+											<commonLibCtrl:ProgressRing
+												Width="5"
+												Height="5"
+												IsActive="True"
+												Margin="4 0 5 0"
+												Foreground="#FFFF0000"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Center" />
+											<TextBlock
+												Text="{x:Static localprop:Resources.BatchPrintWinPrintingStatus}"
+												VerticalAlignment="Center" />
+										</StackPanel>
+									</Grid>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+						<GridViewColumn
+							Header="{x:Static localprop:Resources.BatchPrintListWinActionsHeader}"
+							Width="100">
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Grid
+										HorizontalAlignment="Left"
+										Width="100"
+										Background="#00FFFFFF">
+										<FrameworkElement.Resources>
+											<ResourceDictionary>
+												<Style
+													x:Key="{x:Type Button}"
+													TargetType="{x:Type Button}">
+													<Setter
+														Property="Width"
+														Value="20" />
+													<Setter
+														Property="Height"
+														Value="20" />
+													<Setter
+														Property="Background"
+														Value="#00FFFFFF" />
+													<Setter
+														Property="HorizontalAlignment"
+														Value="Left" />
+													<Setter
+														Property="BorderThickness"
+														Value="0" />
+													<Setter
+														Property="Padding"
+														Value="0" />
+													<Setter
+														Property="Template">
+														<Setter.Value>
+															<ControlTemplate
+																TargetType="{x:Type ButtonBase}">
+																<Border
+																	x:Name="bborder"
+																	BorderBrush="{TemplateBinding Control.BorderBrush}"
+																	BorderThickness="{TemplateBinding Control.BorderThickness}"
+																	Background="{TemplateBinding Control.Background}"
+																	SnapsToDevicePixels="True">
+																	<ContentPresenter
+																		x:Name="contentPresenter"
+																		Focusable="False"
+																		HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+																		Margin="{TemplateBinding Control.Padding}"
+																		RecognizesAccessKey="True"
+																		SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+																		VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+																</Border>
+																<ControlTemplate.Triggers>
+																	<Trigger
+																		Property="UIElement.IsMouseOver"
+																		Value="True">
+																		<Setter
+																			TargetName="bborder"
+																			Property="Border.CornerRadius"
+																			Value="3" />
+																		<Setter
+																			TargetName="bborder"
+																			Value="{DynamicResource MainViewPagesMouseOverBackground}"
+																			Property="Border.Background" />
+																	</Trigger>
+																	<Trigger
+																		Property="IsEnabled"
+																		Value="False">
+																		<Setter
+																			TargetName="bborder"
+																			Property="Border.BorderBrush"
+																			Value="#9F9F9F" />
+																		<Setter
+																			Property="TextBlock.Foreground"
+																			Value="#9F9F9F" />
+																		<Setter
+																			Property="UIElement.Opacity"
+																			Value="0.5" />
+																	</Trigger>
+																	<Trigger
+																		Property="IsEnabled"
+																		Value="True">
+																		<Setter
+																			TargetName="bborder"
+																			Property="Border.BorderBrush"
+																			Value="#3F3F3F" />
+																		<Setter
+																			Property="TextBlock.Foreground"
+																			Value="#3F3F3F" />
+																		<Setter
+																			Property="UIElement.Opacity"
+																			Value="1" />
+																	</Trigger>
+																</ControlTemplate.Triggers>
+															</ControlTemplate>
+														</Setter.Value>
+													</Setter>
+												</Style>
+											</ResourceDictionary>
+										</FrameworkElement.Resources>
+										<Button
+											x:Name="singleFileSettingsBtn"
+											ToolTip="{x:Static localprop:Resources.MenuHelperSettingContent}"
+											Margin="0 0 0 0"
+											Command="{Binding SettingCmd}">
+											<Image
+												Source="{DynamicResource BatchPrintSettingsBtnImage}" />
+										</Button>
+										<Button
+											x:Name="deleteBtn"
+											Margin="30 0 0 0"
+											ToolTip="{x:Static localprop:Resources.ImagemanipulationDelete}"
+											Command="{Binding RemoveCmd}">
+											<Image
+												Source="{DynamicResource BatchPrintDeleteBtnImage}" />
+										</Button>
+									</Grid>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+					</GridView>
+				</ListView.View>
+			</local:StatusList>
+		</Grid>
+		<Grid
+			Row="2"
+			Background="{DynamicResource BatchPrintSiderbarBackground}">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="*" />
+				<ColumnDefinition
+					Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Button
+				Name="btnSettings"
+				Grid.Column="0"
+				HorizontalAlignment="Right"
+				Style="{StaticResource DialogButtonStyle}"
+				FontSize="12"
+				MinWidth="120"
+				Margin="20 0"
+				Content="{x:Static localprop:Resources.BatchPrintPrintSettingsBtn}"
+				Click="btnSettings_Click" />
+			<Button
+				Name="btnPrint"
+				Grid.Column="1"
+				MinWidth="120"
+				Style="{StaticResource PrimaryDialogButtonStyle}"
+				FontSize="12"
+				Content="{x:Static localprop:Resources.BatchPrintPrintAllBtn}"
+				Margin="10 0 20 0"
+				Click="btnPrint_Click" />
+		</Grid>
+		<Grid
+			x:Name="ProgressBackground"
+			Background="#99FFFFFF"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch"
+			RowSpan="3"
+			Visibility="Collapsed">
+			<commonLibCtrl:ProgressRing
+				Width="40"
+				Height="40"
+				Visibility="{Binding ElementName=ProgressBackground, Path=Visibility}"
+				IsActive="{Binding ElementName=ProgressBackground, Path=IsVisible}" />
+		</Grid>
+	</Grid>
+</Window>

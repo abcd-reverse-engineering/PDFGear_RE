@@ -1,0 +1,390 @@
+<Window
+	x:Class="FileWatcher.Views.NotifyView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:FileWatcher.Views" xmlns:localprop="clr-namespace:FileWatcher.Properties" xmlns:commonCtrl="clr-namespace:CommonLib.Controls;assembly=CommonLib"
+	ResizeMode="NoResize"
+	AllowsTransparency="True"
+	WindowStyle="None"
+	Background="#00FFFFFF"
+	TextBlock.Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Title="NotifyView"
+	Height="152"
+	SizeToContent="Height"
+	Width="400"
+	Topmost="True"
+	ShowInTaskbar="False">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<Storyboard
+				x:Key="ShowWindow">
+				<DoubleAnimation
+					Storyboard.TargetName="LayoutRoot"
+					Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+					From="400"
+					To="0"
+					Duration="0:0:0.3">
+					<DoubleAnimation.EasingFunction>
+						<ExponentialEase
+							Exponent="7"
+							EasingMode="EaseOut" />
+					</DoubleAnimation.EasingFunction>
+				</DoubleAnimation>
+				<DoubleAnimation
+					Storyboard.TargetName="BackgroundRect"
+					Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)"
+					From="0"
+					To="0.4"
+					Duration="0:0:0.3">
+					<DoubleAnimation.EasingFunction>
+						<ExponentialEase
+							Exponent="7"
+							EasingMode="EaseOut" />
+					</DoubleAnimation.EasingFunction>
+				</DoubleAnimation>
+			</Storyboard>
+			<Storyboard
+				x:Key="HideWindow">
+				<DoubleAnimation
+					Storyboard.TargetName="LayoutRoot"
+					Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+					From="0"
+					To="400"
+					Duration="0:0:0.15">
+					<DoubleAnimation.EasingFunction>
+						<ExponentialEase
+							Exponent="4.5"
+							EasingMode="EaseIn" />
+					</DoubleAnimation.EasingFunction>
+				</DoubleAnimation>
+				<DoubleAnimation
+					Storyboard.TargetName="BackgroundRect"
+					Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)"
+					From="0.4"
+					To="0"
+					Duration="0:0:0.15">
+					<DoubleAnimation.EasingFunction>
+						<ExponentialEase
+							Exponent="4.5"
+							EasingMode="EaseIn" />
+					</DoubleAnimation.EasingFunction>
+				</DoubleAnimation>
+			</Storyboard>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid
+		x:Name="LayoutRoot">
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<SolidColorBrush
+					x:Key="DialogButton.Static.Background"
+					Color="#FFFFFFFF" />
+				<SolidColorBrush
+					x:Key="DialogButton.Static.Border"
+					Color="#FFBBBBBB" />
+				<SolidColorBrush
+					x:Key="DialogButton.Static.Foreground"
+					Color="#FF000000" />
+				<SolidColorBrush
+					x:Key="DialogButton.Disabled.Background"
+					Color="#FFF4F4F4" />
+				<SolidColorBrush
+					x:Key="DialogButton.Disabled.Border"
+					Color="#FFF4F4F4" />
+				<SolidColorBrush
+					x:Key="DialogButton.Disabled.Foreground"
+					Color="#FF838383" />
+				<Style
+					x:Key="DialogButtonFocusVisual">
+					<Setter
+						Property="Control.Template">
+						<Setter.Value>
+							<ControlTemplate>
+								<Rectangle
+									Margin="-1"
+									SnapsToDevicePixels="False"
+									Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+									StrokeThickness="1"
+									RadiusX="2"
+									RadiusY="2"
+									Opacity="0.6" />
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+				<Style
+					x:Key="DialogButtonStyle"
+					TargetType="{x:Type ButtonBase}">
+					<Setter
+						Property="Background"
+						Value="{StaticResource DialogButton.Static.Background}" />
+					<Setter
+						Property="BorderBrush"
+						Value="{StaticResource DialogButton.Static.Border}" />
+					<Setter
+						Property="Foreground"
+						Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+					<Setter
+						Property="BorderThickness"
+						Value="1" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="Center" />
+					<Setter
+						Property="VerticalContentAlignment"
+						Value="Center" />
+					<Setter
+						Property="VerticalAlignment"
+						Value="Center" />
+					<Setter
+						Property="Padding"
+						Value="8" />
+					<Setter
+						Property="MinWidth"
+						Value="80" />
+					<Setter
+						Property="FrameworkElement.FocusVisualStyle"
+						Value="{StaticResource DialogButtonFocusVisual}" />
+					<Setter
+						Property="local:NotifyView.CornerRadius"
+						Value="4" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ButtonBase}">
+								<Border
+									x:Name="border"
+									CornerRadius="{TemplateBinding local:NotifyView.CornerRadius}"
+									BorderThickness="{TemplateBinding Control.BorderThickness}"
+									Background="{TemplateBinding Control.Background}"
+									BorderBrush="{TemplateBinding Control.BorderBrush}"
+									SnapsToDevicePixels="True">
+									<Grid>
+										<Rectangle
+											x:Name="BackgroundBorder"
+											HorizontalAlignment="Stretch"
+											VerticalAlignment="Stretch"
+											Fill="#FF000000"
+											Opacity="0"
+											SnapsToDevicePixels="False"
+											RadiusX="2"
+											RadiusY="2" />
+										<ContentPresenter
+											x:Name="contentPresenter"
+											RecognizesAccessKey="True"
+											Margin="{TemplateBinding Control.Padding}"
+											SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+											HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+											VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+											Focusable="False" />
+									</Grid>
+								</Border>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="UIElement.IsMouseOver"
+										Value="True">
+										<Setter
+											TargetName="BackgroundBorder"
+											Property="UIElement.Opacity"
+											Value="0.04" />
+									</Trigger>
+									<Trigger
+										Property="IsPressed"
+										Value="True">
+										<Setter
+											TargetName="BackgroundBorder"
+											Property="UIElement.Opacity"
+											Value="0.12" />
+									</Trigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="False">
+										<Setter
+											TargetName="border"
+											Property="Border.Background"
+											Value="{StaticResource DialogButton.Disabled.Background}" />
+										<Setter
+											TargetName="border"
+											Property="Border.BorderBrush"
+											Value="{StaticResource DialogButton.Disabled.Border}" />
+										<Setter
+											TargetName="contentPresenter"
+											Property="TextElement.Foreground"
+											Value="{StaticResource DialogButton.Disabled.Foreground}" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+				<Style
+					x:Key="OptionMarkFocusVisual">
+					<Setter
+						Property="Control.Template">
+						<Setter.Value>
+							<ControlTemplate>
+								<Rectangle
+									Margin="14,0,0,0"
+									SnapsToDevicePixels="True"
+									Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+									StrokeThickness="1"
+									RadiusX="2"
+									RadiusY="2"
+									Opacity="0.6" />
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+				<Style
+					x:Key="ModernCheckBoxStyle"
+					TargetType="{x:Type CheckBox}"
+					BasedOn="{StaticResource DefaultCheckBoxStyle}">
+					<Setter
+						Property="local:NotifyView.CornerRadius"
+						Value="4" />
+				</Style>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<UIElement.RenderTransform>
+			<TranslateTransform />
+		</UIElement.RenderTransform>
+		<Grid
+			Margin="20">
+			<Rectangle
+				x:Name="BackgroundRect"
+				RadiusX="8"
+				RadiusY="8"
+				Fill="{DynamicResource FileWatchBackground}"
+				StrokeThickness="1"
+				Stroke="#66999999">
+				<UIElement.Effect>
+					<DropShadowEffect
+						BlurRadius="12"
+						Direction="-90"
+						ShadowDepth="6"
+						Opacity="0.4" />
+				</UIElement.Effect>
+			</Rectangle>
+			<Grid
+				Margin="12">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="Auto" />
+					<RowDefinition
+						Height="*" />
+					<RowDefinition
+						Height="Auto" />
+				</Grid.RowDefinitions>
+				<Grid>
+					<TextBlock
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+						Text="{x:Static localprop:Resources.WinRecivedFileTitle}"
+						FontSize="12" />
+				</Grid>
+				<Grid
+					Row="1"
+					Margin="0,12,0,0">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="Auto" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="Auto" />
+					</Grid.ColumnDefinitions>
+					<Image
+						x:Name="LeftImage"
+						Grid.Row="1"
+						Width="32"
+						Height="32"
+						Margin="0,0,8,0"
+						VerticalAlignment="Center"
+						Source="/Assets/logo.png">
+						<UIElement.Clip>
+							<RectangleGeometry
+								RadiusX="4"
+								RadiusY="4"
+								Rect="0,0,32,32" />
+						</UIElement.Clip>
+					</Image>
+					<TextBlock
+						x:Name="FileName"
+						Grid.Column="1"
+						Grid.Row="1"
+						FontSize="12"
+						Text="Simple.pdf"
+						TextTrimming="CharacterEllipsis"
+						Margin="0,4"
+						VerticalAlignment="Center" />
+					<TextBlock
+						x:Name="FilePath"
+						Grid.Column="1"
+						Grid.Row="1"
+						Text="C:/Test/Test/Test/Test/Test/Test/Test/Test/Test/Simple.pdf"
+						TextTrimming="CharacterEllipsis"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+						Foreground="#66000000"
+						Visibility="Collapsed" />
+					<TextBlock
+						x:Name="FileSize"
+						Grid.Column="1"
+						Grid.Row="1"
+						Text="12MB"
+						VerticalAlignment="Center"
+						Foreground="#CC000000"
+						Visibility="Collapsed" />
+					<StackPanel
+						Grid.Column="2"
+						Grid.Row="1"
+						VerticalAlignment="Stretch"
+						Orientation="Horizontal">
+						<Button
+							x:Name="Open"
+							Style="{StaticResource DialogButtonStyle}"
+							Background="#EF5B52"
+							MinWidth="72"
+							VerticalAlignment="Center"
+							BorderThickness="0"
+							Foreground="#FFFFFF"
+							Content="{x:Static localprop:Resources.WinRecivedBtnOpenFile}"
+							Click="OpenButton_Click" />
+					</StackPanel>
+				</Grid>
+				<CheckBox
+					x:Name="DisableFileWatcherCheckBox"
+					Style="{StaticResource ModernCheckBoxStyle}"
+					Grid.Row="2"
+					Margin="0,12,0,0"
+					HorizontalAlignment="Left"
+					Content="{x:Static localprop:Resources.WinRecivedNotshowagainContent}"
+					local:NotifyView.CornerRadius="2"
+					Click="DisableFileWatcherCheckBox_Click" />
+			</Grid>
+			<Button
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Padding="2"
+				Style="{StaticResource DialogButtonStyle}"
+				MinWidth="0"
+				MinHeight="0"
+				Margin="4"
+				BorderBrush="#00FFFFFF"
+				BorderThickness="0"
+				Background="#00FFFFFF"
+				Click="Close_Click">
+				<Path
+					Fill="{DynamicResource TextBrushWhiteAndBlack}"
+					Data="F1 M10,11.416016 L1.708984,19.707031 C1.513672,19.902344 1.279297,20 1.005859,20 C0.719401,20 0.480143,19.903971 0.288086,19.711914 C0.096029,19.519857 0,19.2806 0,18.994141 C0,18.720703 0.097656,18.486328 0.292969,18.291016 L8.583984,10 L0.292969,1.708984 C0.097656,1.513672 0,1.276043 0,0.996094 C0,0.859375 0.026042,0.729168 0.078125,0.605469 C0.130208,0.481771 0.201823,0.375977 0.292969,0.288086 C0.384115,0.200195 0.491536,0.130209 0.615234,0.078125 C0.738932,0.026043 0.869141,0 1.005859,0 C1.279297,0 1.513672,0.097656 1.708984,0.292969 L10,8.583984 L18.291016,0.292969 C18.486328,0.097656 18.723957,0 19.003906,0 C19.140625,0 19.269205,0.026043 19.389648,0.078125 C19.51009,0.130209 19.615885,0.201824 19.707031,0.292969 C19.798176,0.384115 19.869791,0.48991 19.921875,0.610352 C19.973957,0.730795 20,0.859375 20,0.996094 C20,1.276043 19.902344,1.513672 19.707031,1.708984 L11.416016,10 L19.707031,18.291016 C19.902344,18.486328 20,18.720703 20,18.994141 C20,19.130859 19.973957,19.261068 19.921875,19.384766 C19.869791,19.508463 19.799805,19.615885 19.711914,19.707031 C19.624023,19.798178 19.518229,19.869791 19.394531,19.921875 C19.270832,19.973959 19.140625,20 19.003906,20 C18.723957,20 18.486328,19.902344 18.291016,19.707031 Z"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"
+					RenderTransformOrigin="0.5,0.5">
+					<UIElement.RenderTransform>
+						<ScaleTransform
+							ScaleX="0.4"
+							ScaleY="0.4" />
+					</UIElement.RenderTransform>
+				</Path>
+			</Button>
+		</Grid>
+	</Grid>
+</Window>

@@ -1,0 +1,1476 @@
+<Window
+	x:Class="pdfconverter.Views.PDFToImageWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:colorpickers="clr-namespace:CommonLib.Controls.ColorPickers;assembly=CommonLib" xmlns:commonLibCtrl="clr-namespace:CommonLib.Controls;assembly=CommonLib" xmlns:pdfconverter="clr-namespace:pdfconverter" xmlns:controls="clr-namespace:pdfconverter.Controls" xmlns:convert="clr-namespace:pdfconverter.Convert" xmlns:localprop="clr-namespace:pdfconverter.Properties" xmlns:converters="clr-namespace:pdfconverter.Utils.Converters" xmlns:local="clr-namespace:pdfconverter.Views"
+	Height="690"
+	Width="1090"
+	Background="{DynamicResource WindowsBackground}"
+	TextBlock.Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	WindowStartupLocation="CenterScreen"
+	Title="PDFgear"
+	ResizeMode="NoResize">
+	<Grid>
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<Style
+					x:Key="Title"
+					TargetType="{x:Type TextBlock}">
+					<Setter
+						Property="FontSize"
+						Value="12" />
+					<Setter
+						Property="VerticalAlignment"
+						Value="Center" />
+					<Setter
+						Property="HorizontalAlignment"
+						Value="Left" />
+					<Setter
+						Property="TextBlock.LineHeight"
+						Value="13" />
+				</Style>
+				<Style
+					x:Key="BtnIconStyle"
+					TargetType="{x:Type ButtonBase}">
+					<Setter
+						Property="Height"
+						Value="25" />
+					<Setter
+						Property="Background"
+						Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+					<Setter
+						Property="BorderThickness"
+						Value="0" />
+					<Setter
+						Property="TextBlock.Foreground"
+						Value="{DynamicResource MainViewBtnInfoStyleText}" />
+					<Setter
+						Property="TextBlock.FontSize"
+						Value="12" />
+					<Setter
+						Property="TextBlock.TextAlignment"
+						Value="Center" />
+					<Setter
+						Property="TextBlock.FontSize"
+						Value="12" />
+					<Setter
+						Property="TextBlock.FontStyle"
+						Value="Normal" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="Padding"
+						Value="4,0" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ButtonBase}">
+								<Border
+									x:Name="bborder"
+									BorderBrush="{TemplateBinding Control.BorderBrush}"
+									BorderThickness="{TemplateBinding Control.BorderThickness}"
+									Background="{TemplateBinding Control.Background}"
+									SnapsToDevicePixels="True">
+									<ContentPresenter
+										x:Name="contentPresenter"
+										Focusable="False"
+										HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+										Margin="{TemplateBinding Control.Padding}"
+										RecognizesAccessKey="True"
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+										VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+								</Border>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="UIElement.IsMouseOver"
+										Value="True">
+										<Setter
+											TargetName="bborder"
+											Property="Border.CornerRadius"
+											Value="3" />
+										<Setter
+											TargetName="bborder"
+											Property="Border.BorderBrush"
+											Value="#FFBABA" />
+										<Setter
+											TargetName="bborder"
+											Value="{DynamicResource BtnInfoMouseOverColor}"
+											Property="Border.Background" />
+									</Trigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="False">
+										<Setter
+											TargetName="bborder"
+											Value="{DynamicResource MainViewUndoRedoUnEnabled}"
+											Property="Border.BorderBrush" />
+										<Setter
+											Value="{DynamicResource MainViewUndoRedoUnEnabled}"
+											Property="TextBlock.Foreground" />
+									</Trigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="True">
+										<Setter
+											TargetName="bborder"
+											Value="{DynamicResource MainViewUndoRedoEnabled}"
+											Property="Border.BorderBrush" />
+										<Setter
+											Value="{DynamicResource MainViewUndoRedoEnabled}"
+											Property="TextBlock.Foreground" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+				<Style
+					x:Key="DialogButtonFocusVisual">
+					<Setter
+						Property="Control.Template">
+						<Setter.Value>
+							<ControlTemplate>
+								<Rectangle
+									Margin="-1"
+									SnapsToDevicePixels="False"
+									Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+									StrokeThickness="1"
+									RadiusX="2"
+									RadiusY="2"
+									Opacity="0.6" />
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+				<Style
+					x:Key="{x:Type ListViewItem}"
+					TargetType="{x:Type ListViewItem}">
+					<Setter
+						Property="Height"
+						Value="50" />
+					<Setter
+						Property="FontSize"
+						Value="12" />
+					<Setter
+						Property="Foreground"
+						Value="{DynamicResource TextBrushWhiteAndBlack}" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="Background"
+						Value="{DynamicResource ListViewBackground2}" />
+				</Style>
+				<Style
+					x:Key="{x:Type GridViewColumnHeader}"
+					TargetType="{x:Type GridViewColumnHeader}">
+					<Setter
+						Property="Height"
+						Value="37" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="Padding"
+						Value="0,0,0,0" />
+					<Setter
+						Property="Margin"
+						Value="-5,0,0,0" />
+					<Setter
+						Property="Background"
+						Value="{DynamicResource MainWindowFootbarBackground}" />
+					<Setter
+						Property="Foreground"
+						Value="{DynamicResource TextBrushWhiteAndBlack}" />
+					<Setter
+						Property="FontSize"
+						Value="12" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type GridViewColumnHeader}">
+								<Grid>
+									<Rectangle
+										Fill="#00FFFFFF"
+										IsHitTestVisible="True" />
+									<Border
+										x:Name="HeaderBorder"
+										Padding="{TemplateBinding Control.Padding}"
+										Background="{TemplateBinding Control.Background}"
+										BorderThickness="{TemplateBinding Control.BorderThickness}"
+										BorderBrush="{TemplateBinding Control.BorderBrush}">
+										<ContentPresenter
+											x:Name="HeaderContent"
+											Content="{TemplateBinding ContentControl.Content}"
+											ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+											Margin="8,1"
+											VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+											HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+											RecognizesAccessKey="True"
+											SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+									</Border>
+									<Thumb
+										x:Name="PART_HeaderGripper"
+										HorizontalAlignment="Right"
+										Margin="0,0,0,0"
+										Style="{StaticResource GridViewColumnHeaderGripper}" />
+								</Grid>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="IsPressed"
+										Value="True">
+										<Setter
+											TargetName="HeaderContent"
+											Property="Margin"
+											Value="6,1,6,1" />
+									</Trigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="False">
+										<Setter
+											Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
+											Property="Foreground" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+					<Style.Triggers>
+						<Trigger
+							Property="GridViewColumnHeader.Role"
+							Value="Padding">
+							<Setter
+								Property="Template">
+								<Setter.Value>
+									<ControlTemplate
+										TargetType="{x:Type GridViewColumnHeader}">
+										<Border
+											Name="HeaderBorder2"
+											BorderThickness="0"
+											BorderBrush="{TemplateBinding Control.BorderBrush}"
+											Background="{TemplateBinding Control.Background}" />
+										<ControlTemplate.Triggers>
+											<Trigger
+												Property="Height"
+												Value="Auto">
+												<Setter
+													Property="MinHeight"
+													Value="20" />
+											</Trigger>
+										</ControlTemplate.Triggers>
+									</ControlTemplate>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</Style.Triggers>
+				</Style>
+				<SolidColorBrush
+					x:Key="TextBox.Static.Background"
+					Color="#FFFFFFFF" />
+				<SolidColorBrush
+					x:Key="TextBox.Static.Border"
+					Color="#2D000000" />
+				<SolidColorBrush
+					x:Key="TextBox.MouseOver.Border"
+					Color="#33000000" />
+				<SolidColorBrush
+					x:Key="TextBox.Focus.Border"
+					Color="#40000000" />
+				<SolidColorBrush
+					x:Key="TextBox.Error.Border"
+					Color="#FFFF0000" />
+				<Style
+					x:Key="Style_PageRangeTextBox2"
+					TargetType="{x:Type controls:PageRangeTextBox}">
+					<Setter
+						Property="Background"
+						Value="{DynamicResource ThemesPageRangeTextbox}" />
+					<Setter
+						Property="BorderBrush"
+						Value="{StaticResource TextBox.Static.Border}" />
+					<Setter
+						Property="Foreground"
+						Value="{DynamicResource TextBrushWhiteAndBlack}" />
+					<Setter
+						Property="BorderThickness"
+						Value="1" />
+					<Setter
+						Property="Padding"
+						Value="1" />
+					<Setter
+						Property="KeyboardNavigation.TabNavigation"
+						Value="None" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="Left" />
+					<Setter
+						Property="FrameworkElement.FocusVisualStyle"
+						Value="{x:Null}" />
+					<Setter
+						Property="UIElement.AllowDrop"
+						Value="True" />
+					<Setter
+						Property="ScrollViewer.PanningMode"
+						Value="VerticalFirst" />
+					<Setter
+						Property="Stylus.IsFlicksEnabled"
+						Value="False" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type controls:PageRangeTextBox}">
+								<Grid>
+									<Border
+										x:Name="border"
+										Tag="{TemplateBinding TextBox.Text}"
+										Background="#00FFFFFF"
+										BorderBrush="{DynamicResource MainViewRectangle}"
+										BorderThickness="{TemplateBinding Control.BorderThickness}"
+										SnapsToDevicePixels="True"
+										Panel.ZIndex="2">
+										<ScrollViewer
+											x:Name="PART_ContentHost"
+											Focusable="False"
+											HorizontalScrollBarVisibility="Hidden"
+											VerticalScrollBarVisibility="Hidden" />
+									</Border>
+									<TextBox
+										Text="{TemplateBinding FrameworkElement.Tag}"
+										FontSize="12"
+										Background="{TemplateBinding Control.Background}"
+										IsHitTestVisible="False"
+										VerticalContentAlignment="Center"
+										Panel.ZIndex="1">
+										<FrameworkElement.Style>
+											<Style
+												TargetType="{x:Type TextBox}">
+												<Setter
+													Property="Foreground"
+													Value="#00FFFFFF" />
+												<Setter
+													Property="HorizontalAlignment"
+													Value="Stretch" />
+												<Style.Triggers>
+													<DataTrigger
+														Value=""
+														Binding="{Binding Tag, Source={x:Reference border}}">
+														<Setter
+															Property="Foreground"
+															Value="{DynamicResource PageRangePlaceHoder}" />
+														<Setter
+															Property="TextBox.TextWrapping"
+															Value="NoWrap" />
+														<Setter
+															Property="Padding"
+															Value="0,0,0,0" />
+														<Setter
+															Property="HorizontalContentAlignment"
+															Value="Left" />
+														<Setter
+															Property="VerticalContentAlignment"
+															Value="Top" />
+													</DataTrigger>
+												</Style.Triggers>
+											</Style>
+										</FrameworkElement.Style>
+									</TextBox>
+								</Grid>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="IsEnabled"
+										Value="False">
+										<Setter
+											TargetName="border"
+											Property="UIElement.Opacity"
+											Value="0.56" />
+									</Trigger>
+									<Trigger
+										Property="UIElement.IsMouseOver"
+										Value="True">
+										<Setter
+											TargetName="border"
+											Property="Border.BorderBrush"
+											Value="{StaticResource TextBox.MouseOver.Border}" />
+									</Trigger>
+									<Trigger
+										Property="UIElement.IsKeyboardFocused"
+										Value="True">
+										<Setter
+											TargetName="border"
+											Property="Border.BorderBrush"
+											Value="{StaticResource TextBox.Focus.Border}" />
+									</Trigger>
+									<MultiTrigger>
+										<MultiTrigger.Conditions>
+											<Condition
+												Property="UIElement.IsFocused"
+												Value="False" />
+											<Condition
+												Property="controls:PageRangeTextBox.HasError"
+												Value="True" />
+										</MultiTrigger.Conditions>
+										<Setter
+											TargetName="border"
+											Property="Border.BorderBrush"
+											Value="{StaticResource TextBox.Error.Border}" />
+									</MultiTrigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+					<Style.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="TextBoxBase.IsInactiveSelectionHighlightEnabled"
+									Value="True" />
+								<Condition
+									Property="TextBoxBase.IsSelectionActive"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<Setter
+								Property="TextBoxBase.SelectionBrush"
+								Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" />
+						</MultiTrigger>
+					</Style.Triggers>
+				</Style>
+				<DrawingBrush
+					x:Key="DottedLineDrawingBrush"
+					Viewport="0,0,4,4"
+					ViewportUnits="Absolute"
+					TileMode="Tile">
+					<DrawingBrush.Drawing>
+						<DrawingGroup>
+							<GeometryDrawing
+								Brush="#80FBD6D4">
+								<GeometryDrawing.Geometry>
+									<GeometryGroup>
+										<RectangleGeometry
+											Rect="0,0,50,50" />
+										<RectangleGeometry
+											Rect="50,50,50,50" />
+									</GeometryGroup>
+								</GeometryDrawing.Geometry>
+							</GeometryDrawing>
+						</DrawingGroup>
+					</DrawingBrush.Drawing>
+				</DrawingBrush>
+				<GeometryGroup
+					x:Key="ZoomIcon">
+					<PathGeometry
+						Figures="M10 5H6C5.44772 5 5 5.44772 5 6V16C5 16.5523 5.44772 17 6 17H16C16.5523 17 17 16.5523 17 16V12M17 5L9 13M17 5H14M17 5V8M9 13V10M9 13H12" />
+				</GeometryGroup>
+				<GeometryGroup
+					x:Key="QuestionIcon">
+					<Geometry>M 8,1.33333C 4.31805,1.33333 1.33334,4.31902 1.33334,8.00002C 1.33334,11.681 4.31805,14.6667 8,14.6667C 11.6818,14.6667 14.6667,11.6799 14.6667,8.00002C 14.6667,4.31902 11.682,1.33333 8,1.33333 Z M 0,8.00002C 0,3.58278 3.58154,1.52588e-005 8,1.52588e-005C 12.4185,1.52588e-005 16,3.58278 16,8.00002C 16,12.416 12.4185,16 8,16C 3.58154,16 0,12.4173 0,8.00002 Z</Geometry>
+					<Geometry>F1 M 7.19006,9.25856L 8.5661,9.25856C 8.4061,7.77589 10.7314,7.59456 10.7314,6.02657C 10.7314,4.60789 9.60077,3.89323 8.05408,3.89323C 6.91278,3.89323 5.97409,4.40523 5.30209,5.19456L 6.17676,6.00523C 6.69943,5.45058 7.22211,5.16255 7.88342,5.16255C 8.71542,5.16255 9.22742,5.52522 9.22742,6.16524C 9.22742,7.19991 6.96606,7.58391 7.19006,9.25856 Z M 7.88342,12.0959C 8.42743,12.0959 8.82208,11.7119 8.82208,11.1572C 8.82208,10.5919 8.42743,10.2079 7.88342,10.2079C 7.3501,10.2079 6.94476,10.5919 6.94476,11.1572C 6.94476,11.7119 7.33942,12.0959 7.88342,12.0959 Z</Geometry>
+				</GeometryGroup>
+				<BooleanToVisibilityConverter
+					x:Key="BooleanToVisibilityConverter" />
+				<pdfconverter:PageCountProgressRingActive
+					x:Key="PageCountProgressRingActive" />
+				<pdfconverter:FileSelectIsEnabled
+					x:Key="FileSelectIsEnabled" />
+				<pdfconverter:ConvertStatusProgressRingActive
+					x:Key="ConvertStatusProgressRingActive" />
+				<pdfconverter:ConvertStatusImage
+					x:Key="ConvertStatusImage" />
+				<pdfconverter:ConvertStatusImageVisibility
+					x:Key="ConvertStatusImageVisibility" />
+				<pdfconverter:ConvertFailedStatusImageVisibility
+					x:Key="ConvertFailedStatusImageVisibility" />
+				<pdfconverter:ConvertStatusToStr
+					x:Key="ConvertStatusToStr" />
+				<pdfconverter:OperationOpenBtnVisibility
+					x:Key="OperationOpenBtnVisibility" />
+				<pdfconverter:OperationDeleteBtnVisibility
+					x:Key="OperationDeleteBtnVisibility" />
+				<pdfconverter:PageCountVisibility
+					x:Key="PageCountVisibility" />
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Border
+			BorderThickness="1"
+			BorderBrush="{DynamicResource MainViewRectangle}">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="631" />
+					<ColumnDefinition
+						Width="Auto" />
+					<ColumnDefinition
+						Width="*" />
+				</Grid.ColumnDefinitions>
+				<Grid
+					x:Name="Gd_BatchConvert"
+					AllowDrop="True"
+					DragEnter="Gd_BatchConvert_DragEnter"
+					Drop="Gd_BatchConvert_Drop">
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="Auto" />
+						<RowDefinition
+							Height="*" />
+					</Grid.RowDefinitions>
+					<Border
+						BorderThickness="0,0,0,1"
+						BorderBrush="{DynamicResource MainViewRectangle}">
+						<Grid
+							Background="{DynamicResource MainWindowBannerBackgroundOffset}">
+							<Border
+								CornerRadius="2"
+								BorderThickness="1"
+								Background="{DynamicResource PDFToImageWindowInnerBackgroundColor}"
+								BorderBrush="{StaticResource DottedLineDrawingBrush}"
+								Margin="16">
+								<StackPanel
+									HorizontalAlignment="Center">
+									<Button
+										x:Name="Btn_AddFile"
+										HorizontalAlignment="Center"
+										Margin="0,24,0,6"
+										Padding="10,0,10,0"
+										MinWidth="166"
+										Height="40"
+										Background="#FFFFFFFF"
+										BorderThickness="0"
+										Style="{DynamicResource ButtonStyle1}"
+										Click="Btn_AddFiles_Click">
+										<FrameworkElement.Resources>
+											<ResourceDictionary>
+												<Style
+													x:Key="{x:Type Border}"
+													TargetType="{x:Type Border}">
+													<Setter
+														Property="Border.CornerRadius"
+														Value="2" />
+												</Style>
+												<Style
+													x:Key="FocusVisual">
+													<Setter
+														Property="Control.Template">
+														<Setter.Value>
+															<ControlTemplate>
+																<Rectangle
+																	Margin="2"
+																	SnapsToDevicePixels="True"
+																	Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+																	StrokeThickness="1"
+																	StrokeDashArray="1 2" />
+															</ControlTemplate>
+														</Setter.Value>
+													</Setter>
+												</Style>
+												<SolidColorBrush
+													x:Key="Button.Static.Background"
+													Color="#FFDDDDDD" />
+												<SolidColorBrush
+													x:Key="Button.Static.Border"
+													Color="#FF707070" />
+												<SolidColorBrush
+													x:Key="Button.MouseOver.Background"
+													Color="#FFFDEAE9" />
+												<SolidColorBrush
+													x:Key="Button.MouseOver.Border"
+													Color="#FF3C7FB1" />
+												<SolidColorBrush
+													x:Key="Button.Pressed.Background"
+													Color="#FFFBD6D4" />
+												<SolidColorBrush
+													x:Key="Button.Pressed.Border"
+													Color="#FF2C628B" />
+												<SolidColorBrush
+													x:Key="Button.Disabled.Background"
+													Color="#FFF4F4F4" />
+												<SolidColorBrush
+													x:Key="Button.Disabled.Border"
+													Color="#FFADB2B5" />
+												<SolidColorBrush
+													x:Key="Button.Disabled.Foreground"
+													Color="#FF838383" />
+												<Style
+													x:Key="ButtonStyle1"
+													TargetType="{x:Type Button}">
+													<Setter
+														Property="FrameworkElement.FocusVisualStyle"
+														Value="{StaticResource FocusVisual}" />
+													<Setter
+														Property="Background"
+														Value="{StaticResource Button.Static.Background}" />
+													<Setter
+														Property="BorderBrush"
+														Value="{StaticResource Button.Static.Border}" />
+													<Setter
+														Property="Foreground"
+														Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+													<Setter
+														Property="BorderThickness"
+														Value="1" />
+													<Setter
+														Property="FontSize"
+														Value="12" />
+													<Setter
+														Property="HorizontalContentAlignment"
+														Value="Center" />
+													<Setter
+														Property="VerticalContentAlignment"
+														Value="Center" />
+													<Setter
+														Property="Padding"
+														Value="1" />
+													<Setter
+														Property="Template">
+														<Setter.Value>
+															<ControlTemplate
+																TargetType="{x:Type Button}">
+																<Border
+																	x:Name="border"
+																	BorderBrush="{TemplateBinding Control.BorderBrush}"
+																	BorderThickness="{TemplateBinding Control.BorderThickness}"
+																	Background="{TemplateBinding Control.Background}"
+																	SnapsToDevicePixels="True">
+																	<ContentPresenter
+																		x:Name="contentPresenter"
+																		Focusable="False"
+																		HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+																		Margin="{TemplateBinding Control.Padding}"
+																		RecognizesAccessKey="True"
+																		SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+																		VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+																</Border>
+																<ControlTemplate.Triggers>
+																	<Trigger
+																		Property="Button.IsDefaulted"
+																		Value="True">
+																		<Setter
+																			TargetName="border"
+																			Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+																			Property="Border.BorderBrush" />
+																	</Trigger>
+																	<Trigger
+																		Property="UIElement.IsMouseOver"
+																		Value="True">
+																		<Setter
+																			TargetName="border"
+																			Property="Border.Background"
+																			Value="{StaticResource Button.MouseOver.Background}" />
+																		<Setter
+																			TargetName="border"
+																			Property="Border.BorderBrush"
+																			Value="{StaticResource Button.MouseOver.Border}" />
+																	</Trigger>
+																	<Trigger
+																		Property="IsPressed"
+																		Value="True">
+																		<Setter
+																			TargetName="border"
+																			Property="Border.Background"
+																			Value="{StaticResource Button.Pressed.Background}" />
+																		<Setter
+																			TargetName="border"
+																			Property="Border.BorderBrush"
+																			Value="{StaticResource Button.Pressed.Border}" />
+																	</Trigger>
+																	<Trigger
+																		Property="IsEnabled"
+																		Value="False">
+																		<Setter
+																			TargetName="border"
+																			Property="Border.Background"
+																			Value="{StaticResource Button.Disabled.Background}" />
+																		<Setter
+																			TargetName="border"
+																			Property="Border.BorderBrush"
+																			Value="{StaticResource Button.Disabled.Border}" />
+																		<Setter
+																			TargetName="contentPresenter"
+																			Property="TextElement.Foreground"
+																			Value="{StaticResource Button.Disabled.Foreground}" />
+																	</Trigger>
+																</ControlTemplate.Triggers>
+															</ControlTemplate>
+														</Setter.Value>
+													</Setter>
+												</Style>
+											</ResourceDictionary>
+										</FrameworkElement.Resources>
+										<StackPanel
+											Orientation="Horizontal">
+											<Image
+												Source="/images/addBtn.png"
+												Height="20"
+												Width="20" />
+											<TextBlock
+												Foreground="#EF5B52"
+												VerticalAlignment="Center"
+												Margin="10,0,0,0"
+												Text="{x:Static localprop:Resources.MainWindowAddFBtnContent}"
+												FontSize="14"
+												FontWeight="Bold" />
+										</StackPanel>
+									</Button>
+									<TextBlock
+										HorizontalAlignment="Center"
+										FontSize="12"
+										Margin="0,0,0,24"
+										Text="{x:Static localprop:Resources.MainWindowAddFDescText}"
+										Foreground="#FFFFFFFF" />
+								</StackPanel>
+							</Border>
+						</Grid>
+					</Border>
+					<Grid
+						Row="1">
+						<ListView
+							x:Name="ListView_Document"
+							BorderThickness="0"
+							Style="{StaticResource ListViewStyle}"
+							ItemContainerStyle="{StaticResource ListViewStyleForUC}"
+							Background="{DynamicResource MainWindowFootbarBackground}">
+							<ListView.View>
+								<GridView>
+									<GridViewColumn
+										Header="{x:Static localprop:Resources.MainWindowCFileNameText}"
+										Width="200">
+										<GridViewColumn.HeaderTemplate>
+											<DataTemplate>
+												<StackPanel
+													Orientation="Horizontal"
+													Width="200">
+													<CheckBox
+														x:Name="CB_FileItemList"
+														Margin="9,0,0,0"
+														IsThreeState="True"
+														VerticalAlignment="Center"
+														Style="{DynamicResource DefaultCheckBoxStyle}"
+														Loaded="CB_FileItemList_Loaded"
+														Click="CB_FileItemList_Click" />
+													<TextBlock
+														VerticalAlignment="Center"
+														FontSize="12"
+														Margin="8,0,0,0"
+														Text="{Binding}" />
+													<Button
+														x:Name="Btn_ClearFile"
+														Foreground="#EF5B52"
+														BorderThickness="0"
+														VerticalAlignment="Center"
+														Padding="4,0,4,0"
+														Margin="8,0,0,0"
+														Background="#00FFFFFF"
+														Click="Btn_ClearFiles_Click">
+														<TextBlock
+															Text="{x:Static localprop:Resources.MainWindowClearBtnContent}"
+															TextDecorations="Underline" />
+													</Button>
+												</StackPanel>
+											</DataTemplate>
+										</GridViewColumn.HeaderTemplate>
+										<GridViewColumn.CellTemplate>
+											<DataTemplate>
+												<Grid
+													HorizontalAlignment="Stretch"
+													VerticalAlignment="Center">
+													<Grid.ColumnDefinitions>
+														<ColumnDefinition
+															Width="AUTO" />
+														<ColumnDefinition
+															Width="8" />
+														<ColumnDefinition
+															Width="*" />
+													</Grid.ColumnDefinitions>
+													<CheckBox
+														x:Name="CB_FileItem"
+														VerticalAlignment="Center"
+														Margin="8,0,0,0"
+														Style="{DynamicResource DefaultCheckBoxStyle}"
+														IsChecked="{Binding Path=FileSelected, Mode=TwoWay}"
+														IsEnabled="{Binding Path=ConvertStatus, Converter='{StaticResource FileSelectIsEnabled}', Mode=OneWay}"
+														Checked="CB_FileItem_Checked"
+														Unchecked="CB_FileItem_Unchecked" />
+													<TextBlock
+														VerticalAlignment="Center"
+														TextTrimming="CharacterEllipsis"
+														Grid.Column="2"
+														Text="{Binding Path=FileName}">
+														<FrameworkElement.ToolTip>
+															<TextBlock
+																MaxWidth="250"
+																TextWrapping="Wrap"
+																Text="{Binding Path=convertFile, Converter='{StaticResource FilePathDisplayConverter}'}" />
+														</FrameworkElement.ToolTip>
+													</TextBlock>
+												</Grid>
+											</DataTemplate>
+										</GridViewColumn.CellTemplate>
+									</GridViewColumn>
+									<GridViewColumn
+										Header="{x:Static localprop:Resources.MainWindowCFilePagesText}"
+										Width="80">
+										<GridViewColumn.CellTemplate>
+											<DataTemplate>
+												<Grid
+													IsEnabled="False"
+													HorizontalAlignment="Stretch">
+													<commonLibControl:ProgressRing xmlns:commonLibControl="clr-namespace:CommonLib.Controls;assembly=CommonLib"
+														Height="15"
+														Width="15"
+														MinHeight="15"
+														MinWidth="15"
+														HorizontalAlignment="Left"
+														IsActive="{Binding Path=ConvertStatus, Converter='{StaticResource PageCountProgressRingActive}', Mode=OneWay}" />
+													<TextBlock
+														FontSize="12"
+														HorizontalAlignment="Left"
+														VerticalAlignment="Center"
+														Margin="0,0,10,0"
+														Text="{Binding Path=PageCount, Mode=OneWay}"
+														Visibility="{Binding Path=ConvertStatus, Converter='{StaticResource PageCountVisibility}', Mode=OneWay}" />
+												</Grid>
+											</DataTemplate>
+										</GridViewColumn.CellTemplate>
+									</GridViewColumn>
+									<GridViewColumn
+										Header="{x:Static localprop:Resources.MainWindowCFileRangeText}"
+										Width="110">
+										<GridViewColumn.CellTemplate>
+											<DataTemplate>
+												<Grid
+													HorizontalAlignment="Stretch">
+													<controls:PageRangeTextBox
+														VerticalContentAlignment="Center"
+														HorizontalAlignment="Stretch"
+														BorderBrush="#EEEEEE"
+														BorderThickness="1"
+														Height="28"
+														Style="{StaticResource Style_PageRangeTextBox2}"
+														Text="{Binding Path=PageRange, Mode=TwoWay}"
+														Tag="{Binding Path=PageRangePlaceholder, Mode=OneWay}"
+														IsEnabled="{Binding Path=ConvertStatus, Converter='{StaticResource FileSelectIsEnabled}', Mode=OneWay}" />
+												</Grid>
+											</DataTemplate>
+										</GridViewColumn.CellTemplate>
+									</GridViewColumn>
+									<GridViewColumn
+										Header="{x:Static localprop:Resources.MainWindowCFileStatusText}"
+										Width="155">
+										<GridViewColumn.CellTemplate>
+											<DataTemplate>
+												<StackPanel
+													Orientation="Horizontal"
+													HorizontalAlignment="Stretch"
+													VerticalAlignment="Center">
+													<Grid
+														Height="15"
+														Width="15">
+														<commonLibControl:ProgressRing xmlns:commonLibControl="clr-namespace:CommonLib.Controls;assembly=CommonLib"
+															Height="15"
+															Width="15"
+															MinHeight="15"
+															MinWidth="15"
+															IsActive="{Binding Path=ConvertStatus, Converter='{StaticResource ConvertStatusProgressRingActive}', Mode=OneWay}" />
+														<Image
+															Height="12"
+															Width="12"
+															Source="{Binding Path=ConvertStatus, Converter='{StaticResource ConvertStatusImage}', Mode=OneWay}"
+															Visibility="{Binding Path=ConvertStatus, Converter='{StaticResource ConvertStatusImageVisibility}', Mode=OneWay}" />
+													</Grid>
+													<TextBlock
+														VerticalAlignment="Center"
+														HorizontalAlignment="Left"
+														TextAlignment="Left"
+														Margin="6,0"
+														Text="{Binding Path=ConvertStatus, Converter='{StaticResource ConvertStatusToStr}', Mode=OneWay}" />
+													<Viewbox
+														Width="13"
+														Height="13"
+														VerticalAlignment="Center">
+														<Path
+															Stroke="{DynamicResource TextBrushWhiteAndBlack}"
+															StrokeThickness="1"
+															Fill="{DynamicResource TextBrushWhiteAndBlack}"
+															Data="{StaticResource QuestionIcon}"
+															ToolTip="{Binding Path=FailedReason}"
+															Visibility="{Binding Path=ConvertStatus, Converter='{StaticResource ConvertFailedStatusImageVisibility}', Mode=OneWay}" />
+													</Viewbox>
+												</StackPanel>
+											</DataTemplate>
+										</GridViewColumn.CellTemplate>
+									</GridViewColumn>
+									<GridViewColumn
+										Header="{x:Static localprop:Resources.MainWindowCFileOperationText}"
+										Width="80">
+										<GridViewColumn.HeaderTemplate>
+											<DataTemplate>
+												<Grid
+													Width="75">
+													<TextBlock
+														Margin="0,0,8,0"
+														TextAlignment="Right"
+														HorizontalAlignment="Right"
+														VerticalAlignment="Center"
+														Text="{Binding}" />
+												</Grid>
+											</DataTemplate>
+										</GridViewColumn.HeaderTemplate>
+										<GridViewColumn.CellTemplate>
+											<DataTemplate>
+												<Grid
+													Margin="0,0,-4,0"
+													HorizontalAlignment="Stretch"
+													VerticalAlignment="Center">
+													<FrameworkElement.Resources>
+														<ResourceDictionary>
+															<Style
+																x:Key="{x:Type Button}"
+																TargetType="{x:Type Button}">
+																<Setter
+																	Property="Width"
+																	Value="20" />
+																<Setter
+																	Property="Height"
+																	Value="20" />
+																<Setter
+																	Property="Background"
+																	Value="#00FFFFFF" />
+																<Setter
+																	Property="HorizontalAlignment"
+																	Value="Right" />
+																<Setter
+																	Property="BorderThickness"
+																	Value="0" />
+																<Setter
+																	Property="Padding"
+																	Value="0" />
+															</Style>
+														</ResourceDictionary>
+													</FrameworkElement.Resources>
+													<Grid.ColumnDefinitions>
+														<ColumnDefinition
+															Width="*" />
+														<ColumnDefinition
+															Width="auto" />
+														<ColumnDefinition
+															Width="auto" />
+													</Grid.ColumnDefinitions>
+													<Button
+														x:Name="Btn_OpenFileInExplore"
+														Margin="8,0"
+														Grid.Column="1"
+														Visibility="{Binding Path=ConvertStatus, Converter='{StaticResource OperationOpenBtnVisibility}', Mode=OneWay}"
+														Click="Btn_OpenFileInExplore_Click">
+														<Image
+															Source="{DynamicResource MainWindow2OpenFolderBtnImage}" />
+													</Button>
+													<Button
+														x:Name="Btn_DeleteFile"
+														Grid.Column="2"
+														Margin="0,0,8,0"
+														HorizontalAlignment="Right"
+														Visibility="{Binding Path=ConvertStatus, Converter='{StaticResource OperationDeleteBtnVisibility}', Mode=OneWay}"
+														Click="Btn_DeleteFile_Click">
+														<Image
+															Width="20"
+															Height="20"
+															Source="{DynamicResource MainWindow2DeleteBtnImage}" />
+													</Button>
+												</Grid>
+											</DataTemplate>
+										</GridViewColumn.CellTemplate>
+									</GridViewColumn>
+								</GridView>
+							</ListView.View>
+						</ListView>
+					</Grid>
+				</Grid>
+				<Border
+					Grid.Column="1"
+					BorderBrush="{DynamicResource MainViewRectangle}"
+					BorderThickness="1,0,0,0">
+					<Grid
+						Margin="20,12">
+						<Grid.RowDefinitions>
+							<RowDefinition
+								Height="auto" />
+							<RowDefinition
+								Height="*" />
+							<RowDefinition
+								Height="auto" />
+						</Grid.RowDefinitions>
+						<StackPanel>
+							<TextBlock
+								Text="{x:Static localprop:Resources.PDFtoImageText}"
+								FontWeight="Bold" />
+							<Grid
+								Margin="0,20,0,0">
+								<Grid.RowDefinitions>
+									<RowDefinition
+										Height="auto" />
+									<RowDefinition
+										Height="20" />
+									<RowDefinition
+										Height="auto" />
+									<RowDefinition
+										Height="8" />
+									<RowDefinition
+										Height="auto" />
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="Auto" />
+									<ColumnDefinition
+										Width="*"
+										MinWidth="26" />
+									<ColumnDefinition
+										Width="Auto" />
+								</Grid.ColumnDefinitions>
+								<StackPanel
+									Width="140"
+									Grid.Row="0"
+									Grid.Column="0"
+									HorizontalAlignment="Left">
+									<TextBlock
+										Text="{x:Static localprop:Resources.PDFtoImageOutputFormatText}" />
+									<ComboBox
+										x:Name="CB_OutputFormat"
+										Width="90"
+										Height="28"
+										Margin="0,6,0,0"
+										VerticalContentAlignment="Center"
+										HorizontalAlignment="Left"
+										Style="{StaticResource DefaultComboBoxStyle}">
+										<ComboBoxItem
+											Content="PNG" />
+										<ComboBoxItem
+											Content="JPEG" />
+									</ComboBox>
+								</StackPanel>
+								<StackPanel
+									Grid.Row="0"
+									Grid.Column="2"
+									IsEnabled="{Binding ElementName=Rd_SingleImage, Path=IsChecked}">
+									<TextBlock
+										Text="{x:Static localprop:Resources.PDFtoImageQualityText}" />
+									<ComboBox
+										x:Name="CB_Quality"
+										MaxWidth="225"
+										Width="210"
+										Height="28"
+										Margin="0,6,0,0"
+										HorizontalAlignment="Stretch"
+										VerticalContentAlignment="Center"
+										Style="{StaticResource DefaultComboBoxStyle}"
+										SelectionChanged="CB_Quality_SelectionChanged">
+										<ComboBoxItem
+											Content="{x:Static localprop:Resources.PDFtoImageQualityKeepDPIText}" />
+										<ComboBoxItem
+											Content="72" />
+										<ComboBoxItem
+											Content="96" />
+										<ComboBoxItem
+											Content="120" />
+										<ComboBoxItem
+											Content="150" />
+										<ComboBoxItem
+											Content="300" />
+										<ComboBoxItem
+											Content="450" />
+										<ComboBoxItem
+											Content="600" />
+									</ComboBox>
+								</StackPanel>
+								<StackPanel
+									Grid.Row="2"
+									Grid.ColumnSpan="3"
+									ToggleButton.Checked="Rd_OutputOption_Checked">
+									<TextBlock
+										Text="{x:Static localprop:Resources.PDFtoImageOutputOptionText}"
+										Height="16" />
+									<RadioButton
+										x:Name="Rd_SingleImage"
+										Content="{x:Static localprop:Resources.PDFtoImageExtractSingleImagesText}"
+										GroupName="OutputOption"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										Style="{StaticResource DefaultRadioButtonStyle}"
+										Margin="0,8,0,0" />
+									<RadioButton
+										x:Name="Rd_EntireImage"
+										Content="{x:Static localprop:Resources.PDFtoImageConvertEntireImagesText}"
+										GroupName="OutputOption"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										Style="{StaticResource DefaultRadioButtonStyle}"
+										Margin="0,8,0,0" />
+								</StackPanel>
+								<StackPanel
+									Orientation="Horizontal"
+									Grid.Row="4"
+									IsEnabled="{Binding ElementName=Rd_EntireImage, Path=IsChecked}">
+									<Path
+										Stroke="{DynamicResource TextBrushWhiteAndBlack}"
+										Width="22"
+										Height="22"
+										StrokeThickness="1"
+										Data="{StaticResource ZoomIcon}"
+										ToolTip="{x:Static localprop:Resources.PDFtoImageZoomText}" />
+									<Slider
+										x:Name="Slider_Zoom"
+										Margin="4,0"
+										Width="80"
+										IsSnapToTickEnabled="True"
+										VerticalAlignment="Center"
+										Background="#D9D9D9"
+										Maximum="200"
+										Minimum="1"
+										Style="{StaticResource BeautifySliderStyle}"
+										Value="{Binding ElementName=NB_Zoom, Path=Value, Mode=TwoWay}" />
+									<commonLibCtrl:NumberBox
+										x:Name="NB_Zoom"
+										Width="50"
+										Height="28"
+										InputMethod.IsInputMethodEnabled="False"
+										FallbackToValidValueOnError="False"
+										VerticalContentAlignment="Center"
+										VerticalAlignment="Center"
+										IsArrowEnabled="True"
+										NumberFormat="{}{0:0}"
+										SmallChange="1"
+										Maximum="200"
+										Minimum="1"
+										PreviewKeyDown="NB_PreviewKeyDown"
+										LostFocus="NB_Zoom_LostFocus"
+										ValueChanged="NB_Zoom_ValueChanged" />
+									<TextBlock
+										x:Name="tbSymbol"
+										VerticalAlignment="Center"
+										HorizontalAlignment="Stretch"
+										Text=" %" />
+								</StackPanel>
+								<StackPanel
+									Orientation="Horizontal"
+									Grid.Row="4"
+									Grid.Column="2"
+									IsEnabled="{Binding ElementName=Rd_EntireImage, Path=IsChecked}">
+									<colorpickers:ColorPickerButton
+										x:Name="Btn_ColorPicker"
+										VerticalAlignment="Center"
+										Width="28"
+										Height="28"
+										ToolTip="{x:Static localprop:Resources.PDFtoImageBorderColorText}"
+										SelectedColorChanged="Btn_ColorPicker_SelectedColorChanged" />
+									<Border
+										Width="28"
+										Height="28"
+										Margin="4,0,0,0"
+										BorderThickness="1"
+										BorderBrush="{DynamicResource MainViewRectangle}"
+										ToolTip="{x:Static localprop:Resources.PDFtoImageBorderThicknessText}">
+										<Path
+											Data="M2,3 L14,3 L14,4 L2,4 M2,6 L14,6 L14,8 L2,8 M2,10 L14,10 L14,14 L2,14 Z"
+											Fill="{DynamicResource TextBrushWhiteAndBlack}"
+											Width="16"
+											Height="16" />
+									</Border>
+									<commonLibCtrl:NumberBox
+										x:Name="NB_BorderThickness"
+										Width="64"
+										Height="28"
+										FallbackToValidValueOnError="False"
+										VerticalContentAlignment="Center"
+										VerticalAlignment="Center"
+										IsArrowEnabled="True"
+										NumberFormat="{}{0:0}"
+										SmallChange="1"
+										Maximum="50"
+										Minimum="0"
+										PreviewKeyDown="NB_PreviewKeyDown"
+										LostFocus="NB_BorderThickness_LostFocus"
+										ValueChanged="NB_BorderThickness_ValueChanged" />
+								</StackPanel>
+							</Grid>
+							<StackPanel
+								Margin="0,20,0,0">
+								<TextBlock
+									Text="{x:Static localprop:Resources.PDFtoImageColorModeText}" />
+								<StackPanel
+									Orientation="Horizontal"
+									Margin="0,8,0,0"
+									ToggleButton.Checked="Rd_ColorMode_Checked">
+									<RadioButton
+										x:Name="Rd_ColorMode_RGB"
+										Content="{x:Static localprop:Resources.PDFtoImageColorText}"
+										GroupName="ColorMode"
+										VerticalAlignment="Center"
+										HorizontalAlignment="Left"
+										Style="{StaticResource DefaultRadioButtonStyle}" />
+									<RadioButton
+										x:Name="Rd_ColorMode_Gray"
+										Content="{x:Static localprop:Resources.PDFtoImageGrayscaleText}"
+										GroupName="ColorMode"
+										Margin="24,0,0,0"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										Style="{StaticResource DefaultRadioButtonStyle}" />
+								</StackPanel>
+							</StackPanel>
+							<CheckBox
+								x:Name="CB_RenderAnnotation"
+								Content="{x:Static localprop:Resources.PDFtoImageIncludeAnnotationsText}"
+								Margin="0,20,0,0"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								VerticalContentAlignment="Center"
+								Style="{StaticResource DefaultCheckBoxStyle}"
+								Checked="CB_RenderAnnotation_Checked"
+								Unchecked="CB_RenderAnnotation_Checked" />
+							<StackPanel
+								Margin="0,20,0,0"
+								Visibility="Collapsed">
+								<TextBlock
+									Text="Watermark" />
+								<StackPanel
+									Orientation="Horizontal"
+									Margin="0,8,0,0">
+									<RadioButton
+										Content="No watermark"
+										GroupName="Watermark"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										Style="{StaticResource DefaultRadioButtonStyle}"
+										IsChecked="True" />
+									<RadioButton
+										Content="Customize watermark"
+										GroupName="Watermark"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										Style="{StaticResource DefaultRadioButtonStyle}"
+										Margin="24,0,0,0" />
+								</StackPanel>
+							</StackPanel>
+							<StackPanel
+								Margin="0,20,0,0">
+								<TextBlock
+									Text="{x:Static localprop:Resources.MainWindowOutputPathText}" />
+								<Grid
+									Margin="0,8,0,0">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition
+											Width="*" />
+										<ColumnDefinition
+											Width="auto" />
+									</Grid.ColumnDefinitions>
+									<TextBox
+										x:Name="TB_OutputPath"
+										Grid.Column="0"
+										Height="28"
+										MaxWidth="383"
+										IsReadOnly="True"
+										VerticalContentAlignment="Center"
+										Background="{DynamicResource MainWindow2Selected}"
+										Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+										BorderBrush="{DynamicResource MainViewRectangle}"
+										ToolTip="{Binding Text, RelativeSource={RelativeSource Mode=Self}}" />
+									<Button
+										x:Name="Btn_ChangeOutputPath"
+										Grid.Column="1"
+										FontSize="12"
+										Style="{StaticResource DefaultButtonStyle}"
+										Height="28"
+										Width="28"
+										Foreground="{DynamicResource MainWindow2ListBoxForeground}"
+										Background="#00FFFFFF"
+										Content="..."
+										BorderThickness="0,1,1,1"
+										Click="Btn_ChangeOutputPath_Click" />
+								</Grid>
+							</StackPanel>
+						</StackPanel>
+						<Border
+							Grid.Row="2"
+							VerticalAlignment="Center"
+							Margin="20,20,20,40">
+							<Button
+								x:Name="Btn_Convert"
+								Height="50"
+								Content="{x:Static localprop:Resources.MainWindowConvertBtnContent}"
+								Background="#F3554B"
+								Foreground="#FFFFFFFF"
+								FontSize="16"
+								FontWeight="Bold"
+								BorderThickness="0"
+								VerticalAlignment="Center"
+								HorizontalAlignment="Stretch"
+								Style="{DynamicResource ButtonStyle1}"
+								Click="Btn_Convert_Click">
+								<FrameworkElement.Resources>
+									<ResourceDictionary>
+										<Style
+											x:Key="{x:Type Border}"
+											TargetType="{x:Type Border}">
+											<Setter
+												Property="Border.CornerRadius"
+												Value="4" />
+										</Style>
+										<Style
+											x:Key="FocusVisual">
+											<Setter
+												Property="Control.Template">
+												<Setter.Value>
+													<ControlTemplate>
+														<Rectangle
+															Margin="2"
+															SnapsToDevicePixels="True"
+															Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+															StrokeThickness="1"
+															StrokeDashArray="1 2" />
+													</ControlTemplate>
+												</Setter.Value>
+											</Setter>
+										</Style>
+										<SolidColorBrush
+											x:Key="Button.Static.Background"
+											Color="#FFDDDDDD" />
+										<SolidColorBrush
+											x:Key="Button.Static.Border"
+											Color="#FF707070" />
+										<SolidColorBrush
+											x:Key="Button.MouseOver.Background"
+											Color="#FFF1665E" />
+										<SolidColorBrush
+											x:Key="Button.MouseOver.Border"
+											Color="#FF3C7FB1" />
+										<SolidColorBrush
+											x:Key="Button.Pressed.Background"
+											Color="#FFE3483F" />
+										<SolidColorBrush
+											x:Key="Button.Pressed.Border"
+											Color="#FF2C628B" />
+										<SolidColorBrush
+											x:Key="Button.Disabled.Background"
+											Color="#FFF4F4F4" />
+										<SolidColorBrush
+											x:Key="Button.Disabled.Border"
+											Color="#FFADB2B5" />
+										<SolidColorBrush
+											x:Key="Button.Disabled.Foreground"
+											Color="#FF838383" />
+										<Style
+											x:Key="ButtonStyle1"
+											TargetType="{x:Type Button}">
+											<Setter
+												Property="FrameworkElement.FocusVisualStyle"
+												Value="{StaticResource FocusVisual}" />
+											<Setter
+												Property="Background"
+												Value="{StaticResource Button.Static.Background}" />
+											<Setter
+												Property="BorderBrush"
+												Value="{StaticResource Button.Static.Border}" />
+											<Setter
+												Property="Foreground"
+												Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+											<Setter
+												Property="BorderThickness"
+												Value="1" />
+											<Setter
+												Property="HorizontalContentAlignment"
+												Value="Center" />
+											<Setter
+												Property="VerticalContentAlignment"
+												Value="Center" />
+											<Setter
+												Property="Padding"
+												Value="1" />
+											<Setter
+												Property="Template">
+												<Setter.Value>
+													<ControlTemplate
+														TargetType="{x:Type Button}">
+														<Border
+															x:Name="border"
+															BorderBrush="{TemplateBinding Control.BorderBrush}"
+															BorderThickness="{TemplateBinding Control.BorderThickness}"
+															Background="{TemplateBinding Control.Background}"
+															SnapsToDevicePixels="True">
+															<ContentPresenter
+																x:Name="contentPresenter"
+																Focusable="False"
+																HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+																Margin="{TemplateBinding Control.Padding}"
+																RecognizesAccessKey="True"
+																SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+																VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+														</Border>
+														<ControlTemplate.Triggers>
+															<Trigger
+																Property="Button.IsDefaulted"
+																Value="True">
+																<Setter
+																	TargetName="border"
+																	Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+																	Property="Border.BorderBrush" />
+															</Trigger>
+															<Trigger
+																Property="UIElement.IsMouseOver"
+																Value="True">
+																<Setter
+																	TargetName="border"
+																	Property="Border.Background"
+																	Value="{StaticResource Button.MouseOver.Background}" />
+																<Setter
+																	TargetName="border"
+																	Property="Border.BorderBrush"
+																	Value="{StaticResource Button.MouseOver.Border}" />
+															</Trigger>
+															<Trigger
+																Property="IsPressed"
+																Value="True">
+																<Setter
+																	TargetName="border"
+																	Property="Border.Background"
+																	Value="{StaticResource Button.Pressed.Background}" />
+																<Setter
+																	TargetName="border"
+																	Property="Border.BorderBrush"
+																	Value="{StaticResource Button.Pressed.Border}" />
+															</Trigger>
+															<Trigger
+																Property="IsEnabled"
+																Value="False">
+																<Setter
+																	TargetName="border"
+																	Property="Border.Background"
+																	Value="{StaticResource Button.Disabled.Background}" />
+																<Setter
+																	TargetName="border"
+																	Property="Border.BorderBrush"
+																	Value="{StaticResource Button.Disabled.Border}" />
+																<Setter
+																	TargetName="contentPresenter"
+																	Property="TextElement.Foreground"
+																	Value="{StaticResource Button.Disabled.Foreground}" />
+															</Trigger>
+														</ControlTemplate.Triggers>
+													</ControlTemplate>
+												</Setter.Value>
+											</Setter>
+										</Style>
+									</ResourceDictionary>
+								</FrameworkElement.Resources>
+							</Button>
+						</Border>
+					</Grid>
+				</Border>
+				<Grid
+					Column="2"
+					Visibility="Collapsed">
+					<controls:ImagePreviewControl
+						Width="367"
+						Visibility="Visible" />
+				</Grid>
+			</Grid>
+		</Border>
+	</Grid>
+</Window>

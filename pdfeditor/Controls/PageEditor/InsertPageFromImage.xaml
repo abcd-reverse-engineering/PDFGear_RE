@@ -1,0 +1,422 @@
+<Window
+	x:Class="pdfeditor.Controls.PageEditor.InsertPageFromImage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.PageEditor" xmlns:control="clr-namespace:pdfeditor.Controls" xmlns:commonCtrl="clr-namespace:CommonLib.Controls;assembly=CommonLib" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:cv="clr-namespace:pdfeditor.Utils.Converters" xmlns:localprop="clr-namespace:pdfeditor.Properties"
+	ResizeMode="NoResize"
+	SizeToContent="WidthAndHeight"
+	WindowStartupLocation="CenterScreen"
+	Background="{DynamicResource WindowsBackground}"
+	TextBlock.Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Title="{x:Static localprop:Resources.WinPageInsertImageTitle}"
+	Height="326"
+	MinWidth="396"
+	Width="396">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="20" />
+			<RowDefinition
+				Height="22" />
+			<RowDefinition
+				Height="12" />
+			<RowDefinition
+				Height="25" />
+			<RowDefinition
+				Height="12" />
+			<RowDefinition
+				Height="22" />
+			<RowDefinition
+				Height="8" />
+			<RowDefinition
+				Height="22" />
+			<RowDefinition
+				Height="8" />
+			<RowDefinition
+				Height="12" />
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="12" />
+			<RowDefinition
+				Height="32" />
+			<RowDefinition
+				Height="20" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="20" />
+			<ColumnDefinition
+				Width="auto" />
+			<ColumnDefinition
+				Width="20" />
+			<ColumnDefinition
+				Width="8*" />
+			<ColumnDefinition
+				Width="20" />
+		</Grid.ColumnDefinitions>
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<Style
+					x:Key="tbTitle"
+					TargetType="{x:Type TextBlock}">
+					<Setter
+						Property="VerticalAlignment"
+						Value="Center" />
+					<Setter
+						Property="FontSize"
+						Value="12" />
+					<Setter
+						Property="HorizontalAlignment"
+						Value="Left" />
+				</Style>
+				<Style
+					x:Key="tboxStyle"
+					TargetType="{x:Type TextBox}">
+					<Setter
+						Property="VerticalAlignment"
+						Value="Center" />
+					<Setter
+						Property="BorderBrush"
+						Value="#D2D2D2" />
+					<Setter
+						Property="Width"
+						Value="112" />
+					<Setter
+						Property="HorizontalAlignment"
+						Value="Left" />
+					<Setter
+						Property="Height"
+						Value="22" />
+					<Setter
+						Property="VerticalContentAlignment"
+						Value="Center" />
+					<Setter
+						Property="VerticalContentAlignment"
+						Value="Center" />
+					<Setter
+						Property="FontSize"
+						Value="12" />
+				</Style>
+				<Style
+					x:Key="MergeDialogComboboxStyle"
+					TargetType="{x:Type ComboBox}"
+					BasedOn="{StaticResource DefaultComboBoxStyle}">
+					<Setter
+						Property="Padding"
+						Value="6,4" />
+					<Setter
+						Property="FontSize"
+						Value="14" />
+					<Setter
+						Property="Height"
+						Value="22" />
+					<Setter
+						Property="FontSize"
+						Value="14" />
+					<Setter
+						Property="ItemContainerStyle">
+						<Setter.Value>
+							<Style
+								TargetType="{x:Type ComboBoxItem}"
+								BasedOn="{StaticResource DefaultComboBoxItemStyle}">
+								<Setter
+									Property="FontSize"
+									Value="12" />
+								<Setter
+									Property="Padding"
+									Value="6,0" />
+								<Setter
+									Property="Height"
+									Value="22" />
+							</Style>
+						</Setter.Value>
+					</Setter>
+				</Style>
+				<Style
+					x:Key="SizeNumberBoxStyle"
+					TargetType="{x:Type commonCtrl:NumberBox}">
+					<Setter
+						Property="Width"
+						Value="107" />
+					<Setter
+						Property="Height"
+						Value="22" />
+					<Setter
+						Property="VerticalContentAlignment"
+						Value="Center" />
+					<Setter
+						Property="RangeBase.SmallChange"
+						Value="1" />
+					<Setter
+						Property="RangeBase.LargeChange"
+						Value="10" />
+					<Setter
+						Property="RangeBase.Minimum"
+						Value="1" />
+					<Setter
+						Property="RangeBase.Maximum"
+						Value="{x:Static sys:Double.MaxValue}" />
+					<Setter
+						Property="commonCtrl:NumberBox.NumberFormat"
+						Value="{}{0:0.##}" />
+				</Style>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<TextBlock
+			Grid.Row="1"
+			Grid.Column="1"
+			Text="{x:Static localprop:Resources.WinPageMergeLabelSelectFileContent}"
+			FontSize="12"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Center" />
+		<control:OpenFileTextBox
+			x:Name="LocationTextBox"
+			Grid.Column="3"
+			Background="{DynamicResource SignaturePickerBackground}"
+			Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+			CaretBrush="{DynamicResource TextBrushWhiteAndBlack}"
+			Grid.Row="1"
+			MaxWidth="280"
+			IsReadOnly="True"
+			FontSize="12"
+			Padding="1,2"
+			VerticalAlignment="Center"
+			Filter="Image|*.bmp;*.ico;*.jpeg;*.jpg;*.png;">
+			<FrameworkElement.ToolTip>
+				<ToolTip
+					DataContext="{Binding Path=PlacementTarget, RelativeSource='{x:Static RelativeSource.Self}'}">
+					<TextBlock
+						MaxWidth="280"
+						TextWrapping="Wrap"
+						Text="{Binding Text}" />
+				</ToolTip>
+			</FrameworkElement.ToolTip>
+		</control:OpenFileTextBox>
+		<TextBlock
+			Name="tbPageSize"
+			HorizontalAlignment="Left"
+			Grid.Row="3"
+			Grid.Column="1"
+			Text="{x:Static localprop:Resources.WinPageInsertSettingPageSize}" />
+		<ComboBox
+			Name="cbPageSize"
+			DisplayMemberPath="Key"
+			Style="{StaticResource MergeDialogComboboxStyle}"
+			SelectedIndex="0"
+			FontSize="12"
+			Height="25"
+			Grid.Row="3"
+			Grid.Column="3"
+			SelectionChanged="cbPageSize_SelectionChanged" />
+		<Grid
+			Row="5"
+			RowSpan="3"
+			Column="3">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="auto" />
+				<ColumnDefinition
+					Width="5" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="22" />
+				<RowDefinition
+					Height="8" />
+				<RowDefinition
+					Height="22" />
+			</Grid.RowDefinitions>
+			<TextBlock
+				Name="tbPageWidth"
+				HorizontalAlignment="Left"
+				Style="{StaticResource tbTitle}"
+				Grid.Row="0"
+				Grid.Column="0"
+				Text="{x:Static localprop:Resources.WinPageInsertSettingPageWidth}" />
+			<StackPanel
+				Orientation="Horizontal"
+				Grid.Row="0"
+				Grid.Column="2">
+				<commonCtrl:NumberBox
+					x:Name="tboxPageWidth"
+					Style="{StaticResource SizeNumberBoxStyle}" />
+				<TextBlock
+					Name="tbPageWidthUnit"
+					Margin="5 0 0 0"
+					Style="{StaticResource tbTitle}"
+					Text="mm" />
+			</StackPanel>
+			<TextBlock
+				Name="tbPageHeight"
+				HorizontalAlignment="Left"
+				Grid.Row="2"
+				Grid.Column="0"
+				Style="{StaticResource tbTitle}"
+				Text="{x:Static localprop:Resources.WinPageInsertSettingPageHeight}" />
+			<StackPanel
+				Orientation="Horizontal"
+				Grid.Row="2"
+				Grid.Column="2">
+				<commonCtrl:NumberBox
+					x:Name="tboxPageHeight"
+					Style="{StaticResource SizeNumberBoxStyle}" />
+				<TextBlock
+					Name="tbPageHeightUnit"
+					Style="{StaticResource tbTitle}"
+					Margin="5 0 0 0"
+					HorizontalAlignment="Right"
+					Text="mm" />
+			</StackPanel>
+		</Grid>
+		<RadioButton
+			x:Name="PortraitRadioButton"
+			Grid.Row="5"
+			Grid.Column="3"
+			Content="{x:Static localprop:Resources.WinPageInsertSettingPagePortrait}"
+			IsChecked="True"
+			Style="{DynamicResource DefaultRadioButtonStyle}"
+			Visibility="Collapsed"
+			VerticalAlignment="Center"
+			FontSize="12" />
+		<RadioButton
+			x:Name="LandscapeRadioButton"
+			Grid.Row="7"
+			Grid.Column="3"
+			Visibility="Collapsed"
+			Style="{DynamicResource DefaultRadioButtonStyle}"
+			Content="{x:Static localprop:Resources.WinPageInsertSettingPageLandscape}"
+			VerticalAlignment="Center"
+			FontSize="12" />
+		<Grid
+			Row="10"
+			Column="3">
+			<StackPanel>
+				<RadioButton
+					x:Name="BeginingRadioButton"
+					Content="{x:Static localprop:Resources.WinPageMergeBtnBeginingContent}"
+					VerticalContentAlignment="Center"
+					Margin="0 0 0 0"
+					Height="22"
+					Style="{DynamicResource DefaultRadioButtonStyle}"
+					VerticalAlignment="Center"
+					FontSize="12" />
+				<RadioButton
+					x:Name="EndRadioButton"
+					Margin="0 8 0 0"
+					Height="22"
+					Content="{x:Static localprop:Resources.WinPageMergeBtnEndContent}"
+					VerticalContentAlignment="Center"
+					IsChecked="True"
+					VerticalAlignment="Center"
+					Style="{DynamicResource DefaultRadioButtonStyle}"
+					FontSize="12" />
+				<RadioButton
+					x:Name="PageRadioButton"
+					Margin="0 10 0 0"
+					Style="{DynamicResource DefaultRadioButtonStyle}"
+					VerticalContentAlignment="Top"
+					VerticalAlignment="Center"
+					FontSize="12">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition />
+							<RowDefinition />
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<TextBlock
+							Text="{x:Static localprop:Resources.LinkWinPage}"
+							Margin="0 -5 0 0"
+							Grid.Column="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							LineHeight="14" />
+						<TextBox
+							x:Name="PageindexNumbox"
+							Grid.Row="0"
+							Grid.Column="1"
+							Height="22"
+							Width="85"
+							Margin="0 0 5 0"
+							HorizontalAlignment="Left"
+							Style="{StaticResource DefaultTextBoxStyle}"
+							VerticalContentAlignment="Center"
+							LostFocus="CustomTextBox_LostFocus" />
+						<TextBlock
+							Text="/"
+							Grid.Column="2"
+							Grid.Row="0"
+							FontSize="15"
+							VerticalAlignment="Center" />
+						<TextBlock
+							x:Name="PageNumber"
+							VerticalAlignment="Center"
+							Grid.Column="3"
+							Text="123"
+							FontSize="12"
+							TextAlignment="Left" />
+						<TextBlock
+							Grid.Row="1"
+							Grid.Column="0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Margin="0 10 0 0"
+							Text="{x:Static localprop:Resources.DocumentPropertiesLocation}" />
+						<ComboBox
+							x:Name="InsertPosition"
+							Style="{StaticResource MergeDialogComboboxStyle}"
+							FontSize="12"
+							Grid.Row="1"
+							Grid.Column="1"
+							Grid.ColumnSpan="5"
+							Width="125"
+							SelectedIndex="0"
+							MinWidth="80"
+							Height="25"
+							Margin="0 10 5 0">
+							<ComboBoxItem
+								Content="{x:Static localprop:Resources.InsertWinInsertAfter}" />
+							<ComboBoxItem
+								Content="{x:Static localprop:Resources.InsertWinInsertBefore}" />
+						</ComboBox>
+					</Grid>
+				</RadioButton>
+			</StackPanel>
+		</Grid>
+		<StackPanel
+			Grid.Row="12"
+			Grid.Column="3"
+			Orientation="Horizontal"
+			HorizontalAlignment="Right">
+			<Button
+				Content="{x:Static localprop:Resources.WinBtnCancelContent}"
+				IsCancel="True"
+				Margin="0,0,12,0"
+				Style="{StaticResource DialogButtonStyle}"
+				Click="CancelButton_Click" />
+			<Button
+				Content="{x:Static localprop:Resources.WinBtnOkContent}"
+				Style="{StaticResource PrimaryDialogButtonStyle}"
+				Click="OKButton_Click" />
+		</StackPanel>
+		<TextBlock
+			Name="tbInsertToText"
+			Style="{StaticResource tbTitle}"
+			Grid.Row="10"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Grid.Column="1"
+			FontSize="12"
+			Text="{x:Static localprop:Resources.WinPageMergeLabelLocationContent}" />
+	</Grid>
+</Window>

@@ -1,0 +1,84 @@
+<UserControl
+	x:Class="pdfeditor.Controls.OcrComponents.NeedRecognitionBanner" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls.OcrComponents" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:commonLibControls="clr-namespace:CommonLib.Controls;assembly=CommonLib" xmlns:controls="clr-namespace:pdfeditor.Controls" xmlns:utils="clr-namespace:pdfeditor.Utils"
+	HorizontalAlignment="Stretch"
+	VerticalAlignment="Top"
+	Background="#D8EAFB"
+	BorderThickness="1"
+	BorderBrush="#803B99FC">
+	<Grid
+		Height="40">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="*" />
+			<ColumnDefinition
+				Width="Auto" />
+		</Grid.ColumnDefinitions>
+		<Grid
+			HorizontalAlignment="Center">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="*" />
+				<ColumnDefinition
+					Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<ScrollViewer
+				HorizontalAlignment="Center"
+				VerticalAlignment="Stretch"
+				HorizontalScrollBarVisibility="Auto"
+				VerticalScrollBarVisibility="Disabled"
+				commonLibControls:ScrollBarHelper.CanExpand="False"
+				Focusable="False"
+				PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+				<TextBlock
+					x:Name="TextPresenter"
+					FontSize="14"
+					Foreground="#FF000000"
+					VerticalAlignment="Center"
+					Text="{x:Static localprop:Resources.WinFindDocumentNeedOcrTips}" />
+			</ScrollViewer>
+			<StackPanel
+				Grid.Column="1"
+				Orientation="Horizontal"
+				Margin="12,0,0,0">
+				<Button
+					Margin="0,0,8,0"
+					Content="{x:Static localprop:Resources.WinFindPerformOCR}"
+					Style="{StaticResource DialogButtonStyle}"
+					Background="#298FEE"
+					Foreground="#FFFFFF"
+					BorderBrush="#00FFFFFF"
+					BorderThickness="0"
+					utils:UIElementExtension.CornerRadius="4"
+					Click="RecognitionButton_Click" />
+				<Button
+					Margin="0,0,8,0"
+					Content="{x:Static localprop:Resources.WinFindOCRNotShowAgain}"
+					Style="{StaticResource DialogButtonStyle}"
+					Background="#88FFFFFF"
+					Foreground="#298FEE"
+					BorderBrush="#298FEE"
+					BorderThickness="1"
+					utils:UIElementExtension.CornerRadius="4"
+					Click="DoNotShowButton_Click" />
+			</StackPanel>
+		</Grid>
+		<Button
+			Style="{StaticResource DialogButtonStyle}"
+			Grid.Column="1"
+			MinWidth="0"
+			Width="30"
+			Height="30"
+			Padding="10"
+			Margin="0,0,6,0"
+			Background="#00FFFFFF"
+			BorderBrush="#00FFFFFF"
+			BorderThickness="0"
+			Click="CloseButton_Click">
+			<Viewbox>
+				<Path
+					Fill="#000100"
+					Data="M9.91504,0.571289 L5.53516,4.95752 L9.91504,9.34375 L9.34375,9.91504 L4.95752,5.53516 L0.571289,9.91504 L0,9.34375 L4.37988,4.95752 L0,0.571289 L0.571289,0 L4.95752,4.37988 L9.34375,0 L9.91504,0.571289 Z" />
+			</Viewbox>
+		</Button>
+	</Grid>
+</UserControl>

@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CompressPDFText" xml:space="preserve">
+    <value>压缩PDF</value>
+  </data>
+  <data name="ConvertFailedByLocalTipMsg" xml:space="preserve">
+    <value>转换失败。是否要在高级模式下重试？</value>
+  </data>
+  <data name="ConverterAdvancedModeCbContent" xml:space="preserve">
+    <value>高级模式</value>
+  </data>
+  <data name="ConverterAdvancedModeTipContent" xml:space="preserve">
+    <value>勾选此项文件将在云服务器进行转换处理</value>
+  </data>
+  <data name="CreatePDFDeleteContent" xml:space="preserve">
+    <value>您确定要删除XXX页吗？</value>
+  </data>
+  <data name="CreatePDFSelectedCreateContent" xml:space="preserve">
+    <value>您确定要将选定的 XXX 页新建 PDF 吗？</value>
+  </data>
+  <data name="CreatePDFUnexpectedError" xml:space="preserve">
+    <value>发生未知错误。</value>
+  </data>
+  <data name="FeedbackWindowAttachFileText" xml:space="preserve">
+    <value>发送转换失败的文件以帮助我们诊断问题。</value>
+  </data>
+  <data name="FeedbackWindowCloseBtnContent" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="FeedbackWindowDetailTagText" xml:space="preserve">
+    <value>请告诉我们您遇到的问题以及重现的步骤，谢谢。</value>
+  </data>
+  <data name="FeedbackWindowDetailText" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="FeedbackWindowEmailTagText" xml:space="preserve">
+    <value>电子邮件地址（可选）</value>
+  </data>
+  <data name="FeedbackWindowEmailText" xml:space="preserve">
+    <value>电子邮箱</value>
+  </data>
+  <data name="FeedbackWindowInvalidEmailMsgContent" xml:space="preserve">
+    <value>请输入正确的电子邮箱。</value>
+  </data>
+  <data name="FeedbackWindowInvalidEmailMsgTitle" xml:space="preserve">
+    <value>电子邮箱格式无效</value>
+  </data>
+  <data name="FeedbackWindowPolicyText" xml:space="preserve">
+    <value>隐私政策</value>
+  </data>
+  <data name="FeedbackWindowSendBtnContent" xml:space="preserve">
+    <value>发送</value>
+  </data>
+  <data name="FeedbackWindowSendSuccMsgContent" xml:space="preserve">
+    <value>我们已经收到您的反馈，谢谢。</value>
+  </data>
+  <data name="FeedbackWindowSendSuccMsgTitle" xml:space="preserve">
+    <value>发送成功</value>
+  </data>
+  <data name="FeedbackWindowTitleText" xml:space="preserve">
+    <value>联系客服</value>
+  </data>
+  <data name="FileCompressMsgCompressFailSupport" xml:space="preserve">
+    <value>压缩失败，你需要联系客服吗？</value>
+  </data>
+  <data name="FileConvertMsgAddFileNoFile" xml:space="preserve">
+    <value>转换前请先添加文件。</value>
+  </data>
+  <data name="FileConvertMsgAddFileOneFile" xml:space="preserve">
+    <value>请至少选择一个需要转换的文件</value>
+  </data>
+  <data name="FileConvertMsgConvertFailSupport" xml:space="preserve">
+    <value>转换失败，你需要联系客服吗？</value>
+  </data>
+  <data name="FileConvertMsgFileAdded" xml:space="preserve">
+    <value>您已添加了该文件。</value>
+  </data>
+  <data name="FileConvertMsgInvaildPageNum" xml:space="preserve">
+    <value>页码错误。</value>
+  </data>
+  <data name="FileConvertMsgInvalidForat" xml:space="preserve">
+    <value>错误的输出格式。</value>
+  </data>
+  <data name="FileConvertMsgUnsupportF" xml:space="preserve">
+    <value>不支持的文件：</value>
+  </data>
+  <data name="FileConvertStatusConvertFail" xml:space="preserve">
+    <value>转换失败</value>
+  </data>
+  <data name="FileConvertStatusConvertSucc" xml:space="preserve">
+    <value>转换成功</value>
+  </data>
+  <data name="FileConvertStatusConverting" xml:space="preserve">
+    <value>转换中</value>
+  </data>
+  <data name="FileConvertStatusLoading" xml:space="preserve">
+    <value>加载中</value>
+  </data>
+  <data name="FileCovertStatusInit" xml:space="preserve">
+    <value>初始化中</value>
+  </data>
+  <data name="FileCovertStatusLoaded" xml:space="preserve">
+    <value>加载成功</value>
+  </data>
+  <data name="FileCovertStatusUnsupported" xml:space="preserve">
+    <value>不支持的文件</value>
+  </data>
+  <data name="ImageToPDFFailedContent" xml:space="preserve">
+    <value>图片转PDF失败</value>
+  </data>
+  <data name="ImageToPDFOpneAfterCreateContent" xml:space="preserve">
+    <value>创建后打开 PDF 文件。</value>
+  </data>
+  <data name="ImageToPDFSuccessContent" xml:space="preserve">
+    <value>PDF 文件已成功创建。</value>
+  </data>
+  <data name="ImageToPDFWinAddImageContent" xml:space="preserve">
+    <value>添加图片</value>
+  </data>
+  <data name="ImageToPDFWinAddingWarning" xml:space="preserve">
+    <value>正在添加图片，请等添加结束后重试。</value>
+  </data>
+  <data name="ImageToPDFWinAutomaticallyContent" xml:space="preserve">
+    <value>自动拉伸图像</value>
+  </data>
+  <data name="ImageToPDFWinCloseWarning" xml:space="preserve">
+    <value>关闭后列表中的图片会丢失，您要关闭它吗？</value>
+  </data>
+  <data name="ImageToPDFWinCreateBtn" xml:space="preserve">
+    <value>创建PDF</value>
+  </data>
+  <data name="ImageToPDFWinCreateContent" xml:space="preserve">
+    <value>创建中</value>
+  </data>
+  <data name="ImageToPDFWinDeleteContent" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="ImageToPDFWinDeletePreview" xml:space="preserve">
+    <value>是否确定删除所选页面?</value>
+  </data>
+  <data name="ImageToPDFWinDropContent" xml:space="preserve">
+    <value>将图像拖放到此处或选择文件</value>
+  </data>
+  <data name="ImageToPDFWinImportContent" xml:space="preserve">
+    <value>导入中</value>
+  </data>
+  <data name="ImageToPDFWinMultiplePDF" xml:space="preserve">
+    <value>多个独立PDF</value>
+  </data>
+  <data name="ImageToPDFWinRotateLeftContent" xml:space="preserve">
+    <value>向左旋转</value>
+  </data>
+  <data name="ImageToPDFWinRotateRightContent" xml:space="preserve">
+    <value>向右旋转</value>
+  </data>
+  <data name="ImageToPDFWinSelectedContent" xml:space="preserve">
+    <value>选中</value>
+  </data>
+  <data name="ImageToPDFWinSinglePDF" xml:space="preserve">
+    <value>单个PDF</value>
+  </data>
+  <data name="ImageToPDFWinUpdateContent" xml:space="preserve">
+    <value>更新中</value>
+  </data>
+  <data name="ImportDialogFilterImage" xml:space="preserve">
+    <value>图片文件</value>
+  </data>
+  <data name="ImportDialogFilterSupported" xml:space="preserve">
+    <value>支持的文件</value>
+  </data>
+  <data name="MainWinCompressBatchQulity" xml:space="preserve">
+    <value>压缩等级</value>
+  </data>
+  <data name="MainWinCompressBeginCompress" xml:space="preserve">
+    <value>开始压缩</value>
+  </data>
+  <data name="MainWinCompressCompresComplete" xml:space="preserve">
+    <value>压缩完成</value>
+  </data>
+  <data name="MainWinCompressCompresFaild" xml:space="preserve">
+    <value>压缩失败</value>
+  </data>
+  <data name="MainWinCompressCompresQueue" xml:space="preserve">
+    <value>队列中...</value>
+  </data>
+  <data name="MainWinCompressCompressedSize" xml:space="preserve">
+    <value>压缩后大小</value>
+  </data>
+  <data name="MainWinCompressCompressing" xml:space="preserve">
+    <value>压缩中...</value>
+  </data>
+  <data name="MainWinCompressGVHeaderCompressMode" xml:space="preserve">
+    <value>压缩等级</value>
+  </data>
+  <data name="MainWinCompressGVHeaderFileSize" xml:space="preserve">
+    <value>文件大小</value>
+  </data>
+  <data name="MainWinCompressHighCompressMode" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="MainWinCompressLowCompressMode" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="MainWinCompressMediumCompressMode" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="MainWinCompressOpenInExplore" xml:space="preserve">
+    <value>压缩完成后在资源管理器中查看文件</value>
+  </data>
+  <data name="MainWinConvertToExcelFaildSuggest" xml:space="preserve">
+    <value>此文件无法转为Excel，请您尝试下转为Word</value>
+  </data>
+  <data name="MainWinImageToPDFCHBOutputInOneFile" xml:space="preserve">
+    <value>合并输出</value>
+  </data>
+  <data name="MainWinImageToPDFPageMarginsBigMargin" xml:space="preserve">
+    <value>宽边距</value>
+  </data>
+  <data name="MainWinImageToPDFPageMarginsNoMargin" xml:space="preserve">
+    <value>无边距</value>
+  </data>
+  <data name="MainWinImageToPDFPageMarginsSmallMargin" xml:space="preserve">
+    <value>窄边距</value>
+  </data>
+  <data name="MainWinImageToPDFPageSetting" xml:space="preserve">
+    <value>页面设置</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeA3Landscape" xml:space="preserve">
+    <value>A3 横向</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeA3Portrait" xml:space="preserve">
+    <value>A3 纵向</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeA4Landscape" xml:space="preserve">
+    <value>A4 横向</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeA4Portrait" xml:space="preserve">
+    <value>A4 纵向</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeMatchSource" xml:space="preserve">
+    <value>原图尺寸</value>
+  </data>
+  <data name="MainWinOthersToPDFDeleteNoFile" xml:space="preserve">
+    <value>请选择要删除的文件。</value>
+  </data>
+  <data name="MainWindowAddFBtnContent" xml:space="preserve">
+    <value>添加文件</value>
+  </data>
+  <data name="MainWindowAddFDescText" xml:space="preserve">
+    <value>拖动文件到这里</value>
+  </data>
+  <data name="MainWindowCFileNameText" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="MainWindowCFileOperationText" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="MainWindowCFilePagesText" xml:space="preserve">
+    <value>页数</value>
+  </data>
+  <data name="MainWindowCFileRangeText" xml:space="preserve">
+    <value>输出范围</value>
+  </data>
+  <data name="MainWindowCFileStatusText" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="MainWindowClearBtnContent" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="MainWindowConvertBtnContent" xml:space="preserve">
+    <value>开始转换</value>
+  </data>
+  <data name="MainWindowOCRDescText" xml:space="preserve">
+    <value>使用OCR(光学字符识别), 扫描文件或基于图像的文件将转换为可编辑文件。文件格式可能会改变。</value>
+  </data>
+  <data name="MainWindowOCRText" xml:space="preserve">
+    <value>OCR (从图片中提取文字)</value>
+  </data>
+  <data name="MainWindowOutputPathText" xml:space="preserve">
+    <value>输出目录</value>
+  </data>
+  <data name="MainWindowSaveAsText" xml:space="preserve">
+    <value>输出类型</value>
+  </data>
+  <data name="MainWindowViewFileText" xml:space="preserve">
+    <value>转换成功后在资源管理器中查看文件</value>
+  </data>
+  <data name="OCRSettingsWindowCancelBtnContent" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="OCRSettingsWindowDescText" xml:space="preserve">
+    <value>为了更好地使用OCR，请选择图片中文字的语言。</value>
+  </data>
+  <data name="OCRSettingsWindowOkBtnContent" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="OCRSettingsWindowTitleText" xml:space="preserve">
+    <value>选择语言</value>
+  </data>
+  <data name="OpenDocByIncorrectPwdMsg" xml:space="preserve">
+    <value>密码不正确。</value>
+  </data>
+  <data name="OpenExplorerBtnContent" xml:space="preserve">
+    <value>在资源管理器中打开文件</value>
+  </data>
+  <data name="OpenFileBtnContent" xml:space="preserve">
+    <value>打开文件</value>
+  </data>
+  <data name="PDFToImageConvertFaileError" xml:space="preserve">
+    <value>转换出现错误</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByCreateOutputDir" xml:space="preserve">
+    <value>输出目录创建失败</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByFileNotExist" xml:space="preserve">
+    <value>未能找到文件</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByInvalidOutputFormat" xml:space="preserve">
+    <value>输出范围无效</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByPageRange" xml:space="preserve">
+    <value>页码获取失败</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByWrongPassword" xml:space="preserve">
+    <value>文件密码错误</value>
+  </data>
+  <data name="PDFToImageConverterMsgErrorBorderThickness" xml:space="preserve">
+    <value>请输入一个0-50范围内的整数</value>
+  </data>
+  <data name="PDFToImageConverterMsgErrorZoom" xml:space="preserve">
+    <value>请输入一个1-200范围内的整数</value>
+  </data>
+  <data name="PDFToImageConverterMsgOnlyPDF" xml:space="preserve">
+    <value>请添加PDF文件。</value>
+  </data>
+  <data name="PDFToImageConverterMsgPageRangeIsNull" xml:space="preserve">
+    <value>请输入有效的页面范围。</value>
+  </data>
+  <data name="PDFToImageConverterMsgWrongArgs" xml:space="preserve">
+    <value>参数错误</value>
+  </data>
+  <data name="PDFToImageTooltipBorderColor" xml:space="preserve">
+    <value>边框颜色</value>
+  </data>
+  <data name="PDFToImageTooltipBorderThickness" xml:space="preserve">
+    <value>边框宽度</value>
+  </data>
+  <data name="PDFToImageTooltipZoom" xml:space="preserve">
+    <value>缩放</value>
+  </data>
+  <data name="PDFtoExcelText" xml:space="preserve">
+    <value>PDF转Excel</value>
+  </data>
+  <data name="PDFtoImageBorderColorText" xml:space="preserve">
+    <value>边框颜色</value>
+  </data>
+  <data name="PDFtoImageBorderThicknessText" xml:space="preserve">
+    <value>边框宽度</value>
+  </data>
+  <data name="PDFtoImageColorModeText" xml:space="preserve">
+    <value>色彩模式</value>
+  </data>
+  <data name="PDFtoImageColorText" xml:space="preserve">
+    <value>彩色</value>
+  </data>
+  <data name="PDFtoImageConvertEntireImagesText" xml:space="preserve">
+    <value>合并输出</value>
+  </data>
+  <data name="PDFtoImageExtractSingleImagesText" xml:space="preserve">
+    <value>逐页输出</value>
+  </data>
+  <data name="PDFtoImageGrayscaleText" xml:space="preserve">
+    <value>灰度</value>
+  </data>
+  <data name="PDFtoImageIncludeAnnotationsText" xml:space="preserve">
+    <value>保留注释内容</value>
+  </data>
+  <data name="PDFtoImageOutputFormatText" xml:space="preserve">
+    <value>输出格式</value>
+  </data>
+  <data name="PDFtoImageOutputOptionText" xml:space="preserve">
+    <value>输出选项</value>
+  </data>
+  <data name="PDFtoImageQualityKeepDPIText" xml:space="preserve">
+    <value>保留原始DPI</value>
+  </data>
+  <data name="PDFtoImageQualityText" xml:space="preserve">
+    <value>质量</value>
+  </data>
+  <data name="PDFtoImageText" xml:space="preserve">
+    <value>PDF转图片</value>
+  </data>
+  <data name="PDFtoImageZoomText" xml:space="preserve">
+    <value>缩放</value>
+  </data>
+  <data name="PDFtoJpegText" xml:space="preserve">
+    <value>PDF转JPEG</value>
+  </data>
+  <data name="PDFtoPPTText" xml:space="preserve">
+    <value>PDF转PPT</value>
+  </data>
+  <data name="PDFtoPngText" xml:space="preserve">
+    <value>PDF转PNG</value>
+  </data>
+  <data name="PDFtoRTFText" xml:space="preserve">
+    <value>PDF转RTF</value>
+  </data>
+  <data name="PDFtoTextText" xml:space="preserve">
+    <value>PDF转TXT</value>
+  </data>
+  <data name="PDFtoWebText" xml:space="preserve">
+    <value>PDF转网页</value>
+  </data>
+  <data name="PDFtoWordText" xml:space="preserve">
+    <value>PDF转Word</value>
+  </data>
+  <data name="PDFtoXMLText" xml:space="preserve">
+    <value>PDF转XML</value>
+  </data>
+  <data name="RateWindowDesc1Text" xml:space="preserve">
+    <value>请给我们的应用一个好评！</value>
+  </data>
+  <data name="RateWindowDesc2Text" xml:space="preserve">
+    <value>谢谢您的支持！</value>
+  </data>
+  <data name="RateWindowDesc3Text" xml:space="preserve">
+    <value>评分的时间不到一分钟。</value>
+  </data>
+  <data name="RateWindowFeedbackBtnContent" xml:space="preserve">
+    <value>我想提供一些反馈</value>
+  </data>
+  <data name="RateWindowRateBtnContent" xml:space="preserve">
+    <value>喜欢它！我想给它5星！</value>
+  </data>
+  <data name="RateWindowTitleText" xml:space="preserve">
+    <value>喜欢PDFgear吗?</value>
+  </data>
+  <data name="WinCompressAddFileTipText" xml:space="preserve">
+    <value>请您添加并选中要压缩的文件</value>
+  </data>
+  <data name="WinConvertAddFileTipText" xml:space="preserve">
+    <value>请您添加并选中需要转换的文件</value>
+  </data>
+  <data name="WinConvertLoadedFailed" xml:space="preserve">
+    <value>加载失败</value>
+  </data>
+  <data name="WinConvertSetOutputFolderText" xml:space="preserve">
+    <value>请您选择输出目录</value>
+  </data>
+  <data name="WinConvertToExcelCheckContent" xml:space="preserve">
+    <value>仅输出到一张工作表</value>
+  </data>
+  <data name="WinConvertToPDFAddFileBtnText" xml:space="preserve">
+    <value>添加文件</value>
+  </data>
+  <data name="WinConvertToPDFClearBtnText" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="WinConvertToPDFItemInitText" xml:space="preserve">
+    <value>初始化</value>
+  </data>
+  <data name="WinConvertToPDFItemLoadedText" xml:space="preserve">
+    <value>加载完成</value>
+  </data>
+  <data name="WinConvertToPDFItemLoadingText" xml:space="preserve">
+    <value>加载中</value>
+  </data>
+  <data name="WinConvertToPDFItemUnSupport" xml:space="preserve">
+    <value>不支持的文件</value>
+  </data>
+  <data name="WinConvertToPDFListFileAction" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="WinConvertToPDFListFileName" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="WinConvertToPDFListFileStatus" xml:space="preserve">
+    <value>文件状态</value>
+  </data>
+  <data name="WinConvertToPDFOutFolderLabel" xml:space="preserve">
+    <value>输出目录</value>
+  </data>
+  <data name="WinConvertToPDFStartConvertBtn" xml:space="preserve">
+    <value>开始转换</value>
+  </data>
+  <data name="WinConvertToPDFStatusConverting" xml:space="preserve">
+    <value>转换中</value>
+  </data>
+  <data name="WinConvertToPDFStatusFailed" xml:space="preserve">
+    <value>转换失败</value>
+  </data>
+  <data name="WinConvertToPDFStatusSucc" xml:space="preserve">
+    <value>转换成功</value>
+  </data>
+  <data name="WinConvertToPDFViewInExplore" xml:space="preserve">
+    <value>转换成功后在资源管理器中查看文件</value>
+  </data>
+  <data name="WinFeedBackSendTryagainMsg" xml:space="preserve">
+    <value>发送消息失败，请重试。</value>
+  </data>
+  <data name="WinFileOccupationExplain" xml:space="preserve">
+    <value>xxx 在其它程序中打开。请关闭该文件并重试。</value>
+  </data>
+  <data name="WinFileOccupationMsg" xml:space="preserve">
+    <value>添加文件失败。</value>
+  </data>
+  <data name="WinFileRetryBtnContent" xml:space="preserve">
+    <value>重试</value>
+  </data>
+  <data name="WinListHeaderExcelToPDFText" xml:space="preserve">
+    <value>Excel转PDF</value>
+  </data>
+  <data name="WinListHeaderImageToPDFText" xml:space="preserve">
+    <value>图片转PDF</value>
+  </data>
+  <data name="WinListHeaderPPTToPDFText" xml:space="preserve">
+    <value>PPT转PDF</value>
+  </data>
+  <data name="WinListHeaderRTFToPDFText" xml:space="preserve">
+    <value>RTF转PDF</value>
+  </data>
+  <data name="WinListHeaderTXTToPDFText" xml:space="preserve">
+    <value>TXT转PDF</value>
+  </data>
+  <data name="WinListHeaderWordToPDFText" xml:space="preserve">
+    <value>Word转PDF</value>
+  </data>
+  <data name="WinMergeSplitAddFileCheckMsg" xml:space="preserve">
+    <value>已添加文件(XXX)。</value>
+  </data>
+  <data name="WinMergeSplitBtnAddFilesContent" xml:space="preserve">
+    <value>添加文件</value>
+  </data>
+  <data name="WinMergeSplitBtnClearContent" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="WinMergeSplitBtnMergeContent" xml:space="preserve">
+    <value>开始合并</value>
+  </data>
+  <data name="WinMergeSplitBtnSplitContent" xml:space="preserve">
+    <value>开始拆分</value>
+  </data>
+  <data name="WinMergeSplitCbxSplitCustomrangeItem" xml:space="preserve">
+    <value>自定义范围</value>
+  </data>
+  <data name="WinMergeSplitCbxSplitFixedrangeItem" xml:space="preserve">
+    <value>固定范围</value>
+  </data>
+  <data name="WinMergeSplitClearFileAskMsg" xml:space="preserve">
+    <value>是否确实要移除选定的文件？</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnFilenameTitle" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnOperationTitle" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnPagesTitle" xml:space="preserve">
+    <value>页数</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnRangesTitle" xml:space="preserve">
+    <value>范围</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnSplitModeTitle" xml:space="preserve">
+    <value>拆分方式</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnStatusTitle" xml:space="preserve">
+    <value>文件状态</value>
+  </data>
+  <data name="WinMergeSplitLabelOutputFilenameContent" xml:space="preserve">
+    <value>输出文件名</value>
+  </data>
+  <data name="WinMergeSplitLabelOutputpathContent" xml:space="preserve">
+    <value>输出目录</value>
+  </data>
+  <data name="WinMergeSplitLeftMergeTile" xml:space="preserve">
+    <value>合并PDF</value>
+  </data>
+  <data name="WinMergeSplitLeftSplitTile" xml:space="preserve">
+    <value>拆分PDF</value>
+  </data>
+  <data name="WinMergeSplitMergeCkbViewFileContent" xml:space="preserve">
+    <value>合并文件后在资源管理器中查看文件</value>
+  </data>
+  <data name="WinMergeSplitMergeFileCheckEmptyFileMsg" xml:space="preserve">
+    <value>请添加并选择您需要合并的PDF文件。</value>
+  </data>
+  <data name="WinMergeSplitMergeFileCheckEmptyFilenameMsg" xml:space="preserve">
+    <value>请设置输出路径和输出文件名。</value>
+  </data>
+  <data name="WinMergeSplitMergeFileCheckExistFilenameMsg" xml:space="preserve">
+    <value>文件已存在，请选择其他文件名。</value>
+  </data>
+  <data name="WinMergeSplitMergeFileFailMsg" xml:space="preserve">
+    <value>合并PDF文件失败，是否联系技术支持？</value>
+  </data>
+  <data name="WinMergeSplitMergeStatusFail" xml:space="preserve">
+    <value>合并失败</value>
+  </data>
+  <data name="WinMergeSplitMergeStatusMerging" xml:space="preserve">
+    <value>合并中</value>
+  </data>
+  <data name="WinMergeSplitMergeStatusSucc" xml:space="preserve">
+    <value>合并完成</value>
+  </data>
+  <data name="WinMergeSplitSplitCkbViewFileContent" xml:space="preserve">
+    <value>拆分文件后在资源管理器中查看文件</value>
+  </data>
+  <data name="WinMergeSplitSplitFileCheckEmptyFileMsg" xml:space="preserve">
+    <value>请添加并选择您需要拆分的PDF文件。</value>
+  </data>
+  <data name="WinMergeSplitSplitFileCheckModeMsg" xml:space="preserve">
+    <value>请输入页面范围。</value>
+  </data>
+  <data name="WinMergeSplitSplitFileCheckpageRangeMsg" xml:space="preserve">
+    <value>无效的页面范围。</value>
+  </data>
+  <data name="WinMergeSplitSplitFileFailMsg" xml:space="preserve">
+    <value>拆分PDF文件失败，是否联系技术支持？</value>
+  </data>
+  <data name="WinMergeSplitSplitModeCustomRangeHelpAsgMsg" xml:space="preserve">
+    <value>例如：1, 8 或 9-16</value>
+  </data>
+  <data name="WinMergeSplitSplitModeCustomRangeHelptipMsg" xml:space="preserve">
+    <value>自定义范围：将PDF拆分为自定义页面范围，例如：1, 8 或 9-16</value>
+  </data>
+  <data name="WinMergeSplitSplitModeFixedRangeHelpAsgMsg" xml:space="preserve">
+    <value>例如：10</value>
+  </data>
+  <data name="WinMergeSplitSplitModeFixedRangeHelptipMsg" xml:space="preserve">
+    <value>固定范围：以固定页拆分PDF文件，例如：10</value>
+  </data>
+  <data name="WinMergeSplitSplitStatusFail" xml:space="preserve">
+    <value>拆分失败</value>
+  </data>
+  <data name="WinMergeSplitSplitStatusSplitting" xml:space="preserve">
+    <value>拆分中</value>
+  </data>
+  <data name="WinMergeSplitSplitStatusSucc" xml:space="preserve">
+    <value>拆分完成</value>
+  </data>
+  <data name="WinMergeSplitStatusInit" xml:space="preserve">
+    <value>初始化</value>
+  </data>
+  <data name="WinMergeSplitStatusLoaded" xml:space="preserve">
+    <value>加载完成</value>
+  </data>
+  <data name="WinMergeSplitStatusLoading" xml:space="preserve">
+    <value>加载中</value>
+  </data>
+  <data name="WinMergeSplitStatusUnsupported" xml:space="preserve">
+    <value>不支持的文件</value>
+  </data>
+  <data name="WinPwdEntePwdTitle" xml:space="preserve">
+    <value>输入密码</value>
+  </data>
+  <data name="WinPwdEnterTipContent" xml:space="preserve">
+    <value>此文档有密码保护，请在下方输入该文档密码。</value>
+  </data>
+  <data name="WinPwdEnterTipContentFa" xml:space="preserve">
+    <value>'XXX' 受密码保护。请在下方输入密码。</value>
+  </data>
+  <data name="WinPwdInputContent" xml:space="preserve">
+    <value>输入密码...</value>
+  </data>
+  <data name="WinPwdLoadFailed" xml:space="preserve">
+    <value>'XXX' 加载失败。文件可能已损坏。</value>
+  </data>
+</root>

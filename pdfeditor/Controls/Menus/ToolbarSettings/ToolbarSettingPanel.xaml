@@ -1,0 +1,283 @@
+<UserControl
+	x:Class="pdfeditor.Controls.Menus.ToolbarSettings.ToolbarSettingPanel" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls.Menus.ToolbarSettings" xmlns:commonCtrl="clr-namespace:CommonLib.Controls;assembly=CommonLib"
+	HorizontalAlignment="Stretch"
+	VerticalAlignment="Top"
+	SizeChanged="UserControl_SizeChanged">
+	<Canvas
+		x:Name="HostCanvas"
+		HorizontalAlignment="Stretch"
+		VerticalAlignment="Stretch">
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<DataTemplate
+					x:Key="TextMarkupColorPickerTemplate">
+					<local:TextMarkupColorPicker
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="ColorPickerTemplate">
+					<local:CollapsedColorPicker
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="StrokeThicknessTemplate">
+					<local:StrokeThicknessPicker
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="FontSizeTemplate">
+					<local:FontSizePicker
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="IconTemplate">
+					<local:IconPicker
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="EraserTemplate">
+					<local:EraserPicker
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="TextBlockTemplate">
+					<local:ToolBarTextBlock
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="ImageExitingTemplate">
+					<local:ToolbarImageSettingsExit
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="ExitTemplate">
+					<local:ExitEditingButton
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="ApplyToDefaultTemplate">
+					<local:ApplyToDefaultButton
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="FontStyleTemplate">
+					<local:FontStyleButton
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="FontNameTemplate">
+					<local:FontNamePicker
+						Model="{Binding}" />
+				</DataTemplate>
+				<DataTemplate
+					x:Key="TextEditingButtonsTemplate">
+					<local:TextEditingButtons
+						Model="{Binding}" />
+				</DataTemplate>
+				<local:ToolbarSettingContentTemplateSelector
+					x:Key="ToolbarSettingContentTemplateSelector"
+					TextMarkupColorPicker="{StaticResource TextMarkupColorPickerTemplate}"
+					ColorPicker="{StaticResource ColorPickerTemplate}"
+					StrokeThicknessPicker="{StaticResource StrokeThicknessTemplate}"
+					FontSizePicker="{StaticResource FontSizeTemplate}"
+					IconPicker="{StaticResource IconTemplate}"
+					ExitEditingButton="{StaticResource ExitTemplate}"
+					ApplyToDefaultButton="{StaticResource ApplyToDefaultTemplate}"
+					FontStyleButton="{StaticResource FontStyleTemplate}"
+					FontNamePicker="{StaticResource FontNameTemplate}"
+					EraserPicker="{StaticResource EraserTemplate}"
+					TextBlock="{StaticResource TextBlockTemplate}"
+					ImageExitEditingButton="{StaticResource ImageExitingTemplate}"
+					TextEditingButtons="{StaticResource TextEditingButtonsTemplate}" />
+				<Duration
+					x:Key="ShowDuration">0:0:0.15</Duration>
+				<Duration
+					x:Key="HideDuration">0:0:0.08</Duration>
+				<Storyboard
+					x:Key="ShowContent">
+					<ObjectAnimationUsingKeyFrames
+						Storyboard.TargetName="ClipBorder"
+						Storyboard.TargetProperty="Visibility"
+						Duration="0">
+						<DiscreteObjectKeyFrame
+							KeyTime="0"
+							Value="{x:Static Visibility.Visible}" />
+					</ObjectAnimationUsingKeyFrames>
+					<DoubleAnimation
+						Storyboard.TargetName="LayoutRootShadow"
+						Storyboard.TargetProperty="Opacity"
+						To="0.3"
+						Duration="{StaticResource ShowDuration}" />
+					<DoubleAnimation
+						Storyboard.TargetName="LayoutRootTrans"
+						Storyboard.TargetProperty="Y"
+						To="0"
+						Duration="{StaticResource ShowDuration}">
+						<DoubleAnimation.EasingFunction>
+							<ExponentialEase
+								Exponent="7"
+								EasingMode="EaseOut" />
+						</DoubleAnimation.EasingFunction>
+					</DoubleAnimation>
+				</Storyboard>
+				<Storyboard
+					x:Key="HideContent">
+					<ObjectAnimationUsingKeyFrames
+						Storyboard.TargetName="ClipBorder"
+						Storyboard.TargetProperty="Visibility"
+						Duration="{StaticResource ShowDuration}">
+						<DiscreteObjectKeyFrame
+							KeyTime="0"
+							Value="{x:Static Visibility.Visible}" />
+						<DiscreteObjectKeyFrame
+							KeyTime="100%"
+							Value="{x:Static Visibility.Collapsed}" />
+					</ObjectAnimationUsingKeyFrames>
+					<DoubleAnimation
+						Storyboard.TargetName="LayoutRootShadow"
+						Storyboard.TargetProperty="Opacity"
+						To="0"
+						Duration="{StaticResource HideDuration}" />
+					<DoubleAnimation
+						Storyboard.TargetName="LayoutRootTrans"
+						Storyboard.TargetProperty="Y"
+						To="-44"
+						Duration="{StaticResource HideDuration}">
+						<DoubleAnimation.EasingFunction>
+							<ExponentialEase
+								Exponent="4.5"
+								EasingMode="EaseIn" />
+						</DoubleAnimation.EasingFunction>
+					</DoubleAnimation>
+				</Storyboard>
+				<Style
+					x:Key="ItemsControlStyle"
+					TargetType="{x:Type ItemsControl}">
+					<Setter
+						Property="Background"
+						Value="#00FFFFFF" />
+					<Setter
+						Property="BorderThickness"
+						Value="0" />
+					<Setter
+						Property="Foreground"
+						Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+					<Setter
+						Property="HorizontalAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="VerticalAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="Left" />
+					<Setter
+						Property="VerticalContentAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="UIElement.SnapsToDevicePixels"
+						Value="True" />
+					<Setter
+						Property="ScrollViewer.HorizontalScrollBarVisibility"
+						Value="Auto" />
+					<Setter
+						Property="ScrollViewer.VerticalScrollBarVisibility"
+						Value="Disabled" />
+					<Setter
+						Property="ScrollViewer.CanContentScroll"
+						Value="True" />
+					<Setter
+						Property="ScrollViewer.PanningMode"
+						Value="Both" />
+					<Setter
+						Property="ItemTemplateSelector"
+						Value="{StaticResource ToolbarSettingContentTemplateSelector}" />
+					<Setter
+						Property="ItemsPanel">
+						<Setter.Value>
+							<ItemsPanelTemplate>
+								<StackPanel
+									Orientation="Horizontal" />
+							</ItemsPanelTemplate>
+						</Setter.Value>
+					</Setter>
+					<Setter
+						Property="ItemContainerStyle">
+						<Setter.Value>
+							<Style
+								TargetType="{x:Type ContentPresenter}">
+								<Setter
+									Property="HorizontalAlignment"
+									Value="Stretch" />
+								<Setter
+									Property="VerticalAlignment"
+									Value="Stretch" />
+							</Style>
+						</Setter.Value>
+					</Setter>
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ItemsControl}">
+								<Border
+									Background="{TemplateBinding Control.Background}"
+									BorderBrush="{TemplateBinding Control.BorderBrush}"
+									BorderThickness="{TemplateBinding Control.BorderThickness}"
+									Padding="{TemplateBinding Control.Padding}"
+									SnapsToDevicePixels="True">
+									<ScrollViewer
+										Focusable="False"
+										commonCtrl:ScrollBarHelper.AutoHide="True"
+										commonCtrl:ScrollBarHelper.IndicatorMode="Collapsed">
+										<ItemsPresenter
+											SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+									</ScrollViewer>
+								</Border>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Border
+			x:Name="ClipBorder"
+			ClipToBounds="True"
+			Height="34"
+			Width="600"
+			Margin="0,-1,0,0">
+			<Grid
+				x:Name="LayoutRoot"
+				RenderTransformOrigin="0.5,0.5"
+				Height="33"
+				VerticalAlignment="Center">
+				<UIElement.RenderTransform>
+					<TranslateTransform
+						x:Name="LayoutRootTrans"
+						Y="0" />
+				</UIElement.RenderTransform>
+				<Rectangle
+					HorizontalAlignment="Stretch"
+					VerticalAlignment="Stretch"
+					Fill="{DynamicResource SolidBrushWhiteAndBlack}"
+					Margin="0">
+					<UIElement.Effect>
+						<DropShadowEffect
+							x:Name="LayoutRootShadow"
+							ShadowDepth="2"
+							BlurRadius="4"
+							Direction="270"
+							Opacity="0.3" />
+					</UIElement.Effect>
+				</Rectangle>
+				<Border
+					x:Name="bd"
+					Margin="4">
+					<ItemsControl
+						x:Name="ContentItemsControl"
+						Style="{StaticResource ItemsControlStyle}" />
+				</Border>
+			</Grid>
+		</Border>
+	</Canvas>
+</UserControl>

@@ -1,0 +1,278 @@
+<UserControl
+	x:Class="pdfeditor.Controls.Annotations.AnnotationPopupControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls.Annotations" xmlns:control="clr-namespace:pdfeditor.Controls" xmlns:cv="clr-namespace:pdfeditor.Utils.Converters" xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors" xmlns:behaviors2="clr-namespace:pdfeditor.Utils.Behaviors" xmlns:utils="clr-namespace:pdfeditor.Utils" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:comCtrl="clr-namespace:CommonLib.Controls;assembly=CommonLib" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<local:PopupControlBooleanToVisibilityConverter
+				x:Key="BooleanToVisibilityConverter" />
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Border
+		x:Name="LayoutRoot"
+		Background="#FFFFFFFF"
+		CornerRadius="4"
+		BorderBrush="#66000000"
+		BorderThickness="1"
+		Visibility="{Binding IsOpen, Converter='{StaticResource BooleanToVisibilityConverter}'}">
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<SolidColorBrush
+					x:Key="Button.Static.Background"
+					Color="Transparent" />
+				<SolidColorBrush
+					x:Key="Button.Static.Border"
+					Color="Transparent" />
+				<SolidColorBrush
+					x:Key="Button.MouseOver.Background"
+					Color="#33999999" />
+				<SolidColorBrush
+					x:Key="Button.MouseOver.Border"
+					Color="Transparent" />
+				<SolidColorBrush
+					x:Key="Button.Pressed.Background"
+					Color="#33666666" />
+				<SolidColorBrush
+					x:Key="Button.Pressed.Border"
+					Color="Transparent" />
+				<SolidColorBrush
+					x:Key="Button.Disabled.Background"
+					Color="#FFF4F4F4" />
+				<SolidColorBrush
+					x:Key="Button.Disabled.Border"
+					Color="#FFADB2B5" />
+				<SolidColorBrush
+					x:Key="Button.Disabled.Foreground"
+					Color="#FF838383" />
+				<Style
+					x:Key="FocusVisual">
+					<Setter
+						Property="Control.Template">
+						<Setter.Value>
+							<ControlTemplate>
+								<Rectangle
+									Margin="2"
+									SnapsToDevicePixels="True"
+									Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+									StrokeThickness="1" />
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+				<Style
+					x:Key="CloseButtonStyle"
+					TargetType="{x:Type ButtonBase}">
+					<Setter
+						Property="FrameworkElement.FocusVisualStyle"
+						Value="{StaticResource FocusVisual}" />
+					<Setter
+						Property="Background"
+						Value="{StaticResource Button.Static.Background}" />
+					<Setter
+						Property="BorderBrush"
+						Value="{StaticResource Button.Static.Border}" />
+					<Setter
+						Property="Foreground"
+						Value="#AA000000" />
+					<Setter
+						Property="BorderThickness"
+						Value="0" />
+					<Setter
+						Property="FontSize"
+						Value="10" />
+					<Setter
+						Property="FontFamily"
+						Value="Segoe MDL2 Assets" />
+					<Setter
+						Property="Content"
+						Value="" />
+					<Setter
+						Property="Width"
+						Value="24" />
+					<Setter
+						Property="Height"
+						Value="24" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="Center" />
+					<Setter
+						Property="VerticalContentAlignment"
+						Value="Center" />
+					<Setter
+						Property="Padding"
+						Value="0" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ButtonBase}">
+								<Border
+									x:Name="border"
+									CornerRadius="4"
+									BorderThickness="{TemplateBinding Control.BorderThickness}"
+									Background="{TemplateBinding Control.Background}"
+									BorderBrush="{TemplateBinding Control.BorderBrush}"
+									SnapsToDevicePixels="True">
+									<ContentPresenter
+										x:Name="contentPresenter"
+										RecognizesAccessKey="True"
+										Margin="{TemplateBinding Control.Padding}"
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+										HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+										VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+										Focusable="False" />
+								</Border>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="Button.IsDefaulted"
+										Value="True">
+										<Setter
+											Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+											TargetName="border"
+											Property="Border.BorderBrush" />
+									</Trigger>
+									<Trigger
+										Property="UIElement.IsMouseOver"
+										Value="True">
+										<Setter
+											TargetName="border"
+											Property="Border.Background"
+											Value="{StaticResource Button.MouseOver.Background}" />
+										<Setter
+											TargetName="border"
+											Property="Border.BorderBrush"
+											Value="{StaticResource Button.MouseOver.Border}" />
+									</Trigger>
+									<Trigger
+										Property="IsPressed"
+										Value="True">
+										<Setter
+											TargetName="border"
+											Property="Border.Background"
+											Value="{StaticResource Button.Pressed.Background}" />
+										<Setter
+											TargetName="border"
+											Property="Border.BorderBrush"
+											Value="{StaticResource Button.Pressed.Border}" />
+									</Trigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="False">
+										<Setter
+											TargetName="border"
+											Property="Border.Background"
+											Value="{StaticResource Button.Disabled.Background}" />
+										<Setter
+											TargetName="border"
+											Property="Border.BorderBrush"
+											Value="{StaticResource Button.Disabled.Border}" />
+										<Setter
+											TargetName="contentPresenter"
+											Property="TextElement.Foreground"
+											Value="{StaticResource Button.Disabled.Foreground}" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Grid>
+			<Panel.Background>
+				<SolidColorBrush
+					Opacity="0.05"
+					Color="{Binding BackgroundColor}" />
+			</Panel.Background>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<control:ResizeView
+				x:Name="DragResizeView"
+				ResizeDragStarted="ResizeView_ResizeDragStarted"
+				ResizeDragCompleted="ResizeView_ResizeDragCompleted"
+				Grid.RowSpan="2"
+				DragMode="Move,LeftTop,LeftBottom,RightBottom"
+				IsDraggerVisible="False"
+				CanDragCross="False"
+				BorderThickness="0"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch" />
+			<Grid
+				x:Name="TitleBar"
+				Margin="0,0,0,4">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<Grid
+					VerticalAlignment="Center"
+					IsHitTestVisible="False"
+					Margin="6,0,0,0">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="Auto" />
+					</Grid.ColumnDefinitions>
+					<TextBlock
+						VerticalAlignment="Center"
+						TextTrimming="CharacterEllipsis"
+						Margin="0,0,4,0"
+						Text="{Binding Text}"
+						ToolTip="{Binding Path=Text, RelativeSource={RelativeSource Mode=Self}}" />
+					<TextBlock
+						x:Name="ModificationDateText"
+						Grid.Column="1"
+						TextAlignment="Right"
+						Margin="0,1,2,0"
+						VerticalAlignment="Center"
+						FontSize="10"
+						Foreground="#FF555555"
+						TextTrimming="None"
+						Text="{Binding ModificationDateText}" />
+					<TextBlock
+						x:Name="ModificationDateTextShort"
+						Grid.Column="1"
+						TextAlignment="Right"
+						Margin="0,1,2,0"
+						VerticalAlignment="Center"
+						FontSize="10"
+						Foreground="#FF555555"
+						TextTrimming="None"
+						Visibility="Collapsed"
+						Text="{Binding ModificationDateTextShort}" />
+				</Grid>
+				<Button
+					Grid.Column="1"
+					Padding="0,0,1,1"
+					Style="{StaticResource CloseButtonStyle}"
+					HorizontalAlignment="Right"
+					Click="Button_Click" />
+			</Grid>
+			<Grid
+				x:Name="TextContent"
+				Row="1">
+				<TextBox
+					x:Name="TextContentBox"
+					Margin="4,0,4,4"
+					comCtrl:TextBoxExtensions.Placeholder="{x:Static localprop:Resources.PopupPlaceholderContent}"
+					Style="{StaticResource DefaultTextBoxStyle}"
+					HorizontalScrollBarVisibility="Hidden"
+					VerticalScrollBarVisibility="Visible"
+					AcceptsReturn="True"
+					AcceptsTab="True"
+					TextWrapping="Wrap">
+					<behaviors:Interaction.Behaviors>
+						<behaviors2:TextBoxEditBehavior
+							TextChanged="TextBoxEditBehavior_TextChanged"
+							x:Name="PopupContentTextBehavior" />
+					</behaviors:Interaction.Behaviors>
+				</TextBox>
+			</Grid>
+		</Grid>
+	</Border>
+</UserControl>

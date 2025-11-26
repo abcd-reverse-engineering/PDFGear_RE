@@ -1,0 +1,42 @@
+<UserControl
+	x:Class="pdfeditor.Controls.Annotations.AnnotationLineControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls.Annotations"
+	Focusable="True">
+	<Canvas
+		x:Name="LayoutRoot">
+		<Line
+			x:Name="ContentLine"
+			Opacity="0"
+			Stroke="{Binding Foreground}" />
+		<Line
+			x:Name="DraggerLine"
+			Stroke="#00FFFFFF"
+			StrokeThickness="12"
+			Fill="#00FFFFFF"
+			SnapsToDevicePixels="False"
+			UseLayoutRounding="False"
+			Cursor="SizeAll"
+			MouseLeftButtonDown="DraggerLine_MouseLeftButtonDown" />
+		<Ellipse
+			x:Name="Point1Rect"
+			Width="8"
+			Height="8"
+			Stroke="#FF000000"
+			StrokeThickness="1"
+			Fill="#FFFFFFFF"
+			SnapsToDevicePixels="False"
+			UseLayoutRounding="False"
+			Cursor="SizeAll"
+			MouseLeftButtonDown="Point1Rect_MouseLeftButtonDown" />
+		<Ellipse
+			x:Name="Point2Rect"
+			Width="8"
+			Height="8"
+			Stroke="#FF000000"
+			StrokeThickness="1"
+			Fill="#FFFFFFFF"
+			SnapsToDevicePixels="False"
+			UseLayoutRounding="False"
+			Cursor="SizeAll"
+			MouseLeftButtonDown="Point2Rect_MouseLeftButtonDown" />
+	</Canvas>
+</UserControl>

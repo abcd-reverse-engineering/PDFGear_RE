@@ -1,0 +1,482 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:pdfeditor.Controls.Users" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<Style
+		x:Key="{x:Type local:UserInfoControl}"
+		TargetType="{x:Type local:UserInfoControl}">
+		<Setter
+			Property="Background"
+			Value="#EF5B52" />
+		<Setter
+			Property="BorderBrush"
+			Value="#EF5B52" />
+		<Setter
+			Property="Foreground"
+			Value="#FFFFFF" />
+		<Setter
+			Property="FontWeight"
+			Value="Normal" />
+		<Setter
+			Property="FontSize"
+			Value="10" />
+		<Setter
+			Property="BorderThickness"
+			Value="1" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+		<Setter
+			Property="Padding"
+			Value="0" />
+		<Setter
+			Property="Width"
+			Value="20" />
+		<Setter
+			Property="Height"
+			Value="20" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type local:UserInfoControl}">
+					<Grid
+						x:Name="LayoutRoot">
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									x:Key="EllipseContent"
+									TargetType="{x:Type ContentControl}">
+									<Setter
+										Property="FontWeight"
+										Value="SemiBold" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{x:Type ContentControl}">
+												<Grid>
+													<Ellipse
+														HorizontalAlignment="Stretch"
+														VerticalAlignment="Stretch"
+														Stroke="{TemplateBinding Control.BorderBrush}"
+														Fill="{TemplateBinding Control.Background}"
+														StrokeThickness="{Binding Path=BorderThickness.Left, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+													<ContentPresenter
+														HorizontalAlignment="Center"
+														VerticalAlignment="Center"
+														ContentSource="Content" />
+												</Grid>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+								<Style
+									x:Key="ContentButtonStyle"
+									TargetType="{x:Type ToggleButton}">
+									<Setter
+										Property="FrameworkElement.FocusVisualStyle"
+										Value="{x:Null}" />
+									<Setter
+										Property="Background"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="BorderBrush"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="Foreground"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="BorderThickness"
+										Value="0" />
+									<Setter
+										Property="HorizontalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="Padding"
+										Value="0" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{x:Type ButtonBase}">
+												<Border
+													x:Name="border"
+													BorderThickness="{TemplateBinding Control.BorderThickness}"
+													Background="{TemplateBinding Control.Background}"
+													BorderBrush="{TemplateBinding Control.BorderBrush}"
+													SnapsToDevicePixels="True"
+													RenderTransformOrigin="0.5,0.5">
+													<ContentPresenter
+														x:Name="contentPresenter"
+														RecognizesAccessKey="True"
+														Margin="{TemplateBinding Control.Padding}"
+														SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+														HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+														VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+														Focusable="False" />
+												</Border>
+												<ControlTemplate.Triggers>
+													<Trigger
+														Property="UIElement.IsMouseOver"
+														Value="True">
+														<Setter
+															TargetName="border"
+															Property="RenderTransform">
+															<Setter.Value>
+																<ScaleTransform
+																	ScaleX="1.02"
+																	ScaleY="1.02" />
+															</Setter.Value>
+														</Setter>
+													</Trigger>
+													<Trigger
+														Property="IsPressed"
+														Value="True">
+														<Setter
+															TargetName="border"
+															Property="RenderTransform">
+															<Setter.Value>
+																<ScaleTransform
+																	ScaleX="0.96"
+																	ScaleY="0.96" />
+															</Setter.Value>
+														</Setter>
+													</Trigger>
+													<Trigger
+														Property="IsEnabled"
+														Value="False">
+														<Setter
+															TargetName="border"
+															Property="Border.Background"
+															Value="{StaticResource Button.Disabled.Background}" />
+														<Setter
+															TargetName="border"
+															Property="Border.BorderBrush"
+															Value="{StaticResource Button.Disabled.Border}" />
+														<Setter
+															TargetName="contentPresenter"
+															Property="TextElement.Foreground"
+															Value="{StaticResource Button.Disabled.Foreground}" />
+													</Trigger>
+												</ControlTemplate.Triggers>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+								<SolidColorBrush
+									x:Key="PrimaryDialogButton.Static.Background"
+									Color="#EF5B52" />
+								<SolidColorBrush
+									x:Key="PrimaryDialogButton.Static.Border"
+									Color="#FFEF5B52" />
+								<SolidColorBrush
+									x:Key="PrimaryDialogButton.Static.Foreground"
+									Color="#FFFFFFFF" />
+								<SolidColorBrush
+									x:Key="DialogButton.Static.Background"
+									Color="#FFFFFFFF" />
+								<SolidColorBrush
+									x:Key="DialogButton.Static.Border"
+									Color="#FFBBBBBB" />
+								<SolidColorBrush
+									x:Key="DialogButton.Static.Foreground"
+									Color="#FF000000" />
+								<SolidColorBrush
+									x:Key="DialogButton.Disabled.Background"
+									Color="#FFF4F4F4" />
+								<SolidColorBrush
+									x:Key="DialogButton.Disabled.Border"
+									Color="#FFF4F4F4" />
+								<SolidColorBrush
+									x:Key="DialogButton.Disabled.Foreground"
+									Color="#FF838383" />
+								<Style
+									x:Key="DialogButtonFocusVisual">
+									<Setter
+										Property="Control.Template">
+										<Setter.Value>
+											<ControlTemplate>
+												<Rectangle
+													Margin="-1"
+													SnapsToDevicePixels="False"
+													Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+													StrokeThickness="1"
+													RadiusX="2"
+													RadiusY="2"
+													Opacity="0.6" />
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+								<Style
+									x:Key="DialogButtonStyle"
+									TargetType="{x:Type ButtonBase}">
+									<Setter
+										Property="Background"
+										Value="{StaticResource DialogButton.Static.Background}" />
+									<Setter
+										Property="BorderBrush"
+										Value="{StaticResource DialogButton.Static.Border}" />
+									<Setter
+										Property="Foreground"
+										Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+									<Setter
+										Property="BorderThickness"
+										Value="1" />
+									<Setter
+										Property="HorizontalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalAlignment"
+										Value="Center" />
+									<Setter
+										Property="Padding"
+										Value="8" />
+									<Setter
+										Property="MinWidth"
+										Value="80" />
+									<Setter
+										Property="FrameworkElement.FocusVisualStyle"
+										Value="{StaticResource DialogButtonFocusVisual}" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{x:Type ButtonBase}">
+												<Border
+													x:Name="border"
+													CornerRadius="2"
+													BorderThickness="{TemplateBinding Control.BorderThickness}"
+													Background="{TemplateBinding Control.Background}"
+													BorderBrush="{TemplateBinding Control.BorderBrush}"
+													SnapsToDevicePixels="True">
+													<Grid>
+														<Rectangle
+															x:Name="BackgroundBorder"
+															HorizontalAlignment="Stretch"
+															VerticalAlignment="Stretch"
+															Fill="#FF000000"
+															Opacity="0"
+															SnapsToDevicePixels="False"
+															RadiusX="2"
+															RadiusY="2" />
+														<ContentPresenter
+															x:Name="contentPresenter"
+															RecognizesAccessKey="True"
+															Margin="{TemplateBinding Control.Padding}"
+															SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+															HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+															VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+															Focusable="False" />
+													</Grid>
+												</Border>
+												<ControlTemplate.Triggers>
+													<Trigger
+														Property="UIElement.IsMouseOver"
+														Value="True">
+														<Setter
+															TargetName="BackgroundBorder"
+															Property="UIElement.Opacity"
+															Value="0.04" />
+													</Trigger>
+													<Trigger
+														Property="IsPressed"
+														Value="True">
+														<Setter
+															TargetName="BackgroundBorder"
+															Property="UIElement.Opacity"
+															Value="0.12" />
+													</Trigger>
+												</ControlTemplate.Triggers>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+								<GeometryGroup
+									x:Key="BadgeGeometry">
+									<Geometry>M8.75 0.721688C8.9047 0.632371 9.0953 0.632372 9.25 0.721688L16.9103 5.14434C17.065 5.23365 17.1603 5.39872 17.1603 5.57735V14.4226C17.1603 14.6013 17.065 14.7663 16.9103 14.8557L9.25 19.2783C9.0953 19.3676 8.9047 19.3676 8.75 19.2783L1.08975 14.8557C0.935045 14.7663 0.839746 14.6013 0.839746 14.4226V5.57735C0.839746 5.39872 0.935045 5.23365 1.08975 5.14434L8.75 0.721688Z</Geometry>
+									<Geometry>M13.2417 13.0475H5.00169L4 8.5L6.62109 8.95247L9.12202 5L11.6211 8.95247L14.24 8.5L13.2417 13.0475Z</Geometry>
+								</GeometryGroup>
+								<Geometry
+									x:Key="ExitGeometry">M11.5 1H1V18H11.5M13.5 5.5L17.5 9.5M17.5 9.5L13.5 13.5M17.5 9.5H4.5</Geometry>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<Popup
+							x:Name="popup"
+							StaysOpen="False"
+							Placement="Bottom"
+							PopupAnimation="Slide"
+							AllowsTransparency="True"
+							VerticalOffset="8"
+							HorizontalOffset="-150"
+							PlacementTarget="{Binding ElementName=ContentButton}">
+							<Border
+								Width="250"
+								Background="#FFFFFFFF"
+								BorderBrush="#CCCCCCCC"
+								BorderThickness="1">
+								<StackPanel
+									Orientation="Vertical">
+									<StackPanel
+										Orientation="Horizontal"
+										Margin="16,12">
+										<Grid>
+											<ContentControl
+												Width="36"
+												Height="36"
+												FontSize="16"
+												HorizontalAlignment="Stretch"
+												VerticalAlignment="Stretch"
+												Background="{TemplateBinding Control.Background}"
+												Foreground="{TemplateBinding Control.Foreground}"
+												BorderBrush="{TemplateBinding Control.BorderBrush}"
+												BorderThickness="{TemplateBinding Control.BorderThickness}"
+												FontFamily="{TemplateBinding Control.FontFamily}"
+												FontStretch="{TemplateBinding Control.FontStretch}"
+												FontStyle="{TemplateBinding Control.FontStyle}"
+												FontWeight="{TemplateBinding Control.FontWeight}"
+												Style="{StaticResource EllipseContent}"
+												Content="{Binding ElementName=ContentText, Path=Content}" />
+											<Image
+												x:Name="PremiumBadge2"
+												HorizontalAlignment="Right"
+												VerticalAlignment="Bottom"
+												Source="/Style/Resources/PremiumIcon.png"
+												Width="16"
+												Height="16"
+												IsHitTestVisible="False" />
+										</Grid>
+										<TextBlock
+											x:Name="EmailText"
+											Foreground="#FF000000"
+											FontSize="12"
+											HorizontalAlignment="Left"
+											VerticalAlignment="Center"
+											Margin="16,0,0,0"
+											TextWrapping="Wrap"
+											ToolTip="{Binding Path=Text, RelativeSource={RelativeSource Mode=Self}}" />
+									</StackPanel>
+									<Rectangle
+										HorizontalAlignment="Stretch"
+										Height="1"
+										Fill="#EEEEEE" />
+									<Button
+										x:Name="PlanButton"
+										Background="#00FFFFFF"
+										BorderBrush="#00FFFFFF"
+										Padding="0"
+										Height="36"
+										HorizontalAlignment="Stretch"
+										HorizontalContentAlignment="Stretch"
+										Style="{StaticResource DialogButtonStyle}">
+										<Grid
+											Height="36"
+											Margin="12,0">
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition
+													Width="Auto" />
+												<ColumnDefinition
+													Width="Auto" />
+												<ColumnDefinition
+													Width="*" />
+											</Grid.ColumnDefinitions>
+											<Path
+												Width="20"
+												Height="20"
+												Stroke="#FF000000"
+												Data="{StaticResource BadgeGeometry}" />
+											<TextBlock
+												x:Name="PlanText"
+												Text="Plan"
+												Margin="8,0"
+												Grid.Column="1"
+												VerticalAlignment="Center" />
+											<TextBlock
+												x:Name="ExpireText"
+												Grid.Column="2"
+												HorizontalAlignment="Right"
+												VerticalAlignment="Center" />
+										</Grid>
+									</Button>
+									<Rectangle
+										HorizontalAlignment="Stretch"
+										Height="1"
+										Margin="12,0"
+										Fill="#EEEEEE" />
+									<Button
+										x:Name="LogoutButton"
+										Background="#00FFFFFF"
+										BorderBrush="#00FFFFFF"
+										Padding="0"
+										Height="36"
+										HorizontalAlignment="Stretch"
+										HorizontalContentAlignment="Stretch"
+										Style="{StaticResource DialogButtonStyle}">
+										<Grid
+											Margin="12,0">
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition
+													Width="Auto" />
+												<ColumnDefinition
+													Width="Auto" />
+											</Grid.ColumnDefinitions>
+											<Path
+												Width="20"
+												Height="20"
+												Stroke="#FF000000"
+												Data="{StaticResource ExitGeometry}" />
+											<TextBlock
+												Text="Log out"
+												Margin="8,0"
+												Grid.Column="1"
+												VerticalAlignment="Center" />
+										</Grid>
+									</Button>
+								</StackPanel>
+							</Border>
+						</Popup>
+						<ToggleButton
+							x:Name="ContentButton"
+							Style="{StaticResource ContentButtonStyle}"
+							IsChecked="{Binding ElementName=popup, Path=IsOpen, Mode=TwoWay}">
+							<ContentControl
+								x:Name="ContentText"
+								Width="{TemplateBinding FrameworkElement.Width}"
+								Height="{TemplateBinding FrameworkElement.Height}"
+								HorizontalAlignment="Stretch"
+								VerticalAlignment="Stretch"
+								Background="{TemplateBinding Control.Background}"
+								Foreground="{TemplateBinding Control.Foreground}"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								FontSize="{TemplateBinding Control.FontSize}"
+								FontFamily="{TemplateBinding Control.FontFamily}"
+								FontStretch="{TemplateBinding Control.FontStretch}"
+								FontStyle="{TemplateBinding Control.FontStyle}"
+								FontWeight="{TemplateBinding Control.FontWeight}"
+								Style="{StaticResource EllipseContent}" />
+						</ToggleButton>
+						<Image
+							x:Name="PremiumBadge1"
+							HorizontalAlignment="Right"
+							VerticalAlignment="Bottom"
+							Source="/Style/Resources/PremiumIcon.png"
+							Width="10"
+							Height="10"
+							IsHitTestVisible="False" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

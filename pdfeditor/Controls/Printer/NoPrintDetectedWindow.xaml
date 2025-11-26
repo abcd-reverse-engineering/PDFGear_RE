@@ -1,0 +1,244 @@
+<Window
+	x:Class="pdfeditor.Controls.Printer.NoPrintDetectedWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.Printer" xmlns:localprop="clr-namespace:pdfeditor.Properties"
+	WindowStartupLocation="CenterOwner"
+	Title="PDFgear"
+	ResizeMode="NoResize"
+	SizeToContent="WidthAndHeight">
+	<Grid
+		MinWidth="350"
+		MaxWidth="400"
+		MinHeight="80"
+		Margin="20,12"
+		HorizontalAlignment="Left"
+		VerticalAlignment="Top">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				MaxWidth="300" />
+			<ColumnDefinition
+				Width="Auto" />
+		</Grid.ColumnDefinitions>
+		<ContentPresenter
+			x:Name="ContentPresenter"
+			TextElement.FontSize="12"
+			Grid.ColumnSpan="2">
+			<FrameworkElement.Resources>
+				<ResourceDictionary>
+					<Style
+						x:Key="{x:Type TextBlock}"
+						TargetType="{x:Type TextBlock}">
+						<Setter
+							Property="TextWrapping"
+							Value="Wrap" />
+					</Style>
+				</ResourceDictionary>
+			</FrameworkElement.Resources>
+		</ContentPresenter>
+		<Grid
+			x:Name="ButtonContainer"
+			Row="1"
+			Column="1"
+			Margin="0,12,0,0"
+			HorizontalAlignment="Right">
+			<FrameworkElement.Resources>
+				<ResourceDictionary>
+					<SolidColorBrush
+						x:Key="PrimaryDialogButton.Static.Background"
+						Color="#EF5B52" />
+					<SolidColorBrush
+						x:Key="PrimaryDialogButton.Static.Border"
+						Color="#FFEF5B52" />
+					<SolidColorBrush
+						x:Key="PrimaryDialogButton.Static.Foreground"
+						Color="#FFFFFFFF" />
+					<SolidColorBrush
+						x:Key="DialogButton.Static.Background"
+						Color="#FFFFFFFF" />
+					<SolidColorBrush
+						x:Key="DialogButton.Static.Border"
+						Color="#FFBBBBBB" />
+					<SolidColorBrush
+						x:Key="DialogButton.Static.Foreground"
+						Color="#FF000000" />
+					<SolidColorBrush
+						x:Key="DialogButton.Disabled.Background"
+						Color="#FFF4F4F4" />
+					<SolidColorBrush
+						x:Key="DialogButton.Disabled.Border"
+						Color="#FFF4F4F4" />
+					<SolidColorBrush
+						x:Key="DialogButton.Disabled.Foreground"
+						Color="#FF838383" />
+					<Style
+						x:Key="DialogButtonFocusVisual">
+						<Setter
+							Property="Control.Template">
+							<Setter.Value>
+								<ControlTemplate>
+									<Rectangle
+										Margin="-1"
+										SnapsToDevicePixels="False"
+										Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+										StrokeThickness="1"
+										RadiusX="2"
+										RadiusY="2"
+										Opacity="0.6" />
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+					<Style
+						x:Key="DialogButtonStyle"
+						TargetType="{x:Type ButtonBase}">
+						<Setter
+							Property="Background"
+							Value="{StaticResource DialogButton.Static.Background}" />
+						<Setter
+							Property="BorderBrush"
+							Value="{StaticResource DialogButton.Static.Border}" />
+						<Setter
+							Property="Foreground"
+							Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+						<Setter
+							Property="BorderThickness"
+							Value="1" />
+						<Setter
+							Property="HorizontalContentAlignment"
+							Value="Center" />
+						<Setter
+							Property="VerticalContentAlignment"
+							Value="Center" />
+						<Setter
+							Property="VerticalAlignment"
+							Value="Center" />
+						<Setter
+							Property="Padding"
+							Value="8" />
+						<Setter
+							Property="MinWidth"
+							Value="80" />
+						<Setter
+							Property="MinHeight"
+							Value="32" />
+						<Setter
+							Property="FrameworkElement.FocusVisualStyle"
+							Value="{StaticResource DialogButtonFocusVisual}" />
+						<Setter
+							Property="Template">
+							<Setter.Value>
+								<ControlTemplate
+									TargetType="{x:Type ButtonBase}">
+									<Border
+										x:Name="border"
+										CornerRadius="2"
+										BorderThickness="{TemplateBinding Control.BorderThickness}"
+										Background="{TemplateBinding Control.Background}"
+										BorderBrush="{TemplateBinding Control.BorderBrush}"
+										SnapsToDevicePixels="True">
+										<Grid>
+											<Rectangle
+												x:Name="BackgroundBorder"
+												HorizontalAlignment="Stretch"
+												VerticalAlignment="Stretch"
+												Fill="#FF000000"
+												Opacity="0"
+												SnapsToDevicePixels="False"
+												RadiusX="2"
+												RadiusY="2" />
+											<ContentPresenter
+												x:Name="contentPresenter"
+												RecognizesAccessKey="True"
+												Margin="{TemplateBinding Control.Padding}"
+												SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+												HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+												VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+												Focusable="False" />
+										</Grid>
+									</Border>
+									<ControlTemplate.Triggers>
+										<Trigger
+											Property="UIElement.IsMouseOver"
+											Value="True">
+											<Setter
+												TargetName="BackgroundBorder"
+												Property="UIElement.Opacity"
+												Value="0.04" />
+										</Trigger>
+										<Trigger
+											Property="IsPressed"
+											Value="True">
+											<Setter
+												TargetName="BackgroundBorder"
+												Property="UIElement.Opacity"
+												Value="0.12" />
+										</Trigger>
+										<Trigger
+											Property="IsEnabled"
+											Value="False">
+											<Setter
+												TargetName="border"
+												Property="Border.Background"
+												Value="{StaticResource DialogButton.Disabled.Background}" />
+											<Setter
+												TargetName="border"
+												Property="Border.BorderBrush"
+												Value="{StaticResource DialogButton.Disabled.Border}" />
+											<Setter
+												TargetName="contentPresenter"
+												Property="TextElement.Foreground"
+												Value="{StaticResource DialogButton.Disabled.Foreground}" />
+										</Trigger>
+										<MultiTrigger>
+											<MultiTrigger.Conditions>
+												<Condition
+													Property="Button.IsDefault"
+													Value="True" />
+											</MultiTrigger.Conditions>
+											<Setter
+												Property="Background"
+												Value="{StaticResource PrimaryDialogButton.Static.Background}" />
+											<Setter
+												Property="BorderBrush"
+												Value="{StaticResource PrimaryDialogButton.Static.Border}" />
+											<Setter
+												Property="Foreground"
+												Value="{StaticResource PrimaryDialogButton.Static.Foreground}" />
+										</MultiTrigger>
+									</ControlTemplate.Triggers>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</ResourceDictionary>
+			</FrameworkElement.Resources>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Button
+				x:Name="AddButton"
+				Style="{StaticResource DialogButtonStyle}"
+				Content="{x:Static localprop:Resources.NoPrintNoteWindowContent}"
+				IsDefault="True"
+				Margin="10,0,0,0"
+				Click="AddButton_Click" />
+			<Button
+				x:Name="OkButton"
+				Grid.Column="2"
+				Style="{StaticResource DialogButtonStyle}"
+				Content="OK"
+				IsCancel="True"
+				Margin="10,0,0,0"
+				Click="OkButton_Click" />
+		</Grid>
+	</Grid>
+</Window>

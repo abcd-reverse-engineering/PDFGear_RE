@@ -1,0 +1,129 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:pdfeditor.Controls.PageEditor">
+	<SolidColorBrush
+		x:Key="TextBox.Static.Background"
+		Color="#FFFFFFFF" />
+	<SolidColorBrush
+		x:Key="TextBox.Static.Border"
+		Color="#2D000000" />
+	<SolidColorBrush
+		x:Key="TextBox.MouseOver.Border"
+		Color="#33000000" />
+	<SolidColorBrush
+		x:Key="TextBox.Focus.Border"
+		Color="#40000000" />
+	<SolidColorBrush
+		x:Key="TextBox.Error.Border"
+		Color="#FFFF0000" />
+	<Style
+		x:Key="{x:Type local:PageRangeTextBox}"
+		TargetType="{x:Type local:PageRangeTextBox}">
+		<Setter
+			Property="Background"
+			Value="{StaticResource TextBox.Static.Background}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource TextBox.Static.Border}" />
+		<Setter
+			Property="Foreground"
+			Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+		<Setter
+			Property="BorderThickness"
+			Value="1" />
+		<Setter
+			Property="Padding"
+			Value="1" />
+		<Setter
+			Property="KeyboardNavigation.TabNavigation"
+			Value="None" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Left" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="UIElement.AllowDrop"
+			Value="True" />
+		<Setter
+			Property="ScrollViewer.PanningMode"
+			Value="VerticalFirst" />
+		<Setter
+			Property="Stylus.IsFlicksEnabled"
+			Value="False" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type local:PageRangeTextBox}">
+					<Border
+						x:Name="border"
+						Background="{TemplateBinding Control.Background}"
+						BorderBrush="{TemplateBinding Control.BorderBrush}"
+						BorderThickness="{TemplateBinding Control.BorderThickness}"
+						SnapsToDevicePixels="True">
+						<ScrollViewer
+							x:Name="PART_ContentHost"
+							Focusable="False"
+							HorizontalScrollBarVisibility="Hidden"
+							VerticalScrollBarVisibility="Hidden" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								TargetName="border"
+								Property="UIElement.Opacity"
+								Value="0.56" />
+						</Trigger>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="border"
+								Property="Border.BorderBrush"
+								Value="{StaticResource TextBox.MouseOver.Border}" />
+						</Trigger>
+						<Trigger
+							Property="UIElement.IsKeyboardFocused"
+							Value="True">
+							<Setter
+								TargetName="border"
+								Property="Border.BorderBrush"
+								Value="{StaticResource TextBox.Focus.Border}" />
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsFocused"
+									Value="False" />
+								<Condition
+									Property="local:PageRangeTextBox.HasError"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="border"
+								Property="Border.BorderBrush"
+								Value="{StaticResource TextBox.Error.Border}" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<MultiTrigger>
+				<MultiTrigger.Conditions>
+					<Condition
+						Property="TextBoxBase.IsInactiveSelectionHighlightEnabled"
+						Value="True" />
+					<Condition
+						Property="TextBoxBase.IsSelectionActive"
+						Value="False" />
+				</MultiTrigger.Conditions>
+				<Setter
+					Property="TextBoxBase.SelectionBrush"
+					Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" />
+			</MultiTrigger>
+		</Style.Triggers>
+	</Style>
+</ResourceDictionary>

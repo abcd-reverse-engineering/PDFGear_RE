@@ -1,0 +1,63 @@
+<UserControl
+	x:Class="pdfeditor.Controls.Printer.PrintPreviewControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls.Printer" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:localConvert="clr-namespace:pdfeditor.Utils.Converters" xmlns:ctrl="clr-namespace:CommonLib.Controls;assembly=CommonLib"
+	HorizontalAlignment="Stretch"
+	VerticalAlignment="Stretch"
+	Padding="5">
+	<Grid
+		x:Name="LayoutRoot"
+		Height="Auto"
+		IsEnabled="{Binding ElementName=_Image, Path=IsVisible}"
+		Margin="{Binding Path=Padding, RelativeSource={RelativeSource AncestorType=local:PrintPreviewControl}}">
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<localConvert:ImageTransFromLength
+					x:Key="ImageTransFromLength" />
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="*" />
+		</Grid.RowDefinitions>
+		<CheckBox
+			x:Name="_PrintAnnotCheckBox"
+			Style="{StaticResource DefaultCheckBoxStyle}"
+			Content="{x:Static localprop:Resources.WinPrinterPrintAnnotationContent}"
+			Margin="0 0 0 10"
+			HorizontalAlignment="Left"
+			IsChecked="{Binding Path=PrintAnnotations, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:PrintPreviewControl}}" />
+		<ComboBox
+			x:Name="_FileList"
+			DisplayMemberPath="FileName"
+			Style="{StaticResource DefaultComboBoxStyle}"
+			Grid.Row="1"
+			Height="25"
+			FontSize="13"
+			HorizontalAlignment="Stretch"
+			Margin="0 0 0 10"
+			Visibility="{Binding Path=FileComboBoxVisibility, Mode=OneWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:PrintPreviewControl}}"
+			SelectionChanged="_FileList_SelectionChanged" />
+		<Grid
+			x:Name="_ImageContainer"
+			Margin="-5,0"
+			Row="2"
+			Background="{DynamicResource PrintWindowPerviewBackground}">
+			<ctrl:ProgressRing
+				x:Name="_LoadingProgressRing"
+				Width="36"
+				Height="36"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Visibility="Collapsed"
+				IsActive="{Binding Path=IsVisible, RelativeSource={RelativeSource Mode=Self}}" />
+			<Image
+				x:Name="_Image"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Visibility="Collapsed" />
+		</Grid>
+	</Grid>
+</UserControl>

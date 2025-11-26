@@ -1,0 +1,438 @@
+<Window
+	x:Class="pdfeditor.Controls.PageEditor.ScannerPreview" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:hc="https://handyorg.github.io/handycontrol" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.PageEditor" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:viewmodels="clr-namespace:pdfeditor.ViewModels" xmlns:helpers="clr-namespace:pdfeditor.Utils.Scan" xmlns:converter="clr-namespace:pdfeditor.Utils.Converters"
+	ResizeMode="NoResize"
+	WindowStartupLocation="CenterOwner"
+	Background="{DynamicResource SolidBrushWhiteAndBlack}"
+	Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Title="PDFgear"
+	Height="800"
+	Width="1200">
+	<Grid>
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<Geometry
+					x:Key="ChevronLeftGeometry">M.293 6.707l5 5q.07.07.151.124.082.055.173.093.091.038.188.057Q5.902 12 6 12t.195-.02q.097-.018.188-.056.09-.038.173-.092.081-.055.151-.125.07-.07.124-.151.055-.082.093-.173.038-.091.057-.188Q7 11.098 7 11t-.02-.195q-.018-.097-.056-.188-.038-.09-.093-.173-.054-.081-.124-.151L2.414 6l4.293-4.293q.07-.07.124-.151.055-.082.093-.173.038-.091.057-.188Q7 1.098 7 1T6.98.805Q6.963.708 6.925.617 6.886.527 6.83.444 6.777.363 6.707.293q-.14-.14-.324-.217Q6.199 0 6 0t-.383.076q-.183.076-.324.217l-5 5q-.14.14-.217.324Q0 5.801 0 6t.076.383q.076.183.217.324z</Geometry>
+				<Geometry
+					x:Key="ChevronRightGeometry">M4.586 6L.293 10.293q-.14.14-.217.324Q0 10.801 0 11t.076.383q.076.184.217.324.07.07.151.124.082.055.173.093.091.038.188.057Q.902 12 1 12t.195-.02q.097-.018.188-.056.09-.038.173-.092.081-.055.151-.125l5-5q.14-.14.217-.324Q7 6.199 7 6t-.076-.383q-.076-.183-.217-.324l-5-5q-.07-.07-.151-.124-.082-.055-.173-.093Q1.292.038 1.195.02 1.098 0 1 0T.805.02Q.708.037.617.075.527.114.444.17.363.223.293.293q-.07.07-.124.151Q.114.526.076.617.038.708.02.805 0 .902 0 1t.02.195q.018.097.056.188.038.09.093.173.054.081.124.151L4.586 6z</Geometry>
+				<converter:ScannerImageTransFormLength
+					x:Key="ScannerImageTransFormLength" />
+				<Style
+					x:Key="BtnInfoStyle"
+					TargetType="{x:Type ButtonBase}">
+					<Setter
+						Property="Height"
+						Value="25" />
+					<Setter
+						Property="Background"
+						Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+					<Setter
+						Property="BorderThickness"
+						Value="0" />
+					<Setter
+						Property="TextBlock.Foreground"
+						Value="#3F3F3F" />
+					<Setter
+						Property="TextBlock.FontSize"
+						Value="12" />
+					<Setter
+						Property="TextBlock.TextAlignment"
+						Value="Center" />
+					<Setter
+						Property="TextBlock.FontSize"
+						Value="12" />
+					<Setter
+						Property="TextBlock.FontStyle"
+						Value="Normal" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="Stretch" />
+					<Setter
+						Property="Padding"
+						Value="4,0" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ButtonBase}">
+								<Border
+									x:Name="bborder"
+									BorderBrush="{TemplateBinding Control.BorderBrush}"
+									BorderThickness="{TemplateBinding Control.BorderThickness}"
+									Background="{TemplateBinding Control.Background}"
+									SnapsToDevicePixels="True">
+									<ContentPresenter
+										x:Name="contentPresenter"
+										Focusable="False"
+										HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+										Margin="{TemplateBinding Control.Padding}"
+										RecognizesAccessKey="True"
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+										VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+								</Border>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="UIElement.IsMouseOver"
+										Value="True">
+										<Setter
+											TargetName="bborder"
+											Property="Border.CornerRadius"
+											Value="3" />
+										<Setter
+											TargetName="bborder"
+											Value="{DynamicResource SignaturePickerDelBtnBorder}"
+											Property="Border.BorderBrush" />
+										<Setter
+											TargetName="bborder"
+											Value="{DynamicResource BtnInfoMouseOverColor}"
+											Property="Border.Background" />
+									</Trigger>
+									<Trigger
+										Property="ToggleButton.IsChecked"
+										Value="true">
+										<Setter
+											TargetName="bborder"
+											Property="Border.CornerRadius"
+											Value="3" />
+										<Setter
+											TargetName="bborder"
+											Value="{DynamicResource SignaturePickerDelBtnBorder}"
+											Property="Border.BorderBrush" />
+										<Setter
+											TargetName="bborder"
+											Value="{DynamicResource BtnInfoMouseOverColor}"
+											Property="Border.Background" />
+									</Trigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="False">
+										<Setter
+											TargetName="bborder"
+											Value="{DynamicResource MainViewUndoRedoUnEnabled}"
+											Property="Border.BorderBrush" />
+										<Setter
+											Value="{DynamicResource MainViewUndoRedoUnEnabled}"
+											Property="TextBlock.Foreground" />
+									</Trigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="True">
+										<Setter
+											TargetName="bborder"
+											Value="{DynamicResource MainViewUndoRedoEnabled}"
+											Property="Border.BorderBrush" />
+										<Setter
+											Value="{DynamicResource MainViewUndoRedoEnabled}"
+											Property="TextBlock.Foreground" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+				<Style
+					x:Key="PreviousAndNextStyle"
+					BasedOn="{StaticResource BtnInfoStyle}"
+					TargetType="{x:Type ButtonBase}">
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ButtonBase}">
+								<Border
+									x:Name="bborder"
+									CornerRadius="16"
+									BorderBrush="{TemplateBinding Control.BorderBrush}"
+									BorderThickness="{TemplateBinding Control.BorderThickness}"
+									Background="{TemplateBinding Control.Background}"
+									SnapsToDevicePixels="True">
+									<ContentPresenter
+										x:Name="contentPresenter"
+										Focusable="False"
+										HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+										Margin="{TemplateBinding Control.Padding}"
+										RecognizesAccessKey="True"
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+										VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+								</Border>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="UIElement.IsMouseOver"
+										Value="True">
+										<Setter
+											TargetName="bborder"
+											Property="Border.CornerRadius"
+											Value="16" />
+										<Setter
+											TargetName="bborder"
+											Property="Border.Background"
+											Value="#111111A6" />
+										<Setter
+											TargetName="bborder"
+											Property="Border.BorderBrush"
+											Value="#3f3f3f" />
+									</Trigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="False">
+										<Setter
+											TargetName="bborder"
+											Property="Border.BorderBrush"
+											Value="#9F9F9F" />
+										<Setter
+											Property="TextBlock.Foreground"
+											Value="#9F9F9F" />
+										<Setter
+											Property="Visibility"
+											Value="Collapsed" />
+									</Trigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="True">
+										<Setter
+											TargetName="bborder"
+											Property="Border.BorderBrush"
+											Value="#3F3F3F" />
+										<Setter
+											Property="TextBlock.Foreground"
+											Value="#3F3F3F" />
+										<Setter
+											Property="Visibility"
+											Value="Visible" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="50" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid
+			Row="0">
+			<StackPanel
+				HorizontalAlignment="Center"
+				Margin="240 0 0 0"
+				Orientation="Horizontal">
+				<Rectangle
+					Margin="5 0"
+					Width="1"
+					Height="20"
+					StrokeThickness="1"
+					Stroke="#D2D2D2" />
+				<Button
+					Height="32"
+					Width="32"
+					Background="#00FFFFFF"
+					BorderBrush="#00FFFFFF"
+					Style="{StaticResource BtnInfoStyle}"
+					CommandParameter="left"
+					ToolTip="{x:Static localprop:Resources.MenuPageRotateLeftContent}"
+					ToolTipService.ShowOnDisabled="True"
+					Command="{Binding RotatePreviewCommand}">
+					<Image
+						Source="{DynamicResource InsertFromScannerRotateLeftImage}" />
+				</Button>
+				<Button
+					Height="32"
+					Width="32"
+					Background="#00FFFFFF"
+					BorderBrush="#00FFFFFF"
+					Style="{StaticResource BtnInfoStyle}"
+					CommandParameter="right"
+					ToolTip="{x:Static localprop:Resources.MenuPageRotateRightContent}"
+					ToolTipService.ShowOnDisabled="True"
+					Command="{Binding RotatePreviewCommand}">
+					<Image
+						Source="{DynamicResource InsertFromScannerRotateRightImage}" />
+				</Button>
+				<Button
+					Style="{StaticResource BtnInfoStyle}"
+					Height="32"
+					Width="32"
+					Background="#00FFFFFF"
+					BorderBrush="#00FFFFFF"
+					ToolTip="{x:Static localprop:Resources.MenuRightAnnotateDelete}"
+					ToolTipService.ShowOnDisabled="True"
+					Command="{Binding DeletePreviewCommand}">
+					<Image
+						Source="{DynamicResource InsertFromScannerDeleteImage}" />
+				</Button>
+			</StackPanel>
+			<StackPanel
+				Orientation="Horizontal"
+				HorizontalAlignment="Center">
+				<Button
+					Style="{StaticResource BtnInfoStyle}"
+					Command="{Binding PreviousPageCommand}">
+					<Viewbox
+						Margin="0,3,5,4">
+						<Path
+							Fill="{DynamicResource TextBrushWhiteAndBlack}"
+							Data="F1 M5.625,10 C5.625,9.830729 5.686849,9.684245 5.810547,9.560547 L12.685547,2.685547 C12.809244,2.56185 12.955729,2.5 13.125,2.5 C13.294271,2.5 13.440755,2.56185 13.564453,2.685547 C13.68815,2.809246 13.75,2.95573 13.75,3.125 C13.75,3.294271 13.68815,3.440756 13.564453,3.564453 L7.138672,10 L13.564453,16.435547 C13.68815,16.559244 13.75,16.705729 13.75,16.875 C13.75,17.044271 13.68815,17.190756 13.564453,17.314453 C13.440755,17.43815 13.294271,17.5 13.125,17.5 C12.955729,17.5 12.809244,17.43815 12.685547,17.314453 L5.810547,10.439453 C5.686849,10.315756 5.625,10.169271 5.625,10 Z"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center" />
+					</Viewbox>
+				</Button>
+				<TextBox
+					Width="44"
+					VerticalAlignment="Center"
+					VerticalContentAlignment="Center"
+					HorizontalContentAlignment="Center"
+					Style="{StaticResource DefaultTextBoxStyle}"
+					MaxLength="10"
+					Text="{Binding PageNumber, UpdateSourceTrigger=Explicit, StringFormat=0}">
+					<hc:Interaction.Behaviors>
+						<helpers:NumberTextBoxBehavior
+							Minimum="1"
+							Maximum="{Binding PageCount, Mode=OneWay}" />
+					</hc:Interaction.Behaviors>
+				</TextBox>
+				<TextBlock
+					Margin="4,0,0,0"
+					VerticalAlignment="Center">
+					<Run
+						Text="/" /> <Run
+						Text="{Binding PageCount, Mode=OneWay}" /></TextBlock>
+				<Button
+					Style="{StaticResource BtnInfoStyle}"
+					Command="{Binding NextPageCommand}">
+					<Viewbox
+						Margin="0,3,4,4">
+						<Path
+							Fill="{DynamicResource TextBrushWhiteAndBlack}"
+							Data="F1 M6.25,16.875 C6.25,16.705729 6.311849,16.559244 6.435547,16.435547 L12.861328,10 L6.435547,3.564453 C6.311849,3.440756 6.25,3.294271 6.25,3.125 C6.25,2.95573 6.311849,2.809246 6.435547,2.685547 C6.559244,2.56185 6.705729,2.5 6.875,2.5 C7.044271,2.5 7.190755,2.56185 7.314453,2.685547 L14.189453,9.560547 C14.31315,9.684245 14.375,9.830729 14.375,10 C14.375,10.169271 14.31315,10.315756 14.189453,10.439453 L7.314453,17.314453 C7.190755,17.43815 7.044271,17.5 6.875,17.5 C6.705729,17.5 6.559244,17.43815 6.435547,17.314453 C6.311849,17.190756 6.25,17.044271 6.25,16.875 Z"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center" />
+					</Viewbox>
+				</Button>
+			</StackPanel>
+			<StackPanel
+				Margin="0 0 20 0"
+				HorizontalAlignment="Right"
+				Orientation="Horizontal">
+				<Button
+					x:Name="ZoomOutBtn"
+					Style="{StaticResource BtnInfoStyle}"
+					FontFamily="Segoe MDL2 Assets"
+					FontSize="16"
+					Content=""
+					Tag="False"
+					Click="ZoomButton_Click" />
+				<ComboBox
+					Name="zoomComboBox"
+					Width="100"
+					MinHeight="24"
+					Margin="4,0"
+					VerticalAlignment="Center"
+					DisplayMemberPath="Value"
+					IsEditable="True"
+					Style="{StaticResource DefaultComboBoxStyle}"
+					IsTextSearchEnabled="False"
+					SelectedValuePath="Key"
+					ItemsSource="{Binding ZoomList}"
+					SelectionChanged="ZoomComboBox_SelectionChanged" />
+				<Button
+					x:Name="ZoomInBtn"
+					Style="{StaticResource BtnInfoStyle}"
+					FontFamily="Segoe MDL2 Assets"
+					FontSize="16"
+					Content=""
+					Tag="True"
+					Click="ZoomButton_Click" />
+			</StackPanel>
+		</Grid>
+		<Border
+			Grid.Row="1"
+			BorderThickness="1"
+			Background="#00FFFFFF">
+			<Canvas
+				x:Name="CanvasForPreView"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				Height="auto"
+				Width="auto"
+				MaxHeight="728"
+				MinWidth="1200"
+				ClipToBounds="True"
+				Background="#FF000000"
+				Opacity="0.8">
+				<Image
+					x:Name="image"
+					Height="728"
+					Width="1200"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					RenderOptions.BitmapScalingMode="HighQuality"
+					Source="{Binding PreviewSource.Image}"
+					MouseWheel="image_MouseWheel"
+					MouseDown="image_MouseDown"
+					MouseMove="image_MouseMove"
+					MouseUp="image_MouseUp">
+					<UIElement.RenderTransform>
+						<TransformGroup>
+							<RotateTransform
+								x:Name="RotatetransForm"
+								Angle="{Binding PreviewPage.Rotate}"
+								CenterX="{Binding ActualWidth, ElementName=image, Converter='{StaticResource ScannerImageTransFormLength}'}"
+								CenterY="{Binding ActualHeight, ElementName=image, Converter='{StaticResource ScannerImageTransFormLength}'}" />
+						</TransformGroup>
+					</UIElement.RenderTransform>
+				</Image>
+			</Canvas>
+		</Border>
+		<Grid
+			Row="1"
+			Margin="8">
+			<Button
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				BorderThickness="1"
+				Height="25"
+				Background="#00FFFFFF"
+				Style="{StaticResource PreviousAndNextStyle}"
+				Command="{Binding PreviousPageCommand}">
+				<ContentControl.Content>
+					<Viewbox
+						Width="16"
+						Height="16">
+						<Path
+							Data="M9,1 L2,8 L9,15"
+							Height="16"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Stroke="#FFFFFFFF"
+							StrokeThickness="2"
+							Stretch="Fill" />
+					</Viewbox>
+				</ContentControl.Content>
+			</Button>
+			<Button
+				HorizontalAlignment="Right"
+				Height="25"
+				VerticalAlignment="Center"
+				BorderThickness="1"
+				Background="#00FFFFFF"
+				Style="{StaticResource PreviousAndNextStyle}"
+				Command="{Binding NextPageCommand}">
+				<ContentControl.Content>
+					<Viewbox
+						Width="16"
+						Height="16">
+						<Path
+							Data="M1,15 L8,8 L1,0.999999"
+							Height="16"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Stroke="#FFFFFFFF"
+							StrokeThickness="2"
+							Stretch="Fill" />
+					</Viewbox>
+				</ContentControl.Content>
+			</Button>
+		</Grid>
+	</Grid>
+</Window>

@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CompressPDFText" xml:space="preserve">
+    <value>PDF komprimieren</value>
+  </data>
+  <data name="ConvertFailedByLocalTipMsg" xml:space="preserve">
+    <value>Konvertierung fehlgeschlagen. Möchten Sie es im erweiterten Modus erneut versuchen?</value>
+  </data>
+  <data name="ConverterAdvancedModeCbContent" xml:space="preserve">
+    <value>Erweiterter Modus</value>
+  </data>
+  <data name="ConverterAdvancedModeTipContent" xml:space="preserve">
+    <value>Die Datei wird online konvertiert, was mehr Zeit in Anspruch nimmt.</value>
+  </data>
+  <data name="CreatePDFDeleteContent" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie XXX Seite(n) löschen wollen?</value>
+  </data>
+  <data name="CreatePDFSelectedCreateContent" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie XXX Seite(n) auswählen und neue PDF(s) erstellen möchten?</value>
+  </data>
+  <data name="CreatePDFUnexpectedError" xml:space="preserve">
+    <value>Ein unbekannter Fehler ist aufgetreten.</value>
+  </data>
+  <data name="FeedbackWindowAttachFileText" xml:space="preserve">
+    <value>Senden Sie die Problemdateien, um uns bei der Diagnose des Problems zu helfen.</value>
+  </data>
+  <data name="FeedbackWindowCloseBtnContent" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="FeedbackWindowDetailTagText" xml:space="preserve">
+    <value>Bitte beschreiben Sie das aufgetretene Problem, und wie wir es reproduzieren können. Vielen Dank.</value>
+  </data>
+  <data name="FeedbackWindowDetailText" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="FeedbackWindowEmailTagText" xml:space="preserve">
+    <value>E-Mail-Adresse (Optional)</value>
+  </data>
+  <data name="FeedbackWindowEmailText" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="FeedbackWindowInvalidEmailMsgContent" xml:space="preserve">
+    <value>Bitte geben Sie eine gültige E-Mail-Adresse ein.</value>
+  </data>
+  <data name="FeedbackWindowInvalidEmailMsgTitle" xml:space="preserve">
+    <value>Ungültige E-Mail-Adresse</value>
+  </data>
+  <data name="FeedbackWindowPolicyText" xml:space="preserve">
+    <value>Datenschutzerklärung</value>
+  </data>
+  <data name="FeedbackWindowSendBtnContent" xml:space="preserve">
+    <value>Senden</value>
+  </data>
+  <data name="FeedbackWindowSendSuccMsgContent" xml:space="preserve">
+    <value>Wir haben Ihre Nachricht erhalten. Vielen Dank!</value>
+  </data>
+  <data name="FeedbackWindowSendSuccMsgTitle" xml:space="preserve">
+    <value>Erfolgreich gesendet</value>
+  </data>
+  <data name="FeedbackWindowTitleText" xml:space="preserve">
+    <value>Support kontaktieren</value>
+  </data>
+  <data name="FileCompressMsgCompressFailSupport" xml:space="preserve">
+    <value>Die Datei(en) konnte(n) nicht komprimiert werden, möchten Sie den Support kontaktieren?</value>
+  </data>
+  <data name="FileConvertMsgAddFileNoFile" xml:space="preserve">
+    <value>Bitte fügen Sie vor der Umwandlung Dateien hinzu.</value>
+  </data>
+  <data name="FileConvertMsgAddFileOneFile" xml:space="preserve">
+    <value>Bitte wählen Sie mindestens eine Datei zum Umwandeln aus.</value>
+  </data>
+  <data name="FileConvertMsgConvertFailSupport" xml:space="preserve">
+    <value>Die Datei(en) konnte(n) nicht umgewandelt werden. Möchten Sie den Support kontaktieren?</value>
+  </data>
+  <data name="FileConvertMsgFileAdded" xml:space="preserve">
+    <value>Die Datei wurde hinzugefügt.</value>
+  </data>
+  <data name="FileConvertMsgInvaildPageNum" xml:space="preserve">
+    <value>Ungültige Seitenzahl.</value>
+  </data>
+  <data name="FileConvertMsgInvalidForat" xml:space="preserve">
+    <value>Ungültiges Ausgabeformat.</value>
+  </data>
+  <data name="FileConvertMsgUnsupportF" xml:space="preserve">
+    <value>Nicht unterstützte Datei:</value>
+  </data>
+  <data name="FileConvertStatusConvertFail" xml:space="preserve">
+    <value>Umwandlung fehlgeschlagen</value>
+  </data>
+  <data name="FileConvertStatusConvertSucc" xml:space="preserve">
+    <value>Umwandlung erfolgreich</value>
+  </data>
+  <data name="FileConvertStatusConverting" xml:space="preserve">
+    <value>Umwandeln</value>
+  </data>
+  <data name="FileConvertStatusLoading" xml:space="preserve">
+    <value>Wird geladen</value>
+  </data>
+  <data name="FileCovertStatusInit" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="FileCovertStatusLoaded" xml:space="preserve">
+    <value>Geladen</value>
+  </data>
+  <data name="FileCovertStatusUnsupported" xml:space="preserve">
+    <value>Nicht unterstützte Datei</value>
+  </data>
+  <data name="ImageToPDFFailedContent" xml:space="preserve">
+    <value>Bilder konnten nicht in PDF konvertiert werden.</value>
+  </data>
+  <data name="ImageToPDFOpneAfterCreateContent" xml:space="preserve">
+    <value>Öffnen Sie die PDF-Datei nach der Erstellung.</value>
+  </data>
+  <data name="ImageToPDFSuccessContent" xml:space="preserve">
+    <value>PDF-Dateien werden erfolgreich erstellt.</value>
+  </data>
+  <data name="ImageToPDFWinAddImageContent" xml:space="preserve">
+    <value>Bild hinzufügen</value>
+  </data>
+  <data name="ImageToPDFWinAddingWarning" xml:space="preserve">
+    <value>Bild wird hinzugefügt, bitte nach Abschluss erneut versuchen.</value>
+  </data>
+  <data name="ImageToPDFWinAutomaticallyContent" xml:space="preserve">
+    <value>Bild(er) automatisch strecken</value>
+  </data>
+  <data name="ImageToPDFWinCloseWarning" xml:space="preserve">
+    <value>Das Bild in der Liste geht nach dem Schließen verloren, möchten Sie es schließen?</value>
+  </data>
+  <data name="ImageToPDFWinCreateBtn" xml:space="preserve">
+    <value>PDF Erstellen</value>
+  </data>
+  <data name="ImageToPDFWinCreateContent" xml:space="preserve">
+    <value>Erstellen...</value>
+  </data>
+  <data name="ImageToPDFWinDeleteContent" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="ImageToPDFWinDeletePreview" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie dies löschen möchten?</value>
+  </data>
+  <data name="ImageToPDFWinDropContent" xml:space="preserve">
+    <value>Bilder hierher ziehen und ablegen oder Dateien auswählen</value>
+  </data>
+  <data name="ImageToPDFWinImportContent" xml:space="preserve">
+    <value>Importieren...</value>
+  </data>
+  <data name="ImageToPDFWinMultiplePDF" xml:space="preserve">
+    <value>Mehrere Separate PDFs</value>
+  </data>
+  <data name="ImageToPDFWinRotateLeftContent" xml:space="preserve">
+    <value>Nach links drehen</value>
+  </data>
+  <data name="ImageToPDFWinRotateRightContent" xml:space="preserve">
+    <value>Nach rechts drehen</value>
+  </data>
+  <data name="ImageToPDFWinSelectedContent" xml:space="preserve">
+    <value>Ausgewählt</value>
+  </data>
+  <data name="ImageToPDFWinSinglePDF" xml:space="preserve">
+    <value>Einzelne PDF</value>
+  </data>
+  <data name="ImageToPDFWinUpdateContent" xml:space="preserve">
+    <value>Aktualisieren...</value>
+  </data>
+  <data name="ImportDialogFilterImage" xml:space="preserve">
+    <value>Bild-Dateien</value>
+  </data>
+  <data name="ImportDialogFilterSupported" xml:space="preserve">
+    <value>Unterstützte Dateien</value>
+  </data>
+  <data name="MainWinCompressBatchQulity" xml:space="preserve">
+    <value>Komprimierungsstufe</value>
+  </data>
+  <data name="MainWinCompressBeginCompress" xml:space="preserve">
+    <value>Komprimieren</value>
+  </data>
+  <data name="MainWinCompressCompresComplete" xml:space="preserve">
+    <value>Abgeschlossen</value>
+  </data>
+  <data name="MainWinCompressCompresFaild" xml:space="preserve">
+    <value>Komprimierung fehlgeschlagen</value>
+  </data>
+  <data name="MainWinCompressCompresQueue" xml:space="preserve">
+    <value>In Warteschlange</value>
+  </data>
+  <data name="MainWinCompressCompressedSize" xml:space="preserve">
+    <value>Komprimierte Größe</value>
+  </data>
+  <data name="MainWinCompressCompressing" xml:space="preserve">
+    <value>Komprimierung läuft</value>
+  </data>
+  <data name="MainWinCompressGVHeaderCompressMode" xml:space="preserve">
+    <value>Komprimierungsgrad</value>
+  </data>
+  <data name="MainWinCompressGVHeaderFileSize" xml:space="preserve">
+    <value>Größe der Datei</value>
+  </data>
+  <data name="MainWinCompressHighCompressMode" xml:space="preserve">
+    <value>Hoch</value>
+  </data>
+  <data name="MainWinCompressLowCompressMode" xml:space="preserve">
+    <value>Niedrig</value>
+  </data>
+  <data name="MainWinCompressMediumCompressMode" xml:space="preserve">
+    <value>Mittel</value>
+  </data>
+  <data name="MainWinCompressOpenInExplore" xml:space="preserve">
+    <value>Ansicht im Datei-Explorer nach der Komprimierung</value>
+  </data>
+  <data name="MainWinConvertToExcelFaildSuggest" xml:space="preserve">
+    <value>Die PDF-Datei konnte nicht erfolgreich in Excel konvertiert werden. Bitte versuchen Sie, diese in Word zu konvertieren.</value>
+  </data>
+  <data name="MainWinImageToPDFCHBOutputInOneFile" xml:space="preserve">
+    <value>Ausgabe in einer Datei</value>
+  </data>
+  <data name="MainWinImageToPDFPageMarginsBigMargin" xml:space="preserve">
+    <value>Breiter Rand</value>
+  </data>
+  <data name="MainWinImageToPDFPageMarginsNoMargin" xml:space="preserve">
+    <value>Kein Rand</value>
+  </data>
+  <data name="MainWinImageToPDFPageMarginsSmallMargin" xml:space="preserve">
+    <value>Schmaler Rand</value>
+  </data>
+  <data name="MainWinImageToPDFPageSetting" xml:space="preserve">
+    <value>Seiteneinstellungen</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeA3Landscape" xml:space="preserve">
+    <value>A3 Querformat</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeA3Portrait" xml:space="preserve">
+    <value>A3 Hochformat</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeA4Landscape" xml:space="preserve">
+    <value>A4 Querformat</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeA4Portrait" xml:space="preserve">
+    <value>A4 Hochformat</value>
+  </data>
+  <data name="MainWinImageToPDFPageSizeMatchSource" xml:space="preserve">
+    <value>Quelle anpassen</value>
+  </data>
+  <data name="MainWinOthersToPDFDeleteNoFile" xml:space="preserve">
+    <value>Bitte wählen Sie die zu löschende(n) Datei(en) aus.</value>
+  </data>
+  <data name="MainWindowAddFBtnContent" xml:space="preserve">
+    <value>Datei hinzufügen</value>
+  </data>
+  <data name="MainWindowAddFDescText" xml:space="preserve">
+    <value>Datei hierhin ziehen und ablegen</value>
+  </data>
+  <data name="MainWindowCFileNameText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MainWindowCFileOperationText" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="MainWindowCFilePagesText" xml:space="preserve">
+    <value>Seiten gesamt</value>
+  </data>
+  <data name="MainWindowCFileRangeText" xml:space="preserve">
+    <value>Bereich</value>
+  </data>
+  <data name="MainWindowCFileStatusText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="MainWindowClearBtnContent" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="MainWindowConvertBtnContent" xml:space="preserve">
+    <value>Umwandeln</value>
+  </data>
+  <data name="MainWindowOCRDescText" xml:space="preserve">
+    <value>Mit OCR (optische Zeichenerkennung) wird die gescannte oder bildbasierte Datei in bearbeitbare Dokumente umgewandelt. Die Formatierung kann sich ändern.</value>
+  </data>
+  <data name="MainWindowOCRText" xml:space="preserve">
+    <value>OCR (Text aus Bild extrahieren)</value>
+  </data>
+  <data name="MainWindowOutputPathText" xml:space="preserve">
+    <value>Ausgabepfad</value>
+  </data>
+  <data name="MainWindowSaveAsText" xml:space="preserve">
+    <value>Speichern als</value>
+  </data>
+  <data name="MainWindowViewFileText" xml:space="preserve">
+    <value>Nach der Umwandlung im Datei-Explorer ansehen</value>
+  </data>
+  <data name="OCRSettingsWindowCancelBtnContent" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="OCRSettingsWindowDescText" xml:space="preserve">
+    <value>Um bessere Ergebnisse bei der Verwendung von OCR zu erhalten, wählen Sie bitte die Sprache des Dokuments aus.</value>
+  </data>
+  <data name="OCRSettingsWindowOkBtnContent" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OCRSettingsWindowTitleText" xml:space="preserve">
+    <value>Sprache auswählen</value>
+  </data>
+  <data name="OpenDocByIncorrectPwdMsg" xml:space="preserve">
+    <value>Das Passwort ist inkorrekt.</value>
+  </data>
+  <data name="OpenExplorerBtnContent" xml:space="preserve">
+    <value>Öffnen Sie die Datei im Explorer</value>
+  </data>
+  <data name="OpenFileBtnContent" xml:space="preserve">
+    <value>Datei Öffnen</value>
+  </data>
+  <data name="PDFToImageConvertFaileError" xml:space="preserve">
+    <value>Während der Konvertierung ist ein Fehler aufgetreten</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByCreateOutputDir" xml:space="preserve">
+    <value>Das Ausgabeverzeichnis konnte nicht erstellt werden</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByFileNotExist" xml:space="preserve">
+    <value>Die Datei konnte nicht gefunden werden</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByInvalidOutputFormat" xml:space="preserve">
+    <value>Der Seitenbereich ist ungültig</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByPageRange" xml:space="preserve">
+    <value>Seite konnte nicht abgerufen werden</value>
+  </data>
+  <data name="PDFToImageConvertFaileErrorByWrongPassword" xml:space="preserve">
+    <value>Falsches Dateipasswort</value>
+  </data>
+  <data name="PDFToImageConverterMsgErrorBorderThickness" xml:space="preserve">
+    <value>Bitte geben Sie eine ganze Zahl zwischen 0 und 50 ein</value>
+  </data>
+  <data name="PDFToImageConverterMsgErrorZoom" xml:space="preserve">
+    <value>Bitte geben Sie eine ganze Zahl zwischen 0 und 200 ein</value>
+  </data>
+  <data name="PDFToImageConverterMsgOnlyPDF" xml:space="preserve">
+    <value>Bitte fügen Sie PDF-Dateien hinzu.</value>
+  </data>
+  <data name="PDFToImageConverterMsgPageRangeIsNull" xml:space="preserve">
+    <value>Bitte geben Sie einen gültigen Seitenbereich ein.</value>
+  </data>
+  <data name="PDFToImageConverterMsgWrongArgs" xml:space="preserve">
+    <value>Parameterfehler</value>
+  </data>
+  <data name="PDFToImageTooltipBorderColor" xml:space="preserve">
+    <value>Randfarbe</value>
+  </data>
+  <data name="PDFToImageTooltipBorderThickness" xml:space="preserve">
+    <value>Randdicke</value>
+  </data>
+  <data name="PDFToImageTooltipZoom" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="PDFtoExcelText" xml:space="preserve">
+    <value>PDF in Excel</value>
+  </data>
+  <data name="PDFtoImageBorderColorText" xml:space="preserve">
+    <value>Randfarbe</value>
+  </data>
+  <data name="PDFtoImageBorderThicknessText" xml:space="preserve">
+    <value>Randdicke</value>
+  </data>
+  <data name="PDFtoImageColorModeText" xml:space="preserve">
+    <value>Farbmodus</value>
+  </data>
+  <data name="PDFtoImageColorText" xml:space="preserve">
+    <value>Farbe</value>
+  </data>
+  <data name="PDFtoImageConvertEntireImagesText" xml:space="preserve">
+    <value>Alle Seiten in einem Bild</value>
+  </data>
+  <data name="PDFtoImageExtractSingleImagesText" xml:space="preserve">
+    <value>Ein Bild pro Seite</value>
+  </data>
+  <data name="PDFtoImageGrayscaleText" xml:space="preserve">
+    <value>Graustufen</value>
+  </data>
+  <data name="PDFtoImageIncludeAnnotationsText" xml:space="preserve">
+    <value>Kommentare einbeziehen</value>
+  </data>
+  <data name="PDFtoImageOutputFormatText" xml:space="preserve">
+    <value>Ausgabeformat</value>
+  </data>
+  <data name="PDFtoImageOutputOptionText" xml:space="preserve">
+    <value>Ausgabeoption</value>
+  </data>
+  <data name="PDFtoImageQualityKeepDPIText" xml:space="preserve">
+    <value>Originale DPI beibehalten</value>
+  </data>
+  <data name="PDFtoImageQualityText" xml:space="preserve">
+    <value>Qualität</value>
+  </data>
+  <data name="PDFtoImageText" xml:space="preserve">
+    <value>PDF in Bild</value>
+  </data>
+  <data name="PDFtoImageZoomText" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="PDFtoJpegText" xml:space="preserve">
+    <value>PDF in JPEG</value>
+  </data>
+  <data name="PDFtoPPTText" xml:space="preserve">
+    <value>PDF in PPT</value>
+  </data>
+  <data name="PDFtoPngText" xml:space="preserve">
+    <value>PDF in PNG</value>
+  </data>
+  <data name="PDFtoRTFText" xml:space="preserve">
+    <value>PDF in RTF</value>
+  </data>
+  <data name="PDFtoTextText" xml:space="preserve">
+    <value>PDF in TXT</value>
+  </data>
+  <data name="PDFtoWebText" xml:space="preserve">
+    <value>PDF in Webseiten</value>
+  </data>
+  <data name="PDFtoWordText" xml:space="preserve">
+    <value>PDF in Word</value>
+  </data>
+  <data name="PDFtoXMLText" xml:space="preserve">
+    <value>PDF in XML</value>
+  </data>
+  <data name="RateWindowDesc1Text" xml:space="preserve">
+    <value>Bitte hinterlasse uns eine positive Bewertung und Rezension!</value>
+  </data>
+  <data name="RateWindowDesc2Text" xml:space="preserve">
+    <value>Danke für deine Unterstützung!</value>
+  </data>
+  <data name="RateWindowDesc3Text" xml:space="preserve">
+    <value>Die Bewertung dauert weniger als eine Minute.</value>
+  </data>
+  <data name="RateWindowFeedbackBtnContent" xml:space="preserve">
+    <value>Ich möchte Feedback geben</value>
+  </data>
+  <data name="RateWindowRateBtnContent" xml:space="preserve">
+    <value>Ich liebe es! Ich möchte 5 Sterne vergeben!</value>
+  </data>
+  <data name="RateWindowTitleText" xml:space="preserve">
+    <value>Gefällt Ihnen PDFgear?</value>
+  </data>
+  <data name="WinCompressAddFileTipText" xml:space="preserve">
+    <value>Bitte fügen Sie die Dateien, die Sie kompromieren müssen, hinzu und wählen Sie sie aus.</value>
+  </data>
+  <data name="WinConvertAddFileTipText" xml:space="preserve">
+    <value>Bitte wählen Sie alle Dateien aus, die Sie konvertieren möchten.</value>
+  </data>
+  <data name="WinConvertLoadedFailed" xml:space="preserve">
+    <value>Ladevorgang gescheitert</value>
+  </data>
+  <data name="WinConvertSetOutputFolderText" xml:space="preserve">
+    <value>Bitte legen Sie den Ausgabepfad fest.</value>
+  </data>
+  <data name="WinConvertToExcelCheckContent" xml:space="preserve">
+    <value>Ausgabe auf einem Arbeitsblatt</value>
+  </data>
+  <data name="WinConvertToPDFAddFileBtnText" xml:space="preserve">
+    <value>Datei hinzufügen</value>
+  </data>
+  <data name="WinConvertToPDFClearBtnText" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="WinConvertToPDFItemInitText" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="WinConvertToPDFItemLoadedText" xml:space="preserve">
+    <value>Geladen</value>
+  </data>
+  <data name="WinConvertToPDFItemLoadingText" xml:space="preserve">
+    <value>Wird geladen</value>
+  </data>
+  <data name="WinConvertToPDFItemUnSupport" xml:space="preserve">
+    <value>Datei wird nicht unterstützt</value>
+  </data>
+  <data name="WinConvertToPDFListFileAction" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="WinConvertToPDFListFileName" xml:space="preserve">
+    <value>Dateiname</value>
+  </data>
+  <data name="WinConvertToPDFListFileStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="WinConvertToPDFOutFolderLabel" xml:space="preserve">
+    <value>Ausgabepfad</value>
+  </data>
+  <data name="WinConvertToPDFStartConvertBtn" xml:space="preserve">
+    <value>Umwandeln</value>
+  </data>
+  <data name="WinConvertToPDFStatusConverting" xml:space="preserve">
+    <value>Umwandeln</value>
+  </data>
+  <data name="WinConvertToPDFStatusFailed" xml:space="preserve">
+    <value>Umwandlung fehlgeschlagen</value>
+  </data>
+  <data name="WinConvertToPDFStatusSucc" xml:space="preserve">
+    <value>Umwandlung erfolgreich</value>
+  </data>
+  <data name="WinConvertToPDFViewInExplore" xml:space="preserve">
+    <value>Nach der Umwandlung im Datei-Explorer ansehen</value>
+  </data>
+  <data name="WinFeedBackSendTryagainMsg" xml:space="preserve">
+    <value>Senden der Nachricht fehlgeschlagen, bitte erneut versuchen!</value>
+  </data>
+  <data name="WinFileOccupationExplain" xml:space="preserve">
+    <value>xxx wird von einem anderen Programm verwendet. Bitte schließen Sie das Programm und versuchen Sie es erneut.</value>
+  </data>
+  <data name="WinFileOccupationMsg" xml:space="preserve">
+    <value>Hinzufügen der Datei fehlgeschlagen.</value>
+  </data>
+  <data name="WinFileRetryBtnContent" xml:space="preserve">
+    <value>Erneut versuchen</value>
+  </data>
+  <data name="WinListHeaderExcelToPDFText" xml:space="preserve">
+    <value>Excel in PDF</value>
+  </data>
+  <data name="WinListHeaderImageToPDFText" xml:space="preserve">
+    <value>Bild in PDF</value>
+  </data>
+  <data name="WinListHeaderPPTToPDFText" xml:space="preserve">
+    <value>PPT in PDF</value>
+  </data>
+  <data name="WinListHeaderRTFToPDFText" xml:space="preserve">
+    <value>RTF in PDF</value>
+  </data>
+  <data name="WinListHeaderTXTToPDFText" xml:space="preserve">
+    <value>TXT in PDF</value>
+  </data>
+  <data name="WinListHeaderWordToPDFText" xml:space="preserve">
+    <value>Word in PDF</value>
+  </data>
+  <data name="WinMergeSplitAddFileCheckMsg" xml:space="preserve">
+    <value>Die Datei (XXX) wurde hinzugefügt.</value>
+  </data>
+  <data name="WinMergeSplitBtnAddFilesContent" xml:space="preserve">
+    <value>Dateien hinzufügen</value>
+  </data>
+  <data name="WinMergeSplitBtnClearContent" xml:space="preserve">
+    <value>Leeren</value>
+  </data>
+  <data name="WinMergeSplitBtnMergeContent" xml:space="preserve">
+    <value>Zusammenführen</value>
+  </data>
+  <data name="WinMergeSplitBtnSplitContent" xml:space="preserve">
+    <value>Teilen</value>
+  </data>
+  <data name="WinMergeSplitCbxSplitCustomrangeItem" xml:space="preserve">
+    <value>Benutzerdefinierter Bereich</value>
+  </data>
+  <data name="WinMergeSplitCbxSplitFixedrangeItem" xml:space="preserve">
+    <value>Fester Bereich</value>
+  </data>
+  <data name="WinMergeSplitClearFileAskMsg" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie die ausgewählte(n) Datei(en) entfernen möchten?</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnFilenameTitle" xml:space="preserve">
+    <value>Dateiname</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnOperationTitle" xml:space="preserve">
+    <value>Vorgang</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnPagesTitle" xml:space="preserve">
+    <value>Seiten</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnRangesTitle" xml:space="preserve">
+    <value>Bereich</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnSplitModeTitle" xml:space="preserve">
+    <value>Teilmodus</value>
+  </data>
+  <data name="WinMergeSplitGridCloumnStatusTitle" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="WinMergeSplitLabelOutputFilenameContent" xml:space="preserve">
+    <value>Name der Ausgabedatei</value>
+  </data>
+  <data name="WinMergeSplitLabelOutputpathContent" xml:space="preserve">
+    <value>Ausgabepfad</value>
+  </data>
+  <data name="WinMergeSplitLeftMergeTile" xml:space="preserve">
+    <value>PDF zusammenführen</value>
+  </data>
+  <data name="WinMergeSplitLeftSplitTile" xml:space="preserve">
+    <value>PDF teilen</value>
+  </data>
+  <data name="WinMergeSplitMergeCkbViewFileContent" xml:space="preserve">
+    <value>Nach dem Zusammenführen der Dateien im Datei-Explorer anzeigen</value>
+  </data>
+  <data name="WinMergeSplitMergeFileCheckEmptyFileMsg" xml:space="preserve">
+    <value>Bitte die PDF-Dateien hinzufügen und auswählen, die Sie zusammenführen möchten.</value>
+  </data>
+  <data name="WinMergeSplitMergeFileCheckEmptyFilenameMsg" xml:space="preserve">
+    <value>Bitte legen Sie den Ausgabepfad und den Dateinamen fest.</value>
+  </data>
+  <data name="WinMergeSplitMergeFileCheckExistFilenameMsg" xml:space="preserve">
+    <value>Der Dateiname existiert bereits, bitte wählen Sie einen anderen Namen aus.</value>
+  </data>
+  <data name="WinMergeSplitMergeFileFailMsg" xml:space="preserve">
+    <value>Die Zusammenführung der PDF-Dateien ist fehlgeschlagen. Möchten Sie den Support kontaktieren?</value>
+  </data>
+  <data name="WinMergeSplitMergeStatusFail" xml:space="preserve">
+    <value>Zusammenführen Fehlgeschlagen</value>
+  </data>
+  <data name="WinMergeSplitMergeStatusMerging" xml:space="preserve">
+    <value>Wird zusammengeführt</value>
+  </data>
+  <data name="WinMergeSplitMergeStatusSucc" xml:space="preserve">
+    <value>Zusammenführen Abgeschlossen</value>
+  </data>
+  <data name="WinMergeSplitSplitCkbViewFileContent" xml:space="preserve">
+    <value>Nach der Trennung der Dateien im Datei-Explorer anzeigen</value>
+  </data>
+  <data name="WinMergeSplitSplitFileCheckEmptyFileMsg" xml:space="preserve">
+    <value>Bitte die PDF-Dateien hinzufügen und auswählen, die Sie trennen möchten.</value>
+  </data>
+  <data name="WinMergeSplitSplitFileCheckModeMsg" xml:space="preserve">
+    <value>Bitte geben Sie einen Seitenbereich ein.</value>
+  </data>
+  <data name="WinMergeSplitSplitFileCheckpageRangeMsg" xml:space="preserve">
+    <value>Ungültiger Seitenbereich.</value>
+  </data>
+  <data name="WinMergeSplitSplitFileFailMsg" xml:space="preserve">
+    <value>Die Trennung der PDF-Dateien ist fehlgeschlagen. Möchten Sie den Support kontaktieren?</value>
+  </data>
+  <data name="WinMergeSplitSplitModeCustomRangeHelpAsgMsg" xml:space="preserve">
+    <value>Z. B. 1, 8 oder 9-16</value>
+  </data>
+  <data name="WinMergeSplitSplitModeCustomRangeHelptipMsg" xml:space="preserve">
+    <value>Benutzerdefinierter Bereich: die PDF in benutzerdefinierte Seitenbereiche trennen, z. B. 1, 8 oder 9-16</value>
+  </data>
+  <data name="WinMergeSplitSplitModeFixedRangeHelpAsgMsg" xml:space="preserve">
+    <value>Fester Bereich: 10</value>
+  </data>
+  <data name="WinMergeSplitSplitModeFixedRangeHelptipMsg" xml:space="preserve">
+    <value>Fester Bereich: Das PDF seitenweise trennen, d. h. bei 10 wird alle 10 Seiten ein neues Dokument erstellt</value>
+  </data>
+  <data name="WinMergeSplitSplitStatusFail" xml:space="preserve">
+    <value>Teilen Fehlgeschlagen</value>
+  </data>
+  <data name="WinMergeSplitSplitStatusSplitting" xml:space="preserve">
+    <value>Wird geteilt</value>
+  </data>
+  <data name="WinMergeSplitSplitStatusSucc" xml:space="preserve">
+    <value>Teilen Abgeschlossen</value>
+  </data>
+  <data name="WinMergeSplitStatusInit" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="WinMergeSplitStatusLoaded" xml:space="preserve">
+    <value>Geladen</value>
+  </data>
+  <data name="WinMergeSplitStatusLoading" xml:space="preserve">
+    <value>Wird geladen</value>
+  </data>
+  <data name="WinMergeSplitStatusUnsupported" xml:space="preserve">
+    <value>Datei wird nicht unterstützt</value>
+  </data>
+  <data name="WinPwdEntePwdTitle" xml:space="preserve">
+    <value>Passwort eingeben</value>
+  </data>
+  <data name="WinPwdEnterTipContent" xml:space="preserve">
+    <value>Dieses Dokument ist passwortgeschützt. Bitte geben Sie unten das Passwort ein.</value>
+  </data>
+  <data name="WinPwdEnterTipContentFa" xml:space="preserve">
+    <value>'XXX' ist passwortgeschützt.  Bitte geben Sie unten das Passwort ein.</value>
+  </data>
+  <data name="WinPwdInputContent" xml:space="preserve">
+    <value>Hier eingeben ...</value>
+  </data>
+  <data name="WinPwdLoadFailed" xml:space="preserve">
+    <value>'XXX' konnte nicht geladen werden. Bitte überprüfen Sie, ob die Datei beschädigt ist.</value>
+  </data>
+</root>

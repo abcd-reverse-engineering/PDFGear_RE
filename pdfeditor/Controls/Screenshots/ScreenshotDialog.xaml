@@ -1,0 +1,60 @@
+<UserControl
+	x:Class="pdfeditor.Controls.Screenshots.ScreenshotDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls.Screenshots" xmlns:control="clr-namespace:pdfeditor.Controls">
+	<Border
+		x:Name="RootBorder"
+		BorderBrush="#00FFFFFF"
+		Background="#00FFFFFF"
+		BorderThickness="0"
+		Cursor="Cross">
+		<Canvas
+			x:Name="DraggerParent">
+			<Path
+				x:Name="myPath"
+				Fill="#66000000"
+				IsHitTestVisible="False">
+				<Path.Data>
+					<GeometryGroup>
+						<RectangleGeometry
+							x:Name="BackgroundRectangle" />
+						<RectangleGeometry
+							x:Name="DraggerRectangle"
+							Rect="0,0,0,0" />
+					</GeometryGroup>
+				</Path.Data>
+			</Path>
+			<TextBlock
+				x:Name="MoveBoxSize"
+				Background="#000000"
+				Opacity="0.8"
+				Foreground="#FFFFFFFF" />
+			<control:ResizeView
+				x:Name="DragResizeView"
+				ResizeDragStarted="DragResizeView_ResizeDragStarted"
+				ResizeDragging="DragResizeView_ResizeDragging"
+				ResizeDragCompleted="DragResizeView_ResizeDragCompleted"
+				MouseDoubleClick="DragResizeView_MouseDoubleClick"
+				Opacity="0"
+				DragPlaceholderFill="#00FFFFFF" />
+			<local:ScreenshotExtractTextToolbar
+				x:Name="ExtractTextToolbar"
+				IsEnabled="False"
+				IsHitTestVisible="False"
+				Opacity="0" />
+			<local:ScreenshotImageToolbar
+				x:Name="ImageToolbar"
+				IsEnabled="False"
+				IsHitTestVisible="False"
+				Opacity="0" />
+			<local:ScreenshotOcrToolbar
+				x:Name="OcrToolbar"
+				IsEnabled="False"
+				IsHitTestVisible="False"
+				Opacity="0" />
+			<local:ScreenshotCropPageToolbar
+				x:Name="CropPageToolbar"
+				IsEnabled="False"
+				IsHitTestVisible="False"
+				Opacity="0" />
+		</Canvas>
+	</Border>
+</UserControl>

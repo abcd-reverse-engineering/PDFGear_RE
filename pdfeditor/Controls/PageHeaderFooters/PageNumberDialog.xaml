@@ -1,0 +1,440 @@
+<Window
+	x:Class="pdfeditor.Controls.PageHeaderFooters.PageNumberDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.PageHeaderFooters" xmlns:control="clr-namespace:pdfeditor.Controls" xmlns:cv="clr-namespace:pdfeditor.Utils.Converters" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:commonLibCtrl="clr-namespace:CommonLib.Controls;assembly=CommonLib" xmlns:colorPicker="clr-namespace:CommonLib.Controls.ColorPickers;assembly=CommonLib" xmlns:pageEditor="clr-namespace:pdfeditor.Controls.PageEditor" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	Background="{DynamicResource WindowsBackground}"
+	TextBlock.Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Title="{StaticResource ApplicationTitle}"
+	Height="600"
+	Width="660"
+	MinWidth="450">
+	<Grid>
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<ResourceDictionary.MergedDictionaries>
+					<ResourceDictionary
+						Source="/Controls/PageHeaderFooters/PageHeaderFooterStyles.xaml" />
+				</ResourceDictionary.MergedDictionaries>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="Auto" />
+		</Grid.RowDefinitions>
+		<ScrollViewer
+			Focusable="False">
+			<StackPanel
+				Margin="20,20,20,12"
+				Orientation="Vertical">
+				<HeaderedContentControl
+					Style="{StaticResource TitleContentStyle}">
+					<HeaderedContentControl.Header>
+						<TextBlock
+							Text="{x:Static localprop:Resources.WinPageInsertpageNumStyleLabelContent}"
+							Margin="0,3,0,0" />
+					</HeaderedContentControl.Header>
+					<StackPanel
+						Orientation="Vertical">
+						<StackPanel
+							Orientation="Horizontal">
+							<ComboBox
+								x:Name="StyleComboBox"
+								Grid.Column="1"
+								Grid.Row="1"
+								Style="{StaticResource HFDialogComboboxStyle}"
+								MinWidth="140"
+								SelectionChanged="StyleComboBox_SelectionChanged" />
+							<TextBlock
+								Text="{x:Static localprop:Resources.WinPageStartpagenumbereLabelContent}"
+								VerticalAlignment="Center"
+								Margin="12,0,0,0" />
+							<commonLibCtrl:NumberBox
+								x:Name="PageNumberOffsetBox"
+								IsArrowEnabled="False"
+								Value="1"
+								Minimum="1"
+								NumberFormat="{}{0}"
+								SmallChange="1"
+								LargeChange="1"
+								HorizontalAlignment="Stretch"
+								Height="24"
+								Margin="8,0,0,0"
+								MinWidth="60"
+								ValueChanged="PageNumberOffsetBox_ValueChanged" />
+						</StackPanel>
+						<StackPanel
+							Orientation="Horizontal"
+							Margin="0,12,0,0">
+							<ComboBox
+								x:Name="FontSizeComboBox"
+								MinWidth="22"
+								Style="{StaticResource HFDialogComboboxStyle}"
+								SelectionChanged="FontSizeComboBox_SelectionChanged">
+								<ComboBoxItem>6pt</ComboBoxItem>
+								<ComboBoxItem>8pt</ComboBoxItem>
+								<ComboBoxItem>10pt</ComboBoxItem>
+								<ComboBoxItem>11pt</ComboBoxItem>
+								<ComboBoxItem>12pt</ComboBoxItem>
+								<ComboBoxItem>14pt</ComboBoxItem>
+								<ComboBoxItem>16pt</ComboBoxItem>
+								<ComboBoxItem>18pt</ComboBoxItem>
+								<ComboBoxItem>20pt</ComboBoxItem>
+								<ComboBoxItem>22pt</ComboBoxItem>
+								<ComboBoxItem>26pt</ComboBoxItem>
+								<ComboBoxItem>28pt</ComboBoxItem>
+								<ComboBoxItem>36pt</ComboBoxItem>
+								<ComboBoxItem>48pt</ComboBoxItem>
+								<ComboBoxItem>56pt</ComboBoxItem>
+								<ComboBoxItem>72pt</ComboBoxItem>
+							</ComboBox>
+							<colorPicker:ColorPickerButton
+								x:Name="TextColorButton"
+								Margin="8,0,0,0"
+								VerticalAlignment="Center"
+								RecentColorsKey="HeaderFooterDialog"
+								DefaultColor="#FF000000"
+								SelectedColor="{Binding Path=Result.Color, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}"
+								SelectedColorChanged="TextColorButton_SelectedColorChanged" />
+						</StackPanel>
+					</StackPanel>
+				</HeaderedContentControl>
+				<HeaderedContentControl
+					Style="{StaticResource TitleContentStyle}"
+					Header="{x:Static localprop:Resources.WinPageInsertpageNumPositionLabelConent}"
+					Margin="0,10,0,0">
+					<Grid
+						VerticalAlignment="Center"
+						ToggleButton.Checked="PositionRadioButton_Checked">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto"
+								MinWidth="92" />
+							<ColumnDefinition
+								Width="Auto"
+								MinWidth="92" />
+						</Grid.ColumnDefinitions>
+						<RadioButton
+							x:Name="PositionHeaderRadioButton"
+							GroupName="PageNumberDialogPosition"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Style="{StaticResource DefaultRadioButtonStyle}"
+							Content="{x:Static localprop:Resources.WinPageInsertpageNumPositionHeaderContent}"
+							Margin="0,1,24,0"
+							IsChecked="True" />
+						<RadioButton
+							x:Name="PositionFooterRadioButton"
+							Grid.Column="1"
+							GroupName="PageNumberDialogPosition"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Style="{StaticResource DefaultRadioButtonStyle}"
+							Content="{x:Static localprop:Resources.WinPageInsertpageNumPositionFooterContent}"
+							Margin="0,1,0,0" />
+					</Grid>
+				</HeaderedContentControl>
+				<HeaderedContentControl
+					Style="{StaticResource TitleContentStyle}"
+					Header="{x:Static localprop:Resources.WinPageInsertpageNumAligmentLabelContent}"
+					Margin="0,10,0,0">
+					<Grid
+						VerticalAlignment="Center"
+						ToggleButton.Checked="AlignmentRadioButton_Checked">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto"
+								MinWidth="92" />
+							<ColumnDefinition
+								Width="Auto"
+								MinWidth="92" />
+							<ColumnDefinition
+								Width="Auto"
+								MinWidth="92" />
+						</Grid.ColumnDefinitions>
+						<RadioButton
+							x:Name="AlignmentLeftRadioButton"
+							GroupName="PageNumberDialogAlignment"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Style="{StaticResource DefaultRadioButtonStyle}"
+							Content="{x:Static localprop:Resources.WinPageInsertpageNumAligmentLeftContent}"
+							Margin="0,1,24,0"
+							IsChecked="True" />
+						<RadioButton
+							x:Name="AlignmentCenterRadioButton"
+							Grid.Column="1"
+							GroupName="PageNumberDialogAlignment"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Style="{StaticResource DefaultRadioButtonStyle}"
+							Content="{x:Static localprop:Resources.WinPageInsertpageNumAligmentCenterContent}"
+							Margin="0,1,24,0" />
+						<RadioButton
+							x:Name="AlignmentRightRadioButton"
+							Grid.Column="2"
+							GroupName="PageNumberDialogAlignment"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Style="{StaticResource DefaultRadioButtonStyle}"
+							Content="{x:Static localprop:Resources.WinPageInsertpageNumAligmentRightContent}"
+							Margin="0,1,24,0" />
+					</Grid>
+				</HeaderedContentControl>
+				<HeaderedContentControl
+					Style="{StaticResource TitleContentStyle}"
+					Header="{x:Static localprop:Resources.WinLabelRangeContent}"
+					Margin="0,10,0,0">
+					<Grid
+						Margin="0,2,0,0"
+						ToggleButton.Checked="HeaderFooterDialogPageRange_Checked">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition
+								Height="Auto" />
+							<RowDefinition
+								Height="Auto" />
+							<RowDefinition
+								Height="Auto" />
+							<RowDefinition
+								Height="Auto" />
+						</Grid.RowDefinitions>
+						<RadioButton
+							x:Name="AllPageRadioButton"
+							GroupName="PageNumberDialogPageRange"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Style="{StaticResource DefaultRadioButtonStyle}"
+							Content="{x:Static localprop:Resources.WinBtnAllPagesContent}"
+							Grid.ColumnSpan="2"
+							Margin="0,1,0,0"
+							IsChecked="True" />
+						<RadioButton
+							x:Name="SelectedPagesRadioButton"
+							GroupName="PageNumberDialogPageRange"
+							Grid.Row="2"
+							Margin="0,12,0,0"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Style="{StaticResource DefaultRadioButtonStyle}"
+							Content="{x:Static localprop:Resources.WinBtnSelectedPagesContent}" />
+						<StackPanel
+							Grid.Row="2"
+							Grid.Column="1"
+							Orientation="Horizontal"
+							Margin="10,8,0,0"
+							IsEnabled="{Binding ElementName=SelectedPagesRadioButton, Path=IsChecked}">
+							<commonLibCtrl:NumberBox
+								x:Name="SelectedPageStartBox"
+								Minimum="1"
+								NumberFormat="{}{0}"
+								SmallChange="1"
+								LargeChange="1"
+								MinWidth="40"
+								Maximum="{Binding ElementName=SelectedPageEndBox, Path=Value}"
+								Value="{Binding Path=Result.SelectedPagesStart, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}" />
+							<TextBlock
+								Text=" - "
+								VerticalAlignment="Center" />
+							<commonLibCtrl:NumberBox
+								x:Name="SelectedPageEndBox"
+								Maximum="100"
+								NumberFormat="{}{0}"
+								SmallChange="1"
+								LargeChange="1"
+								MinWidth="40"
+								Minimum="{Binding ElementName=SelectedPageStartBox, Path=Value}"
+								Value="{Binding Path=Result.SelectedPagesEnd, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}" />
+						</StackPanel>
+					</Grid>
+				</HeaderedContentControl>
+				<HeaderedContentControl
+					Style="{StaticResource TitleContentStyle}"
+					Header="{x:Static localprop:Resources.WinLabelChildRangeContent}"
+					Margin="0,20,0,0">
+					<ComboBox
+						x:Name="SubsetComboBox"
+						HorizontalAlignment="Stretch"
+						Style="{StaticResource HFDialogComboboxStyle}"
+						SelectionChanged="SubsetComboBox_SelectionChanged">
+						<ComboBoxItem
+							Content="{x:Static localprop:Resources.WinCbxChildAllPagesContent}"
+							IsSelected="True" />
+						<ComboBoxItem
+							Content="{x:Static localprop:Resources.WinCbxChildOddPagesContent}" />
+						<ComboBoxItem
+							Content="{x:Static localprop:Resources.WinCbxChildEvenPagesContent}" />
+					</ComboBox>
+				</HeaderedContentControl>
+				<HeaderedContentControl
+					Header="{x:Static localprop:Resources.WinPageMarginLabelContent}"
+					Margin="0,20,0,0"
+					Focusable="False">
+					<Grid
+						Margin="0,8,0,0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<StackPanel
+							Orientation="Horizontal">
+							<TextBlock
+								Text="{x:Static localprop:Resources.WinPageMarginTopLabelContent}"
+								VerticalAlignment="Center" />
+							<commonLibCtrl:NumberBox
+								Width="52"
+								Height="22"
+								Margin="8,0,0,0"
+								IsArrowEnabled="True"
+								NumberFormat="{}{0:0.00}"
+								SmallChange="0.01"
+								Value="{Binding Path=Result.Margin.TopCm, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}" />
+						</StackPanel>
+						<StackPanel
+							Orientation="Horizontal"
+							Grid.Column="2"
+							HorizontalAlignment="Center">
+							<TextBlock
+								Text="{x:Static localprop:Resources.WinPageMarginBottomLabelContent}"
+								VerticalAlignment="Center" />
+							<commonLibCtrl:NumberBox
+								Width="52"
+								Height="22"
+								Margin="8,0,0,0"
+								IsArrowEnabled="True"
+								NumberFormat="{}{0:0.00}"
+								SmallChange="0.01"
+								Value="{Binding Path=Result.Margin.BottomCm, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}" />
+						</StackPanel>
+						<StackPanel
+							Orientation="Horizontal"
+							Grid.Column="4"
+							HorizontalAlignment="Center">
+							<TextBlock
+								Text="{x:Static localprop:Resources.WinPageMarginLeftLabelContent}"
+								VerticalAlignment="Center" />
+							<commonLibCtrl:NumberBox
+								Width="52"
+								Height="22"
+								Margin="8,0,0,0"
+								IsArrowEnabled="True"
+								NumberFormat="{}{0:0.00}"
+								SmallChange="0.01"
+								Value="{Binding Path=Result.Margin.LeftCm, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}" />
+						</StackPanel>
+						<StackPanel
+							Orientation="Horizontal"
+							Grid.Column="6">
+							<TextBlock
+								Text="{x:Static localprop:Resources.WinPageMarginRightLabelContent}"
+								VerticalAlignment="Center" />
+							<commonLibCtrl:NumberBox
+								Width="52"
+								Height="22"
+								Margin="8,0,0,0"
+								IsArrowEnabled="True"
+								NumberFormat="{}{0:0.00}"
+								SmallChange="0.01"
+								Value="{Binding Path=Result.Margin.RightCm, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}" />
+						</StackPanel>
+					</Grid>
+				</HeaderedContentControl>
+				<Grid
+					Margin="0,20,0,0">
+					<Rectangle
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch"
+						Stroke="{DynamicResource MainViewFontSizeBorder}"
+						StrokeDashArray="2,2" />
+					<StackPanel
+						Orientation="Vertical">
+						<TextBlock
+							Text="{x:Static localprop:Resources.WinPagePreviewLabelContent}"
+							Margin="12,12,0,0" />
+						<StackPanel
+							Orientation="Horizontal"
+							Margin="12,10,0,0">
+							<TextBlock
+								Text="{x:Static localprop:Resources.WinPagePreviewPageLabelContent}"
+								VerticalAlignment="Center" />
+							<commonLibCtrl:NumberBox
+								x:Name="PreviewPageIndexBox"
+								Width="40"
+								Height="22"
+								Margin="8,0,0,0"
+								IsArrowEnabled="True"
+								SmallChange="1"
+								LargeChange="5"
+								NumberFormat="{}{0:0}"
+								Minimum="1"
+								ValueChanged="PreviewPageIndexBox_ValueChanged" />
+						</StackPanel>
+						<Grid
+							Height="150"
+							Margin="12,12,12,0">
+							<local:TorePaperControl
+								x:Name="Tore1"
+								HorizontalAlignment="Stretch"
+								Height="150" />
+							<local:MarginControl
+								x:Name="MarginControl1"
+								HorizontalAlignment="Stretch"
+								Height="150"
+								MarginLeft="{Binding Path=Result.Margin.Left, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}"
+								MarginTop="{Binding Path=Result.Margin.Top, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}"
+								MarginRight="{Binding Path=Result.Margin.Right, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}"
+								MarginBottom="{Binding Path=Result.Margin.Bottom, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}" />
+						</Grid>
+						<Grid
+							Height="150"
+							Margin="12,12,12,12">
+							<local:TorePaperControl
+								x:Name="Tore2"
+								ToreEdge="Top"
+								HorizontalAlignment="Stretch"
+								Height="150" />
+							<local:MarginControl
+								x:Name="MarginControl2"
+								HorizontalAlignment="Stretch"
+								Height="150"
+								Edge="Bottom"
+								MarginLeft="{Binding Path=Result.Margin.Left, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}"
+								MarginTop="{Binding Path=Result.Margin.Top, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}"
+								MarginRight="{Binding Path=Result.Margin.Right, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}"
+								MarginBottom="{Binding Path=Result.Margin.Bottom, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:PageNumberDialog}}}" />
+						</Grid>
+					</StackPanel>
+				</Grid>
+			</StackPanel>
+		</ScrollViewer>
+		<StackPanel
+			Grid.Row="1"
+			Margin="20,8,20,20">
+			<StackPanel
+				HorizontalAlignment="Right"
+				Orientation="Horizontal">
+				<Button
+					Content="{x:Static localprop:Resources.WinBtnCancelContent}"
+					IsCancel="True"
+					Margin="0,0,12,0"
+					Style="{StaticResource DialogButtonStyle}"
+					Click="CancelButton_Click" />
+				<Button
+					Content="{x:Static localprop:Resources.WinBtnOkContent}"
+					Style="{StaticResource PrimaryDialogButtonStyle}"
+					Click="OKButton_Click" />
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</Window>

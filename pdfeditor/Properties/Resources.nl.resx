@@ -1,0 +1,3783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddCertificateWindow_CreateCertFile_Desc" xml:space="preserve">
+    <value>Voer een bestandlocatie en wachtwoord in voor uw nieuwe Digital ID-bestand. U hebt het wachtwoord nodig wanneer u de Digital ID gebruikt om documenten te ondertekenen of te ontsleutelen. Noteer de bestandlocatie zodat u het bestand voor back-up of andere doeleinden kunt kopiëren.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FailedMessage" xml:space="preserve">
+    <value>Er is een onbekende fout opgetreden.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FileName" xml:space="preserve">
+    <value>Bestandsnaam:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameEmptyMessage" xml:space="preserve">
+    <value>Bestandsnaam mag niet leeg zijn.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertFile_FilenameInvalidMessage" xml:space="preserve">
+    <value>Voer een geldige bestandsnaam in.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegion" xml:space="preserve">
+    <value>Land/Regio:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_CountryRegionNoneValue" xml:space="preserve">
+    <value>geen</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Desc" xml:space="preserve">
+    <value>Voer de identiteit in die wordt gebruikt om het zelfondertekende certificaat te maken.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_Email" xml:space="preserve">
+    <value>E-mailadres:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_EmailInvalidMessage" xml:space="preserve">
+    <value>Ongeldige e-mailopmaak.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_LabelName" xml:space="preserve">
+    <value>Naam (bijv. John Smith):</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_NameEmptyMessage" xml:space="preserve">
+    <value>De naam mag niet leeg zijn.</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalName" xml:space="preserve">
+    <value>Organisatienaam:</value>
+  </data>
+  <data name="AddCertificateWindow_CreateCertProps_OrganizationalUnit" xml:space="preserve">
+    <value>Organisatie-eenheid:</value>
+  </data>
+  <data name="AddCertificateWindow_ImportFile_Desc" xml:space="preserve">
+    <value>Digital ID-bestanden hebben doorgaans een PFX- of P12-extensie en bevatten meestal privé-sleutels en openbare sleutels (gebruikt voor ondertekenen en verificatie).
+Om te ondertekenen met een Digital ID die als bestand beschikbaar is, volgt u de aanwijzingen om het bestand te zoeken en de wachtwoord te typen die de privé-sleutel beschermt.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_Desc" xml:space="preserve">
+    <value>Voeg een Digital ID toe of maak een Digital ID om documenten te ondertekenen en te versleutelen. Een Digital ID kan worden uitgegeven door een vertrouwde derde partij. Het bevat een privé-sleutel en een certificaat met een publieke sleutel. De privé-sleutel wordt gebruikt om de certificaatgebaseerde handtekening te maken. Het certificaat dat in de Digital ID is ingebed, wordt naar anderen gestuurd om uw handtekening te verifiëren.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelCreateCert" xml:space="preserve">
+    <value>Een nieuwe digitale ID die ik nu wil maken.</value>
+  </data>
+  <data name="AddCertificateWindow_Welcome_LabelImportFile" xml:space="preserve">
+    <value>Een bestaande digitale ID uit een bestand.</value>
+  </data>
+  <data name="AddDeferredDigitSignBtn" xml:space="preserve">
+    <value>Voeg Handtekeningveld Toe</value>
+  </data>
+  <data name="AnnotationContextMenuCopyText" xml:space="preserve">
+    <value>Tekst kopiëren</value>
+  </data>
+  <data name="AnnotationFileAttachment" xml:space="preserve">
+    <value>Bijlage</value>
+  </data>
+  <data name="AnnotationFileAttachmentOpenWarning" xml:space="preserve">
+    <value>Weet u zeker dat u de bijlage wilt openen?</value>
+  </data>
+  <data name="AnnotationMenuBatchDeleteBtn" xml:space="preserve">
+    <value>Batch verwijdering</value>
+  </data>
+  <data name="AnnotationMenuFilterAll" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="AnnotationMenuFilterBtn" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="AnnotationMenuFilterByAnnotations" xml:space="preserve">
+    <value>Annotaties</value>
+  </data>
+  <data name="AnnotationMenuFilterByUser" xml:space="preserve">
+    <value>Gebruikers</value>
+  </data>
+  <data name="AnnotationMenuTotal" xml:space="preserve">
+    <value>Totaal:</value>
+  </data>
+  <data name="AppSettingsAuthorHeader" xml:space="preserve">
+    <value>Auteur</value>
+  </data>
+  <data name="AppSettingsBlankPage" xml:space="preserve">
+    <value>Lege PDF</value>
+  </data>
+  <data name="AppSettingsBlankPageHeightContent" xml:space="preserve">
+    <value>Hoogte (mm):</value>
+  </data>
+  <data name="AppSettingsBlankPageWidthContent" xml:space="preserve">
+    <value>Breedte (mm):</value>
+  </data>
+  <data name="AppSettingsDefaultDisplay" xml:space="preserve">
+    <value>Standaard zoomlens</value>
+  </data>
+  <data name="AppSettingsDefaultDisplayTips" xml:space="preserve">
+    <value>De standaard zoominstelling geldt alleen voor documenten die voor het eerst worden geopend.</value>
+  </data>
+  <data name="AppSettingsDefaultPageview" xml:space="preserve">
+    <value>Standaard paginalay-out</value>
+  </data>
+  <data name="AppSettingsDefaultSelection" xml:space="preserve">
+    <value>Standaard interactietool</value>
+  </data>
+  <data name="AppSettingsDouble" xml:space="preserve">
+    <value>Dubbele pagina</value>
+  </data>
+  <data name="AppSettingsDoubleContinuous" xml:space="preserve">
+    <value>Dubbele pagina doorlopend</value>
+  </data>
+  <data name="AppSettingsFileAssociations" xml:space="preserve">
+    <value>Bestandenassociaties</value>
+  </data>
+  <data name="AppSettingsFileAssociations_AlreadyDefaultMessage" xml:space="preserve">
+    <value>XXX is al ingesteld als de standaardapp voor PDF-bestanden.</value>
+  </data>
+  <data name="AppSettingsFileAssociations_MakeDefault" xml:space="preserve">
+    <value>Instellen als standaard</value>
+  </data>
+  <data name="AppSettingsHandMode" xml:space="preserve">
+    <value>Handgereedschap</value>
+  </data>
+  <data name="AppSettingsLanguageAutoItem" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="AppSettingsLanguageHeader" xml:space="preserve">
+    <value>Talen</value>
+  </data>
+  <data name="AppSettingsLanguageRestartTips" xml:space="preserve">
+    <value>Herstart PDFgear om de instelling toe te passen.</value>
+  </data>
+  <data name="AppSettingsLanguageTitle" xml:space="preserve">
+    <value>Talen</value>
+  </data>
+  <data name="AppSettingsLaunchOCR" xml:space="preserve">
+    <value>OCR-prompt bij openen van gescande PDF's.</value>
+  </data>
+  <data name="AppSettingsLaunchStatusbar" xml:space="preserve">
+    <value>Onderste navigatiebalk tonen bij openen van PDF.</value>
+  </data>
+  <data name="AppSettingsLaunchToolbar" xml:space="preserve">
+    <value>Werkbalk weergeven bij openen van PDF.</value>
+  </data>
+  <data name="AppSettingsPageDisplay" xml:space="preserve">
+    <value>Paginaweergave</value>
+  </data>
+  <data name="AppSettingsSelectionMode" xml:space="preserve">
+    <value>Selectietool</value>
+  </data>
+  <data name="AppSettingsShowRightMenu" xml:space="preserve">
+    <value>Toon snelle acties bij tekstselectie</value>
+  </data>
+  <data name="AppSettingsSingle" xml:space="preserve">
+    <value>Enkele pagina</value>
+  </data>
+  <data name="AppSettingsSingleContinuous" xml:space="preserve">
+    <value>Enkele pagina doorlopend</value>
+  </data>
+  <data name="AppSettingsUserInformationTitle" xml:space="preserve">
+    <value>Gebruikers informatie</value>
+  </data>
+  <data name="AppSettingsUserInterface" xml:space="preserve">
+    <value>Gebruikersinterface</value>
+  </data>
+  <data name="AppsettingsHighlightForm" xml:space="preserve">
+    <value>Formuliervelden markeren</value>
+  </data>
+  <data name="AttachmentDescriptionWinText" xml:space="preserve">
+    <value>Beschrijving:</value>
+  </data>
+  <data name="AttachmentPanelAttachmentTab" xml:space="preserve">
+    <value>Tabblad Bijlagen</value>
+  </data>
+  <data name="AttachmentPanelBtnAddAttachmentsText" xml:space="preserve">
+    <value>Bijlage toevoegen</value>
+  </data>
+  <data name="AttachmentPanelBtnDeleteAttachmentText" xml:space="preserve">
+    <value>Bijlage verwijderen</value>
+  </data>
+  <data name="AttachmentPanelBtnEditDescriptionText" xml:space="preserve">
+    <value>Beschrijving bewerken</value>
+  </data>
+  <data name="AttachmentPanelBtnOpenAttachmentText" xml:space="preserve">
+    <value>Bijlage openen</value>
+  </data>
+  <data name="AttachmentPanelBtnSaveAttachmentText" xml:space="preserve">
+    <value>Bijlage opslaan</value>
+  </data>
+  <data name="AttachmentToolbarBtnContextMenuOpenAttachmentManager" xml:space="preserve">
+    <value>Bijlagen beheren</value>
+  </data>
+  <data name="BatchDeleteSelectNoneWarning" xml:space="preserve">
+    <value>Selecteer de annotaties die u wilt verwijderen</value>
+  </data>
+  <data name="BatchDeleteWarning" xml:space="preserve">
+    <value>Wilt u alle geselecteerde annotaties verwijderen?</value>
+  </data>
+  <data name="BatchDeletingTitle" xml:space="preserve">
+    <value>Annotaties verwijderen...</value>
+  </data>
+  <data name="BatchPrintDialogAddFilesButtonContent" xml:space="preserve">
+    <value>PDF-bestanden toevoegen</value>
+  </data>
+  <data name="BatchPrintDialogBatchPrintButtonContent" xml:space="preserve">
+    <value>Batch afdrukken</value>
+  </data>
+  <data name="BatchPrintDialogPageCountText" xml:space="preserve">
+    <value>Pagina's</value>
+  </data>
+  <data name="BatchPrintListWinActionsHeader" xml:space="preserve">
+    <value>Acties</value>
+  </data>
+  <data name="BatchPrintListWinAddFilesBtn" xml:space="preserve">
+    <value>Bestanden toevoegen</value>
+  </data>
+  <data name="BatchPrintListWinFileNameHeader" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="BatchPrintListWinRemoveAllBtn" xml:space="preserve">
+    <value>Alles verwijderen</value>
+  </data>
+  <data name="BatchPrintListWinStatusHeader" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="BatchPrintPrintAllBtn" xml:space="preserve">
+    <value>Alles afdrukken</value>
+  </data>
+  <data name="BatchPrintPrintSettingsBtn" xml:space="preserve">
+    <value>Batch-afdrukinstellingen</value>
+  </data>
+  <data name="BatchPrintRemoveAllMessage" xml:space="preserve">
+    <value>Weet u zeker dat u alle bestanden wilt verwijderen?</value>
+  </data>
+  <data name="BatchPrintSettingsWinAppliedTo" xml:space="preserve">
+    <value>Toepassen op:</value>
+  </data>
+  <data name="BatchPrintSettingsWinSaveBtn" xml:space="preserve">
+    <value>Bevestigen</value>
+  </data>
+  <data name="BatchPrintSettingsWinSettingsGroupName" xml:space="preserve">
+    <value>Afdrukinstellingen</value>
+  </data>
+  <data name="BatchPrintSettingsWinToAll" xml:space="preserve">
+    <value>Alle bestanden</value>
+  </data>
+  <data name="BatchPrintSettingsWinToCurrent" xml:space="preserve">
+    <value>Huidig bestand</value>
+  </data>
+  <data name="BatchPrintWinFailStatus" xml:space="preserve">
+    <value>Mislukt</value>
+  </data>
+  <data name="BatchPrintWinPrintingStatus" xml:space="preserve">
+    <value>Bezig met afdrukken</value>
+  </data>
+  <data name="BatchPrintWinSuccessStatus" xml:space="preserve">
+    <value>Klaar</value>
+  </data>
+  <data name="BookmarkRenameWindowContent" xml:space="preserve">
+    <value>Hernoem hier de bladwijzertitel</value>
+  </data>
+  <data name="CategoryNameWinEmptyMessage" xml:space="preserve">
+    <value>Categorienaam mag niet leeg zijn.</value>
+  </data>
+  <data name="CategoryNameWinPlaceholder" xml:space="preserve">
+    <value>Typ hier...</value>
+  </data>
+  <data name="CategoryNameWinTitle" xml:space="preserve">
+    <value>Categorienaam</value>
+  </data>
+  <data name="CerateSearchablePDFWinTitle" xml:space="preserve">
+    <value>OCR uitvoeren</value>
+  </data>
+  <data name="CertificateManagerBtn" xml:space="preserve">
+    <value>Certificaatbeheerder</value>
+  </data>
+  <data name="CertificateManagerWindowTitle" xml:space="preserve">
+    <value>Identiteiten en vertrouwde certificaten</value>
+  </data>
+  <data name="CertificateManager_AddBtn" xml:space="preserve">
+    <value>Voeg ID Toe</value>
+  </data>
+  <data name="CertificateManager_AddFile_Invalid_Message" xml:space="preserve">
+    <value>Het bestand is ongeldig. Controleer het bestand en probeer het opnieuw.</value>
+  </data>
+  <data name="CertificateManager_CertDetailBtn" xml:space="preserve">
+    <value>Certificaatdetails</value>
+  </data>
+  <data name="CertificateManager_Content_Issuedby" xml:space="preserve">
+    <value>Uitgegeven door:</value>
+  </data>
+  <data name="CertificateManager_Content_ValidFrom" xml:space="preserve">
+    <value>Geldig vanaf:</value>
+  </data>
+  <data name="CertificateManager_Content_ValidTo" xml:space="preserve">
+    <value>Geldig tot:</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_Desc" xml:space="preserve">
+    <value>Digital ID wordt voornamelijk door de ondertekenaar gebruikt om de identiteit te bewijzen en een digitale handtekening te maken. Ze kunnen worden uitgegeven door vertrouwde derde partijen op basis van bestanden of andere vormen.
+
+U kunt een nieuwe Digital ID maken. Maar het biedt een laag niveau van identiteitsgarantie en is in sommige gevallen misschien niet acceptabel.</value>
+  </data>
+  <data name="CertificateManager_DigitalIDs_TabName" xml:space="preserve">
+    <value>Digitale ID's</value>
+  </data>
+  <data name="CertificateManager_ExportBtn" xml:space="preserve">
+    <value>Exportee</value>
+  </data>
+  <data name="CertificateManager_ExportFailed_Message" xml:space="preserve">
+    <value>Certificaat exporteren mislukt.</value>
+  </data>
+  <data name="CertificateManager_ExportSucceeded_Message" xml:space="preserve">
+    <value>Het certificaat is succesvol geëxporteerd.</value>
+  </data>
+  <data name="CertificateManager_RefreshBtn" xml:space="preserve">
+    <value>Vernieuwen</value>
+  </data>
+  <data name="CertificateManager_RemoveBtn" xml:space="preserve">
+    <value>Verwijder ID</value>
+  </data>
+  <data name="CertificateManager_Remove_Message" xml:space="preserve">
+    <value>Weet u zeker dat u het/de geselecteerde certificaat(en) wilt verwijderen?</value>
+  </data>
+  <data name="CertificateManager_Storage_LocalCertificateStore" xml:space="preserve">
+    <value>Digitale ID-bestand</value>
+  </data>
+  <data name="CertificateManager_Storage_WindowsCertificateStore" xml:space="preserve">
+    <value>Windows Certificaatopslag</value>
+  </data>
+  <data name="CertificateManager_Table_Expires" xml:space="preserve">
+    <value>Verloopt</value>
+  </data>
+  <data name="CertificateManager_Table_Issuer" xml:space="preserve">
+    <value>Uitgever</value>
+  </data>
+  <data name="CertificateManager_Table_Name" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="CertificateManager_Table_StorageMechanism" xml:space="preserve">
+    <value>Opslagmechanisme</value>
+  </data>
+  <data name="CertificateManager_Trust_Desc" xml:space="preserve">
+    <value>Vertrouwenscertificaten zijn in wezen digitale certificaten die worden uitgegeven door erkende en vertrouwde certificeringsinstanties (CA's). Ze verifiëren dat de certificaatuitgevers betrouwbaar zijn en dat de openbare sleutels die aan de certificaten zijn gekoppeld behoren tot de entiteiten die ze zeggen te vertegenwoordigen.</value>
+  </data>
+  <data name="CertificateManager_Trust_TabName" xml:space="preserve">
+    <value>Vertrouwde Certificaten</value>
+  </data>
+  <data name="ChatPanelAppActionCancelButton" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="ChatPanelAppActionCanceledContent" xml:space="preserve">
+    <value>GEANNULEERD</value>
+  </data>
+  <data name="ChatPanelAppActionDoneContent" xml:space="preserve">
+    <value>KLAAR</value>
+  </data>
+  <data name="ChatPanelAppActionNoButton" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="ChatPanelAppActionProcessingContent" xml:space="preserve">
+    <value>VERWERKEN</value>
+  </data>
+  <data name="ChatPanelAppActionYesButton" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="ChatPanelMessageErrorRetryText" xml:space="preserve">
+    <value>Probeer het nog eens</value>
+  </data>
+  <data name="ChatPanelMessageErrorText" xml:space="preserve">
+    <value>Er is een fout opgetreden.</value>
+  </data>
+  <data name="ChatPanelMessageError_ContentFiltered" xml:space="preserve">
+    <value>De inhoud is mogelijk gefilterd vanwege berichten of artikelen die inhoud bevatten die in strijd is met het beleid.</value>
+  </data>
+  <data name="ChatPanelMessageError_UserCanceled" xml:space="preserve">
+    <value>Het verzoek is handmatig geannuleerd.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_compress" xml:space="preserve">
+    <value>Comprimeer deze PDF met een hoog compressieniveau.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_convert_from_pdf" xml:space="preserve">
+    <value>Converteer deze PDF naar Word-formaat.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_page_zoom" xml:space="preserve">
+    <value>Zoom in op deze PDF-weergave.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_protect_pdf" xml:space="preserve">
+    <value>Voeg een wachtwoord toe om dit bestand te beschermen.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_slide_show" xml:space="preserve">
+    <value>Geef deze PDF weer in diamodus.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeAction_summary" xml:space="preserve">
+    <value>Vat dit pdf-bestand samen.</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText1" xml:space="preserve">
+    <value>PDFgear Copilot is een AI-tool die is ontworpen om u te helpen bij het samenvatten van PDF's, het vinden van antwoorden in PDF's, het bewerken van PDF's, het converteren van PDF's, het beheren van PDF's en meer, door simpelweg te chatten in natuurlijke taalopdrachten.
+
+Voorbeelden:</value>
+  </data>
+  <data name="ChatPanelMessageWelcomeText2" xml:space="preserve">
+    <value>Klik op de bovenstaande voorbeelden of voer uw opdracht in om de chat te starten.</value>
+  </data>
+  <data name="ChatPanelUpgradeBtn" xml:space="preserve">
+    <value>Ontgrendel PDFgear AI</value>
+  </data>
+  <data name="ChkboxPageSelectedAllContent" xml:space="preserve">
+    <value>Alles selecteren</value>
+  </data>
+  <data name="ColorPickerMoreColorsLabelContent" xml:space="preserve">
+    <value>Meer kleuren</value>
+  </data>
+  <data name="ColorPickerStandardLabelContent" xml:space="preserve">
+    <value>Standaard</value>
+  </data>
+  <data name="ColorPickerThemeLabelContent" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+  <data name="CopilotClearHistoryButtonText" xml:space="preserve">
+    <value>Verwijder chatgeschiedenis</value>
+  </data>
+  <data name="CopilotClearHistoryTip" xml:space="preserve">
+    <value>Weet u zeker dat u de chatgeschiedenis wilt wissen?</value>
+  </data>
+  <data name="CopilotExportHistoryButtonText" xml:space="preserve">
+    <value>Exporteren</value>
+  </data>
+  <data name="CopilotExportHistoryWindowTitle" xml:space="preserve">
+    <value>Chatgeschiedenis exporteren</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTips" xml:space="preserve">
+    <value>Het aantal van 50 berichten/bestand/dag is bijna op.</value>
+  </data>
+  <data name="CopilotMessagesOverRemainingTipsContent" xml:space="preserve">
+    <value>Morgen zijn er nog 50 berichten beschikbaar voor deze pdf, of chat voorlopig met een andere pdf.</value>
+  </data>
+  <data name="CopilotMessagesRemainingTips" xml:space="preserve">
+    <value>XXX berichten over</value>
+  </data>
+  <data name="CopilotPanelHeader" xml:space="preserve">
+    <value>Chatten met PDF</value>
+  </data>
+  <data name="CopilotSendButtonText" xml:space="preserve">
+    <value>Versturen</value>
+  </data>
+  <data name="CopilotSendButtonToolTips" xml:space="preserve">
+    <value>Ctrl+Enter: bericht verzenden, Enter-toets: nieuwe regel invoeren</value>
+  </data>
+  <data name="CopilotStopResponseButtonText" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="CopilotTextBoxEmtpy" xml:space="preserve">
+    <value>Kan geen leeg bericht verzenden</value>
+  </data>
+  <data name="CopilotTextBoxPlaceholder" xml:space="preserve">
+    <value>Typ hier om te chatten...</value>
+  </data>
+  <data name="CopilotViewboxPages" xml:space="preserve">
+    <value>Paginanummer:</value>
+  </data>
+  <data name="CopilotWelcomePageAnalysingText" xml:space="preserve">
+    <value>Analyseren...</value>
+  </data>
+  <data name="CopilotWelcomePageChatNowButtonText" xml:space="preserve">
+    <value>Chat nu</value>
+  </data>
+  <data name="CopilotWelcomePageDesc" xml:space="preserve">
+    <value>Met PDFgear Copilot worden uw documenten intelligent.  Het werkt uitstekend voor het aansturen van bewerkingen op PDF's en het verkrijgen van nauwkeurige informatie van hen in natuurlijke taal.  Probeer nu meteen te chatten met uw bestanden.</value>
+  </data>
+  <data name="CopilotWelcomePageSubTitle" xml:space="preserve">
+    <value>Chatten, leren, vooruitgang boeken</value>
+  </data>
+  <data name="CopilotWelcomePageTitle" xml:space="preserve">
+    <value>Mogelijk gemaakt door ChatGPT</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemExpiration" xml:space="preserve">
+    <value>Vervaldatum:</value>
+  </data>
+  <data name="CreateDigSignCertComboBoxItemIssuer" xml:space="preserve">
+    <value>Uitgever:</value>
+  </data>
+  <data name="CreateDigSignDialogBrowserItem" xml:space="preserve">
+    <value>Nieuwe digitale ID</value>
+  </data>
+  <data name="CreateDigSignDialogCertFile" xml:space="preserve">
+    <value>Digitale ID's:</value>
+  </data>
+  <data name="CreateDigSignDialogCertPassword" xml:space="preserve">
+    <value>Wachtwoord:</value>
+  </data>
+  <data name="CreateDigSignDialogCertificatedCheckbox" xml:space="preserve">
+    <value>Document vergrendelen na ondertekening</value>
+  </data>
+  <data name="CreateDigSignDialogSignBtn" xml:space="preserve">
+    <value>Ondertekenen</value>
+  </data>
+  <data name="CreateDigSignImportCertBrowserBtn" xml:space="preserve">
+    <value>Bladeren...</value>
+  </data>
+  <data name="CreateDigSignImportCertDialogDesc" xml:space="preserve">
+    <value>Blader naar een digitaal ID-bestand.  Digitale ID-bestanden zijn met een wachtwoord beveiligd en vereisen uw wachtwoord om te kunnen worden geopend.</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_InvalidPassword" xml:space="preserve">
+    <value>Het bestand of wachtwoord is ongeldig.</value>
+  </data>
+  <data name="CreateDigSignImportCertErrorMessage_NotSupport" xml:space="preserve">
+    <value>Dit certificaat kan niet worden gebruikt voor digitale handtekeningen.</value>
+  </data>
+  <data name="CreateDigSignImportCertFileLabel" xml:space="preserve">
+    <value>Digitaal ID-bestand</value>
+  </data>
+  <data name="CreateDigSignMessage_CertExpired" xml:space="preserve">
+    <value>Kan niet ondertekenen met een verlopen certificaat.</value>
+  </data>
+  <data name="CreateDigSignMessage_IncorrectPassword" xml:space="preserve">
+    <value>Het wachtwoord is incorrect. Voer het wachtwoord opnieuw in.</value>
+  </data>
+  <data name="CreateDigSignReason1" xml:space="preserve">
+    <value>Ik ben de auteur van dit document</value>
+  </data>
+  <data name="CreateDigSignReason2" xml:space="preserve">
+    <value>Ik heb dit document beoordeeld</value>
+  </data>
+  <data name="CreateDigSignReason3" xml:space="preserve">
+    <value>Ik keur dit document goed</value>
+  </data>
+  <data name="CreateDigSignReason4" xml:space="preserve">
+    <value>Ik keur dit document goed met mijn wettelijk bindende handtekening</value>
+  </data>
+  <data name="CreateDigSignReason5" xml:space="preserve">
+    <value>Ik bevestig de nauwkeurigheid en integriteit van dit document</value>
+  </data>
+  <data name="CreateDigSignReason6" xml:space="preserve">
+    <value>Ik ga akkoord met de voorwaarden gedefinieerd door de plaatsing van mijn handtekening in dit document</value>
+  </data>
+  <data name="CreateDigSignReason7" xml:space="preserve">
+    <value>Ik ga akkoord met bepaalde delen van dit document</value>
+  </data>
+  <data name="CropCreateTip" xml:space="preserve">
+    <value>Sleep de muis om het gebied te tekenen dat u wilt bijsnijden.  Nadat u het gewenste gebied naar buiten heeft gesleept, gaat u verder met de volgende stap van het bijsnijden.</value>
+  </data>
+  <data name="CropPageExceedingPageRange" xml:space="preserve">
+    <value>De voorbeeldpagina is niet in de paginabereik opgenomen</value>
+  </data>
+  <data name="CropPageExceedingRange" xml:space="preserve">
+    <value>Overschrijding van het wettelijke bereik</value>
+  </data>
+  <data name="CropPageToolbarAdvanced" xml:space="preserve">
+    <value>Geavanceerde instellingen</value>
+  </data>
+  <data name="CropPageWinCentimeterUnits" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="CropPageWinInchUnits" xml:space="preserve">
+    <value>inch</value>
+  </data>
+  <data name="CropPageWinMandatoryBox" xml:space="preserve">
+    <value>Verplichte verhoudingen</value>
+  </data>
+  <data name="CropPageWinMarginTitle" xml:space="preserve">
+    <value>Margecontrole</value>
+  </data>
+  <data name="CropPageWinMeasuresIn" xml:space="preserve">
+    <value>Eenheden</value>
+  </data>
+  <data name="CropPageWinMillimeterUnits" xml:space="preserve">
+    <value>mm</value>
+  </data>
+  <data name="CropPageWinPagesRange" xml:space="preserve">
+    <value>Pagina's</value>
+  </data>
+  <data name="CropPageWinPicaUnits" xml:space="preserve">
+    <value>pica</value>
+  </data>
+  <data name="CropPageWinPointUnits" xml:space="preserve">
+    <value>punt</value>
+  </data>
+  <data name="CropPageWinRemoveMaigin" xml:space="preserve">
+    <value>Blanco marges verwijderen</value>
+  </data>
+  <data name="CropPageWinResetBtn" xml:space="preserve">
+    <value>Opnieuw instellen</value>
+  </data>
+  <data name="CropPageWinSizeofCropBox" xml:space="preserve">
+    <value>Snijd de afmetingen van de pagina bij:</value>
+  </data>
+  <data name="CropPageWinZeroMarginBtn" xml:space="preserve">
+    <value>Instellen op 0 marge</value>
+  </data>
+  <data name="DefaultAppAndShortcutSucc" xml:space="preserve">
+    <value>Instellingen toegepast!</value>
+  </data>
+  <data name="DefaultAppCancelBtn" xml:space="preserve">
+    <value>Niet nu</value>
+  </data>
+  <data name="DefaultAppTitle" xml:space="preserve">
+    <value>Stel PDFgear in als het standaardprogramma voor PDF-bestanden.</value>
+  </data>
+  <data name="DefaultAppWinTitle" xml:space="preserve">
+    <value>Maak van PDFgear mijn standaard PDF-toepassing.</value>
+  </data>
+  <data name="DefaultContextMenuAddBookmark" xml:space="preserve">
+    <value>Voeg bladwijzer toe</value>
+  </data>
+  <data name="DeferredDigitSignCreateTip" xml:space="preserve">
+    <value>Klik en sleep met uw muis om het gebied te tekenen waar u de handtekening wilt laten verschijnen.  Zodra u klaar bent met het slepen van het gewenste gebied, gaat u naar de volgende stap van het ondertekenproces.</value>
+  </data>
+  <data name="DeferredDigitSignPreviewText" xml:space="preserve">
+    <value>Onderteken Hier</value>
+  </data>
+  <data name="DeletePageAskMsg" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde pagina's wilt verwijderen?</value>
+  </data>
+  <data name="DeletePageCheckEmptyMsg" xml:space="preserve">
+    <value>Selecteer de pagina('s) die u wilt verwijderen.</value>
+  </data>
+  <data name="DeletePageCheckMsg" xml:space="preserve">
+    <value>U kunt niet alle pagina's van het document verwijderen.</value>
+  </data>
+  <data name="DeleteParentBookmarkWarning" xml:space="preserve">
+    <value>Het verwijderen van een topniveau bladwijzer verwijdert ook al zijn geneste bladwijzers. Weet u zeker dat u wilt doorgaan?</value>
+  </data>
+  <data name="DeleteSinglePageAskMsg" xml:space="preserve">
+    <value>Weet je zeker dat je de pagina wilt verwijderen?</value>
+  </data>
+  <data name="DeleteWatermarkAskMsg" xml:space="preserve">
+    <value>Weet u zeker dat u alle watermerken in het PDF wilt verwijdert?</value>
+  </data>
+  <data name="DigSigCreateMessage_AreaTooSmall" xml:space="preserve">
+    <value>Het gebied is te klein om te ondertekenen.</value>
+  </data>
+  <data name="DigSigCreateMessage_Failed" xml:space="preserve">
+    <value>Kan digitale handtekening niet toevoegen.</value>
+  </data>
+  <data name="DigSigRemoveMessage_Failed" xml:space="preserve">
+    <value>Kan de digitale handtekening niet verwijderen.</value>
+  </data>
+  <data name="DigSignBannerMessage_Invalid" xml:space="preserve">
+    <value>Tenminste één handtekening heeft problemen.</value>
+  </data>
+  <data name="DigSignBannerMessage_NeedSign" xml:space="preserve">
+    <value>Ten minste één handtekeningveld moet worden ondertekend.</value>
+  </data>
+  <data name="DigSignBannerMessage_Valid" xml:space="preserve">
+    <value>Ondertekend en alle handtekeningen zijn geldig.</value>
+  </data>
+  <data name="DigSignBannerShowSignaturesButton" xml:space="preserve">
+    <value>Toon handtekeningen</value>
+  </data>
+  <data name="DigSignCertInfoBtn" xml:space="preserve">
+    <value>Info…</value>
+  </data>
+  <data name="DigSignFieldLocation" xml:space="preserve">
+    <value>Veld:</value>
+  </data>
+  <data name="DigSignFieldLocationPage" xml:space="preserve">
+    <value>Pagina</value>
+  </data>
+  <data name="DigSignFieldSignedBy" xml:space="preserve">
+    <value>Ondertekend door:</value>
+  </data>
+  <data name="DigSignInfoIncludesEmbeddedTimestamp" xml:space="preserve">
+    <value>De handtekening bevat een ingesloten tijdstempel.  Tijdstempel tijd: XXX</value>
+  </data>
+  <data name="DigSignInfoNotAllowModify" xml:space="preserve">
+    <value>De certificeerder heeft gespecificeerd dat er geen wijzigingen mogen worden aangebracht in dit document.</value>
+  </data>
+  <data name="DigSignInfoSignerInfoTitle" xml:space="preserve">
+    <value>Ondertekenaar Info</value>
+  </data>
+  <data name="DigSignInfoTimeFromSignersDevice" xml:space="preserve">
+    <value>De ondertekeningstijd is vanaf de klok op de computer van de ondertekenaar.</value>
+  </data>
+  <data name="DigSignInfoValidAtTime" xml:space="preserve">
+    <value>Handtekening is gevalideerd vanaf de veilige (tijdstempel) tijd: XXX</value>
+  </data>
+  <data name="DigSignInfoValidatedAsSigningTime" xml:space="preserve">
+    <value>Handtekening is gevalideerd op het moment van ondertekening: XXX</value>
+  </data>
+  <data name="DigSignPanelContextMenuGoToField" xml:space="preserve">
+    <value>Ga naar Handtekening veld</value>
+  </data>
+  <data name="DigSignPanelContextMenuRemoveSign" xml:space="preserve">
+    <value>Handtekening verwijderen</value>
+  </data>
+  <data name="DigSignPanelContextMenuShowProps" xml:space="preserve">
+    <value>Eigenschappen handtekening weergeven</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedRemove" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedShowProps" xml:space="preserve">
+    <value>Eigenschappen Weergeven</value>
+  </data>
+  <data name="DigSignPanelContextMenuUnsignedSignNow" xml:space="preserve">
+    <value>Nu Ondertekenen</value>
+  </data>
+  <data name="DigSignPanelContextMenuValidateSign" xml:space="preserve">
+    <value>Handtekening valideren</value>
+  </data>
+  <data name="DigSignPanelDefaultName" xml:space="preserve">
+    <value>Handtekening</value>
+  </data>
+  <data name="DigSignPropCertDetails" xml:space="preserve">
+    <value>Certificaat Details...</value>
+  </data>
+  <data name="DigSignPropContactInfo" xml:space="preserve">
+    <value>Contactgegevens:</value>
+  </data>
+  <data name="DigSignPropContactInfo_NotAvailable" xml:space="preserve">
+    <value>Niet beschikbaar.</value>
+  </data>
+  <data name="DigSignPropDialogTitle" xml:space="preserve">
+    <value>Handtekening Eigenschappen</value>
+  </data>
+  <data name="DigSignPropLastCheckTime" xml:space="preserve">
+    <value>Laatst gecontroleerd:</value>
+  </data>
+  <data name="DigSignPropLocation" xml:space="preserve">
+    <value>Locatie:</value>
+  </data>
+  <data name="DigSignPropPreviewAppVer" xml:space="preserve">
+    <value>PDFgear-versie:</value>
+  </data>
+  <data name="DigSignPropPreviewSignedBy" xml:space="preserve">
+    <value>Digitaal ondertekend door</value>
+  </data>
+  <data name="DigSignPropReason" xml:space="preserve">
+    <value>Reden:</value>
+  </data>
+  <data name="DigSignPropShowCertBtn" xml:space="preserve">
+    <value>Certificaat tonen...</value>
+  </data>
+  <data name="DigSignPropSignDate" xml:space="preserve">
+    <value>Datum:</value>
+  </data>
+  <data name="DigSignPropSignedBy" xml:space="preserve">
+    <value>Ondertekend door</value>
+  </data>
+  <data name="DigSignPropTrustCertBtn" xml:space="preserve">
+    <value>Vertrouw het Certificaat</value>
+  </data>
+  <data name="DigSignPropUnsigned" xml:space="preserve">
+    <value>Niet-ondertekend handtekeningveld</value>
+  </data>
+  <data name="DigSignPropValiditySummary" xml:space="preserve">
+    <value>Geldigheid Samenvatting</value>
+  </data>
+  <data name="DigSignResultInvalid" xml:space="preserve">
+    <value>Handtekening is ONGELDIG.</value>
+  </data>
+  <data name="DigSignResultUnknown" xml:space="preserve">
+    <value>De geldigheid van de handtekening is ONBEKEND.</value>
+  </data>
+  <data name="DigSignResultValid" xml:space="preserve">
+    <value>Handtekening is GELDIG, ondertekend door XXX.</value>
+  </data>
+  <data name="DigSignStatusHasBeenModified" xml:space="preserve">
+    <value>Het document is gewijzigd sinds deze handtekening is aangebracht.</value>
+  </data>
+  <data name="DigSignStatusHasNotBeenModified" xml:space="preserve">
+    <value>Het document is niet gewijzigd sinds deze handtekening is aangebracht.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsBroken" xml:space="preserve">
+    <value>Deze handtekening is ongeldig omdat er fouten zijn in de opmaak of informatie in deze handtekening.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsExpired" xml:space="preserve">
+    <value>De identiteit van de ondertekenaar is onbekend.  Het certificaat heeft de geldigheidsduur overschreden.</value>
+  </data>
+  <data name="DigSignStatusIdentityIsValid" xml:space="preserve">
+    <value>De identiteit van de ondertekenaar is geldig.</value>
+  </data>
+  <data name="DigSignStatusNotIncludedInTrustedCerts" xml:space="preserve">
+    <value>De identiteit van de ondertekenaar is onbekend omdat het niet is opgenomen in uw lijst van vertrouwde certificaten en geen van zijn bovenliggende certificaten vertrouwde certificaten zijn.</value>
+  </data>
+  <data name="DigSignStatusValidWhenIssued" xml:space="preserve">
+    <value>De identiteit van de ondertekenaar was geldig toen ze werd uitgegeven, maar er konden geen herroepingscontroles worden uitgevoerd om de identiteit deze keer te valideren.</value>
+  </data>
+  <data name="DigSignUnsignedToolTipPostfix" xml:space="preserve">
+    <value>(Klik om te ondertekenen)</value>
+  </data>
+  <data name="DigSignValidationDialogTitle" xml:space="preserve">
+    <value>Validatiestatus handtekening</value>
+  </data>
+  <data name="DigSignValidationProperties" xml:space="preserve">
+    <value>Handtekening Eigenschappen...</value>
+  </data>
+  <data name="DigitalSignatureCreateTip" xml:space="preserve">
+    <value>Klik en sleep met uw muis om het gebied te tekenen waar u de handtekening wilt laten verschijnen.  Zodra u klaar bent met het slepen van het gewenste gebied, gaat u naar de volgende stap van het ondertekenproces.</value>
+  </data>
+  <data name="DocumentPropertiesAuthor" xml:space="preserve">
+    <value>Auteur: </value>
+  </data>
+  <data name="DocumentPropertiesCentimeterUnits" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="DocumentPropertiesCreated" xml:space="preserve">
+    <value>Gemaakt: </value>
+  </data>
+  <data name="DocumentPropertiesCreator" xml:space="preserve">
+    <value>Schepper: </value>
+  </data>
+  <data name="DocumentPropertiesFileSize" xml:space="preserve">
+    <value>Bestandsgrootte: </value>
+  </data>
+  <data name="DocumentPropertiesFileVersion" xml:space="preserve">
+    <value>PDF-Versie: </value>
+  </data>
+  <data name="DocumentPropertiesFilename" xml:space="preserve">
+    <value>Bestandsnaam:</value>
+  </data>
+  <data name="DocumentPropertiesInchUnits" xml:space="preserve">
+    <value>inch</value>
+  </data>
+  <data name="DocumentPropertiesInfoTitle" xml:space="preserve">
+    <value>Bestandsinformatie</value>
+  </data>
+  <data name="DocumentPropertiesKeyword" xml:space="preserve">
+    <value>Trefwoorden: </value>
+  </data>
+  <data name="DocumentPropertiesLocation" xml:space="preserve">
+    <value>Locatie: </value>
+  </data>
+  <data name="DocumentPropertiesModified" xml:space="preserve">
+    <value>Gewijzigd: </value>
+  </data>
+  <data name="DocumentPropertiesPageSize" xml:space="preserve">
+    <value>Paginagrootte: </value>
+  </data>
+  <data name="DocumentPropertiesProducer" xml:space="preserve">
+    <value>Producent: </value>
+  </data>
+  <data name="DocumentPropertiesSubject" xml:space="preserve">
+    <value>Onderwerp: </value>
+  </data>
+  <data name="DocumentPropertiesTitle" xml:space="preserve">
+    <value>Titel: </value>
+  </data>
+  <data name="DocumentPropertiesTotalPages" xml:space="preserve">
+    <value>Aantal Pagina's: </value>
+  </data>
+  <data name="DocumentPropertiesWindowTitle" xml:space="preserve">
+    <value>Documenteigenschappen</value>
+  </data>
+  <data name="EditCustomStampWinTitle" xml:space="preserve">
+    <value>Aangepaste stempel bewerken</value>
+  </data>
+  <data name="EditStampWinCategoryListNewContent" xml:space="preserve">
+    <value>Nieuwe categorie</value>
+  </data>
+  <data name="EditStampWinContentType1" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="EditStampWinContentType2" xml:space="preserve">
+    <value>Datum en tijd</value>
+  </data>
+  <data name="EditStampWinContentType3" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="EditStampWinDefaultCategoryName" xml:space="preserve">
+    <value>Standaardcategorie</value>
+  </data>
+  <data name="EditStampWinDefaultStampName" xml:space="preserve">
+    <value>Naamloze stempel</value>
+  </data>
+  <data name="EditStampWinFontTitle" xml:space="preserve">
+    <value>Lettertype</value>
+  </data>
+  <data name="EditStampWinImageEmptyErrorMessage" xml:space="preserve">
+    <value>Selecteer eerst een afbeelding</value>
+  </data>
+  <data name="EditStampWinImageSelectedBtnContent" xml:space="preserve">
+    <value>Afbeelding selecteren</value>
+  </data>
+  <data name="EditStampWinLargeFontSize" xml:space="preserve">
+    <value>Groot</value>
+  </data>
+  <data name="EditStampWinListMenuDynamicContent" xml:space="preserve">
+    <value>Dynamisch</value>
+  </data>
+  <data name="EditStampWinMediumFontSize" xml:space="preserve">
+    <value>Normaal</value>
+  </data>
+  <data name="EditStampWinSaveCheckBoxContent" xml:space="preserve">
+    <value>Aangepaste stempel opslaan</value>
+  </data>
+  <data name="EditStampWinSmallFontSize" xml:space="preserve">
+    <value>Klein</value>
+  </data>
+  <data name="EditStampWinStampCategoryName" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="EditStampWinStampContent1" xml:space="preserve">
+    <value>Inhoud 1</value>
+  </data>
+  <data name="EditStampWinStampContent2" xml:space="preserve">
+    <value>Inhoud 2</value>
+  </data>
+  <data name="EditStampWinStampContent3" xml:space="preserve">
+    <value>Inhoud 3</value>
+  </data>
+  <data name="EditStampWinStampName" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="EditStampWinStampShape" xml:space="preserve">
+    <value>Vorm</value>
+  </data>
+  <data name="EditStampWinTitle" xml:space="preserve">
+    <value>Aangepaste stempel maken</value>
+  </data>
+  <data name="EditStampWinUntitledCategoryName" xml:space="preserve">
+    <value>Naamloze categorie</value>
+  </data>
+  <data name="EraserToolbarPaitialBtn" xml:space="preserve">
+    <value>Gedeeltelijk</value>
+  </data>
+  <data name="EraserToolbarSizeContent" xml:space="preserve">
+    <value>Grootte</value>
+  </data>
+  <data name="EraserToolbarWholeBtn" xml:space="preserve">
+    <value>Geheel</value>
+  </data>
+  <data name="ExtractPageCheckEmptyMsg" xml:space="preserve">
+    <value>Selecteer de pagina('s) die u wilt uitpakken.</value>
+  </data>
+  <data name="FindDeviceErrorMessage" xml:space="preserve">
+    <value>Kan geen verbinding maken met de scanner. Controleer alstublieft uw scanner en probeer het opnieuw.</value>
+  </data>
+  <data name="FirstPageTooltipText" xml:space="preserve">
+    <value>Eerste pagina</value>
+  </data>
+  <data name="FlattenBtn" xml:space="preserve">
+    <value>Annotatie afvlakken</value>
+  </data>
+  <data name="FlattenWinContent1" xml:space="preserve">
+    <value>Annotaties samenvoegen met de inhoudslaag</value>
+  </data>
+  <data name="FlattenWinContent2" xml:space="preserve">
+    <value>Na samenvoegen kunnen annotaties niet meer worden bewerkt.</value>
+  </data>
+  <data name="FlattenWinContent3" xml:space="preserve">
+    <value>Om de originele informatie te behouden, wordt het samengevoegde bestand als een kopie opgeslagen.</value>
+  </data>
+  <data name="FlattenWinTitle" xml:space="preserve">
+    <value>Alle annotaties in de PDF samenvoegen</value>
+  </data>
+  <data name="FootToolNextViewTips" xml:space="preserve">
+    <value>Volgende weergave</value>
+  </data>
+  <data name="FootToolPreviousViewTips" xml:space="preserve">
+    <value>Vorige weergave</value>
+  </data>
+  <data name="HeaderToolExitFullScreenTips" xml:space="preserve">
+    <value>Volledig Scherm Afsluiten</value>
+  </data>
+  <data name="HeaderToolFullScreenTips" xml:space="preserve">
+    <value>Volledig Scherm</value>
+  </data>
+  <data name="HeaderToolHideTips" xml:space="preserve">
+    <value>Verbergen</value>
+  </data>
+  <data name="HeaderToolShareTips" xml:space="preserve">
+    <value>Delen</value>
+  </data>
+  <data name="HeaderToolShowTips" xml:space="preserve">
+    <value>Uitbreiden</value>
+  </data>
+  <data name="HeaderToolThemeTips" xml:space="preserve">
+    <value>Uiterlijk</value>
+  </data>
+  <data name="ImageControlEditor" xml:space="preserve">
+    <value>Afbeelding bewerken</value>
+  </data>
+  <data name="ImageControl_DeleteConfirm" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde afbeelding wilt verwijderen?</value>
+  </data>
+  <data name="ImageControl_OcrFailed" xml:space="preserve">
+    <value>OCR van de afbeelding is niet gelukt!</value>
+  </data>
+  <data name="ImageHierarchyBottom" xml:space="preserve">
+    <value>Zet op de bodem</value>
+  </data>
+  <data name="ImageHierarchyDown" xml:space="preserve">
+    <value>Naar achteren verplaatsen</value>
+  </data>
+  <data name="ImageHierarchyFront" xml:space="preserve">
+    <value>Naar voren verplaatsen</value>
+  </data>
+  <data name="ImageHierarchyTop" xml:space="preserve">
+    <value>Zet bovenaan</value>
+  </data>
+  <data name="ImageToolbarTitle" xml:space="preserve">
+    <value>U bevindt zich in de beeldbewerkingsmodus.</value>
+  </data>
+  <data name="ImagemanipulationDelete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="ImagemanipulationFilpHor" xml:space="preserve">
+    <value>Horizontaal draaien</value>
+  </data>
+  <data name="ImagemanipulationFilpVer" xml:space="preserve">
+    <value>Verticaal draaien</value>
+  </data>
+  <data name="ImagemanipulationHierarchy" xml:space="preserve">
+    <value>Hiërarchie</value>
+  </data>
+  <data name="ImagemanipulationOCR" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ImagemanipulationReplace" xml:space="preserve">
+    <value>Vervangen</value>
+  </data>
+  <data name="ImagemanipulationRotate" xml:space="preserve">
+    <value>Roteren</value>
+  </data>
+  <data name="ImagemanipulationSave" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="ImportDialogFilterImage" xml:space="preserve">
+    <value>Afbeeldingsbestanden</value>
+  </data>
+  <data name="ImportDialogFilterSupported" xml:space="preserve">
+    <value>Ondersteunde Bestanden</value>
+  </data>
+  <data name="ImprotPagesUnexpectedError" xml:space="preserve">
+    <value>Er is een onbekende fout opgetreden.</value>
+  </data>
+  <data name="InkToolbarEraserBtn" xml:space="preserve">
+    <value>Rubber</value>
+  </data>
+  <data name="InsertPDFDetermineContent" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde XXX pagina('s) in de PDF wilt invoegen?</value>
+  </data>
+  <data name="InsertPDFInsertTitle" xml:space="preserve">
+    <value>Invoegen bij</value>
+  </data>
+  <data name="InsertWinInsertAfter" xml:space="preserve">
+    <value>Na de Pagina</value>
+  </data>
+  <data name="InsertWinInsertBefore" xml:space="preserve">
+    <value>Voor de Pagina</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageContent" xml:space="preserve">
+    <value>Er zijn bepaalde wijzigingen in de PDF die onomkeerbaar zijn. Om de originele informatie te behouden en het mogelijke verlies te vermijden, slaat u het gewijzigde bestand op als een kopie.</value>
+  </data>
+  <data name="IrreversibleSaveAsCopyMessageTitle" xml:space="preserve">
+    <value>Sla de PDF op als kopie</value>
+  </data>
+  <data name="LabelColorContent" xml:space="preserve">
+    <value>Kleur</value>
+  </data>
+  <data name="LabelTextContent" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="LastPageTooltipText" xml:space="preserve">
+    <value>Laatste pagina</value>
+  </data>
+  <data name="LeftNavigationAnnotationPageLabelContent" xml:space="preserve">
+    <value>Pagina XXX</value>
+  </data>
+  <data name="LeftNavigationViewAnnotationDisplayName" xml:space="preserve">
+    <value>Opmerkingen</value>
+  </data>
+  <data name="LeftNavigationViewBookmarkDisplayName" xml:space="preserve">
+    <value>Bladwijzer</value>
+  </data>
+  <data name="LeftNavigationViewDigitalSignaturesDisplayName" xml:space="preserve">
+    <value>Digitale handtekeningen</value>
+  </data>
+  <data name="LeftNavigationViewThumbnailDisplayName" xml:space="preserve">
+    <value>Thumbnail</value>
+  </data>
+  <data name="LinkActionToUri" xml:space="preserve">
+    <value>Je gaat "XXX" openen.  Zorg ervoor dat u het vertrouwt voordat u het opent.  Doorgaan met openen?</value>
+  </data>
+  <data name="LinkBtn" xml:space="preserve">
+    <value>Koppeling</value>
+  </data>
+  <data name="LinkCreateBtn" xml:space="preserve">
+    <value>Koppeling maken/bewerken</value>
+  </data>
+  <data name="LinkDeleteAll" xml:space="preserve">
+    <value>Weet u zeker dat u alle links wilt verwijderen?</value>
+  </data>
+  <data name="LinkDeleteAllBtn" xml:space="preserve">
+    <value>Verwijder alle koppelingen</value>
+  </data>
+  <data name="LinkDeleteOne" xml:space="preserve">
+    <value>Weet je zeker dat je de link wilt verwijderen?</value>
+  </data>
+  <data name="LinkOpenFileFailed" xml:space="preserve">
+    <value>Bestand niet gevonden.  Controleer of het bestand is verplaatst, hernoemd of verwijderd.</value>
+  </data>
+  <data name="LinkPageError" xml:space="preserve">
+    <value>Voer een geldig paginanummer in.</value>
+  </data>
+  <data name="LinkRightDelete" xml:space="preserve">
+    <value>Koppeling verwijderen</value>
+  </data>
+  <data name="LinkToolbarTitle" xml:space="preserve">
+    <value>U bevindt zich in de linkbewerkingsmodus.</value>
+  </data>
+  <data name="LinkUriEmpty" xml:space="preserve">
+    <value>Voer een geldig doel van de link in.</value>
+  </data>
+  <data name="LinkUriError" xml:space="preserve">
+    <value>Voer een geldige URL-link in.</value>
+  </data>
+  <data name="LinkWinAppearance" xml:space="preserve">
+    <value>Verschijning</value>
+  </data>
+  <data name="LinkWinFilePath" xml:space="preserve">
+    <value>Lokaal bestand</value>
+  </data>
+  <data name="LinkWinInvisibleRect" xml:space="preserve">
+    <value>Onzichtbare rechthoek</value>
+  </data>
+  <data name="LinkWinNavigate" xml:space="preserve">
+    <value>Navigeren naar</value>
+  </data>
+  <data name="LinkWinPage" xml:space="preserve">
+    <value>Bladzijde</value>
+  </data>
+  <data name="LinkWinStrokeDashed" xml:space="preserve">
+    <value>Gestreept</value>
+  </data>
+  <data name="LinkWinStrokeSolid" xml:space="preserve">
+    <value>Stevig</value>
+  </data>
+  <data name="LinkWinStrokeStyle" xml:space="preserve">
+    <value>Stroke stijl</value>
+  </data>
+  <data name="LinkWinStrokeUnderline" xml:space="preserve">
+    <value>Onderstreep</value>
+  </data>
+  <data name="LinkWinStyle" xml:space="preserve">
+    <value>Koppel stijl</value>
+  </data>
+  <data name="LinkWinTitleCreate" xml:space="preserve">
+    <value>Koppeling maken</value>
+  </data>
+  <data name="LinkWinTitleEdit" xml:space="preserve">
+    <value>Koppeling bewerken</value>
+  </data>
+  <data name="LinkWinUrl" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="LinkWinVisibleRect" xml:space="preserve">
+    <value>Zichtbare rechthoek</value>
+  </data>
+  <data name="MainCropPageContextMenuAdjust" xml:space="preserve">
+    <value>Geselecteerd gebied aanpassen</value>
+  </data>
+  <data name="MainCropPageNotSelectedPageNote" xml:space="preserve">
+    <value>Selecteer één pagina.</value>
+  </data>
+  <data name="MainCropPageSelectLittleAreaNote" xml:space="preserve">
+    <value>Stel een groter gebied in.</value>
+  </data>
+  <data name="MainCropPageSelectedMulPageNote" xml:space="preserve">
+    <value>Er kan slechts één pagina worden geselecteerd.</value>
+  </data>
+  <data name="MainViewBatchPrintContent" xml:space="preserve">
+    <value>Batch afdrukken</value>
+  </data>
+  <data name="MainViewBookmarkAddBookmark" xml:space="preserve">
+    <value>Voeg bladwijzer toe</value>
+  </data>
+  <data name="MainViewBookmarkAddChildBookmark" xml:space="preserve">
+    <value>Subbladwijzer toevoegen</value>
+  </data>
+  <data name="MainViewBookmarkCollapseAll" xml:space="preserve">
+    <value>Alles inklappen</value>
+  </data>
+  <data name="MainViewBookmarkDeleteBookmark" xml:space="preserve">
+    <value>Bladwijzer verwijderen</value>
+  </data>
+  <data name="MainViewBookmarkExpandAll" xml:space="preserve">
+    <value>Alles uitvouwen</value>
+  </data>
+  <data name="MainViewBookmarkRenameBookmark" xml:space="preserve">
+    <value>Naam bladwijzer wijzigen</value>
+  </data>
+  <data name="MainViewCopilotButtonFirstCloseTips" xml:space="preserve">
+    <value>Klik op het pictogram om verder te chatten met PDF</value>
+  </data>
+  <data name="MainViewCreateNewPDF" xml:space="preserve">
+    <value>Bestand Maken</value>
+  </data>
+  <data name="MainViewCropPageContent" xml:space="preserve">
+    <value>Pagina's bijsnijden</value>
+  </data>
+  <data name="MainViewToolbarPhoneBtn" xml:space="preserve">
+    <value>iOS &amp; Android</value>
+  </data>
+  <data name="MainViewToolbarPhoneBtnTips" xml:space="preserve">
+    <value>Haal PDFgear voor iOS en Android</value>
+  </data>
+  <data name="MainWindowAccountBtn" xml:space="preserve">
+    <value>Inloggen / Registreren</value>
+  </data>
+  <data name="MainWindowCompressFileBtn" xml:space="preserve">
+    <value>PDF comprimeren</value>
+  </data>
+  <data name="MainWindowExportFileToBtn" xml:space="preserve">
+    <value>PDF exporteren als</value>
+  </data>
+  <data name="MainWindowFilesBtn" xml:space="preserve">
+    <value>Bestanden</value>
+  </data>
+  <data name="MainWindowMergeAndSplitBtn" xml:space="preserve">
+    <value>Samenvoegen en Splitsen</value>
+  </data>
+  <data name="MainWindowNewBlankFileBtn" xml:space="preserve">
+    <value>Nieuwe lege PDF</value>
+  </data>
+  <data name="MainWindowNewFileBtn" xml:space="preserve">
+    <value>Bestand Maken</value>
+  </data>
+  <data name="MainWindowNewFilefromImageBtn" xml:space="preserve">
+    <value>Nieuwe PDF van afbeeldingen</value>
+  </data>
+  <data name="MainWindowNewFilefromScannerBtn" xml:space="preserve">
+    <value>Nieuwe PDF van scanner</value>
+  </data>
+  <data name="MainWindowQuitBtn" xml:space="preserve">
+    <value>PDFgear afsluiten</value>
+  </data>
+  <data name="ManageStampAddNewBtnContent" xml:space="preserve">
+    <value>Nieuwe categorie toevoegen</value>
+  </data>
+  <data name="ManageStampDeleteCategoryBtnContent" xml:space="preserve">
+    <value>Categorie verwijderen</value>
+  </data>
+  <data name="ManageStampRenameBtnContent" xml:space="preserve">
+    <value>Categorie hernoemen</value>
+  </data>
+  <data name="ManageStampWinCreateBtnContent" xml:space="preserve">
+    <value>Stempel maken</value>
+  </data>
+  <data name="ManageStampWinTitle" xml:space="preserve">
+    <value>Aangepaste stempels beheren</value>
+  </data>
+  <data name="ManegeStampAllCategories" xml:space="preserve">
+    <value>Alle categorieën</value>
+  </data>
+  <data name="MenuAnnotateArrowContent" xml:space="preserve">
+    <value>Pijltje</value>
+  </data>
+  <data name="MenuAnnotateEllipseContent" xml:space="preserve">
+    <value>Ovaal</value>
+  </data>
+  <data name="MenuAnnotateHiddenContent" xml:space="preserve">
+    <value>Opmerkingen Verbergen</value>
+  </data>
+  <data name="MenuAnnotateHighlight" xml:space="preserve">
+    <value>Gebied Markeren</value>
+  </data>
+  <data name="MenuAnnotateHighlightContent" xml:space="preserve">
+    <value>Markeren</value>
+  </data>
+  <data name="MenuAnnotateInkContent" xml:space="preserve">
+    <value>Inkt</value>
+  </data>
+  <data name="MenuAnnotateLineContent" xml:space="preserve">
+    <value>Lijn</value>
+  </data>
+  <data name="MenuAnnotateManageContent" xml:space="preserve">
+    <value>Opmerkingen Beheren</value>
+  </data>
+  <data name="MenuAnnotateNoteContent" xml:space="preserve">
+    <value>Notitie</value>
+  </data>
+  <data name="MenuAnnotateRemoveTextContent" xml:space="preserve">
+    <value>Tekst Wissen</value>
+  </data>
+  <data name="MenuAnnotateShapeContent" xml:space="preserve">
+    <value>Rechthoek</value>
+  </data>
+  <data name="MenuAnnotateShowContent" xml:space="preserve">
+    <value>Opmerkingen Weergeven</value>
+  </data>
+  <data name="MenuAnnotateSignatureContent" xml:space="preserve">
+    <value>Handtekening</value>
+  </data>
+  <data name="MenuAnnotateStampContent" xml:space="preserve">
+    <value>Stempel</value>
+  </data>
+  <data name="MenuAnnotateStrikeContent" xml:space="preserve">
+    <value>Doorstrepen</value>
+  </data>
+  <data name="MenuAnnotateTextBoxContent" xml:space="preserve">
+    <value>Tekstvak</value>
+  </data>
+  <data name="MenuAnnotateTranslateContent" xml:space="preserve">
+    <value>Vertalen</value>
+  </data>
+  <data name="MenuAnnotateTypeWriterContent" xml:space="preserve">
+    <value>Typemachine</value>
+  </data>
+  <data name="MenuAnnotateUnderlineContent" xml:space="preserve">
+    <value>Onderstreep</value>
+  </data>
+  <data name="MenuAnnotateWatermarkContent" xml:space="preserve">
+    <value>Watermerk</value>
+  </data>
+  <data name="MenuConvertPdfToExcelContent" xml:space="preserve">
+    <value>PDF naar Excel</value>
+  </data>
+  <data name="MenuConvertPdfToHtmlContent" xml:space="preserve">
+    <value>PDF naar HTML</value>
+  </data>
+  <data name="MenuConvertPdfToImageContent" xml:space="preserve">
+    <value>PDF naar PNG</value>
+  </data>
+  <data name="MenuConvertPdfToJpegContent" xml:space="preserve">
+    <value>PDF naar JPEG</value>
+  </data>
+  <data name="MenuConvertPdfToPPTContent" xml:space="preserve">
+    <value>PDF naar PPT</value>
+  </data>
+  <data name="MenuConvertPdfToRtfContent" xml:space="preserve">
+    <value>PDF naar RTF</value>
+  </data>
+  <data name="MenuConvertPdfToTxtContent" xml:space="preserve">
+    <value>PDF naar TXT</value>
+  </data>
+  <data name="MenuConvertPdfToWordContent" xml:space="preserve">
+    <value>PDF naar Word</value>
+  </data>
+  <data name="MenuConvertPdfToXmlContent" xml:space="preserve">
+    <value>PDF naar XML</value>
+  </data>
+  <data name="MenuExtractTextEmpyMsg" xml:space="preserve">
+    <value>Er is geen tekst geselecteerd. Er is geen tekst in het geselecteerde gebied of u heeft een afbeelding geselecteerd.</value>
+  </data>
+  <data name="MenuGruopAnnotateTitle" xml:space="preserve">
+    <value>Opmerking</value>
+  </data>
+  <data name="MenuGruopConvertTitle" xml:space="preserve">
+    <value>Converteren</value>
+  </data>
+  <data name="MenuGruopFillFormTitle" xml:space="preserve">
+    <value>Het formulier</value>
+  </data>
+  <data name="MenuGruopHelpTitle" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MenuGruopHomeTitle" xml:space="preserve">
+    <value>Startpagina</value>
+  </data>
+  <data name="MenuGruopInsertTitle" xml:space="preserve">
+    <value>Invoegen</value>
+  </data>
+  <data name="MenuGruopPageTitle" xml:space="preserve">
+    <value>Pagina</value>
+  </data>
+  <data name="MenuGruopProtectTitle" xml:space="preserve">
+    <value>Beschermen</value>
+  </data>
+  <data name="MenuGruopToolsTitle" xml:space="preserve">
+    <value>Hulpmiddelen</value>
+  </data>
+  <data name="MenuGruopViewTitle" xml:space="preserve">
+    <value>Bekijken</value>
+  </data>
+  <data name="MenuHelpAboutContent" xml:space="preserve">
+    <value>Over</value>
+  </data>
+  <data name="MenuHelpContactUsContent" xml:space="preserve">
+    <value>Contacteer ons</value>
+  </data>
+  <data name="MenuHelpSwitchtoPreviousVersionContent" xml:space="preserve">
+    <value>Terugkeren naar vorige versie</value>
+  </data>
+  <data name="MenuHelpUserGuideContent" xml:space="preserve">
+    <value>Gebruikershandleiding</value>
+  </data>
+  <data name="MenuHelperSettingContent" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="MenuHelperUpdateContent" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="MenuInsertAddContent" xml:space="preserve">
+    <value>Toevoegen</value>
+  </data>
+  <data name="MenuInsertDelContent" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="MenuInsertEditContent" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="MenuInsertHeaderFooterContent" xml:space="preserve">
+    <value>Kop- en voettekst</value>
+  </data>
+  <data name="MenuInsertImageContent" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="MenuInsertPageNumberContent" xml:space="preserve">
+    <value>Paginanummer</value>
+  </data>
+  <data name="MenuPageDeleteContent" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="MenuPageExtractContent" xml:space="preserve">
+    <value>Uitpakken</value>
+  </data>
+  <data name="MenuPageInsertContent" xml:space="preserve">
+    <value>Invoegen</value>
+  </data>
+  <data name="MenuPageMergeContent" xml:space="preserve">
+    <value>PDF samenvoegen</value>
+  </data>
+  <data name="MenuPageRotateLeftContent" xml:space="preserve">
+    <value>Links roteren</value>
+  </data>
+  <data name="MenuPageRotateRightContent" xml:space="preserve">
+    <value>Rechts roteren</value>
+  </data>
+  <data name="MenuPageSplitContent" xml:space="preserve">
+    <value>PDF splitsen</value>
+  </data>
+  <data name="MenuPageSubInsertBlankPage" xml:space="preserve">
+    <value>Lege pagina</value>
+  </data>
+  <data name="MenuPageSubInsertFromImage" xml:space="preserve">
+    <value>Uit afbeelding</value>
+  </data>
+  <data name="MenuPageSubInsertFromPDF" xml:space="preserve">
+    <value>Uit PDF</value>
+  </data>
+  <data name="MenuPageSubInsertFromScanner" xml:space="preserve">
+    <value>Uit scanner</value>
+  </data>
+  <data name="MenuPageSubInsertFromWord" xml:space="preserve">
+    <value>Uit Word</value>
+  </data>
+  <data name="MenuPropertiesContent" xml:space="preserve">
+    <value>Eigenschappen</value>
+  </data>
+  <data name="MenuProtectPasswordContent" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
+  <data name="MenuProtectRemoveContent" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="MenuRightAnnotateCopyText" xml:space="preserve">
+    <value>Tekst Kopiëren</value>
+  </data>
+  <data name="MenuRightAnnotateDelete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="MenuRightAnnotateDuplicate" xml:space="preserve">
+    <value>Dupliceren</value>
+  </data>
+  <data name="MenuRightAnnotateExitEdit" xml:space="preserve">
+    <value>Exit edit</value>
+  </data>
+  <data name="MenuShareEmailContent" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="MenuShareSendFileContent" xml:space="preserve">
+    <value>Verstuur bestand</value>
+  </data>
+  <data name="MenuShareShareContent" xml:space="preserve">
+    <value>Delen</value>
+  </data>
+  <data name="MenuSignatureSubAddNew" xml:space="preserve">
+    <value>Maak handtekening</value>
+  </data>
+  <data name="MenuStampPresetsApprovedItemName" xml:space="preserve">
+    <value>Goedgekeurd</value>
+  </data>
+  <data name="MenuStampPresetsAsIsItemName" xml:space="preserve">
+    <value>Asls</value>
+  </data>
+  <data name="MenuStampPresetsConfidentialItemName" xml:space="preserve">
+    <value>Vertrouwelijk</value>
+  </data>
+  <data name="MenuStampPresetsDraftItemName" xml:space="preserve">
+    <value>Concept</value>
+  </data>
+  <data name="MenuStampPresetsExperimentalItemName" xml:space="preserve">
+    <value>Experimenteel</value>
+  </data>
+  <data name="MenuStampPresetsExpiredItemName" xml:space="preserve">
+    <value>Verlopen</value>
+  </data>
+  <data name="MenuStampPresetsFinalItemName" xml:space="preserve">
+    <value>Definitief</value>
+  </data>
+  <data name="MenuStampPresetsForPublicReleaseItemName" xml:space="preserve">
+    <value>VoorPubliekeVrijgave</value>
+  </data>
+  <data name="MenuStampPresetsNotApprovedItemName" xml:space="preserve">
+    <value>NietGoedgekeurd</value>
+  </data>
+  <data name="MenuStampPresetsNotForPublicReleaseItemName" xml:space="preserve">
+    <value>NietVoorPubliekeVrijgave</value>
+  </data>
+  <data name="MenuStampPresetsSoldItemName" xml:space="preserve">
+    <value>Verkocht</value>
+  </data>
+  <data name="MenuStampPresetsTopSecretItemName" xml:space="preserve">
+    <value>TopGeheim</value>
+  </data>
+  <data name="MenuStampSubCustomizeContent" xml:space="preserve">
+    <value>Aangepaste stempel</value>
+  </data>
+  <data name="MenuStampSubInsertlocalImageContent" xml:space="preserve">
+    <value>Lokaal bestand invoegen</value>
+  </data>
+  <data name="MenuStampSubPresetsContent" xml:space="preserve">
+    <value>Preset</value>
+  </data>
+  <data name="MenuSubFillColorItem" xml:space="preserve">
+    <value>Invulkleur</value>
+  </data>
+  <data name="MenuSubFontColorItem" xml:space="preserve">
+    <value>Letterkleur</value>
+  </data>
+  <data name="MenuSubFontSizeItem" xml:space="preserve">
+    <value>Lettergrootte</value>
+  </data>
+  <data name="MenuSubStrokeColorItem" xml:space="preserve">
+    <value>Lijnkleur</value>
+  </data>
+  <data name="MenuSubThicknessItem" xml:space="preserve">
+    <value>Dikte</value>
+  </data>
+  <data name="MenuViewAutoScrollContent" xml:space="preserve">
+    <value>Automatisch Scroll</value>
+  </data>
+  <data name="MenuViewCompressContent" xml:space="preserve">
+    <value>Comprimeren</value>
+  </data>
+  <data name="MenuViewContiusContent" xml:space="preserve">
+    <value>Continu</value>
+  </data>
+  <data name="MenuViewDoubleContent" xml:space="preserve">
+    <value>Dubbel</value>
+  </data>
+  <data name="MenuViewEditObjectContent" xml:space="preserve">
+    <value>Voorwerp Bewerken</value>
+  </data>
+  <data name="MenuViewEditTextContent" xml:space="preserve">
+    <value>Tekst bewerken</value>
+  </data>
+  <data name="MenuViewExitAnnotateContent" xml:space="preserve">
+    <value>Aantekening afsluiten</value>
+  </data>
+  <data name="MenuViewExtractTextContent" xml:space="preserve">
+    <value>Tekst uitpakken</value>
+  </data>
+  <data name="MenuViewFindContent" xml:space="preserve">
+    <value>Zoek</value>
+  </data>
+  <data name="MenuViewFitPageContent" xml:space="preserve">
+    <value>Fit Pagina</value>
+  </data>
+  <data name="MenuViewFullSizeContent" xml:space="preserve">
+    <value>Werkelijke grootte</value>
+  </data>
+  <data name="MenuViewHeightContent" xml:space="preserve">
+    <value>Past de hoogte</value>
+  </data>
+  <data name="MenuViewNextContent" xml:space="preserve">
+    <value>Volgende</value>
+  </data>
+  <data name="MenuViewOCRContent" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="MenuViewPresentContent" xml:space="preserve">
+    <value>Speel</value>
+  </data>
+  <data name="MenuViewPreviousContent" xml:space="preserve">
+    <value>Vorige</value>
+  </data>
+  <data name="MenuViewRotateLeftContent" xml:space="preserve">
+    <value>Links roteren</value>
+  </data>
+  <data name="MenuViewRotateRightContent" xml:space="preserve">
+    <value>Rechts roteren</value>
+  </data>
+  <data name="MenuViewScreenshotContent" xml:space="preserve">
+    <value>Screenshot</value>
+  </data>
+  <data name="MenuViewSingleContent" xml:space="preserve">
+    <value>Enkel</value>
+  </data>
+  <data name="MenuViewUpgradeContent" xml:space="preserve">
+    <value>Upgrade</value>
+  </data>
+  <data name="MenuViewWidthContent" xml:space="preserve">
+    <value>Breedte passen</value>
+  </data>
+  <data name="MenuViewZoomContent" xml:space="preserve">
+    <value>Zoomen</value>
+  </data>
+  <data name="MenuWatermarkSubCreateContent" xml:space="preserve">
+    <value>Watermerk creëren</value>
+  </data>
+  <data name="MenuWatermarkSubDeleteContent" xml:space="preserve">
+    <value>Watermerk verwijderen</value>
+  </data>
+  <data name="MergeWindowsLoadfailedMessage" xml:space="preserve">
+    <value>Het laden van bestanden is mislukt.  Selecteer een ander bestand en probeer het opnieuw.</value>
+  </data>
+  <data name="MicrosoftStoreBillingHelpContent" xml:space="preserve">
+    <value>Hulp bij Microsoft Store en facturering</value>
+  </data>
+  <data name="MoreColorsBtnTips" xml:space="preserve">
+    <value>Meer kleuren...</value>
+  </data>
+  <data name="MsgAttachmentOpenFailed" xml:space="preserve">
+    <value>Bijlage openen mislukt.</value>
+  </data>
+  <data name="MsgAttachmentSaveFailed" xml:space="preserve">
+    <value>Opslaan van bijlage(n) mislukt.</value>
+  </data>
+  <data name="MsgAttachmentSaveSuc" xml:space="preserve">
+    <value>Succesvol opgeslagen. Wilt u de bijlage(n) in Verkenner bekijken?</value>
+  </data>
+  <data name="Msg_AttachmentAlreadyExist" xml:space="preserve">
+    <value>Het bestand "XXX" kon niet worden toegevoegd. Er bestaat al een bestand met dezelfde naam in het bijlagenpaneel.</value>
+  </data>
+  <data name="Msg_AttachmentToolLarge" xml:space="preserve">
+    <value>Bestand “XXX” is groter dan 2GB en kan niet worden toegevoegd.</value>
+  </data>
+  <data name="Msg_DeleteAttachments" xml:space="preserve">
+    <value>Weet u zeker dat u de bijlage(n) wilt verwijderen?</value>
+  </data>
+  <data name="Msg_DescriptionOverMaxCharsNum" xml:space="preserve">
+    <value>De beschrijving mag niet meer dan 256 tekens bevatten.</value>
+  </data>
+  <data name="NewBookmarkName" xml:space="preserve">
+    <value>Nieuwe bladwijzer</value>
+  </data>
+  <data name="NewFileName" xml:space="preserve">
+    <value>Naamloos</value>
+  </data>
+  <data name="NewFileRemindSave" xml:space="preserve">
+    <value>Document XXX wordt gesloten.  Wil je je wijzigingen opslaan?</value>
+  </data>
+  <data name="NextBtnTooltipText" xml:space="preserve">
+    <value>Volgende zoeken</value>
+  </data>
+  <data name="NoPrintNoteWindowAddBtn" xml:space="preserve">
+    <value>Er is geen printer in uw systeem gevonden. Voeg een printer toe om door te gaan.</value>
+  </data>
+  <data name="NoPrintNoteWindowContent" xml:space="preserve">
+    <value>Printer toevoegen</value>
+  </data>
+  <data name="NoPrintNoteWindowTitle" xml:space="preserve">
+    <value>Opmerking</value>
+  </data>
+  <data name="OCRTip" xml:space="preserve">
+    <value>Sleep de muis om het gebied voor tekstherkenning te selecteren. Zodra u klaar bent, wordt u automatisch naar de volgende stap geleid.</value>
+  </data>
+  <data name="OcrDialogErrorMessage" xml:space="preserve">
+    <value>Geen herkenbare tekens gevonden in het document. Zorg ervoor dat de inhoud van het document duidelijk is, draai de pagina naar de juiste leesoriëntatie en selecteer de taal die de inhoud bevat.</value>
+  </data>
+  <data name="OcrDialogLanguageRecognition" xml:space="preserve">
+    <value>Talenherkenning</value>
+  </data>
+  <data name="OcrDialogLanguageSelected" xml:space="preserve">
+    <value>Geselecteerde talen:</value>
+  </data>
+  <data name="OcrDialogLanguageSelectedNone" xml:space="preserve">
+    <value>Selecteer ten minste één taal.</value>
+  </data>
+  <data name="OcrDialogLanguageSlowApplyTips" xml:space="preserve">
+    <value>Toepassen</value>
+  </data>
+  <data name="OcrDialogLanguageSlowTips" xml:space="preserve">
+    <value>Meer dan drie talen kunnen de herkenning vertragen.</value>
+  </data>
+  <data name="OcrDialogSaveDocDoNotSaveBtn" xml:space="preserve">
+    <value>Niet opslaan</value>
+  </data>
+  <data name="OcrDialogSaveDocMessage" xml:space="preserve">
+    <value>Wilt u de wijzigingen opslaan in 'XXX' voordat u de bewerking uitvoert?</value>
+  </data>
+  <data name="OcrDialogSubtitle" xml:space="preserve">
+    <value>OCR de PDF om de tekst in afbeeldingen doorzoekbaar te maken</value>
+  </data>
+  <data name="OcrDialogTitle" xml:space="preserve">
+    <value>OCR PDF</value>
+  </data>
+  <data name="OpenDocByIncorrectPwdMsg" xml:space="preserve">
+    <value>Het wachtwoord is incorrect</value>
+  </data>
+  <data name="OpenDocFailedExceptionMsg" xml:space="preserve">
+    <value>Kan het document niet openen.</value>
+  </data>
+  <data name="OpenDocNotExistMsg" xml:space="preserve">
+    <value>Bestand bestaat niet:</value>
+  </data>
+  <data name="OpenDocNotSupportedMsg" xml:space="preserve">
+    <value>Niet-ondersteunde bestandstypen:</value>
+  </data>
+  <data name="OpenFileBtnContent" xml:space="preserve">
+    <value>Bestand openen</value>
+  </data>
+  <data name="PageMenuInsertfromfileContent" xml:space="preserve">
+    <value>Invoegen vanuit bestand</value>
+  </data>
+  <data name="PageMergeErrorMessage" xml:space="preserve">
+    <value>Het laden van het bestand is mislukt. Probeer het opnieuw met een ander bestand.</value>
+  </data>
+  <data name="PageResizeWinCustomize" xml:space="preserve">
+    <value>Aanpassen</value>
+  </data>
+  <data name="PageResizeWinFixedSize" xml:space="preserve">
+    <value>Vast formaat</value>
+  </data>
+  <data name="PageResizeWinHeightContent" xml:space="preserve">
+    <value>H:</value>
+  </data>
+  <data name="PageResizeWinOrientation" xml:space="preserve">
+    <value>Oriëntatie</value>
+  </data>
+  <data name="PageResizeWinOriginalContent" xml:space="preserve">
+    <value>Originele Paginagrootte</value>
+  </data>
+  <data name="PageResizeWinPageNumber" xml:space="preserve">
+    <value>Pagina</value>
+  </data>
+  <data name="PageResizeWinResizeGroupName" xml:space="preserve">
+    <value>Formaat wijzigen</value>
+  </data>
+  <data name="PageResizeWinResizedContent" xml:space="preserve">
+    <value>Aangepaste Paginagrootte</value>
+  </data>
+  <data name="PageResizeWinTitle" xml:space="preserve">
+    <value>Paginaformaat Wijzigen</value>
+  </data>
+  <data name="PageResizeWinTooltip" xml:space="preserve">
+    <value>Wijzig paginagrootte naar een aangepaste grootte voor een betere lay-out.</value>
+  </data>
+  <data name="PageResizeWinWidthContent" xml:space="preserve">
+    <value>B:</value>
+  </data>
+  <data name="PageSelectedAllPrefiexedContent" xml:space="preserve">
+    <value>Geselecteerd</value>
+  </data>
+  <data name="PageSplitMergeCheckMsg" xml:space="preserve">
+    <value>Het open document is bewerkt, sla de wijzigingen eerst op.</value>
+  </data>
+  <data name="PageWinAllPages" xml:space="preserve">
+    <value>Alle pagina's</value>
+  </data>
+  <data name="PageWinCustomPages" xml:space="preserve">
+    <value>Aangepaste pagina's</value>
+  </data>
+  <data name="PageWinExtractAll" xml:space="preserve">
+    <value>Pak pagina's uit in één PDF</value>
+  </data>
+  <data name="PageWinExtractDelete" xml:space="preserve">
+    <value>Verwijder geselecteerde pagina's na extractie</value>
+  </data>
+  <data name="PageWinExtractMode" xml:space="preserve">
+    <value>Extract-modus</value>
+  </data>
+  <data name="PageWinExtractevert" xml:space="preserve">
+    <value>Extraheer elke pagina in afzonderlijke PDF's</value>
+  </data>
+  <data name="PageWinRange" xml:space="preserve">
+    <value>Bereik</value>
+  </data>
+  <data name="PageWinSelectPages" xml:space="preserve">
+    <value>Geselecteerde pagina's</value>
+  </data>
+  <data name="PageWinSelectedPages" xml:space="preserve">
+    <value>"XXX" pagina's geselecteerd</value>
+  </data>
+  <data name="PageWinSubset" xml:space="preserve">
+    <value>Onderbereik</value>
+  </data>
+  <data name="PhoneWinContent" xml:space="preserve">
+    <value>Scan de QR-code om overal van PDFgear te genieten</value>
+  </data>
+  <data name="PhoneWinContentTitle" xml:space="preserve">
+    <value>PDFgear voor iOS en Android is beschikbaar</value>
+  </data>
+  <data name="PopupPlaceholderContent" xml:space="preserve">
+    <value>Hier tekst invoegen</value>
+  </data>
+  <data name="PresentationWindowExitText" xml:space="preserve">
+    <value>Uitgang</value>
+  </data>
+  <data name="PrevBtnTooltipText" xml:space="preserve">
+    <value>Vorige zoeken</value>
+  </data>
+  <data name="PrintWindowBookLetBinding" xml:space="preserve">
+    <value>Binding</value>
+  </data>
+  <data name="PrintWindowBookLetBtnContent" xml:space="preserve">
+    <value>Boek</value>
+  </data>
+  <data name="PrintWindowBookLetLeftBinding" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="PrintWindowBookLetRightBinding" xml:space="preserve">
+    <value>Rechts</value>
+  </data>
+  <data name="PrintWindowBookLetSubset" xml:space="preserve">
+    <value>Subset</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBack" xml:space="preserve">
+    <value>Alleen achterzijde</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetBoth" xml:space="preserve">
+    <value>Beide zijden</value>
+  </data>
+  <data name="PrintWindowBookLetSubsetFrontal" xml:space="preserve">
+    <value>Alleen voorzijde</value>
+  </data>
+  <data name="PrintWindowMutilpleBtnContent" xml:space="preserve">
+    <value>Meerdere</value>
+  </data>
+  <data name="PrintWindowMutilpleLayout" xml:space="preserve">
+    <value>Paginavolgorde</value>
+  </data>
+  <data name="PrintWindowMutilpleMargins" xml:space="preserve">
+    <value>Marge</value>
+  </data>
+  <data name="PrintWindowMutilplePapers" xml:space="preserve">
+    <value>Pagina's per vel</value>
+  </data>
+  <data name="PrintWindowMutilplePrintBorder" xml:space="preserve">
+    <value>Paginarand afdrukken</value>
+  </data>
+  <data name="PrintWindowPageSettingGrounpName" xml:space="preserve">
+    <value>Pagina-instellingen</value>
+  </data>
+  <data name="PrintWindowPageSettingsSizeTitle" xml:space="preserve">
+    <value>Papierformaat</value>
+  </data>
+  <data name="PrintWindowPrintHandingGrounpName" xml:space="preserve">
+    <value>Afdrukmodus</value>
+  </data>
+  <data name="PrintWindowRangeGroupName" xml:space="preserve">
+    <value>Pagina bereik</value>
+  </data>
+  <data name="PrintWindowReverseCheckBoxContent" xml:space="preserve">
+    <value>Volgorde van pagina's omkeren</value>
+  </data>
+  <data name="PrintWindowScalBtnContent" xml:space="preserve">
+    <value>Grootte</value>
+  </data>
+  <data name="PrintWindowTileBtnContent" xml:space="preserve">
+    <value>Poster</value>
+  </data>
+  <data name="PrintWindowTileCutMasks" xml:space="preserve">
+    <value>Knipmarkeringen</value>
+  </data>
+  <data name="PrintWindowTileLabels" xml:space="preserve">
+    <value>Labels</value>
+  </data>
+  <data name="PrintWindowTileOverlap" xml:space="preserve">
+    <value>Overlap</value>
+  </data>
+  <data name="PrintWindowTilePageZoom" xml:space="preserve">
+    <value>Blokschaal</value>
+  </data>
+  <data name="RateWindowsContent" xml:space="preserve">
+    <value>Deel uw mening en help ons verbeteren!</value>
+  </data>
+  <data name="RateWindowsContentTitle" xml:space="preserve">
+    <value>Geniet je van PDFgear?</value>
+  </data>
+  <data name="RateWindowsFeedbcakBtn" xml:space="preserve">
+    <value>Geef feedback</value>
+  </data>
+  <data name="RateWindowsRateBtn" xml:space="preserve">
+    <value>Werkt goed</value>
+  </data>
+  <data name="ReadAllBtn" xml:space="preserve">
+    <value>Lees alle pagina's</value>
+  </data>
+  <data name="ReadCurrentBtn" xml:space="preserve">
+    <value>Lees de huidige pagina</value>
+  </data>
+  <data name="ReadFromCurrentBtn" xml:space="preserve">
+    <value>Lezen van huidige pagina</value>
+  </data>
+  <data name="ReadMessage" xml:space="preserve">
+    <value>De spraaktaal wordt omgeschakeld naar "xxx" en het voorlezen wordt hervat vanaf het begin van pagina xxxx. Weet u zeker dat u wilt doorgaan?</value>
+  </data>
+  <data name="ReadPageEmpty" xml:space="preserve">
+    <value>Er is geen leesbare tekst op de huidige pagina (Pagina XXX).</value>
+  </data>
+  <data name="ReadToolBarBtn" xml:space="preserve">
+    <value>Besturingswidget</value>
+  </data>
+  <data name="ReadWinAddMore" xml:space="preserve">
+    <value>Voeg meer spraak taal toe</value>
+  </data>
+  <data name="ReadWinFemaleVoice" xml:space="preserve">
+    <value>Vrouwelijk</value>
+  </data>
+  <data name="ReadWinMaleVoice" xml:space="preserve">
+    <value>Mannelijk</value>
+  </data>
+  <data name="ReadWinOkBtn" xml:space="preserve">
+    <value>Doorgaan</value>
+  </data>
+  <data name="ReadWinPitchBtn" xml:space="preserve">
+    <value>Toonhoogte</value>
+  </data>
+  <data name="ReadWinSpeedBtn" xml:space="preserve">
+    <value>Tarief</value>
+  </data>
+  <data name="ReadWinTitle" xml:space="preserve">
+    <value>Lees hardop</value>
+  </data>
+  <data name="RedactBtn" xml:space="preserve">
+    <value>Redigeren</value>
+  </data>
+  <data name="RedactStartMessageContent" xml:space="preserve">
+    <value>Sleep de muis om het gebied te tekenen dat u wilt redigeren. Alle inhoud die is gemarkeerd voor redactie, wordt permanent verwijderd wanneer het document wordt opgeslagen.</value>
+  </data>
+  <data name="RedactStartMessageTitle" xml:space="preserve">
+    <value>Geredigeerde inhoud wordt permanent verwijderd.</value>
+  </data>
+  <data name="RedactToolbarExitText" xml:space="preserve">
+    <value>Redigeren Beëindigen</value>
+  </data>
+  <data name="RemoveDeferredDigitSignConfirmMessage" xml:space="preserve">
+    <value>Weet u zeker dat u XXX wilt verwijderen?</value>
+  </data>
+  <data name="RemoveDeferredDigitSignFailedMessage" xml:space="preserve">
+    <value>Het verwijderen van het handtekeningveld is mislukt.</value>
+  </data>
+  <data name="RightMenuAddImageItemText" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="RightMenuAddItemText" xml:space="preserve">
+    <value>Toevoegen...</value>
+  </data>
+  <data name="RightMenuAddTextItemText" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="RightMenuBookmakrkExpandCollpaseItemText" xml:space="preserve">
+    <value>Alle bladwijzers uit-/samenvouwen</value>
+  </data>
+  <data name="RightMenuCompressPDFItemText" xml:space="preserve">
+    <value>PDF comprimeren</value>
+  </data>
+  <data name="RightMenuConvertToItemText" xml:space="preserve">
+    <value>Converteren naar</value>
+  </data>
+  <data name="RightMenuDeleteAnnotationItemText" xml:space="preserve">
+    <value>Verwijder opmerking</value>
+  </data>
+  <data name="RightMenuDeleteTextItemText" xml:space="preserve">
+    <value>Verwijder tekst</value>
+  </data>
+  <data name="RightMenuInsertPageItemImage" xml:space="preserve">
+    <value>Uit afbeelding</value>
+  </data>
+  <data name="RightMenuInsertPageItemPDF" xml:space="preserve">
+    <value>Uit PDF</value>
+  </data>
+  <data name="RightMenuInsertPageItemWord" xml:space="preserve">
+    <value>Uit Word</value>
+  </data>
+  <data name="RightMenuInsertPageText" xml:space="preserve">
+    <value>Invoegen van pagina's</value>
+  </data>
+  <data name="RightMenuMergeSplitPDFItemText" xml:space="preserve">
+    <value>PDF Samenvoegen en Splitsen</value>
+  </data>
+  <data name="RightMenuOcrPagesItemText" xml:space="preserve">
+    <value>Pagina’s OCR</value>
+  </data>
+  <data name="RightMenuOcrPagesText" xml:space="preserve">
+    <value>Pagina’s OCR</value>
+  </data>
+  <data name="RightMenuPropertiesContent" xml:space="preserve">
+    <value>Eigenschappen...</value>
+  </data>
+  <data name="SaveDocBeforeCloseMsg" xml:space="preserve">
+    <value>Wilt u wijzigingen in 'XXX' opslaan voordat u afsluit?</value>
+  </data>
+  <data name="SaveDocBeforeCompressMsg" xml:space="preserve">
+    <value>Het geopende document is bewerkt. Sla de wijzigingen op voordat u het bestand comprimeert.</value>
+  </data>
+  <data name="SaveDocBeforeConvertMsg" xml:space="preserve">
+    <value>Het open document is bewerkt, sla de wijzigingen op voor de conversie.</value>
+  </data>
+  <data name="SaveDocBeforeSendMsg" xml:space="preserve">
+    <value>Het geopende document is bewerkt. Sla de wijzigingen op om door te gaan.</value>
+  </data>
+  <data name="SaveDocFailedByMsg" xml:space="preserve">
+    <value>Het document kan niet worden opgeslagen. Het is een alleen-lezenbestand of het is geopend door een andere toepassing.</value>
+  </data>
+  <data name="SaveDocFailedBySaveasMsg" xml:space="preserve">
+    <value>Het document kan niet worden opgeslagen. Het is een alleen-lezenbestand of het is geopend door een andere toepassing. Wilt u een kopie van het document opslaan?</value>
+  </data>
+  <data name="SaveMenuStampSubCustomizeContent" xml:space="preserve">
+    <value>Sla de aangepaste stempel op</value>
+  </data>
+  <data name="ScanErrorMessage" xml:space="preserve">
+    <value>Sorry, er is een onverwachte fout opgetreden. Controleer uw scanner en probeer het opnieuw. Als het probleem blijft, neem dan contact op met onze ondersteuning.</value>
+  </data>
+  <data name="ScannerWinAddFailed" xml:space="preserve">
+    <value>Het is niet gelukt XXX toe te voegen, controleer en probeer het opnieuw.</value>
+  </data>
+  <data name="ScannerWinAddNew" xml:space="preserve">
+    <value>Nieuwe scanner toevoegen</value>
+  </data>
+  <data name="ScannerWinCantFindScanner" xml:space="preserve">
+    <value>Als uw scanner niet wordt weergegeven, zorg ervoor dat deze is toegevoegd in de instellingen en daar niet offline verschijnt.</value>
+  </data>
+  <data name="ScannerWinCheckScannerContent" xml:space="preserve">
+    <value>Controleer of de scanner is ingeschakeld en verbonden met de computer of het netwerk. U kunt nu ook een nieuwe scanner toevoegen.</value>
+  </data>
+  <data name="ScannerWinClosingWarning" xml:space="preserve">
+    <value>De scans in de lijst gaan na het sluiten verloren. Wilt u deze sluiten?</value>
+  </data>
+  <data name="ScannerWinColorMode" xml:space="preserve">
+    <value>Kleurmodi</value>
+  </data>
+  <data name="ScannerWinCreateTitle" xml:space="preserve">
+    <value>PDF maken van scanner</value>
+  </data>
+  <data name="ScannerWinDeletePreview" xml:space="preserve">
+    <value>Weet u zeker dat u dit wilt verwijderen?</value>
+  </data>
+  <data name="ScannerWinDeleteSelected" xml:space="preserve">
+    <value>Weet u zeker dat u de XXX pagina('s) wilt verwijderen?</value>
+  </data>
+  <data name="ScannerWinImportImags" xml:space="preserve">
+    <value>Afbeeldingen importeren</value>
+  </data>
+  <data name="ScannerWinInsertAfter" xml:space="preserve">
+    <value>Na de Pagina</value>
+  </data>
+  <data name="ScannerWinInsertBefore" xml:space="preserve">
+    <value>Voor de Pagina</value>
+  </data>
+  <data name="ScannerWinInsertConfirm" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde XXX pagina('s) wilt invoegen en een nieuwe PDF wilt maken?</value>
+  </data>
+  <data name="ScannerWinInsertOptions" xml:space="preserve">
+    <value>Opties invoegen</value>
+  </data>
+  <data name="ScannerWinInsertTitle" xml:space="preserve">
+    <value>Invoegen vanaf scanner</value>
+  </data>
+  <data name="ScannerWinNewScanner" xml:space="preserve">
+    <value>Nieuwe Scanner</value>
+  </data>
+  <data name="ScannerWinNoScannerContent" xml:space="preserve">
+    <value>Als uw scanner niet wordt weergegeven, zorg er dan voor dat deze is toegevoegd in de instellingen en niet offline is.</value>
+  </data>
+  <data name="ScannerWinNoScannerTitle" xml:space="preserve">
+    <value>Selecteer een scanner</value>
+  </data>
+  <data name="ScannerWinNoScannerwarning" xml:space="preserve">
+    <value>Geen scanner gedetecteerd</value>
+  </data>
+  <data name="ScannerWinPageSettings" xml:space="preserve">
+    <value>PDF Pagina-Instellingen</value>
+  </data>
+  <data name="ScannerWinPaperSource" xml:space="preserve">
+    <value>Papierbron</value>
+  </data>
+  <data name="ScannerWinRecommended" xml:space="preserve">
+    <value>Aanbevolen</value>
+  </data>
+  <data name="ScannerWinRefreshBtn" xml:space="preserve">
+    <value>Vernieuw</value>
+  </data>
+  <data name="ScannerWinResolution" xml:space="preserve">
+    <value>Resolutie</value>
+  </data>
+  <data name="ScannerWinSamePagesize" xml:space="preserve">
+    <value>Zelfde als het originele bestand</value>
+  </data>
+  <data name="ScannerWinScanArea" xml:space="preserve">
+    <value>Scangebied</value>
+  </data>
+  <data name="ScannerWinScanBtn" xml:space="preserve">
+    <value>Scannen</value>
+  </data>
+  <data name="ScannerWinScannedTitle" xml:space="preserve">
+    <value>Gescande afbeeldingen</value>
+  </data>
+  <data name="ScannerWinScanner" xml:space="preserve">
+    <value>Scanner</value>
+  </data>
+  <data name="ScannerWinScannerBusyContent" xml:space="preserve">
+    <value>Er zijn geen documenten in de documentinvoer, of de scanner is bezig. Probeer het later opnieuw.</value>
+  </data>
+  <data name="ScannerWinScannerOfflineContent" xml:space="preserve">
+    <value>Het scanapparaat reageert niet. Controleer of de scanner is ingeschakeld en verbonden met de computer of het netwerk.</value>
+  </data>
+  <data name="ScannerWinScanningProperties" xml:space="preserve">
+    <value>Scan eigenschappen</value>
+  </data>
+  <data name="ScannerWinSearchingContent" xml:space="preserve">
+    <value>Zoeken naar scanners...</value>
+  </data>
+  <data name="ScanningAreaEntire1" xml:space="preserve">
+    <value>Gehele Scangebied</value>
+  </data>
+  <data name="ScanningAreaEntire10" xml:space="preserve">
+    <value>4 x 6 inch (10 x 15 cm)</value>
+  </data>
+  <data name="ScanningAreaEntire2" xml:space="preserve">
+    <value>Letter (8,5 x 11 inch)</value>
+  </data>
+  <data name="ScanningAreaEntire3" xml:space="preserve">
+    <value>Legal (8,5 x 14 inch)</value>
+  </data>
+  <data name="ScanningAreaEntire4" xml:space="preserve">
+    <value>B5 (176 x 250 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire5" xml:space="preserve">
+    <value>B4 (250 x 353 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire6" xml:space="preserve">
+    <value>A5 (148 x 210 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire7" xml:space="preserve">
+    <value>A4 (210 x 297 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire8" xml:space="preserve">
+    <value>A3 (297 x 420 mm)</value>
+  </data>
+  <data name="ScanningAreaEntire9" xml:space="preserve">
+    <value>5 x 7 inch (13 x 18 cm)</value>
+  </data>
+  <data name="ScanningColorColorMode" xml:space="preserve">
+    <value>Kleur</value>
+  </data>
+  <data name="ScanningColorGrayMode" xml:space="preserve">
+    <value>Grijswaarden</value>
+  </data>
+  <data name="ScanningPaperSourceDuplex" xml:space="preserve">
+    <value>Dubbelzijdig</value>
+  </data>
+  <data name="ScanningPaperSourceFeeder" xml:space="preserve">
+    <value>Automatische documentinvoer</value>
+  </data>
+  <data name="ScanningPaperSourceGlass" xml:space="preserve">
+    <value>Glasplaat</value>
+  </data>
+  <data name="ScanningWarning" xml:space="preserve">
+    <value>Scannen, probeer het opnieuw wanneer klaar</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Arrow" xml:space="preserve">
+    <value>Pijl</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Circle" xml:space="preserve">
+    <value>Ellips</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Copy" xml:space="preserve">
+    <value>Kopiëren</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Finish" xml:space="preserve">
+    <value>Gedaan</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Ink" xml:space="preserve">
+    <value>Inkt</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Rectangle" xml:space="preserve">
+    <value>Rechthoek</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Save" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Text" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="ScreenshotImageToolbar_Undo" xml:space="preserve">
+    <value>Ongedaan maken</value>
+  </data>
+  <data name="ScreenshotTip" xml:space="preserve">
+    <value>Sleep de muis om het gebied te selecteren dat u wilt vastleggen. Zodra u klaar bent, wordt u automatisch naar de volgende stap geleid.</value>
+  </data>
+  <data name="SelectPageAllEvenPagesItem" xml:space="preserve">
+    <value>Alleen even pagina's</value>
+  </data>
+  <data name="SelectPageAllOddPagesItem" xml:space="preserve">
+    <value>Alleen oneven pagina's</value>
+  </data>
+  <data name="SelectPageAllPagesItem" xml:space="preserve">
+    <value>Alle pagina's</value>
+  </data>
+  <data name="SelectPageUnselectAllItem" xml:space="preserve">
+    <value>Selecties wissen</value>
+  </data>
+  <data name="SettingWindowTabGeneral" xml:space="preserve">
+    <value>Algemeen</value>
+  </data>
+  <data name="SettingWindowTabShortcut" xml:space="preserve">
+    <value>Sneltoetsen</value>
+  </data>
+  <data name="SettingWindowTextShortcutAction" xml:space="preserve">
+    <value>Actie</value>
+  </data>
+  <data name="SettingWindowTextShortcutKeys" xml:space="preserve">
+    <value>Sneltoets</value>
+  </data>
+  <data name="SettingWindowTitleShortcuts" xml:space="preserve">
+    <value>Lijst van sneltoetsen</value>
+  </data>
+  <data name="SettingsDisplayAIButton" xml:space="preserve">
+    <value>Geef de AI-knop weer.</value>
+  </data>
+  <data name="SettingsHighlightFormFields" xml:space="preserve">
+    <value>Markeer formuliervelden.</value>
+  </data>
+  <data name="ShortcutTextAddBookmark" xml:space="preserve">
+    <value>Voeg bladwijzer toe</value>
+  </data>
+  <data name="ShortcutTextAnnotateEllipse" xml:space="preserve">
+    <value>Ovaal</value>
+  </data>
+  <data name="ShortcutTextAnnotateInk" xml:space="preserve">
+    <value>Inkt</value>
+  </data>
+  <data name="ShortcutTextAnnotateLine" xml:space="preserve">
+    <value>Lijn</value>
+  </data>
+  <data name="ShortcutTextAnnotateManage" xml:space="preserve">
+    <value>Opmerkingen beheren</value>
+  </data>
+  <data name="ShortcutTextAnnotateNote" xml:space="preserve">
+    <value>Notitie</value>
+  </data>
+  <data name="ShortcutTextAnnotateShape" xml:space="preserve">
+    <value>Rechthoek</value>
+  </data>
+  <data name="ShortcutTextAnnotateTextBox" xml:space="preserve">
+    <value>Tekstvak</value>
+  </data>
+  <data name="ShortcutTextAnnotateTypeWriter" xml:space="preserve">
+    <value>Typemachine</value>
+  </data>
+  <data name="ShortcutTextAreaHighlight" xml:space="preserve">
+    <value>Gebied Markeren</value>
+  </data>
+  <data name="ShortcutTextAutoScroll" xml:space="preserve">
+    <value>Automatisch Scroll</value>
+  </data>
+  <data name="ShortcutTextCloseDocument" xml:space="preserve">
+    <value>Bestand sluiten</value>
+  </data>
+  <data name="ShortcutTextContinusRead" xml:space="preserve">
+    <value>Continue weergave</value>
+  </data>
+  <data name="ShortcutTextCreateNewPDF" xml:space="preserve">
+    <value>Nieuwe PDF</value>
+  </data>
+  <data name="ShortcutTextCropPage" xml:space="preserve">
+    <value>Pagina's bijsnijden</value>
+  </data>
+  <data name="ShortcutTextDocumentProperties" xml:space="preserve">
+    <value>Documenteigenschappen</value>
+  </data>
+  <data name="ShortcutTextDoublePage" xml:space="preserve">
+    <value>Weergave van twee pagina's</value>
+  </data>
+  <data name="ShortcutTextFind" xml:space="preserve">
+    <value>Zoek</value>
+  </data>
+  <data name="ShortcutTextFitHeight" xml:space="preserve">
+    <value>Past de hoogte</value>
+  </data>
+  <data name="ShortcutTextFitPage" xml:space="preserve">
+    <value>Fit Pagina</value>
+  </data>
+  <data name="ShortcutTextFitWidth" xml:space="preserve">
+    <value>Breedte passen</value>
+  </data>
+  <data name="ShortcutTextFullScreen" xml:space="preserve">
+    <value>Volledig scherm inschakelen/verlaten</value>
+  </data>
+  <data name="ShortcutTextFullSize" xml:space="preserve">
+    <value>Werkelijke grootte</value>
+  </data>
+  <data name="ShortcutTextHighlight" xml:space="preserve">
+    <value>Markeren</value>
+  </data>
+  <data name="ShortcutTextHighlightForm" xml:space="preserve">
+    <value>Formuliervelden markeren</value>
+  </data>
+  <data name="ShortcutTextInsertImage" xml:space="preserve">
+    <value>Afbeelding toevoegen</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubBlankPage" xml:space="preserve">
+    <value>Lege pagina Invoegen</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromImage" xml:space="preserve">
+    <value>Invoegen uit afbeelding</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromPDF" xml:space="preserve">
+    <value>Invoegen uit PDF</value>
+  </data>
+  <data name="ShortcutTextInsertPageSubFromWord" xml:space="preserve">
+    <value>Invoegen uit Word</value>
+  </data>
+  <data name="ShortcutTextNextView" xml:space="preserve">
+    <value>Volgende weergave</value>
+  </data>
+  <data name="ShortcutTextOcrPages" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="ShortcutTextOpenDocument" xml:space="preserve">
+    <value>Bestand openen</value>
+  </data>
+  <data name="ShortcutTextPageDelete" xml:space="preserve">
+    <value>Verwijderen van pagina's</value>
+  </data>
+  <data name="ShortcutTextPageExtract" xml:space="preserve">
+    <value>Uitpakken van pagina's</value>
+  </data>
+  <data name="ShortcutTextPresent" xml:space="preserve">
+    <value>Speel</value>
+  </data>
+  <data name="ShortcutTextPreviousView" xml:space="preserve">
+    <value>Vorige weergave</value>
+  </data>
+  <data name="ShortcutTextPrint" xml:space="preserve">
+    <value>Afdrukken</value>
+  </data>
+  <data name="ShortcutTextRedo" xml:space="preserve">
+    <value>Opnieuw doen</value>
+  </data>
+  <data name="ShortcutTextRotateLeft" xml:space="preserve">
+    <value>Links roteren</value>
+  </data>
+  <data name="ShortcutTextRotateRight" xml:space="preserve">
+    <value>Rechts roteren</value>
+  </data>
+  <data name="ShortcutTextSaveAsDocument" xml:space="preserve">
+    <value>Opslaan als</value>
+  </data>
+  <data name="ShortcutTextSaveDocument" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="ShortcutTextScreenshot" xml:space="preserve">
+    <value>Screenshot</value>
+  </data>
+  <data name="ShortcutTextShowHideComments" xml:space="preserve">
+    <value>Opmerkingen tonen/verbergen</value>
+  </data>
+  <data name="ShortcutTextSinglePage" xml:space="preserve">
+    <value>Weergave van één pagina</value>
+  </data>
+  <data name="ShortcutTextStrike" xml:space="preserve">
+    <value>Doorstrepen</value>
+  </data>
+  <data name="ShortcutTextUnderline" xml:space="preserve">
+    <value>Onderstreep</value>
+  </data>
+  <data name="ShortcutTextUndo" xml:space="preserve">
+    <value>Ongedaan maken</value>
+  </data>
+  <data name="ShortcutTextZoomIn" xml:space="preserve">
+    <value>Inzoomen</value>
+  </data>
+  <data name="ShortcutTextZoomOut" xml:space="preserve">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="ShortcutTip" xml:space="preserve">
+    <value>Een snelkoppeling op het bureaublad maken voor eenvoudige toegang tot PDFgear?</value>
+  </data>
+  <data name="SigDialogDigSignBtn" xml:space="preserve">
+    <value>Digitale handtekening</value>
+  </data>
+  <data name="SigDialogDigSignBtn2" xml:space="preserve">
+    <value>Versleutelen met certificaat</value>
+  </data>
+  <data name="SignPropDialogMessage_SaveCert" xml:space="preserve">
+    <value>Weet u zeker dat u dit certificaat aan uw vertrouwde certificaten wilt toevoegen?</value>
+  </data>
+  <data name="StampFlattenConfirmContent" xml:space="preserve">
+    <value>Eenmaal afgevlakt, kan de stempel niet meer worden bewerkt en deze handeling kan niet ongedaan worden gemaakt. Als u dit per ongeluk deed, sluit dan het document zonder op te slaan.</value>
+  </data>
+  <data name="StampFlattenConfirmTitle" xml:space="preserve">
+    <value>Weet u zeker dat u het stempel/de stempels wilt afvlakken?</value>
+  </data>
+  <data name="StampLimitErrorMessage" xml:space="preserve">
+    <value>U kunt geen categorieën meer toevoegen, omdat het limiet is bereikt.</value>
+  </data>
+  <data name="StampManageDeleteCategoryMessage" xml:space="preserve">
+    <value>Weet u zeker dat u deze categorie wilt verwijderen? Alle stempels in deze categorie worden ook verwijderd.</value>
+  </data>
+  <data name="StampManageDeleteMessage" xml:space="preserve">
+    <value>Weet u zeker dat u deze stempel wilt verwijderen?</value>
+  </data>
+  <data name="StampManageDeleteSelectedMessage" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde stempels wilt verwijderen?</value>
+  </data>
+  <data name="StampProgressContent" xml:space="preserve">
+    <value>Stempel toepassen...</value>
+  </data>
+  <data name="StampProgressFlattenContent" xml:space="preserve">
+    <value>Afvlakkende stempels...</value>
+  </data>
+  <data name="StampRightMenuDeleteAllStamp" xml:space="preserve">
+    <value>Weet u zeker dat u deze stempel op alle pagina’s wilt verwijderen?</value>
+  </data>
+  <data name="SubscribeWindowContent" xml:space="preserve">
+    <value>Beoordeel ons om uw vreugde te delen en volg ons voor exclusieve tutorials.</value>
+  </data>
+  <data name="SubscribeWindowContentTtile" xml:space="preserve">
+    <value>Volg ons en beoordeel PDFgear</value>
+  </data>
+  <data name="SubscribeWindowDesc" xml:space="preserve">
+    <value>Krijg toegang tot exclusieve tutorials en vaardigheden en help ons onze community te laten groeien.</value>
+  </data>
+  <data name="SubscribeWindowFollowButtonText" xml:space="preserve">
+    <value>VOLGEN</value>
+  </data>
+  <data name="SubscribeWindowHeader" xml:space="preserve">
+    <value>Steun ons door ons te volgen</value>
+  </data>
+  <data name="SubscribeWindowSubscribeButtonText" xml:space="preserve">
+    <value>ABONNEREN</value>
+  </data>
+  <data name="SubscribeWindowTrustPilotBtn" xml:space="preserve">
+    <value>Beoordeel ons op Trustpilot</value>
+  </data>
+  <data name="SurveyWinBtnCancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="SurveyWinBtnGo" xml:space="preserve">
+    <value>Ga</value>
+  </data>
+  <data name="SurveyWinText" xml:space="preserve">
+    <value>Steun ons door PDFgear met één klik te delen.</value>
+  </data>
+  <data name="SurveyWinTitle" xml:space="preserve">
+    <value>Hou je van PDFgear? </value>
+  </data>
+  <data name="SurveyWinTitle1" xml:space="preserve">
+    <value>Deel het met vrienden!</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnByOkMsg" xml:space="preserve">
+    <value>U bent teruggegaan naar de vorige versie. Start PDFgear opnieuw op om deze wijziging toe te passen.</value>
+  </data>
+  <data name="SwitchtoPreviousVersionBtnMsg" xml:space="preserve">
+    <value>Weet u zeker dat u de PDFgear naar de vorige versie wilt terugzetten?</value>
+  </data>
+  <data name="TextBoxDefaultInputTextContent" xml:space="preserve">
+    <value>Hier tekst invoegen</value>
+  </data>
+  <data name="ToolAppThemeAutoMode" xml:space="preserve">
+    <value>Systeemthema</value>
+  </data>
+  <data name="ToolAppThemeDarkMode" xml:space="preserve">
+    <value>Donker</value>
+  </data>
+  <data name="ToolAppThemeLightMode" xml:space="preserve">
+    <value>Licht</value>
+  </data>
+  <data name="ToolAppThemeTitle" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+  <data name="ToolbarExitEditButtonContent" xml:space="preserve">
+    <value>Bewerken afsluiten</value>
+  </data>
+  <data name="ToolbarOpacityPickerTooltip" xml:space="preserve">
+    <value>Opaciteit</value>
+  </data>
+  <data name="ToolbarSetDefaultButtonContent" xml:space="preserve">
+    <value>Instellen als standaard</value>
+  </data>
+  <data name="TooltipDesc_AI" xml:space="preserve">
+    <value>PDFgear Copilot inschakelen om met PDF’s te chatten.</value>
+  </data>
+  <data name="TooltipDesc_AddSignature" xml:space="preserve">
+    <value>Voeg een handtekeningveld toe aan de PDF voor digitale ondertekening.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateEllipse" xml:space="preserve">
+    <value>Teken een ovaal.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHidden" xml:space="preserve">
+    <value>Verberg alle opmerkingen in de PDF.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateHighlight" xml:space="preserve">
+    <value>Gemarkeerde tekst markeren.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateInk" xml:space="preserve">
+    <value>Teken vrijhandig.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateLine" xml:space="preserve">
+    <value>Teken een lijn.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateManage" xml:space="preserve">
+    <value>Open het opmerkingenpaneel om opmerkingen door te bladeren, te filteren en te verwijderen.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateNote" xml:space="preserve">
+    <value>Voeg een plakkerige notitie toe.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShape" xml:space="preserve">
+    <value>Teken een rechthoek.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateShow" xml:space="preserve">
+    <value>Toon alle opmerkingen in de PDF.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateSignature" xml:space="preserve">
+    <value>Voeg een handtekening toe door te tekenen, typen of afbeeldingen te uploaden.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStamp" xml:space="preserve">
+    <value>Voeg stempels toe, maak ze aan en beheer ze. Ondersteunt aangepaste stempels.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateStrike" xml:space="preserve">
+    <value>Doorstreep de geselecteerde tekst.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTextBox" xml:space="preserve">
+    <value>Voeg een tekstcommentaar met een rand toe.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateTypeWriter" xml:space="preserve">
+    <value>Voeg een tekstcommentaar zonder rand toe.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateUnderline" xml:space="preserve">
+    <value>Onderstreep de geselecteerde tekst.</value>
+  </data>
+  <data name="TooltipDesc_AnnotateWatermark" xml:space="preserve">
+    <value>Voeg watermerken toe of bewerk ze.</value>
+  </data>
+  <data name="TooltipDesc_AutoScroll" xml:space="preserve">
+    <value>Scroll het PDF-bestand automatisch. Druk op Esc om het scrollen te beëindigen.</value>
+  </data>
+  <data name="TooltipDesc_BatchPrint" xml:space="preserve">
+    <value>Druk meerdere PDF-bestanden tegelijk af.</value>
+  </data>
+  <data name="TooltipDesc_Certificate" xml:space="preserve">
+    <value>Beheer digitale ID's en vertrouwde certificaten voor codering en ondertekening.</value>
+  </data>
+  <data name="TooltipDesc_Compress" xml:space="preserve">
+    <value>Verklein de PDF-bestandsgrootte.</value>
+  </data>
+  <data name="TooltipDesc_Convert" xml:space="preserve">
+    <value>Converteer PDF's naar andere formaten of maak PDF's van andere formaten.</value>
+  </data>
+  <data name="TooltipDesc_CreateNewPDF" xml:space="preserve">
+    <value>Maak een nieuw PDF-bestand.</value>
+  </data>
+  <data name="TooltipDesc_CropPage" xml:space="preserve">
+    <value>Bijsnijd de paginaranden.</value>
+  </data>
+  <data name="TooltipDesc_DocumentProperties" xml:space="preserve">
+    <value>Bekijken en bewerken van de documenteigenschappen van de PDF.</value>
+  </data>
+  <data name="TooltipDesc_EditObject" xml:space="preserve">
+    <value>Deel de tekst in blokken voor beweging en bewerking.</value>
+  </data>
+  <data name="TooltipDesc_EditText" xml:space="preserve">
+    <value>Bewerken van tekst in de PDF.</value>
+  </data>
+  <data name="TooltipDesc_Encrypt" xml:space="preserve">
+    <value>Versleutel de PDF met een digitaal certificaat om de inhoud te beveiligen.</value>
+  </data>
+  <data name="TooltipDesc_Find" xml:space="preserve">
+    <value>Zoek naar tekst in de PDF.</value>
+  </data>
+  <data name="TooltipDesc_Flatten" xml:space="preserve">
+    <value>Voeg alle aantekeningen samen met de inhoudslaag om ze niet-bewerkbaar en niet-selecteerbaar te maken.</value>
+  </data>
+  <data name="TooltipDesc_Highlight" xml:space="preserve">
+    <value>Markeer een rechthoekig gebied.</value>
+  </data>
+  <data name="TooltipDesc_HighlightForm" xml:space="preserve">
+    <value>Markeer interactieve formuliervelden in de PDF.</value>
+  </data>
+  <data name="TooltipDesc_InsertHeaderFooter" xml:space="preserve">
+    <value>Voeg kop- en voetteksten toe of bewerk ze.</value>
+  </data>
+  <data name="TooltipDesc_InsertImage" xml:space="preserve">
+    <value>Voeg een afbeelding toe.</value>
+  </data>
+  <data name="TooltipDesc_InsertPageNumber" xml:space="preserve">
+    <value>Voeg paginanummers toe of bewerk ze.</value>
+  </data>
+  <data name="TooltipDesc_Link" xml:space="preserve">
+    <value>Voeg koppelingen toe of bewerk ze.</value>
+  </data>
+  <data name="TooltipDesc_OCR" xml:space="preserve">
+    <value>Voer OCR uit op pagina's die alleen afbeeldingen bevatten om ze doorzoekbaar te maken.</value>
+  </data>
+  <data name="TooltipDesc_Open" xml:space="preserve">
+    <value>Open een PDF-bestand.</value>
+  </data>
+  <data name="TooltipDesc_PageDelete" xml:space="preserve">
+    <value>Verwijder opgegeven pagina's.</value>
+  </data>
+  <data name="TooltipDesc_PageExtract" xml:space="preserve">
+    <value>Specifieke pagina's uitpakken om een nieuwe PDF te maken.</value>
+  </data>
+  <data name="TooltipDesc_PageInsert" xml:space="preserve">
+    <value>Voeg lege pagina's, gescande pagina's, afbeeldingen, Word-documenten of een ander PDF-bestand in de huidige PDF in.</value>
+  </data>
+  <data name="TooltipDesc_PageMerge" xml:space="preserve">
+    <value>Combineer PDF-bestanden tot één PDF.</value>
+  </data>
+  <data name="TooltipDesc_PageRotateLeft" xml:space="preserve">
+    <value>Roteer de paginaweergave naar links (tegen de klok in).</value>
+  </data>
+  <data name="TooltipDesc_PageRotateRight" xml:space="preserve">
+    <value>Roteer de paginaweergave naar rechts (met de klok mee).</value>
+  </data>
+  <data name="TooltipDesc_PageSplit" xml:space="preserve">
+    <value>Split een PDF in meerdere bestanden.</value>
+  </data>
+  <data name="TooltipDesc_Present" xml:space="preserve">
+    <value>Toon de PDF als diavoorstelling.</value>
+  </data>
+  <data name="TooltipDesc_Print" xml:space="preserve">
+    <value>Print het PDF-bestand.</value>
+  </data>
+  <data name="TooltipDesc_ProtectPassword" xml:space="preserve">
+    <value>Bescherm de PDF met een wachtwoord.</value>
+  </data>
+  <data name="TooltipDesc_ProtectRemove" xml:space="preserve">
+    <value>Verwijder het wachtwoord uit de PDF.</value>
+  </data>
+  <data name="TooltipDesc_Read" xml:space="preserve">
+    <value>Lees de PDF hardop.</value>
+  </data>
+  <data name="TooltipDesc_Redact" xml:space="preserve">
+    <value>Markeer gevoelige informatie om deze permanent te verwijderen.</value>
+  </data>
+  <data name="TooltipDesc_Redo" xml:space="preserve">
+    <value>Herhaal de eerder ongedane actie.</value>
+  </data>
+  <data name="TooltipDesc_Save" xml:space="preserve">
+    <value>Sla het PDF-bestand op.</value>
+  </data>
+  <data name="TooltipDesc_SaveAs" xml:space="preserve">
+    <value>Maak een kopie van het PDF-bestand.</value>
+  </data>
+  <data name="TooltipDesc_Screenshot" xml:space="preserve">
+    <value>Selecteer een gebied om een screenshot van de PDF vast te leggen.</value>
+  </data>
+  <data name="TooltipDesc_Translate" xml:space="preserve">
+    <value>Vertaal geselecteerde of geplakte tekst naar een opgegeven taal.</value>
+  </data>
+  <data name="TooltipDesc_Undo" xml:space="preserve">
+    <value>Maak de laatste actie ongedaan.</value>
+  </data>
+  <data name="TooltipDesc_Update" xml:space="preserve">
+    <value>Controleren op updates voor PDFgear.</value>
+  </data>
+  <data name="TranslatePanelAuto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="TranslatePanelAutoDetect" xml:space="preserve">
+    <value>Automatisch Detecteren</value>
+  </data>
+  <data name="TranslatePanelAutoTranslateBtn" xml:space="preserve">
+    <value>Automatisch Geselecteerde Tekst Vertalen</value>
+  </data>
+  <data name="TranslatePanelInputPlaceHolder" xml:space="preserve">
+    <value>Voer Tekst Hier in of Plak Deze Hier</value>
+  </data>
+  <data name="TranslatePanelOutputPlaceHolder" xml:space="preserve">
+    <value>Vertaling</value>
+  </data>
+  <data name="UnknownAttachmentModifyDateText" xml:space="preserve">
+    <value>Onbekend</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Name" xml:space="preserve">
+    <value>Naam:</value>
+  </data>
+  <data name="UnsignedDigSignPropLabel_Tip" xml:space="preserve">
+    <value>Tip:</value>
+  </data>
+  <data name="UnsignedDigSignPropMessage_DuplicatedFieldName" xml:space="preserve">
+    <value>Dubbele veldnamen zijn niet toegestaan.</value>
+  </data>
+  <data name="UnsupportedImageMsg" xml:space="preserve">
+    <value>Kan het afbeeldingsbestand niet laden omdat het beschadigd is of een niet-ondersteunde indeling heeft.  Kies een ander afbeeldingsbestand en probeer het opnieuw.</value>
+  </data>
+  <data name="ViewToolbarSaveFailed" xml:space="preserve">
+    <value>Kan het document niet opslaan.  Probeer het opnieuw.</value>
+  </data>
+  <data name="ViewToolbarSave_DigSigMaskSaveAs" xml:space="preserve">
+    <value>Het document bevat een handtekening, dus het moet opgeslagen worden als een kopie.</value>
+  </data>
+  <data name="ViewToorbarFileChanged" xml:space="preserve">
+    <value>Het document is bewerkt.  Wil je het opslaan?</value>
+  </data>
+  <data name="ViewerContainerEditBanner" xml:space="preserve">
+    <value>U bevindt zich in de tekstbewerkingsmodus.</value>
+  </data>
+  <data name="WIA_ERROR_BUSY" xml:space="preserve">
+    <value>Het apparaat is bezet. Sluit alle apps die dit apparaat gebruiken of wacht tot het klaar is en probeer het vervolgens opnieuw.</value>
+  </data>
+  <data name="WIA_ERROR_COVER_OPEN" xml:space="preserve">
+    <value>Een of meer deksels van het apparaat zijn open.</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_COMMUNICATION" xml:space="preserve">
+    <value>Communicatie met het WIA-apparaat is mislukt. Zorg ervoor dat het apparaat is ingeschakeld en op de pc is aangesloten. Als het probleem zich blijft voordoen, koppelt u het apparaat los en sluit u het opnieuw aan.</value>
+  </data>
+  <data name="WIA_ERROR_DEVICE_LOCKED" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="WIA_ERROR_EXCEPTION_IN_DRIVER" xml:space="preserve">
+    <value>Het apparaatstuurprogramma heeft een uitzondering gegenereerd.</value>
+  </data>
+  <data name="WIA_ERROR_GENERAL_ERROR" xml:space="preserve">
+    <value>Er is een onbekende fout opgetreden met het WIA-apparaat.</value>
+  </data>
+  <data name="WIA_ERROR_INCORRECT_HARDWARE_SETTING" xml:space="preserve">
+    <value>Er is een onjuiste instelling op het WIA-apparaat.</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_COMMAND" xml:space="preserve">
+    <value>Het apparaat ondersteunt deze opdracht niet.</value>
+  </data>
+  <data name="WIA_ERROR_INVALID_DRIVER_RESPONSE" xml:space="preserve">
+    <value>Het antwoord van de bestuurder is ongeldig.</value>
+  </data>
+  <data name="WIA_ERROR_ITEM_DELETED" xml:space="preserve">
+    <value>Het WIA-apparaat is verwijderd. Het is niet langer beschikbaar.</value>
+  </data>
+  <data name="WIA_ERROR_LAMP_OFF" xml:space="preserve">
+    <value>De lamp van de scanner is uit.</value>
+  </data>
+  <data name="WIA_ERROR_MAXIMUM_PRINTER_ENDORSER_COUNTER" xml:space="preserve">
+    <value>Een scantaak is onderbroken omdat een Imprinter/Endorser-item de maximaal geldige waarde voor WIA_IPS_PRINTER_ENDORSER_COUNTER heeft bereikt en is teruggezet op 0. Deze functie is beschikbaar in Windows 8 en latere versies van Windows.</value>
+  </data>
+  <data name="WIA_ERROR_MULTI_FEED" xml:space="preserve">
+    <value>Er is een scanningsfout opgetreden als gevolg van een meervoudige pagina-invoerconditie. Deze functie is beschikbaar in Windows 8 en latere versies van Windows.</value>
+  </data>
+  <data name="WIA_ERROR_OFFLINE" xml:space="preserve">
+    <value>Het apparaat is offline. Zorg ervoor dat het apparaat is ingeschakeld en op de pc is aangesloten.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_EMPTY" xml:space="preserve">
+    <value>Er zijn geen documenten in de documentinvoer of de scanner is bezet. Probeer het later opnieuw.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_JAM" xml:space="preserve">
+    <value>Er is papier vastgelopen in de documentinvoer van de scanner.</value>
+  </data>
+  <data name="WIA_ERROR_PAPER_PROBLEM" xml:space="preserve">
+    <value>Er is een onbekend probleem opgetreden met de documentinvoer van de scanner.</value>
+  </data>
+  <data name="WIA_ERROR_USER_INTERVENTION" xml:space="preserve">
+    <value>Er is een probleem met het WIA-apparaat. Zorg ervoor dat het apparaat is ingeschakeld, online is en dat alle kabels goed zijn aangesloten.</value>
+  </data>
+  <data name="WIA_ERROR_WARMING_UP" xml:space="preserve">
+    <value>Het apparaat is aan het opwarmen.</value>
+  </data>
+  <data name="WIA_S_NO_DEVICE_AVAILABLE" xml:space="preserve">
+    <value>Er is geen scannerapparaat gevonden. Zorg ervoor dat het apparaat online is, aangesloten is op de pc en dat het juiste stuurprogramma op de pc is geïnstalleerd.</value>
+  </data>
+  <data name="WinBtnAllPagesContent" xml:space="preserve">
+    <value>Alle pagina's</value>
+  </data>
+  <data name="WinBtnBackContent" xml:space="preserve">
+    <value>Terug</value>
+  </data>
+  <data name="WinBtnCancelContent" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="WinBtnCloseContent" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="WinBtnNextContent" xml:space="preserve">
+    <value>Volgende</value>
+  </data>
+  <data name="WinBtnOkContent" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="WinBtnSaveContent" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="WinBtnSelectedPagesContent" xml:space="preserve">
+    <value>Geselecteerde pagina's</value>
+  </data>
+  <data name="WinCbxAutoItemContent" xml:space="preserve">
+    <value>Automatisch</value>
+  </data>
+  <data name="WinCbxChildAllPagesContent" xml:space="preserve">
+    <value>Alle pagina's binnen het bereik</value>
+  </data>
+  <data name="WinCbxChildEvenPagesContent" xml:space="preserve">
+    <value>Alleen even pagina's</value>
+  </data>
+  <data name="WinCbxChildOddPagesContent" xml:space="preserve">
+    <value>Alleen oneven pagina's</value>
+  </data>
+  <data name="WinConvertToolBtnExcelToPDFText" xml:space="preserve">
+    <value>Excel naar PDF</value>
+  </data>
+  <data name="WinConvertToolBtnImageToPDFText" xml:space="preserve">
+    <value>Afbeelding naar PDF</value>
+  </data>
+  <data name="WinConvertToolBtnPPTToPDFText" xml:space="preserve">
+    <value>PPT naar PDF</value>
+  </data>
+  <data name="WinConvertToolBtnRTFToPDFText" xml:space="preserve">
+    <value>RTF naar PDF</value>
+  </data>
+  <data name="WinConvertToolBtnTXTToPDFText" xml:space="preserve">
+    <value>TXT naar PDF</value>
+  </data>
+  <data name="WinConvertToolBtnWordToPDF" xml:space="preserve">
+    <value>Word naar PDF</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackground" xml:space="preserve">
+    <value>Achtergrond verwijderen</value>
+  </data>
+  <data name="WinCreateSignatureRemoveBackgroundToolTip" xml:space="preserve">
+    <value>Verwijder alle witte pixels in de afbeelding.</value>
+  </data>
+  <data name="WinCustomizeStampEditTiltle" xml:space="preserve">
+    <value>Stempel bewerken</value>
+  </data>
+  <data name="WinCustomizeStampMaxCharactersMsg" xml:space="preserve">
+    <value>De tekst mag niet langer zijn dan 50 tekens!</value>
+  </data>
+  <data name="WinCustomizeStampNewTiltle" xml:space="preserve">
+    <value>Stempel creëren</value>
+  </data>
+  <data name="WinCustomizeStampPlaceHolderContent" xml:space="preserve">
+    <value>Hier invoeren…</value>
+  </data>
+  <data name="WinEditTextInputLocationTip" xml:space="preserve">
+    <value>Tekst bewerken:</value>
+  </data>
+  <data name="WinEditorTipBtnEditAnyway" xml:space="preserve">
+    <value>Toch Bewerken</value>
+  </data>
+  <data name="WinEditorTipBtnUseConverter" xml:space="preserve">
+    <value>Gebruik Converter</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce1" xml:space="preserve">
+    <value>•  Converteer pdf's naar verschillende bestandsformaten.</value>
+  </data>
+  <data name="WinEditorTipConvertIntroduce2" xml:space="preserve">
+    <value>•  De lay-out wordt afgestemd met OCR.</value>
+  </data>
+  <data name="WinEditorTipRecommendLeft" xml:space="preserve">
+    <value>Het is aanbevolen om in plaats daarvan de</value>
+  </data>
+  <data name="WinEditorTipRecommendMiddle" xml:space="preserve">
+    <value>PDF naar Word</value>
+  </data>
+  <data name="WinEditorTipRecommendRight" xml:space="preserve">
+    <value>-converter te gebruiken.</value>
+  </data>
+  <data name="WinExtractTextBtnCopyContent" xml:space="preserve">
+    <value>Tekst naar klembord kopiëren</value>
+  </data>
+  <data name="WinExtractTextLabelCopiedContent" xml:space="preserve">
+    <value>Gekopieerd</value>
+  </data>
+  <data name="WinExtractTextLabelExtractedContent" xml:space="preserve">
+    <value>Uitgepakt</value>
+  </data>
+  <data name="WinExtractTextLabelScreenshotContent" xml:space="preserve">
+    <value>Screenshot</value>
+  </data>
+  <data name="WinExtractTextTitle" xml:space="preserve">
+    <value>Tekst uitpakken</value>
+  </data>
+  <data name="WinFeedBackBtnSendContent" xml:space="preserve">
+    <value>Versturen</value>
+  </data>
+  <data name="WinFeedBackEmailAddrPlaceHoderContent" xml:space="preserve">
+    <value>Emailadres (Optioneel)</value>
+  </data>
+  <data name="WinFeedBackEmailContentPlaceHoderContent" xml:space="preserve">
+    <value>Vertel ons het probleem dat u tegenkwam en de stappen om het te reproduceren. Dank u.</value>
+  </data>
+  <data name="WinFeedBackErrorInvalidEmailCapMsg" xml:space="preserve">
+    <value>Ongeldige e-mailopmaak</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc1" xml:space="preserve">
+    <value>De regio-instelling van uw Microsoft Store is</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc2" xml:space="preserve">
+    <value>, wat niet overeenkomt met uw huidige locatie.  Dit kan leiden tot het mislukken van de aankoop.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc3" xml:space="preserve">
+    <value>Klik hier</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer1RegionDesc4" xml:space="preserve">
+    <value>om uw regio-instelling van Microsoft Store te wijzigen.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc1" xml:space="preserve">
+    <value>De betaling wordt verwerkt door Microsoft.  Ga naar</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer2Desc2" xml:space="preserve">
+    <value>help voor een oplossing.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3" xml:space="preserve">
+    <value>Installeer PDFgear opnieuw en koop het met hetzelfde Microsoft-account in de Microsoft Store voor dezelfde prijs.  Dit is om de aankoop te herstellen en er worden geen kosten meer in rekening gebracht.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc1" xml:space="preserve">
+    <value>Als je al eerder voor PDFgear hebt betaald, log dan eerst in met hetzelfde Microsoft-account in de Microsoft Store en klik dan</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc2" xml:space="preserve">
+    <value>hier</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer3RestoreDesc3" xml:space="preserve">
+    <value>om de aankoop te herstellen.  Als het herstellen is mislukt, neem dan contact op met de ondersteuning voor hulp.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer4" xml:space="preserve">
+    <value>Klik op de knop Upgraden op het tabblad Help en klik hieronder op de knop 'Aankoop herstellen'.  Dan zal PDFgear de aankoop binnen enkele seconden met succes herstellen.</value>
+  </data>
+  <data name="WinFeedBackFAQAnswer5" xml:space="preserve">
+    <value>Vink het volgende selectievakje aan en schakel hardwareversnelling uit.  Probeer het dan opnieuw.</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion1" xml:space="preserve">
+    <value>Heeft u problemen bij het wijzigen van de regio-instelling van de Microsoft Store?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion2" xml:space="preserve">
+    <value>Nog steeds problemen met de aankoop?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion3" xml:space="preserve">
+    <value>Waarom wordt er nog steeds gevraagd om te upgraden nadat ik voor PDFgear heb betaald?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion4" xml:space="preserve">
+    <value>Waarom wordt er nog steeds gevraagd om te betalen als ik PDFgear opnieuw installeer of op andere apparaten installeer?</value>
+  </data>
+  <data name="WinFeedBackFAQQuestion5" xml:space="preserve">
+    <value>Waarom kan ik niet door PDF-pagina's scrollen?</value>
+  </data>
+  <data name="WinFeedBackHardwareAccelerationCHBK" xml:space="preserve">
+    <value>Hardwareversnelling uitschakelen</value>
+  </data>
+  <data name="WinFeedBackInvalidEmailMsg" xml:space="preserve">
+    <value>Voer een geldig e-mailadres in om het bericht met succes te verzenden.</value>
+  </data>
+  <data name="WinFeedBackLabelPrivacypolicyContent" xml:space="preserve">
+    <value>Privacybeleid</value>
+  </data>
+  <data name="WinFeedBackSendProblemfileContent" xml:space="preserve">
+    <value>Stuur het probleembestand op om ons te helpen de diagnose te stellen.</value>
+  </data>
+  <data name="WinFeedBackSendSuccessCapMsg" xml:space="preserve">
+    <value>Met succes verzonden</value>
+  </data>
+  <data name="WinFeedBackSendSuccessMsg" xml:space="preserve">
+    <value>We hebben uw bericht ontvangen. Dank u wel!</value>
+  </data>
+  <data name="WinFeedBackSendTryagainMsg" xml:space="preserve">
+    <value>Het is niet gelukt het bericht te verzenden, probeer het nog eens!</value>
+  </data>
+  <data name="WinFindCaseSensitiveBtnContent" xml:space="preserve">
+    <value>Hoofdlettergevoelig</value>
+  </data>
+  <data name="WinFindDocumentNeedOcrTips" xml:space="preserve">
+    <value>We hebben vastgesteld dat dit een gescande PDF is. Voer OCR uit om tekst uit gescande PDF's te kopiëren en te doorzoeken.</value>
+  </data>
+  <data name="WinFindMatchallwordsBtnContent" xml:space="preserve">
+    <value>Alleen hele woorden</value>
+  </data>
+  <data name="WinFindOCRNotShowAgain" xml:space="preserve">
+    <value>Niet meer weergeven voor dit bestand</value>
+  </data>
+  <data name="WinFindPerformOCR" xml:space="preserve">
+    <value>Voer OCR uit</value>
+  </data>
+  <data name="WinFindPlaceHolderContent" xml:space="preserve">
+    <value>Zoeken…</value>
+  </data>
+  <data name="WinHistoryClearLabelClickTips" xml:space="preserve">
+    <value>Weet u zeker dat u alle recente bestanden wilt wissen?</value>
+  </data>
+  <data name="WinIAP2AnnualPannelTitle" xml:space="preserve">
+    <value>Jaarlijks</value>
+  </data>
+  <data name="WinIAP2BuyNowBtnContent" xml:space="preserve">
+    <value>Koop Nu</value>
+  </data>
+  <data name="WinIAP2LifetimePriceDescribe" xml:space="preserve">
+    <value>Eenmalige prijs</value>
+  </data>
+  <data name="WinLabelChildRangeContent" xml:space="preserve">
+    <value>Onderbereik</value>
+  </data>
+  <data name="WinLabelRangeContent" xml:space="preserve">
+    <value>Bereik</value>
+  </data>
+  <data name="WinLabelSelectedpagesContent" xml:space="preserve">
+    <value>Geselecteerde pagina's</value>
+  </data>
+  <data name="WinOCRCHBContent" xml:space="preserve">
+    <value>OCR (tekst uit afbeelding halen)</value>
+  </data>
+  <data name="WinOCRProgressContent" xml:space="preserve">
+    <value>Verwerking…</value>
+  </data>
+  <data name="WinOCRSelectLangTips" xml:space="preserve">
+    <value>Taal kiezen:</value>
+  </data>
+  <data name="WinOCRSelectedLineContextMenuEdit" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="WinPageApplyingHeaderorFooterContent" xml:space="preserve">
+    <value>Kop- en voetteksten toepassen</value>
+  </data>
+  <data name="WinPageCenterFooterTextLabelContent" xml:space="preserve">
+    <value>Middelste voettekst</value>
+  </data>
+  <data name="WinPageCenterHeaderTextLabelContent" xml:space="preserve">
+    <value>Middelste koptekst</value>
+  </data>
+  <data name="WinPageEgContent" xml:space="preserve">
+    <value>bijv. 1,8,9-12</value>
+  </data>
+  <data name="WinPageInsertBlankTitle" xml:space="preserve">
+    <value>Lege Pagina Invoegen</value>
+  </data>
+  <data name="WinPageInsertImageTitle" xml:space="preserve">
+    <value>Pagina van Afbeelding Invoegen</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnAddNewContent" xml:space="preserve">
+    <value>Nieuw toevoegen</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddBtnUpdateContent" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddChekContent" xml:space="preserve">
+    <value>Het document bevat al kop- en voettekst of paginanummer. Wilt u ze vervangen door deze die u toevoegt?</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterAddNoteContent" xml:space="preserve">
+    <value>Opmerking: als u kiest voor 'Nieuw toevoegen', kunnen de bestaande worden overlapt.</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckEmptyContent" xml:space="preserve">
+    <value>Kan geen kop- en voettekst of paginanummer vinden in het document.</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterDelCheckExistContent" xml:space="preserve">
+    <value>Weet u zeker dat u de kop- en voettekst of het paginanummer permanent wilt verwijderen?</value>
+  </data>
+  <data name="WinPageInsertPageNumorHeaderFooterUpdateCheckEmptyContent" xml:space="preserve">
+    <value>Kan geen kop- of voetteksten vinden in dit bestand.</value>
+  </data>
+  <data name="WinPageInsertSettingBlankPageCount" xml:space="preserve">
+    <value>Aantal pagina's</value>
+  </data>
+  <data name="WinPageInsertSettingPageHeight" xml:space="preserve">
+    <value>Hoogte</value>
+  </data>
+  <data name="WinPageInsertSettingPageLandscape" xml:space="preserve">
+    <value>Landschap</value>
+  </data>
+  <data name="WinPageInsertSettingPagePortrait" xml:space="preserve">
+    <value>Portret</value>
+  </data>
+  <data name="WinPageInsertSettingPageSize" xml:space="preserve">
+    <value>Paginagrootte</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemCustomize" xml:space="preserve">
+    <value>Aangepast</value>
+  </data>
+  <data name="WinPageInsertSettingPageSizeItemDefault" xml:space="preserve">
+    <value>Standaard</value>
+  </data>
+  <data name="WinPageInsertSettingPageWidth" xml:space="preserve">
+    <value>Breedte</value>
+  </data>
+  <data name="WinPageInsertdateLabelContent" xml:space="preserve">
+    <value>Datum invoegen</value>
+  </data>
+  <data name="WinPageInsertfilenameLabelContent" xml:space="preserve">
+    <value>Bestandsnaam invoegen</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentCenterContent" xml:space="preserve">
+    <value>Gecentreerd</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLabelContent" xml:space="preserve">
+    <value>Uitlijning</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentLeftContent" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="WinPageInsertpageNumAligmentRightContent" xml:space="preserve">
+    <value>Rechts</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionFooterContent" xml:space="preserve">
+    <value>Voettekst</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionHeaderContent" xml:space="preserve">
+    <value>Koptekst</value>
+  </data>
+  <data name="WinPageInsertpageNumPositionLabelConent" xml:space="preserve">
+    <value>Positie</value>
+  </data>
+  <data name="WinPageInsertpageNumStyleLabelContent" xml:space="preserve">
+    <value>Stijl</value>
+  </data>
+  <data name="WinPageInsertpagenumberLabelContent" xml:space="preserve">
+    <value>Paginanummer invoegen</value>
+  </data>
+  <data name="WinPageLeftFooterTextLabelContent" xml:space="preserve">
+    <value>Linker voettekst</value>
+  </data>
+  <data name="WinPageLeftHeaderTextLabelContent" xml:space="preserve">
+    <value>Linker koptekst</value>
+  </data>
+  <data name="WinPageLoadingHeaderorFooterContent" xml:space="preserve">
+    <value>Kop- en voettekst en paginanummer laden</value>
+  </data>
+  <data name="WinPageMarginBottomLabelContent" xml:space="preserve">
+    <value>Onderzijde</value>
+  </data>
+  <data name="WinPageMarginLabelContent" xml:space="preserve">
+    <value>Kantlijn</value>
+  </data>
+  <data name="WinPageMarginLeftLabelContent" xml:space="preserve">
+    <value>Linkerzijde</value>
+  </data>
+  <data name="WinPageMarginRightLabelContent" xml:space="preserve">
+    <value>Rechterzijde</value>
+  </data>
+  <data name="WinPageMarginTopLabelContent" xml:space="preserve">
+    <value>Bovenzijde</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageByNumContent" xml:space="preserve">
+    <value>Na pagina XXX</value>
+  </data>
+  <data name="WinPageMergeBtnAfterPageContent" xml:space="preserve">
+    <value>Na de geselecteerde pagina</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageByNumContent" xml:space="preserve">
+    <value>Vóór pagina XXX</value>
+  </data>
+  <data name="WinPageMergeBtnBeforePageContent" xml:space="preserve">
+    <value>Voor de geselecteerde pagina</value>
+  </data>
+  <data name="WinPageMergeBtnBeginingContent" xml:space="preserve">
+    <value>Begin</value>
+  </data>
+  <data name="WinPageMergeBtnEndContent" xml:space="preserve">
+    <value>Einde</value>
+  </data>
+  <data name="WinPageMergeCorrectPageMsg" xml:space="preserve">
+    <value>Verkeerde paginabereik, stel het juiste paginabereik in.</value>
+  </data>
+  <data name="WinPageMergeCorruptedDocMsg" xml:space="preserve">
+    <value>Corrupt document, controleer het geselecteerde document.</value>
+  </data>
+  <data name="WinPageMergeInsertfailedMsg" xml:space="preserve">
+    <value>Kan geen pagina aan het document toevoegen.</value>
+  </data>
+  <data name="WinPageMergeLabelInserttoContent" xml:space="preserve">
+    <value>Invoegen bij</value>
+  </data>
+  <data name="WinPageMergeLabelLocationContent" xml:space="preserve">
+    <value>Locatie</value>
+  </data>
+  <data name="WinPageMergeLabelSelectFileContent" xml:space="preserve">
+    <value>Selecteer bestand</value>
+  </data>
+  <data name="WinPageMergeLabelSourceContent" xml:space="preserve">
+    <value>Bron</value>
+  </data>
+  <data name="WinPageMergeLoadingText" xml:space="preserve">
+    <value>Bestand aan het laden...</value>
+  </data>
+  <data name="WinPageMergeMenuInsertfromfileContent" xml:space="preserve">
+    <value>Invoegen vanuit bestand</value>
+  </data>
+  <data name="WinPageMergeOpenfailedMsg" xml:space="preserve">
+    <value>Kan het geselecteerde document niet openen.</value>
+  </data>
+  <data name="WinPageMergeTitle" xml:space="preserve">
+    <value>Bestanden samenvoegen</value>
+  </data>
+  <data name="WinPagePreviewLabelContent" xml:space="preserve">
+    <value>Voorbeeld</value>
+  </data>
+  <data name="WinPagePreviewPageLabelContent" xml:space="preserve">
+    <value>Voorbeeldpagina</value>
+  </data>
+  <data name="WinPageReorderToolTipContent" xml:space="preserve">
+    <value>Weet u zeker dat u de geselecteerde pagina('s) opnieuw wilt ordenen?</value>
+  </data>
+  <data name="WinPageRightFooterTextLabelContent" xml:space="preserve">
+    <value>Rechter voettekst</value>
+  </data>
+  <data name="WinPageRightHeaderTextLabelContent" xml:space="preserve">
+    <value>Rechter koptekst</value>
+  </data>
+  <data name="WinPageSplitBtnMaxpageCountContent" xml:space="preserve">
+    <value>Max page count</value>
+  </data>
+  <data name="WinPageSplitBtnPagerangeContent" xml:space="preserve">
+    <value>Pagina bereik</value>
+  </data>
+  <data name="WinPageSplitLabelOutputlocationContent" xml:space="preserve">
+    <value>Output location</value>
+  </data>
+  <data name="WinPageSplitLabelSplitModeContent" xml:space="preserve">
+    <value>Modus Splitsen</value>
+  </data>
+  <data name="WinPageSplitTitle" xml:space="preserve">
+    <value>Bestand Splitsen</value>
+  </data>
+  <data name="WinPageStartpagenumbereLabelContent" xml:space="preserve">
+    <value>Paginanummer startpagina</value>
+  </data>
+  <data name="WinPrinterBtnClassicModeContent" xml:space="preserve">
+    <value>Klassieke modus</value>
+  </data>
+  <data name="WinPrinterBtnPropertyContent" xml:space="preserve">
+    <value>Voorkeursinstelling...</value>
+  </data>
+  <data name="WinPrinterCancelPrintContent" xml:space="preserve">
+    <value>Weet u zeker dat u de afdruktaak wilt annuleren?</value>
+  </data>
+  <data name="WinPrinterChbkGrayscaleContent" xml:space="preserve">
+    <value>Grijswaarden</value>
+  </data>
+  <data name="WinPrinterCollateContent" xml:space="preserve">
+    <value>Sorteren</value>
+  </data>
+  <data name="WinPrinterCopiesContent" xml:space="preserve">
+    <value>Kopieën</value>
+  </data>
+  <data name="WinPrinterDuplexContent" xml:space="preserve">
+    <value>Dubbelzijdig afdrukken</value>
+  </data>
+  <data name="WinPrinterDuplexFlipLongContent" xml:space="preserve">
+    <value>Langs de lange zijde omslaan</value>
+  </data>
+  <data name="WinPrinterDuplexFlipShortContent" xml:space="preserve">
+    <value>Langs de korte zijde omslaan</value>
+  </data>
+  <data name="WinPrinterNameContent" xml:space="preserve">
+    <value>Printer</value>
+  </data>
+  <data name="WinPrinterNoPrinterContent" xml:space="preserve">
+    <value>Geen printer gedetecteerd</value>
+  </data>
+  <data name="WinPrinterPageRangErrorContent" xml:space="preserve">
+    <value>De waarde moet een geheel getal tussen 1 en 1000 zijn.</value>
+  </data>
+  <data name="WinPrinterPaperOrientationContent" xml:space="preserve">
+    <value>Oriëntatie</value>
+  </data>
+  <data name="WinPrinterPaperSizeContent" xml:space="preserve">
+    <value>Papierformaat</value>
+  </data>
+  <data name="WinPrinterPrintAnnotationContent" xml:space="preserve">
+    <value>Opmerkingen Afdrukken</value>
+  </data>
+  <data name="WinPrinterPrintModeContent" xml:space="preserve">
+    <value>Paginagrootte aanpassen</value>
+  </data>
+  <data name="WinPurchasedAlreadySubTitle" xml:space="preserve">
+    <value>Al gekocht</value>
+  </data>
+  <data name="WinPurchasedTitle" xml:space="preserve">
+    <value>Je hebt succesvol gekocht.  Geniet nu ten volle van PDFgear.</value>
+  </data>
+  <data name="WinPwdEntePwdTitle" xml:space="preserve">
+    <value>Wachtwoord invoeren</value>
+  </data>
+  <data name="WinPwdEnterTipContent" xml:space="preserve">
+    <value>Dit document is beveiligd met een wachtwoord. Gelieve het wachtwoord hieronder in te voeren.</value>
+  </data>
+  <data name="WinPwdInputContent" xml:space="preserve">
+    <value>Hier typen...</value>
+  </data>
+  <data name="WinPwdInvalidTryAgainContent" xml:space="preserve">
+    <value>Ongeldig wachtwoord. Gelieve opnieuw te proberen.</value>
+  </data>
+  <data name="WinPwdLabelConfrimContent" xml:space="preserve">
+    <value>Bevestigen</value>
+  </data>
+  <data name="WinPwdLabelPasswordContent" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
+  <data name="WinPwdMaxCharacterCheckContent" xml:space="preserve">
+    <value>Maximaal 32 tekens. Geen spatie.</value>
+  </data>
+  <data name="WinPwdMinCharacterCheckContent" xml:space="preserve">
+    <value>Minimaal 6 tekens. Geen spatie.</value>
+  </data>
+  <data name="WinPwdPasswordCheckEmptyContent" xml:space="preserve">
+    <value>Wachtwoord is vereist.</value>
+  </data>
+  <data name="WinPwdPasswordCheckInvalidContent" xml:space="preserve">
+    <value>Ongeldig wachtwoord.</value>
+  </data>
+  <data name="WinPwdPasswordCheckMatchContent" xml:space="preserve">
+    <value>Wachtwoorden komen niet overeen.</value>
+  </data>
+  <data name="WinPwdPasswordKeepPermissionsPwdContent" xml:space="preserve">
+    <value>Wachtwoord voor toestemming bewaren</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipContent" xml:space="preserve">
+    <value>Beveiligingsinstellingen worden pas toegepast als u het document opslaat.</value>
+  </data>
+  <data name="WinPwdPasswordSaveTipNotshowagainContent" xml:space="preserve">
+    <value>Dit bericht niet meer weergeven</value>
+  </data>
+  <data name="WinPwdPasswordTooltipContent" xml:space="preserve">
+    <value>Het wachtwoord moet 6-32 tekens bevatten en alleen letters, cijfers en symbolen zijn toegestaan.</value>
+  </data>
+  <data name="WinPwdRemoveCheckContent" xml:space="preserve">
+    <value>Er is geen wachtwoord ingesteld voor het PDF-document.</value>
+  </data>
+  <data name="WinPwdRemoveConfirmContent" xml:space="preserve">
+    <value>Weet u zeker dat u het / de wachtwoord(en) wilt verwijderen?</value>
+  </data>
+  <data name="WinPwdSetPwdTitle" xml:space="preserve">
+    <value>Wachtwoord instellen</value>
+  </data>
+  <data name="WinPwdWrongCheckContent" xml:space="preserve">
+    <value>Wachtwoord is fout.</value>
+  </data>
+  <data name="WinPwdillegalsymbolsCheckContent" xml:space="preserve">
+    <value>Bevat ongeldige symbolen.</value>
+  </data>
+  <data name="WinRate5StarsTitle" xml:space="preserve">
+    <value>Ik vind het geweldig. Ik wil het 5 sterren geven!</value>
+  </data>
+  <data name="WinRateFeedbackTitle" xml:space="preserve">
+    <value>Ik wil graag wat feedback geven.</value>
+  </data>
+  <data name="WinRateLeaveGreatratingTitle" xml:space="preserve">
+    <value>Laat ons een goede beoordeling en recensie achter!</value>
+  </data>
+  <data name="WinRateLessaminuteTitle" xml:space="preserve">
+    <value>De beoordeling duurt minder dan een minuut.</value>
+  </data>
+  <data name="WinRateLoveTitle" xml:space="preserve">
+    <value>Met liefde PDFgear?</value>
+  </data>
+  <data name="WinRateThanksforsupportTitle" xml:space="preserve">
+    <value>Bedankt voor uw steun!</value>
+  </data>
+  <data name="WinRestoreFaildLearnMoreContent" xml:space="preserve">
+    <value>Meer informatie</value>
+  </data>
+  <data name="WinRestoreFaildPossible1Content" xml:space="preserve">
+    <value>Het abonnement is verlopen</value>
+  </data>
+  <data name="WinRestoreFaildPossible2Content" xml:space="preserve">
+    <value>Geen geldige aankoop gevonden</value>
+  </data>
+  <data name="WinRestoreFaildPossible3Content" xml:space="preserve">
+    <value>Netwerk is niet beschikbaar</value>
+  </data>
+  <data name="WinRestoreFaildPossibleContent" xml:space="preserve">
+    <value>Mogelijke oorzaken</value>
+  </data>
+  <data name="WinRestoreFaildTitleContent" xml:space="preserve">
+    <value>Herstellen is mislukt</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureExplain" xml:space="preserve">
+    <value>Er staan niet-afgeronde handtekening(en) in de PDF, en die zullen na het opslaan worden afgevlakt, wat niet ongedaan kan worden gemaakt. Wilt u doorgaan?</value>
+  </data>
+  <data name="WinSaveFilewithUnFlattenSignatureNoteMsg" xml:space="preserve">
+    <value>Weet je zeker dat je dit PDF bestand wilt opslaan?</value>
+  </data>
+  <data name="WinScreenshotToolbarCancelContent" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="WinScreenshotToolbarCopyContent" xml:space="preserve">
+    <value>Kopiëren</value>
+  </data>
+  <data name="WinScreenshotToolbarDeleteContent" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="WinScreenshotToolbarDoneContent" xml:space="preserve">
+    <value>Klaar</value>
+  </data>
+  <data name="WinScreenshotToolbarEditContent" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="WinScreenshotToolbarSaveContent" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomInContent" xml:space="preserve">
+    <value>Inzoomen</value>
+  </data>
+  <data name="WinScreenshotToolbarZoomOutContent" xml:space="preserve">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="WinSettingAISwitch" xml:space="preserve">
+    <value>PDFgear Copilot inschakelen</value>
+  </data>
+  <data name="WinSettingReminnder" xml:space="preserve">
+    <value>Herinnering ontvangen bestanden</value>
+  </data>
+  <data name="WinSettingReminnderDesc" xml:space="preserve">
+    <value>Pop-up om eraan te herinneren wanneer nieuwe PDF-bestand(en) zijn ontvangen</value>
+  </data>
+  <data name="WinShareSendFilleDescText" xml:space="preserve">
+    <value>Zoek het bestand en sleep het vervolgens naar Messages, Onedrive, Google Drive en meer.</value>
+  </data>
+  <data name="WinSignatureBtnAddPictureContent" xml:space="preserve">
+    <value>Afbeelding toevoegen</value>
+  </data>
+  <data name="WinSignatureBtnClearContent" xml:space="preserve">
+    <value>Wissen</value>
+  </data>
+  <data name="WinSignatureContextMenuApplyMulPage" xml:space="preserve">
+    <value>Plaats op meerdere pagina's</value>
+  </data>
+  <data name="WinSignatureContextMenuDetele" xml:space="preserve">
+    <value>Verwijder</value>
+  </data>
+  <data name="WinSignatureContextMenuDeteleInBatch" xml:space="preserve">
+    <value>Verwijderen in batch</value>
+  </data>
+  <data name="WinSignatureContextMenuFlatten" xml:space="preserve">
+    <value>Afvlakken</value>
+  </data>
+  <data name="WinSignatureContextMenuFlattenInBatch" xml:space="preserve">
+    <value>Afvlakken in batch</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchBtn" xml:space="preserve">
+    <value>Alles wissen</value>
+  </data>
+  <data name="WinSignatureDeleteInBatchQuestion" xml:space="preserve">
+    <value>Weet je zeker dat je deze handtekening op alle pagina's wilt verwijderen?</value>
+  </data>
+  <data name="WinSignatureFlattenApplying" xml:space="preserve">
+    <value>Handtekening toepassen...</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchNoteMsg" xml:space="preserve">
+    <value>Deze bewerking maakt de handtekening(en) in het document vlak, wat niet ongedaan kan worden gemaakt. Als je maakt een</value>
+  </data>
+  <data name="WinSignatureFlattenInBatchQuestion" xml:space="preserve">
+    <value>Weet je zeker dat je de handtekening(en) moet afvlakken?</value>
+  </data>
+  <data name="WinSignatureFlattenProcess" xml:space="preserve">
+    <value>Afvlakkende handtekeningen...</value>
+  </data>
+  <data name="WinSignatureMaxNumLimitTip" xml:space="preserve">
+    <value>PDFgear kan maximaal vijftig handtekeningen opslaan. Verwijder de tijdelijk ongebruikte handtekeningen voordat u nieuwe maakt.</value>
+  </data>
+  <data name="WinSignatureMenuInputContent" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="WinSignatureMenuInputIsEmptyMsg" xml:space="preserve">
+    <value>Het invoerveld mag niet leeg zijn!</value>
+  </data>
+  <data name="WinSignatureMenuPictureContent" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="WinSignatureMenuWriteContent" xml:space="preserve">
+    <value>Schrijven</value>
+  </data>
+  <data name="WinSignaturePageRangeIncorrect" xml:space="preserve">
+    <value>Het formaat van de "Bereik" is onjuist.</value>
+  </data>
+  <data name="WinSignatureTitle" xml:space="preserve">
+    <value>Maak handtekening</value>
+  </data>
+  <data name="WinStampSampleText" xml:space="preserve">
+    <value>Voorbeeldtekst</value>
+  </data>
+  <data name="WinStampTypeAppearanceHeader" xml:space="preserve">
+    <value>Verschijning</value>
+  </data>
+  <data name="WinStampTypeDateFormatCheckbox" xml:space="preserve">
+    <value>Datum en tijd</value>
+  </data>
+  <data name="WinStatuBarPDFAutoSaveText" xml:space="preserve">
+    <value>Automatisch opgeslagen</value>
+  </data>
+  <data name="WinToolBarBtnHighlightContent" xml:space="preserve">
+    <value>Gebied Markeren</value>
+  </data>
+  <data name="WinUpgradeLiftTimeBtnContent" xml:space="preserve">
+    <value>Levenslange</value>
+  </data>
+  <data name="WinUpgradeList10Content" xml:space="preserve">
+    <value>PDF-paginas opnieuw ordenen</value>
+  </data>
+  <data name="WinUpgradeList11Content" xml:space="preserve">
+    <value>PDF-documenten ondertekenen</value>
+  </data>
+  <data name="WinUpgradeList12Content" xml:space="preserve">
+    <value>Compress PDF Files to a smaller size</value>
+  </data>
+  <data name="WinUpgradeList13Content" xml:space="preserve">
+    <value>Converteer Pdf-bestanden naar Word, Excel, afbeelding enzovoorts.</value>
+  </data>
+  <data name="WinUpgradeList14Content" xml:space="preserve">
+    <value>Pdf ondertekenen, comprimeren</value>
+  </data>
+  <data name="WinUpgradeList15Content" xml:space="preserve">
+    <value>Pagina's samenvoegen, splitsen, verwijderen, invoegen, extraheren en opnieuw ordenen</value>
+  </data>
+  <data name="WinUpgradeList16Content" xml:space="preserve">
+    <value>Afbeelding naar tekst (OCR)</value>
+  </data>
+  <data name="WinUpgradeList17Content" xml:space="preserve">
+    <value>Maximaal 10 apparaten</value>
+  </data>
+  <data name="WinUpgradeList18Content" xml:space="preserve">
+    <value>PDFgear Premium</value>
+  </data>
+  <data name="WinUpgradeList1Content" xml:space="preserve">
+    <value>PDF-document omzetten naar Word, Excel, PNG, JPG, RTF, TXT, HTML of XML</value>
+  </data>
+  <data name="WinUpgradeList2Content" xml:space="preserve">
+    <value>Meerdere PDF-documenten samenvoegen tot één PDF</value>
+  </data>
+  <data name="WinUpgradeList3Content" xml:space="preserve">
+    <value>Pagina's uit het PDF-document verwijderen</value>
+  </data>
+  <data name="WinUpgradeList4Content" xml:space="preserve">
+    <value>Een PDF-document splitsen in meerdere PDF-documenten</value>
+  </data>
+  <data name="WinUpgradeList5Content" xml:space="preserve">
+    <value>PDF-pagina's uit een PDF-document uitpakken</value>
+  </data>
+  <data name="WinUpgradeList6Content" xml:space="preserve">
+    <value>Geen advertenties</value>
+  </data>
+  <data name="WinUpgradeList7Content" xml:space="preserve">
+    <value>24/7-ondersteuning</value>
+  </data>
+  <data name="WinUpgradeList8Content" xml:space="preserve">
+    <value>Pagina's uit andere PDF-documenten invoegen.</value>
+  </data>
+  <data name="WinUpgradeList9Content" xml:space="preserve">
+    <value>Converteer Word, Excel, PPT, afbeelding, RTF of TXT naar PDF-document</value>
+  </data>
+  <data name="WinUpgradeRestorePurchase" xml:space="preserve">
+    <value>Aankoop herstelt</value>
+  </data>
+  <data name="WinUpgradeTitle" xml:space="preserve">
+    <value>Volledige versie ontgrendelen</value>
+  </data>
+  <data name="WinUpgradeYearBtnContent" xml:space="preserve">
+    <value>Jaar</value>
+  </data>
+  <data name="WinViewToolBackgroundDayModeText" xml:space="preserve">
+    <value>Dagmodus</value>
+  </data>
+  <data name="WinViewToolBackgroundDefaultText" xml:space="preserve">
+    <value>Standaard</value>
+  </data>
+  <data name="WinViewToolBackgroundEyeProtectionModeText" xml:space="preserve">
+    <value>Oogbeschermingsmodus</value>
+  </data>
+  <data name="WinViewToolBackgroundNightModeText" xml:space="preserve">
+    <value>Nachtmodus</value>
+  </data>
+  <data name="WinViewToolBackgroundText" xml:space="preserve">
+    <value>Achtergrond</value>
+  </data>
+  <data name="WinViewToolBackgroundYellowBackgroundText" xml:space="preserve">
+    <value>Gele achtergrond</value>
+  </data>
+  <data name="WinViewToolConvertText" xml:space="preserve">
+    <value>Converteren</value>
+  </data>
+  <data name="WinViewToolOpenTooltipText" xml:space="preserve">
+    <value>Openen</value>
+  </data>
+  <data name="WinViewToolPrintTooltipText" xml:space="preserve">
+    <value>Afdrukken</value>
+  </data>
+  <data name="WinViewToolRecentFileText" xml:space="preserve">
+    <value>Recente bestanden</value>
+  </data>
+  <data name="WinViewToolRedoTooltipText" xml:space="preserve">
+    <value>Opnieuw doen</value>
+  </data>
+  <data name="WinViewToolSaveAsTooltipText" xml:space="preserve">
+    <value>Opslaan als</value>
+  </data>
+  <data name="WinViewToolSaveTooltipText" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="WinViewToolUndoTooltipText" xml:space="preserve">
+    <value>Ongedaan maken</value>
+  </data>
+  <data name="WinWatermarkAligmentContent" xml:space="preserve">
+    <value>Uitlijning</value>
+  </data>
+  <data name="WinWatermarkCbxBottomCenterContent" xml:space="preserve">
+    <value>Middenonder</value>
+  </data>
+  <data name="WinWatermarkCbxBottomLeftContent" xml:space="preserve">
+    <value>Linksonder</value>
+  </data>
+  <data name="WinWatermarkCbxBottomRightContent" xml:space="preserve">
+    <value>Rechtsonder</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleCenterContent" xml:space="preserve">
+    <value>Midden</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleLeftContent" xml:space="preserve">
+    <value>Midden links</value>
+  </data>
+  <data name="WinWatermarkCbxMiddleRightContent" xml:space="preserve">
+    <value>Midden rechts</value>
+  </data>
+  <data name="WinWatermarkCbxTopCenterContent" xml:space="preserve">
+    <value>Middenboven</value>
+  </data>
+  <data name="WinWatermarkCbxTopLeftContent" xml:space="preserve">
+    <value>Linksboven</value>
+  </data>
+  <data name="WinWatermarkCbxTopRightContent" xml:space="preserve">
+    <value>Rechtsboven</value>
+  </data>
+  <data name="WinWatermarkCurrentpageContent" xml:space="preserve">
+    <value>Huidige pagina</value>
+  </data>
+  <data name="WinWatermarkEditTiltle" xml:space="preserve">
+    <value>Watermerk bewerken</value>
+  </data>
+  <data name="WinWatermarkFileContent" xml:space="preserve">
+    <value>Bestand</value>
+  </data>
+  <data name="WinWatermarkFilePathEmptyMsg" xml:space="preserve">
+    <value>Geen watermerkafbeelding toegevoegd</value>
+  </data>
+  <data name="WinWatermarkNewTiltle" xml:space="preserve">
+    <value>Watermerk creëren</value>
+  </data>
+  <data name="WinWatermarkOpacityContent" xml:space="preserve">
+    <value>Opaciteit</value>
+  </data>
+  <data name="WinWatermarkRotateContent" xml:space="preserve">
+    <value>Roteren</value>
+  </data>
+  <data name="WinWatermarkSizeContent" xml:space="preserve">
+    <value>Grootte</value>
+  </data>
+  <data name="WinWatermarkSourceContent" xml:space="preserve">
+    <value>Bron</value>
+  </data>
+  <data name="WinWatermarkStyleContent" xml:space="preserve">
+    <value>Stijl</value>
+  </data>
+  <data name="WinWatermarkTextContent" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="WinWatermarkTextEmptyMsg" xml:space="preserve">
+    <value>Tekst kan niet leeg zijn</value>
+  </data>
+  <data name="WinWatermarkTileContent" xml:space="preserve">
+    <value>Tegel</value>
+  </data>
+  <data name="WinWrongPageRangTipContent" xml:space="preserve">
+    <value>Voer een geldig bereik in.</value>
+  </data>
+  <data name="WrapBookmarkMenuItemContent" xml:space="preserve">
+    <value>Lange bladwijzers automatisch omslaan</value>
+  </data>
+</root>

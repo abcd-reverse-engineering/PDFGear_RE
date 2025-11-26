@@ -1,0 +1,410 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:pdfeditor.Controls.Copilot.Popups">
+	<SolidColorBrush
+		x:Key="WindowCaptionBackground"
+		Color="#33000000" />
+	<SolidColorBrush
+		x:Key="WindowCaptionBackgroundDisabled"
+		Color="#33000000" />
+	<SolidColorBrush
+		x:Key="WindowCaptionForeground"
+		Color="#FF000000" />
+	<SolidColorBrush
+		x:Key="WindowCaptionForegroundDisabled"
+		Color="#99000000" />
+	<SolidColorBrush
+		x:Key="WindowCaptionButtonBackgroundPointerOver"
+		Color="#33000000" />
+	<SolidColorBrush
+		x:Key="WindowCaptionButtonBackgroundPressed"
+		Color="#66000000" />
+	<SolidColorBrush
+		x:Key="WindowCaptionButtonStroke"
+		Color="#FF000000" />
+	<SolidColorBrush
+		x:Key="WindowCaptionButtonStrokePointerOver"
+		Color="#FF000000" />
+	<SolidColorBrush
+		x:Key="WindowCaptionButtonStrokePressed"
+		Color="#FF000000" />
+	<SolidColorBrush
+		x:Key="WindowCaptionButtonBackground"
+		Color="Transparent" />
+	<SolidColorBrush
+		x:Key="CloseButtonBackgroundPointerOver"
+		Color="#e81123" />
+	<SolidColorBrush
+		x:Key="CloseButtonStrokePointerOver"
+		Color="White" />
+	<SolidColorBrush
+		x:Key="CloseButtonBackgroundPressed"
+		Color="#f1707a" />
+	<SolidColorBrush
+		x:Key="CloseButtonStrokePressed"
+		Color="Black" />
+	<Style
+		x:Key="WindowCaptionButton"
+		TargetType="{x:Type ButtonBase}">
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource WindowCaptionForeground}" />
+		<Setter
+			Property="BorderBrush"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="BorderThickness"
+			Value="0" />
+		<Setter
+			Property="IsTabStop"
+			Value="False" />
+		<Setter
+			Property="Width"
+			Value="40" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Left" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="WindowChrome.IsHitTestVisibleInChrome"
+			Value="True" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ButtonBase}">
+					<Border
+						x:Name="border"
+						BorderThickness="{TemplateBinding Control.BorderThickness}"
+						Background="{TemplateBinding Control.Background}"
+						BorderBrush="{TemplateBinding Control.BorderBrush}"
+						SnapsToDevicePixels="True">
+						<ContentPresenter
+							x:Name="contentPresenter"
+							RecognizesAccessKey="True"
+							Margin="{TemplateBinding Control.Padding}"
+							SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+							HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+							VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+							Focusable="False" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="border"
+								Property="Border.Background"
+								Value="{StaticResource WindowCaptionButtonBackgroundPointerOver}" />
+							<Setter
+								TargetName="contentPresenter"
+								Property="TextElement.Foreground"
+								Value="{StaticResource WindowCaptionForeground}" />
+						</Trigger>
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								TargetName="border"
+								Property="Border.Background"
+								Value="{StaticResource WindowCaptionButtonBackgroundPressed}" />
+							<Setter
+								TargetName="contentPresenter"
+								Property="TextElement.Foreground"
+								Value="{StaticResource WindowCaptionForeground}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		x:Key="WindowCaptionCloseButton"
+		TargetType="{x:Type ButtonBase}"
+		BasedOn="{StaticResource WindowCaptionButton}">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ButtonBase}">
+					<Border
+						x:Name="border"
+						BorderThickness="{TemplateBinding Control.BorderThickness}"
+						Background="{TemplateBinding Control.Background}"
+						BorderBrush="{TemplateBinding Control.BorderBrush}"
+						SnapsToDevicePixels="True">
+						<Path
+							x:Name="Path"
+							StrokeThickness="1"
+							Stroke="{TemplateBinding Control.Foreground}"
+							Data="M0,0 L10,10 M10,0 L0,10"
+							Stretch="Fill"
+							UseLayoutRounding="True"
+							Width="9"
+							Height="9"
+							StrokeEndLineCap="Round"
+							StrokeStartLineCap="Round" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="border"
+								Property="Border.Background"
+								Value="{StaticResource CloseButtonBackgroundPointerOver}" />
+							<Setter
+								TargetName="Path"
+								Property="Shape.Stroke"
+								Value="{StaticResource CloseButtonStrokePointerOver}" />
+						</Trigger>
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								TargetName="border"
+								Property="Border.Background"
+								Value="{StaticResource CloseButtonBackgroundPressed}" />
+							<Setter
+								TargetName="Path"
+								Property="Shape.Stroke"
+								Value="{StaticResource CloseButtonStrokePressed}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		x:Key="WindowCaptionPinButton"
+		TargetType="{x:Type ToggleButton}"
+		BasedOn="{StaticResource WindowCaptionButton}">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ToggleButton}">
+					<Border
+						x:Name="border"
+						BorderThickness="{TemplateBinding Control.BorderThickness}"
+						Background="{TemplateBinding Control.Background}"
+						BorderBrush="{TemplateBinding Control.BorderBrush}"
+						SnapsToDevicePixels="True">
+						<Grid
+							Margin="0,0,0,0.3">
+							<Viewbox
+								Height="12">
+								<Path
+									x:Name="Path"
+									StrokeThickness="0.8"
+									Stroke="{TemplateBinding Control.Foreground}"
+									Data="F1 M19.667969,8.330078 C19.667969,8.707683 19.563801,9.052734 19.355469,9.365234 C19.147135,9.677734 18.867188,9.9056 18.515625,10.048828 L13.291016,12.226562 C13.20638,12.259115 13.13151,12.30957 13.066406,12.37793 C13.001302,12.446289 12.955729,12.526042 12.929688,12.617188 L11.220703,18.300781 C11.181641,18.43099 11.108398,18.538412 11.000977,18.623047 C10.893555,18.707682 10.768229,18.75 10.625,18.75 C10.455729,18.75 10.309244,18.68815 10.185547,18.564453 L6.25,14.628906 L0.878906,20 L0,20 L0,19.111328 L5.371094,13.75 L1.435547,9.814453 C1.311849,9.690756 1.25,9.541016 1.25,9.365234 C1.25,9.241537 1.285807,9.127604 1.357422,9.023438 C1.429036,8.919271 1.523438,8.844401 1.640625,8.798828 L7.431641,6.484375 C7.58138,6.425781 7.692057,6.318359 7.763672,6.162109 L9.931641,1.386719 C10.08138,1.048178 10.3125,0.779623 10.625,0.581055 C10.9375,0.382488 11.279297,0.283203 11.650391,0.283203 C11.897786,0.283203 12.137044,0.332031 12.368164,0.429688 C12.599283,0.527344 12.799479,0.660809 12.96875,0.830078 L19.121094,6.992188 C19.296875,7.16797 19.431965,7.373048 19.526367,7.607422 C19.620768,7.841798 19.667969,8.082684 19.667969,8.330078 M11.650391,1.533203 C11.520182,1.533203 11.404622,1.565756 11.303711,1.630859 C11.202799,1.695965 11.126302,1.787109 11.074219,1.904297 L8.90625,6.679688 C8.808594,6.901042 8.671875,7.094727 8.496094,7.260742 C8.320312,7.426758 8.118489,7.555339 7.890625,7.646484 L2.988281,9.599609 L10.322266,16.943359 L11.728516,12.265625 C11.806641,11.998698 11.941731,11.761068 12.133789,11.552734 C12.325846,11.344401 12.548827,11.184896 12.802734,11.074219 L18.037109,8.886719 C18.154297,8.834636 18.24707,8.758139 18.31543,8.657227 C18.383789,8.556315 18.417969,8.440756 18.417969,8.310547 C18.417969,8.134766 18.359375,7.988281 18.242188,7.871094 L12.080078,1.71875 C11.95638,1.595053 11.81315,1.533203 11.650391,1.533203 Z"
+									Stretch="Fill"
+									UseLayoutRounding="True"
+									StrokeEndLineCap="Round"
+									StrokeStartLineCap="Round" />
+							</Viewbox>
+							<Viewbox
+								Height="12">
+								<Path
+									x:Name="ToggledPath"
+									Visibility="Collapsed"
+									StrokeThickness="0.8"
+									Stroke="{TemplateBinding Control.Foreground}"
+									Data="F1 M20.009766,19.375 C20.009766,19.544271 19.947916,19.690756 19.824219,19.814453 C19.70052,19.93815 19.554035,20 19.384766,20 C19.208984,20 19.059244,19.93815 18.935547,19.814453 L12.65625,13.535156 L11.220703,18.300781 C11.181641,18.43099 11.108398,18.538412 11.000977,18.623047 C10.893555,18.707682 10.768229,18.75 10.625,18.75 C10.455729,18.75 10.309244,18.68815 10.185547,18.564453 L6.25,14.628906 L0.878906,20 L0,20 L0,19.111328 L5.371094,13.75 L1.435547,9.814453 C1.311849,9.690756 1.25,9.541016 1.25,9.365234 C1.25,9.235026 1.285807,9.121094 1.357422,9.023438 C1.429036,8.925781 1.523438,8.850912 1.640625,8.798828 L6.123047,7.001953 L0.185547,1.064453 C0.061849,0.940756 0,0.794271 0,0.625 C0,0.449219 0.063477,0.301107 0.19043,0.180664 C0.317383,0.060223 0.465495,0 0.634766,0 C0.804036,0 0.950521,0.06185 1.074219,0.185547 L19.824219,18.935547 C19.947916,19.059244 20.009766,19.205729 20.009766,19.375 M9.033203,6.376953 L8.095703,5.439453 L9.931641,1.386719 C10.08138,1.048178 10.310872,0.779623 10.620117,0.581055 C10.929361,0.382488 11.269531,0.283203 11.640625,0.283203 C11.88802,0.283203 12.127277,0.330404 12.358398,0.424805 C12.589518,0.519207 12.792969,0.654297 12.96875,0.830078 L19.121094,6.992188 C19.296875,7.16797 19.431965,7.373048 19.526367,7.607422 C19.620768,7.841798 19.667969,8.082684 19.667969,8.330078 C19.667969,8.701172 19.562174,9.044597 19.350586,9.360352 C19.138996,9.676107 18.860676,9.9056 18.515625,10.048828 L14.414062,11.757812 L13.457031,10.800781 L18.037109,8.886719 C18.154297,8.834636 18.24707,8.758139 18.31543,8.657227 C18.383789,8.556315 18.417969,8.440756 18.417969,8.310547 C18.417969,8.134766 18.359375,7.988281 18.242188,7.871094 L12.080078,1.71875 C12.027994,1.666668 11.959635,1.622723 11.875,1.586914 C11.790364,1.551107 11.712239,1.533203 11.640625,1.533203 C11.516927,1.533203 11.404622,1.567383 11.303711,1.635742 C11.202799,1.704102 11.126302,1.793621 11.074219,1.904297 M2.988281,9.599609 L10.322266,16.943359 L11.650391,12.529297 L7.080078,7.958984 Z"
+									Stretch="Fill"
+									UseLayoutRounding="True"
+									StrokeEndLineCap="Round"
+									StrokeStartLineCap="Round" />
+							</Viewbox>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="border"
+								Property="Border.Background"
+								Value="{StaticResource WindowCaptionButtonBackgroundPointerOver}" />
+							<Setter
+								TargetName="Path"
+								Property="Shape.Stroke"
+								Value="{StaticResource WindowCaptionForeground}" />
+						</Trigger>
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								TargetName="border"
+								Property="Border.Background"
+								Value="{StaticResource WindowCaptionButtonBackgroundPressed}" />
+							<Setter
+								TargetName="Path"
+								Property="Shape.Stroke"
+								Value="{StaticResource WindowCaptionForeground}" />
+						</Trigger>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="true">
+							<Setter
+								TargetName="Path"
+								Property="Visibility"
+								Value="Collapsed" />
+							<Setter
+								TargetName="ToggledPath"
+								Property="Visibility"
+								Value="Visible" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		x:Key="{x:Type local:PopupWindow}"
+		TargetType="{x:Type local:PopupWindow}">
+		<Setter
+			Property="Foreground"
+			Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
+		<Setter
+			Property="Background"
+			Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Window}">
+					<Border>
+						<Border
+							x:Name="border"
+							Background="{TemplateBinding Control.Background}"
+							BorderBrush="{TemplateBinding Control.BorderBrush}"
+							BorderThickness="{TemplateBinding Control.BorderThickness}"
+							Margin="2.8,1,2.8,0">
+							<Grid>
+								<Grid.RowDefinitions>
+									<RowDefinition
+										Height="32" />
+									<RowDefinition
+										Height="*" />
+								</Grid.RowDefinitions>
+								<Grid
+									x:Name="Titlebar">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition
+											Width="Auto" />
+										<ColumnDefinition
+											Width="*" />
+										<ColumnDefinition
+											Width="Auto" />
+										<ColumnDefinition
+											Width="Auto" />
+										<ColumnDefinition
+											Width="Auto" />
+									</Grid.ColumnDefinitions>
+									<Grid
+										x:Name="WindowIcon"
+										Width="16"
+										Height="16"
+										Margin="8,0,0,0"
+										VerticalAlignment="Center"
+										Background="#00FFFFFF"
+										WindowChrome.IsHitTestVisibleInChrome="True">
+										<Image
+											x:Name="WindowIconImage"
+											HorizontalAlignment="Center" />
+										<Image
+											x:Name="WindowDefaultIconImage"
+											HorizontalAlignment="Center"
+											Visibility="Collapsed" />
+									</Grid>
+									<TextBlock
+										x:Name="TitleTextBlock"
+										Grid.Column="1"
+										Text="{TemplateBinding Window.Title}"
+										VerticalAlignment="Center"
+										Margin="6,1,0,0"
+										FontSize="{DynamicResource {x:Static SystemFonts.CaptionFontSizeKey}}"
+										FontFamily="{DynamicResource {x:Static SystemFonts.CaptionFontFamilyKey}}"
+										FontStyle="{DynamicResource {x:Static SystemFonts.CaptionFontStyleKey}}"
+										FontWeight="{DynamicResource {x:Static SystemFonts.CaptionFontWeightKey}}"
+										TextDecorations="{DynamicResource {x:Static SystemFonts.CaptionFontTextDecorationsKey}}"
+										Foreground="{StaticResource WindowCaptionForeground}" />
+									<ToggleButton
+										x:Name="PinButton"
+										Grid.Column="3"
+										AutomationProperties.Name="Pin"
+										AutomationProperties.AutomationId="_PinButton"
+										Style="{StaticResource WindowCaptionPinButton}"
+										IsChecked="{Binding Path=Topmost, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+									<Button
+										x:Name="CloseButton"
+										Grid.Column="4"
+										AutomationProperties.Name="Close"
+										AutomationProperties.AutomationId="_CloseButton"
+										Command="{x:Static SystemCommands.CloseWindowCommand}"
+										Style="{StaticResource WindowCaptionCloseButton}" />
+								</Grid>
+								<AdornerDecorator
+									Grid.Row="1">
+									<ContentPresenter />
+								</AdornerDecorator>
+							</Grid>
+						</Border>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="Window.IsActive"
+							Value="False">
+							<Setter
+								TargetName="TitleTextBlock"
+								Property="TextBlock.Foreground"
+								Value="{StaticResource WindowCaptionForegroundDisabled}" />
+							<Setter
+								TargetName="PinButton"
+								Property="Foreground"
+								Value="{StaticResource WindowCaptionForegroundDisabled}" />
+							<Setter
+								TargetName="CloseButton"
+								Property="Foreground"
+								Value="{StaticResource WindowCaptionForegroundDisabled}" />
+						</Trigger>
+						<Trigger
+							Property="Window.Icon"
+							Value="{x:Null}">
+							<Setter
+								TargetName="WindowIconImage"
+								Property="Visibility"
+								Value="Collapsed" />
+							<Setter
+								TargetName="WindowDefaultIconImage"
+								Property="Visibility"
+								Value="Visible" />
+						</Trigger>
+						<Trigger
+							Property="FlowDirection"
+							Value="RightToLeft">
+							<Setter
+								TargetName="border"
+								Property="Margin"
+								Value="0,1,6.8,0" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

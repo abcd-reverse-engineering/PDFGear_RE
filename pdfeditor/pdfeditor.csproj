@@ -1,0 +1,2489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{9D0A84FD-8794-469D-AF26-8FE835672880}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pdfeditor</RootNamespace>
+    <AssemblyName>pdfeditor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>pdfeditor.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonLib">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\CommonLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CommunityToolkit.Mvvm">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\CommunityToolkit.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="GongSolutions.WPF.DragDrop">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\GongSolutions.WPF.DragDrop.dll</HintPath>
+    </Reference>
+    <Reference Include="HandyControl">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\HandyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\ImageProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="LruCacheNet">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\LruCacheNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Sqlite">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="NAPS2.Wia">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\NAPS2.Wia.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Core">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\NAudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinMM">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\NAudio.WinMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Coordination">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Nito.AsyncEx.Coordination.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Tasks">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Nito.AsyncEx.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Patagames.Pdf">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Patagames.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="PDFKit">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\PDFKit.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="SoundTouch.Net.NAudioSupport">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\SoundTouch.Net.NAudioSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="VirtualizingWrapPanel">
+      <HintPath>..\..\..\..\..\..\Program Files\PDFgear\VirtualizingWrapPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AutoSaveRestore\AutoSaveManager.cs" />
+    <Compile Include="AutoSaveRestore\AutoSaveModel.cs" />
+    <Compile Include="Controls\AnimationExtentButton.xaml.cs">
+      <DependentUpon>AnimationExtentButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AnnotationCanvas.cs" />
+    <Compile Include="Controls\Annotations\AnnotationDragControl.xaml.cs">
+      <DependentUpon>AnnotationDragControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\AnnotationDragEditControl.xaml.cs">
+      <DependentUpon>AnnotationDragEditControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\AnnotationFocusControl.cs" />
+    <Compile Include="Controls\Annotations\AnnotationFreeTextEditor.xaml.cs">
+      <DependentUpon>AnnotationFreeTextEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\AnnotationLineControl.xaml.cs">
+      <DependentUpon>AnnotationLineControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\AnnotationPopupControl.xaml.cs">
+      <DependentUpon>AnnotationPopupControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\AnnotationTextControl.xaml.cs">
+      <DependentUpon>AnnotationTextControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\AnnotationToolTip.xaml.cs">
+      <DependentUpon>AnnotationToolTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\CustStampModel.cs" />
+    <Compile Include="Controls\Annotations\Holders\AnnotationHolderManager.cs" />
+    <Compile Include="Controls\Annotations\Holders\AnnotationHolderState.cs" />
+    <Compile Include="Controls\Annotations\Holders\AttachmentAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\BaseAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\CircleAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\FreeTextAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\HighlightAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\HighlightAreaAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\IAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\InkAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\LineAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\LinkAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\SquareAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\StampAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\StrikeoutAnnotationHoder.cs" />
+    <Compile Include="Controls\Annotations\Holders\TextAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\TextMarkupAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\Holders\UnderlineAnnotationHoder.cs" />
+    <Compile Include="Controls\Annotations\Holders\WatermarkAnnotationHolder.cs" />
+    <Compile Include="Controls\Annotations\IAnnotationControl.2.cs" />
+    <Compile Include="Controls\Annotations\IAnnotationControl.cs" />
+    <Compile Include="Controls\Annotations\ImageStampModel.cs" />
+    <Compile Include="Controls\Annotations\PopupAnnotationCollection.cs" />
+    <Compile Include="Controls\Annotations\PopupAnnotationReplyWrapper.cs" />
+    <Compile Include="Controls\Annotations\PopupAnnotationWrapper.cs" />
+    <Compile Include="Controls\Annotations\PopupControlBooleanToVisibilityConverter.cs" />
+    <Compile Include="Controls\Annotations\SignatureDragControl.xaml.cs">
+      <DependentUpon>SignatureDragControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\StampAnnotationDragControl.xaml.cs">
+      <DependentUpon>StampAnnotationDragControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\StampAnnotationMoveControl.xaml.cs">
+      <DependentUpon>StampAnnotationMoveControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Annotations\TextStampModel.cs" />
+    <Compile Include="Controls\BookmarkRenameDialog.xaml.cs">
+      <DependentUpon>BookmarkRenameDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Bookmarks\BookmarkControl.xaml.cs">
+      <DependentUpon>BookmarkControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Bookmarks\BookmarkControlSelectionChangedEventArgs.cs" />
+    <Compile Include="Controls\Bookmarks\BookmarkControlSelectionChangedEventHandler.cs" />
+    <Compile Include="Controls\Bookmarks\BookmarkTreeView.xaml.cs">
+      <DependentUpon>BookmarkTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Bookmarks\BookmarkTreeViewItem.xaml.cs">
+      <DependentUpon>BookmarkTreeViewItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommetControl.xaml.cs">
+      <DependentUpon>CommetControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommetTreeView.cs" />
+    <Compile Include="Controls\CommetTreeViewItem.cs" />
+    <Compile Include="Controls\Copilot\ChatBubble.xaml.cs">
+      <DependentUpon>ChatBubble.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Copilot\ChatButton.xaml.cs">
+      <DependentUpon>ChatButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Copilot\ChatPanel.xaml.cs">
+      <DependentUpon>ChatPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Copilot\ChatTextControl.cs" />
+    <Compile Include="Controls\Copilot\ChatTextHyperlinkClickAction.cs" />
+    <Compile Include="Controls\Copilot\ChatTextHyperlinkClickEventArgs.cs" />
+    <Compile Include="Controls\Copilot\ChatTextHyperlinkClickEventHandler.cs" />
+    <Compile Include="Controls\Copilot\ExportChatMessagesDialog.xaml.cs">
+      <DependentUpon>ExportChatMessagesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Copilot\LoadingEllipsis.cs" />
+    <Compile Include="Controls\Copilot\Popups\PopupWindow.xaml.cs">
+      <DependentUpon>PopupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Copilot\Popups\SummarizePopup.xaml.cs">
+      <DependentUpon>SummarizePopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\AddCertificateWindow.xaml.cs">
+      <DependentUpon>AddCertificateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\CertComboBoxItemTemplateSelector.cs" />
+    <Compile Include="Controls\DigitalSignatures\CertificateManagerWindow.xaml.cs">
+      <DependentUpon>CertificateManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\CreateDigitalSignatureDialog.xaml.cs">
+      <DependentUpon>CreateDigitalSignatureDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\DeferrerSignaturePropertiesDialog.xaml.cs">
+      <DependentUpon>DeferrerSignaturePropertiesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\DigitalSignatureBanner.xaml.cs">
+      <DependentUpon>DigitalSignatureBanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\DigitalSignatureControl.xaml.cs">
+      <DependentUpon>DigitalSignatureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\DigitalSignatureValidationIcon.xaml.cs">
+      <DependentUpon>DigitalSignatureValidationIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\ImportDigitalIdDialog.xaml.cs">
+      <DependentUpon>ImportDigitalIdDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\SignaturePropertiesDialog.xaml.cs">
+      <DependentUpon>SignaturePropertiesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DigitalSignatures\SignatureValidationStatusDialog.xaml.cs">
+      <DependentUpon>SignatureValidationStatusDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmptyTextVisibleConverter.cs" />
+    <Compile Include="Controls\EnterPasswordDialog.xaml.cs">
+      <DependentUpon>EnterPasswordDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilterByAnnotationsControl.xaml.cs">
+      <DependentUpon>FilterByAnnotationsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FlattenWindow.xaml.cs">
+      <DependentUpon>FlattenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FullScreenHelper.cs" />
+    <Compile Include="Controls\HotKeyListView.xaml.cs">
+      <DependentUpon>HotKeyListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageControl.xaml.cs">
+      <DependentUpon>ImageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ITreeViewNode.cs" />
+    <Compile Include="Controls\LinkEditWindows.xaml.cs">
+      <DependentUpon>LinkEditWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\DocumentSearchBox.xaml.cs">
+      <DependentUpon>DocumentSearchBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\DoubleRowPanel.cs" />
+    <Compile Include="Controls\Menus\IMenuItem.cs" />
+    <Compile Include="Controls\Menus\SelectPageComboBox.xaml.cs">
+      <DependentUpon>SelectPageComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\TagDataModel.cs" />
+    <Compile Include="Controls\Menus\ToggleButtonMenu.cs" />
+    <Compile Include="Controls\Menus\ToolbarButton.xaml.cs">
+      <DependentUpon>ToolbarButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarButtonContentTemplateSelector.cs" />
+    <Compile Include="Controls\Menus\ToolbarButtonContextMenu.cs" />
+    <Compile Include="Controls\Menus\ToolbarButtonContextMenuItem.cs" />
+    <Compile Include="Controls\Menus\ToolbarButtonContextMenuStyleSelector.cs" />
+    <Compile Include="Controls\Menus\ToolbarButtonHelper.cs" />
+    <Compile Include="Controls\Menus\ToolbarChildButton.cs" />
+    <Compile Include="Controls\Menus\ToolbarChildToggleButton.cs" />
+    <Compile Include="Controls\Menus\ToolbarRadioButton.cs" />
+    <Compile Include="Controls\Menus\ToolbarSettings\ApplyToDefaultButton.xaml.cs">
+      <DependentUpon>ApplyToDefaultButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\CollapsedColorPicker.xaml.cs">
+      <DependentUpon>CollapsedColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\ColorIndicatorConverter.cs" />
+    <Compile Include="Controls\Menus\ToolbarSettings\EraserPicker.xaml.cs">
+      <DependentUpon>EraserPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\ExitEditingButton.xaml.cs">
+      <DependentUpon>ExitEditingButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\FontNamePicker.xaml.cs">
+      <DependentUpon>FontNamePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\FontSizePicker.xaml.cs">
+      <DependentUpon>FontSizePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\FontStyleButton.xaml.cs">
+      <DependentUpon>FontStyleButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\IconPicker.xaml.cs">
+      <DependentUpon>IconPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\StringColorConverter.cs" />
+    <Compile Include="Controls\Menus\ToolbarSettings\StrokeThicknessPicker.xaml.cs">
+      <DependentUpon>StrokeThicknessPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\TextEditingButtons.xaml.cs">
+      <DependentUpon>TextEditingButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\TextMarkupColorPicker.xaml.cs">
+      <DependentUpon>TextMarkupColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\ToolbarImageSettingsExit.xaml.cs">
+      <DependentUpon>ToolbarImageSettingsExit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\ToolbarSettingContentTemplateSelector.cs" />
+    <Compile Include="Controls\Menus\ToolbarSettings\ToolbarSettingPanel.xaml.cs">
+      <DependentUpon>ToolbarSettingPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarSettings\ToolBarTextBlock.xaml.cs">
+      <DependentUpon>ToolBarTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\ToolbarShareToggleButton.cs" />
+    <Compile Include="Controls\Menus\ToolbarToggleButton.cs" />
+    <Compile Include="Controls\Menus\ToolShareButton.cs" />
+    <Compile Include="Controls\NavigationView.xaml.cs">
+      <DependentUpon>NavigationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NavigationViewDirection.cs" />
+    <Compile Include="Controls\NavigationViewItem.cs" />
+    <Compile Include="Controls\NavigationViewItemClickEventArgs.cs" />
+    <Compile Include="Controls\NumericUpDown\NumericUpDown.xaml.cs">
+      <DependentUpon>NumericUpDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OcrComponents\ConvertToSearchablePdfDialog.xaml.cs">
+      <DependentUpon>ConvertToSearchablePdfDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OcrComponents\NeedRecognitionBanner.xaml.cs">
+      <DependentUpon>NeedRecognitionBanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OcrComponents\OcrLanguageItemsControl.cs" />
+    <Compile Include="Controls\OpenFileTextBox.cs" />
+    <Compile Include="Controls\PageContents\TextObjectEditControl.xaml.cs">
+      <DependentUpon>TextObjectEditControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageContents\TextObjectEditDialog.xaml.cs">
+      <DependentUpon>TextObjectEditDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageContents\TextObjectHolder.cs" />
+    <Compile Include="Controls\PageEditor\CropPageApplyWin.xaml.cs">
+      <DependentUpon>CropPageApplyWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\EditTextToolTipWin.xaml.cs">
+      <DependentUpon>EditTextToolTipWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\ImageHelper.cs" />
+    <Compile Include="Controls\PageEditor\ImageViewer.xaml.cs">
+      <DependentUpon>ImageViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\InsertBlankPageDialog.xaml.cs">
+      <DependentUpon>InsertBlankPageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\InsertPageFromImage.xaml.cs">
+      <DependentUpon>InsertPageFromImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\InsertPageFromScanner.xaml.cs">
+      <DependentUpon>InsertPageFromScanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\InsertPageProperty.xaml.cs">
+      <DependentUpon>InsertPageProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\PageMergeDialog.xaml.cs">
+      <DependentUpon>PageMergeDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\PageRangeTextBox.xaml.cs">
+      <DependentUpon>PageRangeTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\PageResizeWindow.xaml.cs">
+      <DependentUpon>PageResizeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\Pagesize.cs" />
+    <Compile Include="Controls\PageEditor\PageSplitDialog.xaml.cs">
+      <DependentUpon>PageSplitDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\PagesView.xaml.cs">
+      <DependentUpon>PagesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageEditor\ScannerPreview.xaml.cs">
+      <DependentUpon>ScannerPreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageHeaderFooters\AddPageNumberDialog.xaml.cs">
+      <DependentUpon>AddPageNumberDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageHeaderFooters\LocationStringParser.cs" />
+    <Compile Include="Controls\PageHeaderFooters\MarginControl.xaml.cs">
+      <DependentUpon>MarginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageHeaderFooters\PageHeaderFooterDialog.xaml.cs">
+      <DependentUpon>PageHeaderFooterDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageHeaderFooters\PageNumberDialog.xaml.cs">
+      <DependentUpon>PageNumberDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageHeaderFooters\PagePlaceholderFormatter.cs" />
+    <Compile Include="Controls\PageHeaderFooters\ResultModel.cs" />
+    <Compile Include="Controls\PageHeaderFooters\ToreEdge.cs" />
+    <Compile Include="Controls\PageHeaderFooters\TorePaperControl.xaml.cs">
+      <DependentUpon>TorePaperControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageIndexTextBox.xaml.cs">
+      <DependentUpon>PageIndexTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageOperation\DeletePagesWindow.xaml.cs">
+      <DependentUpon>DeletePagesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageOperation\ExtractPagesWindow.xaml.cs">
+      <DependentUpon>ExtractPagesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PathTextBox.xaml.cs">
+      <DependentUpon>PathTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PathTextBoxPathChangedEventArgs.cs" />
+    <Compile Include="Controls\PdfPagePreviewControl.xaml.cs">
+      <DependentUpon>PdfPagePreviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PdfPagePreviewGridView.xaml.cs">
+      <DependentUpon>PdfPagePreviewGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PdfPagePreviewGridViewItem.cs" />
+    <Compile Include="Controls\PdfPagePreviewGridViewItemDragCompletedEventArgs.cs" />
+    <Compile Include="Controls\PdfPagePreviewGridViewItemDragStartEventArgs.cs" />
+    <Compile Include="Controls\PdfPagePreviewGridViewItemEventArgs.cs" />
+    <Compile Include="Controls\PdfPagePreviewHScrollGridView.xaml.cs">
+      <DependentUpon>PdfPagePreviewHScrollGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PdfPagePreviewHScrollGridViewItem.cs" />
+    <Compile Include="Controls\PdfPagePreviewListView.xaml.cs">
+      <DependentUpon>PdfPagePreviewListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PdfPagePreviewListViewItem.cs" />
+    <Compile Include="Controls\PdfViewerContextMenu.xaml.cs">
+      <DependentUpon>PdfViewerContextMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PdfViewerContextMenuItem.cs" />
+    <Compile Include="Controls\PdfViewerContextMenuItemStyleSelector.cs" />
+    <Compile Include="Controls\PdfViewerDecorators\AnnotationContextMenuHolder.cs" />
+    <Compile Include="Controls\PdfViewerDecorators\AnnotationPopupHolder.cs" />
+    <Compile Include="Controls\PdfViewerDecorators\DigitalSignatureContextMenuHolder.cs" />
+    <Compile Include="Controls\PdfViewerDecorators\LinkRightMenu.cs" />
+    <Compile Include="Controls\PdfViewerDecorators\PageDefaultContextMenuHolder.cs" />
+    <Compile Include="Controls\PdfViewerDecorators\SelectTextContextMenuHolder.cs" />
+    <Compile Include="Controls\PdfViewerDecorators\TextObjectContextMenuHolder.cs" />
+    <Compile Include="Controls\PdfViewerScrollViewer.cs" />
+    <Compile Include="Controls\Presentation\PdfImageFlipView.xaml.cs">
+      <DependentUpon>PdfImageFlipView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Presentation\PdfImageView.xaml.cs">
+      <DependentUpon>PdfImageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Presentation\PresentationWindow.xaml.cs">
+      <DependentUpon>PresentationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Printer\BatchPrinterListWindow.xaml.cs">
+      <DependentUpon>BatchPrinterListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Printer\BatchPrintSettingsWindow.xaml.cs">
+      <DependentUpon>BatchPrintSettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Printer\NoPrintDetectedWindow.xaml.cs">
+      <DependentUpon>NoPrintDetectedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Printer\PaperSizeInfo.cs" />
+    <Compile Include="Controls\Printer\PrintArgs.cs" />
+    <Compile Include="Controls\Printer\PrinterInfo.cs" />
+    <Compile Include="Controls\Printer\PrintPreviewControl.xaml.cs">
+      <DependentUpon>PrintPreviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Printer\PrintSource.cs" />
+    <Compile Include="Controls\Printer\StatusList.cs" />
+    <Compile Include="Controls\Printer\WinPrinterDialog.xaml.cs">
+      <DependentUpon>WinPrinterDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Printer\WinPrinterProgress.xaml.cs">
+      <DependentUpon>WinPrinterProgress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProgressWindow\InternalProgressMode.cs" />
+    <Compile Include="Controls\ProgressWindow\InternalProgressWindow.xaml.cs">
+      <DependentUpon>InternalProgressWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Protection\EncryptWindow.cs" />
+    <Compile Include="Controls\Protection\OwerPasswordCheckWindow.cs" />
+    <Compile Include="Controls\Protection\PasswordSaveTipWindow.cs" />
+    <Compile Include="Controls\ResizeView.xaml.cs">
+      <DependentUpon>ResizeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ResizeViewOperation.cs" />
+    <Compile Include="Controls\ResizeViewResizeDragEventArgs.cs" />
+    <Compile Include="Controls\ResizeViewResizeDragStartedEventArgs.cs" />
+    <Compile Include="Controls\SaveFolderTextBox.cs" />
+    <Compile Include="Controls\Screenshots\ChangeColorOperation.cs" />
+    <Compile Include="Controls\Screenshots\ChangeFontSizeOperation.cs" />
+    <Compile Include="Controls\Screenshots\ChangeTextBoxTextOperation.cs" />
+    <Compile Include="Controls\Screenshots\ChangeThicknessOperation.cs" />
+    <Compile Include="Controls\Screenshots\ComparisonWindow.xaml.cs">
+      <DependentUpon>ComparisonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\CropPageWindow.xaml.cs">
+      <DependentUpon>CropPageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\DeleteControlOperation.cs" />
+    <Compile Include="Controls\Screenshots\DrawControlExtensions.cs" />
+    <Compile Include="Controls\Screenshots\DrawControlMode.cs" />
+    <Compile Include="Controls\Screenshots\DrawControlOperation.cs" />
+    <Compile Include="Controls\Screenshots\DrawOperation.cs" />
+    <Compile Include="Controls\Screenshots\DrawSettingConstants.cs" />
+    <Compile Include="Controls\Screenshots\DrawSettingToolbar.xaml.cs">
+      <DependentUpon>DrawSettingToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\EnumKSPopupOpenMode.cs" />
+    <Compile Include="Controls\Screenshots\ExtractTextResultDialog.xaml.cs">
+      <DependentUpon>ExtractTextResultDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\FontSizeControl.xaml.cs">
+      <DependentUpon>FontSizeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\KSButton.xaml.cs">
+      <DependentUpon>KSButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\KSIcon.xaml.cs">
+      <DependentUpon>KSIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\KSPopupButton.cs" />
+    <Compile Include="Controls\Screenshots\KSPopupButtonPopupContentPresenter.cs" />
+    <Compile Include="Controls\Screenshots\KSSelectableButton.cs" />
+    <Compile Include="Controls\Screenshots\MarginModel.cs" />
+    <Compile Include="Controls\Screenshots\MoveControlOperation.cs" />
+    <Compile Include="Controls\Screenshots\OcrSelectLanguageDialog.xaml.cs">
+      <DependentUpon>OcrSelectLanguageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\OperationType.cs" />
+    <Compile Include="Controls\Screenshots\PageSizeModel.cs" />
+    <Compile Include="Controls\Screenshots\ScreenshotCropPageToolbar.xaml.cs">
+      <DependentUpon>ScreenshotCropPageToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\ScreenshotDialog.xaml.cs">
+      <DependentUpon>ScreenshotDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\ScreenshotDialogMode.cs" />
+    <Compile Include="Controls\Screenshots\ScreenshotDialogResult.cs" />
+    <Compile Include="Controls\Screenshots\ScreenshotExtractTextToolbar.xaml.cs">
+      <DependentUpon>ScreenshotExtractTextToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\ScreenshotImageToolbar.xaml.cs">
+      <DependentUpon>ScreenshotImageToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\ScreenshotOcrToolbar.xaml.cs">
+      <DependentUpon>ScreenshotOcrToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Screenshots\ScreenshotStatus.cs" />
+    <Compile Include="Controls\Screenshots\SelectedAdorner.cs" />
+    <Compile Include="Controls\SetDefaultAppDialog.xaml.cs">
+      <DependentUpon>SetDefaultAppDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShareSendFileDialog.xaml.cs">
+      <DependentUpon>ShareSendFileDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Signature\EmbedType.cs" />
+    <Compile Include="Controls\Signature\FontItem.cs" />
+    <Compile Include="Controls\Signature\MenuModel.cs" />
+    <Compile Include="Controls\Signature\SignatureApplyPageWin.xaml.cs">
+      <DependentUpon>SignatureApplyPageWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Signature\SignatureClearConfirmWin.xaml.cs">
+      <DependentUpon>SignatureClearConfirmWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Signature\SignatureCreateDialogResult.cs" />
+    <Compile Include="Controls\Signature\SignatureCreateWin.xaml.cs">
+      <DependentUpon>SignatureCreateWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Signature\SignatureEmbedConfirmWin.xaml.cs">
+      <DependentUpon>SignatureEmbedConfirmWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Signature\SignaturePicker.xaml.cs">
+      <DependentUpon>SignaturePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Signature\SignaturePickerItemClickEventArgs.cs" />
+    <Compile Include="Controls\Signature\SignatureSaveNumTipWin.xaml.cs">
+      <DependentUpon>SignatureSaveNumTipWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Speech\FormattedSlider.cs" />
+    <Compile Include="Controls\Speech\ImgaeFilePath.cs" />
+    <Compile Include="Controls\Speech\SpeechControl.xaml.cs">
+      <DependentUpon>SpeechControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Speech\SpeechMessage.xaml.cs">
+      <DependentUpon>SpeechMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StampEditWin.xaml.cs">
+      <DependentUpon>StampEditWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StampEditWindows.xaml.cs">
+      <DependentUpon>StampEditWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Stamp\BindingProxy.cs" />
+    <Compile Include="Controls\Stamp\ChangeCategoryNameWindow.xaml.cs">
+      <DependentUpon>ChangeCategoryNameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Stamp\DynamicStampPreview.cs" />
+    <Compile Include="Controls\Stamp\EditStampWindow.xaml.cs">
+      <DependentUpon>EditStampWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Stamp\StampDefaultTextPreview.cs" />
+    <Compile Include="Controls\Stamp\StampManageWindow.xaml.cs">
+      <DependentUpon>StampManageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Stamp\StampPicker.xaml.cs">
+      <DependentUpon>StampPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Stamp\StampPickerItemClickEventArgs.cs" />
+    <Compile Include="Controls\TextTrimmingToolTip.cs" />
+    <Compile Include="Controls\ToggleSwitch.xaml.cs">
+      <DependentUpon>ToggleSwitch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TransitionAnimationConverter.cs" />
+    <Compile Include="Controls\Translation\Popups\TranslatePopupWindow.xaml.cs">
+      <DependentUpon>TranslatePopupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Translation\Popups\TranslationWin.xaml.cs">
+      <DependentUpon>TranslationWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Translation\TranslatePanel.xaml.cs">
+      <DependentUpon>TranslatePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Users\UserInfoControl.xaml.cs">
+      <DependentUpon>UserInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VirtualThumbnailPanel.cs" />
+    <Compile Include="Controls\Watermark\UIElementAligent.xaml.cs">
+      <DependentUpon>UIElementAligent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Watermark\WatermarkEditWin.xaml.cs">
+      <DependentUpon>WatermarkEditWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Models\AnnotationsFilterModel.cs" />
+    <Compile Include="Models\Annotations\AnnotationFactory.cs" />
+    <Compile Include="Models\Annotations\AttachmentAnnotation.cs" />
+    <Compile Include="Models\Annotations\BaseAnnotation.cs" />
+    <Compile Include="Models\Annotations\BaseFigureAnnotation.cs" />
+    <Compile Include="Models\Annotations\BaseMarkupAnnotation.cs" />
+    <Compile Include="Models\Annotations\BaseTextMarkupAnnotation.cs" />
+    <Compile Include="Models\Annotations\CircleAnnotation.cs" />
+    <Compile Include="Models\Annotations\FreeTextAnnotation.cs" />
+    <Compile Include="Models\Annotations\HighlightAnnotation.cs" />
+    <Compile Include="Models\Annotations\InkAnnotation.cs" />
+    <Compile Include="Models\Annotations\LineAnnotation.cs" />
+    <Compile Include="Models\Annotations\LinkAnnotation.cs" />
+    <Compile Include="Models\Annotations\NotImplementedAnnotation.cs" />
+    <Compile Include="Models\Annotations\NotImplementedMarkupAnnotation.cs" />
+    <Compile Include="Models\Annotations\PdfAnnotationPropertyAccessor.cs" />
+    <Compile Include="Models\Annotations\PdfBorderEffectModel.cs" />
+    <Compile Include="Models\Annotations\PdfBorderStyleModel.cs" />
+    <Compile Include="Models\Annotations\PdfFileModel.cs" />
+    <Compile Include="Models\Annotations\PdfFileSpecificationModel.cs" />
+    <Compile Include="Models\Annotations\PdfImageObjectModel.cs" />
+    <Compile Include="Models\Annotations\PopupAnnotation.cs" />
+    <Compile Include="Models\Annotations\SquareAnnotation.cs" />
+    <Compile Include="Models\Annotations\StampAnnotation.cs" />
+    <Compile Include="Models\Annotations\StrikeoutAnnotation.cs" />
+    <Compile Include="Models\Annotations\TextAnnotation.cs" />
+    <Compile Include="Models\Annotations\UnderlineAnnotation.cs" />
+    <Compile Include="Models\Annotations\WatermarkAnnotation.cs" />
+    <Compile Include="Models\Attachments\AttachmentWrappersCollection.cs" />
+    <Compile Include="Models\Attachments\PDFAttachmentWrapper.cs" />
+    <Compile Include="Models\Bookmarks\BookmarkModel.cs" />
+    <Compile Include="Models\Bookmarks\BookmarkRecord.cs" />
+    <Compile Include="Models\Bookmarks\BookmarkRecordFactory.cs" />
+    <Compile Include="Models\Commets\AllPageCommetCollectionView.cs" />
+    <Compile Include="Models\Commets\CommetModel.cs" />
+    <Compile Include="Models\Commets\PageCommetCollection.cs" />
+    <Compile Include="Models\Copilot\ChatMessageModel.cs" />
+    <Compile Include="Models\DocumentPasswordRequestedEventArgs.cs" />
+    <Compile Include="Models\DocumentWrapper.cs" />
+    <Compile Include="Models\DynamicStamps\DynamicStampProperties.cs" />
+    <Compile Include="Models\EnumBindingObject.cs" />
+    <Compile Include="Models\LeftNavigations\NavigationModel.cs" />
+    <Compile Include="Models\Menus\AnnotationMenuPropertyAccessor.cs" />
+    <Compile Include="Models\Menus\BackgroundContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\ColorMoreItemContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\ContextMenuHorizontalButton.cs" />
+    <Compile Include="Models\Menus\ContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\ContextMenuItemType.cs" />
+    <Compile Include="Models\Menus\ContextMenuModel.cs" />
+    <Compile Include="Models\Menus\ContextMenuModelTypedSelectedAccessor.cs" />
+    <Compile Include="Models\Menus\ContextMenuRecentFileList.cs" />
+    <Compile Include="Models\Menus\ContextMenuSeparator.cs" />
+    <Compile Include="Models\Menus\ContextMenuTranslateModel.cs" />
+    <Compile Include="Models\Menus\ConvertContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\IContextMenuModel.cs" />
+    <Compile Include="Models\Menus\MainMenuGroup.cs" />
+    <Compile Include="Models\Menus\MoreItemContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\PresetsItemContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\QuickToolModel.cs" />
+    <Compile Include="Models\Menus\SearchModel.cs" />
+    <Compile Include="Models\Menus\SelectableContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\SelectableModelSelectionChangedEventArgs.cs" />
+    <Compile Include="Models\Menus\SelectableModelSelectionChangedEventHandler.cs" />
+    <Compile Include="Models\Menus\SelectedAccessorSelectionChangedEventArgs.cs" />
+    <Compile Include="Models\Menus\SpeechToolContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\SpeedContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\StampContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\StampCustomMenuItemModel.cs" />
+    <Compile Include="Models\Menus\ToolbarAnnotationButtonModel.cs" />
+    <Compile Include="Models\Menus\ToolbarButtonModel.cs" />
+    <Compile Include="Models\Menus\ToolbarChildButtonModel.cs" />
+    <Compile Include="Models\Menus\ToolbarChildCheckableButtonModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingId.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingInkEraserModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingInkEraserModeModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemApplyToDefaultModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemBoldModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemColorCollapseModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemColorModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemExitModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemFontNameModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemFontSizeModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemIconModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemImageExitModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemItalicModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemStrokeThicknessModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingItemTextEditingButtonsModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingModel.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolBarSettingTextBlock.cs" />
+    <Compile Include="Models\Menus\ToolbarSettings\ToolbarSettingType.cs" />
+    <Compile Include="Models\Menus\TypedContextMenuItemModel.cs" />
+    <Compile Include="Models\Menus\TypedContextMenuModel.cs" />
+    <Compile Include="Models\Operations\OperationManager.cs" />
+    <Compile Include="Models\Operations\OperationManagerEntryType.cs" />
+    <Compile Include="Models\Operations\SaveOperationName.cs" />
+    <Compile Include="Models\PageContents\ImageMatrix.cs" />
+    <Compile Include="Models\PageContents\MarkedContentModel.cs" />
+    <Compile Include="Models\PageContents\PageBaseObject.cs" />
+    <Compile Include="Models\PageContents\PageContentFactory.cs" />
+    <Compile Include="Models\PageContents\PageImageModel.cs" />
+    <Compile Include="Models\PageContents\PageTextObject.cs" />
+    <Compile Include="Models\Print\BatchPrintItemModel.cs" />
+    <Compile Include="Models\Print\PrintService.cs" />
+    <Compile Include="Models\Print\PrintSettings.cs" />
+    <Compile Include="Models\Protection\EncryptManage.cs" />
+    <Compile Include="Models\RecentFileItem.cs" />
+    <Compile Include="Models\Scan\AdjustSettings.cs" />
+    <Compile Include="Models\Scan\AdjustType.cs" />
+    <Compile Include="Models\Scan\ExportMode.cs" />
+    <Compile Include="Models\Scan\ImageViewerSource.cs" />
+    <Compile Include="Models\Scan\PaperSizeAttribute.cs" />
+    <Compile Include="Models\Scan\PaperSizeUnit.cs" />
+    <Compile Include="Models\Scan\ScanArea.cs" />
+    <Compile Include="Models\Scan\ScanColor.cs" />
+    <Compile Include="Models\Scan\ScannedPage.cs" />
+    <Compile Include="Models\Scan\ScannerDeviceInfo.cs" />
+    <Compile Include="Models\Scan\ScanResolution.cs" />
+    <Compile Include="Models\Scan\ScanSettings.cs" />
+    <Compile Include="Models\Scan\ScanSource.cs" />
+    <Compile Include="Models\Scan\WiaErrorCodes.cs" />
+    <Compile Include="Models\Stamp\GroupItem.cs" />
+    <Compile Include="Models\Stamp\StampGroupModel.cs" />
+    <Compile Include="Models\Stamp\TrackableGroupItemCollection.cs" />
+    <Compile Include="Models\Thumbnails\PdfPageEditList.cs" />
+    <Compile Include="Models\Thumbnails\PdfPageEditListModel.cs" />
+    <Compile Include="Models\Thumbnails\PdfThumbnailModel.cs" />
+    <Compile Include="Models\Translate\TranslateLanguage.cs" />
+    <Compile Include="Models\Viewer\BackgroundColorSetting.cs" />
+    <Compile Include="Models\Viewer\DataOperationModel.cs" />
+    <Compile Include="Models\Viewer\DragOperationModel.cs" />
+    <Compile Include="Models\Viewer\HoverOperationModel.cs" />
+    <Compile Include="Models\Viewer\MouseWheelZoomStepModel.cs" />
+    <Compile Include="Models\Viewer\ViewerOperationCompletedEventArgs.cs" />
+    <Compile Include="Models\Viewer\ViewerOperationEventHandler.cs" />
+    <Compile Include="Models\Viewer\ViewerOperationModel.cs" />
+    <Compile Include="Models\Viewer\ViewOperationResult.cs" />
+    <Compile Include="PDFKit\ToolBars\PrintProgress.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Services\AnnotationTooltipService.cs" />
+    <Compile Include="Services\PdfThumbnailService.cs" />
+    <Compile Include="Sharpen\Calendar.cs" />
+    <Compile Include="Sharpen\CalendarEnum.cs" />
+    <Compile Include="Sharpen\EnumeratorWrapper.cs" />
+    <Compile Include="Sharpen\Extensions.cs" />
+    <Compile Include="Sharpen\GregorianCalendar.cs" />
+    <Compile Include="Sharpen\GregorianCalendarEnum.cs" />
+    <Compile Include="Sharpen\IIterator.cs" />
+    <Compile Include="Sharpen\Iterator.cs" />
+    <Compile Include="Sharpen\PushbackReader.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsReadOnlyAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="Utils\AnnotationAuthorUtil.cs" />
+    <Compile Include="Utils\AnnotationChangedTraceContext.cs" />
+    <Compile Include="Utils\AnnotationControlExtensions.cs" />
+    <Compile Include="Utils\AnnotationModelUtils.cs" />
+    <Compile Include="Utils\AnnotationOperationManagerExtensions.cs" />
+    <Compile Include="Utils\AnnotationTrace.cs" />
+    <Compile Include="Utils\AppHotKeyManager.cs" />
+    <Compile Include="Utils\AttachmentFileUtils.cs" />
+    <Compile Include="Utils\AttachmentOperationManagerExtensions.cs" />
+    <Compile Include="Utils\Behaviors\PdfViewerPageBindingBehavior.cs" />
+    <Compile Include="Utils\Behaviors\ResizeAnimationBehavior.cs" />
+    <Compile Include="Utils\Behaviors\TextBoxEditBehavior.cs" />
+    <Compile Include="Utils\BitmapCursor.cs" />
+    <Compile Include="Utils\BookmarkOperationManagerExtensions.cs" />
+    <Compile Include="Utils\CommetUtils.cs" />
+    <Compile Include="Utils\Converters\A4RatioConverter.cs" />
+    <Compile Include="Utils\Converters\AndMultiBooleanConverter.cs" />
+    <Compile Include="Utils\Converters\AppSettingsBlankSizeSelectedToVisibility2Converter.cs" />
+    <Compile Include="Utils\Converters\AppSettingsBlankSizeSelectedToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\BatchPrintStatusConverter.cs" />
+    <Compile Include="Utils\Converters\BooleanReverseConverter.cs" />
+    <Compile Include="Utils\Converters\BooleanToHotkeyInvokeActionConverter.cs" />
+    <Compile Include="Utils\Converters\BooleanToOpacityConverter.cs" />
+    <Compile Include="Utils\Converters\BooleanToOpacityReverseConverter.cs" />
+    <Compile Include="Utils\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\BooleanToVisibilityReverseConverter.cs" />
+    <Compile Include="Utils\Converters\CenterBorderGapMaskConverter.cs" />
+    <Compile Include="Utils\Converters\ColorBrushConverter.cs" />
+    <Compile Include="Utils\Converters\CopiesToBooleanConverter.cs" />
+    <Compile Include="Utils\Converters\CopiesToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\DrawArrowHeightConverter.cs" />
+    <Compile Include="Utils\Converters\DrawControlMode2BooleanConverter.cs" />
+    <Compile Include="Utils\Converters\DrawControlMode2VisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\DrawControlMode2VisibilityReConverter.cs" />
+    <Compile Include="Utils\Converters\EraserTypeToBoolConverter.cs" />
+    <Compile Include="Utils\Converters\EraserTypeToBoolInverseConverter.cs" />
+    <Compile Include="Utils\Converters\EraserTypeToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\ImageTransFromAngleConverter.cs" />
+    <Compile Include="Utils\Converters\ImageTransFromLength.cs" />
+    <Compile Include="Utils\Converters\ImageTransFromScaleConverter.cs" />
+    <Compile Include="Utils\Converters\IntToBooleanConverter.cs" />
+    <Compile Include="Utils\Converters\InverseBooleanConverter.cs" />
+    <Compile Include="Utils\Converters\InverseVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\IsCollatedToImageSourceConverterr.cs" />
+    <Compile Include="Utils\Converters\LeftNavigationViewContentVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\LogicalOrConverter.cs" />
+    <Compile Include="Utils\Converters\MainViewSliderValueDocZoomConverter.cs" />
+    <Compile Include="Utils\Converters\MulBooleanToEnableConverter.cs" />
+    <Compile Include="Utils\Converters\NumberFormatConverter.cs" />
+    <Compile Include="Utils\Converters\NumberIsEqualConverter.cs" />
+    <Compile Include="Utils\Converters\PageResizeImageWidthConverter.cs" />
+    <Compile Include="Utils\Converters\ResolutionTrimConverter.cs" />
+    <Compile Include="Utils\Converters\ScannerCountToIsnableConvert.cs" />
+    <Compile Include="Utils\Converters\ScannerCountToVisibilityConvert.cs" />
+    <Compile Include="Utils\Converters\ScannerImageTransFormLength.cs" />
+    <Compile Include="Utils\Converters\SearchResultVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\SelectedCountVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\SerarchDelVisibitlityConverter.cs" />
+    <Compile Include="Utils\Converters\SizeModeConverter.cs" />
+    <Compile Include="Utils\Converters\StampCategoryCountToIsEnabledConverter.cs" />
+    <Compile Include="Utils\Converters\StampCategoryNameSletectConverter.cs" />
+    <Compile Include="Utils\Converters\StampContent2ToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\StampContentToIsEnabledConverter.cs" />
+    <Compile Include="Utils\Converters\StampContentToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\StampSelectedCountToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\StringBrushConverter.cs" />
+    <Compile Include="Utils\Converters\StringNotEmptyToVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\StringStrokeConverter.cs" />
+    <Compile Include="Utils\Converters\StringToBooleanConverter.cs" />
+    <Compile Include="Utils\Converters\SubViewModeContinuousConverter.cs" />
+    <Compile Include="Utils\Converters\SubViewModePageConverter.cs" />
+    <Compile Include="Utils\Converters\TextTrimmingConverter.cs" />
+    <Compile Include="Utils\Converters\ThicknessListBoxEllipseSizeConverter.cs" />
+    <Compile Include="Utils\Converters\ToolbarMenuVisibilityConverter.cs" />
+    <Compile Include="Utils\Converters\ToolbarSettingViewerPaddingConverter.cs" />
+    <Compile Include="Utils\Converters\TwoValuesIsEqualConverter.cs" />
+    <Compile Include="Utils\Converters\UIModeToBorderThicknessConverter.cs" />
+    <Compile Include="Utils\Copilot\CopilotHelper.cs" />
+    <Compile Include="Utils\CreateFileHelper.cs" />
+    <Compile Include="Utils\DigitalSignatures\CertificateManager.cs" />
+    <Compile Include="Utils\DigitalSignatures\CertificateStore.cs" />
+    <Compile Include="Utils\DigitalSignatures\DigitalSignatureFormattedItem.cs" />
+    <Compile Include="Utils\DigitalSignatures\ICertificateStorage.cs" />
+    <Compile Include="Utils\DigitalSignatures\SignatureFormatHelper.cs" />
+    <Compile Include="Utils\DigitalSignatures\SignatureValidateHelper.cs" />
+    <Compile Include="Utils\DigitalSignatures\X509CertificateFile.cs" />
+    <Compile Include="Utils\DocumentOcr\PageObjectProcessor.cs" />
+    <Compile Include="Utils\DocumentOcr\PdfContentType.cs" />
+    <Compile Include="Utils\DocumentOcr\SearchableDocumentHelper.cs" />
+    <Compile Include="Utils\DoubleClickHelper.cs" />
+    <Compile Include="Utils\DoubleUtil.cs" />
+    <Compile Include="Utils\DrawUtils.cs" />
+    <Compile Include="Utils\Email\EmailMessage.cs" />
+    <Compile Include="Utils\Email\MailApiProvider.cs" />
+    <Compile Include="Utils\Email\MapiFileDesc.cs" />
+    <Compile Include="Utils\Email\MapiFileDescW.cs" />
+    <Compile Include="Utils\Email\MAPIHelper.cs" />
+    <Compile Include="Utils\Email\MapiMessage.cs" />
+    <Compile Include="Utils\Email\MapiMessageW.cs" />
+    <Compile Include="Utils\Email\MapiRecipDesc.cs" />
+    <Compile Include="Utils\Email\MapiRecipDescW.cs" />
+    <Compile Include="Utils\EncryptUtils.cs" />
+    <Compile Include="Utils\EnumerableExtensions.cs" />
+    <Compile Include="Utils\Enums\SizeModesWrap.cs" />
+    <Compile Include="Utils\Enums\SubViewModeContinuous.cs" />
+    <Compile Include="Utils\Enums\SubViewModePage.cs" />
+    <Compile Include="Utils\ExceptionUtils.cs" />
+    <Compile Include="Utils\IAPUtils.cs" />
+    <Compile Include="Utils\ImageToPDFBitmapHelper.cs" />
+    <Compile Include="Utils\IndexedPdfInkAnnotation.cs" />
+    <Compile Include="Utils\LaunchActionInvokedEventArgs.cs" />
+    <Compile Include="Utils\LaunchActionInvokedEventHandler.cs" />
+    <Compile Include="Utils\LaunchUtils.cs" />
+    <Compile Include="Utils\LinkAnnotationModel.cs" />
+    <Compile Include="Utils\LinkAnnotationUtils.cs" />
+    <Compile Include="Utils\LinkOperationManagerExtensions.cs" />
+    <Compile Include="Utils\MessageBoxHelper.cs" />
+    <Compile Include="Utils\MessageTokens.cs" />
+    <Compile Include="Utils\MicaHelper.cs" />
+    <Compile Include="Utils\NativeMethods.cs" />
+    <Compile Include="Utils\PageImageUtils.cs" />
+    <Compile Include="Utils\PageObjectOperationManagerExtensions.cs" />
+    <Compile Include="Utils\PdfBaseTypeExtensions.cs" />
+    <Compile Include="Utils\PdfControlViewStateUtils.cs" />
+    <Compile Include="Utils\PdfDocumentMetadata.cs" />
+    <Compile Include="Utils\PdfDocumentMetadataConstants.cs" />
+    <Compile Include="Utils\PDFEraserUtil.cs" />
+    <Compile Include="Utils\PdfObjectExtensions.cs" />
+    <Compile Include="Utils\PdfTextMarkupAnnotationUtils.cs" />
+    <Compile Include="Utils\PdfViewJumpManager.cs" />
+    <Compile Include="Utils\PointerTrackerCore.cs" />
+    <Compile Include="Utils\PopupAnnotationWrapperExtensions.cs" />
+    <Compile Include="Utils\Printer\PrintDevModeHandle.cs" />
+    <Compile Include="Utils\Printer\PrinterDevModeHelper.cs" />
+    <Compile Include="Utils\Print\BeforeRenderPageEventArgs.cs" />
+    <Compile Include="Utils\Print\BookletBindingDirection.cs" />
+    <Compile Include="Utils\Print\BookletPageHelper.cs" />
+    <Compile Include="Utils\Print\BookletSubset.cs" />
+    <Compile Include="Utils\Print\PageOrder.cs" />
+    <Compile Include="Utils\Print\PagePrintedEventArgs.cs" />
+    <Compile Include="Utils\Print\PdfDocumentPaginator.cs" />
+    <Compile Include="Utils\Print\PdfPrintDocument.cs" />
+    <Compile Include="Utils\Print\PdfRenderHelper.cs" />
+    <Compile Include="Utils\Print\PrintPageIndexMapper.cs" />
+    <Compile Include="Utils\Print\PrintSizeMode.cs" />
+    <Compile Include="Utils\Print\PrintTypeSettingModel.cs" />
+    <Compile Include="Utils\ProgressUtils.cs" />
+    <Compile Include="Utils\RateUtils.cs" />
+    <Compile Include="Utils\ScanService.cs" />
+    <Compile Include="Utils\Scan\ClipCornerAdorner.cs" />
+    <Compile Include="Utils\Scan\ClipCornerBehavior.cs" />
+    <Compile Include="Utils\Scan\DebounceHelper.cs" />
+    <Compile Include="Utils\Scan\EnumHelper.cs" />
+    <Compile Include="Utils\Scan\NumberTextBoxBehavior.cs" />
+    <Compile Include="Utils\Scan\PageService.cs" />
+    <Compile Include="Utils\Scan\PaperSizeConverter.cs" />
+    <Compile Include="Utils\Scan\ScannerDispatcherHelper.cs" />
+    <Compile Include="Utils\Scan\ScannerImageHelper.cs" />
+    <Compile Include="Utils\Scan\ScannerImageService.cs" />
+    <Compile Include="Utils\Scan\ScannerResourceAttribute.cs" />
+    <Compile Include="Utils\ScreenUtils.cs" />
+    <Compile Include="Utils\ScrollIntoViewOrientation.cs" />
+    <Compile Include="Utils\ScrollUtils.cs" />
+    <Compile Include="Utils\SDKUtils.cs" />
+    <Compile Include="Utils\SetDefaultAppUtils.cs" />
+    <Compile Include="Utils\ShareUtils.cs" />
+    <Compile Include="Utils\SpeechUtils.cs" />
+    <Compile Include="Utils\StampApplyHepler.cs" />
+    <Compile Include="Utils\SupportUtils.cs" />
+    <Compile Include="Utils\TempFileUtils.cs" />
+    <Compile Include="Utils\TextInfo.cs" />
+    <Compile Include="Utils\ToolbarContextMenuHelper.cs" />
+    <Compile Include="Utils\ToolbarContextMenuValueEqualityComparer.cs" />
+    <Compile Include="Utils\ToolbarSettingConfigHelper.cs" />
+    <Compile Include="Utils\ToolbarSettingsHelper.cs" />
+    <Compile Include="Utils\TreeViewExtensions.cs" />
+    <Compile Include="Utils\UIElementExtension.cs" />
+    <Compile Include="Utils\UserGuideUtils.cs" />
+    <Compile Include="Utils\Validations\StringValidateRule.cs" />
+    <Compile Include="ViewModels\AnnotationMode.cs" />
+    <Compile Include="ViewModels\AnnotationToolbarViewModel.cs" />
+    <Compile Include="ViewModels\AppSettingsViewModel.cs" />
+    <Compile Include="ViewModels\ConverterCommands.cs" />
+    <Compile Include="ViewModels\CreatePdfFileType.cs" />
+    <Compile Include="ViewModels\DynamicStampTextModel.cs" />
+    <Compile Include="ViewModels\InsertFromScannerViewModel.cs" />
+    <Compile Include="ViewModels\IStampTextModel.cs" />
+    <Compile Include="ViewModels\LanguageModel.cs" />
+    <Compile Include="ViewModels\LinkSelect.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\PageEditorViewModel.cs" />
+    <Compile Include="ViewModels\PageObjectType.cs" />
+    <Compile Include="ViewModels\PageZoomLevel.cs" />
+    <Compile Include="ViewModels\PresetStampTextModel.cs" />
+    <Compile Include="ViewModels\ShareTabViewModel.cs" />
+    <Compile Include="ViewModels\Source.cs" />
+    <Compile Include="ViewModels\StampAnnotationMode.cs" />
+    <Compile Include="ViewModels\StampFormControlModel.cs" />
+    <Compile Include="ViewModels\StampImageModel.cs" />
+    <Compile Include="ViewModels\StampManageViewModel.cs" />
+    <Compile Include="ViewModels\StampTextModel.cs" />
+    <Compile Include="ViewModels\TranslateViewModel.cs" />
+    <Compile Include="ViewModels\ViewToolbarViewModel.cs" />
+    <Compile Include="ViewModels\WatermarkAnnonationModel.cs" />
+    <Compile Include="ViewModels\WatermarkImageModel.cs" />
+    <Compile Include="ViewModels\WatermarkTextModel.cs" />
+    <Compile Include="Views\AppSettingsWindow.xaml.cs">
+      <DependentUpon>AppSettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AttachmentDescriptionWindow.xaml.cs">
+      <DependentUpon>AttachmentDescriptionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DocumentPropertiesWindow.xaml.cs">
+      <DependentUpon>DocumentPropertiesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GearForMobilephone.xaml.cs">
+      <DependentUpon>GearForMobilephone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PurchasedWindow.xaml.cs">
+      <DependentUpon>PurchasedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RateWindow.xaml.cs">
+      <DependentUpon>RateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SaveAttachmentSuccessWindow.xaml.cs">
+      <DependentUpon>SaveAttachmentSuccessWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingWindow.xaml.cs">
+      <DependentUpon>SettingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubscribeWindow.xaml.cs">
+      <DependentUpon>SubscribeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Survey.xaml.cs">
+      <DependentUpon>Survey.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XmpCore\Impl\ByteBuffer.cs" />
+    <Compile Include="XmpCore\Impl\FixAsciiControlsReader.cs" />
+    <Compile Include="XmpCore\Impl\Iso8601Converter.cs" />
+    <Compile Include="XmpCore\Impl\Latin1Converter.cs" />
+    <Compile Include="XmpCore\Impl\ParameterAsserts.cs" />
+    <Compile Include="XmpCore\Impl\ParseRdf.cs" />
+    <Compile Include="XmpCore\Impl\ParseState.cs" />
+    <Compile Include="XmpCore\Impl\QName.cs" />
+    <Compile Include="XmpCore\Impl\RdfTerm.cs" />
+    <Compile Include="XmpCore\Impl\Utils.cs" />
+    <Compile Include="XmpCore\Impl\XmpDateTime.cs" />
+    <Compile Include="XmpCore\Impl\XmpIterator.cs" />
+    <Compile Include="XmpCore\Impl\XmpMeta.cs" />
+    <Compile Include="XmpCore\Impl\XmpMetaParser.cs" />
+    <Compile Include="XmpCore\Impl\XmpNode.cs" />
+    <Compile Include="XmpCore\Impl\XmpNodeUtils.cs" />
+    <Compile Include="XmpCore\Impl\XmpNormalizer.cs" />
+    <Compile Include="XmpCore\Impl\XmpSchemaRegistry.cs" />
+    <Compile Include="XmpCore\Impl\XmpSerializerHelper.cs" />
+    <Compile Include="XmpCore\Impl\XmpSerializerRdf.cs" />
+    <Compile Include="XmpCore\Impl\XmpUtils.cs" />
+    <Compile Include="XmpCore\Impl\XPath\PathPosition.cs" />
+    <Compile Include="XmpCore\Impl\XPath\XmpPath.cs" />
+    <Compile Include="XmpCore\Impl\XPath\XmpPathParser.cs" />
+    <Compile Include="XmpCore\Impl\XPath\XmpPathSegment.cs" />
+    <Compile Include="XmpCore\Impl\XPath\XmpPathStepType.cs" />
+    <Compile Include="XmpCore\IXmpAliasInfo.cs" />
+    <Compile Include="XmpCore\IXmpDateTime.cs" />
+    <Compile Include="XmpCore\IXmpIterator.cs" />
+    <Compile Include="XmpCore\IXmpMeta.cs" />
+    <Compile Include="XmpCore\IXmpProperty.cs" />
+    <Compile Include="XmpCore\IXmpPropertyInfo.cs" />
+    <Compile Include="XmpCore\IXmpSchemaRegistry.cs" />
+    <Compile Include="XmpCore\IXmpVersionInfo.cs" />
+    <Compile Include="XmpCore\Options\AliasOptions.cs" />
+    <Compile Include="XmpCore\Options\IteratorOptions.cs" />
+    <Compile Include="XmpCore\Options\Options.cs" />
+    <Compile Include="XmpCore\Options\ParseOptions.cs" />
+    <Compile Include="XmpCore\Options\PropertyOptions.cs" />
+    <Compile Include="XmpCore\Options\SerializeOptions.cs" />
+    <Compile Include="XmpCore\Options\TemplateOptions.cs" />
+    <Compile Include="XmpCore\XmpConstants.cs" />
+    <Compile Include="XmpCore\XmpDateTimeFactory.cs" />
+    <Compile Include="XmpCore\XmpErrorCode.cs" />
+    <Compile Include="XmpCore\XmpException.cs" />
+    <Compile Include="XmpCore\XmpMetaFactory.cs" />
+    <Compile Include="XmpCore\XmpPathFactory.cs" />
+    <Compile Include="XmpCore\XmpUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ko.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
+    <EmbeddedResource Include="Utils\DigitalSignatures\ISO-3166-ID-SHORT.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\AnimationExtentButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\AnnotationDragControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\AnnotationDragEditControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\AnnotationFreeTextEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\AnnotationLineControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\AnnotationPopupControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\AnnotationTextControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\AnnotationToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\SignatureDragControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\StampAnnotationDragControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Annotations\StampAnnotationMoveControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BookmarkRenameDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Bookmarks\BookmarkControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Bookmarks\BookmarkTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Bookmarks\BookmarkTreeViewItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CommetControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Copilot\ChatBubble.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Copilot\ChatButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Copilot\ChatPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Copilot\ExportChatMessagesDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Copilot\Popups\PopupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Copilot\Popups\SummarizePopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\dialogbutton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\AddCertificateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\CertificateManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\CreateDigitalSignatureDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\DeferrerSignaturePropertiesDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\DigitalSignatureBanner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\DigitalSignatureControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\digitalsignaturecontrolstyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\DigitalSignatureValidationIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\ImportDigitalIdDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\SignaturePropertiesDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DigitalSignatures\SignatureValidationStatusDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\EnterPasswordDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FilterByAnnotationsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FlattenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HotKeyListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ImageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\LinkEditWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\DocumentSearchBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\SelectPageComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\toolbarbuttoncontextmenustyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\ApplyToDefaultButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\CollapsedColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\EraserPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\ExitEditingButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\FontNamePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\FontSizePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\FontStyleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\IconPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\StrokeThicknessPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\TextEditingButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\TextMarkupColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\ToolbarImageSettingsExit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\ToolbarSettingPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\toolbarsettingstyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menus\ToolbarSettings\ToolBarTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NavigationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NumericUpDown\NumericUpDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\OcrComponents\ConvertToSearchablePdfDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\OcrComponents\NeedRecognitionBanner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageContents\TextObjectEditControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageContents\TextObjectEditDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\CropPageApplyWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\EditTextToolTipWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\ImageViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\InsertBlankPageDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\InsertPageFromImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\InsertPageFromScanner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\InsertPageProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\PageMergeDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\PageRangeTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\PageResizeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\PageSplitDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\PagesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageEditor\ScannerPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageHeaderFooters\AddPageNumberDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageHeaderFooters\MarginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageHeaderFooters\PageHeaderFooterDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageHeaderFooters\pageheaderfooterstyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageHeaderFooters\PageNumberDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageHeaderFooters\TorePaperControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageIndexTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageOperation\DeletePagesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageOperation\ExtractPagesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PathTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PdfPagePreviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PdfPagePreviewGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PdfPagePreviewHScrollGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PdfPagePreviewListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PdfViewerContextMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Presentation\PdfImageFlipView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Presentation\PdfImageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Presentation\PresentationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Printer\BatchPrinterListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Printer\BatchPrintSettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Printer\NoPrintDetectedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Printer\PrintPreviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Printer\WinPrinterDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Printer\WinPrinterProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProgressWindow\InternalProgressWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\protect\encryptwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\protect\owerpasswordcheckwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\protect\passwordsavetipwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ResizeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\ComparisonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\CropPageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\DrawSettingToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\ExtractTextResultDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\FontSizeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\KSButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\KSIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\OcrSelectLanguageDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\ScreenshotCropPageToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\ScreenshotDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\ScreenshotExtractTextToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\ScreenshotImageToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Screenshots\ScreenshotOcrToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SetDefaultAppDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ShareSendFileDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Signature\SignatureApplyPageWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Signature\SignatureClearConfirmWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Signature\SignatureCreateWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Signature\SignatureEmbedConfirmWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Signature\SignaturePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Signature\SignatureSaveNumTipWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Speech\SpeechControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Speech\SpeechMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\StampEditWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\StampEditWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Stamp\ChangeCategoryNameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Stamp\EditStampWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Stamp\StampManageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Stamp\StampPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ToggleSwitch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Translation\Popups\TranslatePopupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Translation\Popups\TranslationWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Translation\TranslatePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Users\UserInfoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Watermark\UIElementAligent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Watermark\WatermarkEditWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="themes\controlthemes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="themes\generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="themes\templatedcontrolresources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Utils\Print\printprogress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppSettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AttachmentDescriptionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DocumentPropertiesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GearForMobilephone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PurchasedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SaveAttachmentSuccessWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SubscribeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Survey.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="appicon.ico" />
+    <Resource Include="style\darkmoderesources\about.png" />
+    <Resource Include="style\darkmoderesources\annonate\addattachment.png" />
+    <Resource Include="style\darkmoderesources\annonate\addsignature.png" />
+    <Resource Include="style\darkmoderesources\annonate\addwatermark.png" />
+    <Resource Include="style\darkmoderesources\annonate\annotationmanage.png" />
+    <Resource Include="style\darkmoderesources\annonate\arrow.png" />
+    <Resource Include="style\darkmoderesources\annonate\attachment.png" />
+    <Resource Include="style\darkmoderesources\annonate\attachmentmanager.png" />
+    <Resource Include="style\darkmoderesources\annonate\deletelink.png" />
+    <Resource Include="style\darkmoderesources\annonate\ellipse.png" />
+    <Resource Include="style\darkmoderesources\annonate\eraser.png" />
+    <Resource Include="style\darkmoderesources\annonate\exit3.png" />
+    <Resource Include="style\darkmoderesources\annonate\file.png" />
+    <Resource Include="style\darkmoderesources\annonate\fillcolor.png" />
+    <Resource Include="style\darkmoderesources\annonate\fontcolor.png" />
+    <Resource Include="style\darkmoderesources\annonate\fontsize.png" />
+    <Resource Include="style\darkmoderesources\annonate\hide.png" />
+    <Resource Include="style\darkmoderesources\annonate\highlightarea2.png" />
+    <Resource Include="style\darkmoderesources\annonate\highlighttext.png" />
+    <Resource Include="style\darkmoderesources\annonate\ink.png" />
+    <Resource Include="style\darkmoderesources\annonate\insertpicture.png" />
+    <Resource Include="style\darkmoderesources\annonate\inserttext.png" />
+    <Resource Include="style\darkmoderesources\annonate\line.png" />
+    <Resource Include="style\darkmoderesources\annonate\link.png" />
+    <Resource Include="style\darkmoderesources\annonate\linkce.png" />
+    <Resource Include="style\darkmoderesources\annonate\linkselected.png" />
+    <Resource Include="style\darkmoderesources\annonate\mail.png" />
+    <Resource Include="style\darkmoderesources\annonate\note.png" />
+    <Resource Include="style\darkmoderesources\annonate\partial.png" />
+    <Resource Include="style\darkmoderesources\annonate\presets.png" />
+    <Resource Include="style\darkmoderesources\annonate\shape.png" />
+    <Resource Include="style\darkmoderesources\annonate\show.png" />
+    <Resource Include="style\darkmoderesources\annonate\signature.png" />
+    <Resource Include="style\darkmoderesources\annonate\stamp.png" />
+    <Resource Include="style\darkmoderesources\annonate\strike.png" />
+    <Resource Include="style\darkmoderesources\annonate\strokecolor.png" />
+    <Resource Include="style\darkmoderesources\annonate\strokethickness.png" />
+    <Resource Include="style\darkmoderesources\annonate\text.png" />
+    <Resource Include="style\darkmoderesources\annonate\textbox.png" />
+    <Resource Include="style\darkmoderesources\annonate\translate.png" />
+    <Resource Include="style\darkmoderesources\annonate\underline.png" />
+    <Resource Include="style\darkmoderesources\annonate\watermark.png" />
+    <Resource Include="style\darkmoderesources\annonate\whole.png" />
+    <Resource Include="style\darkmoderesources\appsettings.png" />
+    <Resource Include="style\darkmoderesources\autoscroll.png" />
+    <Resource Include="style\darkmoderesources\compress.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\blankpage.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_add.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_addbookmark.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_addlink.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_compreepdf.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_croppages.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_deletepages.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_edittext.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_extractpages.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_insertheaderandfooter.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_insertimage.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_insertpage.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_inserttext.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_mergeandsplit.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_mergepdf.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_ocrpages.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_pagenumber.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_print.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_rotateleft.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_rotateright.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\defaultcontextmenu_splitpdf.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\digitalsignature_remove.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\digitalsignature_showproperties.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\digitalsignature_validate.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\ediorimage.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\editdescription.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\fromimage.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\frompdf.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\fromscanner.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\fromword.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\hierarchybottom.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\imagecontroldelete.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\imagecontrolexport.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\imagecontrolfilphor.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\imagecontrolfilpver.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\imagecontrolhierarchy.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\imagecontrolreplace.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\imagecontrolrotate.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\imagecontroltext.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\imageexit.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\openfile.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\properties.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\savetopc.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\screenshot_cancel2.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\screenshot_copy.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\screenshot_done.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\screenshot_edit.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\screenshot_pagerange.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\screenshot_save.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_annotdelete.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_copy.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_deletetext.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_duplicate.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_erase.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_highlight.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_strike.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_textobjedit.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_translate.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\select_underline.png" />
+    <Resource Include="style\darkmoderesources\contextmenu\translatewords.png" />
+    <Resource Include="style\darkmoderesources\continus2.png" />
+    <Resource Include="style\darkmoderesources\converter\convert.png" />
+    <Resource Include="style\darkmoderesources\converter\pdftoexcel.png" />
+    <Resource Include="style\darkmoderesources\converter\pdftohtml.png" />
+    <Resource Include="style\darkmoderesources\converter\pdftoimage.png" />
+    <Resource Include="style\darkmoderesources\converter\pdftoppt.png" />
+    <Resource Include="style\darkmoderesources\converter\pdftortf.png" />
+    <Resource Include="style\darkmoderesources\converter\pdftotxt2.png" />
+    <Resource Include="style\darkmoderesources\converter\pdftoword.png" />
+    <Resource Include="style\darkmoderesources\converter\pdftoxml.png" />
+    <Resource Include="style\darkmoderesources\digitalsignature\invalidicon.png" />
+    <Resource Include="style\darkmoderesources\digitalsignature\signcertmenuicon.png" />
+    <Resource Include="style\darkmoderesources\digitalsignature\unknownicon.png" />
+    <Resource Include="style\darkmoderesources\digitalsignature\unsignedicon.png" />
+    <Resource Include="style\darkmoderesources\digitalsignature\validcertmenuicon.png" />
+    <Resource Include="style\darkmoderesources\digitalsignature\validicon.png" />
+    <Resource Include="style\darkmoderesources\double.png" />
+    <Resource Include="style\darkmoderesources\down.png" />
+    <Resource Include="style\darkmoderesources\edit_text.png" />
+    <Resource Include="style\darkmoderesources\feedback2.png" />
+    <Resource Include="style\darkmoderesources\fit.png" />
+    <Resource Include="style\darkmoderesources\fullsize.png" />
+    <Resource Include="style\darkmoderesources\guide.png" />
+    <Resource Include="style\darkmoderesources\headerfooter\footerbarcontiusimage.png" />
+    <Resource Include="style\darkmoderesources\headerfooter\footerbardoublepage.png" />
+    <Resource Include="style\darkmoderesources\headerfooter\footerbarpptimage.png" />
+    <Resource Include="style\darkmoderesources\headerfooter\footerbarsinglepage.png" />
+    <Resource Include="style\darkmoderesources\headerfooter\hfinsertdate.png" />
+    <Resource Include="style\darkmoderesources\headerfooter\hfinsertfilename.png" />
+    <Resource Include="style\darkmoderesources\headerfooter\hfinsertpagenumber.png" />
+    <Resource Include="style\darkmoderesources\height.png" />
+    <Resource Include="style\darkmoderesources\hightlightfillable.png" />
+    <Resource Include="style\darkmoderesources\left2.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\annotation-select.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\annotation.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\attachment-select.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\attachment.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\bookmark-select.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\bookmark.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\digitalsignature-select.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\digitalsignature.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\thumbnail-select.png" />
+    <Resource Include="style\darkmoderesources\leftnavicon\thumbnail.png" />
+    <Resource Include="style\darkmoderesources\newpdf.png" />
+    <Resource Include="style\darkmoderesources\object.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\background.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\batchprint.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\blankpage.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\compress.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\createpdf.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\croppage.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\delete.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\exit.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\exportas.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\extract.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\frompdf.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\fromscanner.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\headerfooter.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\help.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\hfadd.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\hfdelete.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\hfupdate.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\hovericons\delete.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\hovericons\insert.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\hovericons\rotateleft.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\hovericons\rotateright.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\insert.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\merge.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\mergeandsplit.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\newformblank.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\newfromimage.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\newfromscanner.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\openfile.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\pagenewpdf.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\pagenumber.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\pageresize.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\print.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\recentfile.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\rotateleft.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\rotateright.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\save.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\saveas.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\share.png" />
+    <Resource Include="style\darkmoderesources\pageeditor\split.png" />
+    <Resource Include="style\darkmoderesources\pdfaibtn.png" />
+    <Resource Include="style\darkmoderesources\present.png" />
+    <Resource Include="style\darkmoderesources\print.png" />
+    <Resource Include="style\darkmoderesources\printer\batchprintdeletefile.png" />
+    <Resource Include="style\darkmoderesources\printer\batchprintsettings.png" />
+    <Resource Include="style\darkmoderesources\printer\menubatchprintimage.png" />
+    <Resource Include="style\darkmoderesources\printer\printlayout1.png" />
+    <Resource Include="style\darkmoderesources\printer\printlayout2.png" />
+    <Resource Include="style\darkmoderesources\printer\printlayout3.png" />
+    <Resource Include="style\darkmoderesources\printer\printlayout4.png" />
+    <Resource Include="style\darkmoderesources\printer\printremovefile.png" />
+    <Resource Include="style\darkmoderesources\properties.png" />
+    <Resource Include="style\darkmoderesources\protect\certmanager.png" />
+    <Resource Include="style\darkmoderesources\protect\decrypt.png" />
+    <Resource Include="style\darkmoderesources\protect\deferreddigialsign.png" />
+    <Resource Include="style\darkmoderesources\protect\digialsign.png" />
+    <Resource Include="style\darkmoderesources\protect\encrypt.png" />
+    <Resource Include="style\darkmoderesources\protect\redact.png" />
+    <Resource Include="style\darkmoderesources\protect\saveasflatten.png" />
+    <Resource Include="style\darkmoderesources\right2.png" />
+    <Resource Include="style\darkmoderesources\scan\disscanneraddimage.png" />
+    <Resource Include="style\darkmoderesources\scan\disscannerdelete.png" />
+    <Resource Include="style\darkmoderesources\scan\disscannerrotateleft.png" />
+    <Resource Include="style\darkmoderesources\scan\disscannerrotateright.png" />
+    <Resource Include="style\darkmoderesources\scan\scanneraddimage.png" />
+    <Resource Include="style\darkmoderesources\scan\scannerdelete.png" />
+    <Resource Include="style\darkmoderesources\scan\scannerrefresh.png" />
+    <Resource Include="style\darkmoderesources\scan\scannerrotateleft.png" />
+    <Resource Include="style\darkmoderesources\scan\scannerrotateright.png" />
+    <Resource Include="style\darkmoderesources\screenshot.png" />
+    <Resource Include="style\darkmoderesources\screenshot_ocr.png" />
+    <Resource Include="style\darkmoderesources\share_email.png" />
+    <Resource Include="style\darkmoderesources\share_sendfile.png" />
+    <Resource Include="style\darkmoderesources\sidebarextract.png" />
+    <Resource Include="style\darkmoderesources\sidebarinsert.png" />
+    <Resource Include="style\darkmoderesources\sidebarmerge.png" />
+    <Resource Include="style\darkmoderesources\sidebarsplit.png" />
+    <Resource Include="style\darkmoderesources\signature\addnew.png" />
+    <Resource Include="style\darkmoderesources\signature\apply.png" />
+    <Resource Include="style\darkmoderesources\signature\delete.png" />
+    <Resource Include="style\darkmoderesources\signature\deleteinbatch.png" />
+    <Resource Include="style\darkmoderesources\signature\embed.png" />
+    <Resource Include="style\darkmoderesources\signature\embedinbatch.png" />
+    <Resource Include="style\darkmoderesources\signature\removebghelp.png" />
+    <Resource Include="style\darkmoderesources\single.png" />
+    <Resource Include="style\darkmoderesources\speach.png" />
+    <Resource Include="style\darkmoderesources\speech\checked.png" />
+    <Resource Include="style\darkmoderesources\speech\globe.png" />
+    <Resource Include="style\darkmoderesources\speech\pause.png" />
+    <Resource Include="style\darkmoderesources\speech\play.png" />
+    <Resource Include="style\darkmoderesources\speech\speed.png" />
+    <Resource Include="style\darkmoderesources\speech\stop.png" />
+    <Resource Include="style\darkmoderesources\speech\tone.png" />
+    <Resource Include="style\darkmoderesources\speech\voice.png" />
+    <Resource Include="style\darkmoderesources\stamp\disstampcategoryrename.png" />
+    <Resource Include="style\darkmoderesources\stamp\disstampdelete.png" />
+    <Resource Include="style\darkmoderesources\stamp\ellipse.png" />
+    <Resource Include="style\darkmoderesources\stamp\manageimage.png" />
+    <Resource Include="style\darkmoderesources\stamp\menustampadd.png" />
+    <Resource Include="style\darkmoderesources\stamp\rectangle.png" />
+    <Resource Include="style\darkmoderesources\stamp\rectangledoublearrow.png" />
+    <Resource Include="style\darkmoderesources\stamp\rectangledoublereversearrow.png" />
+    <Resource Include="style\darkmoderesources\stamp\rectanglesinglearrow.png" />
+    <Resource Include="style\darkmoderesources\stamp\rectanglesinglereversearrow.png" />
+    <Resource Include="style\darkmoderesources\stamp\stampadd.png" />
+    <Resource Include="style\darkmoderesources\stamp\stampcategoryrename.png" />
+    <Resource Include="style\darkmoderesources\stamp\stampdelete.png" />
+    <Resource Include="style\darkmoderesources\stamp\stampdeletechecked.png" />
+    <Resource Include="style\darkmoderesources\stamp\stampedit.png" />
+    <Resource Include="style\darkmoderesources\sunandmoon.png" />
+    <Resource Include="style\darkmoderesources\toolbar-print.png" />
+    <Resource Include="style\darkmoderesources\toolbar-search.png" />
+    <Resource Include="style\darkmoderesources\up.png" />
+    <Resource Include="style\darkmoderesources\update.png" />
+    <Resource Include="style\darkmoderesources\viewer-arrow.png" />
+    <Resource Include="style\darkmoderesources\viewer-hand.png" />
+    <Resource Include="style\darkmoderesources\width.png" />
+    <Resource Include="style\resources\about.png" />
+    <Resource Include="style\resources\annonate\add.png" />
+    <Resource Include="style\resources\annonate\addattachment.png" />
+    <Resource Include="style\resources\annonate\addimg.png" />
+    <Resource Include="style\resources\annonate\addpic.png" />
+    <Resource Include="style\resources\annonate\addsignature.png" />
+    <Resource Include="style\resources\annonate\addwatermark.png" />
+    <Resource Include="style\resources\annonate\annotationmanage.png" />
+    <Resource Include="style\resources\annonate\arrow.png" />
+    <Resource Include="style\resources\annonate\arrowtxt.png" />
+    <Resource Include="style\resources\annonate\attachment.png" />
+    <Resource Include="style\resources\annonate\attachmentmanager.png" />
+    <Resource Include="style\resources\annonate\clear.png" />
+    <Resource Include="style\resources\annonate\deletelink.png" />
+    <Resource Include="style\resources\annonate\ellipse.png" />
+    <Resource Include="style\resources\annonate\eraser.cur" />
+    <Resource Include="style\resources\annonate\eraser.png" />
+    <Resource Include="style\resources\annonate\exit.png" />
+    <Resource Include="style\resources\annonate\exit2.png" />
+    <Resource Include="style\resources\annonate\exit3.png" />
+    <Resource Include="style\resources\annonate\export.png" />
+    <Resource Include="style\resources\annonate\file.png" />
+    <Resource Include="style\resources\annonate\fillcolor.png" />
+    <Resource Include="style\resources\annonate\fontcolor.png" />
+    <Resource Include="style\resources\annonate\fontsize.png" />
+    <Resource Include="style\resources\annonate\hide.png" />
+    <Resource Include="style\resources\annonate\highlightarea.png" />
+    <Resource Include="style\resources\annonate\highlightarea2.png" />
+    <Resource Include="style\resources\annonate\highlightareatxt.png" />
+    <Resource Include="style\resources\annonate\highlighttext.png" />
+    <Resource Include="style\resources\annonate\highlighttxt.png" />
+    <Resource Include="style\resources\annonate\ink.png" />
+    <Resource Include="style\resources\annonate\inktxt.png" />
+    <Resource Include="style\resources\annonate\insertpicture.png" />
+    <Resource Include="style\resources\annonate\inserttext.png" />
+    <Resource Include="style\resources\annonate\line.png" />
+    <Resource Include="style\resources\annonate\linecolor.png" />
+    <Resource Include="style\resources\annonate\linestrokeselected.png" />
+    <Resource Include="style\resources\annonate\linetxt.png" />
+    <Resource Include="style\resources\annonate\linewidth.png" />
+    <Resource Include="style\resources\annonate\link.png" />
+    <Resource Include="style\resources\annonate\linkce.png" />
+    <Resource Include="style\resources\annonate\linkselected.png" />
+    <Resource Include="style\resources\annonate\mail.png" />
+    <Resource Include="style\resources\annonate\mail2.png" />
+    <Resource Include="style\resources\annonate\note.png" />
+    <Resource Include="style\resources\annonate\notetxt.png" />
+    <Resource Include="style\resources\annonate\partial.png" />
+    <Resource Include="style\resources\annonate\presets.png" />
+    <Resource Include="style\resources\annonate\sendfile2.png" />
+    <Resource Include="style\resources\annonate\setdefault.png" />
+    <Resource Include="style\resources\annonate\shape.png" />
+    <Resource Include="style\resources\annonate\shapetxt.png" />
+    <Resource Include="style\resources\annonate\share.png" />
+    <Resource Include="style\resources\annonate\share2.png" />
+    <Resource Include="style\resources\annonate\show.png" />
+    <Resource Include="style\resources\annonate\signature.png" />
+    <Resource Include="style\resources\annonate\stamp.png" />
+    <Resource Include="style\resources\annonate\stamptxt.png" />
+    <Resource Include="style\resources\annonate\strike.png" />
+    <Resource Include="style\resources\annonate\striketxt.png" />
+    <Resource Include="style\resources\annonate\strokecolor.png" />
+    <Resource Include="style\resources\annonate\strokethickness.png" />
+    <Resource Include="style\resources\annonate\text.png" />
+    <Resource Include="style\resources\annonate\textbox.png" />
+    <Resource Include="style\resources\annonate\translate.png" />
+    <Resource Include="style\resources\annonate\underline.png" />
+    <Resource Include="style\resources\annonate\underlinetxt.png" />
+    <Resource Include="style\resources\annonate\watermark.png" />
+    <Resource Include="style\resources\annonate\whole.png" />
+    <Resource Include="style\resources\appsettings.png" />
+    <Resource Include="style\resources\attachment.cur" />
+    <Resource Include="style\resources\attachmentmouse.png" />
+    <Resource Include="style\resources\autosave.png" />
+    <Resource Include="style\resources\autoscroll.png" />
+    <Resource Include="style\resources\book.png" />
+    <Resource Include="style\resources\chatbuttontippreview.png" />
+    <Resource Include="style\resources\color.png" />
+    <Resource Include="style\resources\compress.png" />
+    <Resource Include="style\resources\contextmenu\blankpage.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_add.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_addbookmark.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_addlink.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_compreepdf.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_croppages.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_deletepages.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_edittext.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_extractpages.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_insertheaderandfooter.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_insertimage.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_insertpage.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_inserttext.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_mergeandsplit.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_mergepdf.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_ocrpages.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_pagenumber.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_print.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_rotateleft.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_rotateright.png" />
+    <Resource Include="style\resources\contextmenu\defaultcontextmenu_splitpdf.png" />
+    <Resource Include="style\resources\contextmenu\digitalsignature_remove.png" />
+    <Resource Include="style\resources\contextmenu\digitalsignature_showproperties.png" />
+    <Resource Include="style\resources\contextmenu\digitalsignature_validate.png" />
+    <Resource Include="style\resources\contextmenu\disenabledcopy.png" />
+    <Resource Include="style\resources\contextmenu\ediorimage.png" />
+    <Resource Include="style\resources\contextmenu\editdescription.png" />
+    <Resource Include="style\resources\contextmenu\fromimage.png" />
+    <Resource Include="style\resources\contextmenu\frompdf.png" />
+    <Resource Include="style\resources\contextmenu\fromscanner.png" />
+    <Resource Include="style\resources\contextmenu\fromword.png" />
+    <Resource Include="style\resources\contextmenu\hierarchybottom.png" />
+    <Resource Include="style\resources\contextmenu\imagecontroldelete.png" />
+    <Resource Include="style\resources\contextmenu\imagecontrolexport.png" />
+    <Resource Include="style\resources\contextmenu\imagecontrolfilphor.png" />
+    <Resource Include="style\resources\contextmenu\imagecontrolfilpver.png" />
+    <Resource Include="style\resources\contextmenu\imagecontrolhierarchy.png" />
+    <Resource Include="style\resources\contextmenu\imagecontrolreplace.png" />
+    <Resource Include="style\resources\contextmenu\imagecontrolrotate.png" />
+    <Resource Include="style\resources\contextmenu\imagecontroltext.png" />
+    <Resource Include="style\resources\contextmenu\imageexit.png" />
+    <Resource Include="style\resources\contextmenu\imagereplace.png" />
+    <Resource Include="style\resources\contextmenu\imagetext.png" />
+    <Resource Include="style\resources\contextmenu\newscreenshot_cancel2.png" />
+    <Resource Include="style\resources\contextmenu\newscreenshot_done.png" />
+    <Resource Include="style\resources\contextmenu\openfile.png" />
+    <Resource Include="style\resources\contextmenu\savetopc.png" />
+    <Resource Include="style\resources\contextmenu\screenshotadvanced.png" />
+    <Resource Include="style\resources\contextmenu\screenshot_accept.png" />
+    <Resource Include="style\resources\contextmenu\screenshot_cancel.png" />
+    <Resource Include="style\resources\contextmenu\screenshot_cancel2.png" />
+    <Resource Include="style\resources\contextmenu\screenshot_copy.png" />
+    <Resource Include="style\resources\contextmenu\screenshot_done.png" />
+    <Resource Include="style\resources\contextmenu\screenshot_edit.png" />
+    <Resource Include="style\resources\contextmenu\screenshot_pagerange.png" />
+    <Resource Include="style\resources\contextmenu\screenshot_save.png" />
+    <Resource Include="style\resources\contextmenu\screenshot_selection.png" />
+    <Resource Include="style\resources\contextmenu\select_annotdelete.png" />
+    <Resource Include="style\resources\contextmenu\select_copy.png" />
+    <Resource Include="style\resources\contextmenu\select_deletetext.png" />
+    <Resource Include="style\resources\contextmenu\select_duplicate.png" />
+    <Resource Include="style\resources\contextmenu\select_erase.png" />
+    <Resource Include="style\resources\contextmenu\select_highlight.png" />
+    <Resource Include="style\resources\contextmenu\select_strike.png" />
+    <Resource Include="style\resources\contextmenu\select_textobjedit.png" />
+    <Resource Include="style\resources\contextmenu\select_translate.png" />
+    <Resource Include="style\resources\contextmenu\select_underline.png" />
+    <Resource Include="style\resources\contextmenu\toolbarsetting_morecolor.png" />
+    <Resource Include="style\resources\contextmenu\toolbarsetting_transparent.png" />
+    <Resource Include="style\resources\contextmenu\translatewords.png" />
+    <Resource Include="style\resources\continus.png" />
+    <Resource Include="style\resources\continus2.png" />
+    <Resource Include="style\resources\converter\convert.png" />
+    <Resource Include="style\resources\converter\excelmenu.png" />
+    <Resource Include="style\resources\converter\exceltopdf.png" />
+    <Resource Include="style\resources\converter\htmlmenu.png" />
+    <Resource Include="style\resources\converter\imagemenu.png" />
+    <Resource Include="style\resources\converter\imagetopdf.png" />
+    <Resource Include="style\resources\converter\pdftoexcel.png" />
+    <Resource Include="style\resources\converter\pdftohtml.png" />
+    <Resource Include="style\resources\converter\pdftoimage.png" />
+    <Resource Include="style\resources\converter\pdftoppt.png" />
+    <Resource Include="style\resources\converter\pdftortf.png" />
+    <Resource Include="style\resources\converter\pdftotxt.png" />
+    <Resource Include="style\resources\converter\pdftotxt2.png" />
+    <Resource Include="style\resources\converter\pdftoword.png" />
+    <Resource Include="style\resources\converter\pdftoxml.png" />
+    <Resource Include="style\resources\converter\pptmenu.png" />
+    <Resource Include="style\resources\converter\ppttopdf.png" />
+    <Resource Include="style\resources\converter\rtfmenu.png" />
+    <Resource Include="style\resources\converter\rtftopdf.png" />
+    <Resource Include="style\resources\converter\txtmenu.png" />
+    <Resource Include="style\resources\converter\txttopdf.png" />
+    <Resource Include="style\resources\converter\wordmenu.png" />
+    <Resource Include="style\resources\converter\wordtopdf.png" />
+    <Resource Include="style\resources\converter\xmlmenu.png" />
+    <Resource Include="style\resources\cropbepage.png" />
+    <Resource Include="style\resources\cropendpage.png" />
+    <Resource Include="style\resources\cropfirstpage.png" />
+    <Resource Include="style\resources\cropnextpage.png" />
+    <Resource Include="style\resources\deltxt.png" />
+    <Resource Include="style\resources\digitalsignature\invalidicon.png" />
+    <Resource Include="style\resources\digitalsignature\signcertmenuicon.png" />
+    <Resource Include="style\resources\digitalsignature\unknownicon.png" />
+    <Resource Include="style\resources\digitalsignature\unsignedicon.png" />
+    <Resource Include="style\resources\digitalsignature\validcertmenuicon.png" />
+    <Resource Include="style\resources\digitalsignature\validicon.png" />
+    <Resource Include="style\resources\dislike.png" />
+    <Resource Include="style\resources\disliked.png" />
+    <Resource Include="style\resources\double.png" />
+    <Resource Include="style\resources\down.png" />
+    <Resource Include="style\resources\edit_text.png" />
+    <Resource Include="style\resources\exit.png" />
+    <Resource Include="style\resources\exticon\archive.png" />
+    <Resource Include="style\resources\exticon\attachment.png" />
+    <Resource Include="style\resources\exticon\excel.png" />
+    <Resource Include="style\resources\exticon\image.png" />
+    <Resource Include="style\resources\exticon\pdf.png" />
+    <Resource Include="style\resources\exticon\ppt.png" />
+    <Resource Include="style\resources\exticon\text.png" />
+    <Resource Include="style\resources\exticon\video.png" />
+    <Resource Include="style\resources\exticon\word.png" />
+    <Resource Include="style\resources\extracttext.png" />
+    <Resource Include="style\resources\feedback.png" />
+    <Resource Include="style\resources\feedback2.png" />
+    <Resource Include="style\resources\fit.png" />
+    <Resource Include="style\resources\fullsize.png" />
+    <Resource Include="style\resources\gearforphone.png" />
+    <Resource Include="style\resources\guide.png" />
+    <Resource Include="style\resources\headerfooter\footerbarcontiusimage.png" />
+    <Resource Include="style\resources\headerfooter\footerbardoublepage.png" />
+    <Resource Include="style\resources\headerfooter\footerbarpptimage.png" />
+    <Resource Include="style\resources\headerfooter\footerbarsinglepage.png" />
+    <Resource Include="style\resources\headerfooter\hfinsertdate.png" />
+    <Resource Include="style\resources\headerfooter\hfinsertfilename.png" />
+    <Resource Include="style\resources\headerfooter\hfinsertpagenumber.png" />
+    <Resource Include="style\resources\height.png" />
+    <Resource Include="style\resources\hightlightfillable.png" />
+    <Resource Include="style\resources\left.png" />
+    <Resource Include="style\resources\left2.png" />
+    <Resource Include="style\resources\leftnavicon\annotation-select.png" />
+    <Resource Include="style\resources\leftnavicon\annotation.png" />
+    <Resource Include="style\resources\leftnavicon\attachment-select.png" />
+    <Resource Include="style\resources\leftnavicon\attachment.png" />
+    <Resource Include="style\resources\leftnavicon\bookmark-select.png" />
+    <Resource Include="style\resources\leftnavicon\bookmark.png" />
+    <Resource Include="style\resources\leftnavicon\digitalsignature-select.png" />
+    <Resource Include="style\resources\leftnavicon\digitalsignature.png" />
+    <Resource Include="style\resources\leftnavicon\pdftoexcel.png" />
+    <Resource Include="style\resources\leftnavicon\pdftoimage.png" />
+    <Resource Include="style\resources\leftnavicon\pdftoppt.png" />
+    <Resource Include="style\resources\leftnavicon\pdftoword.png" />
+    <Resource Include="style\resources\leftnavicon\thumbnail-select.png" />
+    <Resource Include="style\resources\leftnavicon\thumbnail.png" />
+    <Resource Include="style\resources\like.png" />
+    <Resource Include="style\resources\liked.png" />
+    <Resource Include="style\resources\logo.png" />
+    <Resource Include="style\resources\newpdf.png" />
+    <Resource Include="style\resources\next.png" />
+    <Resource Include="style\resources\object.png" />
+    <Resource Include="style\resources\open.png" />
+    <Resource Include="style\resources\pageeditor\background.png" />
+    <Resource Include="style\resources\pageeditor\batchprint.png" />
+    <Resource Include="style\resources\pageeditor\blankpage.png" />
+    <Resource Include="style\resources\pageeditor\compress.png" />
+    <Resource Include="style\resources\pageeditor\createpdf.png" />
+    <Resource Include="style\resources\pageeditor\croppage.png" />
+    <Resource Include="style\resources\pageeditor\delete.png" />
+    <Resource Include="style\resources\pageeditor\exit.png" />
+    <Resource Include="style\resources\pageeditor\exportas.png" />
+    <Resource Include="style\resources\pageeditor\extract.png" />
+    <Resource Include="style\resources\pageeditor\fromimage.png" />
+    <Resource Include="style\resources\pageeditor\frompdf.png" />
+    <Resource Include="style\resources\pageeditor\fromscanner.png" />
+    <Resource Include="style\resources\pageeditor\fromword.png" />
+    <Resource Include="style\resources\pageeditor\headerfooter.png" />
+    <Resource Include="style\resources\pageeditor\help.png" />
+    <Resource Include="style\resources\pageeditor\hfadd.png" />
+    <Resource Include="style\resources\pageeditor\hfdelete.png" />
+    <Resource Include="style\resources\pageeditor\hfupdate.png" />
+    <Resource Include="style\resources\pageeditor\hovericons\delete.png" />
+    <Resource Include="style\resources\pageeditor\hovericons\insert.png" />
+    <Resource Include="style\resources\pageeditor\hovericons\rotateleft.png" />
+    <Resource Include="style\resources\pageeditor\hovericons\rotateright.png" />
+    <Resource Include="style\resources\pageeditor\insert.png" />
+    <Resource Include="style\resources\pageeditor\merge.png" />
+    <Resource Include="style\resources\pageeditor\mergeandsplit.png" />
+    <Resource Include="style\resources\pageeditor\newformblank.png" />
+    <Resource Include="style\resources\pageeditor\newfromimage.png" />
+    <Resource Include="style\resources\pageeditor\newfromscanner.png" />
+    <Resource Include="style\resources\pageeditor\open.png" />
+    <Resource Include="style\resources\pageeditor\openfile.png" />
+    <Resource Include="style\resources\pageeditor\pagenewpdf.png" />
+    <Resource Include="style\resources\pageeditor\pagenumber.png" />
+    <Resource Include="style\resources\pageeditor\pageresize.png" />
+    <Resource Include="style\resources\pageeditor\print.png" />
+    <Resource Include="style\resources\pageeditor\recentfile.png" />
+    <Resource Include="style\resources\pageeditor\recommend.png" />
+    <Resource Include="style\resources\pageeditor\rotateleft.png" />
+    <Resource Include="style\resources\pageeditor\rotateright.png" />
+    <Resource Include="style\resources\pageeditor\save.png" />
+    <Resource Include="style\resources\pageeditor\saveas.png" />
+    <Resource Include="style\resources\pageeditor\share.png" />
+    <Resource Include="style\resources\pageeditor\split.png" />
+    <Resource Include="style\resources\pdfaibtn.png" />
+    <Resource Include="style\resources\play.png" />
+    <Resource Include="style\resources\pointmove.cur" />
+    <Resource Include="style\resources\premiumicon.png" />
+    <Resource Include="style\resources\present.png" />
+    <Resource Include="style\resources\prev.png" />
+    <Resource Include="style\resources\print.png" />
+    <Resource Include="style\resources\printer\batchprintdeletefile.png" />
+    <Resource Include="style\resources\printer\batchprintfailed.png" />
+    <Resource Include="style\resources\printer\batchprintsettings.png" />
+    <Resource Include="style\resources\printer\batchprintsucceed.png" />
+    <Resource Include="style\resources\printer\menubatchprintimage.png" />
+    <Resource Include="style\resources\printer\notcollated.png" />
+    <Resource Include="style\resources\printer\pagecollated.png" />
+    <Resource Include="style\resources\printer\printlayout1.png" />
+    <Resource Include="style\resources\printer\printlayout2.png" />
+    <Resource Include="style\resources\printer\printlayout3.png" />
+    <Resource Include="style\resources\printer\printlayout4.png" />
+    <Resource Include="style\resources\printer\printremovefile.png" />
+    <Resource Include="style\resources\properties.png" />
+    <Resource Include="style\resources\protect\certmanager.png" />
+    <Resource Include="style\resources\protect\decrypt.png" />
+    <Resource Include="style\resources\protect\deferreddigialsign.png" />
+    <Resource Include="style\resources\protect\digialsign.png" />
+    <Resource Include="style\resources\protect\encrypt.png" />
+    <Resource Include="style\resources\protect\passwordnote.png" />
+    <Resource Include="style\resources\protect\redact.png" />
+    <Resource Include="style\resources\protect\saveasflatten.png" />
+    <Resource Include="style\resources\rate.png" />
+    <Resource Include="style\resources\ratebackground.png" />
+    <Resource Include="style\resources\ratelogo.png" />
+    <Resource Include="style\resources\right.png" />
+    <Resource Include="style\resources\right2.png" />
+    <Resource Include="style\resources\saveok.png" />
+    <Resource Include="style\resources\scan\addscannerimage.png" />
+    <Resource Include="style\resources\scan\disscanneraddimage.png" />
+    <Resource Include="style\resources\scan\disscannerdelete.png" />
+    <Resource Include="style\resources\scan\disscannerrotateleft.png" />
+    <Resource Include="style\resources\scan\disscannerrotateright.png" />
+    <Resource Include="style\resources\scan\scanneraddimage.png" />
+    <Resource Include="style\resources\scan\scannerdelete.png" />
+    <Resource Include="style\resources\scan\scannerrefresh.png" />
+    <Resource Include="style\resources\scan\scannerrotateleft.png" />
+    <Resource Include="style\resources\scan\scannerrotateright.png" />
+    <Resource Include="style\resources\screenshot.png" />
+    <Resource Include="style\resources\screenshot_ocr.png" />
+    <Resource Include="style\resources\search.png" />
+    <Resource Include="style\resources\sharebtn.png" />
+    <Resource Include="style\resources\share_email.png" />
+    <Resource Include="style\resources\share_sendfile.png" />
+    <Resource Include="style\resources\share_share.png" />
+    <Resource Include="style\resources\sidebarextract.png" />
+    <Resource Include="style\resources\sidebarinsert.png" />
+    <Resource Include="style\resources\sidebarmerge.png" />
+    <Resource Include="style\resources\sidebarsplit.png" />
+    <Resource Include="style\resources\signature\addnew.png" />
+    <Resource Include="style\resources\signature\apply.png" />
+    <Resource Include="style\resources\signature\delete.png" />
+    <Resource Include="style\resources\signature\deleteinbatch.png" />
+    <Resource Include="style\resources\signature\embed.png" />
+    <Resource Include="style\resources\signature\embedinbatch.png" />
+    <Resource Include="style\resources\signature\removebghelp.png" />
+    <Resource Include="style\resources\single.png" />
+    <Resource Include="style\resources\speach.png" />
+    <Resource Include="style\resources\speech\checked.png" />
+    <Resource Include="style\resources\speech\globe.png" />
+    <Resource Include="style\resources\speech\pause.png" />
+    <Resource Include="style\resources\speech\play.png" />
+    <Resource Include="style\resources\speech\speed.png" />
+    <Resource Include="style\resources\speech\stop.png" />
+    <Resource Include="style\resources\speech\tone.png" />
+    <Resource Include="style\resources\speech\voice.png" />
+    <Resource Include="style\resources\stamp\disstampcategoryrename.png" />
+    <Resource Include="style\resources\stamp\disstampdelete.png" />
+    <Resource Include="style\resources\stamp\ellipse.png" />
+    <Resource Include="style\resources\stamp\manageimage.png" />
+    <Resource Include="style\resources\stamp\menustampadd.png" />
+    <Resource Include="style\resources\stamp\rectangle.png" />
+    <Resource Include="style\resources\stamp\rectangledoublearrow.png" />
+    <Resource Include="style\resources\stamp\rectangledoublereversearrow.png" />
+    <Resource Include="style\resources\stamp\rectanglesinglearrow.png" />
+    <Resource Include="style\resources\stamp\rectanglesinglereversearrow.png" />
+    <Resource Include="style\resources\stamp\stampadd.png" />
+    <Resource Include="style\resources\stamp\stampcategoryrename.png" />
+    <Resource Include="style\resources\stamp\stampdelete.png" />
+    <Resource Include="style\resources\stamp\stampdeletechecked.png" />
+    <Resource Include="style\resources\stamp\stampedit.png" />
+    <Resource Include="style\resources\subscribebackground.png" />
+    <Resource Include="style\resources\subscribelikeimg.png" />
+    <Resource Include="style\resources\sunandmoon.png" />
+    <Resource Include="style\resources\survertitlebackground.png" />
+    <Resource Include="style\resources\surveybackground.png" />
+    <Resource Include="style\resources\toolbar-batchprint.png" />
+    <Resource Include="style\resources\toolbar-print.png" />
+    <Resource Include="style\resources\toolbar-search.png" />
+    <Resource Include="style\resources\toolbarphone.png" />
+    <Resource Include="style\resources\trustpilotlogo.png" />
+    <Resource Include="style\resources\up.png" />
+    <Resource Include="style\resources\update.png" />
+    <Resource Include="style\resources\upgrade.png" />
+    <Resource Include="style\resources\upgrade2.png" />
+    <Resource Include="style\resources\user.png" />
+    <Resource Include="style\resources\usermannul.png" />
+    <Resource Include="style\resources\viewback.png" />
+    <Resource Include="style\resources\viewbackise.png" />
+    <Resource Include="style\resources\viewer-arrow.png" />
+    <Resource Include="style\resources\viewer-hand.png" />
+    <Resource Include="style\resources\viewpre.png" />
+    <Resource Include="style\resources\viewpreise.png" />
+    <Resource Include="style\resources\warning.png" />
+    <Resource Include="style\resources\width.png" />
+    <Resource Include="style\resources\zoomin.png" />
+    <Resource Include="style\resources\zoomout.png" />
+    <Resource Include="Utils\Copilot\actions.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

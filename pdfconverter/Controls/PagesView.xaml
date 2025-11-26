@@ -1,0 +1,924 @@
+<UserControl
+	x:Class="pdfconverter.Controls.PagesView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfconverter.Controls" xmlns:localprop="clr-namespace:pdfconverter.Properties" xmlns:hc="https://handyorg.github.io/handycontrol" xmlns:ctrl="clr-namespace:CommonLib.Controls;assembly=CommonLib" xmlns:dd="urn:gong-wpf-dragdrop" xmlns:viewer="clr-namespace:pdfconverter.Views" xmlns:localConvert="clr-namespace:pdfconverter.Utils.Converters">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<Geometry
+				x:Key="ImportGeometry">M4.74 1.185h2.371a.592.592 0 100-1.185h-2.37a.592.592 0 100 1.185zM1.779 13.63H9.48a.592.592 0 110 1.185H1.778A1.78 1.78 0 010 13.037V3.556c0-.98.798-1.778 1.778-1.778h1.777a.593.593 0 010 1.185H1.778a.594.594 0 00-.593.593v9.481c0 .327.266.593.593.593zm2.37-5.334a3.559 3.559 0 013.556-3.555 3.56 3.56 0 013.555 3.555 3.559 3.559 0 01-3.555 3.556 3.559 3.559 0 01-3.556-3.556zm1.185 0a2.373 2.373 0 002.37 2.37 2.373 2.373 0 002.371-2.37 2.373 2.373 0 00-2.37-2.37 2.373 2.373 0 00-2.37 2.37zm2.964-5.333h5.926c.327 0 .592.266.592.593v4.74a.592.592 0 101.186 0v-4.74a1.78 1.78 0 00-1.778-1.778H8.297a.593.593 0 000 1.185zm4.407 2.11a.889.889 0 111.257-1.258.889.889 0 01-1.257 1.258zm2.11 7.371h1.778a.592.592 0 110 1.186h-1.777v1.777a.592.592 0 11-1.186 0V13.63h-1.777a.592.592 0 110-1.186h1.777v-1.777a.592.592 0 111.186 0v1.777z</Geometry>
+			<Geometry
+				x:Key="ChevronLeftGeometry">M.293 6.707l5 5q.07.07.151.124.082.055.173.093.091.038.188.057Q5.902 12 6 12t.195-.02q.097-.018.188-.056.09-.038.173-.092.081-.055.151-.125.07-.07.124-.151.055-.082.093-.173.038-.091.057-.188Q7 11.098 7 11t-.02-.195q-.018-.097-.056-.188-.038-.09-.093-.173-.054-.081-.124-.151L2.414 6l4.293-4.293q.07-.07.124-.151.055-.082.093-.173.038-.091.057-.188Q7 1.098 7 1T6.98.805Q6.963.708 6.925.617 6.886.527 6.83.444 6.777.363 6.707.293q-.14-.14-.324-.217Q6.199 0 6 0t-.383.076q-.183.076-.324.217l-5 5q-.14.14-.217.324Q0 5.801 0 6t.076.383q.076.183.217.324z</Geometry>
+			<Geometry
+				x:Key="ChevronRightGeometry">M4.586 6L.293 10.293q-.14.14-.217.324Q0 10.801 0 11t.076.383q.076.184.217.324.07.07.151.124.082.055.173.093.091.038.188.057Q.902 12 1 12t.195-.02q.097-.018.188-.056.09-.038.173-.092.081-.055.151-.125l5-5q.14-.14.217-.324Q7 6.199 7 6t-.076-.383q-.076-.183-.217-.324l-5-5q-.07-.07-.151-.124-.082-.055-.173-.093Q1.292.038 1.195.02 1.098 0 1 0T.805.02Q.708.037.617.075.527.114.444.17.363.223.293.293q-.07.07-.124.151Q.114.526.076.617.038.708.02.805 0 .902 0 1t.02.195q.018.097.056.188.038.09.093.173.054.081.124.151L4.586 6z</Geometry>
+			<Geometry
+				x:Key="RestartGeometry">M6.06 0c-1.5 0-2.94.6-4.02 1.56L1.92.6c0-.36-.3-.6-.66-.54-.36 0-.6.3-.54.66l.12 1.62c.06.78.72 1.38 1.5 1.38h.12l1.62-.12c.36 0 .6-.3.54-.66 0-.36-.3-.6-.66-.54l-1.2.06C3.66 1.68 4.8 1.2 6 1.2c2.64 0 4.8 2.16 4.8 4.8 0 2.64-2.16 4.8-4.8 4.8-2.64 0-4.8-2.16-4.8-4.8 0-.36-.24-.6-.6-.6S0 5.64 0 6c0 3.3 2.7 6 6 6s5.999-2.7 5.999-6c.06-3.3-2.64-6-5.94-6z</Geometry>
+			<Geometry
+				x:Key="CropGeometry">M0,4L3,4L3,12.5Q3,13.5356,3.73222,14.2678Q4.46444,15,5.5,15L14,15L14,18L15,18L15,15L18,15L18,14L15,14L15,5.5Q15,4.46444,14.2678,3.73222Q13.5356,3,12.5,3L4,3L4,0L3,0L3,3L0,3L0,4ZM4,12.5L4,4L12.5,4Q13.1213,4,13.5607,4.43933Q14,4.87866,14,5.5L14,14L5.5,14Q4.87866,14,4.43933,13.5607Q4,13.1213,4,12.5ZM12.3536,6.35355L11.6036,7.10355L10.8964,6.39645L11.6464,5.64645L12.3536,6.35355ZM10.1036,8.60355L8.60355,10.1036L7.89645,9.39645L9.39645,7.89645L10.1036,8.60355ZM7.10355,11.6036L6.35355,12.3536L5.64645,11.6464L6.39645,10.8964L7.10355,11.6036Z</Geometry>
+			<Geometry
+				x:Key="BrightnessGeometry">M9.5 2a.5.5 0 01-.5-.5v-1a.5.5 0 011 0v1a.5.5 0 01-.5.5zm3.887.14a.5.5 0 10.866.5l.5-.867a.5.5 0 00-.866-.5l-.5.866zm-8.502.999a.5.5 0 00.866-.5l-.5-.866a.5.5 0 00-.866.5l.5.866zM1.593 4.567a.5.5 0 01.683-.183l.866.5a.5.5 0 11-.5.866l-.866-.5a.5.5 0 01-.183-.683zm15.27.317a.5.5 0 00.5.866l.867-.5a.5.5 0 00-.5-.866l-.867.5zM15.5 10q0 2.278-1.61 3.89-1.611 1.61-3.89 1.61-2.278 0-3.889-1.61Q4.5 12.277 4.5 10t1.61-3.89Q7.721 4.5 10 4.5q2.278 0 3.889 1.61 1.61 1.612 1.61 3.89zm-1 0q0-1.864-1.318-3.182Q11.864 5.5 10 5.5T6.818 6.818Q5.5 8.136 5.5 10q0 1.864 1.318 3.182Q8.136 14.5 10 14.5q1.864 0 3.181-1.318Q14.5 11.864 14.5 10zM0 9.5A.5.5 0 01.5 9h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zM18.5 9a.5.5 0 000 1h1a.5.5 0 000-1h-1zM1.093 14.567a.5.5 0 01.183-.683l.866-.5a.5.5 0 01.5.866l-.866.5a.5.5 0 01-.683-.183zm16.77-1.183a.5.5 0 10-.5.866l.867.5a.5.5 0 00.5-.866l-.867-.5zM4.567 18.41a.5.5 0 01-.183-.683l.5-.866a.5.5 0 01.866.5l-.5.866a.5.5 0 01-.683.183zm10 .5a.5.5 0 01-.683-.183l-.5-.866a.5.5 0 01.866-.5l.5.866a.5.5 0 01-.183.683zM9.5 20a.5.5 0 01-.5-.5v-1a.5.5 0 111 0v1a.5.5 0 01-.5.5z</Geometry>
+			<Geometry
+				x:Key="ContrastGeometry">M15 7.5q0 3.107-2.197 5.303Q10.607 15 7.5 15q-3.107 0-5.303-2.197Q0 10.607 0 7.5q0-3.107 2.197-5.303Q4.393 0 7.5 0q3.107 0 5.303 2.197Q15 4.393 15 7.5zm-1 0q0-2.692-1.904-4.596T7.5 1Q4.808 1 2.904 2.904T1 7.5q0 2.692 1.904 4.596T7.5 14q2.692 0 4.596-1.904T14 7.5zm-1.5 0a5 5 0 01-5 5v-10a5 5 0 015 5z</Geometry>
+			<Geometry
+				x:Key="SaturationGeometry">M6.922 0c.485 0 1.35.701 2.303 1.752l.037.042.393.447.396.48c.09.111.179.224.267.337l.131.17.395.529.387.546.373.558.182.282c1.306 2.062 2.06 4.022 2.06 5.773a7.149 7.149 0 01-2.03 5.008A6.82 6.82 0 016.922 18a6.824 6.824 0 01-4.892-2.076A7.149 7.149 0 010 10.916c0-1.9.756-3.947 2.064-6.011.087-.138.176-.275.267-.41l.09-.136.373-.535c.094-.131.19-.262.287-.39l.096-.128.388-.498.196-.24.39-.456C5.257.862 6.316 0 6.923 0zm0 1.286c-.114 0-.409.228-.803.61l-.027.027-.286.288-.308.33-.162.18L5 3.105l-.343.411-.347.438-.173.225-.342.462-.168.237-.324.476-.154.239c-1.19 1.876-1.864 3.705-1.864 5.323a5.863 5.863 0 001.664 4.109 5.536 5.536 0 003.972 1.69 5.533 5.533 0 003.973-1.69 5.863 5.863 0 001.665-4.11c0-1.442-.654-3.163-1.814-5.01l-.046-.073-.15-.234-.318-.47-.33-.467-.341-.46-.344-.444-.17-.215-.336-.415-.325-.386-.454-.514-.394-.42-.221-.22a2.37 2.37 0 00-.072-.068l-.023-.021-.158-.134c-.067-.05-.116-.078-.142-.078zM10.35 7.65a4.847 4.847 0 01-6.854 6.854L10.26 7.74l.089-.089z</Geometry>
+			<Geometry
+				x:Key="RotateLeftGeometry">M5.646 3l3-3 .708.707-2.147 2.147h3.965q3.035 0 5.181 2.146Q18.5 7.146 18.5 10.182v1.172h-1v-1.172q0-2.621-1.854-4.475-1.853-1.853-4.474-1.853H7.207L9.354 6l-.708.707-3-3L6 3.354 5.646 3zM13 8.354H0v10h13v-10zm-12 9v-8h11v8H1z</Geometry>
+			<Geometry
+				x:Key="RotateRightGeometry">M12.854 3l-.354.354.354.353-3 3L9.146 6l2.147-2.146H7.328q-2.62 0-4.474 1.853Q1 7.561 1 10.182v1.172H0v-1.172Q0 7.146 2.146 5q2.147-2.146 5.182-2.146h3.965L9.146.707 9.854 0l3 3zM5.5 8.354h13v10h-13v-10zm12 9v-8h-11v8h11z</Geometry>
+			<Geometry
+				x:Key="TrashCanGeometry">M6 3h5V1.5q0-.207-.146-.354Q10.707 1 10.5 1h-4q-.207 0-.354.146Q6 1.293 6 1.5V3zm6 0h4.5v1H.5V3H5V1.5q0-.621.44-1.06Q5.878 0 6.5 0h4q.621 0 1.06.44.44.439.44 1.06V3zm1.5 13V5.5h-1V16q0 .207-.146.354-.147.146-.354.146H5q-.207 0-.354-.146Q4.5 16.207 4.5 16V5.5h-1V16q0 .621.44 1.06.439.44 1.06.44h7q.621 0 1.06-.44.44-.439.44-1.06zm-7-9.5V15h1V6.5h-1zm3 0V15h1V6.5h-1z</Geometry>
+			<localConvert:BooleanToVisibilityConverter
+				x:Key="BooleanToVisibilityConverter" />
+			<localConvert:BooleanToVisibilityReverseConverter
+				x:Key="BooleanToVisibilityReverseConverter" />
+			<localConvert:StateBooleanToVisibilityConverter
+				x:Key="StateBooleanToVisibilityConverter" />
+			<localConvert:StateBooleanToVisibilityReverseConverter
+				x:Key="StateBooleanToVisibilityReverseConverter" />
+			<localConvert:StateBooleanToIsnabledConverter
+				x:Key="StateBooleanToIsnabledConverter" />
+			<localConvert:StateBooleanToContentConverter
+				x:Key="StateBooleanToContentConverter" />
+			<Style
+				x:Key="BtnInfoStyle"
+				TargetType="{x:Type ButtonBase}">
+				<Setter
+					Property="Height"
+					Value="25" />
+				<Setter
+					Property="Background"
+					Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="TextBlock.Foreground"
+					Value="#3F3F3F" />
+				<Setter
+					Property="TextBlock.FontSize"
+					Value="12" />
+				<Setter
+					Property="TextBlock.TextAlignment"
+					Value="Center" />
+				<Setter
+					Property="TextBlock.FontSize"
+					Value="12" />
+				<Setter
+					Property="TextBlock.FontStyle"
+					Value="Normal" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Stretch" />
+				<Setter
+					Property="Padding"
+					Value="4,0" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ButtonBase}">
+							<Border
+								x:Name="bborder"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								Background="{TemplateBinding Control.Background}"
+								SnapsToDevicePixels="True">
+								<ContentPresenter
+									x:Name="contentPresenter"
+									Focusable="False"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									Margin="{TemplateBinding Control.Padding}"
+									RecognizesAccessKey="True"
+									SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+							</Border>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="3" />
+									<Setter
+										TargetName="bborder"
+										Value="{DynamicResource EraserBtnDropBackground}"
+										Property="Border.BorderBrush" />
+									<Setter
+										TargetName="bborder"
+										Value="{DynamicResource ColorPicker.Static.TitleBackground}"
+										Property="Border.Background" />
+								</Trigger>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="true">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="3" />
+									<Setter
+										TargetName="bborder"
+										Value="{DynamicResource EraserBtnDropBackground}"
+										Property="Border.BorderBrush" />
+									<Setter
+										TargetName="bborder"
+										Value="{DynamicResource ColorPicker.Static.TitleBackground}"
+										Property="Border.Background" />
+								</Trigger>
+								<Trigger
+									Property="IsEnabled"
+									Value="False">
+									<Setter
+										TargetName="bborder"
+										Property="Border.BorderBrush"
+										Value="#9F9F9F" />
+									<Setter
+										Property="TextBlock.Foreground"
+										Value="#9F9F9F" />
+								</Trigger>
+								<Trigger
+									Property="IsEnabled"
+									Value="True">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="3" />
+									<Setter
+										TargetName="bborder"
+										Property="Border.BorderBrush"
+										Value="#3F3F3F" />
+									<Setter
+										Property="TextBlock.Foreground"
+										Value="#3F3F3F" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<SolidColorBrush
+				x:Key="PageListBackgroundBrush"
+				Color="#333" />
+			<Style
+				x:Key="CheckBoxStyle"
+				TargetType="{x:Type CheckBox}">
+				<Setter
+					Property="HorizontalAlignment"
+					Value="Left" />
+				<Setter
+					Property="VerticalAlignment"
+					Value="Top" />
+				<Setter
+					Property="Margin"
+					Value="10,10,0,0" />
+				<Setter
+					Property="BorderBrush"
+					Value="#FF000000" />
+				<Setter
+					Property="Background"
+					Value="#F5F5F5" />
+				<Setter
+					Property="BorderThickness"
+					Value="1" />
+				<Style.Triggers>
+					<Trigger
+						Property="ToggleButton.IsChecked"
+						Value="True">
+						<Setter
+							Property="Background"
+							Value="#EF5B52" />
+						<Setter
+							Property="BorderThickness"
+							Value="0" />
+					</Trigger>
+				</Style.Triggers>
+			</Style>
+			<Style
+				x:Key="ListBoxItemBaseStyle"
+				TargetType="{x:Type ListBoxItem}">
+				<Style.Triggers>
+					<Trigger
+						Property="UIElement.IsMouseOver"
+						Value="True">
+						<Setter
+							Property="Background"
+							Value="#00FFFFFF" />
+					</Trigger>
+					<Trigger
+						Property="ListBoxItem.IsSelected"
+						Value="True">
+						<Setter
+							Property="Background"
+							Value="#00FFFFFF" />
+						<Setter
+							Property="Foreground"
+							Value="#FF000000" />
+					</Trigger>
+					<MultiTrigger>
+						<MultiTrigger.Conditions>
+							<Condition
+								Property="ListBoxItem.IsSelected"
+								Value="True" />
+							<Condition
+								Property="Selector.IsSelectionActive"
+								Value="False" />
+						</MultiTrigger.Conditions>
+						<Setter
+							Property="Background"
+							Value="#00FFFFFF" />
+						<Setter
+							Property="Foreground"
+							Value="#FF000000" />
+					</MultiTrigger>
+					<Trigger
+						Property="IsEnabled"
+						Value="False">
+						<Setter
+							Property="UIElement.Opacity"
+							Value=".4" />
+					</Trigger>
+					<Trigger
+						Property="hc:EdgeElement.ShowEdgeContent"
+						Value="True">
+						<Setter
+							Property="Template">
+							<Setter.Value>
+								<ControlTemplate
+									TargetType="{x:Type ListBoxItem}">
+									<Border
+										Name="Bd"
+										BorderBrush="{TemplateBinding Control.BorderBrush}"
+										BorderThickness="{TemplateBinding Control.BorderThickness}"
+										Background="{TemplateBinding Control.Background}"
+										Padding="{TemplateBinding Control.Padding}"
+										SnapsToDevicePixels="True">
+										<StackPanel
+											Orientation="Horizontal">
+											<ContentControl
+												Width="16"
+												Height="16"
+												Content="{Binding Path=(hc:EdgeElement.LeftContent), RelativeSource={RelativeSource TemplatedParent}}" />
+											<ContentPresenter
+												Margin="6,0,0,0"
+												HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+												SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+												VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+										</StackPanel>
+									</Border>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Trigger>
+				</Style.Triggers>
+				<Setter
+					Property="UIElement.SnapsToDevicePixels"
+					Value="True" />
+				<Setter
+					Property="Padding"
+					Value="10,0" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType=ItemsControl}}" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="Background"
+					Value="#FF00008B" />
+				<Setter
+					Property="BorderBrush"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="Margin"
+					Value="0,0,0,2" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ListBoxItem}">
+							<Border
+								Name="Bd"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								Background="{TemplateBinding Control.Background}"
+								Padding="{TemplateBinding Control.Padding}"
+								SnapsToDevicePixels="True"
+								CornerRadius="{Binding Path=(hc:BorderElement.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}">
+								<ContentPresenter
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+							</Border>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="ListBoxBaseStyle"
+				TargetType="{x:Type ListBox}">
+				<Setter
+					Property="Background"
+					Value="#f5f5f5" />
+				<Setter
+					Property="FrameworkElement.FocusVisualStyle"
+					Value="{x:Null}" />
+				<Setter
+					Property="BorderBrush"
+					Value="#FF000000" />
+				<Setter
+					Property="BorderThickness"
+					Value="1" />
+				<Setter
+					Property="ScrollViewer.HorizontalScrollBarVisibility"
+					Value="Disabled" />
+				<Setter
+					Property="ScrollViewer.VerticalScrollBarVisibility"
+					Value="Auto" />
+				<Setter
+					Property="ScrollViewer.CanContentScroll"
+					Value="True" />
+				<Setter
+					Property="ScrollViewer.PanningMode"
+					Value="Both" />
+				<Setter
+					Property="Stylus.IsFlicksEnabled"
+					Value="False" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="Padding"
+					Value="2,2,2,0" />
+				<Setter
+					Property="hc:BorderElement.CornerRadius"
+					Value="2" />
+				<Setter
+					Property="ItemContainerStyle"
+					Value="{StaticResource ListBoxItemBaseStyle}" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ListBox}">
+							<Border
+								Name="Bd"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								Background="{TemplateBinding Control.Background}"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								SnapsToDevicePixels="True"
+								CornerRadius="{Binding Path=(hc:BorderElement.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}">
+								<hc:ToggleBlock
+									VerticalContentAlignment="Stretch"
+									HorizontalContentAlignment="Stretch"
+									IsChecked="{Binding HasItems, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}">
+									<hc:ToggleBlock.CheckedContent>
+										<hc:ScrollViewer
+											CanContentScroll="False"
+											Focusable="False"
+											Padding="{TemplateBinding Control.Padding}"
+											SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+											IsInertiaEnabled="{Binding Path=(hc:ScrollViewer.IsInertiaEnabled), RelativeSource={RelativeSource TemplatedParent}}">
+											<ItemsPresenter />
+										</hc:ScrollViewer>
+									</hc:ToggleBlock.CheckedContent>
+								</hc:ToggleBlock>
+							</Border>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="ScannerCheckBoxStyle"
+				TargetType="{x:Type CheckBox}">
+				<Setter
+					Property="Width"
+					Value="20" />
+				<Setter
+					Property="Height"
+					Value="20" />
+				<Setter
+					Property="Background"
+					Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type CheckBox}">
+							<Grid>
+								<Border
+									x:Name="bd"
+									BorderBrush="#DBDBDB"
+									CornerRadius="1"
+									BorderThickness="1"
+									Background="{DynamicResource SolidBrushWhiteAndBlack}" />
+								<Path
+									x:Name="p1"
+									Data="M0,3 L3,6 L9,0"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									Stroke="#EF5B52"
+									StrokeThickness="1.5"
+									Margin="0.5 1 0 0" />
+								<Path
+									x:Name="p2"
+									Data="M0,0 L0,8 L8,8 L8,0 Z"
+									Fill="{DynamicResource SolidBrushWhiteAndBlack}"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									Stroke="{DynamicResource SolidBrushWhiteAndBlack}"
+									StrokeThickness="1.5"
+									Margin="0 1 0 0" />
+								<Path
+									x:Name="p3"
+									Data="M0,0 L8,0"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									Stroke="#EF5B52"
+									StrokeThickness="1.5"
+									Margin="0 1 0 0" />
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="True">
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderBrush"
+										Value="#EF5B52" />
+									<Setter
+										TargetName="p1"
+										Property="Visibility"
+										Value="Visible" />
+									<Setter
+										TargetName="p2"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p3"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource SolidBrushWhiteAndBlack}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderThickness"
+										Value="1" />
+								</Trigger>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="False">
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource SolidBrushWhiteAndBlack}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="p1"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p2"
+										Property="Visibility"
+										Value="Visible" />
+									<Setter
+										TargetName="p3"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderThickness"
+										Value="1" />
+								</Trigger>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="{x:Null}">
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderBrush"
+										Value="#EF5B52" />
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource SolidBrushWhiteAndBlack}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="p1"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p2"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p3"
+										Property="Visibility"
+										Value="Visible" />
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderThickness"
+										Value="1" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="ListBoxItemStyle"
+				BasedOn="{StaticResource ListBoxItemBaseStyle}"
+				TargetType="{x:Type ListBoxItem}">
+				<Setter
+					Property="FrameworkElement.FocusVisualStyle"
+					Value="{x:Null}" />
+				<Setter
+					Property="Margin"
+					Value="16" />
+				<Setter
+					Property="Height"
+					Value="200" />
+				<Setter
+					Property="Width"
+					Value="125" />
+				<Setter
+					Property="IsEnabled"
+					Value="{Binding IsNeedEnabled}" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ListBoxItem}">
+							<ContentControl>
+								<hc:Interaction.Triggers>
+									<hc:RoutedEventTrigger
+										RoutedEvent="PreviewMouseDoubleClick">
+										<hc:EventToCommand
+											Command="{Binding Path=DataContext.PreviewCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=viewer:ImageToPDF}}"
+											CommandParameter="{Binding}" />
+									</hc:RoutedEventTrigger>
+								</hc:Interaction.Triggers>
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition />
+										<RowDefinition
+											Height="30" />
+									</Grid.RowDefinitions>
+									<Border
+										Name="border"
+										Background="#F5F5F5"
+										BorderBrush="#00FFFFFF"
+										BorderThickness="2"
+										CornerRadius="4">
+										<AdornerDecorator>
+											<Grid
+												hc:Interaction.Behaviors="">
+												<Border
+													HorizontalAlignment="Center"
+													VerticalAlignment="Center"
+													RenderTransformOrigin=".5,.5"
+													Background="#FFFFFFFF">
+													<FrameworkElement.LayoutTransform>
+														<RotateTransform
+															Angle="{Binding Rotate}" />
+													</FrameworkElement.LayoutTransform>
+													<Image
+														Stretch="Uniform"
+														Source="{Binding Thumbnail2}" />
+												</Border>
+												<CheckBox
+													HorizontalAlignment="Left"
+													VerticalAlignment="Top"
+													Margin="5 5 0 0"
+													Style="{StaticResource ScannerCheckBoxStyle}"
+													IsChecked="{Binding Path=IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+													IsEnabled="{Binding IsSucceed, Converter={StaticResource StateBooleanToIsnabledConverter}}" />
+											</Grid>
+										</AdornerDecorator>
+									</Border>
+									<Rectangle
+										x:Name="HitRectangle"
+										Grid.RowSpan="2"
+										HorizontalAlignment="Stretch"
+										VerticalAlignment="Stretch"
+										Fill="#00FFFFFF"
+										StrokeThickness="0" />
+									<TextBlock
+										Grid.Row="1"
+										VerticalAlignment="Center"
+										Foreground="#AAA"
+										TextTrimming="CharacterEllipsis"
+										TextAlignment="Center"
+										Text="{Binding FileName}">
+										<FrameworkElement.ToolTip>
+											<TextBlock
+												MaxWidth="200"
+												TextWrapping="Wrap"
+												Text="{Binding FileName}" />
+										</FrameworkElement.ToolTip>
+									</TextBlock>
+								</Grid>
+							</ContentControl>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="ListBoxItem.IsSelected"
+									Value="True">
+									<Setter
+										TargetName="border"
+										Property="Border.BorderBrush"
+										Value="#EF5B52" />
+									<Setter
+										TargetName="border"
+										Property="Border.BorderThickness"
+										Value="2" />
+								</Trigger>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="border"
+										Property="Border.BorderBrush"
+										Value="#EF5B52" />
+									<Setter
+										TargetName="border"
+										Property="Border.BorderThickness"
+										Value="2" />
+								</Trigger>
+								<DataTrigger
+									Value="False"
+									Binding="{Binding IsEnabled, RelativeSource={RelativeSource TemplatedParent}}">
+									<Setter
+										Property="FrameworkElement.ToolTip"
+										Value="This item is disabled." />
+								</DataTrigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="ListBoxStyle"
+				BasedOn="{StaticResource ListBoxBaseStyle}"
+				TargetType="{x:Type ListBox}">
+				<Setter
+					Property="Padding"
+					Value="16" />
+				<Setter
+					Property="ItemContainerStyle"
+					Value="{StaticResource ListBoxItemStyle}" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ListBox}">
+							<Border
+								Background="{TemplateBinding Control.Background}">
+								<ScrollViewer
+									Padding="{TemplateBinding Control.Padding}"
+									Focusable="False"
+									HorizontalScrollBarVisibility="Disabled">
+									<WrapPanel
+										IsItemsHost="True" />
+								</ScrollViewer>
+							</Border>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Border
+			Height="48"
+			Padding="32,0"
+			Background="{DynamicResource BatchPrintWindowFileListItemMouseOverBackground}">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="auto" />
+					<ColumnDefinition
+						Width="auto" />
+					<ColumnDefinition
+						Width="*" />
+				</Grid.ColumnDefinitions>
+				<StackPanel
+					HorizontalAlignment="Left"
+					Orientation="Horizontal"
+					Visibility="{Binding HasScanner, Converter='{StaticResource BooleanToVisibilityConverter}'}">
+					<CheckBox
+						Content="All pages"
+						Style="{StaticResource ScannerCheckBoxStyle}"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						IsThreeState="True"
+						IsChecked="{Binding IsCheckedAll}"
+						IsEnabled="{Binding ElementName=PageListBox, Path=HasItems}" />
+					<StackPanel
+						Margin="10,0,0,0"
+						Orientation="Horizontal"
+						TextElement.Foreground="#777">
+						<TextBlock
+							VerticalAlignment="Center"
+							Margin="0 0 4 0"
+							Text="{x:Static localprop:Resources.ImageToPDFWinSelectedContent}" />
+						<TextBlock
+							VerticalAlignment="Center"
+							FontWeight="Bold"
+							Foreground="#EF5B52"
+							Text="{Binding SelectedCount}" />
+						<TextBlock
+							VerticalAlignment="Center"
+							Text=" / " />
+						<TextBlock
+							VerticalAlignment="Center"
+							Text="{Binding PageCount}" />
+					</StackPanel>
+				</StackPanel>
+				<StackPanel
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					Grid.Column="1"
+					Margin="10 0"
+					Orientation="Horizontal">
+					<Button
+						Height="35"
+						Width="35"
+						Background="#00FFFFFF"
+						BorderBrush="#00FFFFFF"
+						Style="{StaticResource BtnInfoStyle}"
+						CommandParameter="left"
+						ToolTip="{x:Static localprop:Resources.ImageToPDFWinRotateLeftContent}"
+						ToolTipService.ShowOnDisabled="True"
+						Command="{Binding RotateCommand}"
+						IsEnabled="{Binding ScannerBtnIsenable}">
+						<ContentControl.Content>
+							<StackPanel>
+								<Image
+									Source="{DynamicResource MainWindow2ImageToPDFRotateLeftImage}"
+									Visibility="{Binding IsEnabled, Converter='{StaticResource BooleanToVisibilityConverter}', RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+								<Image
+									Source="{DynamicResource MainWindow2ImageToPDFDisRotateLeftImage}"
+									Visibility="{Binding IsEnabled, Converter='{StaticResource BooleanToVisibilityReverseConverter}', RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+					<Button
+						Height="35"
+						Width="35"
+						Background="#00FFFFFF"
+						BorderBrush="#00FFFFFF"
+						Style="{StaticResource BtnInfoStyle}"
+						CommandParameter="right"
+						ToolTip="{x:Static localprop:Resources.ImageToPDFWinRotateRightContent}"
+						ToolTipService.ShowOnDisabled="True"
+						Command="{Binding RotateCommand}"
+						IsEnabled="{Binding ScannerBtnIsenable}">
+						<ContentControl.Content>
+							<StackPanel>
+								<Image
+									Source="{DynamicResource MainWindow2ImageToPDFRotateRightImage}"
+									Visibility="{Binding IsEnabled, Converter='{StaticResource BooleanToVisibilityConverter}', RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+								<Image
+									Source="{DynamicResource MainWindow2ImageToPDFDisRotateRightImage}"
+									Visibility="{Binding IsEnabled, Converter='{StaticResource BooleanToVisibilityReverseConverter}', RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+					<Button
+						Style="{StaticResource BtnInfoStyle}"
+						Height="35"
+						Width="35"
+						Background="#00FFFFFF"
+						BorderBrush="#00FFFFFF"
+						ToolTip="{x:Static localprop:Resources.ImageToPDFWinDeleteContent}"
+						ToolTipService.ShowOnDisabled="True"
+						IsEnabled="{Binding ScannerBtnIsenable}"
+						Command="{Binding DeleteCommand}">
+						<ContentControl.Content>
+							<StackPanel>
+								<Image
+									Source="{DynamicResource MainWindow2ImageToPDFDeleteImage}"
+									Visibility="{Binding IsEnabled, Converter='{StaticResource BooleanToVisibilityConverter}', RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+								<Image
+									Source="{DynamicResource MainWindow2ImageToPDFDisDeleteImage}"
+									Visibility="{Binding IsEnabled, Converter='{StaticResource BooleanToVisibilityReverseConverter}', RelativeSource={RelativeSource AncestorType={x:Type Button}}}" />
+							</StackPanel>
+						</ContentControl.Content>
+					</Button>
+				</StackPanel>
+				<StackPanel
+					HorizontalAlignment="Left"
+					Margin="20 0 0 0"
+					Orientation="Horizontal"
+					Grid.Column="2">
+					<Button
+						Height="38"
+						MinWidth="150"
+						Background="{DynamicResource InsertFromScannerScanBtnBackground}"
+						BorderBrush="#EEEEEE"
+						BorderThickness="0.5"
+						Margin="0 2 0 0"
+						Style="{StaticResource BtnInfoStyle}"
+						ToolTip="{x:Static localprop:Resources.ImageToPDFWinAddImageContent}"
+						Command="{Binding ImportCommand}"
+						IsEnabled="{Binding ScannerBtnIsenable}">
+						<ContentControl.Content>
+							<Grid
+								HorizontalAlignment="Center">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="auto" />
+									<ColumnDefinition
+										Width="auto" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Text="+"
+									FontSize="20"
+									Foreground="#EF5B52"
+									HorizontalAlignment="Right"
+									Margin="0 0 4 3"
+									VerticalAlignment="Center" />
+								<TextBlock
+									Text="{x:Static localprop:Resources.ImageToPDFWinAddImageContent}"
+									FontSize="12"
+									Grid.Column="1"
+									Foreground="#EF5B52"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center" />
+							</Grid>
+						</ContentControl.Content>
+					</Button>
+				</StackPanel>
+			</Grid>
+		</Border>
+		<Grid
+			Row="1"
+			AllowDrop="True"
+			Background="{DynamicResource MainViewSliderBackgroundColor}"
+			Visibility="{Binding AddImage, Converter='{StaticResource BooleanToVisibilityConverter}'}"
+			Drop="Grid_Drop"
+			MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+			<Grid
+				VerticalAlignment="Center">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="auto" />
+					<RowDefinition
+						Height="auto" />
+				</Grid.RowDefinitions>
+				<Image
+					HorizontalAlignment="Center"
+					VerticalAlignment="Bottom"
+					Height="140"
+					Width="140"
+					Source="/Images/ImagetoPDF/Addimage.png" />
+				<TextBlock
+					Text="{x:Static localprop:Resources.ImageToPDFWinDropContent}"
+					Foreground="#757575"
+					Grid.Row="1"
+					HorizontalAlignment="Center"
+					TextWrapping="Wrap"
+					VerticalAlignment="Top"
+					Margin="0 10 0 0" />
+			</Grid>
+		</Grid>
+		<Grid
+			Row="1"
+			Background="{DynamicResource MainViewSliderBackgroundColor}"
+			Visibility="{Binding AddImage, Converter='{StaticResource BooleanToVisibilityReverseConverter}'}">
+			<ListBox
+				Name="PageListBox"
+				dd:DragDrop.IsDragSource="True"
+				dd:DragDrop.IsDropTarget="True"
+				dd:DragDrop.SelectDroppedItems="False"
+				Background="{DynamicResource MainViewGrid2Background}"
+				SelectionMode="Multiple"
+				Style="{StaticResource ListBoxStyle}"
+				dd:DragDrop.DropHandler="{Binding DropTarget}"
+				ItemsSource="{Binding PageList}"
+				DragEnter="PageListBox_DragEnter"
+				PreviewMouseLeftButtonDown="PageListBox_MouseLeftButtonDown"
+				SelectionChanged="PageListBox_SelectionChanged" />
+			<Grid
+				VerticalAlignment="Stretch"
+				HorizontalAlignment="Stretch"
+				Visibility="{Binding Visibility}">
+				<Grid
+					VerticalAlignment="Stretch"
+					HorizontalAlignment="Stretch"
+					Background="#D3D3D3"
+					Opacity="0.2" />
+				<ctrl:ProgressRing
+					x:Name="_LoadingProgressRing"
+					Width="36"
+					Height="36"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					IsActive="{Binding Path=IsVisible, RelativeSource={RelativeSource Mode=Self}}" />
+			</Grid>
+		</Grid>
+	</Grid>
+</UserControl>

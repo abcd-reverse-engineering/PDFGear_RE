@@ -1,0 +1,75 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:pdfeditor.Controls" xmlns:behavior1="http://schemas.microsoft.com/xaml/behaviors" xmlns:behavior2="clr-namespace:pdfeditor.Utils.Behaviors" xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore" xmlns:appTheme="clr-namespace:CommonLib.AppTheme;assembly=CommonLib" xmlns:commonCtrl="clr-namespace:CommonLib.Controls;assembly=CommonLib">
+	<Style
+		x:Key="{x:Type local:PageIndexTextBox}"
+		TargetType="{x:Type local:PageIndexTextBox}">
+		<Setter
+			Property="Background"
+			Value="{DynamicResource DialogButtonStaticBackground}" />
+		<Setter
+			Property="Foreground"
+			Value="{DynamicResource PageIndexTextBoxStaticForeground}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{DynamicResource MainViewFontSizeBorder}" />
+		<Setter
+			Property="BorderThickness"
+			Value="1" />
+		<Setter
+			Property="Padding"
+			Value="6,0,6,0" />
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="Height"
+			Value="22" />
+		<Setter
+			Property="commonCtrl:UIElementExtension.CornerRadius"
+			Value="2" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type local:PageIndexTextBox}">
+					<Border
+						x:Name="bd"
+						Background="{DynamicResource DialogButtonStaticBackground}"
+						BorderBrush="{DynamicResource MainViewFontSizeBorder}"
+						BorderThickness="{TemplateBinding Control.BorderThickness}"
+						CornerRadius="{Binding Path=(commonCtrl:UIElementExtension.CornerRadius), RelativeSource={RelativeSource Mode=TemplatedParent}}">
+						<StackPanel
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Orientation="Horizontal"
+							FlowDirection="LeftToRight"
+							Margin="{TemplateBinding Control.Padding}"
+							Cursor="IBeam">
+							<TextBox
+								x:Name="PageIndexTextBox"
+								Padding="0"
+								BorderBrush="#00FFFFFF"
+								BorderThickness="0"
+								CaretBrush="{DynamicResource TextBrushWhiteAndBlack}"
+								Background="#00FFFFFF"
+								Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+								input:InputMethod.IsInputMethodEnabled="False">
+								<behavior1:Interaction.Behaviors>
+									<behavior2:TextBoxEditBehavior
+										x:Name="PageIndexTextBoxBehavior" />
+								</behavior1:Interaction.Behaviors>
+							</TextBox>
+							<TextBlock
+								x:Name="PageCountTextBlock"
+								Foreground="{DynamicResource PageIndexTextBoxStaticForeground}">
+								<Run
+									Text="/" />
+								<Run
+									x:Name="PageCountRun" />
+							</TextBlock>
+						</StackPanel>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

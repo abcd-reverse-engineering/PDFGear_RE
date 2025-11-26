@@ -1,0 +1,227 @@
+<Window
+	x:Class="pdfeditor.Controls.Screenshots.OcrSelectLanguageDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.Screenshots" xmlns:localprop="clr-namespace:pdfeditor.Properties"
+	Background="{DynamicResource WindowsBackground}"
+	TextBlock.Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Title="{StaticResource ApplicationTitle}"
+	Height="450"
+	Width="300">
+	<Grid>
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<Geometry
+					x:Key="CheckedGeometry">M1 7L6 12L17 1</Geometry>
+				<SolidColorBrush
+					x:Key="Item.Static.Background"
+					Color="#FFFFFFFF" />
+				<SolidColorBrush
+					x:Key="Item.Static.Border"
+					Color="Transparent" />
+				<SolidColorBrush
+					x:Key="Item.MouseOver.Background"
+					Color="#66FFF0F0" />
+				<SolidColorBrush
+					x:Key="Item.MouseOver.Border"
+					Color="Transparent" />
+				<SolidColorBrush
+					x:Key="Item.SelectedActive.Background"
+					Color="#FFF0F0" />
+				<SolidColorBrush
+					x:Key="Item.SelectedActive.Border"
+					Color="Transparent" />
+				<SolidColorBrush
+					x:Key="Item.SelectedInactive.Background"
+					Color="#FFF0F0" />
+				<SolidColorBrush
+					x:Key="Item.SelectedInactive.Border"
+					Color="Transparent" />
+				<Style
+					x:Key="LanguageListBoxItemStyle"
+					TargetType="{x:Type ListBoxItem}">
+					<Setter
+						Property="UIElement.SnapsToDevicePixels"
+						Value="True" />
+					<Setter
+						Property="Padding"
+						Value="4,1" />
+					<Setter
+						Property="HorizontalContentAlignment"
+						Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+					<Setter
+						Property="VerticalContentAlignment"
+						Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+					<Setter
+						Property="Background"
+						Value="{DynamicResource OcrSelectBackground}" />
+					<Setter
+						Property="BorderBrush"
+						Value="{DynamicResource SignaturePickerBackground}" />
+					<Setter
+						Property="Foreground"
+						Value="{DynamicResource TextBrushWhiteAndBlack}" />
+					<Setter
+						Property="BorderThickness"
+						Value="0" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ListBoxItem}">
+								<Border
+									x:Name="Bd"
+									BorderBrush="{TemplateBinding Control.BorderBrush}"
+									BorderThickness="{TemplateBinding Control.BorderThickness}"
+									Background="{TemplateBinding Control.Background}"
+									Padding="{TemplateBinding Control.Padding}"
+									SnapsToDevicePixels="True">
+									<Grid>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition
+												Width="*" />
+											<ColumnDefinition
+												Width="Auto" />
+										</Grid.ColumnDefinitions>
+										<ContentPresenter
+											HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+											VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+											SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+										<Path
+											x:Name="CheckedIcon"
+											Stroke="{DynamicResource OcrSelectCheckedIconColor}"
+											StrokeThickness="1.5"
+											Grid.Column="1"
+											VerticalAlignment="Center"
+											Margin="0,0,8,0"
+											Visibility="Collapsed"
+											Data="{StaticResource CheckedGeometry}" />
+									</Grid>
+								</Border>
+								<ControlTemplate.Triggers>
+									<MultiTrigger>
+										<MultiTrigger.Conditions>
+											<Condition
+												Property="UIElement.IsMouseOver"
+												Value="True" />
+										</MultiTrigger.Conditions>
+										<Setter
+											TargetName="Bd"
+											Value="{DynamicResource OcrSelectMouseOverColor}"
+											Property="Border.Background" />
+										<Setter
+											TargetName="Bd"
+											Property="Border.BorderBrush"
+											Value="{StaticResource Item.MouseOver.Border}" />
+									</MultiTrigger>
+									<MultiTrigger>
+										<MultiTrigger.Conditions>
+											<Condition
+												Property="Selector.IsSelectionActive"
+												Value="False" />
+											<Condition
+												Property="ListBoxItem.IsSelected"
+												Value="True" />
+										</MultiTrigger.Conditions>
+										<Setter
+											TargetName="Bd"
+											Value="{DynamicResource BtnInfoMouseOverColor}"
+											Property="Border.Background" />
+										<Setter
+											TargetName="Bd"
+											Property="Border.BorderBrush"
+											Value="{StaticResource Item.SelectedInactive.Border}" />
+										<Setter
+											TargetName="CheckedIcon"
+											Property="Visibility"
+											Value="Visible" />
+									</MultiTrigger>
+									<MultiTrigger>
+										<MultiTrigger.Conditions>
+											<Condition
+												Property="Selector.IsSelectionActive"
+												Value="True" />
+											<Condition
+												Property="ListBoxItem.IsSelected"
+												Value="True" />
+										</MultiTrigger.Conditions>
+										<Setter
+											TargetName="Bd"
+											Value="{DynamicResource BtnInfoMouseOverColor}"
+											Property="Border.Background" />
+										<Setter
+											TargetName="Bd"
+											Property="Border.BorderBrush"
+											Value="{StaticResource Item.SelectedActive.Border}" />
+										<Setter
+											TargetName="CheckedIcon"
+											Property="Visibility"
+											Value="Visible" />
+									</MultiTrigger>
+									<Trigger
+										Property="IsEnabled"
+										Value="False">
+										<Setter
+											TargetName="Bd"
+											Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
+											Property="TextElement.Foreground" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Grid
+			Margin="20,12,20,20">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="*" />
+				<RowDefinition
+					Height="Auto" />
+			</Grid.RowDefinitions>
+			<TextBlock
+				Text="{x:Static localprop:Resources.WinOCRSelectLangTips}"
+				TextWrapping="Wrap" />
+			<ListBox
+				x:Name="LanguageListBox"
+				Grid.Row="1"
+				ItemContainerStyle="{StaticResource LanguageListBoxItemStyle}"
+				Background="{DynamicResource WindowsBackground}"
+				BorderBrush="{DynamicResource MainViewFontSizeBorder}"
+				Margin="0,12,0,0"
+				SelectionChanged="LanguageListBox_SelectionChanged"
+				PreviewMouseDoubleClick="LanguageListBox_PreviewMouseDoubleClick">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<Grid
+							MinHeight="28">
+							<TextBlock
+								VerticalAlignment="Center"
+								Text="{Binding DisplayName}" />
+						</Grid>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ListBox>
+			<StackPanel
+				Grid.Row="2"
+				Margin="0,20,0,0">
+				<StackPanel
+					HorizontalAlignment="Right"
+					Orientation="Horizontal">
+					<Button
+						Content="{x:Static localprop:Resources.WinBtnCancelContent}"
+						IsCancel="True"
+						Margin="0,0,12,0"
+						Style="{StaticResource DialogButtonStyle}" />
+					<Button
+						x:Name="OKButton"
+						Content="{x:Static localprop:Resources.WinBtnOkContent}"
+						IsDefault="True"
+						Style="{StaticResource PrimaryDialogButtonStyle}"
+						Click="OKButton_Click" />
+				</StackPanel>
+			</StackPanel>
+		</Grid>
+	</Grid>
+</Window>

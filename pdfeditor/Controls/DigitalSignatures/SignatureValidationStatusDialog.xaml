@@ -1,0 +1,99 @@
+<Window
+	x:Class="pdfeditor.Controls.DigitalSignatures.SignatureValidationStatusDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.DigitalSignatures" xmlns:localprop="clr-namespace:pdfeditor.Properties"
+	ResizeMode="NoResize"
+	SizeToContent="Height"
+	SnapsToDevicePixels="True"
+	Title="{x:Static localprop:Resources.DigSignValidationDialogTitle}"
+	MinHeight="184"
+	Width="540"
+	Background="{DynamicResource SolidBrushWhiteAndBlack}"
+	TextElement.Foreground="{DynamicResource TextBrushWhiteAndBlack}">
+	<Grid
+		Margin="20">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="*" />
+			<RowDefinition
+				Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid
+			VerticalAlignment="Center">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid
+				Width="32"
+				Height="32"
+				VerticalAlignment="Top"
+				Margin="0,0,20,0">
+				<local:DigitalSignatureValidationIcon
+					x:Name="ValidationIcon" />
+			</Grid>
+			<StackPanel
+				Grid.Column="1"
+				Orientation="Vertical"
+				Margin="0,8,0,0">
+				<TextBlock
+					x:Name="Title"
+					Text="Signature validity is UNKNOWN. "
+					TextWrapping="Wrap"
+					LineHeight="20" />
+				<ItemsControl
+					x:Name="ContentItems">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="Auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<Grid
+									VerticalAlignment="Top"
+									Margin="8,0">
+									<Ellipse
+										Width="4"
+										Height="4"
+										Fill="{DynamicResource TextBrushWhiteAndBlack}"
+										VerticalAlignment="Center" />
+									<TextBlock
+										Text="·"
+										Opacity="0" />
+								</Grid>
+								<TextBlock
+									Grid.Column="1"
+									TextWrapping="Wrap"
+									LineHeight="20"
+									Text="{Binding Text}" />
+							</Grid>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</StackPanel>
+		</Grid>
+		<StackPanel
+			Grid.Row="1"
+			Orientation="Horizontal"
+			HorizontalAlignment="Right"
+			Margin="0,12,0,0">
+			<Button
+				x:Name="btnCancel"
+				Style="{StaticResource DialogButtonStyle}"
+				Content="{x:Static localprop:Resources.WinBtnCancelContent}"
+				FontSize="12"
+				IsCancel="True" />
+			<Button
+				x:Name="btnOk"
+				Style="{StaticResource PrimaryDialogButtonStyle}"
+				Content="{x:Static localprop:Resources.DigSignValidationProperties}"
+				Margin="10,0,0,0"
+				IsDefault="True"
+				FontSize="12"
+				Click="btnOk_Click" />
+		</StackPanel>
+	</Grid>
+</Window>

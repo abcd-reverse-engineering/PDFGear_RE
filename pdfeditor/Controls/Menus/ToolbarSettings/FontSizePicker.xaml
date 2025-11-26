@@ -1,0 +1,79 @@
+<UserControl
+	x:Class="pdfeditor.Controls.Menus.ToolbarSettings.FontSizePicker" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:pdfeditor.Controls.Menus.ToolbarSettings" xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors" xmlns:behaviors2="clr-namespace:pdfeditor.Utils.Behaviors">
+	<Grid>
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<ResourceDictionary.MergedDictionaries>
+					<ResourceDictionary
+						Source="/Controls/Menus/ToolbarSettings/ToolbarSettingStyles.xaml" />
+				</ResourceDictionary.MergedDictionaries>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<StackPanel
+			Orientation="Horizontal"
+			Margin="6,0,6,0"
+			DataContext="{Binding Path=Model, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:FontSizePicker}}"
+			ToolTip="{Binding Caption}">
+			<Border
+				x:Name="border"
+				BorderThickness="1"
+				BorderBrush="{DynamicResource MainViewFontSizeBorder}"
+				Height="22">
+				<StackPanel
+					Orientation="Horizontal">
+					<Image
+						x:Name="fontSizeIcon"
+						Source="{DynamicResource MainViewFontSizeImage}"
+						Width="16"
+						Height="16"
+						Margin="2,0"
+						Stretch="UniformToFill"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"
+						MouseLeftButtonDown="FontSizeIcon_MouseLeftButtonDown" />
+					<Grid
+						Width="62"
+						Height="20">
+						<TextBox
+							x:Name="textBox"
+							Style="{StaticResource ToolbarSettingTextBoxStyle}"
+							Padding="0,2.5,20,0">
+							<behaviors:Interaction.Behaviors>
+								<behaviors2:TextBoxEditBehavior
+									TextChanged="_TextBoxEditBehavior_TextChanged"
+									x:Name="_TextBoxEditBehavior"
+									ApplyWhenClickEmpty="True" />
+							</behaviors:Interaction.Behaviors>
+						</TextBox>
+						<Button
+							x:Name="comboBoxDropButton"
+							Width="20"
+							Height="20"
+							HorizontalAlignment="Right"
+							VerticalAlignment="Center"
+							Margin="1,1,0,1"
+							MinWidth="0"
+							Padding="0"
+							Style="{StaticResource NoStyleButton}"
+							Click="comboBoxDropButton_Click">
+							<Path
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								Stroke="{DynamicResource FontSizePickerStrokeColor}"
+								Data="M10,0 L5,5 L0,0"
+								Margin="0" />
+						</Button>
+						<ComboBox
+							x:Name="comboBox"
+							Style="{StaticResource ToolbarSettingComboboxStyle}"
+							MinWidth="62"
+							Height="0"
+							VerticalAlignment="Bottom"
+							Opacity="0"
+							IsHitTestVisible="False" />
+					</Grid>
+				</StackPanel>
+			</Border>
+		</StackPanel>
+	</Grid>
+</UserControl>

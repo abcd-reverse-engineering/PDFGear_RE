@@ -1,0 +1,47 @@
+<Window
+	x:Class="pdfeditor.Controls.Speech.SpeechMessage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.Speech"
+	Background="{DynamicResource MainViewToolBarBackground}"
+	Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Title="PDFgear"
+	Height="160"
+	Width="400"
+	ResizeMode="NoResize">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="70" />
+			<RowDefinition
+				MaxHeight="65" />
+		</Grid.RowDefinitions>
+		<TextBlock
+			x:Name="Textblock"
+			Grid.Row="0"
+			Margin="10 0"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			TextWrapping="Wrap"
+			Text="{x:Static localprop:Resources.ReadMessage}" />
+		<StackPanel
+			Orientation="Horizontal"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Center"
+			Grid.Row="1"
+			Margin="0 0 20 10">
+			<Button
+				x:Name="btnOk"
+				Style="{StaticResource PrimaryDialogButtonStyle}"
+				IsDefault="True"
+				Width="80"
+				FontSize="12"
+				Content="{x:Static localprop:Resources.ReadWinOkBtn}" />
+			<Button
+				x:Name="btnCancel"
+				Style="{StaticResource DialogButtonStyle}"
+				Width="80"
+				Margin="10,0,0,0"
+				FontSize="12"
+				Content="{x:Static localprop:Resources.WinBtnCancelContent}"
+				IsCancel="True" />
+		</StackPanel>
+	</Grid>
+</Window>

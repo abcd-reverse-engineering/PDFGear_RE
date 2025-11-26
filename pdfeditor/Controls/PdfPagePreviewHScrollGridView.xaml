@@ -1,0 +1,368 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:pdfeditor.Controls" xmlns:converters="clr-namespace:pdfeditor.Utils.Converters">
+	<SolidColorBrush
+		x:Key="PdfPagePreviewListView.Static.Background"
+		Color="#FFFFFFFF" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewListView.Static.Border"
+		Color="Transparent" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewListView.Disabled.Background"
+		Color="Transparent" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewListView.Disabled.Border"
+		Color="Transparent" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewHScrollGridViewItem.Static.Background"
+		Color="Transparent" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewHScrollGridViewItem.Static.Border"
+		Color="Transparent" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewHScrollGridViewItem.MouseOver.Background"
+		Color="#66BCC1D0" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewHScrollGridViewItem.MouseOver.Border"
+		Color="Transparent" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewHScrollGridViewItem.SelectedActive.Background"
+		Color="#99BCC1D0" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewHScrollGridViewItem.SelectedActive.Border"
+		Color="Transparent" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewHScrollGridViewItem.SelectedInactive.Background"
+		Color="#FFBCC1D0" />
+	<SolidColorBrush
+		x:Key="PdfPagePreviewHScrollGridViewItem.SelectedInactive.Border"
+		Color="Transparent" />
+	<converters:A4RatioConverter
+		x:Key="A4RatioConverter" />
+	<Style
+		x:Key="{x:Type local:PdfPagePreviewHScrollGridView}"
+		TargetType="{x:Type local:PdfPagePreviewHScrollGridView}">
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource PdfPagePreviewListView.Static.Border}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0" />
+		<Setter
+			Property="Padding"
+			Value="4,0" />
+		<Setter
+			Property="Foreground"
+			Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+		<Setter
+			Property="ScrollViewer.HorizontalScrollBarVisibility"
+			Value="Disabled" />
+		<Setter
+			Property="ScrollViewer.VerticalScrollBarVisibility"
+			Value="Auto" />
+		<Setter
+			Property="ScrollViewer.CanContentScroll"
+			Value="True" />
+		<Setter
+			Property="ScrollViewer.PanningMode"
+			Value="VerticalOnly" />
+		<Setter
+			Property="Stylus.IsFlicksEnabled"
+			Value="False" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="VirtualizingPanel.ScrollUnit"
+			Value="Pixel" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="ListBox.SelectionMode"
+			Value="Single" />
+		<Setter
+			Property="VirtualizingPanel.IsVirtualizing"
+			Value="True" />
+		<Setter
+			Property="VirtualizingPanel.CacheLength"
+			Value="5" />
+		<Setter
+			Property="VirtualizingPanel.CacheLengthUnit"
+			Value="Item" />
+		<Setter
+			Property="VirtualizingPanel.ScrollUnit"
+			Value="Pixel" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type local:PdfPagePreviewHScrollGridView}">
+					<Border
+						Name="Bd"
+						Background="{TemplateBinding Control.Background}"
+						BorderBrush="{TemplateBinding Control.BorderBrush}"
+						BorderThickness="{TemplateBinding Control.BorderThickness}"
+						SnapsToDevicePixels="True">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup
+								x:Name="ScrollIntoViewStatus">
+								<VisualState
+									x:Name="NotScrolling" />
+								<VisualState
+									x:Name="Scrolling">
+									<Storyboard>
+										<DoubleAnimation
+											Storyboard.TargetName="ItemPresenter"
+											Storyboard.TargetProperty="Opacity"
+											To="0"
+											Duration="0" />
+									</Storyboard>
+								</VisualState>
+								<VisualStateGroup.Transitions>
+									<VisualTransition
+										From="Scrolling"
+										To="NotScrolling">
+										<Storyboard>
+											<DoubleAnimation
+												Storyboard.TargetName="ItemPresenter"
+												Storyboard.TargetProperty="Opacity"
+												To="1"
+												Duration="0:0:0.12" />
+										</Storyboard>
+									</VisualTransition>
+								</VisualStateGroup.Transitions>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<ScrollViewer
+							Padding="{TemplateBinding Control.Padding}"
+							Focusable="False">
+							<ItemsPresenter
+								x:Name="ItemPresenter"
+								Margin="0,8,0,0"
+								SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+						</ScrollViewer>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter
+			Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<local:VirtualThumbnailPanel
+						Orientation="Vertical"
+						Background="#00FFFFFF"
+						ScrollViewer.CanContentScroll="True"
+						ScrollViewer.HorizontalScrollBarVisibility="Auto" />
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter
+			Property="ItemTemplate">
+			<Setter.Value>
+				<DataTemplate>
+					<Border
+						x:Name="thumbnailBorder"
+						BorderThickness="1"
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch"
+						SnapsToDevicePixels="True"
+						UseLayoutRounding="True">
+						<FrameworkElement.ContextMenu>
+							<local:PdfViewerContextMenu
+								AutoCloseOnMouseLeave="True"
+								ItemsSource="{Binding ContextMenuModel}" />
+						</FrameworkElement.ContextMenu>
+						<Grid
+							x:Name="Container"
+							Margin="12,8"
+							HorizontalAlignment="Stretch"
+							VerticalAlignment="Stretch">
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="*" />
+								<RowDefinition
+									Height="4" />
+								<RowDefinition
+									Height="Auto"
+									MinHeight="13" />
+							</Grid.RowDefinitions>
+							<Viewbox
+								HorizontalAlignment="Stretch"
+								VerticalAlignment="Stretch"
+								Stretch="Uniform"
+								Width="{Binding ActualThumbnailWidth}"
+								Height="{Binding ActualThumbnailWidth, Converter={StaticResource A4RatioConverter}}"
+								MaxHeight="{Binding ActualThumbnailWidth, Converter={StaticResource A4RatioConverter}}">
+								<local:PdfPagePreviewControl
+									x:Name="PreviewImage"
+									RenderActualRotate="True"
+									ForceImageSize="True"
+									ThumbnailWidth="450"
+									BorderBrush="{DynamicResource ColorButton.Pressed.Border}"
+									BorderThickness="1"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									UseLayoutRounding="False"
+									SnapsToDevicePixels="False"
+									VerticalContentAlignment="Center"
+									HorizontalContentAlignment="Center"
+									Document="{Binding Document}"
+									PageIndex="{Binding PageIndex}">
+									<Control.Template>
+										<ControlTemplate
+											TargetType="{x:Type local:PdfPagePreviewControl}">
+											<Border
+												Background="{TemplateBinding Control.Background}"
+												BorderBrush="{TemplateBinding Control.BorderBrush}"
+												BorderThickness="{TemplateBinding Control.BorderThickness}">
+												<VisualStateManager.VisualStateGroups>
+													<VisualStateGroup
+														x:Name="ImageReadyStates">
+														<VisualState
+															x:Name="ImageLoading" />
+														<VisualState
+															x:Name="ImageReady">
+															<Storyboard>
+																<DoubleAnimation
+																	Storyboard.TargetName="PART_ContentImage"
+																	Storyboard.TargetProperty="Opacity"
+																	To="1"
+																	Duration="0" />
+															</Storyboard>
+														</VisualState>
+														<VisualStateGroup.Transitions>
+															<VisualTransition
+																From="ImageLoading"
+																To="ImageReady"
+																GeneratedDuration="0:0:0.12" />
+														</VisualStateGroup.Transitions>
+													</VisualStateGroup>
+												</VisualStateManager.VisualStateGroups>
+												<Image
+													x:Name="PART_ContentImage"
+													Opacity="0"
+													Stretch="Uniform"
+													HorizontalAlignment="Stretch"
+													VerticalAlignment="Stretch" />
+											</Border>
+										</ControlTemplate>
+									</Control.Template>
+								</local:PdfPagePreviewControl>
+							</Viewbox>
+							<TextBlock
+								x:Name="PageIndexText"
+								Grid.Row="2"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontSize="10"
+								Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+								Text="{Binding DisplayPageIndex, Mode=OneWay}" />
+						</Grid>
+					</Border>
+					<DataTemplate.Triggers>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type local:PdfPagePreviewHScrollGridViewItem}}}">
+							<Setter
+								TargetName="thumbnailBorder"
+								Value="{DynamicResource SignaturePickerBorderBrush}"
+								Property="Border.Background" />
+						</DataTrigger>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType={x:Type local:PdfPagePreviewHScrollGridViewItem}}}">
+							<Setter
+								TargetName="thumbnailBorder"
+								Value="{DynamicResource SignaturePickerBorderBrush}"
+								Property="Border.Background" />
+						</DataTrigger>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition
+									Value="True"
+									Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType={x:Type local:PdfPagePreviewHScrollGridViewItem}}}" />
+								<Condition
+									Value="True"
+									Binding="{Binding Path=IsSelectedIndex, RelativeSource={RelativeSource AncestorType={x:Type local:PdfPagePreviewHScrollGridViewItem}}}" />
+							</MultiDataTrigger.Conditions>
+							<Setter
+								TargetName="thumbnailBorder"
+								Property="Border.BorderBrush"
+								Value="#EA2732" />
+						</MultiDataTrigger>
+					</DataTemplate.Triggers>
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		x:Key="{x:Type local:PdfPagePreviewHScrollGridViewItem}"
+		TargetType="{x:Type local:PdfPagePreviewHScrollGridViewItem}">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="MinWidth"
+			Value="20" />
+		<Setter
+			Property="MinHeight"
+			Value="40" />
+		<Setter
+			Property="Padding"
+			Value="0,4,0,0" />
+		<Setter
+			Property="Margin"
+			Value="0" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="BorderBrush"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="BorderThickness"
+			Value="1" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type local:PdfPagePreviewHScrollGridViewItem}">
+					<Border
+						x:Name="Bd"
+						BorderBrush="{TemplateBinding Control.BorderBrush}"
+						BorderThickness="{TemplateBinding Control.BorderThickness}"
+						Background="{TemplateBinding Control.Background}"
+						Padding="{TemplateBinding Control.Padding}"
+						SnapsToDevicePixels="True">
+						<ContentPresenter
+							SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+							HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+							VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								TargetName="Bd"
+								Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
+								Property="TextElement.Foreground" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

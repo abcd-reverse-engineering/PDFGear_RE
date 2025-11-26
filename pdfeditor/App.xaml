@@ -1,0 +1,1323 @@
+<Application
+	x:Class="pdfeditor.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:pdfeditor" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:theme="clr-namespace:CommonLib.AppTheme;assembly=CommonLib">
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<controls:ModernStyleDictionary xmlns:controls="clr-namespace:CommonLib.Controls;assembly=CommonLib" />
+				<pdf:PdfResourceDictionary xmlns:pdf="clr-namespace:PDFKit;assembly=PDFKit" />
+				<ResourceDictionary
+					Source="/pdfeditor;component/Controls/DialogButton.xaml" />
+				<ResourceDictionary
+					Source="/pdfeditor;component/Themes/TemplatedControlResources.xaml" />
+				<ResourceDictionary
+					Source="/pdfeditor;component/Themes/ControlThemes.xaml" />
+				<theme:ThemeResourceDictionary
+					Theme="Light">
+					<theme:ThemeResourceDictionary.ThemeResources>
+						<ResourceDictionary
+							x:Key="Light">
+							<ResourceDictionary.MergedDictionaries>
+								<ResourceDictionary
+									Source="pack://application:,,,/CommonLib;component/Controls/SharedLightModeColors.xaml" />
+							</ResourceDictionary.MergedDictionaries>
+							<BitmapImage
+								x:Key="MainViewPrintSource"
+								UriSource="/Style/Resources/print.png" />
+							<BitmapImage
+								x:Key="ToolBarPrintImage"
+								UriSource="/Style/Resources/toolbar-print.png" />
+							<BitmapImage
+								x:Key="MainViewNewPdfSource"
+								UriSource="/Style/Resources/NewPDF.png" />
+							<BitmapImage
+								x:Key="ToolBarleftRotateImage"
+								UriSource="/Style/Resources/left2.png" />
+							<BitmapImage
+								x:Key="ToolBarrightRotateImage"
+								UriSource="/Style/Resources/right2.png" />
+							<BitmapImage
+								x:Key="ToolBarSinglePageImage"
+								UriSource="/Style/Resources/single.png" />
+							<BitmapImage
+								x:Key="ToolBarDoublePageImage"
+								UriSource="/Style/Resources/double.png" />
+							<BitmapImage
+								x:Key="ToolBarContinusReadImage"
+								UriSource="/Style/Resources/continus2.png" />
+							<BitmapImage
+								x:Key="ToolBarScreenshot_ocrImage"
+								UriSource="/Style/Resources/screenshot_ocr.png" />
+							<BitmapImage
+								x:Key="ToolBarScreenShotImage"
+								UriSource="/Style/Resources/screenshot.png" />
+							<BitmapImage
+								x:Key="ToolBarSearchImage"
+								UriSource="/Style/Resources/toolbar-search.png" />
+							<BitmapImage
+								x:Key="ToolBarViewArrowImage"
+								UriSource="/Style/Resources/viewer-arrow.png" />
+							<BitmapImage
+								x:Key="ToolBarViewHandImage"
+								UriSource="/Style/Resources/viewer-hand.png" />
+							<BitmapImage
+								x:Key="ToolBarHideAnnotationImage"
+								UriSource="/Style/Resources/Annonate/hide.png" />
+							<BitmapImage
+								x:Key="ToolBarShowAnnotationImage"
+								UriSource="/Style/Resources/Annonate/show.png" />
+							<BitmapImage
+								x:Key="ToolBarExtractImage"
+								UriSource="/Style/Resources/PageEditor/Extract.png" />
+							<BitmapImage
+								x:Key="ToolBarDeleteImage"
+								UriSource="/Style/Resources/PageEditor/Delete.png" />
+							<BitmapImage
+								x:Key="ToolBarCropPageImage"
+								UriSource="/Style/Resources/PageEditor/CropPage.png" />
+							<BitmapImage
+								x:Key="ToolBarPageResizeImage"
+								UriSource="/Style/Resources/PageEditor/PageResize.png" />
+							<BitmapImage
+								x:Key="ToolBarRotateLeftImage"
+								UriSource="/Style/Resources/PageEditor/RotateLeft.png" />
+							<BitmapImage
+								x:Key="ToolBarRotateRightImage"
+								UriSource="/Style/Resources/PageEditor/RotateRight.png" />
+							<BitmapImage
+								x:Key="ToolBarCompressImage"
+								UriSource="/Style/Resources/Compress.png" />
+							<BitmapImage
+								x:Key="ToolBarMergeImage"
+								UriSource="/Style/Resources/PageEditor/Merge.png" />
+							<BitmapImage
+								x:Key="ToolBarSplitImage"
+								UriSource="/Style/Resources/PageEditor/Split.png" />
+							<BitmapImage
+								x:Key="ToolBarEncryptImage"
+								UriSource="/Style/Resources/Protect/Encrypt.png" />
+							<BitmapImage
+								x:Key="ToolBarDecryptImage"
+								UriSource="/Style/Resources/Protect/Decrypt.png" />
+							<BitmapImage
+								x:Key="ToolBarFeedBackImage"
+								UriSource="/Style/Resources/feedback2.png" />
+							<BitmapImage
+								x:Key="ToolBarGuideImage"
+								UriSource="/Style/Resources/Guide.png" />
+							<BitmapImage
+								x:Key="ToolBarUpdateImage"
+								UriSource="/Style/Resources/Update.png" />
+							<BitmapImage
+								x:Key="ToolBarAboutImage"
+								UriSource="/Style/Resources/about.png" />
+							<BitmapImage
+								x:Key="ToolBarProperitesImage"
+								UriSource="/Style/Resources/Properties.png" />
+							<BitmapImage
+								x:Key="ToolBarAppSettingsImage"
+								UriSource="/Style/Resources/appsettings.png" />
+							<BitmapImage
+								x:Key="ToolBarUpBtnImage"
+								UriSource="/Style/Resources/up.png" />
+							<BitmapImage
+								x:Key="ToolBarDownBtnImage"
+								UriSource="/Style/Resources/down.png" />
+							<BitmapImage
+								x:Key="MainViewShapeExitBtn"
+								UriSource="/Style/Resources/Annonate/exit3.png" />
+							<BitmapImage
+								x:Key="MainViewShapeStrikeThickness"
+								UriSource="pack://application:,,,/Style/Resources/Annonate/strokethickness.png" />
+							<BitmapImage
+								x:Key="MainViewFontSizeImage"
+								UriSource="pack://application:,,,/Style/Resources/Annonate/fontsize.png" />
+							<BitmapImage
+								x:Key="SideToolBarThumbnailsSidebarMerge"
+								UriSource="/Style/Resources/SidebarMerge.png" />
+							<BitmapImage
+								x:Key="SideToolBarThumbnailsSidebarSplit"
+								UriSource="/Style/Resources/SidebarSplit.png" />
+							<BitmapImage
+								x:Key="SideToolBarThumbnailsSidebarExtract"
+								UriSource="/Style/Resources/SidebarExtract.png" />
+							<BitmapImage
+								x:Key="SideToolBarThumbnailsSidebarInsert"
+								UriSource="/Style/Resources/SidebarInsert.png" />
+							<BitmapImage
+								x:Key="SignatureDelItemButton"
+								UriSource="/Style/Resources/Signature/Delete.png" />
+							<BitmapImage
+								x:Key="SignatureAddNewButton"
+								UriSource="/Style/Resources/Signature/Addnew.png" />
+							<BitmapImage
+								x:Key="MainViewViewBcakiseImage"
+								UriSource="/Style/Resources/Viewbackise.png" />
+							<BitmapImage
+								x:Key="MainViewViewBcakImage"
+								UriSource="/Style/Resources/Viewback.png" />
+							<BitmapImage
+								x:Key="MainViewViewPreiseImage"
+								UriSource="/Style/Resources/Viewpreise.png" />
+							<BitmapImage
+								x:Key="MainViewViewPreImage"
+								UriSource="/Style/Resources/Viewpre.png" />
+							<BitmapImage
+								x:Key="MainViewSideBarInsertBlankPageImage"
+								UriSource="/Style/Resources/PageEditor/BlankPage.png" />
+							<BitmapImage
+								x:Key="MainViewSideBarInsertFormPDFPageImage"
+								UriSource="/Style/Resources/PageEditor/FromPDF.png" />
+							<BitmapImage
+								x:Key="MainViewSideBarInsertFormScanenrPageImage"
+								UriSource="/Style/Resources/PageEditor/FromScanner.png" />
+							<BitmapImage
+								x:Key="PageEditorRotateLeftImage"
+								UriSource="/Style/Resources/PageEditor/HoverIcons/RotateLeft.png" />
+							<BitmapImage
+								x:Key="PageEditorRotateRightImage"
+								UriSource="/Style/Resources/PageEditor/HoverIcons/RotateRight.png" />
+							<BitmapImage
+								x:Key="PageEditorDeleteImage"
+								UriSource="/Style/Resources/PageEditor/HoverIcons/Delete.png" />
+							<BitmapImage
+								x:Key="PageEditorInsertImage"
+								UriSource="/Style/Resources/PageEditor/HoverIcons/Insert.png" />
+							<BitmapImage
+								x:Key="HFInsertDate"
+								UriSource="/Style/Resources/HeaderFooter/HFInsertDate.png" />
+							<BitmapImage
+								x:Key="HFInsertPageNumber"
+								UriSource="/Style/Resources/HeaderFooter/HFInsertPageNumber.png" />
+							<BitmapImage
+								x:Key="HFInsertFileName"
+								UriSource="/Style/Resources/HeaderFooter/HFInsertFileName.png" />
+							<BitmapImage
+								x:Key="EraserPartialImage"
+								UriSource="/Style/Resources/Annonate/Partial.png" />
+							<BitmapImage
+								x:Key="EraserWholeImage"
+								UriSource="/Style/Resources/Annonate/Whole.png" />
+							<BitmapImage
+								x:Key="ImageControlEditBtn"
+								UriSource="/Style/Resources/ContextMenu/EdiorImage.png" />
+							<BitmapImage
+								x:Key="ImageControlExportBtn"
+								UriSource="/Style/Resources/ContextMenu/ImageControlExport.png" />
+							<BitmapImage
+								x:Key="ImageControlRotateBtn"
+								UriSource="/Style/Resources/ContextMenu/ImageControlRotate.png" />
+							<BitmapImage
+								x:Key="ImageControlOCRBtn"
+								UriSource="/Style/Resources/ContextMenu/ImageControlText.png" />
+							<BitmapImage
+								x:Key="ImageControlDeleteBtn"
+								UriSource="/Style/Resources/ContextMenu/ImageControlDelete.png" />
+							<BitmapImage
+								x:Key="ImageControlReplaceBtn"
+								UriSource="/Style/Resources/ContextMenu/ImageControlReplace.png" />
+							<BitmapImage
+								x:Key="ImageControlExitBtn"
+								UriSource="/Style/Resources/ContextMenu/ImageExit.png" />
+							<BitmapImage
+								x:Key="ScreenShotPageRangeImage"
+								UriSource="/Style/Resources/ContextMenu/ScreenShot_PageRange.png" />
+							<BitmapImage
+								x:Key="ScreenShotPageDoneImage"
+								UriSource="/Style/Resources/ContextMenu/ScreenShot_Done.png" />
+							<BitmapImage
+								x:Key="ScreenShotPageCancelImage"
+								UriSource="/Style/Resources/ContextMenu/Screenshot_Cancel2.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarFullsizeBtn"
+								UriSource="/Style/Resources/fullsize.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarFitBtn"
+								UriSource="/Style/Resources/fit.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarFitWidthBtn"
+								UriSource="/Style/Resources/width.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarFitHeightBtn"
+								UriSource="/Style/Resources/height.png" />
+							<BitmapImage
+								x:Key="SignatureDargEmbed"
+								UriSource="/Style/Resources/Signature/Embed.png" />
+							<BitmapImage
+								x:Key="SignatureDargEmbedInBatch"
+								UriSource="/Style/Resources/Signature/EmbedInBatch.png" />
+							<BitmapImage
+								x:Key="SignatureDargApply"
+								UriSource="/Style/Resources/Signature/Apply.png" />
+							<BitmapImage
+								x:Key="SignatureDargDeleteBatch"
+								UriSource="/Style/Resources/Signature/DeleteInBatch.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarSunandMoon"
+								UriSource="/Style/Resources/SunAndMoon.png" />
+							<BitmapImage
+								x:Key="ToolBarNewPDFImage"
+								UriSource="/Style/Resources/PageEditor/PageNewPDF.png" />
+							<BitmapImage
+								x:Key="ToolBarHeightLightFillForms"
+								UriSource="/Style/Resources/HightlightFillable.png" />
+							<BitmapImage
+								x:Key="AnnotationManage"
+								UriSource="/Style/Resources/Annonate/AnnotationManage.png" />
+							<BitmapImage
+								x:Key="SpeechControlVoiceImage"
+								UriSource="/Style/Resources/Speech/Voice.png" />
+							<BitmapImage
+								x:Key="SpeechControlToneImage"
+								UriSource="/Style/Resources/Speech/Tone.png" />
+							<BitmapImage
+								x:Key="SpeechControlSpeedImage"
+								UriSource="/Style/Resources/Speech/Speed.png" />
+							<BitmapImage
+								x:Key="SpeechControlGlobeImage"
+								UriSource="/Style/Resources/Speech/Globe.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarPhoneImage"
+								UriSource="/Style/Resources/ToolbarPhone.png" />
+							<BitmapImage
+								x:Key="ImageControlTopHierarchy"
+								UriSource="/Style/Resources/ContextMenu/ImageControlHierarchy.png" />
+							<BitmapImage
+								x:Key="ImageControlBottomHierarchy"
+								UriSource="/Style/Resources/ContextMenu/HierarchyBottom.png" />
+							<BitmapImage
+								x:Key="ImageControlFlip_Horizontal"
+								UriSource="/Style/Resources/ContextMenu/ImageControlFilpHor.png" />
+							<BitmapImage
+								x:Key="ImageControlFlip_Vertical"
+								UriSource="/Style/Resources/ContextMenu/ImageControlFilpVer.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerInsertImage"
+								UriSource="/Style/Resources/Scan/ScannerAddImage.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerRotateLeftImage"
+								UriSource="/Style/Resources/Scan/ScannerRotateLeft.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerRotateRightImage"
+								UriSource="/Style/Resources/Scan/ScannerRotateRight.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDeleteImage"
+								UriSource="/Style/Resources/Scan/ScannerDelete.png" />
+							<BitmapImage
+								x:Key="FileMenuMergeSplitPDFImage"
+								UriSource="/Style/Resources/ContextMenu/DefaultContextMenu_MergeAndSplit.png" />
+							<BitmapImage
+								x:Key="FileMenuMergePDFImage"
+								UriSource="/Style/Resources/ContextMenu/DefaultContextMenu_MergePDF.png" />
+							<BitmapImage
+								x:Key="FileMenuSplitPDFImage"
+								UriSource="/Style/Resources/ContextMenu/DefaultContextMenu_SplitPDF.png" />
+							<BitmapImage
+								x:Key="FileMenuMailImage"
+								UriSource="/Style/Resources/Annonate/mail.png" />
+							<BitmapImage
+								x:Key="FileMenuSendFileImage"
+								UriSource="/Style/Resources/Annonate/file.png" />
+							<BitmapImage
+								x:Key="CreateNewFileSource"
+								UriSource="/Style/Resources/PageEditor/CreatePDF.png" />
+							<BitmapImage
+								x:Key="NewFileFromScannerSource"
+								UriSource="/Style/Resources/PageEditor/NewFromScanner.png" />
+							<BitmapImage
+								x:Key="NewBlankFileSource"
+								UriSource="/Style/Resources/PageEditor/NewFormBlank.png" />
+							<BitmapImage
+								x:Key="CreateFileFromImageSource"
+								UriSource="/Style/Resources/PageEditor/NewFromImage.png" />
+							<BitmapImage
+								x:Key="OpenFileSource"
+								UriSource="/Style/Resources/PageEditor/OpenFile.png" />
+							<BitmapImage
+								x:Key="SaveFileSource"
+								UriSource="/Style/Resources/PageEditor/Save.png" />
+							<BitmapImage
+								x:Key="RecentFileSource"
+								UriSource="/Style/Resources/PageEditor/RecentFile.png" />
+							<BitmapImage
+								x:Key="SaveAsSource"
+								UriSource="/Style/Resources/PageEditor/SaveAs.png" />
+							<BitmapImage
+								x:Key="ExportFileAsSource"
+								UriSource="/Style/Resources/PageEditor/ExportAs.png" />
+							<BitmapImage
+								x:Key="MergeAndSplitFileSource"
+								UriSource="/Style/Resources/PageEditor/MergeandSplit.png" />
+							<BitmapImage
+								x:Key="CompressFileSource"
+								UriSource="/Style/Resources/PageEditor/Compress.png" />
+							<BitmapImage
+								x:Key="PrintSource"
+								UriSource="/Style/Resources/PageEditor/Print.png" />
+							<BitmapImage
+								x:Key="BatchPrintSource"
+								UriSource="/Style/Resources/PageEditor/BatchPrint.png" />
+							<BitmapImage
+								x:Key="ShareSource"
+								UriSource="/Style/Resources/PageEditor/Share.png" />
+							<BitmapImage
+								x:Key="HelpSource"
+								UriSource="/Style/Resources/PageEditor/Help.png" />
+							<BitmapImage
+								x:Key="ExitSource"
+								UriSource="/Style/Resources/PageEditor/Exit.png" />
+							<BitmapImage
+								x:Key="ToWordSource"
+								UriSource="/Style/Resources/converter/pdftoword.png" />
+							<BitmapImage
+								x:Key="ToExcelSource"
+								UriSource="/Style/Resources/converter/pdftoexcel.png" />
+							<BitmapImage
+								x:Key="ToPPTSource"
+								UriSource="/Style/Resources/converter/pdftoppt.png" />
+							<BitmapImage
+								x:Key="ToImageSource"
+								UriSource="/Style/Resources/converter/pdftoimage.png" />
+							<BitmapImage
+								x:Key="ToHTMLSource"
+								UriSource="/Style/Resources/converter/pdftohtml.png" />
+							<BitmapImage
+								x:Key="ToTXTSource"
+								UriSource="/Style/Resources/converter/PDFtoTXT2.png" />
+							<BitmapImage
+								x:Key="ToXMLSource"
+								UriSource="/Style/Resources/converter/pdftoxml.png" />
+							<BitmapImage
+								x:Key="ToRTFSource"
+								UriSource="/Style/Resources/converter/pdftortf.png" />
+							<BitmapImage
+								x:Key="MergeSource"
+								UriSource="/Style/Resources/PageEditor/Merge.png" />
+							<BitmapImage
+								x:Key="SplitSource"
+								UriSource="/Style/Resources/PageEditor/Split.png" />
+							<BitmapImage
+								x:Key="MailSource"
+								UriSource="/Style/Resources/Annonate/Mail2.png" />
+							<BitmapImage
+								x:Key="SendSource"
+								UriSource="/Style/Resources/Annonate/Sendfile2.png" />
+							<BitmapImage
+								x:Key="ShareSource2"
+								UriSource="/Style/Resources/Annonate/Share2.png" />
+							<BitmapImage
+								x:Key="GuideSource"
+								UriSource="/Style/Resources/userMannul.png" />
+							<BitmapImage
+								x:Key="AboutSource"
+								UriSource="/Style/Resources/about.png" />
+							<BitmapImage
+								x:Key="FeedbackSource"
+								UriSource="/Style/Resources/feedback2.png" />
+							<BitmapImage
+								x:Key="PropertiesSource"
+								UriSource="/Style/Resources/Properties.png" />
+							<BitmapImage
+								x:Key="MainviewFooterBarSingleSubViewImage"
+								UriSource="/Style/Resources/HeaderFooter/FooterBarSinglePage.png" />
+							<BitmapImage
+								x:Key="MainviewFooterBarDoubleSubViewImage"
+								UriSource="/Style/Resources/HeaderFooter/FooterBarDoublePage.png" />
+							<BitmapImage
+								x:Key="MainviewFooterBarPPTImage"
+								UriSource="/Style/Resources/HeaderFooter/FooterBarPPTImage.png" />
+							<BitmapImage
+								x:Key="MainviewFooterBarContiusImage"
+								UriSource="/Style/Resources/HeaderFooter/FooterBarContiusImage.png" />
+							<BitmapImage
+								x:Key="BatchPrintRemoveFileImage"
+								UriSource="/Style/Resources/Printer/PrintRemoveFile.png" />
+							<BitmapImage
+								x:Key="BatchPrintSettingsBtnImage"
+								UriSource="/Style/Resources/Printer/BatchPrintsettings.png" />
+							<BitmapImage
+								x:Key="BatchPrintDeleteBtnImage"
+								UriSource="/Style/Resources/Printer/BatchPrintDeleteFile.png" />
+							<BitmapImage
+								x:Key="MenuBatchPrintImage"
+								UriSource="/Style/Resources/Printer/MenuBatchPrintImage.png" />
+							<BitmapImage
+								x:Key="StampEllipseImage"
+								UriSource="/Style/Resources/Stamp/Ellipse.png" />
+							<BitmapImage
+								x:Key="StampRechangleImage"
+								UriSource="/Style/Resources/Stamp/Rectangle.png" />
+							<BitmapImage
+								x:Key="StampSingleArrowImage"
+								UriSource="/Style/Resources/Stamp/RectangleSingleArrow.png" />
+							<BitmapImage
+								x:Key="StampDoubleArrowImage"
+								UriSource="/Style/Resources/Stamp/RectangleDoubleArrow.png" />
+							<BitmapImage
+								x:Key="StampSingleReverseArrowImage"
+								UriSource="/Style/Resources/Stamp/RectangleSingleReverseArrow.png" />
+							<BitmapImage
+								x:Key="StampDoubleReverseArrowImage"
+								UriSource="/Style/Resources/Stamp/RectangleDoubleReverseArrow.png" />
+							<BitmapImage
+								x:Key="StampEditImage"
+								UriSource="/Style/Resources/Stamp/StampEdit.png" />
+							<BitmapImage
+								x:Key="StampDeleteImage"
+								UriSource="/Style/Resources/Stamp/StampDelete.png" />
+							<BitmapImage
+								x:Key="StampAddImage"
+								UriSource="/Style/Resources/Stamp/StampAdd.png" />
+							<BitmapImage
+								x:Key="MenuStampAddImage"
+								UriSource="/Style/Resources/Stamp/MenuStampAdd.png" />
+							<BitmapImage
+								x:Key="StampManageRenameImage"
+								UriSource="/Style/Resources/Stamp/StampCategoryRename.png" />
+							<BitmapImage
+								x:Key="StampManageAddCategoryImage"
+								UriSource="/Style/Resources/ContextMenu/DefaultContextMenu_Add.png" />
+							<BitmapImage
+								x:Key="DisStampManageRenameImage"
+								UriSource="/Style/Resources/Stamp/DisStampCategoryRename.png" />
+							<BitmapImage
+								x:Key="DisStampDeleteImage"
+								UriSource="/Style/Resources/Stamp/DisStampDelete.png" />
+							<BitmapImage
+								x:Key="DeleteCheckedStampImage"
+								UriSource="/Style/Resources/Stamp/StampDeleteChecked.png" />
+							<BitmapImage
+								x:Key="TranslateCopyImage"
+								UriSource="/Style/Resources/ContextMenu/Select_Copy.png" />
+							<BitmapImage
+								x:Key="PrintLayoutImage"
+								UriSource="/Style/Resources/Printer/PrintLayout1.png" />
+							<BitmapImage
+								x:Key="PrintLayout2Image"
+								UriSource="/Style/Resources/Printer/PrintLayout2.png" />
+							<BitmapImage
+								x:Key="PrintLayout3Image"
+								UriSource="/Style/Resources/Printer/PrintLayout3.png" />
+							<BitmapImage
+								x:Key="PrintLayout4Image"
+								UriSource="/Style/Resources/Printer/PrintLayout4.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDisDeleteImage"
+								UriSource="/Style/Resources/Scan/DIsScannerDelete.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDisRotateRightImage"
+								UriSource="/Style/Resources/Scan/DisScannerRotateRight.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDisRotateLeftImage"
+								UriSource="/Style/Resources/Scan/DIsScannerRotateLeft.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDisInsertImage"
+								UriSource="/Style/Resources/Scan/DIsScannerAddImage.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerScannerrefresh"
+								UriSource="/Style/Resources/Scan/Scannerrefresh.png" />
+						</ResourceDictionary>
+						<ResourceDictionary
+							x:Key="Dark">
+							<ResourceDictionary.MergedDictionaries>
+								<ResourceDictionary
+									Source="pack://application:,,,/CommonLib;component/Controls/SharedDarkModeColors.xaml" />
+							</ResourceDictionary.MergedDictionaries>
+							<BitmapImage
+								x:Key="MainViewPrintSource"
+								UriSource="/Style/DarkModeResources/print.png" />
+							<BitmapImage
+								x:Key="MainViewNewPdfSource"
+								UriSource="/Style/DarkModeResources/NewPDF.png" />
+							<BitmapImage
+								x:Key="ToolBarPrintImage"
+								UriSource="/Style/DarkModeResources/toolbar-print.png" />
+							<BitmapImage
+								x:Key="ToolBarleftRotateImage"
+								UriSource="/Style/DarkModeResources/left2.png" />
+							<BitmapImage
+								x:Key="ToolBarrightRotateImage"
+								UriSource="/Style/DarkModeResources/right2.png" />
+							<BitmapImage
+								x:Key="ToolBarSinglePageImage"
+								UriSource="/Style/DarkModeResources/single.png" />
+							<BitmapImage
+								x:Key="ToolBarDoublePageImage"
+								UriSource="/Style/DarkModeResources/double.png" />
+							<BitmapImage
+								x:Key="ToolBarContinusReadImage"
+								UriSource="/Style/DarkModeResources/continus2.png" />
+							<BitmapImage
+								x:Key="ToolBarScreenshot_ocrImage"
+								UriSource="/Style/DarkModeResources/screenshot_ocr.png" />
+							<BitmapImage
+								x:Key="ToolBarScreenShotImage"
+								UriSource="/Style/DarkModeResources/screenshot.png" />
+							<BitmapImage
+								x:Key="ToolBarSearchImage"
+								UriSource="/Style/DarkModeResources/toolbar-search.png" />
+							<BitmapImage
+								x:Key="ToolBarViewArrowImage"
+								UriSource="/Style/DarkModeResources/viewer-arrow.png" />
+							<BitmapImage
+								x:Key="ToolBarViewHandImage"
+								UriSource="/Style/DarkModeResources/viewer-hand.png" />
+							<BitmapImage
+								x:Key="ToolBarHideAnnotationImage"
+								UriSource="/Style/DarkModeResources/Annonate/hide.png" />
+							<BitmapImage
+								x:Key="ToolBarShowAnnotationImage"
+								UriSource="/Style/DarkModeResources/Annonate/show.png" />
+							<BitmapImage
+								x:Key="ToolBarExtractImage"
+								UriSource="/Style/DarkModeResources/PageEditor/Extract.png" />
+							<BitmapImage
+								x:Key="ToolBarDeleteImage"
+								UriSource="/Style/DarkModeResources/PageEditor/Delete.png" />
+							<BitmapImage
+								x:Key="ToolBarCropPageImage"
+								UriSource="/Style/DarkModeResources/PageEditor/CropPage.png" />
+							<BitmapImage
+								x:Key="ToolBarPageResizeImage"
+								UriSource="/Style/DarkModeResources/PageEditor/PageResize.png" />
+							<BitmapImage
+								x:Key="ToolBarRotateLeftImage"
+								UriSource="/Style/DarkModeResources/PageEditor/RotateLeft.png" />
+							<BitmapImage
+								x:Key="ToolBarRotateRightImage"
+								UriSource="/Style/DarkModeResources/PageEditor/RotateRight.png" />
+							<BitmapImage
+								x:Key="ToolBarCompressImage"
+								UriSource="/Style/DarkModeResources/Compress.png" />
+							<BitmapImage
+								x:Key="ToolBarMergeImage"
+								UriSource="/Style/DarkModeResources/PageEditor/Merge.png" />
+							<BitmapImage
+								x:Key="ToolBarSplitImage"
+								UriSource="/Style/DarkModeResources/PageEditor/Split.png" />
+							<BitmapImage
+								x:Key="ToolBarEncryptImage"
+								UriSource="/Style/DarkModeResources/Protect/Encrypt.png" />
+							<BitmapImage
+								x:Key="ToolBarDecryptImage"
+								UriSource="/Style/DarkModeResources/Protect/Decrypt.png" />
+							<BitmapImage
+								x:Key="ToolBarFeedBackImage"
+								UriSource="/Style/DarkModeResources/feedback2.png" />
+							<BitmapImage
+								x:Key="ToolBarGuideImage"
+								UriSource="/Style/DarkModeResources/Guide.png" />
+							<BitmapImage
+								x:Key="ToolBarUpdateImage"
+								UriSource="/Style/DarkModeResources/Update.png" />
+							<BitmapImage
+								x:Key="ToolBarAboutImage"
+								UriSource="/Style/DarkModeResources/about.png" />
+							<BitmapImage
+								x:Key="ToolBarProperitesImage"
+								UriSource="/Style/DarkModeResources/Properties.png" />
+							<BitmapImage
+								x:Key="ToolBarAppSettingsImage"
+								UriSource="/Style/DarkModeResources/appsettings.png" />
+							<BitmapImage
+								x:Key="ToolBarUpBtnImage"
+								UriSource="/Style/DarkModeResources/up.png" />
+							<BitmapImage
+								x:Key="ToolBarDownBtnImage"
+								UriSource="/Style/DarkModeResources/down.png" />
+							<BitmapImage
+								x:Key="MainViewShapeExitBtn"
+								UriSource="/Style/DarkModeResources/Annonate/exit3.png" />
+							<BitmapImage
+								x:Key="MainViewShapeStrikeThickness"
+								UriSource="pack://application:,,,/Style/DarkModeResources/Annonate/strokethickness.png" />
+							<BitmapImage
+								x:Key="MainViewFontSizeImage"
+								UriSource="pack://application:,,,/Style/DarkModeResources/Annonate/fontsize.png" />
+							<BitmapImage
+								x:Key="SideToolBarThumbnailsSidebarMerge"
+								UriSource="/Style/DarkModeResources/SidebarMerge.png" />
+							<BitmapImage
+								x:Key="SideToolBarThumbnailsSidebarSplit"
+								UriSource="/Style/DarkModeResources/SidebarSplit.png" />
+							<BitmapImage
+								x:Key="SideToolBarThumbnailsSidebarExtract"
+								UriSource="/Style/DarkModeResources/SidebarExtract.png" />
+							<BitmapImage
+								x:Key="SideToolBarThumbnailsSidebarInsert"
+								UriSource="/Style/DarkModeResources/SidebarInsert.png" />
+							<BitmapImage
+								x:Key="SignatureDelItemButton"
+								UriSource="/Style/DarkModeResources/Signature/Delete.png" />
+							<BitmapImage
+								x:Key="SignatureAddNewButton"
+								UriSource="/Style/DarkModeResources/Signature/Addnew.png" />
+							<BitmapImage
+								x:Key="MainViewViewBcakiseImage"
+								UriSource="/Style/Resources/Viewback.png" />
+							<BitmapImage
+								x:Key="MainViewViewBcakImage"
+								UriSource="/Style/Resources/Viewbackise.png" />
+							<BitmapImage
+								x:Key="MainViewViewPreiseImage"
+								UriSource="/Style/Resources/Viewpre.png" />
+							<BitmapImage
+								x:Key="MainViewViewPreImage"
+								UriSource="/Style/Resources/Viewpreise.png" />
+							<BitmapImage
+								x:Key="MainViewSideBarInsertBlankPageImage"
+								UriSource="/Style/DarkModeResources/PageEditor/BlankPage.png" />
+							<BitmapImage
+								x:Key="MainViewSideBarInsertFormPDFPageImage"
+								UriSource="/Style/DarkModeResources/PageEditor/FromPDF.png" />
+							<BitmapImage
+								x:Key="MainViewSideBarInsertFormScanenrPageImage"
+								UriSource="/Style/DarkModeResources/PageEditor/FromScanner.png" />
+							<BitmapImage
+								x:Key="PageEditorRotateLeftImage"
+								UriSource="/Style/DarkModeResources/PageEditor/HoverIcons/RotateLeft.png" />
+							<BitmapImage
+								x:Key="PageEditorRotateRightImage"
+								UriSource="/Style/DarkModeResources/PageEditor/HoverIcons/RotateRight.png" />
+							<BitmapImage
+								x:Key="PageEditorDeleteImage"
+								UriSource="/Style/DarkModeResources/PageEditor/HoverIcons/Delete.png" />
+							<BitmapImage
+								x:Key="PageEditorInsertImage"
+								UriSource="/Style/DarkModeResources/PageEditor/HoverIcons/Insert.png" />
+							<BitmapImage
+								x:Key="HFInsertDate"
+								UriSource="/Style/DarkModeResources/HeaderFooter/HFInsertDate.png" />
+							<BitmapImage
+								x:Key="HFInsertPageNumber"
+								UriSource="/Style/DarkModeResources/HeaderFooter/HFInsertPageNumber.png" />
+							<BitmapImage
+								x:Key="HFInsertFileName"
+								UriSource="/Style/DarkModeResources/HeaderFooter/HFInsertFileName.png" />
+							<BitmapImage
+								x:Key="EraserPartialImage"
+								UriSource="/Style/DarkModeResources/Annonate/Partial.png" />
+							<BitmapImage
+								x:Key="EraserWholeImage"
+								UriSource="/Style/DarkModeResources/Annonate/Whole.png" />
+							<BitmapImage
+								x:Key="ImageControlEditBtn"
+								UriSource="/Style/DarkModeResources/ContextMenu/EdiorImage.png" />
+							<BitmapImage
+								x:Key="ImageControlExportBtn"
+								UriSource="/Style/DarkModeResources/ContextMenu/ImageControlExport.png" />
+							<BitmapImage
+								x:Key="ImageControlRotateBtn"
+								UriSource="/Style/DarkModeResources/ContextMenu/ImageControlRotate.png" />
+							<BitmapImage
+								x:Key="ImageControlOCRBtn"
+								UriSource="/Style/DarkModeResources/ContextMenu/ImageControlText.png" />
+							<BitmapImage
+								x:Key="ImageControlDeleteBtn"
+								UriSource="/Style/DarkModeResources/ContextMenu/ImageControlDelete.png" />
+							<BitmapImage
+								x:Key="ImageControlReplaceBtn"
+								UriSource="/Style/DarkModeResources/ContextMenu/ImageControlReplace.png" />
+							<BitmapImage
+								x:Key="ImageControlExitBtn"
+								UriSource="/Style/DarkModeResources/ContextMenu/ImageExit.png" />
+							<BitmapImage
+								x:Key="ScreenShotPageRangeImage"
+								UriSource="/Style/DarkModeResources/ContextMenu/ScreenShot_PageRange.png" />
+							<BitmapImage
+								x:Key="ScreenShotPageDoneImage"
+								UriSource="/Style/DarkModeResources/ContextMenu/ScreenShot_Done.png" />
+							<BitmapImage
+								x:Key="ScreenShotPageCancelImage"
+								UriSource="/Style/DarkModeResources/ContextMenu/Screenshot_Cancel2.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarFullsizeBtn"
+								UriSource="/Style/DarkModeResources/fullsize.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarFitBtn"
+								UriSource="/Style/DarkModeResources/fit.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarFitWidthBtn"
+								UriSource="/Style/DarkModeResources/width.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarFitHeightBtn"
+								UriSource="/Style/DarkModeResources/height.png" />
+							<BitmapImage
+								x:Key="SignatureDargEmbed"
+								UriSource="/Style/DarkModeResources/Signature/Embed.png" />
+							<BitmapImage
+								x:Key="SignatureDargEmbedInBatch"
+								UriSource="/Style/DarkModeResources/Signature/EmbedInBatch.png" />
+							<BitmapImage
+								x:Key="SignatureDargApply"
+								UriSource="/Style/DarkModeResources/Signature/Apply.png" />
+							<BitmapImage
+								x:Key="SignatureDargDeleteBatch"
+								UriSource="/Style/DarkModeResources/Signature/DeleteInBatch.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarSunandMoon"
+								UriSource="/Style/DarkModeResources/SunAndMoon.png" />
+							<BitmapImage
+								x:Key="ToolBarNewPDFImage"
+								UriSource="/Style/DarkModeResources/PageEditor/PageNewPDF.png" />
+							<BitmapImage
+								x:Key="ToolBarHeightLightFillForms"
+								UriSource="/Style/DarkModeResources/HightlightFillable.png" />
+							<BitmapImage
+								x:Key="AnnotationManage"
+								UriSource="/Style/DarkModeResources/Annonate/AnnotationManage.png" />
+							<BitmapImage
+								x:Key="SpeechControlVoiceImage"
+								UriSource="/Style/DarkModeResources/Speech/Voice.png" />
+							<BitmapImage
+								x:Key="SpeechControlToneImage"
+								UriSource="/Style/DarkModeResources/Speech/Tone.png" />
+							<BitmapImage
+								x:Key="SpeechControlSpeedImage"
+								UriSource="/Style/DarkModeResources/Speech/Speed.png" />
+							<BitmapImage
+								x:Key="SpeechControlGlobeImage"
+								UriSource="/Style/DarkModeResources/Speech/Globe.png" />
+							<BitmapImage
+								x:Key="MainViewToolBarPhoneImage"
+								UriSource="/Style/Resources/ToolbarPhone.png" />
+							<BitmapImage
+								x:Key="ImageControlTopHierarchy"
+								UriSource="/Style/DarkModeResources/ContextMenu/ImageControlHierarchy.png" />
+							<BitmapImage
+								x:Key="ImageControlBottomHierarchy"
+								UriSource="/Style/DarkModeResources/ContextMenu/HierarchyBottom.png" />
+							<BitmapImage
+								x:Key="ImageControlFlip_Horizontal"
+								UriSource="/Style/DarkModeResources/ContextMenu/ImageControlFilpHor.png" />
+							<BitmapImage
+								x:Key="ImageControlFlip_Vertical"
+								UriSource="/Style/DarkModeResources/ContextMenu/ImageControlFilpVer.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerInsertImage"
+								UriSource="/Style/DarkModeResources/Scan/ScannerAddImage.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerRotateLeftImage"
+								UriSource="/Style/DarkModeResources/Scan/ScannerRotateLeft.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerRotateRightImage"
+								UriSource="/Style/DarkModeResources/Scan/ScannerRotateRight.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDeleteImage"
+								UriSource="/Style/DarkModeResources/Scan/ScannerDelete.png" />
+							<BitmapImage
+								x:Key="FileMenuMergeSplitPDFImage"
+								UriSource="/Style/DarkModeResources/ContextMenu/DefaultContextMenu_MergeAndSplit.png" />
+							<BitmapImage
+								x:Key="FileMenuMergePDFImage"
+								UriSource="/Style/DarkModeResources/ContextMenu/DefaultContextMenu_MergePDF.png" />
+							<BitmapImage
+								x:Key="FileMenuSplitPDFImage"
+								UriSource="/Style/DarkModeResources/ContextMenu/DefaultContextMenu_SplitPDF.png" />
+							<BitmapImage
+								x:Key="FileMenuMailImage"
+								UriSource="/Style/DarkModeResources/Annonate/mail.png" />
+							<BitmapImage
+								x:Key="FileMenuSendFileImage"
+								UriSource="/Style/DarkModeResources/Annonate/file.png" />
+							<BitmapImage
+								x:Key="CreateNewFileSource"
+								UriSource="/Style/DarkModeResources/PageEditor/CreatePDF.png" />
+							<BitmapImage
+								x:Key="NewFileFromScannerSource"
+								UriSource="/Style/DarkModeResources/PageEditor/NewFromScanner.png" />
+							<BitmapImage
+								x:Key="NewBlankFileSource"
+								UriSource="/Style/DarkModeResources/PageEditor/NewFormBlank.png" />
+							<BitmapImage
+								x:Key="CreateFileFromImageSource"
+								UriSource="/Style/DarkModeResources/PageEditor/NewFromImage.png" />
+							<BitmapImage
+								x:Key="OpenFileSource"
+								UriSource="/Style/DarkModeResources/PageEditor/OpenFile.png" />
+							<BitmapImage
+								x:Key="SaveFileSource"
+								UriSource="/Style/DarkModeResources/PageEditor/Save.png" />
+							<BitmapImage
+								x:Key="RecentFileSource"
+								UriSource="/Style/DarkModeResources/PageEditor/RecentFile.png" />
+							<BitmapImage
+								x:Key="SaveAsSource"
+								UriSource="/Style/DarkModeResources/PageEditor/SaveAs.png" />
+							<BitmapImage
+								x:Key="ExportFileAsSource"
+								UriSource="/Style/DarkModeResources/PageEditor/ExportAs.png" />
+							<BitmapImage
+								x:Key="MergeAndSplitFileSource"
+								UriSource="/Style/DarkModeResources/PageEditor/MergeandSplit.png" />
+							<BitmapImage
+								x:Key="CompressFileSource"
+								UriSource="/Style/DarkModeResources/PageEditor/Compress.png" />
+							<BitmapImage
+								x:Key="PrintSource"
+								UriSource="/Style/DarkModeResources/PageEditor/Print.png" />
+							<BitmapImage
+								x:Key="BatchPrintSource"
+								UriSource="/Style/DarkModeResources/PageEditor/BatchPrint.png" />
+							<BitmapImage
+								x:Key="ShareSource"
+								UriSource="/Style/DarkModeResources/PageEditor/Share.png" />
+							<BitmapImage
+								x:Key="HelpSource"
+								UriSource="/Style/DarkModeResources/PageEditor/Help.png" />
+							<BitmapImage
+								x:Key="ExitSource"
+								UriSource="/Style/DarkModeResources/PageEditor/Exit.png" />
+							<BitmapImage
+								x:Key="ToWordSource"
+								UriSource="/Style/DarkModeResources/converter/pdftoword.png" />
+							<BitmapImage
+								x:Key="ToExcelSource"
+								UriSource="/Style/DarkModeResources/converter/pdftoexcel.png" />
+							<BitmapImage
+								x:Key="ToPPTSource"
+								UriSource="/Style/DarkModeResources/converter/pdftoppt.png" />
+							<BitmapImage
+								x:Key="ToImageSource"
+								UriSource="/Style/DarkModeResources/converter/pdftoimage.png" />
+							<BitmapImage
+								x:Key="ToHTMLSource"
+								UriSource="/Style/DarkModeResources/converter/pdftohtml.png" />
+							<BitmapImage
+								x:Key="ToTXTSource"
+								UriSource="/Style/DarkModeResources/converter/PDFtoTXT2.png" />
+							<BitmapImage
+								x:Key="ToXMLSource"
+								UriSource="/Style/DarkModeResources/converter/pdftoxml.png" />
+							<BitmapImage
+								x:Key="ToRTFSource"
+								UriSource="/Style/DarkModeResources/converter/pdftortf.png" />
+							<BitmapImage
+								x:Key="MergeSource"
+								UriSource="/Style/DarkModeResources/PageEditor/Merge.png" />
+							<BitmapImage
+								x:Key="SplitSource"
+								UriSource="/Style/DarkModeResources/PageEditor/Split.png" />
+							<BitmapImage
+								x:Key="AboutSource"
+								UriSource="/Style/DarkModeResources/about.png" />
+							<BitmapImage
+								x:Key="FeedbackSource"
+								UriSource="/Style/DarkModeResources/feedback2.png" />
+							<BitmapImage
+								x:Key="PropertiesSource"
+								UriSource="/Style/DarkModeResources/Properties.png" />
+							<BitmapImage
+								x:Key="MainviewFooterBarSingleSubViewImage"
+								UriSource="/Style/DarkModeResources/HeaderFooter/FooterBarSinglePage.png" />
+							<BitmapImage
+								x:Key="MainviewFooterBarDoubleSubViewImage"
+								UriSource="/Style/DarkModeResources/HeaderFooter/FooterBarDoublePage.png" />
+							<BitmapImage
+								x:Key="MainviewFooterBarPPTImage"
+								UriSource="/Style/DarkModeResources/HeaderFooter/FooterBarPPTImage.png" />
+							<BitmapImage
+								x:Key="MainviewFooterBarContiusImage"
+								UriSource="/Style/DarkModeResources/HeaderFooter/FooterBarContiusImage.png" />
+							<BitmapImage
+								x:Key="BatchPrintRemoveFileImage"
+								UriSource="/Style/DarkModeResources/Printer/PrintRemoveFile.png" />
+							<BitmapImage
+								x:Key="BatchPrintSettingsBtnImage"
+								UriSource="/Style/DarkModeResources/Printer/BatchPrintsettings.png" />
+							<BitmapImage
+								x:Key="BatchPrintDeleteBtnImage"
+								UriSource="/Style/DarkModeResources/Printer/BatchPrintDeleteFile.png" />
+							<BitmapImage
+								x:Key="MenuBatchPrintImage"
+								UriSource="/Style/DarkModeResources/Printer/MenuBatchPrintImage.png" />
+							<BitmapImage
+								x:Key="StampEllipseImage"
+								UriSource="/Style/DarkModeResources/Stamp/Ellipse.png" />
+							<BitmapImage
+								x:Key="StampRechangleImage"
+								UriSource="/Style/DarkModeResources/Stamp/Rectangle.png" />
+							<BitmapImage
+								x:Key="StampSingleArrowImage"
+								UriSource="/Style/DarkModeResources/Stamp/RectangleSingleArrow.png" />
+							<BitmapImage
+								x:Key="StampDoubleArrowImage"
+								UriSource="/Style/DarkModeResources/Stamp/RectangleDoubleArrow.png" />
+							<BitmapImage
+								x:Key="StampSingleReverseArrowImage"
+								UriSource="/Style/DarkModeResources/Stamp/RectangleSingleReverseArrow.png" />
+							<BitmapImage
+								x:Key="StampDoubleReverseArrowImage"
+								UriSource="/Style/DarkModeResources/Stamp/RectangleDoubleReverseArrow.png" />
+							<BitmapImage
+								x:Key="StampEditImage"
+								UriSource="/Style/DarkModeResources/Stamp/StampEdit.png" />
+							<BitmapImage
+								x:Key="StampDeleteImage"
+								UriSource="/Style/DarkModeResources/Stamp/StampDelete.png" />
+							<BitmapImage
+								x:Key="StampAddImage"
+								UriSource="/Style/DarkModeResources/Stamp/StampAdd.png" />
+							<BitmapImage
+								x:Key="MenuStampAddImage"
+								UriSource="/Style/DarkModeResources/Stamp/MenuStampAdd.png" />
+							<BitmapImage
+								x:Key="StampManageRenameImage"
+								UriSource="/Style/DarkModeResources/Stamp/StampCategoryRename.png" />
+							<BitmapImage
+								x:Key="StampManageAddCategoryImage"
+								UriSource="/Style/DarkModeResources/ContextMenu/DefaultContextMenu_Add.png" />
+							<BitmapImage
+								x:Key="DisStampManageRenameImage"
+								UriSource="/Style/DarkModeResources/Stamp/DisStampCategoryRename.png" />
+							<BitmapImage
+								x:Key="DisStampDeleteImage"
+								UriSource="/Style/DarkModeResources/Stamp/DisStampDelete.png" />
+							<BitmapImage
+								x:Key="DeleteCheckedStampImage"
+								UriSource="/Style/DarkModeResources/Stamp/StampDeleteChecked.png" />
+							<BitmapImage
+								x:Key="TranslateCopyImage"
+								UriSource="/Style/DarkModeResources/ContextMenu/Select_Copy.png" />
+							<BitmapImage
+								x:Key="PrintLayoutImage"
+								UriSource="/Style/DarkModeResources/Printer/PrintLayout1.png" />
+							<BitmapImage
+								x:Key="PrintLayout2Image"
+								UriSource="/Style/DarkModeResources/Printer/PrintLayout2.png" />
+							<BitmapImage
+								x:Key="PrintLayout3Image"
+								UriSource="/Style/DarkModeResources/Printer/PrintLayout3.png" />
+							<BitmapImage
+								x:Key="PrintLayout4Image"
+								UriSource="/Style/DarkModeResources/Printer/PrintLayout4.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDisDeleteImage"
+								UriSource="/Style/DarkModeResources/Scan/DIsScannerDelete.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDisRotateRightImage"
+								UriSource="/Style/DarkModeResources/Scan/DisScannerRotateRight.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDisRotateLeftImage"
+								UriSource="/Style/DarkModeResources/Scan/DIsScannerRotateLeft.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerDisInsertImage"
+								UriSource="/Style/DarkModeResources/Scan/DIsScannerAddImage.png" />
+							<BitmapImage
+								x:Key="InsertFromScannerScannerrefresh"
+								UriSource="/Style/DarkModeResources/Scan/Scannerrefresh.png" />
+						</ResourceDictionary>
+					</theme:ThemeResourceDictionary.ThemeResources>
+				</theme:ThemeResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+			<sys:String
+				x:Key="ApplicationTitle">PDFgear</sys:String>
+			<Style
+				x:Key="{x:Type Image}"
+				TargetType="{x:Type Image}">
+				<Setter
+					Property="RenderOptions.BitmapScalingMode"
+					Value="HighQuality" />
+			</Style>
+			<Style
+				x:Key="ListBoxItemMenuBarStyle"
+				TargetType="{x:Type ListBoxItem}">
+				<Setter
+					Property="UIElement.SnapsToDevicePixels"
+					Value="True" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+				<Setter
+					Property="Background"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="BorderBrush"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="BorderThickness"
+					Value="1" />
+				<Setter
+					Property="MinWidth"
+					Value="65" />
+				<Setter
+					Property="Height"
+					Value="28" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ListBoxItem}">
+							<Border
+								x:Name="Bd"
+								CornerRadius="4"
+								Margin="2"
+								Background="{TemplateBinding Control.Background}">
+								<ContentPresenter
+									x:Name="cp"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+							</Border>
+							<ControlTemplate.Triggers>
+								<MultiTrigger>
+									<MultiTrigger.Conditions>
+										<Condition
+											Property="UIElement.IsMouseOver"
+											Value="True" />
+									</MultiTrigger.Conditions>
+									<Setter
+										TargetName="Bd"
+										Property="Border.Background"
+										Value="#33CCCCCC" />
+									<Setter
+										TargetName="Bd"
+										Property="Border.BorderBrush"
+										Value="#00FFFFFF" />
+								</MultiTrigger>
+								<MultiTrigger>
+									<MultiTrigger.Conditions>
+										<Condition
+											Property="Selector.IsSelectionActive"
+											Value="False" />
+										<Condition
+											Property="ListBoxItem.IsSelected"
+											Value="True" />
+									</MultiTrigger.Conditions>
+									<Setter
+										TargetName="Bd"
+										Property="Border.Background"
+										Value="#00FFFFFF" />
+									<Setter
+										TargetName="Bd"
+										Property="Border.BorderBrush"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="Foreground"
+										Value="#CA393B" />
+								</MultiTrigger>
+								<MultiTrigger>
+									<MultiTrigger.Conditions>
+										<Condition
+											Property="Selector.IsSelectionActive"
+											Value="True" />
+										<Condition
+											Property="ListBoxItem.IsSelected"
+											Value="True" />
+									</MultiTrigger.Conditions>
+									<Setter
+										TargetName="Bd"
+										Property="Border.Background"
+										Value="#00FFFFFF" />
+									<Setter
+										TargetName="Bd"
+										Property="Border.BorderBrush"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="Foreground"
+										Value="#CA393B" />
+								</MultiTrigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<SolidColorBrush
+				x:Key="ToolbarButtonForeground"
+				Color="#3F3F3F" />
+			<Style
+				x:Key="ToolbarButtonTextStyle"
+				TargetType="{x:Type TextBlock}">
+				<Setter
+					Property="FontSize"
+					Value="12" />
+				<Setter
+					Property="Foreground"
+					Value="{DynamicResource TextBrushWhiteAndBlack}" />
+				<Setter
+					Property="Margin"
+					Value="0,2" />
+				<Setter
+					Property="TextBlock.TextAlignment"
+					Value="Center" />
+			</Style>
+			<Style
+				x:Key="MenuNavigationButtonStyle"
+				TargetType="{x:Type ButtonBase}">
+				<Setter
+					Property="Background"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="Foreground"
+					Value="#FF000000" />
+				<Setter
+					Property="BorderBrush"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="VerticalAlignment"
+					Value="Center" />
+				<Setter
+					Property="Padding"
+					Value="0" />
+				<Setter
+					Property="Width"
+					Value="24" />
+				<Setter
+					Property="FrameworkElement.FocusVisualStyle"
+					Value="{x:Null}" />
+				<Setter
+					Property="Focusable"
+					Value="False" />
+				<Setter
+					Property="FontFamily"
+					Value="Segoe MDL2 Assets" />
+				<Setter
+					Property="FontSize"
+					Value="10" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ButtonBase}">
+							<Border
+								x:Name="border"
+								CornerRadius="2"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								Background="{TemplateBinding Control.Background}"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								SnapsToDevicePixels="True">
+								<Grid
+									x:Name="ContentRoot">
+									<UIElement.RenderTransform>
+										<TranslateTransform
+											x:Name="ContentTrans" />
+									</UIElement.RenderTransform>
+									<ContentPresenter
+										x:Name="contentPresenter"
+										RecognizesAccessKey="True"
+										Margin="{TemplateBinding Control.Padding}"
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+										HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+										VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+										Focusable="False" />
+								</Grid>
+							</Border>
+							<ControlTemplate.Triggers>
+								<MultiTrigger>
+									<MultiTrigger.Conditions>
+										<Condition
+											Property="UIElement.IsMouseOver"
+											Value="True" />
+										<Condition
+											Property="Content"
+											Value="" />
+									</MultiTrigger.Conditions>
+									<TriggerBase.EnterActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													Storyboard.TargetName="ContentTrans"
+													Storyboard.TargetProperty="X"
+													Duration="0:0:0.1"
+													To="-2" />
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.EnterActions>
+									<TriggerBase.ExitActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													Storyboard.TargetName="ContentTrans"
+													Storyboard.TargetProperty="X"
+													Duration="0:0:0.1"
+													To="0" />
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.ExitActions>
+								</MultiTrigger>
+								<MultiTrigger>
+									<MultiTrigger.Conditions>
+										<Condition
+											Property="UIElement.IsMouseOver"
+											Value="True" />
+										<Condition
+											Property="Content"
+											Value="" />
+									</MultiTrigger.Conditions>
+									<TriggerBase.EnterActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													Storyboard.TargetName="ContentTrans"
+													Storyboard.TargetProperty="X"
+													Duration="0:0:0.1"
+													To="2" />
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.EnterActions>
+									<TriggerBase.ExitActions>
+										<BeginStoryboard>
+											<Storyboard>
+												<DoubleAnimation
+													Storyboard.TargetName="ContentTrans"
+													Storyboard.TargetProperty="X"
+													Duration="0:0:0.1"
+													To="0" />
+											</Storyboard>
+										</BeginStoryboard>
+									</TriggerBase.ExitActions>
+								</MultiTrigger>
+								<Trigger
+									Property="IsEnabled"
+									Value="False">
+									<Setter
+										TargetName="border"
+										Property="Border.Background"
+										Value="{StaticResource DialogButton.Disabled.Background}" />
+									<Setter
+										TargetName="border"
+										Property="Border.BorderBrush"
+										Value="{StaticResource DialogButton.Disabled.Border}" />
+									<Setter
+										TargetName="contentPresenter"
+										Property="TextElement.Foreground"
+										Value="{StaticResource DialogButton.Disabled.Foreground}" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="MenuLeftNavigationButtonStyle"
+				TargetType="{x:Type ButtonBase}"
+				BasedOn="{StaticResource MenuNavigationButtonStyle}">
+				<Setter
+					Property="Content"
+					Value="" />
+			</Style>
+			<Style
+				x:Key="MenuRightNavigationButtonStyle"
+				TargetType="{x:Type ButtonBase}"
+				BasedOn="{StaticResource MenuNavigationButtonStyle}">
+				<Setter
+					Property="Content"
+					Value="" />
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

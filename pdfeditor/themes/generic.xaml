@@ -1,0 +1,60 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:pdfeditor">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/PdfPagePreviewControl.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/NavigationView.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/PdfPagePreviewListView.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/PdfPagePreviewGridView.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/PdfPagePreviewHScrollGridView.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Bookmarks/BookmarkControl.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Bookmarks/BookmarkTreeView.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Bookmarks/BookmarkTreeViewItem.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/CommetControl.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/DigitalSignatures/DigitalSignatureControl.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/ResizeView.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Menus/ToolbarButton.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Menus/ToolbarButtonContextMenuStyle.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/PdfViewerContextMenu.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Annotations/AnnotationToolTip.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/PathTextBox.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/PageEditor/PageRangeTextBox.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/AnimationExtentButton.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Signature/SignaturePicker.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Stamp/StampPicker.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/PageIndexTextBox.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/ToggleSwitch.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Copilot/ChatButton.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Copilot/ChatBubble.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Copilot/Popups/PopupWindow.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Screenshots/KSIcon.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Screenshots/KSButton.xaml" />
+		<ResourceDictionary
+			Source="/pdfeditor;component/Controls/Translation/Popups/TranslatePopupWindow.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

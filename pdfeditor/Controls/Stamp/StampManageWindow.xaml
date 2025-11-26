@@ -1,0 +1,1071 @@
+<Window
+	x:Class="pdfeditor.Controls.Stamp.StampManageWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:pdfeditor.Controls.Stamp" xmlns:control="clr-namespace:pdfeditor.Controls" xmlns:vm="clr-namespace:pdfeditor.ViewModels" xmlns:converter="clr-namespace:pdfeditor.Utils.Converters" xmlns:localprop="clr-namespace:pdfeditor.Properties" xmlns:commonlibControl="clr-namespace:CommonLib.Controls;assembly=CommonLib"
+	ResizeMode="NoResize"
+	Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Background="{DynamicResource WindowsBackground}"
+	Title="{x:Static localprop:Resources.ManageStampWinTitle}"
+	Height="450"
+	Width="800">
+	<FrameworkElement.DataContext>
+		<vm:StampManageViewModel />
+	</FrameworkElement.DataContext>
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<converter:BooleanToVisibilityConverter
+				x:Key="BoolToVisibilityConverter" />
+			<converter:SelectedCountVisibilityConverter
+				x:Key="SelectedCountVisibilityConverter" />
+			<converter:StampSelectedCountToVisibilityConverter
+				x:Key="StampSelectedCountToVisibilityConverter" />
+			<converter:StampCategoryCountToIsEnabledConverter
+				x:Key="StampCategoryCountToIsEnabledConverter" />
+			<converter:InverseBooleanConverter
+				x:Key="InverseBooleanConverter" />
+			<converter:BooleanToVisibilityReverseConverter
+				x:Key="BooleanToVisibilityReverseConverter" />
+			<Style
+				x:Key="MenuButtonStyle"
+				BasedOn="{StaticResource DefaultButtonStyle}"
+				TargetType="{x:Type Button}">
+				<Setter
+					Property="Foreground"
+					Value="{DynamicResource TextBrushWhiteAndBlack}" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ButtonBase}">
+							<Border
+								x:Name="bborder"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								Background="{TemplateBinding Control.Background}"
+								SnapsToDevicePixels="True">
+								<ContentPresenter
+									x:Name="contentPresenter"
+									Focusable="False"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									Margin="{TemplateBinding Control.Padding}"
+									RecognizesAccessKey="True"
+									SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+							</Border>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="3" />
+									<Setter
+										TargetName="bborder"
+										Value="{DynamicResource BatchPrintSiderbarBackground}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="bborder"
+										Property="Border.BorderThickness"
+										Value="1" />
+									<Setter
+										TargetName="bborder"
+										Value="{DynamicResource HotKeyClearButtonForeground}"
+										Property="Border.BorderBrush" />
+								</Trigger>
+								<Trigger
+									Property="IsPressed"
+									Value="True">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="3" />
+									<Setter
+										TargetName="bborder"
+										Value="{DynamicResource StampManageMousePressColor}"
+										Property="Border.Background" />
+								</Trigger>
+								<Trigger
+									Property="IsEnabled"
+									Value="False">
+									<Setter
+										TargetName="bborder"
+										Property="Border.BorderBrush"
+										Value="#9F9F9F" />
+									<Setter
+										Property="TextBlock.Foreground"
+										Value="#9F9F9F" />
+									<Setter
+										Property="UIElement.Opacity"
+										Value="0.5" />
+								</Trigger>
+								<Trigger
+									Property="IsEnabled"
+									Value="True">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="3" />
+									<Setter
+										Value="{DynamicResource MainViewDropPath}"
+										Property="TextBlock.Foreground" />
+									<Setter
+										Property="UIElement.Opacity"
+										Value="1" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="CreateButtonStyle"
+				BasedOn="{StaticResource DefaultButtonStyle}"
+				TargetType="{x:Type Button}">
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ButtonBase}">
+							<Border
+								x:Name="bborder"
+								BorderBrush="{DynamicResource PrintWindowPerviewBackground}"
+								CornerRadius="4"
+								BorderThickness="1"
+								Background="{TemplateBinding Control.Background}"
+								SnapsToDevicePixels="True">
+								<ContentPresenter
+									x:Name="contentPresenter"
+									Focusable="False"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									Margin="{TemplateBinding Control.Padding}"
+									RecognizesAccessKey="True"
+									SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+							</Border>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="4" />
+									<Setter
+										TargetName="bborder"
+										Property="Border.BorderThickness"
+										Value="1" />
+									<Setter
+										TargetName="bborder"
+										Property="Border.BorderBrush"
+										Value="#EA2732" />
+								</Trigger>
+								<Trigger
+									Property="IsPressed"
+									Value="True">
+									<Setter
+										TargetName="bborder"
+										Property="Border.CornerRadius"
+										Value="4" />
+									<Setter
+										TargetName="bborder"
+										Value="{DynamicResource StampManageMousePressColor}"
+										Property="Border.Background" />
+								</Trigger>
+								<Trigger
+									Property="IsEnabled"
+									Value="False">
+									<Setter
+										TargetName="bborder"
+										Property="Border.BorderBrush"
+										Value="#9F9F9F" />
+									<Setter
+										Property="TextBlock.Foreground"
+										Value="#9F9F9F" />
+									<Setter
+										Property="UIElement.Opacity"
+										Value="0.5" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="CheckBoxStyle"
+				TargetType="{x:Type CheckBox}">
+				<Setter
+					Property="Height"
+					Value="16" />
+				<Setter
+					Property="Width"
+					Value="16" />
+				<Setter
+					Property="Background"
+					Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type CheckBox}">
+							<Grid>
+								<Border
+									x:Name="bd"
+									BorderBrush="{DynamicResource MainViewSideBarBorder}"
+									CornerRadius="1"
+									BorderThickness="1"
+									Background="{DynamicResource SolidBrushWhiteAndBlack}" />
+								<Path
+									x:Name="p1"
+									Data="M0,3 L3,6 L9,0"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									Stroke="{DynamicResource ToggleSwitchUncheckedBorderBrush}"
+									StrokeThickness="1.5"
+									Margin="0.5 1 0 0" />
+								<Path
+									x:Name="p2"
+									Data="M0,0 L0,8 L8,8 L8,0 Z"
+									Fill="{DynamicResource SolidBrushWhiteAndBlack}"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									Stroke="{DynamicResource SolidBrushWhiteAndBlack}"
+									StrokeThickness="1.5"
+									Margin="0 1 0 0" />
+								<Path
+									x:Name="p3"
+									Data="M0,0 L8,0"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									Stroke="{DynamicResource ToggleSwitchUncheckedBorderBrush}"
+									StrokeThickness="1.5"
+									Margin="0 1 0 0" />
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="True">
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource ToggleSwitchUncheckedBorderBrush}"
+										Property="Border.BorderBrush" />
+									<Setter
+										TargetName="p1"
+										Property="Visibility"
+										Value="Visible" />
+									<Setter
+										TargetName="p2"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p3"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource SolidBrushWhiteAndBlack}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderThickness"
+										Value="1" />
+								</Trigger>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="False">
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource SolidBrushWhiteAndBlack}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="p1"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p2"
+										Property="Visibility"
+										Value="Visible" />
+									<Setter
+										TargetName="p3"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderThickness"
+										Value="1" />
+								</Trigger>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="{x:Null}">
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderBrush"
+										Value="#000" />
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource SolidBrushWhiteAndBlack}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="p1"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p2"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p3"
+										Property="Visibility"
+										Value="Visible" />
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderThickness"
+										Value="1" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="{x:Type MenuItem}"
+				TargetType="{x:Type MenuItem}">
+				<Setter
+					Property="MinWidth"
+					Value="180" />
+				<Setter
+					Property="Height"
+					Value="32" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type MenuItem}">
+							<Grid
+								Height="{TemplateBinding FrameworkElement.Height}"
+								Width="{TemplateBinding FrameworkElement.Width}"
+								HorizontalAlignment="Stretch"
+								Background="{DynamicResource SolidBrushWhiteAndBlack}">
+								<Border
+									x:Name="bd"
+									Background="{DynamicResource SolidBrushWhiteAndBlack}"
+									BorderBrush="{DynamicResource MainViewRectangle}"
+									BorderThickness="0 0 0 0" />
+								<StackPanel
+									Orientation="Horizontal">
+									<Image
+										x:Name="_imgicon"
+										Visibility="Visible"
+										Width="20"
+										Height="20"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										Margin="9 0 0 0"
+										Source="{Binding Icon, RelativeSource={RelativeSource TemplatedParent}}" />
+									<TextBlock
+										x:Name="tb"
+										Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+										VerticalAlignment="Center"
+										HorizontalAlignment="Left"
+										FontSize="12"
+										Margin="10 0 5 0"
+										Text="{Binding Header, RelativeSource={RelativeSource TemplatedParent}}" />
+								</StackPanel>
+								<Path
+									x:Name="_path"
+									Visibility="Collapsed"
+									HorizontalAlignment="Right"
+									Margin="5 13 5 0"
+									Data="M0,0 L3,2.5 L0,5 Z"
+									Fill="#FF000000" />
+								<Popup
+									x:Name="SubMenuPopup"
+									Placement="Right"
+									AllowsTransparency="True"
+									Focusable="False"
+									IsOpen="{TemplateBinding MenuItem.IsSubmenuOpen}">
+									<ScrollViewer
+										VerticalScrollBarVisibility="Auto"
+										HorizontalScrollBarVisibility="Disabled">
+										<Border
+											Name="SubmenuBorder"
+											Background="#00FFFFFF"
+											BorderBrush="#FFD3D3D3"
+											BorderThickness="1"
+											SnapsToDevicePixels="True">
+											<StackPanel
+												IsItemsHost="True"
+												KeyboardNavigation.DirectionalNavigation="Cycle" />
+										</Border>
+									</ScrollViewer>
+								</Popup>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="ItemsControl.HasItems"
+									Value="True">
+									<Setter
+										TargetName="_path"
+										Property="Visibility"
+										Value="Visible" />
+								</Trigger>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource BtnInfoMouseOverColor}"
+										Property="Background" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="GroupButtonStyle"
+				TargetType="{x:Type Button}">
+				<Setter
+					Property="Background"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="Foreground"
+					Value="{DynamicResource TextBrushWhiteAndBlack}" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Stretch" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type Button}">
+							<Border
+								Background="{TemplateBinding Control.Background}"
+								Padding="5 4">
+								<ContentPresenter />
+							</Border>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+				<Style.Triggers>
+					<Trigger
+						Property="UIElement.IsMouseOver"
+						Value="True">
+						<Setter
+							Property="Background"
+							Value="{DynamicResource BatchPrintSiderbarBackground}" />
+					</Trigger>
+					<DataTrigger
+						Value="True"
+						Binding="{Binding IsSelected}">
+						<Setter
+							Property="Background"
+							Value="{DynamicResource WindowsBackground}" />
+						<Setter
+							Property="Foreground"
+							Value="#EA2732" />
+					</DataTrigger>
+				</Style.Triggers>
+			</Style>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="150" />
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid
+			Column="0"
+			Background="{DynamicResource PrintWindowPerviewBackground}">
+			<Border
+				Width="150"
+				BorderBrush="{DynamicResource PrintWindowPerviewBackground}"
+				BorderThickness="0 0 1 0">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition
+							Height="40" />
+						<RowDefinition
+							Height="40" />
+						<RowDefinition
+							Height="*" />
+					</Grid.RowDefinitions>
+					<Grid
+						Margin="15 0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+							<ColumnDefinition />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						<Button
+							Style="{StaticResource MenuButtonStyle}"
+							HorizontalAlignment="Center"
+							Background="#00FFFFFF"
+							ToolTip="{x:Static localprop:Resources.ManageStampAddNewBtnContent}"
+							commonlibControl:UIElementExtension.CornerRadius="4"
+							VerticalAlignment="Center"
+							Height="30"
+							Width="30"
+							BorderThickness="0"
+							Command="{Binding AddNewCategoryCommand}">
+							<ContentControl.Content>
+								<Image
+									Source="{DynamicResource StampManageAddCategoryImage}" />
+							</ContentControl.Content>
+						</Button>
+						<Button
+							Grid.Column="1"
+							Style="{StaticResource MenuButtonStyle}"
+							HorizontalAlignment="Center"
+							ToolTip="{x:Static localprop:Resources.ManageStampRenameBtnContent}"
+							commonlibControl:UIElementExtension.CornerRadius="4"
+							Background="#00FFFFFF"
+							VerticalAlignment="Center"
+							Height="30"
+							Width="30"
+							BorderThickness="0"
+							IsEnabled="{Binding AllSelectedGroup.IsSelected, Converter='{StaticResource InverseBooleanConverter}'}"
+							Command="{Binding EditCurrentCategeorCommand}">
+							<ContentControl.Content>
+								<Grid>
+									<Image
+										Source="{DynamicResource StampManageRenameImage}"
+										Height="24"
+										Width="24"
+										Visibility="{Binding IsEnabled, Converter='{StaticResource BoolToVisibilityConverter}', RelativeSource={RelativeSource AncestorType=Button}}" />
+									<Image
+										Source="{DynamicResource DisStampManageRenameImage}"
+										Height="24"
+										Width="24"
+										Visibility="{Binding IsEnabled, Converter='{StaticResource BooleanToVisibilityReverseConverter}', RelativeSource={RelativeSource AncestorType=Button}}" />
+								</Grid>
+							</ContentControl.Content>
+						</Button>
+						<Button
+							Grid.Column="2"
+							Style="{StaticResource MenuButtonStyle}"
+							HorizontalAlignment="Center"
+							ToolTip="{x:Static localprop:Resources.ManageStampDeleteCategoryBtnContent}"
+							commonlibControl:UIElementExtension.CornerRadius="4"
+							Background="#00FFFFFF"
+							VerticalAlignment="Center"
+							Height="30"
+							Width="30"
+							BorderThickness="0"
+							IsEnabled="{Binding AllSelectedGroup.IsSelected, Converter='{StaticResource InverseBooleanConverter}'}"
+							Command="{Binding DeleteCurrentCategoryCommand}">
+							<ContentControl.Content>
+								<Grid>
+									<Image
+										Source="{DynamicResource StampDeleteImage}"
+										Height="24"
+										Width="24"
+										Visibility="{Binding IsEnabled, Converter='{StaticResource BoolToVisibilityConverter}', RelativeSource={RelativeSource AncestorType=Button}}" />
+									<Image
+										Source="{DynamicResource DisStampDeleteImage}"
+										Height="24"
+										Width="24"
+										Visibility="{Binding IsEnabled, Converter='{StaticResource BooleanToVisibilityReverseConverter}', RelativeSource={RelativeSource AncestorType=Button}}" />
+								</Grid>
+							</ContentControl.Content>
+						</Button>
+					</Grid>
+					<Rectangle
+						Height="1"
+						Fill="{DynamicResource FontSizePickerStrokeColor}"
+						VerticalAlignment="Bottom"
+						HorizontalAlignment="Stretch"
+						Grid.ColumnSpan="3" />
+					<ScrollViewer
+						Grid.Row="1"
+						Grid.RowSpan="2">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="40" />
+								<RowDefinition
+									Height="*" />
+							</Grid.RowDefinitions>
+							<Grid>
+								<FrameworkElement.Resources>
+									<ResourceDictionary>
+										<local:BindingProxy
+											x:Key="Proxy2"
+											Data="{Binding DataContext, RelativeSource={RelativeSource AncestorType=Window}}" />
+									</ResourceDictionary>
+								</FrameworkElement.Resources>
+								<Button
+									Height="40"
+									Style="{StaticResource GroupButtonStyle}"
+									Command="{Binding Data.SelectedAllCategory, Source='{StaticResource Proxy2}'}"
+									DataContext="{Binding AllSelectedGroup}">
+									<Grid>
+										<TextBlock
+											Text="{x:Static localprop:Resources.ManegeStampAllCategories}"
+											HorizontalAlignment="Left"
+											MaxWidth="140"
+											VerticalAlignment="Center"
+											Margin="10 0 0 0" />
+										<TextBlock
+											HorizontalAlignment="Right"
+											VerticalAlignment="Center"
+											Margin="2 0"
+											Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+											Text="{Binding ItemCount}" />
+										<Border
+											Width="3"
+											Height="24"
+											HorizontalAlignment="Left"
+											Background="#EA2732"
+											Visibility="{Binding IsSelected, Converter='{StaticResource BoolToVisibilityConverter}'}" />
+									</Grid>
+								</Button>
+							</Grid>
+							<ItemsControl
+								Grid.Row="1"
+								ItemsSource="{Binding Groups}">
+								<FrameworkElement.Resources>
+									<ResourceDictionary>
+										<local:BindingProxy
+											x:Key="Proxy"
+											Data="{Binding DataContext, RelativeSource={RelativeSource AncestorType=Window}}" />
+									</ResourceDictionary>
+								</FrameworkElement.Resources>
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<Button
+											Height="40"
+											Style="{StaticResource GroupButtonStyle}"
+											Command="{Binding DataContext.SelectGroupCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+											CommandParameter="{Binding}">
+											<FrameworkElement.ContextMenu>
+												<ContextMenu
+													Background="{DynamicResource WindowsBackground}"
+													BorderThickness="0">
+													<MenuItem
+														Header="{x:Static localprop:Resources.ManageStampRenameBtnContent}"
+														Icon="{DynamicResource StampManageRenameImage}"
+														Command="{Binding Data.EditCategoryCommand, Source='{StaticResource Proxy}'}"
+														CommandParameter="{Binding}" />
+													<MenuItem
+														Header="{x:Static localprop:Resources.ManageStampDeleteCategoryBtnContent}"
+														Icon="{DynamicResource StampDeleteImage}"
+														Command="{Binding Data.DeleteCategoryCommand, Source='{StaticResource Proxy}'}"
+														CommandParameter="{Binding}" />
+												</ContextMenu>
+											</FrameworkElement.ContextMenu>
+											<Grid>
+												<TextBlock
+													HorizontalAlignment="Left"
+													MaxWidth="110"
+													VerticalAlignment="Center"
+													Margin="10 0 0 0">
+													<commonlibControl:AutoTooltipTextBlock
+														Text="{Binding Name}" />
+												</TextBlock>
+												<TextBlock
+													HorizontalAlignment="Right"
+													VerticalAlignment="Center"
+													Margin="2 0"
+													Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+													Text="{Binding ItemCount}" />
+												<Border
+													Width="3"
+													Height="24"
+													HorizontalAlignment="Left"
+													Background="#EA2732"
+													Visibility="{Binding IsSelected, Converter='{StaticResource BoolToVisibilityConverter}'}" />
+											</Grid>
+										</Button>
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+						</Grid>
+					</ScrollViewer>
+				</Grid>
+			</Border>
+		</Grid>
+		<Grid
+			Column="1">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="40" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<Grid
+				Background="{DynamicResource StampManageMenuBackground}">
+				<StackPanel
+					VerticalAlignment="Center"
+					Orientation="Horizontal">
+					<CheckBox
+						x:Name="AllChecked"
+						HorizontalAlignment="Left"
+						Style="{StaticResource CheckBoxStyle}"
+						Margin="6 0 0 0"
+						IsChecked="{Binding SelectedGroup.AllItemSelected}" />
+					<TextBlock
+						Text="{x:Static localprop:Resources.ChkboxPageSelectedAllContent}"
+						VerticalAlignment="Center"
+						Margin="5 0 0 0" />
+					<Button
+						x:Name="DeleteAll"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Center"
+						Height="32"
+						commonlibControl:UIElementExtension.CornerRadius="4"
+						Style="{StaticResource MenuButtonStyle}"
+						MinWidth="40"
+						Padding="10 0"
+						BorderThickness="1"
+						Margin="10 0 0 0"
+						Background="{DynamicResource DialogButtonStaticBackground}"
+						Command="{Binding DeleteSelectedItemsCommand}">
+						<ContentControl.Content>
+							<Grid>
+								<StackPanel
+									Orientation="Horizontal">
+									<Image
+										Source="{DynamicResource DeleteCheckedStampImage}"
+										Height="24"
+										VerticalAlignment="Bottom" />
+									<Border
+										BorderBrush="{DynamicResource TextBrushWhiteAndBlack}"
+										BorderThickness="0 0 0 0"
+										Padding="3 0"
+										Margin="2 0 2 0">
+										<TextBlock
+											Text="{x:Static localprop:Resources.WinScreenshotToolbarDeleteContent}"
+											VerticalAlignment="Center"
+											FontSize="12" />
+									</Border>
+								</StackPanel>
+							</Grid>
+						</ContentControl.Content>
+					</Button>
+				</StackPanel>
+				<Button
+					Height="32"
+					MinWidth="116"
+					BorderBrush="{DynamicResource StampManageBorderColor}"
+					BorderThickness="1"
+					Margin="0 2 10 0"
+					commonlibControl:UIElementExtension.CornerRadius="4"
+					HorizontalAlignment="Right"
+					Background="{DynamicResource DialogButtonStaticBackground}"
+					Style="{StaticResource CreateButtonStyle}"
+					Command="{Binding CreateCommand}"
+					IsEnabled="{Binding ScannerBtnIsenable}">
+					<ContentControl.Content>
+						<Grid
+							HorizontalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="auto" />
+							</Grid.ColumnDefinitions>
+							<Image
+								Source="{DynamicResource StampAddImage}"
+								HorizontalAlignment="Right"
+								Height="12"
+								Width="12"
+								Margin="0 0 4 0"
+								VerticalAlignment="Center" />
+							<TextBlock
+								Text="{x:Static localprop:Resources.ManageStampWinCreateBtnContent}"
+								FontSize="12"
+								Grid.Column="1"
+								Foreground="#EA2732"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center" />
+						</Grid>
+					</ContentControl.Content>
+				</Button>
+			</Grid>
+			<Grid
+				Row="1"
+				VerticalAlignment="Center"
+				Visibility="{Binding SelectedGroup.ItemCount, Converter='{StaticResource StampSelectedCountToVisibilityConverter}'}">
+				<Button
+					Height="38"
+					Width="150"
+					Background="{DynamicResource DialogButtonStaticBackground}"
+					BorderBrush="{DynamicResource StampManageBorderColor}"
+					BorderThickness="1"
+					Margin="0 2 0 0"
+					commonlibControl:UIElementExtension.CornerRadius="4"
+					Style="{StaticResource CreateButtonStyle}"
+					Command="{Binding CreateCommand}"
+					IsEnabled="{Binding ScannerBtnIsenable}">
+					<ContentControl.Content>
+						<Grid
+							HorizontalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="auto" />
+							</Grid.ColumnDefinitions>
+							<Image
+								Source="{DynamicResource StampAddImage}"
+								HorizontalAlignment="Right"
+								Height="12"
+								Width="12"
+								Margin="0 0 4 0"
+								VerticalAlignment="Center" />
+							<TextBlock
+								Text="{x:Static localprop:Resources.ManageStampWinCreateBtnContent}"
+								FontSize="12"
+								Grid.Column="1"
+								Foreground="#EA2732"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center" />
+						</Grid>
+					</ContentControl.Content>
+				</Button>
+			</Grid>
+			<ContentControl
+				Grid.Row="1"
+				Content="{Binding SelectedGroup}"
+				Visibility="{Binding SelectedGroup.ItemCount, Converter='{StaticResource SelectedCountVisibilityConverter}'}">
+				<ContentControl.ContentTemplate>
+					<DataTemplate>
+						<ScrollViewer>
+							<ItemsControl
+								ItemsSource="{Binding Items}">
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<Border
+											Padding="0 5"
+											BorderThickness="0 0.5"
+											BorderBrush="#D2D2D2">
+											<Grid>
+												<Grid.ColumnDefinitions>
+													<ColumnDefinition
+														Width="30" />
+													<ColumnDefinition
+														Width="92" />
+													<ColumnDefinition
+														Width="140" />
+													<ColumnDefinition
+														Width="150" />
+													<ColumnDefinition
+														Width="140" />
+													<ColumnDefinition
+														Width="*" />
+												</Grid.ColumnDefinitions>
+												<CheckBox
+													Style="{StaticResource DefaultCheckBoxStyle}"
+													Margin="5 0"
+													VerticalAlignment="Center"
+													IsChecked="{Binding IsChecked}" />
+												<Border
+													Name="Text"
+													Grid.Column="1"
+													Background="#00FFFFFF"
+													BorderBrush="{DynamicResource MainViewFontSizeBorder}"
+													Cursor="Hand"
+													Width="92"
+													Height="44"
+													BorderThickness="1"
+													Visibility="{Binding custStampModel.Text}">
+													<Grid>
+														<local:DynamicStampPreview
+															x:Name="StampPreview"
+															Height="30"
+															StampModel="{Binding custStampModel}" />
+													</Grid>
+												</Border>
+												<Border
+													Name="Image"
+													BorderBrush="{DynamicResource MainViewFontSizeBorder}"
+													Width="92"
+													Height="44"
+													BorderThickness="1"
+													Grid.Column="1"
+													Visibility="{Binding custStampModel.Image}">
+													<Image
+														Width="90"
+														Height="Auto"
+														HorizontalAlignment="Center"
+														VerticalAlignment="Center"
+														Cursor="Hand"
+														Source="{Binding custStampModel.StampImageSource}" />
+												</Border>
+												<Grid
+													Column="2">
+													<Grid.RowDefinitions>
+														<RowDefinition
+															Height="*" />
+														<RowDefinition
+															Height="*" />
+													</Grid.RowDefinitions>
+													<TextBlock
+														HorizontalAlignment="Left"
+														Margin="10 0 5 0"
+														FontWeight="Bold"
+														VerticalAlignment="Center">
+														<commonlibControl:AutoTooltipTextBlock
+															Text="{Binding custStampModel.DynamicStampTextModel.Name}" />
+													</TextBlock>
+													<TextBlock
+														Grid.Row="1"
+														HorizontalAlignment="Left"
+														Margin="10 0 5 0"
+														Text="{x:Static localprop:Resources.RightMenuAddImageItemText}"
+														Foreground="#FF808080"
+														Visibility="{Binding custStampModel.Image}" />
+													<TextBlock
+														Grid.Row="1"
+														HorizontalAlignment="Left"
+														Margin="10 0 5 0"
+														Text="{x:Static localprop:Resources.EditStampWinListMenuDynamicContent}"
+														Foreground="#FF808080"
+														Visibility="{Binding custStampModel.Text}" />
+												</Grid>
+												<TextBlock
+													Grid.Column="3"
+													HorizontalAlignment="Left"
+													Margin="10 0 5 0"
+													VerticalAlignment="Center">
+													<commonlibControl:AutoTooltipTextBlock
+														Text="{Binding custStampModel.DynamicStampTextModel.GroupName}" />
+												</TextBlock>
+												<TextBlock
+													Grid.Column="4"
+													HorizontalAlignment="Left"
+													Margin="10 0 5 0"
+													VerticalAlignment="Center"
+													Text="{Binding custStampModel.DynamicStampTextModel.dateTime, StringFormat='yyyy/MM/dd HH:mm'}" />
+												<Grid
+													Column="5">
+													<FrameworkElement.Resources>
+														<ResourceDictionary>
+															<Style
+																x:Key="{x:Type Button}"
+																TargetType="{x:Type Button}">
+																<Setter
+																	Property="Width"
+																	Value="20" />
+																<Setter
+																	Property="Height"
+																	Value="20" />
+																<Setter
+																	Property="Background"
+																	Value="#00FFFFFF" />
+																<Setter
+																	Property="HorizontalAlignment"
+																	Value="Right" />
+																<Setter
+																	Property="BorderThickness"
+																	Value="0" />
+																<Setter
+																	Property="Padding"
+																	Value="0" />
+																<Setter
+																	Property="Template">
+																	<Setter.Value>
+																		<ControlTemplate
+																			TargetType="{x:Type ButtonBase}">
+																			<Border
+																				x:Name="bborder"
+																				BorderBrush="{TemplateBinding Control.BorderBrush}"
+																				BorderThickness="{TemplateBinding Control.BorderThickness}"
+																				Background="{TemplateBinding Control.Background}"
+																				SnapsToDevicePixels="True">
+																				<ContentPresenter
+																					x:Name="contentPresenter"
+																					Focusable="False"
+																					HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+																					Margin="{TemplateBinding Control.Padding}"
+																					RecognizesAccessKey="True"
+																					SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+																					VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+																			</Border>
+																			<ControlTemplate.Triggers>
+																				<Trigger
+																					Property="UIElement.IsMouseOver"
+																					Value="True">
+																					<Setter
+																						TargetName="bborder"
+																						Property="Border.CornerRadius"
+																						Value="3" />
+																					<Setter
+																						TargetName="bborder"
+																						Value="{DynamicResource ToolbarButtonMouseOverBackground}"
+																						Property="Border.Background" />
+																				</Trigger>
+																				<Trigger
+																					Property="IsEnabled"
+																					Value="False">
+																					<Setter
+																						TargetName="bborder"
+																						Property="Border.BorderBrush"
+																						Value="#9F9F9F" />
+																					<Setter
+																						Property="TextBlock.Foreground"
+																						Value="#9F9F9F" />
+																					<Setter
+																						Property="UIElement.Opacity"
+																						Value="0.5" />
+																				</Trigger>
+																				<Trigger
+																					Property="IsEnabled"
+																					Value="True">
+																					<Setter
+																						TargetName="bborder"
+																						Property="Border.BorderBrush"
+																						Value="#3F3F3F" />
+																					<Setter
+																						Property="TextBlock.Foreground"
+																						Value="#3F3F3F" />
+																					<Setter
+																						Property="UIElement.Opacity"
+																						Value="1" />
+																				</Trigger>
+																			</ControlTemplate.Triggers>
+																		</ControlTemplate>
+																	</Setter.Value>
+																</Setter>
+															</Style>
+														</ResourceDictionary>
+													</FrameworkElement.Resources>
+													<StackPanel
+														Orientation="Horizontal"
+														HorizontalAlignment="Right">
+														<Button
+															x:Name="EditStampBtn"
+															ToolTip="{x:Static localprop:Resources.WinCustomizeStampEditTiltle}"
+															Margin="10 0"
+															Command="{Binding DataContext.EditStampCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+															CommandParameter="{Binding}">
+															<Image
+																Source="{DynamicResource StampEditImage}" />
+														</Button>
+														<Button
+															x:Name="DeleteStampBtn"
+															Margin="0 0 10 0"
+															ToolTip="{x:Static localprop:Resources.WinScreenshotToolbarDeleteContent}"
+															Command="{Binding DataContext.DeleteStampCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+															CommandParameter="{Binding}">
+															<Image
+																Source="{DynamicResource InsertFromScannerDeleteImage}" />
+														</Button>
+													</StackPanel>
+												</Grid>
+											</Grid>
+										</Border>
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
+						</ScrollViewer>
+					</DataTemplate>
+				</ContentControl.ContentTemplate>
+			</ContentControl>
+		</Grid>
+	</Grid>
+</Window>
