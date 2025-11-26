@@ -1,0 +1,95 @@
+<Window
+	x:Class="PDFLauncher.Discardconfirm" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:localprop="clr-namespace:PDFLauncher.Properties" xmlns:control="clr-namespace:PDFLauncher.CustomControl"
+	WindowStartupLocation="CenterScreen"
+	ResizeMode="NoResize"
+	Background="{DynamicResource WindowsBackground}"
+	TextBlock.Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+	Title="PDFgear"
+	SizeToContent="Height"
+	Width="425" xmlns:pdflauncher="clr-namespace:PDFLauncher">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="20" />
+			<ColumnDefinition
+				Width="*" />
+			<ColumnDefinition
+				Width="20" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="20" />
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="12" />
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="20" />
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="20" />
+		</Grid.RowDefinitions>
+		<TextBlock
+			Grid.Row="1"
+			Grid.Column="1"
+			Text="{x:Static localprop:Resources.WInDisCardConfirmContent1}"
+			TextWrapping="Wrap"
+			VerticalAlignment="Center"
+			FontWeight="Bold"
+			FontSize="12" />
+		<TextBlock
+			Grid.Row="3"
+			Grid.Column="1"
+			Text="{x:Static localprop:Resources.WInDisCardConfirmContent2}"
+			TextWrapping="Wrap"
+			VerticalAlignment="Center"
+			FontSize="12" />
+		<StackPanel
+			Grid.Row="5"
+			Grid.Column="1"
+			Orientation="Horizontal"
+			HorizontalAlignment="Right">
+			<control:ButtonEx
+				x:Name="DicardBtn"
+				Click="DicardBtn_Click"
+				MinWidth="80"
+				Height="32"
+				BorderThickness="0"
+				CornerRadius="4"
+				Padding="6,0,6,0"
+				Background="#EF5B52"
+				MouseOverBackground="#FB5254"
+				MousePressedBackground="#CA393B"
+				DisabledBackground="#EEEEEE"
+				Foreground="#FFFFFFFF"
+				MouseOverForeground="#FFFFFFFF"
+				MousePressedForeground="#FFFFFFFF"
+				DisabledForeground="#FFFFFFFF"
+				FontSize="12"
+				Content="{x:Static localprop:Resources.WInDisCardConfirmDiscardBtn}" />
+			<control:ButtonEx
+				x:Name="CancelBtn"
+				Click="CancelBtn_Click"
+				BorderBrush="#EEEEEE"
+				MinWidth="80"
+				Height="32"
+				BorderThickness="1"
+				CornerRadius="4"
+				Padding="6,0,6,0"
+				Margin="20,0,0,0"
+				Background="#FFFFFF"
+				MouseOverBackground="#F5F5F5"
+				MousePressedBackground="#D2D2D2"
+				DisabledBackground="#EEEEEE"
+				Foreground="#000000"
+				MouseOverForeground="#000000"
+				MousePressedForeground="#000000"
+				DisabledForeground="#000000"
+				FontSize="12"
+				Content="{x:Static localprop:Resources.WInDisCardConfirmCancelBtn}" />
+		</StackPanel>
+	</Grid>
+</Window>

@@ -1,0 +1,82 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:PDFLauncher.CustomControl">
+	<Style
+		x:Key="SwitchButtonStyle"
+		TargetType="{x:Type local:SwitchButton}">
+		<Setter
+			Property="MinWidth"
+			Value="103" />
+		<Setter
+			Property="Height"
+			Value="32" />
+		<Setter
+			Property="Foreground"
+			Value="{DynamicResource GridViewColumnName}" />
+		<Setter
+			Property="Background"
+			Value="{DynamicResource SolidBrushWhiteAndBlack}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type local:SwitchButton}">
+					<Grid>
+						<Border
+							Name="bd"
+							BorderBrush="{DynamicResource MainViewRectangle}"
+							BorderThickness="1"
+							CornerRadius="2"
+							Background="{TemplateBinding Control.Background}" />
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Height="20"
+								Width="20"
+								Source="{TemplateBinding local:SwitchButton.Icon}"
+								HorizontalAlignment="Left"
+								Margin="10 0 0 0" />
+							<Label
+								Content="{TemplateBinding ContentControl.Content}"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								Margin="0 0 0 0"
+								FontSize="12"
+								Foreground="{TemplateBinding Control.Foreground}" />
+							<Path
+								x:Name="p1"
+								Data="M0,0 L4,4 L8,0"
+								StrokeThickness="1"
+								Stroke="{DynamicResource GridViewColumnName}"
+								HorizontalAlignment="Right"
+								VerticalAlignment="Top"
+								Margin="0 15 20 0" />
+						</StackPanel>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="bd"
+								Value="{DynamicResource SwitchButtonBackground}"
+								Property="Border.Background" />
+						</Trigger>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="True">
+							<Setter
+								TargetName="p1"
+								Property="RenderTransform">
+								<Setter.Value>
+									<RotateTransform
+										CenterX="4"
+										CenterY="2"
+										Angle="180" />
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

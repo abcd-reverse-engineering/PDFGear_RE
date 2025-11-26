@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnText_AppAbout" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="BtnText_NewPDFFromBlankPDF" xml:space="preserve">
+    <value>Neues leeres PDF</value>
+  </data>
+  <data name="BtnText_NewPDFFromImages" xml:space="preserve">
+    <value>Neues PDF aus Bildern</value>
+  </data>
+  <data name="BtnText_NewPDFFromScanner" xml:space="preserve">
+    <value>Neues PDF vom Scanner</value>
+  </data>
+  <data name="MainViewAbout" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="MainViewAccount" xml:space="preserve">
+    <value>Anmelden / Registrieren</value>
+  </data>
+  <data name="MainViewCreateNewPDF" xml:space="preserve">
+    <value>Datei Erstellen</value>
+  </data>
+  <data name="MainViewUpgrade" xml:space="preserve">
+    <value>Upgrade</value>
+  </data>
+  <data name="OpenFileNoExistMsg" xml:space="preserve">
+    <value>Datei existiert nicht:</value>
+  </data>
+  <data name="OpenFileNoSupporttypeMsg" xml:space="preserve">
+    <value>Nicht unterstützte Dateitypen:</value>
+  </data>
+  <data name="PDFScanWinText1" xml:space="preserve">
+    <value>Gehen Sie papierlos auf iOS- und Android-Geräten mit hochwertigen und genauen Scans.</value>
+  </data>
+  <data name="PDFScanWinText2" xml:space="preserve">
+    <value>Scannen Sie den QR-Code, um jetzt herunterzuladen:</value>
+  </data>
+  <data name="PDFScanWinTitle" xml:space="preserve">
+    <value>Mobiler PDF-Scanner mit OCR-Technologie</value>
+  </data>
+  <data name="UserInfoBtnText" xml:space="preserve">
+    <value>Konto</value>
+  </data>
+  <data name="WInDisCardConfirmCancelBtn" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="WInDisCardConfirmContent1" xml:space="preserve">
+    <value>Möchten Sie die nicht gespeicherten Dateien wirklich verwerfen?</value>
+  </data>
+  <data name="WInDisCardConfirmContent2" xml:space="preserve">
+    <value>Ihre ungespeicherten Änderungen werden verlorengehen.</value>
+  </data>
+  <data name="WInDisCardConfirmDiscardBtn" xml:space="preserve">
+    <value>Verwerfen</value>
+  </data>
+  <data name="WInMainDatailLableText" xml:space="preserve">
+    <value>PDFgear versucht, die Dateien wiederherzustellen, an denen Sie gearbeitet haben, bevor das Programm unerwartet beendet wurde. Klicken Sie auf „Starten“, um mit dem Vorgang zu beginnen, oder auf „Verwerfen“, um die Wiederherstellung abzubrechen.</value>
+  </data>
+  <data name="WInMainListViewActionText" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="WInMainListViewFileNameText" xml:space="preserve">
+    <value>Dateiname</value>
+  </data>
+  <data name="WInMainListViewLastSavedText" xml:space="preserve">
+    <value>Zuletzt gespeichert</value>
+  </data>
+  <data name="WInMainListViewStatusText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="WInMainOutputLabelText" xml:space="preserve">
+    <value>Wiederherstellen in</value>
+  </data>
+  <data name="WInMainStartRecoverBtnText" xml:space="preserve">
+    <value>Starten</value>
+  </data>
+  <data name="WinBtnOkContent" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="WinBtnOpenFileContent" xml:space="preserve">
+    <value>Datei öffnen</value>
+  </data>
+  <data name="WinBtnOpenFileTipsDesc1" xml:space="preserve">
+    <value>Willkommen bei PDFgear!</value>
+  </data>
+  <data name="WinBtnOpenFileTipsDesc2" xml:space="preserve">
+    <value>Klicken Sie hier, um eine Datei zu öffnen!</value>
+  </data>
+  <data name="WinBtnScanDocument" xml:space="preserve">
+    <value>Dokument als PDF scannen</value>
+  </data>
+  <data name="WinBtnWebpages" xml:space="preserve">
+    <value>Webseiten</value>
+  </data>
+  <data name="WinCheckUpdateBtn" xml:space="preserve">
+    <value>Nach Aktualisierungen suchen</value>
+  </data>
+  <data name="WinContextMenuItemCompress" xml:space="preserve">
+    <value>Komprimieren</value>
+  </data>
+  <data name="WinFastBtnExcelToPDFText" xml:space="preserve">
+    <value>Excel in PDF</value>
+  </data>
+  <data name="WinFastBtnFillFormContent" xml:space="preserve">
+    <value>Formular ausfüllen</value>
+  </data>
+  <data name="WinFastBtnImageToPDFText" xml:space="preserve">
+    <value>Bild in PDF</value>
+  </data>
+  <data name="WinFastBtnMergePDF" xml:space="preserve">
+    <value>PDF zusammenführen</value>
+  </data>
+  <data name="WinFastBtnPDFCompressText" xml:space="preserve">
+    <value>PDF komprimieren</value>
+  </data>
+  <data name="WinFastBtnPDFtoExcelText" xml:space="preserve">
+    <value>PDF in Excel</value>
+  </data>
+  <data name="WinFastBtnPDFtoJpegText" xml:space="preserve">
+    <value>PDF in JPEG</value>
+  </data>
+  <data name="WinFastBtnPDFtoPPTText" xml:space="preserve">
+    <value>PDF in PPT</value>
+  </data>
+  <data name="WinFastBtnPDFtoPngText" xml:space="preserve">
+    <value>PDF in PNG</value>
+  </data>
+  <data name="WinFastBtnPDFtoRTFText" xml:space="preserve">
+    <value>PDF in RTF</value>
+  </data>
+  <data name="WinFastBtnPDFtoTextText" xml:space="preserve">
+    <value>PDF in TXT</value>
+  </data>
+  <data name="WinFastBtnPDFtoWebText" xml:space="preserve">
+    <value>PDF in Webseiten</value>
+  </data>
+  <data name="WinFastBtnPDFtoWordText" xml:space="preserve">
+    <value>PDF in Word</value>
+  </data>
+  <data name="WinFastBtnPDFtoXMLText" xml:space="preserve">
+    <value>PDF in XML</value>
+  </data>
+  <data name="WinFastBtnPPTToPDFText" xml:space="preserve">
+    <value>PPT in PDF</value>
+  </data>
+  <data name="WinFastBtnRTFToPDFText" xml:space="preserve">
+    <value>RTF in PDF</value>
+  </data>
+  <data name="WinFastBtnSplitPDF" xml:space="preserve">
+    <value>PDF teilen</value>
+  </data>
+  <data name="WinFastBtnTXTToPDFText" xml:space="preserve">
+    <value>TXT in PDF</value>
+  </data>
+  <data name="WinFastBtnWordToPDFText" xml:space="preserve">
+    <value>Word in PDF</value>
+  </data>
+  <data name="WinFileSize" xml:space="preserve">
+    <value>Dateigröße</value>
+  </data>
+  <data name="WinHisContextMenuItemMerge" xml:space="preserve">
+    <value>PDF zusammenführen</value>
+  </data>
+  <data name="WinHisContextMenuItemOpen" xml:space="preserve">
+    <value>Öffnen</value>
+  </data>
+  <data name="WinHisContextMenuItemPDFTo" xml:space="preserve">
+    <value>PDF in…</value>
+  </data>
+  <data name="WinHisContextMenuItemRemove" xml:space="preserve">
+    <value>Aus der Liste entfernen</value>
+  </data>
+  <data name="WinHisContextMenuItemSplit" xml:space="preserve">
+    <value>PDF teilen</value>
+  </data>
+  <data name="WinHisContextMenuItemToPDF" xml:space="preserve">
+    <value>In PDF konvertieren</value>
+  </data>
+  <data name="WinHisContextMenuItemView" xml:space="preserve">
+    <value>Im Explorer öffnen</value>
+  </data>
+  <data name="WinHisContextMulFileFastTools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="WinHisHeadeFileAction" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="WinHisHeaderOpenDate" xml:space="preserve">
+    <value>Zuletzt geöffnet</value>
+  </data>
+  <data name="WinHisLabelFileName" xml:space="preserve">
+    <value>Dateiname</value>
+  </data>
+  <data name="WinHisLabelRecentlbl" xml:space="preserve">
+    <value>Letzte Dateien</value>
+  </data>
+  <data name="WinHistoryClearLabelClickTips" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie alle kürzlich verwendeten Dateien entfernen möchten?</value>
+  </data>
+  <data name="WinIAP2AnnualPannelTitle" xml:space="preserve">
+    <value>Jährlich</value>
+  </data>
+  <data name="WinIAP2BuyNowBtnContent" xml:space="preserve">
+    <value>Jetzt kaufen</value>
+  </data>
+  <data name="WinIAP2LifetimePriceDescribe" xml:space="preserve">
+    <value>Einmaliger Preis</value>
+  </data>
+  <data name="WinLauncherHistoryClearlbl" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="WinListHeaderConvertFromPDF" xml:space="preserve">
+    <value>Von PDF konvertieren</value>
+  </data>
+  <data name="WinListHeaderConvertToPDF" xml:space="preserve">
+    <value>In PDF konvertieren</value>
+  </data>
+  <data name="WinListHeaderMergeOrSplit" xml:space="preserve">
+    <value>Zusammenführen und aufteilen</value>
+  </data>
+  <data name="WinListHeaderTabAllTools" xml:space="preserve">
+    <value>Alle Tools</value>
+  </data>
+  <data name="WinListHeaderTabHotTools" xml:space="preserve">
+    <value>Beliebte Tools</value>
+  </data>
+  <data name="WinPurchasedAlreadySubTitle" xml:space="preserve">
+    <value>Bereits abonniert</value>
+  </data>
+  <data name="WinPurchasedTitle" xml:space="preserve">
+    <value>Sie haben sich erfolgreich bei unserer Liste angemeldet. Genießen Sie jetzt PDFgear in vollen Zügen.</value>
+  </data>
+  <data name="WinRecoverSucceedContent" xml:space="preserve">
+    <value>Wiederherstellung erfolgreich</value>
+  </data>
+  <data name="WinRecoveringContent" xml:space="preserve">
+    <value>Wiederherstellung läuft</value>
+  </data>
+  <data name="WinRestoreFaildLearnMoreContent" xml:space="preserve">
+    <value>Mehr erfahren</value>
+  </data>
+  <data name="WinRestoreFaildPossible1Content" xml:space="preserve">
+    <value>Abonnement ist ausgelaufen</value>
+  </data>
+  <data name="WinRestoreFaildPossible2Content" xml:space="preserve">
+    <value>Kein gültiger Kauf gefunden</value>
+  </data>
+  <data name="WinRestoreFaildPossible3Content" xml:space="preserve">
+    <value>Netzwerk nicht verfügbar</value>
+  </data>
+  <data name="WinRestoreFaildPossibleContent" xml:space="preserve">
+    <value>Mögliche Ursachen</value>
+  </data>
+  <data name="WinRestoreFaildTitleContent" xml:space="preserve">
+    <value>Wiederherstellung fehlgeschlagen</value>
+  </data>
+  <data name="WinSettingBtn" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="WinSupportBtn" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="WinSupportLabelContent" xml:space="preserve">
+    <value>Unterstützt PDF, EPUB, JPG, PNG usw.</value>
+  </data>
+  <data name="WinUpgradeLiftTimeBtnContent" xml:space="preserve">
+    <value>Lebenslang</value>
+  </data>
+  <data name="WinUpgradeList10Content" xml:space="preserve">
+    <value>PDF-Seiten neu ordnen</value>
+  </data>
+  <data name="WinUpgradeList11Content" xml:space="preserve">
+    <value>PDF-Dokumente unterschreiben</value>
+  </data>
+  <data name="WinUpgradeList12Content" xml:space="preserve">
+    <value>PDF-Dateien komprimieren und verkleinern</value>
+  </data>
+  <data name="WinUpgradeList13Content" xml:space="preserve">
+    <value>PDF-Dateien in Word-, Excel-, Bilddateien usw. konvertieren</value>
+  </data>
+  <data name="WinUpgradeList14Content" xml:space="preserve">
+    <value>PDF signieren, komprimieren</value>
+  </data>
+  <data name="WinUpgradeList15Content" xml:space="preserve">
+    <value>Seiten zusammenführen, trennen, löschen, einfügen, extrahieren und neu sortieren</value>
+  </data>
+  <data name="WinUpgradeList16Content" xml:space="preserve">
+    <value>Bilder in Text umwandeln (OCR)</value>
+  </data>
+  <data name="WinUpgradeList17Content" xml:space="preserve">
+    <value>Bis zu 10 Geräte</value>
+  </data>
+  <data name="WinUpgradeList18Content" xml:space="preserve">
+    <value>PDFgear Premium</value>
+  </data>
+  <data name="WinUpgradeList1Content" xml:space="preserve">
+    <value>PDF-Dokumente in Word, Excel, PNG, JPG, RTF, TXT, HTML oder XML umwandeln</value>
+  </data>
+  <data name="WinUpgradeList2Content" xml:space="preserve">
+    <value>Mehrere PDF-Dokumente zu einem einzigen PDF zusammenführen</value>
+  </data>
+  <data name="WinUpgradeList3Content" xml:space="preserve">
+    <value>Seiten aus PDF-Dokumenten entfernen</value>
+  </data>
+  <data name="WinUpgradeList4Content" xml:space="preserve">
+    <value>PDF in mehrere PDF-Dokumente aufteilen</value>
+  </data>
+  <data name="WinUpgradeList5Content" xml:space="preserve">
+    <value>PDF-Seiten aus einem PDF-Dokument extrahieren</value>
+  </data>
+  <data name="WinUpgradeList6Content" xml:space="preserve">
+    <value>Keine Werbung</value>
+  </data>
+  <data name="WinUpgradeList7Content" xml:space="preserve">
+    <value>Support jederzeit erreichbar</value>
+  </data>
+  <data name="WinUpgradeList8Content" xml:space="preserve">
+    <value>Seiten aus anderen PDF-Dokumenten einfügen</value>
+  </data>
+  <data name="WinUpgradeList9Content" xml:space="preserve">
+    <value>Word, Excel, PPT, Bilder, RTF oder TXT in PDF konvertieren</value>
+  </data>
+  <data name="WinUpgradeRestorePurchase" xml:space="preserve">
+    <value>Kauf wiederherstellen</value>
+  </data>
+  <data name="WinUpgradeTitle" xml:space="preserve">
+    <value>Vollversion erhalten</value>
+  </data>
+  <data name="WinUpgradeYearBtnContent" xml:space="preserve">
+    <value>Jahr</value>
+  </data>
+</root>

@@ -1,0 +1,284 @@
+<Application
+	x:Class="PDFLauncher.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:PDFLauncher" xmlns:theme="clr-namespace:CommonLib.AppTheme;assembly=CommonLib">
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<controls:ModernStyleDictionary xmlns:controls="clr-namespace:CommonLib.Controls;assembly=CommonLib" />
+				<ResourceDictionary
+					Source="/PDFLauncher;component/Styles/PathTextBox.xaml" />
+				<ResourceDictionary
+					Source="/PDFLauncher;component/Styles/LabelButton.xaml" />
+				<ResourceDictionary
+					Source="/PDFLauncher;component/Styles/SwitchButton.xaml" />
+				<ResourceDictionary
+					Source="/PDFLauncher;component/Styles/ButtonEx.xaml" />
+				<theme:ThemeResourceDictionary
+					Theme="Light">
+					<theme:ThemeResourceDictionary.ThemeResources>
+						<ResourceDictionary
+							x:Key="Light">
+							<ResourceDictionary.MergedDictionaries>
+								<ResourceDictionary
+									Source="pack://application:,,,/CommonLib;component/Controls/SharedLightModeColors.xaml" />
+							</ResourceDictionary.MergedDictionaries>
+							<SolidColorBrush
+								x:Key="SolidBrushWhiteAndBlack"
+								Color="White" />
+							<SolidColorBrush
+								x:Key="TextBrushWhiteAndBlack"
+								Color="Black" />
+							<SolidColorBrush
+								x:Key="BtnBrushGrayAndDark"
+								Color="#555555" />
+							<SolidColorBrush
+								x:Key="MainViewListItemSeleted"
+								Color="#F5F5F5" />
+							<SolidColorBrush
+								x:Key="MainSideBarBackground"
+								Color="#EEEEEE" />
+							<SolidColorBrush
+								x:Key="MainViewTextForeground"
+								Color="#99000000" />
+							<SolidColorBrush
+								x:Key="MainViewGrid2Background"
+								Color="#ffffff" />
+							<SolidColorBrush
+								x:Key="HotToolPressedBackground"
+								Color="#F2F2F2" />
+							<SolidColorBrush
+								x:Key="GridViewColumnName"
+								Color="Black" />
+							<SolidColorBrush
+								x:Key="GridViewColumnIsSelected"
+								Color="#20000000" />
+							<SolidColorBrush
+								x:Key="MainViewRectangle"
+								Color="#D2D2D2" />
+							<SolidColorBrush
+								x:Key="GridViewColumnCheckBox"
+								Color="#FFFFFF" />
+							<SolidColorBrush
+								x:Key="SwitchButtonBackground"
+								Color="#50F5F5F5" />
+							<SolidColorBrush
+								x:Key="MainViewFileActionBtn"
+								Color="#787878" />
+							<SolidColorBrush
+								x:Key="MainViewFileActionSelectedBtn"
+								Color="#2F2F2F" />
+							<SolidColorBrush
+								x:Key="RecoverWindowGridViewBackground"
+								Color="#E5E5E5" />
+							<SolidColorBrush
+								x:Key="ListViewBackground"
+								Color="#D5D5D5" />
+							<SolidColorBrush
+								x:Key="ListViewBackground2"
+								Color="#f5f5f5" />
+							<SolidColorBrush
+								x:Key="ListViewIsSelected"
+								Color="#cce8ff" />
+							<SolidColorBrush
+								x:Key="ListViewMouseOver"
+								Color="#e5f3ff" />
+							<SolidColorBrush
+								x:Key="RecoverWindowBtnBorder"
+								Color="#DBDBDB" />
+							<SolidColorBrush
+								x:Key="WindowsBackground"
+								Color="#FFFFFF" />
+							<SolidColorBrush
+								x:Key="WatermarkEditWinPlaceHoder"
+								Color="#7E7E7E" />
+							<SolidColorBrush
+								x:Key="DialogButtonStaticBackground"
+								Color="#FFFFFFFF" />
+							<SolidColorBrush
+								x:Key="MainViewFontSizeBorder"
+								Color="#FFD2D2D2" />
+							<SolidColorBrush
+								x:Key="MainViewCheckText"
+								Color="#EE000000" />
+							<SolidColorBrush
+								x:Key="MainViewCheckBorderBrush"
+								Color="#D2D2D2" />
+							<SolidColorBrush
+								x:Key="MainViewCheckBcakground"
+								Color="#1D7FDA" />
+							<SolidColorBrush
+								x:Key="MainViewUnCheckBcakground"
+								Color="#FFFFFF" />
+							<SolidColorBrush
+								x:Key="MainViewNewPDFMouseOver"
+								Color="#F5F5F5" />
+							<SolidColorBrush
+								x:Key="MainViewNewPDFSelected"
+								Color="#E0E0E0" />
+							<BitmapImage
+								x:Key="MainViewClearSource"
+								UriSource="/images/clear.png" />
+							<BitmapImage
+								x:Key="MainViewMenuConvertSource"
+								UriSource="/images/menuconverttopdf.png" />
+							<BitmapImage
+								x:Key="MainViewContextCompressSource"
+								UriSource="/images/ContextCompress.png" />
+							<BitmapImage
+								x:Key="MainViewMenuMergeSource"
+								UriSource="/images/menumerge.png" />
+							<BitmapImage
+								x:Key="MainViewMenuSplitSource"
+								UriSource="/images/menusplit.png" />
+							<BitmapImage
+								x:Key="MainViewMenuFolderSource"
+								UriSource="/images/menufolder.png" />
+							<BitmapImage
+								x:Key="MainViewMenuOpenSource"
+								UriSource="/images/menuopen.png" />
+							<BitmapImage
+								x:Key="MainViewMenuRemoveSource"
+								UriSource="/images/menuremove.png" />
+							<BitmapImage
+								x:Key="RecoverWinOpenFileImageSource"
+								UriSource="/images/openFile.png" />
+							<BitmapImage
+								x:Key="RecoverWinOpenDirImageSource"
+								UriSource="/images/openDir.png" />
+						</ResourceDictionary>
+						<ResourceDictionary
+							x:Key="Dark">
+							<ResourceDictionary.MergedDictionaries>
+								<ResourceDictionary
+									Source="pack://application:,,,/CommonLib;component/Controls/SharedDarkModeColors.xaml" />
+							</ResourceDictionary.MergedDictionaries>
+							<SolidColorBrush
+								x:Key="SolidBrushWhiteAndBlack"
+								Color="Black" />
+							<SolidColorBrush
+								x:Key="TextBrushWhiteAndBlack"
+								Color="White" />
+							<SolidColorBrush
+								x:Key="BtnBrushGrayAndDark"
+								Color="#AAAAAA" />
+							<SolidColorBrush
+								x:Key="MainViewListItemSeleted"
+								Color="#333333" />
+							<SolidColorBrush
+								x:Key="MainSideBarBackground"
+								Color="#222222" />
+							<SolidColorBrush
+								x:Key="MainViewTextForeground"
+								Color="#99FFFFFF" />
+							<SolidColorBrush
+								x:Key="MainViewGrid2Background"
+								Color="#181818" />
+							<SolidColorBrush
+								x:Key="HotToolPressedBackground"
+								Color="#555555" />
+							<SolidColorBrush
+								x:Key="GridViewColumnName"
+								Color="#99FFFFFF" />
+							<SolidColorBrush
+								x:Key="GridViewColumnIsSelected"
+								Color="#555555" />
+							<SolidColorBrush
+								x:Key="MainViewRectangle"
+								Color="#444444" />
+							<SolidColorBrush
+								x:Key="GridViewColumnCheckBox"
+								Color="#181818" />
+							<SolidColorBrush
+								x:Key="SwitchButtonBackground"
+								Color="#181818" />
+							<SolidColorBrush
+								x:Key="MainViewFileActionBtn"
+								Color="#C4C4C4" />
+							<SolidColorBrush
+								x:Key="MainViewFileActionSelectedBtn"
+								Color="#FFFFFF" />
+							<SolidColorBrush
+								x:Key="RecoverWindowGridViewBackground"
+								Color="#1B1B1B" />
+							<SolidColorBrush
+								x:Key="ListViewBackground"
+								Color="#444" />
+							<SolidColorBrush
+								x:Key="ListViewBackground2"
+								Color="#222" />
+							<SolidColorBrush
+								x:Key="ListViewIsSelected"
+								Color="#333" />
+							<SolidColorBrush
+								x:Key="ListViewMouseOver"
+								Color="#2A2A2A" />
+							<SolidColorBrush
+								x:Key="RecoverWindowBtnBorder"
+								Color="#444444" />
+							<SolidColorBrush
+								x:Key="WindowsBackground"
+								Color="#1B1B1B" />
+							<SolidColorBrush
+								x:Key="WatermarkEditWinPlaceHoder"
+								Color="#FFFFFF"
+								Opacity="0.2" />
+							<SolidColorBrush
+								x:Key="DialogButtonStaticBackground"
+								Color="#333333" />
+							<SolidColorBrush
+								x:Key="MainViewFontSizeBorder"
+								Color="#444444" />
+							<SolidColorBrush
+								x:Key="MainViewCheckText"
+								Color="#FFFFFF" />
+							<SolidColorBrush
+								x:Key="MainViewCheckBorderBrush"
+								Color="#757575" />
+							<SolidColorBrush
+								x:Key="MainViewCheckBcakground"
+								Color="#444444" />
+							<SolidColorBrush
+								x:Key="MainViewUnCheckBcakground"
+								Color="#222222" />
+							<SolidColorBrush
+								x:Key="MainViewNewPDFMouseOver"
+								Color="#444" />
+							<SolidColorBrush
+								x:Key="MainViewNewPDFSelected"
+								Color="#555555" />
+							<BitmapImage
+								x:Key="MainViewClearSource"
+								UriSource="/images/DarkMode/clear.png" />
+							<BitmapImage
+								x:Key="MainViewMenuConvertSource"
+								UriSource="/images/DarkMode/menuconverttopdf.png" />
+							<BitmapImage
+								x:Key="MainViewContextCompressSource"
+								UriSource="/images/DarkMode/ContextCompress.png" />
+							<BitmapImage
+								x:Key="MainViewMenuMergeSource"
+								UriSource="/images/DarkMode/menumerge.png" />
+							<BitmapImage
+								x:Key="MainViewMenuSplitSource"
+								UriSource="/images/DarkMode/menusplit.png" />
+							<BitmapImage
+								x:Key="MainViewMenuFolderSource"
+								UriSource="/images/DarkMode/menufolder.png" />
+							<BitmapImage
+								x:Key="MainViewMenuOpenSource"
+								UriSource="/images/DarkMode/menuopen.png" />
+							<BitmapImage
+								x:Key="MainViewMenuRemoveSource"
+								UriSource="/images/DarkMode/menuremove.png" />
+							<BitmapImage
+								x:Key="RecoverWinOpenFileImageSource"
+								UriSource="/images/DarkMode/openFile.png" />
+							<BitmapImage
+								x:Key="RecoverWinOpenDirImageSource"
+								UriSource="/images/DarkMode/openDir.png" />
+						</ResourceDictionary>
+					</theme:ThemeResourceDictionary.ThemeResources>
+				</theme:ThemeResourceDictionary>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

@@ -1,0 +1,2759 @@
+<Window
+	x:Class="PDFLauncher.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:PDFLauncher" xmlns:localprop="clr-namespace:PDFLauncher.Properties" xmlns:cus="clr-namespace:PDFLauncher.CustomControl" xmlns:localconverter="clr-namespace:PDFLauncher.Convert" xmlns:utils="clr-namespace:PDFLauncher.Utils" xmlns:viewmodels="clr-namespace:PDFLauncher.ViewModels" xmlns:controls="clr-namespace:CommonLib.Controls;assembly=CommonLib"
+	x:Name="PDFLauncher"
+	Title="PDFgear"
+	Height="600"
+	Width="1040"
+	MinWidth="1040"
+	MinHeight="550"
+	AllowDrop="True"
+	WindowStartupLocation="CenterScreen"
+	Closing="Window_Closing"
+	Drop="Window_Drop">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<Style
+				x:Key="FocusVisual">
+				<Setter
+					Property="Control.Template">
+					<Setter.Value>
+						<ControlTemplate>
+							<Rectangle
+								Margin="2"
+								SnapsToDevicePixels="True"
+								Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+								StrokeThickness="1"
+								StrokeDashArray="1 2" />
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="menu1"
+				TargetType="{x:Type MenuItem}">
+				<Setter
+					Property="MinWidth"
+					Value="180" />
+				<Setter
+					Property="Height"
+					Value="32" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type MenuItem}">
+							<Grid
+								Height="{TemplateBinding FrameworkElement.Height}"
+								Width="{TemplateBinding FrameworkElement.Width}"
+								HorizontalAlignment="Stretch"
+								Background="{DynamicResource SolidBrushWhiteAndBlack}">
+								<Border
+									x:Name="bd"
+									Background="{DynamicResource SolidBrushWhiteAndBlack}"
+									BorderBrush="{DynamicResource MainViewRectangle}"
+									BorderThickness="0 0 0 0" />
+								<Image
+									x:Name="_imgicon"
+									Visibility="Visible"
+									Width="20"
+									Height="20"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									Margin="9 0 0 0"
+									Source="{Binding Icon, RelativeSource={RelativeSource TemplatedParent}}" />
+								<TextBlock
+									x:Name="tb"
+									Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Left"
+									FontSize="12"
+									Margin="36 0 5 0"
+									Text="{Binding Header, RelativeSource={RelativeSource TemplatedParent}}" />
+								<Path
+									x:Name="_path"
+									Visibility="Collapsed"
+									HorizontalAlignment="Right"
+									Margin="5 13 5 0"
+									Data="M0,0 L3,2.5 L0,5 Z"
+									Fill="#FF000000" />
+								<Popup
+									x:Name="SubMenuPopup"
+									Placement="Right"
+									AllowsTransparency="True"
+									Focusable="False"
+									IsOpen="{TemplateBinding MenuItem.IsSubmenuOpen}">
+									<ScrollViewer
+										VerticalScrollBarVisibility="Auto"
+										HorizontalScrollBarVisibility="Disabled">
+										<Border
+											Name="SubmenuBorder"
+											Background="#00FFFFFF"
+											BorderBrush="#FFD3D3D3"
+											BorderThickness="1"
+											SnapsToDevicePixels="True">
+											<StackPanel
+												IsItemsHost="True"
+												KeyboardNavigation.DirectionalNavigation="Cycle" />
+										</Border>
+									</ScrollViewer>
+								</Popup>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="ItemsControl.HasItems"
+									Value="True">
+									<Setter
+										TargetName="_path"
+										Property="Visibility"
+										Value="Visible" />
+								</Trigger>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource GridViewColumnIsSelected}"
+										Property="Background" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="menu2"
+				TargetType="{x:Type MenuItem}">
+				<Setter
+					Property="MinWidth"
+					Value="180" />
+				<Setter
+					Property="Height"
+					Value="28" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type MenuItem}">
+							<Grid
+								Height="{TemplateBinding FrameworkElement.Height}"
+								Width="{TemplateBinding FrameworkElement.Width}"
+								HorizontalAlignment="Stretch"
+								Background="{DynamicResource SolidBrushWhiteAndBlack}">
+								<Border
+									x:Name="bd"
+									Background="{DynamicResource SolidBrushWhiteAndBlack}"
+									BorderBrush="{DynamicResource MainViewRectangle}"
+									BorderThickness="0 0 0 0" />
+								<Image
+									x:Name="_imgicon"
+									Visibility="Visible"
+									Width="16"
+									Height="16"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									Margin="10 0 6 0"
+									Source="{Binding Icon, RelativeSource={RelativeSource TemplatedParent}}" />
+								<TextBlock
+									x:Name="tb"
+									FontSize="12"
+									Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Left"
+									Margin="36 0 5 0"
+									Text="{Binding Header, RelativeSource={RelativeSource TemplatedParent}}" />
+								<Path
+									x:Name="_path"
+									Visibility="Collapsed"
+									HorizontalAlignment="Right"
+									Margin="5 13 5 0"
+									Data="M0,0 L3,2.5 L0,5 Z"
+									Fill="#FF000000" />
+								<Popup
+									x:Name="SubMenuPopup"
+									Placement="Right"
+									AllowsTransparency="True"
+									Focusable="False"
+									IsOpen="{TemplateBinding MenuItem.IsSubmenuOpen}">
+									<ScrollViewer
+										VerticalScrollBarVisibility="Auto"
+										HorizontalScrollBarVisibility="Disabled">
+										<Border
+											Name="SubmenuBorder"
+											Background="#00FFFFFF"
+											BorderBrush="#FFD3D3D3"
+											BorderThickness="1"
+											SnapsToDevicePixels="True">
+											<StackPanel
+												IsItemsHost="True"
+												KeyboardNavigation.DirectionalNavigation="Cycle" />
+										</Border>
+									</ScrollViewer>
+								</Popup>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="MenuItem.Icon"
+									Value="{x:Null}">
+									<Setter
+										TargetName="_imgicon"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="tb"
+										Property="Margin"
+										Value="10 0 0 0" />
+								</Trigger>
+								<Trigger
+									Property="ItemsControl.HasItems"
+									Value="True">
+									<Setter
+										TargetName="_path"
+										Property="Visibility"
+										Value="Visible" />
+								</Trigger>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource GridViewColumnIsSelected}"
+										Property="Background" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="LauncherListViewStyle"
+				TargetType="{x:Type ListView}">
+				<Setter
+					Property="ListBox.SelectionMode"
+					Value="Single" />
+				<Setter
+					Property="Height"
+					Value="50" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="Background"
+					Value="{DynamicResource MainViewGrid2Background}" />
+			</Style>
+			<Style
+				x:Key="{x:Type GridViewColumnHeader}"
+				TargetType="{x:Type GridViewColumnHeader}">
+				<Setter
+					Property="FrameworkElement.OverridesDefaultStyle"
+					Value="True" />
+				<Setter
+					Property="HorizontalAlignment"
+					Value="Stretch" />
+				<Setter
+					Property="Height"
+					Value="46" />
+				<Setter
+					Property="Padding"
+					Value="0" />
+				<Setter
+					Property="Background"
+					Value="{DynamicResource MainViewGrid2Background}" />
+				<Setter
+					Property="FontSize"
+					Value="12" />
+				<Setter
+					Property="Foreground"
+					Value="{DynamicResource MainViewTextForeground}" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type GridViewColumnHeader}">
+							<Grid
+								Name="g"
+								Background="{DynamicResource MainViewGrid2Background}">
+								<Border
+									Name="bd"
+									Padding="{TemplateBinding Control.Padding}">
+									<ContentPresenter
+										VerticalAlignment="Center"
+										HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" />
+								</Border>
+								<Rectangle
+									Width="900"
+									Fill="{DynamicResource MainViewRectangle}"
+									Height="1"
+									VerticalAlignment="Bottom" />
+								<Rectangle
+									Width="900"
+									Fill="{DynamicResource MainViewRectangle}"
+									Height="1"
+									VerticalAlignment="Top" />
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="ContentxMenuStyle"
+				TargetType="{x:Type ContextMenu}">
+				<Setter
+					Property="UIElement.SnapsToDevicePixels"
+					Value="True" />
+				<Setter
+					Property="FrameworkElement.OverridesDefaultStyle"
+					Value="True" />
+				<Setter
+					Property="Grid.IsSharedSizeScope"
+					Value="True" />
+				<Setter
+					Property="Focusable"
+					Value="False" />
+				<Setter
+					Property="ContextMenu.HasDropShadow"
+					Value="True" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ContextMenu}">
+							<Border
+								Name="Border"
+								Background="{DynamicResource SolidBrushWhiteAndBlack}"
+								BorderBrush="{DynamicResource MainViewRectangle}"
+								BorderThickness="1">
+								<StackPanel
+									IsItemsHost="True"
+									KeyboardNavigation.DirectionalNavigation="Cycle" />
+							</Border>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="LauncherCheckBoxStyle"
+				TargetType="{x:Type CheckBox}">
+				<Setter
+					Property="Width"
+					Value="14" />
+				<Setter
+					Property="Height"
+					Value="14" />
+				<Setter
+					Property="Background"
+					Value="{DynamicResource MainViewUnCheckBcakground}" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type CheckBox}">
+							<Grid>
+								<Border
+									x:Name="bd"
+									BorderBrush="{DynamicResource MainViewCheckBorderBrush}"
+									CornerRadius="1"
+									BorderThickness="1"
+									Background="{DynamicResource MainViewCheckBcakground}" />
+								<Path
+									x:Name="p1"
+									Data="M0,3 L3,6 L9,0"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									Stroke="#FFFFFFFF"
+									StrokeThickness="1.5"
+									Margin="0.5 1 0 0" />
+								<Path
+									x:Name="p2"
+									Data="M0,0 L0,8 L8,8 L8,0 Z"
+									Fill="{DynamicResource MainViewUnCheckBcakground}"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									Stroke="{DynamicResource MainViewUnCheckBcakground}"
+									StrokeThickness="1.5"
+									Margin="0 1 0 0" />
+								<Path
+									x:Name="p3"
+									Data="M0,0 L8,0"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"
+									Stroke="#FFFFFFFF"
+									StrokeThickness="1.5"
+									Margin="0 1 0 0" />
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="True">
+									<Setter
+										TargetName="p1"
+										Property="Visibility"
+										Value="Visible" />
+									<Setter
+										TargetName="p2"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p3"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource MainViewCheckBcakground}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderThickness"
+										Value="0" />
+								</Trigger>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="False">
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource MainViewUnCheckBcakground}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="p1"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p2"
+										Property="Visibility"
+										Value="Visible" />
+									<Setter
+										TargetName="p3"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderThickness"
+										Value="1" />
+								</Trigger>
+								<Trigger
+									Property="ToggleButton.IsChecked"
+									Value="{x:Null}">
+									<Setter
+										TargetName="bd"
+										Value="{DynamicResource MainViewCheckBcakground}"
+										Property="Border.Background" />
+									<Setter
+										TargetName="p1"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p2"
+										Property="Visibility"
+										Value="Hidden" />
+									<Setter
+										TargetName="p3"
+										Property="Visibility"
+										Value="Visible" />
+									<Setter
+										TargetName="bd"
+										Property="Border.BorderThickness"
+										Value="0" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="menuSeparator"
+				TargetType="{x:Type Separator}">
+				<Setter
+					Property="Margin"
+					Value="3,0" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type Separator}">
+							<Border
+								Height="1"
+								BorderThickness="1"
+								BorderBrush="{DynamicResource MainViewRectangle}" />
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<controls:IsNullToVisibilityConverter
+				x:Key="IsNullToVisibilityConverter" />
+			<controls:PaidUserVisibilityConverter
+				x:Key="PaidUserVisibilityConverter" />
+			<localconverter:ListViewBackgroundConverter
+				x:Key="ListViewBackgroundConverter" />
+			<SolidColorBrush
+				x:Key="Button.Static.Background"
+				Color="#FC0D1B" />
+			<SolidColorBrush
+				x:Key="Button.Static.Border"
+				Color="#FF707070" />
+			<SolidColorBrush
+				x:Key="Button.MouseOver.Background"
+				Color="#FFF27C75" />
+			<SolidColorBrush
+				x:Key="Button.MouseOver.Border"
+				Color="#FF3C7FB1" />
+			<SolidColorBrush
+				x:Key="Button.Pressed.Background"
+				Color="#FFCA393B" />
+			<SolidColorBrush
+				x:Key="Button.Pressed.Border"
+				Color="#FF2C628B" />
+			<SolidColorBrush
+				x:Key="Button.Disabled.Background"
+				Color="#FFF4F4F4" />
+			<SolidColorBrush
+				x:Key="Button.Disabled.Border"
+				Color="#FFADB2B5" />
+			<SolidColorBrush
+				x:Key="Button.Disabled.Foreground"
+				Color="#FF838383" />
+			<Style
+				x:Key="ButtonStyle1"
+				TargetType="{x:Type Button}">
+				<Setter
+					Property="FrameworkElement.FocusVisualStyle"
+					Value="{StaticResource FocusVisual}" />
+				<Setter
+					Property="Background"
+					Value="{StaticResource Button.Static.Background}" />
+				<Setter
+					Property="BorderBrush"
+					Value="{StaticResource Button.Static.Border}" />
+				<Setter
+					Property="Foreground"
+					Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+				<Setter
+					Property="BorderThickness"
+					Value="1" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="Padding"
+					Value="1" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type Button}">
+							<Border
+								x:Name="border"
+								CornerRadius="15"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								Background="{TemplateBinding Control.Background}"
+								SnapsToDevicePixels="True">
+								<ContentPresenter
+									x:Name="contentPresenter"
+									Focusable="False"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									Margin="{TemplateBinding Control.Padding}"
+									RecognizesAccessKey="True"
+									SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+							</Border>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="Button.IsDefaulted"
+									Value="True">
+									<Setter
+										TargetName="border"
+										Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+										Property="Border.BorderBrush" />
+								</Trigger>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="border"
+										Property="Border.Background"
+										Value="{StaticResource Button.MouseOver.Background}" />
+									<Setter
+										TargetName="border"
+										Property="Border.BorderBrush"
+										Value="{StaticResource Button.MouseOver.Border}" />
+								</Trigger>
+								<Trigger
+									Property="IsPressed"
+									Value="True">
+									<Setter
+										TargetName="border"
+										Property="Border.Background"
+										Value="{StaticResource Button.Pressed.Background}" />
+									<Setter
+										TargetName="border"
+										Property="Border.BorderBrush"
+										Value="{StaticResource Button.Pressed.Border}" />
+								</Trigger>
+								<Trigger
+									Property="IsEnabled"
+									Value="False">
+									<Setter
+										TargetName="border"
+										Property="Border.Background"
+										Value="{StaticResource Button.Disabled.Background}" />
+									<Setter
+										TargetName="border"
+										Property="Border.BorderBrush"
+										Value="{StaticResource Button.Disabled.Border}" />
+									<Setter
+										TargetName="contentPresenter"
+										Property="TextElement.Foreground"
+										Value="{StaticResource Button.Disabled.Foreground}" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="BtnStyle"
+				TargetType="{x:Type ButtonBase}">
+				<Setter
+					Property="FrameworkElement.FocusVisualStyle"
+					Value="{x:Null}" />
+				<Setter
+					Property="Background"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="BorderBrush"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="Foreground"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="Padding"
+					Value="0" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ButtonBase}">
+							<Border
+								x:Name="border"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								Background="{TemplateBinding Control.Background}"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								SnapsToDevicePixels="True">
+								<ContentPresenter
+									x:Name="contentPresenter"
+									RecognizesAccessKey="True"
+									Margin="{TemplateBinding Control.Padding}"
+									SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+									Focusable="False" />
+							</Border>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="border"
+										Value="{DynamicResource GridViewColumnIsSelected}"
+										Property="Border.Background" />
+								</Trigger>
+								<Trigger
+									Property="IsPressed"
+									Value="True">
+									<Setter
+										TargetName="border"
+										Value="{DynamicResource GridViewColumnIsSelected}"
+										Property="Border.Background" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="BtnRadiusStyle"
+				TargetType="{x:Type ButtonBase}">
+				<Setter
+					Property="FrameworkElement.FocusVisualStyle"
+					Value="{x:Null}" />
+				<Setter
+					Property="Background"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="BorderBrush"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="Foreground"
+					Value="#00FFFFFF" />
+				<Setter
+					Property="BorderThickness"
+					Value="0" />
+				<Setter
+					Property="HorizontalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+				<Setter
+					Property="Padding"
+					Value="0" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type ButtonBase}">
+							<Border
+								x:Name="border"
+								CornerRadius="6"
+								BorderThickness="{TemplateBinding Control.BorderThickness}"
+								Background="{TemplateBinding Control.Background}"
+								BorderBrush="{TemplateBinding Control.BorderBrush}"
+								SnapsToDevicePixels="True">
+								<ContentPresenter
+									x:Name="contentPresenter"
+									RecognizesAccessKey="True"
+									Margin="{TemplateBinding Control.Padding}"
+									SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+									HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+									VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+									Focusable="False" />
+							</Border>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="UIElement.IsMouseOver"
+									Value="True">
+									<Setter
+										TargetName="border"
+										Value="{DynamicResource GridViewColumnIsSelected}"
+										Property="Border.Background" />
+								</Trigger>
+								<Trigger
+									Property="IsPressed"
+									Value="True">
+									<Setter
+										TargetName="border"
+										Value="{DynamicResource GridViewColumnIsSelected}"
+										Property="Border.Background" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style
+				x:Key="WrappingStyle"
+				TargetType="{x:Type TextBlock}">
+				<Setter
+					Property="TextWrapping"
+					Value="Wrap" />
+			</Style>
+			<PathGeometry
+				x:Key="UserInfoGeometry"
+				Figures="M1 0.5L4 3.5L7 0.5" />
+			<PathGeometry
+				x:Key="UpgradeGeometry"
+				Figures="M17.5116 4H6.49033L3 9.83823L12.001 19L21 9.83823L17.5116 4ZM12.001 15.9252L7.75639 11.6067L8.59914 10.7489L12.001 14.2115L15.4028 10.7509L16.2455 11.6087L12.001 15.9252Z" />
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid
+		Background="{DynamicResource SolidBrushWhiteAndBlack}">
+		<FrameworkElement.Resources>
+			<ResourceDictionary>
+				<GeometryGroup
+					x:Key="AppAboutInfoIcon">
+					<PathGeometry
+						Figures="M6.5625 10.6875H7.6875V6.375H6.5625V10.6875ZM7.125 5.09137C7.29663 5.09137 7.4405 5.03331 7.55663 4.91719C7.67275 4.80106 7.73081 4.65719 7.73081 4.48556C7.73081 4.31394 7.67275 4.17006 7.55663 4.05394C7.4405 3.93794 7.29663 3.87994 7.125 3.87994C6.95338 3.87994 6.8095 3.93794 6.69338 4.05394C6.57725 4.17006 6.51919 4.31394 6.51919 4.48556C6.51919 4.65719 6.57725 4.80106 6.69338 4.91719C6.8095 5.03331 6.95338 5.09137 7.125 5.09137ZM7.12631 14.25C6.14081 14.25 5.2145 14.063 4.34737 13.689C3.48025 13.315 2.726 12.8074 2.08463 12.1663C1.44325 11.5252 0.935437 10.7713 0.561187 9.9045C0.187062 9.03775 0 8.11169 0 7.12631C0 6.14081 0.187 5.2145 0.561 4.34737C0.935 3.48025 1.44256 2.726 2.08369 2.08463C2.72481 1.44325 3.47875 0.935437 4.3455 0.561187C5.21225 0.187062 6.13831 0 7.12369 0C8.10919 0 9.0355 0.187 9.90263 0.561C10.7698 0.935 11.524 1.44256 12.1654 2.08369C12.8068 2.72481 13.3146 3.47875 13.6888 4.3455C14.0629 5.21225 14.25 6.13831 14.25 7.12369C14.25 8.10919 14.063 9.0355 13.689 9.90263C13.315 10.7698 12.8074 11.524 12.1663 12.1654C11.5252 12.8068 10.7713 13.3146 9.9045 13.6888C9.03775 14.0629 8.11169 14.25 7.12631 14.25ZM7.125 13.125C8.8 13.125 10.2188 12.5438 11.3813 11.3813C12.5438 10.2188 13.125 8.8 13.125 7.125C13.125 5.45 12.5438 4.03125 11.3813 2.86875C10.2188 1.70625 8.8 1.125 7.125 1.125C5.45 1.125 4.03125 1.70625 2.86875 2.86875C1.70625 4.03125 1.125 5.45 1.125 7.125C1.125 8.8 1.70625 10.2188 2.86875 11.3813C4.03125 12.5438 5.45 13.125 7.125 13.125Z" />
+				</GeometryGroup>
+				<GeometryGroup
+					x:Key="CheckUpgradeIcon">
+					<PathGeometry
+						Figures="M0.330188 4.29806V0.490313H1.45519V2.26725C2.06381 1.549 2.79269 0.991562 3.64181 0.594937C4.49081 0.198312 5.38694 0 6.33019 0C8.09944 0 9.60425 0.620187 10.8446 1.86056C12.085 3.10094 12.7052 4.60575 12.7052 6.375V6.47606H11.5802V6.375C11.5802 4.9125 11.0708 3.67188 10.0521 2.65313C9.03331 1.63438 7.79269 1.125 6.33019 1.125C5.51094 1.125 4.74319 1.307 4.02694 1.671C3.31056 2.03487 2.69369 2.53556 2.17631 3.17306H4.13794V4.29806H0.330188ZM0 7.125H1.14806C1.31244 8.29712 1.80494 9.28994 2.62556 10.1034C3.44631 10.9168 4.42881 11.4038 5.57306 11.5644L6.25669 12.75C4.65669 12.726 3.25956 12.1806 2.06531 11.1137C0.871063 10.0468 0.182625 8.71725 0 7.125ZM7.5735 8.38706L5.78944 6.60281V2.625H6.91425V6.14719L8.16619 7.39913L7.5735 8.38706ZM11.1864 15.1875L11.0048 14.1707C10.8115 14.1178 10.6288 14.0449 10.4567 13.9521C10.2846 13.8593 10.1226 13.7413 9.97069 13.5981L8.99138 13.9067L8.45756 13.0067L9.24075 12.3504C9.18213 12.1496 9.15281 11.9438 9.15281 11.7332C9.15281 11.5226 9.18213 11.312 9.24075 11.1015L8.44331 10.4308L8.99138 9.51638L9.97781 9.84675C10.1297 9.70825 10.2893 9.59381 10.4567 9.50344C10.6239 9.41306 10.8066 9.339 11.0048 9.28125L11.1864 8.26444H12.2537L12.4356 9.28125C12.6384 9.339 12.8278 9.41931 13.0037 9.52219C13.1797 9.62506 13.3374 9.74813 13.4769 9.89138L14.4778 9.53081L15.0114 10.4827L14.2067 11.1534C14.2604 11.3639 14.2873 11.5658 14.2873 11.7591C14.2873 11.9524 14.2604 12.1424 14.2067 12.3289L15.0259 13.0067L14.4923 13.9067L13.4769 13.5836C13.3298 13.7269 13.1702 13.8473 12.9981 13.9449C12.8259 14.0426 12.6384 14.1178 12.4356 14.1707L12.2537 15.1875H11.1864ZM11.7201 13.2836C12.1471 13.2836 12.5134 13.1308 12.8192 12.825C13.1249 12.5192 13.2778 12.1529 13.2778 11.7261C13.2778 11.2991 13.1249 10.9327 12.8192 10.6269C12.5134 10.3212 12.1471 10.1683 11.7201 10.1683C11.2932 10.1683 10.9269 10.3212 10.6211 10.6269C10.3154 10.9327 10.1625 11.2991 10.1625 11.7261C10.1625 12.1529 10.3154 12.5192 10.6211 12.825C10.9269 13.1308 11.2932 13.2836 11.7201 13.2836Z" />
+				</GeometryGroup>
+				<GeometryGroup
+					x:Key="SettingIcon">
+					<PathGeometry
+						Figures="M6.31468 15.246L6.0292 12.9619C5.82838 12.8947 5.62244 12.8005 5.41137 12.6794C5.20043 12.5582 5.0118 12.4284 4.84547 12.2901L2.73013 13.184L1 10.1849L2.82967 8.8021C2.81242 8.69063 2.80018 8.57866 2.79293 8.46619C2.78568 8.35372 2.78206 8.24169 2.78206 8.1301C2.78206 8.02351 2.78568 7.91516 2.79293 7.80507C2.80018 7.69497 2.81242 7.57457 2.82967 7.44386L1 6.06106L2.73013 3.07635L4.83816 3.96316C5.01898 3.81995 5.21199 3.68899 5.41718 3.57027C5.62238 3.45155 5.82401 3.35614 6.02207 3.28404L6.31468 1H9.77532L10.0608 3.29116C10.2857 3.37289 10.4892 3.4683 10.6713 3.57739C10.8535 3.68649 11.0374 3.81508 11.223 3.96316L13.3599 3.07635L15.09 6.06106L13.2315 7.46541C13.2583 7.5865 13.273 7.69972 13.2755 7.80507C13.2779 7.91029 13.2791 8.01626 13.2791 8.12298C13.2791 8.22482 13.2766 8.32842 13.2718 8.43376C13.267 8.53898 13.2498 8.65939 13.22 8.79497L15.0641 10.1849L13.3338 13.184L11.223 12.2828C11.0374 12.4309 10.848 12.5618 10.6548 12.6757C10.4616 12.7897 10.2636 12.8827 10.0608 12.9548L9.77532 15.246H6.31468ZM7.29521 14.1213H8.76892L9.03847 12.1128C9.42111 12.0128 9.77076 11.8708 10.0874 11.6867C10.4042 11.5025 10.7097 11.2658 11.0038 10.9765L12.8667 11.7594L13.605 10.4848L11.9786 9.25928C12.0411 9.06509 12.0835 8.8747 12.106 8.68813C12.1287 8.50168 12.14 8.3133 12.14 8.12298C12.14 7.92778 12.1287 7.7394 12.106 7.55783C12.0835 7.37613 12.0411 7.19056 11.9786 7.00111L13.6193 5.76115L12.8811 4.48651L10.9965 5.28091C10.7456 5.01274 10.445 4.7758 10.0947 4.57011C9.74433 4.36442 9.38987 4.21877 9.03134 4.13317L8.79479 2.12468H7.30683L7.05866 4.12605C6.67614 4.2164 6.32293 4.3548 5.99902 4.54124C5.67499 4.72782 5.36589 4.96812 5.07172 5.26217L3.20887 4.48651L2.47071 5.76115L4.08987 6.96793C4.02739 7.14588 3.98365 7.33095 3.95866 7.52315C3.93367 7.71534 3.92117 7.91766 3.92117 8.1301C3.92117 8.3253 3.93367 8.51662 3.95866 8.70406C3.98365 8.89151 4.02502 9.07658 4.08275 9.25928L2.47071 10.4848L3.20887 11.7594L5.0646 10.9722C5.34914 11.2643 5.65337 11.5037 5.97727 11.6903C6.30131 11.8767 6.65939 12.0199 7.05153 12.1199L7.29521 14.1213Z" />
+					<CombinedGeometry
+						GeometryCombineMode="Exclude">
+						<CombinedGeometry.Geometry1>
+							<EllipseGeometry
+								Center="8,8"
+								RadiusX="2"
+								RadiusY="2" />
+						</CombinedGeometry.Geometry1>
+						<CombinedGeometry.Geometry2>
+							<EllipseGeometry
+								Center="8,8"
+								RadiusX="1"
+								RadiusY="1" />
+						</CombinedGeometry.Geometry2>
+					</CombinedGeometry>
+				</GeometryGroup>
+				<GeometryGroup
+					x:Key="FeedBackIcon">
+					<PathGeometry
+						Figures="M7.82041 12.6228C7.89853 12.6228 7.9781 12.618 8.05819 12.6085C8.82636 12.5163 9.4786 11.9794 9.7192 11.2396C9.72798 11.213 9.72661 11.1841 9.71534 11.1584C9.70408 11.1328 9.68372 11.1122 9.65819 11.1007C9.60591 11.0763 9.54243 11.0973 9.51274 11.147C9.51 11.1517 9.20471 11.6447 8.01686 11.8051C7.84619 11.8286 7.67415 11.8407 7.50187 11.8415C6.66952 11.8409 6.29861 11.5271 6.29519 11.5244C6.27475 11.5063 6.24849 11.4961 6.2212 11.4958C6.19391 11.4954 6.1674 11.5049 6.14649 11.5224C6.1255 11.5401 6.11156 11.5647 6.10719 11.5918C6.10283 11.6189 6.10833 11.6467 6.1227 11.6701C6.48497 12.2575 7.13515 12.6228 7.82041 12.6228ZM14.2084 5.25998C14.198 5.25998 14.1885 5.26186 14.1784 5.26186C13.4824 2.24813 10.8224 0 7.63346 0C4.35662 0 1.63577 2.37228 1.03264 5.51067C0.446289 5.61626 0 6.13159 0 6.75491V9.24954C0 9.94875 0.560685 10.5157 1.25296 10.5157C1.64338 10.5157 1.98811 10.3313 2.21741 10.048C2.77142 11.5134 3.8993 12.6949 5.32672 13.3182C5.33014 13.3108 5.35709 13.2583 5.38969 13.2164C5.4122 13.1874 5.43735 13.1636 5.45891 13.1636C5.48133 13.1636 5.50186 13.1718 5.51949 13.1842C5.18914 12.9382 3.99581 11.6738 3.73733 9.90965C3.62387 9.13309 4.20561 8.37082 4.883 8.24471C5.97049 8.04218 7.05233 7.81151 8.13981 7.61283C8.83107 7.48672 9.30354 7.10751 9.59248 6.47615C9.66016 6.32856 9.75795 6.03012 9.80279 5.59966C9.81468 5.53566 9.86713 5.48655 9.9343 5.48655C9.97913 5.48655 10.0173 5.50948 10.0426 5.54242L10.0726 5.52377C10.5013 6.14605 11.3514 7.52394 11.4734 8.97677C11.6135 10.6379 11.5354 11.7757 10.2639 12.9396C10.2622 12.9413 10.2604 12.9429 10.2586 12.9443C10.2405 12.9637 10.2305 12.9891 10.2304 13.0155C10.2304 13.0513 10.2495 13.0819 10.2771 13.1005C10.2877 13.1049 10.2981 13.1105 10.3086 13.1149C10.3172 13.1167 10.3253 13.1197 10.3339 13.1197C10.3426 13.1197 10.3501 13.1168 10.3577 13.1149C10.3759 13.1054 10.393 13.0943 10.4106 13.0847C11.6964 12.3765 12.683 11.1935 13.1387 9.77061C13.3272 10.0496 13.6177 10.2436 13.9477 10.3108C13.4095 12.7589 11.2259 14.2912 8.52073 14.5237C8.35859 14.1216 7.95954 13.836 7.49091 13.836C6.87881 13.836 6.38246 14.3208 6.38246 14.9182C6.38246 15.5157 6.87872 16 7.49091 16C7.98452 16 8.39778 15.683 8.54118 15.2473C11.6726 14.9928 14.1828 13.1316 14.7068 10.2396C15.1697 10.0461 15.4948 9.59196 15.4948 9.06173V6.53758C15.4948 5.83213 14.9188 5.25998 14.2084 5.25998ZM7.89109 15.0332C7.86265 15.1165 7.80864 15.1886 7.73677 15.2393C7.6649 15.29 7.57885 15.3166 7.49091 15.3155C7.25716 15.3155 7.06696 15.1373 7.06696 14.9182C7.06696 14.699 7.25716 14.5205 7.49091 14.5205C7.66743 14.5205 7.82247 14.6221 7.88587 14.7796L7.93464 14.9007L7.89109 15.0332ZM7.63346 1.10563C10.3996 1.10563 12.6977 3.12214 13.1796 5.78199C13.1319 5.84599 13.0881 5.91273 13.0532 5.98494C12.2365 3.77258 10.1202 2.19217 7.63055 2.19217C5.15132 2.19217 3.04265 3.75923 2.21835 5.95722C2.17737 5.90708 2.1292 5.86413 2.08205 5.82058C2.54871 3.14216 4.85399 1.10563 7.63346 1.10563ZM14.8103 9.06173C14.8103 9.30028 14.666 9.5147 14.4429 9.60796L14.2736 9.6788L14.0852 9.64021C13.931 9.60863 13.7952 9.51829 13.7064 9.38832L12.9691 7.73339L12.4868 9.56176C12.4101 9.80154 12.3159 10.0354 12.205 10.2614C12.2211 9.8252 12.1941 9.37882 12.1554 8.9191C12.0306 7.4335 11.2604 6.0415 10.6362 5.13532L10.2659 4.59765L9.93721 4.80188H9.9343C9.54037 4.80188 9.20206 5.08483 9.12976 5.47457L9.1248 5.50135L9.12197 5.52839C9.07851 5.94516 8.98123 6.16659 8.97027 6.19055C8.77186 6.62434 8.47787 6.8551 8.01703 6.93921C7.43427 7.04565 6.84629 7.16261 6.27757 7.27572C5.77917 7.37489 5.26375 7.47731 4.75765 7.57159C3.69267 7.76984 2.89942 8.90849 3.06002 10.0084C3.08007 10.145 3.10533 10.2808 3.13575 10.4155C3.02973 10.2186 2.93684 10.015 2.85767 9.80586L2.42832 8L1.68539 9.6172C1.62071 9.69711 1.47859 9.8311 1.25296 9.8311C0.939466 9.8311 0.684492 9.57014 0.684492 9.24945V6.75491C0.684492 6.47324 0.881883 6.23333 1.15388 6.18439L1.41553 6.13733L1.63166 6.33651C1.65219 6.35534 1.68034 6.38118 1.6889 6.39119L2.42832 8L2.8593 6.19765C3.60428 4.21134 5.52172 2.87675 7.63064 2.87675C9.75137 2.87675 11.6725 4.22109 12.4111 6.22203L12.9691 7.73339L13.6697 6.28261C13.6813 6.25848 13.7005 6.22845 13.7286 6.1908L13.9061 5.95243L13.905 5.94627H14.1783C14.1947 5.94629 14.2111 5.94574 14.2274 5.94464C14.5504 5.95457 14.8102 6.21673 14.8102 6.5375V9.06173H14.8103ZM5.32689 13.3182H5.32672C5.32621 13.3194 5.32621 13.3195 5.32689 13.3182Z" />
+				</GeometryGroup>
+				<GeometryGroup
+					x:Key="BlankPDFIcon">
+					<PathGeometry
+						Figures="M19 7V20.5H5V3H15M19 7L15 3M19 7H15V3" />
+				</GeometryGroup>
+				<GeometryGroup
+					x:Key="NewFromScannerIcon">
+					<PathGeometry
+						Figures="M4 13.2475V17C4 17.5523 4.44772 18 5 18H19C19.5523 18 20 17.5523 20 17V14.2475C20 13.6952 19.5523 13.2475 19 13.2475H4ZM4 13.2475L17.5 6M20 10.2772H14.5" />
+				</GeometryGroup>
+				<GeometryGroup
+					x:Key="NewFromImageIcon">
+					<PathGeometry
+						Figures="M6 3.5H18C18.8284 3.5 19.5 4.17157 19.5 5V19C19.5 19.8284 18.8284 20.5 18 20.5H6C5.17157 20.5 4.5 19.8284 4.5 19V5C4.5 4.17157 5.17157 3.5 6 3.5Z" />
+					<PathGeometry
+						Figures="M7 17C7 18 10 14 13 13S17 16 17 16" />
+					<EllipseGeometry
+						Center="10,10"
+						RadiusX="1.5"
+						RadiusY="1.5" />
+				</GeometryGroup>
+			</ResourceDictionary>
+		</FrameworkElement.Resources>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="2.1*"
+				MaxWidth="255"
+				MinWidth="235" />
+			<ColumnDefinition
+				Width="7.7*" />
+		</Grid.ColumnDefinitions>
+		<Grid
+			Background="{DynamicResource BatchPrintSiderbarBackground}">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="*" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+			</Grid.RowDefinitions>
+			<Border
+				Margin="11,12,11,0"
+				CornerRadius="10"
+				BorderThickness="1"
+				Background="{DynamicResource MainWindowLeftMenuBackground}"
+				BorderBrush="{DynamicResource HotKeyListCellBorderBrush}">
+				<StackPanel>
+					<Image
+						Source="images/openimage.png"
+						Width="74"
+						Height="48"
+						Margin="0,24,0,0" />
+					<Button
+						x:Name="openFileBtn1"
+						Width="160"
+						Height="32"
+						Margin="0 12 0 0"
+						Background="#FC0D1B"
+						Foreground="#FFFFFFFF"
+						BorderThickness="0"
+						FontSize="12"
+						Content="{x:Static localprop:Resources.WinBtnOpenFileContent}"
+						Style="{DynamicResource ButtonStyle1}"
+						Command="{Binding OpenOneFileCMD}" />
+					<ToggleButton
+						x:Name="NewFileBtn"
+						Width="160"
+						Height="32"
+						Margin="0 12 0 24"
+						Background="{DynamicResource DialogButtonStaticBackground}"
+						Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+						BorderThickness="1"
+						BorderBrush="{DynamicResource MainViewRectangle}"
+						Style="{StaticResource BtnStyle}">
+						<Control.Template>
+							<ControlTemplate
+								TargetType="{x:Type ButtonBase}">
+								<Border
+									x:Name="border"
+									CornerRadius="15"
+									BorderBrush="{TemplateBinding Control.BorderBrush}"
+									BorderThickness="{TemplateBinding Control.BorderThickness}"
+									Background="{TemplateBinding Control.Background}"
+									SnapsToDevicePixels="True">
+									<ContentPresenter
+										x:Name="contentPresenter"
+										Focusable="False"
+										HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+										Margin="{TemplateBinding Control.Padding}"
+										RecognizesAccessKey="True"
+										SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+										VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+								</Border>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="UIElement.IsMouseOver"
+										Value="True">
+										<Setter
+											TargetName="border"
+											Value="{DynamicResource GridViewColumnIsSelected}"
+											Property="Border.Background" />
+									</Trigger>
+									<Trigger
+										Property="ButtonBase.IsPressed"
+										Value="True">
+										<Setter
+											TargetName="border"
+											Value="{DynamicResource GridViewColumnIsSelected}"
+											Property="Border.Background" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Control.Template>
+						<ContentControl.Content>
+							<StackPanel
+								Orientation="Horizontal">
+								<TextBlock
+									Text="{x:Static localprop:Resources.MainViewCreateNewPDF}" />
+								<Viewbox
+									Width="10"
+									Height="4"
+									Stretch="Uniform"
+									Margin="5,0,0,0"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center">
+									<Path
+										Stroke="#888888"
+										StrokeThickness="1"
+										Data="{StaticResource UserInfoGeometry}" />
+								</Viewbox>
+							</StackPanel>
+						</ContentControl.Content>
+					</ToggleButton>
+					<Popup
+						x:Name="NewFileBtnPop"
+						Placement="Bottom"
+						StaysOpen="False"
+						AllowsTransparency="True"
+						PopupAnimation="Fade"
+						PlacementTarget="{Binding ElementName=NewFileBtn}"
+						IsOpen="{Binding ElementName=NewFileBtn, Path=IsChecked, Mode=TwoWay}">
+						<Border
+							CornerRadius="6"
+							BorderThickness="1"
+							BorderBrush="{DynamicResource MainViewRectangle}"
+							Background="{DynamicResource SolidBrushWhiteAndBlack}">
+							<StackPanel
+								Margin="8">
+								<Button
+									x:Name="Btn_NewPDFFromBlankPDF"
+									Padding="8,0"
+									Height="32"
+									MinWidth="180"
+									HorizontalAlignment="Stretch"
+									HorizontalContentAlignment="Left"
+									Style="{StaticResource BtnStyle}"
+									Command="{Binding CreateFileCMD}">
+									<ContentControl.Content>
+										<StackPanel
+											Orientation="Horizontal">
+											<Viewbox
+												Width="24"
+												Margin="0,0,0,3"
+												Height="24"
+												VerticalAlignment="Center">
+												<Path
+													Stroke="{DynamicResource ShareFilePath}"
+													VerticalAlignment="Center"
+													StrokeThickness="1"
+													Data="{StaticResource BlankPDFIcon}" />
+											</Viewbox>
+											<TextBlock
+												Text="{x:Static localprop:Resources.BtnText_NewPDFFromBlankPDF}"
+												Margin="6,0,0,0"
+												HorizontalAlignment="Center"
+												VerticalAlignment="Center"
+												Foreground="{DynamicResource TextBrushWhiteAndBlack}" />
+										</StackPanel>
+									</ContentControl.Content>
+								</Button>
+								<Button
+									x:Name="Btn_NewPDFFromScanner"
+									Padding="8,0"
+									Height="32"
+									MinWidth="180"
+									HorizontalAlignment="Stretch"
+									HorizontalContentAlignment="Left"
+									Style="{StaticResource BtnStyle}"
+									Command="{Binding CreateFileFromScannerCMD}">
+									<ContentControl.Content>
+										<StackPanel
+											Orientation="Horizontal">
+											<Viewbox
+												Width="24"
+												Height="24"
+												Margin="0,0,0,3"
+												VerticalAlignment="Center">
+												<Path
+													Stroke="{DynamicResource ShareFilePath}"
+													VerticalAlignment="Center"
+													StrokeThickness="1"
+													Data="{StaticResource NewFromScannerIcon}" />
+											</Viewbox>
+											<TextBlock
+												Text="{x:Static localprop:Resources.BtnText_NewPDFFromScanner}"
+												Margin="6,0,0,0"
+												HorizontalAlignment="Center"
+												VerticalAlignment="Center"
+												Foreground="{DynamicResource TextBrushWhiteAndBlack}" />
+										</StackPanel>
+									</ContentControl.Content>
+								</Button>
+								<Button
+									x:Name="Btn_NewPDFFromImages"
+									Padding="8,0"
+									Height="32"
+									MinWidth="180"
+									HorizontalAlignment="Stretch"
+									HorizontalContentAlignment="Left"
+									Style="{StaticResource BtnStyle}"
+									Command="{Binding IMGtoPDF}">
+									<ContentControl.Content>
+										<StackPanel
+											Orientation="Horizontal">
+											<Viewbox
+												Width="24"
+												Height="24"
+												Margin="0,0,0,3"
+												VerticalAlignment="Center">
+												<Path
+													Stroke="{DynamicResource ShareFilePath}"
+													VerticalAlignment="Center"
+													StrokeThickness="1"
+													Data="{StaticResource NewFromImageIcon}" />
+											</Viewbox>
+											<TextBlock
+												Text="{x:Static localprop:Resources.BtnText_NewPDFFromImages}"
+												Margin="6,0,0,0"
+												HorizontalAlignment="Center"
+												VerticalAlignment="Center"
+												Foreground="{DynamicResource TextBrushWhiteAndBlack}" />
+										</StackPanel>
+									</ContentControl.Content>
+								</Button>
+							</StackPanel>
+						</Border>
+					</Popup>
+					<Button
+						x:Name="FineFileBtn"
+						Width="148"
+						Height="32"
+						Margin="0 12 0 0"
+						Background="#FFFFFFFF"
+						Foreground="#FF000000"
+						BorderThickness="0"
+						FontSize="12"
+						Content="Find a PDF"
+						Visibility="Collapsed"
+						Style="{DynamicResource ButtonStyle1}" />
+				</StackPanel>
+			</Border>
+			<Button
+				x:Name="ScanDocument"
+				Grid.Row="1"
+				Background="#00FFFFFF"
+				VerticalAlignment="Bottom"
+				HorizontalAlignment="Center"
+				BorderThickness="0"
+				Margin="0,12,0,0"
+				Click="ScanDocument_Click">
+				<TextBlock
+					Text="{x:Static localprop:Resources.WinBtnScanDocument}"
+					VerticalAlignment="Bottom"
+					HorizontalAlignment="Center"
+					Foreground="#298FEE"
+					TextDecorations="Underline" />
+			</Button>
+			<Button
+				x:Name="Btn_Upgrade"
+				Grid.Row="3"
+				Height="30"
+				Background="#1FC353"
+				Foreground="#FFFFFFFF"
+				BorderThickness="0"
+				Padding="11,0"
+				Margin="11,12,11,0"
+				HorizontalAlignment="Stretch"
+				HorizontalContentAlignment="Left"
+				Visibility="Collapsed"
+				Style="{DynamicResource BtnStyle}"
+				Command="{Binding UpgradeCMD}">
+				<Control.Template>
+					<ControlTemplate
+						TargetType="{x:Type Button}">
+						<Border
+							x:Name="border"
+							CornerRadius="4"
+							BorderBrush="{TemplateBinding Control.BorderBrush}"
+							BorderThickness="{TemplateBinding Control.BorderThickness}"
+							Background="{TemplateBinding Control.Background}"
+							SnapsToDevicePixels="True">
+							<ContentPresenter
+								x:Name="contentPresenter"
+								Focusable="False"
+								HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+								Margin="{TemplateBinding Control.Padding}"
+								RecognizesAccessKey="True"
+								SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+								VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+						</Border>
+						<ControlTemplate.Triggers>
+							<Trigger
+								Property="Button.IsDefaulted"
+								Value="True">
+								<Setter
+									TargetName="border"
+									Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+									Property="Border.BorderBrush" />
+							</Trigger>
+							<Trigger
+								Property="UIElement.IsMouseOver"
+								Value="True">
+								<Setter
+									TargetName="border"
+									Property="Border.Background"
+									Value="#7BD999" />
+							</Trigger>
+							<Trigger
+								Property="ButtonBase.IsPressed"
+								Value="True">
+								<Setter
+									TargetName="border"
+									Property="Border.Background"
+									Value="#26A64E" />
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Control.Template>
+				<ContentControl.Content>
+					<StackPanel
+						Orientation="Horizontal"
+						HorizontalAlignment="Stretch">
+						<Viewbox
+							Width="18"
+							Height="15"
+							Stretch="Uniform"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center">
+							<Path
+								Fill="#FFFFFFFF"
+								Data="{StaticResource UpgradeGeometry}" />
+						</Viewbox>
+						<TextBlock
+							Text="{x:Static localprop:Resources.MainViewUpgrade}"
+							Margin="7,0,0,0"
+							Foreground="#FFFFFFFF"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</StackPanel>
+				</ContentControl.Content>
+			</Button>
+			<Grid
+				Row="4"
+				Height="32"
+				Margin="11,12,11,0"
+				Visibility="Collapsed">
+				<Button
+					x:Name="Btn_Login"
+					HorizontalAlignment="Stretch"
+					HorizontalContentAlignment="Left"
+					BorderThickness="0"
+					Padding="8,0"
+					Background="{DynamicResource DialogButtonStaticBackground}"
+					Style="{StaticResource BtnRadiusStyle}"
+					Visibility="{Binding UserInfoModel, Converter='{StaticResource IsNullToVisibilityConverter}', ConverterParameter=reverse, Mode=OneWay}"
+					Click="Btn_Login_Click">
+					<ContentControl.Content>
+						<StackPanel
+							Orientation="Horizontal">
+							<Image
+								Source="/images/user.png"
+								Width="24"
+								Height="24" />
+							<TextBlock
+								Text="{x:Static localprop:Resources.MainViewAccount}"
+								Margin="4,0,0,0"
+								Foreground="#298FEE"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center" />
+						</StackPanel>
+					</ContentControl.Content>
+				</Button>
+				<ToggleButton
+					x:Name="UserInfoBtn"
+					Grid.Column="3"
+					Height="32"
+					HorizontalAlignment="Stretch"
+					VerticalAlignment="Center"
+					HorizontalContentAlignment="Stretch"
+					Background="{DynamicResource DialogButtonStaticBackground}"
+					Style="{StaticResource BtnRadiusStyle}"
+					BorderThickness="0"
+					Padding="9,0,14,0"
+					Visibility="{Binding UserInfoModel, Converter='{StaticResource IsNullToVisibilityConverter}', Mode=OneWay}">
+					<ContentControl.Content>
+						<Grid
+							HorizontalAlignment="Stretch">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="auto" />
+							</Grid.ColumnDefinitions>
+							<Image
+								Source="/images/user.png"
+								Width="24"
+								Height="24" />
+							<TextBlock
+								Grid.Column="1"
+								Text="{x:Static localprop:Resources.UserInfoBtnText}"
+								FontSize="14"
+								Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+								VerticalAlignment="Center"
+								HorizontalAlignment="Center"
+								Margin="4,0,0,0" />
+							<Viewbox
+								Grid.Column="3"
+								Width="10"
+								Height="4"
+								Stretch="Uniform"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center">
+								<Path
+									Stroke="#888888"
+									StrokeThickness="1"
+									Data="{StaticResource UserInfoGeometry}" />
+							</Viewbox>
+						</Grid>
+					</ContentControl.Content>
+				</ToggleButton>
+				<Popup
+					x:Name="Popup_UserInfo"
+					Placement="Bottom"
+					AllowsTransparency="True"
+					StaysOpen="False"
+					PopupAnimation="Fade"
+					IsOpen="{Binding IsChecked, ElementName=UserInfoBtn}"
+					PlacementTarget="{Binding ElementName=UserInfoBtn}">
+					<controls:UserInfoWin
+						DataContext="{Binding UserInfoModel}" />
+				</Popup>
+			</Grid>
+			<StackPanel
+				Grid.Row="5"
+				Margin="0,12,0,8"
+				Orientation="Horizontal"
+				HorizontalAlignment="Left">
+				<Button
+					x:Name="Btn_Feedback"
+					Width="24"
+					Height="24"
+					Margin="20,0,0,0"
+					ToolTip="{x:Static localprop:Resources.BtnText_AppAbout}"
+					Style="{StaticResource BtnStyle}"
+					Click="Btn_Feedback_Click">
+					<Viewbox
+						Width="16"
+						Height="16">
+						<Path
+							Fill="{DynamicResource FeedBackFAQAnswerForeground}"
+							Data="{StaticResource FeedBackIcon}" />
+					</Viewbox>
+				</Button>
+				<Button
+					x:Name="Btn_CheckUpgrade"
+					Width="24"
+					Height="24"
+					Margin="12,0,0,0"
+					Style="{StaticResource BtnStyle}"
+					ToolTip="{x:Static localprop:Resources.WinCheckUpdateBtn}"
+					Click="Btn_CheckUpgrade_Click">
+					<Viewbox
+						Width="16"
+						Height="16">
+						<Path
+							Fill="{DynamicResource FeedBackFAQAnswerForeground}"
+							Data="{StaticResource CheckUpgradeIcon}" />
+					</Viewbox>
+				</Button>
+				<Button
+					x:Name="Btn_Setting"
+					Width="24"
+					Height="24"
+					Margin="12,0,0,0"
+					ToolTip="{x:Static localprop:Resources.WinSettingBtn}"
+					Visibility="Collapsed"
+					Style="{StaticResource BtnStyle}"
+					Click="Btn_Setting_Click">
+					<Viewbox
+						Width="16"
+						Height="16">
+						<Path
+							Fill="{DynamicResource FeedBackFAQAnswerForeground}"
+							Data="{StaticResource SettingIcon}" />
+					</Viewbox>
+				</Button>
+				<Button
+					x:Name="Btn_AppAbout"
+					Width="24"
+					Height="24"
+					Margin="12,0,0,0"
+					Style="{StaticResource BtnStyle}"
+					ToolTip="{x:Static localprop:Resources.MainViewAbout}"
+					Click="Btn_AppAbout_Click">
+					<Viewbox
+						Width="16"
+						Height="16">
+						<Path
+							Fill="{DynamicResource FeedBackFAQAnswerForeground}"
+							Data="{StaticResource AppAboutInfoIcon}" />
+					</Viewbox>
+				</Button>
+			</StackPanel>
+		</Grid>
+		<Grid
+			Column="1"
+			Background="{DynamicResource WindowsBackground}">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="2" />
+				<RowDefinition
+					Height="200" />
+				<RowDefinition
+					Height="225*" />
+				<RowDefinition
+					Height="1" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="2" />
+				<ColumnDefinition
+					MinWidth="760"
+					Width="*" />
+				<ColumnDefinition
+					Width="20" />
+			</Grid.ColumnDefinitions>
+			<Border
+				x:Name="topDecorateBorder"
+				Visibility="Collapsed"
+				Background="#FD7474"
+				Grid.ColumnSpan="3" />
+			<Grid
+				x:Name="openFileGrid"
+				Visibility="Collapsed"
+				RowSpan="2"
+				VerticalAlignment="Top"
+				ColumnSpan="3">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition
+						Width="680" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<TextBlock
+					x:Name="tbVersionNum"
+					FontSize="12"
+					HorizontalAlignment="Left"
+					Grid.ColumnSpan="2"
+					VerticalAlignment="Top"
+					Foreground="#FFFFFFFF"
+					Margin="20 12 0 0"
+					Visibility="Collapsed">V 3.4.1</TextBlock>
+				<TextBlock
+					x:Name="tbSupport"
+					FontSize="12"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Top"
+					Foreground="#FFFFFFFF"
+					Margin="20 12 0 0"
+					Grid.Column="1">Support</TextBlock>
+				<Border
+					x:Name="OpenFileBorder"
+					Grid.Column="1"
+					CornerRadius="4"
+					Margin="0 12 0 0"
+					Height="145"
+					BorderThickness="1"
+					BorderBrush="{DynamicResource MainViewRectangle}"
+					Background="#FFFFFFFF">
+					<Grid>
+						<Border
+							x:Name="OpenFileBgBord"
+							Margin="12 10"
+							MouseDown="Image_MouseDown">
+							<FrameworkElement.Style>
+								<Style
+									TargetType="{x:Type Border}">
+									<Setter
+										Property="Background"
+										Value="#FAFAFA" />
+									<Setter
+										Property="BorderBrush"
+										Value="#D2D2D2" />
+									<Setter
+										Property="BorderThickness"
+										Value="1" />
+									<Setter
+										Property="Border.CornerRadius"
+										Value="4" />
+									<Style.Triggers>
+										<Trigger
+											Property="UIElement.IsMouseOver"
+											Value="True">
+											<Setter
+												Property="Background"
+												Value="#F0F0F0F0" />
+										</Trigger>
+									</Style.Triggers>
+								</Style>
+							</FrameworkElement.Style>
+							<StackPanel>
+								<Image
+									x:Name="openFileImg"
+									Source="images/addFile.png"
+									Width="48"
+									Height="48"
+									VerticalAlignment="Top"
+									Margin="0 10 0 0" />
+								<Button
+									x:Name="openFileBtn"
+									Width="148"
+									Height="32"
+									Margin="0 3 0 0"
+									Background="#EF5B52"
+									Foreground="#FFFFFFFF"
+									BorderThickness="0"
+									FontSize="12"
+									Content="{x:Static localprop:Resources.WinBtnOpenFileContent}"
+									Style="{DynamicResource ButtonStyle1}"
+									Command="{Binding OpenOneFileCMD}" />
+								<TextBlock
+									x:Name="tbSupportType"
+									FontSize="10"
+									Margin="0 10 0 0"
+									HorizontalAlignment="Center"
+									VerticalAlignment="Center"
+									Text="{x:Static localprop:Resources.WinSupportLabelContent}" />
+							</StackPanel>
+						</Border>
+						<Grid
+							x:Name="OpenButtonTipsGrid"
+							Visibility="{Binding OpenBtnTipsVisibility}">
+							<FrameworkElement.Resources>
+								<ResourceDictionary>
+									<Storyboard
+										x:Key="OpenButtonTipsAnimation"
+										BeginTime="0:0:0.5">
+										<DoubleAnimationUsingKeyFrames
+											Storyboard.TargetName="OpenButtonTipsGridTrans"
+											Storyboard.TargetProperty="ScaleX"
+											Duration="0:0:0.5">
+											<EasingDoubleKeyFrame
+												KeyTime="0:0:0.25"
+												Value="1.2">
+												<EasingDoubleKeyFrame.EasingFunction>
+													<CircleEase
+														EasingMode="EaseOut" />
+												</EasingDoubleKeyFrame.EasingFunction>
+											</EasingDoubleKeyFrame>
+											<EasingDoubleKeyFrame
+												KeyTime="0:0:0.5"
+												Value="1">
+												<EasingDoubleKeyFrame.EasingFunction>
+													<CircleEase
+														EasingMode="EaseInOut" />
+												</EasingDoubleKeyFrame.EasingFunction>
+											</EasingDoubleKeyFrame>
+										</DoubleAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames
+											Storyboard.TargetName="OpenButtonTipsGridTrans"
+											Storyboard.TargetProperty="ScaleY"
+											Duration="0:0:0.5">
+											<EasingDoubleKeyFrame
+												KeyTime="0:0:0.25"
+												Value="1.2">
+												<EasingDoubleKeyFrame.EasingFunction>
+													<CircleEase
+														EasingMode="EaseOut" />
+												</EasingDoubleKeyFrame.EasingFunction>
+											</EasingDoubleKeyFrame>
+											<EasingDoubleKeyFrame
+												KeyTime="0:0:0.5"
+												Value="1">
+												<EasingDoubleKeyFrame.EasingFunction>
+													<CircleEase
+														EasingMode="EaseInOut" />
+												</EasingDoubleKeyFrame.EasingFunction>
+											</EasingDoubleKeyFrame>
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+								</ResourceDictionary>
+							</FrameworkElement.Resources>
+							<Canvas>
+								<Border
+									x:Name="OpenButtonTips">
+									<Border
+										x:Name="OpenButtonTipsContent"
+										MaxWidth="280"
+										MinWidth="200"
+										Background="#4D4D4D"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Top"
+										CornerRadius="2"
+										Margin="11,0,0,0"
+										RenderTransformOrigin="0,0.5">
+										<UIElement.RenderTransform>
+											<ScaleTransform
+												x:Name="OpenButtonTipsGridTrans"
+												ScaleX="0"
+												ScaleY="0" />
+										</UIElement.RenderTransform>
+										<Grid>
+											<Grid.RowDefinitions>
+												<RowDefinition
+													Height="10" />
+												<RowDefinition
+													Height="Auto" />
+												<RowDefinition
+													Height="10" />
+											</Grid.RowDefinitions>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition
+													Width="10" />
+												<ColumnDefinition
+													Width="*" />
+												<ColumnDefinition
+													Width="10" />
+												<ColumnDefinition
+													Width="Auto" />
+												<ColumnDefinition
+													Width="10" />
+											</Grid.ColumnDefinitions>
+											<Rectangle
+												Width="24"
+												Height="24"
+												RadiusX="2"
+												RadiusY="2"
+												Grid.ColumnSpan="10"
+												Grid.RowSpan="10"
+												Margin="-4,0,0,0"
+												HorizontalAlignment="Left"
+												VerticalAlignment="Center"
+												RenderTransformOrigin="0.5,0.5"
+												Fill="{Binding ElementName=OpenButtonTipsContent, Path=Background}">
+												<UIElement.RenderTransform>
+													<RotateTransform
+														Angle="45" />
+												</UIElement.RenderTransform>
+											</Rectangle>
+											<Grid
+												Row="1"
+												Column="1">
+												<Grid.RowDefinitions>
+													<RowDefinition
+														Height="Auto" />
+													<RowDefinition
+														Height="2" />
+													<RowDefinition
+														Height="Auto" />
+												</Grid.RowDefinitions>
+												<TextBlock
+													Grid.Row="0"
+													HorizontalAlignment="Left"
+													VerticalAlignment="Center"
+													Foreground="#FFFFFFFF"
+													Background="#00FFFFFF"
+													TextWrapping="Wrap"
+													Text="{x:Static localprop:Resources.WinBtnOpenFileTipsDesc1}" />
+												<TextBlock
+													Grid.Row="2"
+													HorizontalAlignment="Left"
+													VerticalAlignment="Center"
+													Foreground="#FFFFFFFF"
+													TextWrapping="Wrap"
+													Text="{x:Static localprop:Resources.WinBtnOpenFileTipsDesc2}" />
+											</Grid>
+											<Button
+												x:Name="openFileTipsCloseBtn"
+												Grid.Row="1"
+												Grid.Column="3"
+												HorizontalAlignment="Center"
+												VerticalAlignment="Center"
+												Background="#00FFFFFF"
+												BorderThickness="0"
+												Padding="0"
+												FontFamily="Segoe MDL2 Assets"
+												FontSize="14"
+												FontWeight="Bold"
+												Foreground="#FFFFFFFF"
+												Content=""
+												Click="openFileTipsCloseBtn_Click" />
+										</Grid>
+									</Border>
+								</Border>
+							</Canvas>
+						</Grid>
+					</Grid>
+				</Border>
+			</Grid>
+			<ListBox
+				Name="lstBoxMenu"
+				Grid.Column="1"
+				Grid.ColumnSpan="3"
+				ScrollViewer.VerticalScrollBarVisibility="Disabled"
+				ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+				Height="52"
+				MaxWidth="780"
+				Grid.Row="1"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderThickness="0"
+				Background="#00FFFFFF"
+				Margin="0 2 0 0"
+				SelectedIndex="0"
+				ItemsSource="{Binding Menu}"
+				SelectionChanged="lstBoxMenu_SelectionChanged">
+				<FrameworkElement.Resources>
+					<ResourceDictionary>
+						<Style
+							x:Key="{x:Type ListBoxItem}"
+							TargetType="{x:Type ListBoxItem}">
+							<Setter
+								Property="FontSize"
+								Value="13" />
+							<Setter
+								Property="BorderThickness"
+								Value="0" />
+							<Setter
+								Property="HorizontalAlignment"
+								Value="Center" />
+							<Setter
+								Property="Margin"
+								Value="0 0 10 0" />
+							<Setter
+								Property="Template">
+								<Setter.Value>
+									<ControlTemplate
+										TargetType="{x:Type ListBoxItem}">
+										<Grid
+											x:Name="templateRoot"
+											MinHeight="28"
+											MaxHeight="35"
+											Background="#00FFFFFF"
+											MinWidth="120"
+											HorizontalAlignment="Center"
+											SnapsToDevicePixels="True">
+											<ContentPresenter
+												x:Name="contentPresenter"
+												MaxWidth="160"
+												Focusable="False"
+												HorizontalAlignment="Center"
+												Margin="{TemplateBinding Control.Padding}"
+												RecognizesAccessKey="True"
+												SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+												VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}">
+												<FrameworkElement.Resources>
+													<ResourceDictionary>
+														<Style
+															x:Key="{x:Type TextBlock}"
+															TargetType="{x:Type TextBlock}"
+															BasedOn="{StaticResource WrappingStyle}" />
+													</ResourceDictionary>
+												</FrameworkElement.Resources>
+											</ContentPresenter>
+											<Border
+												x:Name="bd"
+												Width="45"
+												Height="2"
+												VerticalAlignment="Bottom"
+												Margin="3 0 0 1"
+												Background="#EF5B52" />
+										</Grid>
+										<ControlTemplate.Triggers>
+											<Trigger
+												Property="ListBoxItem.IsSelected"
+												Value="True">
+												<Setter
+													TargetName="bd"
+													Property="Visibility"
+													Value="Visible" />
+												<Setter
+													Property="Foreground"
+													Value="#FFFF0000" />
+											</Trigger>
+											<Trigger
+												Property="ListBoxItem.IsSelected"
+												Value="False">
+												<Setter
+													TargetName="bd"
+													Property="Visibility"
+													Value="Hidden" />
+												<Setter
+													Value="{DynamicResource TextBrushWhiteAndBlack}"
+													Property="Foreground" />
+											</Trigger>
+											<Trigger
+												Property="UIElement.IsMouseOver"
+												Value="True">
+												<Setter
+													TargetName="templateRoot"
+													Property="Panel.Background"
+													Value="#10000000" />
+											</Trigger>
+										</ControlTemplate.Triggers>
+									</ControlTemplate>
+								</Setter.Value>
+							</Setter>
+						</Style>
+					</ResourceDictionary>
+				</FrameworkElement.Resources>
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<StackPanel
+							Orientation="Horizontal"
+							IsItemsHost="True" />
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ListBox>
+			<Rectangle
+				Grid.Row="1"
+				Grid.Column="1"
+				VerticalAlignment="Top"
+				HorizontalAlignment="Stretch"
+				StrokeThickness="1"
+				Width="auto"
+				Height="1"
+				Stroke="{DynamicResource MainViewRectangle}"
+				Margin="30 50 10 0" />
+			<Grid
+				x:Name="recommendGrid"
+				Row="1"
+				Column="1"
+				VerticalAlignment="Top"
+				HorizontalAlignment="Left"
+				Height="210"
+				Margin="30 60 0 0">
+				<StackPanel
+					Name="stpHotTools"
+					Height="140"
+					VerticalAlignment="Top">
+					<StackPanel
+						x:Name="stpHotTools0"
+						Height="64"
+						Orientation="Horizontal">
+						<cus:LabelButton
+							x:Name="lbtnHotToolPDF2Word"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\PDFtoword.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoWordText}"
+							Command="{Binding PdftoWord}" />
+						<cus:LabelButton
+							x:Name="lbtnHotToolPDF2Excel"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Visibility="Collapsed"
+							Icon="images\icon\pdftoexcel.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoExcelText}"
+							Command="{Binding PdftoExcel}" />
+						<cus:LabelButton
+							x:Name="lbtnHotToolPDF2Png"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\pdftopng.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoPngText}"
+							Command="{Binding PdftoPng}" />
+						<cus:LabelButton
+							x:Name="lbtnHotToolPDFCompress"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\Compress.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFCompressText}"
+							Command="{Binding CompressPDF}" />
+						<cus:LabelButton
+							x:Name="lbtnHotToolMergePDF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\merge.png"
+							Text="{x:Static localprop:Resources.WinFastBtnMergePDF}"
+							Command="{Binding MergePDF}" />
+					</StackPanel>
+					<StackPanel
+						x:Name="stpHotTools1"
+						Height="64"
+						Orientation="Horizontal"
+						Margin="0 12 0 0">
+						<cus:LabelButton
+							x:Name="lbtnHotToolConvertWordToPDF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\wordtopdf.png"
+							Text="{x:Static localprop:Resources.WinFastBtnWordToPDFText}"
+							Command="{Binding WordtoPDF}" />
+						<cus:LabelButton
+							x:Name="lbtnHotToolConvertImageToPDF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\imagetopdf.png"
+							Text="{x:Static localprop:Resources.WinFastBtnImageToPDFText}"
+							Command="{Binding IMGtoPDF}" />
+						<cus:LabelButton
+							x:Name="lbtnHotToolFillForm"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\form.png"
+							Text="{x:Static localprop:Resources.WinFastBtnFillFormContent}"
+							Command="{Binding FillFormCMD}" />
+						<cus:LabelButton
+							x:Name="lbtnHotToolSplitPDF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\split.png"
+							Text="{x:Static localprop:Resources.WinFastBtnSplitPDF}"
+							Command="{Binding SplitPDF}" />
+					</StackPanel>
+				</StackPanel>
+				<StackPanel
+					Name="stpConvert"
+					Height="140"
+					Visibility="Hidden"
+					VerticalAlignment="Top">
+					<StackPanel
+						x:Name="stpConvert0"
+						Height="64"
+						Orientation="Horizontal">
+						<cus:LabelButton
+							x:Name="lbtnConvertPDF2Word"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\PDFtoword.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoWordText}"
+							Command="{Binding PdftoWord}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertPDF2Excel"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\pdftoexcel.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoExcelText}"
+							Command="{Binding PdftoExcel}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertPDF2Png"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\pdftopng.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoPngText}"
+							Command="{Binding PdftoPng}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertPDF2JPG"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\pdftojpg.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoJpegText}"
+							Command="{Binding PdftoJPG}" />
+					</StackPanel>
+					<StackPanel
+						x:Name="stpConvert1"
+						Height="64"
+						Orientation="Horizontal"
+						Margin="0 12 0 0">
+						<cus:LabelButton
+							x:Name="lbtnConvertPDF2Txt"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\pdftotxt.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoTextText}"
+							Command="{Binding PdftoTxt}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertPDF2PPT"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\PDFTPPPT.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoPPTText}"
+							Command="{Binding PdftoPPT}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertPDF2XML"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Icon="images\icon\pdftoxml.png"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoXMLText}"
+							Command="{Binding PdftoXML}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertPDF2RTF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\pdftortf.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPDFtoRTFText}"
+							Command="{Binding PdftoRtf}" />
+					</StackPanel>
+				</StackPanel>
+				<StackPanel
+					Name="stpConToPDF"
+					Height="140"
+					Visibility="Hidden"
+					VerticalAlignment="Top">
+					<StackPanel
+						x:Name="stpConToPDF0"
+						Height="64"
+						Orientation="Horizontal">
+						<cus:LabelButton
+							x:Name="lbtnConvertWordToPDF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\wordtopdf.png"
+							Text="{x:Static localprop:Resources.WinFastBtnWordToPDFText}"
+							Command="{Binding WordtoPDF}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertExcelToPDF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\exceltopdf.png"
+							Text="{x:Static localprop:Resources.WinFastBtnExcelToPDFText}"
+							Command="{Binding ExceltoPDF}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertPPT"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\ppttopdf.png"
+							Text="{x:Static localprop:Resources.WinFastBtnPPTToPDFText}"
+							Command="{Binding PPTtoPDF}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertImgToPDF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\imagetopdf.png"
+							Text="{x:Static localprop:Resources.WinFastBtnImageToPDFText}"
+							Command="{Binding IMGtoPDF}" />
+					</StackPanel>
+					<StackPanel
+						x:Name="stpConToPDF1"
+						Height="64"
+						Orientation="Horizontal"
+						Margin="0 12 0 0">
+						<cus:LabelButton
+							x:Name="lbtnConvertRTFToPDF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\rtftopdf.png"
+							Text="{x:Static localprop:Resources.WinFastBtnRTFToPDFText}"
+							Command="{Binding RTFtoPDF}" />
+						<cus:LabelButton
+							x:Name="lbtnConvertTXTToPDF"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\txttopdf.png"
+							Text="{x:Static localprop:Resources.WinFastBtnTXTToPDFText}"
+							Command="{Binding TXTtoPDF}" />
+					</StackPanel>
+				</StackPanel>
+				<StackPanel
+					Name="stpMergeSplit"
+					Height="140"
+					Visibility="Hidden"
+					VerticalAlignment="Top">
+					<StackPanel
+						x:Name="stpMergeSplit0"
+						Height="64"
+						Orientation="Horizontal">
+						<cus:LabelButton
+							x:Name="lbtnMergeSplit_Merge"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\merge.png"
+							Text="{x:Static localprop:Resources.WinFastBtnMergePDF}"
+							Command="{Binding MergePDF}" />
+						<cus:LabelButton
+							x:Name="lbtnMergeSplit_Split"
+							Background="{DynamicResource MainViewGrid2Background}"
+							Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+							Icon="images\icon\split.png"
+							Text="{x:Static localprop:Resources.WinFastBtnSplitPDF}"
+							Command="{Binding SplitPDF}" />
+					</StackPanel>
+				</StackPanel>
+				<StackPanel
+					Name="stpAllTools"
+					Height="140"
+					Visibility="Hidden"
+					VerticalAlignment="Top"
+					Background="#00FFFFFF">
+					<ScrollViewer
+						Height="124"
+						VerticalScrollBarVisibility="Auto">
+						<WrapPanel>
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PDF2Word"
+								Style="{StaticResource little}"
+								Icon="images\PDFtoWord.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFtoWordText}"
+								Command="{Binding PdftoWord}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PDF2Excel"
+								Style="{StaticResource little}"
+								Icon="images\PDFtoEXCEL.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFtoExcelText}"
+								Command="{Binding PdftoExcel}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PDF2PNG"
+								Style="{StaticResource little}"
+								Icon="images\PDFtopng.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFtoPngText}"
+								Command="{Binding PdftoPng}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PDF2JPG"
+								Style="{StaticResource little}"
+								Icon="images\PDFtojpg.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFtoJpegText}"
+								Command="{Binding PdftoJPG}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PDF2PPT"
+								Style="{StaticResource little}"
+								Icon="images\PDFtoPPT.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFtoPPTText}"
+								Command="{Binding PdftoPPT}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PDF2Txt"
+								Style="{StaticResource little}"
+								Icon="images\PDFtoTXT.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFtoTextText}"
+								Command="{Binding PdftoTxt}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PDF2WebPages"
+								Style="{StaticResource little}"
+								Icon="images\PDFtowebpages.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFtoWebText}"
+								Command="{Binding PdftoWeb}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PDF2XML"
+								Style="{StaticResource little}"
+								Icon="images\PDFtoXML.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFtoXMLText}"
+								Command="{Binding PdftoXML}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PDF2RTF"
+								Style="{StaticResource little}"
+								Icon="images\PDFtoRTF.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFtoRTFText}"
+								Command="{Binding PdftoRtf}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_Word2PDF"
+								Style="{StaticResource little}"
+								Icon="images\WordtoPDF32.png"
+								Text="{x:Static localprop:Resources.WinFastBtnWordToPDFText}"
+								Command="{Binding WordtoPDF}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_Excel2PDF"
+								Style="{StaticResource little}"
+								Icon="images\ExceltoPDF32.png"
+								Text="{x:Static localprop:Resources.WinFastBtnExcelToPDFText}"
+								Command="{Binding ExceltoPDF}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_PPT2PDF"
+								Style="{StaticResource little}"
+								Icon="images\PPTtoPDF32.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPPTToPDFText}"
+								Command="{Binding PPTtoPDF}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_Image2PDF"
+								Style="{StaticResource little}"
+								Icon="images\ImagetoPDF32.png"
+								Text="{x:Static localprop:Resources.WinFastBtnImageToPDFText}"
+								Command="{Binding IMGtoPDF}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_RTF2PDF"
+								Style="{StaticResource little}"
+								Icon="images\RTFtoPDF32.png"
+								Text="{x:Static localprop:Resources.WinFastBtnRTFToPDFText}"
+								Command="{Binding RTFtoPDF}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_TXT2PDF"
+								Style="{StaticResource little}"
+								Icon="images\TXTToPDF32.png"
+								Text="{x:Static localprop:Resources.WinFastBtnTXTToPDFText}"
+								Command="{Binding TXTtoPDF}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_Compress"
+								Style="{StaticResource little}"
+								Icon="images\Compress.png"
+								Text="{x:Static localprop:Resources.WinFastBtnPDFCompressText}"
+								Command="{Binding CompressPDF}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_Merge"
+								Style="{StaticResource little}"
+								Icon="images\Merge.png"
+								Text="{x:Static localprop:Resources.WinFastBtnMergePDF}"
+								Command="{Binding MergePDF}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_Split"
+								Style="{StaticResource little}"
+								Icon="images\Split.png"
+								Text="{x:Static localprop:Resources.WinFastBtnSplitPDF}"
+								Command="{Binding SplitPDF}" />
+							<cus:LabelButton
+								x:Name="LbtnAllTool_FillForm"
+								Style="{StaticResource little}"
+								Icon="images\FillForm.png"
+								Text="{x:Static localprop:Resources.WinFastBtnFillFormContent}"
+								Command="{Binding FillFormCMD}" />
+						</WrapPanel>
+					</ScrollViewer>
+				</StackPanel>
+			</Grid>
+			<Border
+				Grid.ColumnSpan="3"
+				Grid.Row="2"
+				Background="{DynamicResource MainViewGrid2Background}"
+				VerticalAlignment="Stretch"
+				Margin="30 0 0 0"
+				HorizontalAlignment="Stretch" />
+			<Grid
+				x:Name="historyGrid"
+				Row="2"
+				Column="1"
+				VerticalAlignment="Stretch"
+				Background="{DynamicResource MainViewGrid2Background}"
+				HorizontalAlignment="Left"
+				Margin="30 0 0 0">
+				<Grid.RowDefinitions>
+					<RowDefinition
+						Height="46" />
+					<RowDefinition
+						Height="*" />
+					<RowDefinition
+						Height="10" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="756" />
+					<ColumnDefinition
+						Width="*" />
+				</Grid.ColumnDefinitions>
+				<ListView xmlns:commonControls="clr-namespace:CommonLib.Controls;assembly=CommonLib"
+					x:Name="lsvOpenHistory"
+					Grid.Row="1"
+					Grid.Column="1"
+					HorizontalAlignment="Stretch"
+					Background="{DynamicResource MainViewGrid2Background}"
+					Style="{StaticResource LauncherListViewStyle}"
+					ScrollViewer.VerticalScrollBarVisibility="Auto"
+					ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+					VirtualizingPanel.ScrollUnit="Pixel"
+					commonControls:ScrollBarHelper.IndicatorMode="Expanded"
+					Height="{Binding ElementName=historyGrid, Path=Height}"
+					ItemsSource="{Binding HistoryModels, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}">
+					<FrameworkElement.Resources>
+						<ResourceDictionary />
+					</FrameworkElement.Resources>
+					<ItemsControl.ItemContainerStyle>
+						<Style
+							TargetType="{x:Type ListViewItem}">
+							<Style.Setters
+								MouseDoubleClick="OnListViewItemDoubleClick">
+								<Setter
+									Property="UIElement.SnapsToDevicePixels"
+									Value="False" />
+								<Setter
+									Property="Height"
+									Value="48" />
+								<Setter
+									Property="Padding"
+									Value="0" />
+								<Setter
+									Property="Margin"
+									Value="0" />
+								<Setter
+									Property="FontSize"
+									Value="12" />
+								<Setter
+									Property="Foreground"
+									Value="{DynamicResource MainViewTextForeground}" />
+								<Setter
+									Property="BorderThickness"
+									Value="0" />
+								<Setter
+									Property="Background"
+									Value="{DynamicResource MainViewGrid2Background}" />
+								<Setter
+									Property="Template">
+									<Setter.Value>
+										<ControlTemplate
+											TargetType="{x:Type ListViewItem}">
+											<Grid>
+												<Border
+													x:Name="bd"
+													Background="{DynamicResource MainViewGrid2Background}"
+													BorderThickness="0"
+													Height="{TemplateBinding FrameworkElement.Height}"
+													SnapsToDevicePixels="True">
+													<GridViewRowPresenter
+														HorizontalAlignment="Stretch" />
+												</Border>
+												<Rectangle
+													Margin="0 0 0 0"
+													Width="{TemplateBinding FrameworkElement.Width}"
+													Fill="{DynamicResource MainViewRectangle}"
+													Height="1"
+													VerticalAlignment="Bottom" />
+											</Grid>
+											<ControlTemplate.Triggers>
+												<Trigger
+													Property="ListBoxItem.IsSelected"
+													Value="True">
+													<Trigger.Setters>
+														<Setter
+															TargetName="bd"
+															Value="{DynamicResource GridViewColumnIsSelected}"
+															Property="Border.Background" />
+													</Trigger.Setters>
+												</Trigger>
+												<MultiTrigger>
+													<MultiTrigger.Conditions>
+														<Condition
+															Property="UIElement.IsMouseOver"
+															Value="True" />
+														<Condition
+															Property="ListBoxItem.IsSelected"
+															Value="False" />
+													</MultiTrigger.Conditions>
+													<Setter
+														TargetName="bd"
+														Value="{DynamicResource GridViewColumnIsSelected}"
+														Property="Border.Background" />
+												</MultiTrigger>
+											</ControlTemplate.Triggers>
+										</ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style.Setters>
+						</Style>
+					</ItemsControl.ItemContainerStyle>
+					<ListView.View>
+						<GridView
+							x:Name="gView">
+							<GridViewColumn
+								Width="30">
+								<GridViewColumn.HeaderTemplate>
+									<DataTemplate>
+										<CheckBox
+											x:Name="fileItemListCBCB"
+											IsThreeState="False"
+											VerticalAlignment="Center"
+											Style="{StaticResource LauncherCheckBoxStyle}"
+											Margin="5,0,0,0"
+											IsChecked="{Binding DataContext.IsAllFileSelect, ElementName=lsvOpenHistory, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+											Checked="fileItemListSelectAll"
+											Unchecked="fileItemListSelectNone" />
+									</DataTemplate>
+								</GridViewColumn.HeaderTemplate>
+								<GridViewColumn.CellTemplate>
+									<DataTemplate>
+										<CheckBox
+											x:Name="fileItemCB"
+											VerticalAlignment="Center"
+											Margin="0,0,0,0"
+											Style="{StaticResource LauncherCheckBoxStyle}"
+											IsChecked="{Binding Path=IsSelect, Mode=TwoWay}"
+											Checked="fileItemChecked"
+											Unchecked="fileItemUnchecked"
+											PreviewMouseDoubleClick="fileItemCB_PreviewMouseDoubleClick" />
+									</DataTemplate>
+								</GridViewColumn.CellTemplate>
+							</GridViewColumn>
+							<GridViewColumn
+								Header="{x:Static localprop:Resources.WinHisLabelFileName}"
+								Width="280">
+								<GridViewColumn.HeaderTemplate>
+									<DataTemplate>
+										<TextBlock
+											FontSize="12"
+											Margin="10,0,0,0"
+											Foreground="{DynamicResource GridViewColumnName}"
+											Text="{Binding}" />
+									</DataTemplate>
+								</GridViewColumn.HeaderTemplate>
+								<GridViewColumn.CellTemplate>
+									<DataTemplate>
+										<StackPanel
+											Orientation="Horizontal">
+											<StackPanel
+												Margin="0 0 0 0">
+												<TextBlock
+													x:Name="tbFileName"
+													FontSize="12"
+													TextTrimming="CharacterEllipsis"
+													Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+													Text="{Binding FileName}"
+													ToolTip="{Binding FileName}" />
+												<TextBlock
+													x:Name="tbFilePath"
+													FontSize="12"
+													TextTrimming="CharacterEllipsis"
+													Foreground="{DynamicResource MainViewTextForeground}"
+													Margin="0 4 0 0"
+													Text="{Binding DisplayFilePath}"
+													ToolTip="{Binding DisplayFilePath}" />
+											</StackPanel>
+										</StackPanel>
+									</DataTemplate>
+								</GridViewColumn.CellTemplate>
+							</GridViewColumn>
+							<GridViewColumn
+								Header="{x:Static localprop:Resources.WinHisHeaderOpenDate}"
+								Width="180"
+								DisplayMemberBinding="{Binding FileLastOpen}" />
+							<GridViewColumn
+								Header="{x:Static localprop:Resources.WinFileSize}"
+								Width="100"
+								DisplayMemberBinding="{Binding FileSize}" />
+							<GridViewColumn
+								Header="{x:Static localprop:Resources.WinHisHeadeFileAction}"
+								Width="100">
+								<GridViewColumn.CellTemplate>
+									<DataTemplate>
+										<Grid
+											x:Name="btnAction"
+											Width="69"
+											VerticalAlignment="Stretch"
+											HorizontalAlignment="Left">
+											<Button
+												Height="15"
+												Width="16"
+												HorizontalAlignment="Left"
+												Margin="10 0 0 0"
+												Tag="{Binding Path=DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"
+												utils:UIElementExtension.ExtendContextMenuDataContext="{Binding Path=ContextMenu, RelativeSource={RelativeSource Mode=Self}}"
+												Click="Button_Click"
+												PreviewMouseDoubleClick="Button_PreviewMouseDoubleClick">
+												<FrameworkElement.Triggers>
+													<EventTrigger
+														RoutedEvent="Button.Click">
+														<BeginStoryboard>
+															<Storyboard>
+																<BooleanAnimationUsingKeyFrames
+																	Storyboard.TargetName="ButtonContextMenu"
+																	Storyboard.TargetProperty="IsOpen"
+																	Duration="0">
+																	<DiscreteBooleanKeyFrame
+																		KeyTime="0"
+																		Value="True" />
+																</BooleanAnimationUsingKeyFrames>
+															</Storyboard>
+														</BeginStoryboard>
+													</EventTrigger>
+												</FrameworkElement.Triggers>
+												<FrameworkElement.Style>
+													<Style
+														TargetType="{x:Type Button}">
+														<Setter
+															Property="Height"
+															Value="15" />
+														<Setter
+															Property="Width"
+															Value="15" />
+														<Setter
+															Property="Template">
+															<Setter.Value>
+																<ControlTemplate
+																	TargetType="{x:Type Button}">
+																	<StackPanel
+																		Orientation="Horizontal"
+																		Background="#01FFFFFF"
+																		Height="{TemplateBinding FrameworkElement.Height}"
+																		Width="{TemplateBinding FrameworkElement.Width}">
+																		<Ellipse
+																			Name="e1"
+																			Height="3"
+																			Width="3"
+																			Fill="{DynamicResource MainViewFileActionBtn}" />
+																		<Ellipse
+																			Name="e2"
+																			Height="3"
+																			Width="3"
+																			Fill="{DynamicResource MainViewFileActionBtn}"
+																			Margin="3 0" />
+																		<Ellipse
+																			Name="e3"
+																			Height="3"
+																			Width="3"
+																			Fill="{DynamicResource MainViewFileActionBtn}" />
+																	</StackPanel>
+																	<ControlTemplate.Triggers>
+																		<Trigger
+																			Property="UIElement.IsMouseOver"
+																			Value="True">
+																			<Setter
+																				TargetName="e1"
+																				Value="{DynamicResource MainViewFileActionSelectedBtn}"
+																				Property="Shape.Fill" />
+																			<Setter
+																				TargetName="e2"
+																				Value="{DynamicResource MainViewFileActionSelectedBtn}"
+																				Property="Shape.Fill" />
+																			<Setter
+																				TargetName="e3"
+																				Value="{DynamicResource MainViewFileActionSelectedBtn}"
+																				Property="Shape.Fill" />
+																		</Trigger>
+																	</ControlTemplate.Triggers>
+																</ControlTemplate>
+															</Setter.Value>
+														</Setter>
+													</Style>
+												</FrameworkElement.Style>
+												<FrameworkElement.ContextMenu>
+													<ContextMenu
+														x:Name="ButtonContextMenu"
+														Style="{StaticResource ContentxMenuStyle}"
+														PlacementTarget="{Binding Path=.}">
+														<MenuItem
+															Header="{x:Static localprop:Resources.WinHisContextMenuItemPDFTo}"
+															Style="{StaticResource menu2}"
+															Icon="{DynamicResource MainViewMenuConvertSource}"
+															Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}">
+															<MenuItem
+																Header="Word"
+																Icon="/PDFLauncher;component/images/pdftoword.png"
+																Style="{StaticResource menu2}"
+																Command="{Binding Tag.PdftoWord}"
+																Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+																CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+															<MenuItem
+																Header="Excel"
+																Icon="/PDFLauncher;component/images/pdftoexcel.png"
+																Style="{StaticResource menu2}"
+																Command="{Binding Tag.PdftoExcel}"
+																Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+																CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+															<MenuItem
+																Header="PNG"
+																Icon="/PDFLauncher;component/images/pdftopng.png"
+																Style="{StaticResource menu2}"
+																Command="{Binding Tag.PdftoPng}"
+																Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+																CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+															<MenuItem
+																Header="JPEG"
+																Icon="/PDFLauncher;component/images/pdftojpg.png"
+																Style="{StaticResource menu2}"
+																Command="{Binding Tag.PdftoJPG}"
+																Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+																CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+															<MenuItem
+																Header="PPT"
+																Icon="/PDFLauncher;component/images/pdftoPPT.png"
+																Style="{StaticResource menu2}"
+																Command="{Binding Tag.PdftoPPT}"
+																Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+																CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+															<MenuItem
+																Header="TXT"
+																Icon="/PDFLauncher;component/images/pdftotxt.png"
+																Style="{StaticResource menu2}"
+																Command="{Binding Tag.PdftoTxt}"
+																Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+																CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+															<MenuItem
+																Header="{x:Static localprop:Resources.WinBtnWebpages}"
+																Icon="/PDFLauncher;component/images/pdftowebpages.png"
+																Style="{StaticResource menu2}"
+																Command="{Binding Tag.PdftoWeb}"
+																Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+																CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+															<MenuItem
+																Header="XML"
+																Icon="/PDFLauncher;component/images/pdftoxml.png"
+																Style="{StaticResource menu2}"
+																Command="{Binding Tag.PdftoXML}"
+																Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+																CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+															<MenuItem
+																Header="RTF"
+																Icon="/PDFLauncher;component/images/pdftortf.png"
+																Style="{StaticResource menu2}"
+																Command="{Binding Tag.PdftoRtf}"
+																Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+																CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+														</MenuItem>
+														<MenuItem
+															Header="{x:Static localprop:Resources.WinContextMenuItemCompress}"
+															Icon="{DynamicResource MainViewContextCompressSource}"
+															Style="{StaticResource menu2}"
+															Command="{Binding Tag.CompressPDF}"
+															Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+															CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+														<MenuItem
+															Header="{x:Static localprop:Resources.WinHisContextMenuItemToPDF}"
+															Icon="/images/menupdfto.png"
+															Style="{StaticResource menu2}"
+															Command="{Binding Tag.ConvtoPDF}"
+															Visibility="{Binding Tag.OtherContextVisibility, Mode=OneWay}"
+															CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+														<MenuItem
+															Header="{x:Static localprop:Resources.WinHisContextMenuItemMerge}"
+															Icon="{DynamicResource MainViewMenuMergeSource}"
+															Style="{StaticResource menu2}"
+															Command="{Binding Tag.MergePDF}"
+															Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+															CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+														<MenuItem
+															Header="{x:Static localprop:Resources.WinHisContextMenuItemSplit}"
+															Icon="{DynamicResource MainViewMenuSplitSource}"
+															Style="{StaticResource menu2}"
+															Command="{Binding Tag.SplitPDF}"
+															Visibility="{Binding Tag.PDFContextVisibility, Mode=OneWay}"
+															CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+														<Separator
+															Style="{StaticResource menuSeparator}" />
+														<MenuItem
+															Header="{x:Static localprop:Resources.WinHisContextMenuItemOpen}"
+															Icon="{DynamicResource MainViewMenuOpenSource}"
+															Style="{StaticResource menu2}"
+															Command="{Binding Tag.RunEditor}"
+															CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+														<MenuItem
+															Header="{x:Static localprop:Resources.WinHisContextMenuItemView}"
+															Icon="{DynamicResource MainViewMenuFolderSource}"
+															Style="{StaticResource menu2}"
+															Command="{Binding Tag.OpenFolder}"
+															CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+														<MenuItem
+															Header="{x:Static localprop:Resources.WinHisContextMenuItemRemove}"
+															Icon="{DynamicResource MainViewMenuRemoveSource}"
+															Style="{StaticResource menu2}"
+															Command="{Binding Tag.RemoveOne}"
+															CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+													</ContextMenu>
+												</FrameworkElement.ContextMenu>
+											</Button>
+										</Grid>
+									</DataTemplate>
+								</GridViewColumn.CellTemplate>
+							</GridViewColumn>
+						</GridView>
+					</ListView.View>
+				</ListView>
+				<StackPanel
+					Orientation="Horizontal"
+					MinWidth="50"
+					Grid.Column="1">
+					<TextBlock
+						Text="{x:Static localprop:Resources.WinHisLabelRecentlbl}"
+						Foreground="{DynamicResource TextBrushWhiteAndBlack}"
+						Grid.Column="1"
+						FontSize="12"
+						VerticalAlignment="Center"
+						Margin="2 0 0 0" />
+					<Button
+						Grid.Column="1"
+						Margin="5 0 0 0"
+						Height="17"
+						HorizontalAlignment="Left"
+						Command="{Binding ClearSelectModel}">
+						<Control.Template>
+							<ControlTemplate
+								TargetType="{x:Type Button}">
+								<StackPanel
+									x:Name="std"
+									Orientation="Horizontal">
+									<Image
+										x:Name="img_clear"
+										HorizontalAlignment="Left"
+										Width="16"
+										Height="16"
+										Source="{DynamicResource MainViewClearSource}"
+										Stretch="Fill" />
+									<TextBlock
+										x:Name="tb_clear"
+										Foreground="{DynamicResource GridViewColumnName}"
+										FontSize="12"
+										Margin="4 0 0 0"
+										VerticalAlignment="Center"
+										Text="{x:Static localprop:Resources.WinLauncherHistoryClearlbl}" />
+								</StackPanel>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="UIElement.IsMouseOver"
+										Value="True">
+										<Setter
+											TargetName="tb_clear"
+											Property="TextBlock.Foreground"
+											Value="#D17272" />
+									</Trigger>
+									<Trigger
+										Property="UIElement.IsEnabled"
+										Value="False">
+										<Setter
+											TargetName="std"
+											Property="UIElement.Opacity"
+											Value="0.5" />
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Control.Template>
+					</Button>
+				</StackPanel>
+				<cus:SwitchButton
+					x:Name="AllToolsSwitch"
+					Click="AllToolsSwitch_Click"
+					Grid.Column="1"
+					Margin="0 0 50 0"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Center"
+					Icon="images/alltools.png"
+					Content="{x:Static localprop:Resources.WinHisContextMulFileFastTools}"
+					Style="{StaticResource SwitchButtonStyle}"
+					Visibility="{Binding AllToolsSwitchIsVisile, Mode=OneWay}"
+					IsChecked="{Binding AllToolsSwitchIsChecked, Mode=TwoWay}">
+					<FrameworkElement.ContextMenu>
+						<ContextMenu
+							Style="{StaticResource ContentxMenuStyle}"
+							IsOpen="{Binding AllToolsSwitchIsChecked, Mode=OneWay}"
+							Closed="ContextMenu_Closed">
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/pdftoword.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFtoWordText}"
+								Command="{Binding PdftoWord}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/pdftoexcel.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFtoExcelText}"
+								Command="{Binding PdftoExcel}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/pdftopng.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFtoPngText}"
+								Command="{Binding PdftoPng}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/pdftojpg.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFtoJpegText}"
+								Command="{Binding PdftoJPG}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/pdftoPPT.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFtoPPTText}"
+								Command="{Binding PdftoPPT}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/pdftotxt.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFtoTextText}"
+								Command="{Binding PdftoTxt}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/pdftowebpages.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFtoWebText}"
+								Command="{Binding PdftoWeb}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/pdftoxml.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFtoXMLText}"
+								Command="{Binding PdftoXML}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/pdftortf.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFtoRTFText}"
+								Command="{Binding PdftoRtf}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/Compress.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPDFCompressText}"
+								Command="{Binding CompressPDF}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/merge.png"
+								Header="{x:Static localprop:Resources.WinFastBtnMergePDF}"
+								Command="{Binding MergePDF}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/split.png"
+								Header="{x:Static localprop:Resources.WinFastBtnSplitPDF}"
+								Command="{Binding SplitPDF}"
+								Visibility="{Binding PDFMenuItemVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/WordtoPDF32.png"
+								Header="{x:Static localprop:Resources.WinFastBtnWordToPDFText}"
+								Command="{Binding WordtoPDF}"
+								Visibility="{Binding DocContextVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/ExceltoPDF32.png"
+								Header="{x:Static localprop:Resources.WinFastBtnExcelToPDFText}"
+								Command="{Binding ExceltoPDF}"
+								Visibility="{Binding XlsContextVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/PPTtoPDF32.png"
+								Header="{x:Static localprop:Resources.WinFastBtnPPTToPDFText}"
+								Command="{Binding PPTtoPDF}"
+								Visibility="{Binding PPTContextVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/ImagetoPDF32.png"
+								Header="{x:Static localprop:Resources.WinFastBtnImageToPDFText}"
+								Command="{Binding IMGtoPDF}"
+								Visibility="{Binding ImgContextVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/RTFtoPDF32.png"
+								Header="{x:Static localprop:Resources.WinFastBtnRTFToPDFText}"
+								Command="{Binding RTFtoPDF}"
+								Visibility="{Binding RTFContextVisibility, Mode=OneWay}" />
+							<MenuItem
+								Style="{StaticResource menu1}"
+								Icon="/PDFLauncher;component/images/TXTtoPDF32.png"
+								Header="{x:Static localprop:Resources.WinFastBtnTXTToPDFText}"
+								Command="{Binding TXTtoPDF}"
+								Visibility="{Binding TXTContextVisibility, Mode=OneWay}" />
+						</ContextMenu>
+					</FrameworkElement.ContextMenu>
+				</cus:SwitchButton>
+			</Grid>
+		</Grid>
+	</Grid>
+</Window>

@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnText_AppAbout" xml:space="preserve">
+    <value>문의하기</value>
+  </data>
+  <data name="BtnText_NewPDFFromBlankPDF" xml:space="preserve">
+    <value>새 빈 PDF</value>
+  </data>
+  <data name="BtnText_NewPDFFromImages" xml:space="preserve">
+    <value>이미지에서 새 PDF 만들기</value>
+  </data>
+  <data name="BtnText_NewPDFFromScanner" xml:space="preserve">
+    <value>스캐너에서 새 PDF 만들기</value>
+  </data>
+  <data name="MainViewAbout" xml:space="preserve">
+    <value>제작사 정보</value>
+  </data>
+  <data name="MainViewAccount" xml:space="preserve">
+    <value>로그인 / 회원 가입</value>
+  </data>
+  <data name="MainViewCreateNewPDF" xml:space="preserve">
+    <value>파일 만들기</value>
+  </data>
+  <data name="MainViewUpgrade" xml:space="preserve">
+    <value>업그레이드</value>
+  </data>
+  <data name="OpenFileNoExistMsg" xml:space="preserve">
+    <value>파일이 존재하지 않습니다.</value>
+  </data>
+  <data name="OpenFileNoSupporttypeMsg" xml:space="preserve">
+    <value>지원되지 않는 종류의 파일입니다.</value>
+  </data>
+  <data name="PDFScanWinText1" xml:space="preserve">
+    <value>iOS 및 Android 기기에서 고품질의 정확한 스캔으로 종이 없는 환경을 만들기.</value>
+  </data>
+  <data name="PDFScanWinText2" xml:space="preserve">
+    <value>QR 코드를 스캔하여 지금 다운로드:</value>
+  </data>
+  <data name="PDFScanWinTitle" xml:space="preserve">
+    <value>OCR 기술이 탑재된 모바일 PDF 스캐너</value>
+  </data>
+  <data name="UserInfoBtnText" xml:space="preserve">
+    <value>계정</value>
+  </data>
+  <data name="WInDisCardConfirmCancelBtn" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="WInDisCardConfirmContent1" xml:space="preserve">
+    <value>정말 저장되지 않은 파일을 버리시겠습니까?</value>
+  </data>
+  <data name="WInDisCardConfirmContent2" xml:space="preserve">
+    <value>저장되지 않은 변경사항이 유실됩니다.</value>
+  </data>
+  <data name="WInDisCardConfirmDiscardBtn" xml:space="preserve">
+    <value>버리기</value>
+  </data>
+  <data name="WInMainDatailLableText" xml:space="preserve">
+    <value>PDFgear가 예상치 못하게 종료된 작업 파일에 대한 복구를 시도합니다. ‘시작’을 눌러서 복구 절차를 시작하거나, ‘버리기’를 클릭해서 복구를 취소하세요.</value>
+  </data>
+  <data name="WInMainListViewActionText" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="WInMainListViewFileNameText" xml:space="preserve">
+    <value>파일 이름</value>
+  </data>
+  <data name="WInMainListViewLastSavedText" xml:space="preserve">
+    <value>마지막 저장</value>
+  </data>
+  <data name="WInMainListViewStatusText" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="WInMainOutputLabelText" xml:space="preserve">
+    <value>다음으로 복구:</value>
+  </data>
+  <data name="WInMainStartRecoverBtnText" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="WinBtnOkContent" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="WinBtnOpenFileContent" xml:space="preserve">
+    <value>파일 열기</value>
+  </data>
+  <data name="WinBtnOpenFileTipsDesc1" xml:space="preserve">
+    <value>PDFgear에 오신 것을 환영합니다!</value>
+  </data>
+  <data name="WinBtnOpenFileTipsDesc2" xml:space="preserve">
+    <value>파일을 열려면 여기를 클릭하십시오!</value>
+  </data>
+  <data name="WinBtnScanDocument" xml:space="preserve">
+    <value>문서를 PDF로 스캔하기</value>
+  </data>
+  <data name="WinBtnWebpages" xml:space="preserve">
+    <value>페이지로</value>
+  </data>
+  <data name="WinCheckUpdateBtn" xml:space="preserve">
+    <value>업데이트 확인</value>
+  </data>
+  <data name="WinContextMenuItemCompress" xml:space="preserve">
+    <value>압축</value>
+  </data>
+  <data name="WinFastBtnExcelToPDFText" xml:space="preserve">
+    <value>Excel를 PDF로</value>
+  </data>
+  <data name="WinFastBtnFillFormContent" xml:space="preserve">
+    <value>양식 채우기</value>
+  </data>
+  <data name="WinFastBtnImageToPDFText" xml:space="preserve">
+    <value>이미지를 PDF로</value>
+  </data>
+  <data name="WinFastBtnMergePDF" xml:space="preserve">
+    <value>PDF 병합</value>
+  </data>
+  <data name="WinFastBtnPDFCompressText" xml:space="preserve">
+    <value>PDF 압축</value>
+  </data>
+  <data name="WinFastBtnPDFtoExcelText" xml:space="preserve">
+    <value>PDF를 Excel로</value>
+  </data>
+  <data name="WinFastBtnPDFtoJpegText" xml:space="preserve">
+    <value>PDF를 JPEG로</value>
+  </data>
+  <data name="WinFastBtnPDFtoPPTText" xml:space="preserve">
+    <value>PDF를 PPT로</value>
+  </data>
+  <data name="WinFastBtnPDFtoPngText" xml:space="preserve">
+    <value>PDF를 PNG로</value>
+  </data>
+  <data name="WinFastBtnPDFtoRTFText" xml:space="preserve">
+    <value>PDF를 RTF로</value>
+  </data>
+  <data name="WinFastBtnPDFtoTextText" xml:space="preserve">
+    <value>PDF를 TXT로</value>
+  </data>
+  <data name="WinFastBtnPDFtoWebText" xml:space="preserve">
+    <value>PDF를 웹 페이지로</value>
+  </data>
+  <data name="WinFastBtnPDFtoWordText" xml:space="preserve">
+    <value>PDF를 Word로</value>
+  </data>
+  <data name="WinFastBtnPDFtoXMLText" xml:space="preserve">
+    <value>PDF를 XML로</value>
+  </data>
+  <data name="WinFastBtnPPTToPDFText" xml:space="preserve">
+    <value>PPT를 PDF로</value>
+  </data>
+  <data name="WinFastBtnRTFToPDFText" xml:space="preserve">
+    <value>RTF를 PDF로</value>
+  </data>
+  <data name="WinFastBtnSplitPDF" xml:space="preserve">
+    <value>PDF 분할</value>
+  </data>
+  <data name="WinFastBtnTXTToPDFText" xml:space="preserve">
+    <value>TXT를 PDF로</value>
+  </data>
+  <data name="WinFastBtnWordToPDFText" xml:space="preserve">
+    <value>Word를 PDF로</value>
+  </data>
+  <data name="WinFileSize" xml:space="preserve">
+    <value>파일 크기</value>
+  </data>
+  <data name="WinHisContextMenuItemMerge" xml:space="preserve">
+    <value>PDF 병합</value>
+  </data>
+  <data name="WinHisContextMenuItemOpen" xml:space="preserve">
+    <value>열기</value>
+  </data>
+  <data name="WinHisContextMenuItemPDFTo" xml:space="preserve">
+    <value>PDF 다음으로 변환…</value>
+  </data>
+  <data name="WinHisContextMenuItemRemove" xml:space="preserve">
+    <value>목록에서 제거</value>
+  </data>
+  <data name="WinHisContextMenuItemSplit" xml:space="preserve">
+    <value>PDF 분할</value>
+  </data>
+  <data name="WinHisContextMenuItemToPDF" xml:space="preserve">
+    <value>PDF로 변환</value>
+  </data>
+  <data name="WinHisContextMenuItemView" xml:space="preserve">
+    <value>탐색기에서 열기</value>
+  </data>
+  <data name="WinHisContextMulFileFastTools" xml:space="preserve">
+    <value>도구</value>
+  </data>
+  <data name="WinHisHeadeFileAction" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="WinHisHeaderOpenDate" xml:space="preserve">
+    <value>마지막으로 연 파일</value>
+  </data>
+  <data name="WinHisLabelFileName" xml:space="preserve">
+    <value>파일 이름</value>
+  </data>
+  <data name="WinHisLabelRecentlbl" xml:space="preserve">
+    <value>최근</value>
+  </data>
+  <data name="WinHistoryClearLabelClickTips" xml:space="preserve">
+    <value>정말 모든 최근 파일을 삭제하시겠습니까?</value>
+  </data>
+  <data name="WinIAP2AnnualPannelTitle" xml:space="preserve">
+    <value>연간 이용</value>
+  </data>
+  <data name="WinIAP2BuyNowBtnContent" xml:space="preserve">
+    <value>지금 구매</value>
+  </data>
+  <data name="WinIAP2LifetimePriceDescribe" xml:space="preserve">
+    <value>일시불</value>
+  </data>
+  <data name="WinLauncherHistoryClearlbl" xml:space="preserve">
+    <value>지우기</value>
+  </data>
+  <data name="WinListHeaderConvertFromPDF" xml:space="preserve">
+    <value>PDF로부터 변환</value>
+  </data>
+  <data name="WinListHeaderConvertToPDF" xml:space="preserve">
+    <value>PDF로 변환</value>
+  </data>
+  <data name="WinListHeaderMergeOrSplit" xml:space="preserve">
+    <value>병합 및 분할</value>
+  </data>
+  <data name="WinListHeaderTabAllTools" xml:space="preserve">
+    <value>모든 도구</value>
+  </data>
+  <data name="WinListHeaderTabHotTools" xml:space="preserve">
+    <value>인기 도구</value>
+  </data>
+  <data name="WinPurchasedAlreadySubTitle" xml:space="preserve">
+    <value>이미 구독중입니다.</value>
+  </data>
+  <data name="WinPurchasedTitle" xml:space="preserve">
+    <value>저희의 목록을 구독하셨습니다. 이제 PDFgear를 마음껏 즐기세요.</value>
+  </data>
+  <data name="WinRecoverSucceedContent" xml:space="preserve">
+    <value>복구에 성공했습니다</value>
+  </data>
+  <data name="WinRecoveringContent" xml:space="preserve">
+    <value>복구 중입니다</value>
+  </data>
+  <data name="WinRestoreFaildLearnMoreContent" xml:space="preserve">
+    <value>더 알아보기</value>
+  </data>
+  <data name="WinRestoreFaildPossible1Content" xml:space="preserve">
+    <value>구독이 만료됨</value>
+  </data>
+  <data name="WinRestoreFaildPossible2Content" xml:space="preserve">
+    <value>유효한 구매를 찾을 수 없음</value>
+  </data>
+  <data name="WinRestoreFaildPossible3Content" xml:space="preserve">
+    <value>네트워크를 사용할 수 없음</value>
+  </data>
+  <data name="WinRestoreFaildPossibleContent" xml:space="preserve">
+    <value>가능한 원인</value>
+  </data>
+  <data name="WinRestoreFaildTitleContent" xml:space="preserve">
+    <value>복원 실패</value>
+  </data>
+  <data name="WinSettingBtn" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="WinSupportBtn" xml:space="preserve">
+    <value>문의하기</value>
+  </data>
+  <data name="WinSupportLabelContent" xml:space="preserve">
+    <value>PDF, EPUB, JPG, PNG 등을 지원함</value>
+  </data>
+  <data name="WinUpgradeLiftTimeBtnContent" xml:space="preserve">
+    <value>평생 이용권</value>
+  </data>
+  <data name="WinUpgradeList10Content" xml:space="preserve">
+    <value>PDF 페이지 순서 변경</value>
+  </data>
+  <data name="WinUpgradeList11Content" xml:space="preserve">
+    <value>PDF 문서에 로그인</value>
+  </data>
+  <data name="WinUpgradeList12Content" xml:space="preserve">
+    <value>Compress PDF Files to a smaller size</value>
+  </data>
+  <data name="WinUpgradeList13Content" xml:space="preserve">
+    <value>PDF 파일을 워드, 엑셀, 이미지 등으로 변환</value>
+  </data>
+  <data name="WinUpgradeList14Content" xml:space="preserve">
+    <value>PDF 서명, 압축</value>
+  </data>
+  <data name="WinUpgradeList15Content" xml:space="preserve">
+    <value>페이지를 병합, 분할, 삭제, 삽입, 추출, 재정리</value>
+  </data>
+  <data name="WinUpgradeList16Content" xml:space="preserve">
+    <value>이미지를 텍스트로 변환 (OCR)</value>
+  </data>
+  <data name="WinUpgradeList17Content" xml:space="preserve">
+    <value>최대 10개 장치에서 이용</value>
+  </data>
+  <data name="WinUpgradeList18Content" xml:space="preserve">
+    <value>PDFgear 프리미엄</value>
+  </data>
+  <data name="WinUpgradeList1Content" xml:space="preserve">
+    <value>PDF 문서를 워드, 엑셀, PNG, JPG, RTF, TXT, HTML 및 XML로 변환 가능</value>
+  </data>
+  <data name="WinUpgradeList2Content" xml:space="preserve">
+    <value>여러 PDF 문서를 하나의 PDF로 병합 가능</value>
+  </data>
+  <data name="WinUpgradeList3Content" xml:space="preserve">
+    <value>PDF 문서에서 페이지 삭제 가능</value>
+  </data>
+  <data name="WinUpgradeList4Content" xml:space="preserve">
+    <value>PDF 문서 하나를 여러 PDF 문서로 분할 가능</value>
+  </data>
+  <data name="WinUpgradeList5Content" xml:space="preserve">
+    <value>PDF 문서에서 PDF 페이지 추출 가능</value>
+  </data>
+  <data name="WinUpgradeList6Content" xml:space="preserve">
+    <value>광고 없음</value>
+  </data>
+  <data name="WinUpgradeList7Content" xml:space="preserve">
+    <value>24시간 연중무휴 고객지원</value>
+  </data>
+  <data name="WinUpgradeList8Content" xml:space="preserve">
+    <value>다른 PDF 문서의 페이지 삽입</value>
+  </data>
+  <data name="WinUpgradeList9Content" xml:space="preserve">
+    <value>Word, Excel, PPT, 이미지, RTF 또는 TXT를 PDF 문서로 변환하세요</value>
+  </data>
+  <data name="WinUpgradeRestorePurchase" xml:space="preserve">
+    <value>구매 복원</value>
+  </data>
+  <data name="WinUpgradeTitle" xml:space="preserve">
+    <value>풀 버전 잠금 해재</value>
+  </data>
+  <data name="WinUpgradeYearBtnContent" xml:space="preserve">
+    <value>1년 이용권</value>
+  </data>
+</root>

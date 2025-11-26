@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnText_AppAbout" xml:space="preserve">
+    <value>お問い合わせ</value>
+  </data>
+  <data name="BtnText_NewPDFFromBlankPDF" xml:space="preserve">
+    <value>新しい空の PDF</value>
+  </data>
+  <data name="BtnText_NewPDFFromImages" xml:space="preserve">
+    <value>画像から新しいPDFを作成</value>
+  </data>
+  <data name="BtnText_NewPDFFromScanner" xml:space="preserve">
+    <value>スキャナーから新しいPDFを作成</value>
+  </data>
+  <data name="MainViewAbout" xml:space="preserve">
+    <value>PDFgearについて</value>
+  </data>
+  <data name="MainViewAccount" xml:space="preserve">
+    <value>サインイン / サインアップ</value>
+  </data>
+  <data name="MainViewCreateNewPDF" xml:space="preserve">
+    <value>ファイル作成</value>
+  </data>
+  <data name="MainViewUpgrade" xml:space="preserve">
+    <value>アップグレード</value>
+  </data>
+  <data name="OpenFileNoExistMsg" xml:space="preserve">
+    <value>ファイルが存在しません；</value>
+  </data>
+  <data name="OpenFileNoSupporttypeMsg" xml:space="preserve">
+    <value>非対応のファイルの種類：</value>
+  </data>
+  <data name="PDFScanWinText1" xml:space="preserve">
+    <value>iOSおよびAndroidデバイスで高品質で正確なスキャンを使用してペーパーレス化する。</value>
+  </data>
+  <data name="PDFScanWinText2" xml:space="preserve">
+    <value>QRコードをスキャンして今すぐダウンロード：</value>
+  </data>
+  <data name="PDFScanWinTitle" xml:space="preserve">
+    <value>OCR搭載モバイルPDFスキャナー</value>
+  </data>
+  <data name="UserInfoBtnText" xml:space="preserve">
+    <value>アカウント</value>
+  </data>
+  <data name="WInDisCardConfirmCancelBtn" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="WInDisCardConfirmContent1" xml:space="preserve">
+    <value>未保存のファイルを破棄します。よろしいですか？</value>
+  </data>
+  <data name="WInDisCardConfirmContent2" xml:space="preserve">
+    <value>保存されていない変更は失われます。</value>
+  </data>
+  <data name="WInDisCardConfirmDiscardBtn" xml:space="preserve">
+    <value>破棄</value>
+  </data>
+  <data name="WInMainDatailLableText" xml:space="preserve">
+    <value>PDFgearは作業ファイルを予期せぬ終了が発生する前の状態まで復元させます。「開始」をクリックすると、プロセスを開始します。「破棄」をクリックすると、復元は中止されます。</value>
+  </data>
+  <data name="WInMainListViewActionText" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="WInMainListViewFileNameText" xml:space="preserve">
+    <value>ファイル名</value>
+  </data>
+  <data name="WInMainListViewLastSavedText" xml:space="preserve">
+    <value>最後に保存した日時</value>
+  </data>
+  <data name="WInMainListViewStatusText" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="WInMainOutputLabelText" xml:space="preserve">
+    <value>復元先</value>
+  </data>
+  <data name="WInMainStartRecoverBtnText" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="WinBtnOkContent" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="WinBtnOpenFileContent" xml:space="preserve">
+    <value>ファイルを開く</value>
+  </data>
+  <data name="WinBtnOpenFileTipsDesc1" xml:space="preserve">
+    <value>PDFgear へようこそ!</value>
+  </data>
+  <data name="WinBtnOpenFileTipsDesc2" xml:space="preserve">
+    <value>ここをクリックしてファイルを開きます。</value>
+  </data>
+  <data name="WinBtnScanDocument" xml:space="preserve">
+    <value>ドキュメントをPDFにスキャン</value>
+  </data>
+  <data name="WinBtnWebpages" xml:space="preserve">
+    <value>ウェブページ</value>
+  </data>
+  <data name="WinCheckUpdateBtn" xml:space="preserve">
+    <value>更新を確認</value>
+  </data>
+  <data name="WinContextMenuItemCompress" xml:space="preserve">
+    <value>圧縮</value>
+  </data>
+  <data name="WinFastBtnExcelToPDFText" xml:space="preserve">
+    <value>ExcelからPDFへ</value>
+  </data>
+  <data name="WinFastBtnFillFormContent" xml:space="preserve">
+    <value>記入する</value>
+  </data>
+  <data name="WinFastBtnImageToPDFText" xml:space="preserve">
+    <value>画像からPDFへ</value>
+  </data>
+  <data name="WinFastBtnMergePDF" xml:space="preserve">
+    <value>PDFを結合</value>
+  </data>
+  <data name="WinFastBtnPDFCompressText" xml:space="preserve">
+    <value>PDFを圧縮</value>
+  </data>
+  <data name="WinFastBtnPDFtoExcelText" xml:space="preserve">
+    <value>PDFからExcelへ</value>
+  </data>
+  <data name="WinFastBtnPDFtoJpegText" xml:space="preserve">
+    <value>PDFからJPEGへ</value>
+  </data>
+  <data name="WinFastBtnPDFtoPPTText" xml:space="preserve">
+    <value>PDFからPPTへ</value>
+  </data>
+  <data name="WinFastBtnPDFtoPngText" xml:space="preserve">
+    <value>PDFからPNGへ</value>
+  </data>
+  <data name="WinFastBtnPDFtoRTFText" xml:space="preserve">
+    <value>PDFからRTFへ</value>
+  </data>
+  <data name="WinFastBtnPDFtoTextText" xml:space="preserve">
+    <value>PDFからTXTへ</value>
+  </data>
+  <data name="WinFastBtnPDFtoWebText" xml:space="preserve">
+    <value>PDFからウェブページへ</value>
+  </data>
+  <data name="WinFastBtnPDFtoWordText" xml:space="preserve">
+    <value>PDFからWordへ</value>
+  </data>
+  <data name="WinFastBtnPDFtoXMLText" xml:space="preserve">
+    <value>PDFからXMLへ</value>
+  </data>
+  <data name="WinFastBtnPPTToPDFText" xml:space="preserve">
+    <value>PPTからPDFへ</value>
+  </data>
+  <data name="WinFastBtnRTFToPDFText" xml:space="preserve">
+    <value>RTFからPDFへ</value>
+  </data>
+  <data name="WinFastBtnSplitPDF" xml:space="preserve">
+    <value>PDFを分割</value>
+  </data>
+  <data name="WinFastBtnTXTToPDFText" xml:space="preserve">
+    <value>TXTからPDFへ</value>
+  </data>
+  <data name="WinFastBtnWordToPDFText" xml:space="preserve">
+    <value>WordからPDFへ</value>
+  </data>
+  <data name="WinFileSize" xml:space="preserve">
+    <value>ファイルサイズ</value>
+  </data>
+  <data name="WinHisContextMenuItemMerge" xml:space="preserve">
+    <value>PDFを結合</value>
+  </data>
+  <data name="WinHisContextMenuItemOpen" xml:space="preserve">
+    <value>開く</value>
+  </data>
+  <data name="WinHisContextMenuItemPDFTo" xml:space="preserve">
+    <value>PDFを変換する</value>
+  </data>
+  <data name="WinHisContextMenuItemRemove" xml:space="preserve">
+    <value>リストから削除する</value>
+  </data>
+  <data name="WinHisContextMenuItemSplit" xml:space="preserve">
+    <value>PDFを分割</value>
+  </data>
+  <data name="WinHisContextMenuItemToPDF" xml:space="preserve">
+    <value>PDFに変換</value>
+  </data>
+  <data name="WinHisContextMenuItemView" xml:space="preserve">
+    <value>エクスプローラーで開く</value>
+  </data>
+  <data name="WinHisContextMulFileFastTools" xml:space="preserve">
+    <value>ツール</value>
+  </data>
+  <data name="WinHisHeadeFileAction" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="WinHisHeaderOpenDate" xml:space="preserve">
+    <value>最後に開いた日時</value>
+  </data>
+  <data name="WinHisLabelFileName" xml:space="preserve">
+    <value>ファイル名</value>
+  </data>
+  <data name="WinHisLabelRecentlbl" xml:space="preserve">
+    <value>最近開いたファイル</value>
+  </data>
+  <data name="WinHistoryClearLabelClickTips" xml:space="preserve">
+    <value>最近開いたファイルを全て削除します。よろしいですか？</value>
+  </data>
+  <data name="WinIAP2AnnualPannelTitle" xml:space="preserve">
+    <value>年次</value>
+  </data>
+  <data name="WinIAP2BuyNowBtnContent" xml:space="preserve">
+    <value>今すぐ購入</value>
+  </data>
+  <data name="WinIAP2LifetimePriceDescribe" xml:space="preserve">
+    <value>一括価格</value>
+  </data>
+  <data name="WinLauncherHistoryClearlbl" xml:space="preserve">
+    <value>クリア</value>
+  </data>
+  <data name="WinListHeaderConvertFromPDF" xml:space="preserve">
+    <value>PDFから変換</value>
+  </data>
+  <data name="WinListHeaderConvertToPDF" xml:space="preserve">
+    <value>PDFに変換</value>
+  </data>
+  <data name="WinListHeaderMergeOrSplit" xml:space="preserve">
+    <value>結合＆分割</value>
+  </data>
+  <data name="WinListHeaderTabAllTools" xml:space="preserve">
+    <value>全てのツール</value>
+  </data>
+  <data name="WinListHeaderTabHotTools" xml:space="preserve">
+    <value>話題のツール</value>
+  </data>
+  <data name="WinPurchasedAlreadySubTitle" xml:space="preserve">
+    <value>登録済み</value>
+  </data>
+  <data name="WinPurchasedTitle" xml:space="preserve">
+    <value>リストに登録完了しました。PDFgearを存分にお楽しみください。</value>
+  </data>
+  <data name="WinRecoverSucceedContent" xml:space="preserve">
+    <value>復元が成功しました</value>
+  </data>
+  <data name="WinRecoveringContent" xml:space="preserve">
+    <value>復元中です</value>
+  </data>
+  <data name="WinRestoreFaildLearnMoreContent" xml:space="preserve">
+    <value>詳細はこちら</value>
+  </data>
+  <data name="WinRestoreFaildPossible1Content" xml:space="preserve">
+    <value>サブスクリプションの有効期限が切れている</value>
+  </data>
+  <data name="WinRestoreFaildPossible2Content" xml:space="preserve">
+    <value>有効な購入履歴がない</value>
+  </data>
+  <data name="WinRestoreFaildPossible3Content" xml:space="preserve">
+    <value>ネットワークが利用できない</value>
+  </data>
+  <data name="WinRestoreFaildPossibleContent" xml:space="preserve">
+    <value>考えられる原因</value>
+  </data>
+  <data name="WinRestoreFaildTitleContent" xml:space="preserve">
+    <value>復元に失敗しました</value>
+  </data>
+  <data name="WinSettingBtn" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="WinSupportBtn" xml:space="preserve">
+    <value>お問い合わせ</value>
+  </data>
+  <data name="WinSupportLabelContent" xml:space="preserve">
+    <value>PDF、EPUB、JPG、PNGなどに対応</value>
+  </data>
+  <data name="WinUpgradeLiftTimeBtnContent" xml:space="preserve">
+    <value>永続</value>
+  </data>
+  <data name="WinUpgradeList10Content" xml:space="preserve">
+    <value>PDFページを整理しなおす</value>
+  </data>
+  <data name="WinUpgradeList11Content" xml:space="preserve">
+    <value>PDF文書へのサインイン</value>
+  </data>
+  <data name="WinUpgradeList12Content" xml:space="preserve">
+    <value>Compress PDF Files to a smaller size</value>
+  </data>
+  <data name="WinUpgradeList13Content" xml:space="preserve">
+    <value>PDFファイルからWord、Excel、画像などへの変換</value>
+  </data>
+  <data name="WinUpgradeList14Content" xml:space="preserve">
+    <value>PDFへの署名、PDFの圧縮</value>
+  </data>
+  <data name="WinUpgradeList15Content" xml:space="preserve">
+    <value>ページの結合、分割、削除、挿入、抽出、並べ替え</value>
+  </data>
+  <data name="WinUpgradeList16Content" xml:space="preserve">
+    <value>画像からテキストへの変換（OCR）</value>
+  </data>
+  <data name="WinUpgradeList17Content" xml:space="preserve">
+    <value>最大10件のデバイス</value>
+  </data>
+  <data name="WinUpgradeList18Content" xml:space="preserve">
+    <value>PDFgear プレミアム</value>
+  </data>
+  <data name="WinUpgradeList1Content" xml:space="preserve">
+    <value>PDF文書をWord、Excel、PNG、JPG、RTF、TXT、HTML、または XMLへ変換</value>
+  </data>
+  <data name="WinUpgradeList2Content" xml:space="preserve">
+    <value>複数のPDF文書を1つにまとめる</value>
+  </data>
+  <data name="WinUpgradeList3Content" xml:space="preserve">
+    <value>PDF文書からページを削除</value>
+  </data>
+  <data name="WinUpgradeList4Content" xml:space="preserve">
+    <value>1つのPDF文書を複数に分割</value>
+  </data>
+  <data name="WinUpgradeList5Content" xml:space="preserve">
+    <value>PDF文書からPDFページを抽出</value>
+  </data>
+  <data name="WinUpgradeList6Content" xml:space="preserve">
+    <value>広告なし</value>
+  </data>
+  <data name="WinUpgradeList7Content" xml:space="preserve">
+    <value>24時間毎日サポート</value>
+  </data>
+  <data name="WinUpgradeList8Content" xml:space="preserve">
+    <value>他のPDF文書からのページを挿入</value>
+  </data>
+  <data name="WinUpgradeList9Content" xml:space="preserve">
+    <value>WordやExcel、PPT、画像、RTF、TXTといったファイルをPDFドキュメントに変換可能</value>
+  </data>
+  <data name="WinUpgradeRestorePurchase" xml:space="preserve">
+    <value>購入履歴の復元</value>
+  </data>
+  <data name="WinUpgradeTitle" xml:space="preserve">
+    <value>完全版を取得</value>
+  </data>
+  <data name="WinUpgradeYearBtnContent" xml:space="preserve">
+    <value>年</value>
+  </data>
+</root>
