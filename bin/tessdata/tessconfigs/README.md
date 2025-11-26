@@ -1,2 +1,0 @@
-# tessconfigs
-Tesseract Config files
